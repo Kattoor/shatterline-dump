@@ -1,0 +1,64 @@
+{
+    "script": "scripts/ui/lobby/social_panel/social_panel.lua",
+    "view_path": "SocialPanel.html",
+    "children":
+    [
+        {"name": "content", "type": "Component", "view_path": "wrapper"},
+
+        {"name": "fader", "type": "Button", "view_path": "wrapper.fader"},
+
+        {"name": "social_list", "type": "Component", "view_path": "wrapper.panel.socialList"},
+
+        {"name": "search_form", "type": "Component", "view_path": "wrapper.panel.socialList.searchPanel"},
+        {"name": "input", "type": "EditBox", "view_path": "wrapper.panel.socialList.searchPanel.input"},
+        {"name": "search_hint", "type": "ActionLabel", "view_path": "wrapper.panel.socialList.searchPanel.hintWrapper.hint", "gamepad_only": true},
+        {"name": "search_hint_text", "type": "ActionLabel", "view_path": "wrapper.panel.socialList.searchPanel.hintWrapper.hintText", "text": "@search_hint", "gamepad_only": true},
+
+        {"name": "party_container", "type": "ListItem", "view_path": "wrapper.panel.socialList.squadWrapper"},
+        {"name": "party_button", "type": "ListItem", "view_path": "wrapper.panel.socialList.squadWrapper.button"},
+        {"name": "party_recent_icon", "type": "Panel", "view_path": "wrapper.panel.socialList.squadWrapper.button.titleWrapper.recentIcon", "visible":false},
+        {"name": "party_title", "type": "Label", "view_path": "wrapper.panel.socialList.squadWrapper.button.titleWrapper.title"},
+        {"name": "party_title_hint", "type": "ActionLabel", "view_path": "wrapper.panel.socialList.squadWrapper.button.hintWrapper.hint", "gamepad_only": true},
+        {"name": "party_title_hint_text", "type": "ActionLabel", "view_path": "wrapper.panel.socialList.squadWrapper.button.hintWrapper.hintText", "text": "@open_hint", "gamepad_only": true},
+        {"name": "party_list_box", "type": "PlayerList", "view_path": "wrapper.panel.socialList.squadWrapper.listBox"},
+        {"name": "party_list_box_container", "type": "Component", "view_path": "wrapper.panel.socialList.squadWrapper.listBox.container"},
+
+        {"name": "friend_requests_container", "type": "ListItem", "view_path": "wrapper.panel.socialList.friendRequestsWrapper"},
+        {"name": "friend_requests_button", "type": "ListItem", "view_path": "wrapper.panel.socialList.friendRequestsWrapper.button"},
+        {"name": "friend_requests_recent_icon", "type": "Panel", "view_path": "wrapper.panel.socialList.friendRequestsWrapper.button.titleWrapper.recentIcon", "visible":false},
+        {"name": "friend_requests_title", "type": "Label", "view_path": "wrapper.panel.socialList.friendRequestsWrapper.button.titleWrapper.title", "text": "@friend_requests"},
+        {"name": "friend_requests_title_hint", "type": "ActionLabel", "view_path": "wrapper.panel.socialList.friendRequestsWrapper.button.hintWrapper.hint", "gamepad_only": true},
+        {"name": "friend_requests_title_hint_text", "type": "ActionLabel", "view_path": "wrapper.panel.socialList.friendRequestsWrapper.button.hintWrapper.hintText", "text": "@open_hint", "gamepad_only": true},
+        {"name": "friend_requests_list_box", "type": "PlayerList", "view_path": "wrapper.panel.socialList.friendRequestsWrapper.listBox"},
+        {"name": "friend_requests_list_box_container", "type": "Component", "view_path": "wrapper.panel.socialList.friendRequestsWrapper.listBox.container"},
+
+        {"name": "friends_container", "type": "ListItem", "view_path": "wrapper.panel.socialList.friendsWrapper"},
+        {"name": "friends_button", "type": "ListItem", "view_path": "wrapper.panel.socialList.friendsWrapper.button"},
+        {"name": "friends_recent_icon", "type": "Panel", "view_path": "wrapper.panel.socialList.friendsWrapper.button.titleWrapper.recentIcon", "visible":false},
+        {"name": "friends_title", "type": "Label", "view_path": "wrapper.panel.socialList.friendsWrapper.button.titleWrapper.title"},
+        {"name": "friends_title_hint", "type": "ActionLabel", "view_path": "wrapper.panel.socialList.friendsWrapper.button.hintWrapper.hint", "gamepad_only": true},
+        {"name": "friends_title_hint_text", "type": "ActionLabel", "view_path": "wrapper.panel.socialList.friendsWrapper.button.hintWrapper.hintText", "text": "@open_hint", "gamepad_only": true},
+        {"name": "friends_list_box", "type": "PlayerList", "view_path": "wrapper.panel.socialList.friendsWrapper.listBox"},
+        {"name": "friends_list_box_container", "type": "Component", "view_path": "wrapper.panel.socialList.friendsWrapper.listBox.container"},
+
+        {"name": "recent_container", "type": "ListItem", "view_path": "wrapper.panel.socialList.recentWrapper"},
+        {"name": "recent_button", "type": "ListItem", "view_path": "wrapper.panel.socialList.recentWrapper.button"},
+        {"name": "recent_recent_icon", "type": "Panel", "view_path": "wrapper.panel.socialList.recentWrapper.button.titleWrapper.recentIcon", "visible":false},
+        {"name": "recent_title", "type": "Label", "view_path": "wrapper.panel.socialList.recentWrapper.button.titleWrapper.title", "text": "@recent_page_btn"},
+        {"name": "recent_title_hint", "type": "ActionLabel", "view_path": "wrapper.panel.socialList.recentWrapper.button.hintWrapper.hint", "gamepad_only": true},
+        {"name": "recent_title_hint_text", "type": "ActionLabel", "view_path": "wrapper.panel.socialList.recentWrapper.button.hintWrapper.hintText", "text": "@open_hint", "gamepad_only": true},
+        {"name": "recent_list_box", "type": "PlayerList", "view_path": "wrapper.panel.socialList.recentWrapper.listBox"},
+        {"name": "recent_list_box_container", "type": "Component", "view_path": "wrapper.panel.socialList.recentWrapper.listBox.container"},
+
+        {"name": "blocked_container", "type": "ListItem", "view_path": "wrapper.panel.socialList.blockedWrapper"},
+        {"name": "blocked_button", "type": "ListItem", "view_path": "wrapper.panel.socialList.blockedWrapper.button"},
+        {"name": "blocked_recent_icon", "type": "Panel", "view_path": "wrapper.panel.socialList.blockedWrapper.button.titleWrapper.recentIcon", "visible":false},
+        {"name": "blocked_title", "type": "Label", "view_path": "wrapper.panel.socialList.blockedWrapper.button.titleWrapper.title", "text": "@blocked_players"},
+        {"name": "blocked_title_hint", "type": "ActionLabel", "view_path": "wrapper.panel.socialList.blockedWrapper.button.hintWrapper.hint", "gamepad_only": true},
+        {"name": "blocked_title_hint_text", "type": "ActionLabel", "view_path": "wrapper.panel.socialList.blockedWrapper.button.hintWrapper.hintText", "text": "@open_hint", "gamepad_only": true},
+        {"name": "blocked_list_box", "type": "PlayerList", "view_path": "wrapper.panel.socialList.blockedWrapper.listBox"},
+        {"name": "blocked_list_box_container", "type": "Component", "view_path": "wrapper.panel.socialList.blockedWrapper.listBox.container"},
+
+        {"name": "popup_menu", "type": "Component", "file": "lobby/social_panel/context_menu/social_popup_menu.json", "visible": false}
+    ]
+}

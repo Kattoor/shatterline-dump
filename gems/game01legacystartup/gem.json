@@ -1,0 +1,57 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "0c5574ddc2b04edf94723835e9476a4f",
+    "Name": "Game01LegacyStartup",
+    "DisplayName": "Game01LegacyStartup",
+    "Version": "1.0.0",
+    "Summary": "Legacy Startup for Game01 project, provides alternative implementation of LegacyGameInterface gem",
+    "Tags": ["GameStartup"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        }
+    ],
+    "Dependencies": [
+        {
+            "Uuid": "00f05751e45c4c61ae7da3e551d06909",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "GameComponents"
+        },
+        {
+            "Uuid": "3935319725ff4f7b957ad1516afcd1fe",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01AudioSystem"
+        },
+        {
+            "Uuid": "7e24ebb066104127a4abb14e13ec7bed",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "GameSession"
+        },
+        {
+            "Uuid": "2ebd4481cbf142b89286f28b4c29ace3",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01Interfaces"
+        },
+        {
+            "Uuid": "ff06785f7145416b9d46fde39098cb0c",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "LmbrCentral"
+        },
+        {
+            "Uuid": "e9f42946ff83451091589c3d585a09a8",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "BackendAssets"
+        },
+        {
+            "Uuid": "46f33e3a60c14b35b5bf843399f2a991",
+            "VersionConstraints": ["~>0.1"],
+            "_comment": "AssetCache"
+        },
+        {
+            "Uuid": "f12ac08609c0483486b4ff48ae193ee2",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "BackendAssetsInterfaces"
+        }
+    ]
+}

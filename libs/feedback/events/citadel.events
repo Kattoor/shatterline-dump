@@ -1,0 +1,74 @@
+{
+    "events": [
+        {
+            "name": "citadel_win_message",
+            "actions" : [
+                {"message_announcer": {"message": "@cit_team_eliminated_win", "timeout": 3}},
+                {"narration_objective": {"trigger_name": "tdm_phillips_victory_time"}}
+            ]
+        },
+        {
+            "name": "citadel_lose_message",
+            "actions" : [
+                {"message_announcer": {"message": "@cit_team_eliminated_lose", "timeout": 3}},
+                {"narration_objective": {"trigger_name": "tdm_phillips_defeat_time"}}
+            ]
+        },
+        {
+            "name": "citadel_time_is_up_win",
+            "actions" : [
+                {"message_announcer": {"message": "@cit_round_time_is_up_win", "timeout": 3}},
+                {"narration_objective": {"trigger_name": "ptb_phillips_victory_time"}}
+            ]
+        },
+        {
+            "name": "citadel_time_is_up_lose",
+            "actions" : [
+                {"message_announcer": {"message": "@cit_round_time_is_up_lose", "timeout": 3}},
+                {"narration_objective": {"trigger_name": "ptb_phillips_defeat_time"}}
+            ]
+        },
+        {
+            "name": "citadel_draw_message",
+            "actions" : [
+                {"message_announcer": {"message": "@cit_time_is_up_draw", "timeout": 3}},
+                {"narration_objective": {"trigger_name": "tdm_phillips_draw"}}
+            ]
+        },
+        {
+            "name": "citadel_round_start_attackers",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_04"}},
+                {"message_objective": {"message": "@cit_obtain_canisters"}}
+            ]
+        },
+        {
+            "name": "citadel_canister_picked",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_06"}},
+                {"message_announcer": {"message": "@cit_deliver_canister", "timeout": 3}}
+            ]
+        },
+        {
+            "name": "citadel_canister_stolen",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_09"}},
+                {"message_announcer": {"message": "@cit_canister_stolen", "timeout": 3}}
+            ]
+        },
+        {
+            "name": "citadel_canister_delivered",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_explosive_03"}},
+                {"message_announcer": {"message": "@cit_obtain_canisters", "timeout": 3}}
+            ]
+        },
+        {
+            "name": "citadel_round_start_defenders",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "tdm_phillips_brief"}},
+                {"message_objective": {"message": "@cit_protect_base"}}
+            ]
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+{
+    "script": "scripts/ui/common/task_widget.lua",
+    "view_path": "TaskWidget.html",
+    "children": 
+    [
+        {"name": "season_widget_wrapper", "type": "Component", "view_path": "seasonWidgetWrapper"},
+
+        {"name": "tasks_title", "type": "Label", "view_path": "titleWrapper.textWrapper.title"},
+        {"name": "tasks_time", "type": "Label", "view_path": "titleWrapper.textWrapper.time"},
+        {"name": "background", "type": "Component", "view_path": "titleWrapper.background"},
+
+        {"name": "tasks_list", "type": "TaskProgressList", "view_path": "tasksWrapper.tasksList"},
+        {"name": "tasks_list_container", "type": "Component", "view_path": "tasksWrapper.tasksList.container"},
+
+        {"name": "paginator_buttons", "type": "ListBox", "view_path": "paginatorWrapper.buttons"},
+
+        {"name": "paginator_left", "type": "Button", "view_path": "paginatorWrapper.arrowLeft"},
+        {"name": "paginator_left_hint", "type": "ActionLabel", "view_path": "paginatorWrapper.hintLeft", "gamepad_only": true},
+
+        {"name": "paginator_right", "type": "Button", "view_path": "paginatorWrapper.arrowRight"},
+        {"name": "paginator_right_hint", "type": "ActionLabel", "view_path": "paginatorWrapper.hintRight", "gamepad_only": true},
+
+        {"name": "more_tasks_button", "type": "Button", "view_path": "moreButton", "text": "@tasks_show_more"},
+        {"name": "more_tasks_button_hint", "type": "ActionLabel", "view_path": "moreButton.wrapper.key", "gamepad_only": true},
+        
+        {"name": "empty_container", "type": "Component", "view_path": "tasksWrapper.emptyContainer"},
+        {"name": "empty_label", "type": "Label", "view_path": "tasksWrapper.emptyContainer.label", "text": "@all_task_completed"},
+
+        {"name": "task_hint", "type": "TaskItemsList", "view_path": "tasksContainer"}
+    ]
+}

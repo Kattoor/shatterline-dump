@@ -1,0 +1,38 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "6109d307d44c437ea1fb5c931e4a3e1e",
+    "Name": "Game01MetagameInventory",
+    "DisplayName": "Game01MetagameInventory",
+    "Version": "0.1.0",
+    "Summary": "Game01 Metagame Inventory",
+    "Tags": ["Untagged"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        }
+    ],
+    "Dependencies":
+    [
+        {
+            "Uuid": "b8e16ebeec9346f18af81fe09b6844bf",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01ClientBackend"
+        },
+        {
+            "Uuid": "7e24ebb066104127a4abb14e13ec7bed",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "GameSession"
+        },
+        {
+            "Uuid": "c0bf497f08e64a38ad901aecf5ce4f1d",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01PlayerProfile"
+        },
+        {
+            "Uuid": "71f233c8118b4c8283e3406b447657ab",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01BackendCommon"
+        }
+    ]
+}

@@ -1,0 +1,73 @@
+{
+    "voice_events":
+    [
+        {
+            "audio_trigger": "pve_hecatomb_hero1_02",
+            "event": [ { "event_id": "pretty_hot_out_there", "actor_team": "Same" } ],
+            "team_only": true,
+            "commentator": {"actor": "ActorTeammate"},
+            "ignore_commentator_cooldown": true,
+            "event_priority": 10,
+            "on_finish_event": {
+              "event_name": "pve_hecatomb_reach_lab_phillips_2",
+              "delay": 4
+            }
+        },
+        {
+            "audio_trigger": "pve_hecatomb_hero1_03",
+            "event": [ { "event_id": "any_surprises", "actor_team": "Same" } ],
+            "team_only": true,
+            "commentator": {"actor": "ActorTeammate"},
+            "ignore_commentator_cooldown": true,
+            "event_priority": 10,
+            "on_finish_event": {
+              "event_name": "pve_hecatomb_reach_lab_velasquez_3",
+              "delay": 3
+            }
+        },
+        {
+            "audio_trigger": "pve_hecatomb_hero1_04",
+            "event": [ { "event_id": "got_it", "actor_team": "Same" } ],
+            "team_only": true,
+            "commentator": {"actor": "ActorTeammate"},
+            "ignore_commentator_cooldown": true,
+            "event_priority": 10
+        },
+        {
+            "audio_trigger": "pve_hecatomb_hero1_05",
+            "event": [ { "event_id": "could_kioni_be_glasshead", "actor_team": "Same" } ],
+            "team_only": true,
+            "commentator": {"actor": "ActorTeammate"},
+            "ignore_commentator_cooldown": true,
+            "event_priority": 10,
+            "on_finish_event": {
+              "event_name": "pve_hecatomb_pretorius_trolling",
+              "delay": 4
+            }
+        },
+        {
+            "audio_trigger": "pve_hecatomb_hero1_06",
+            "event": [ { "event_id": "holy_shit", "actor_team": "Same" } ],
+            "team_only": true,
+            "commentator": {"actor": "ActorTeammate"},
+            "ignore_commentator_cooldown": true,
+            "event_priority": 10,
+            "on_finish_event": {
+              "event_name": "pve_hecatomb_stay_behind",
+              "delay": 4
+            }
+        },
+        {
+            "audio_trigger": "pve_hecatomb_hero1_07",
+            "event": [ { "event_id": "what_do_we_do", "actor_team": "Same" } ],
+            "team_only": true,
+            "commentator": {"actor": "ActorTeammate"},
+            "ignore_commentator_cooldown": true,
+            "event_priority": 10,
+            "on_finish_event": {
+              "event_name": "pve_hecatomb_kill_behemoth_phillips_reaction",
+              "delay": 3
+            }
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "name": "Microbehaviors/Stop",
+    "root": "417ff02d-9e83-4000-b570-7bd1fb327298",
+    "nodes": {
+        "417ff02d-9e83-4000-b570-7bd1fb327298": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 89
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "StoppedByMicrobehavior"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "b3eb8e00-f310-4e05-a68f-816f256999eb"
+        },
+        "b3eb8e00-f310-4e05-a68f-816f256999eb": {
+            "name": "Noop",
+            "pos": {
+                "x": 0,
+                "y": 210
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

@@ -1,0 +1,207 @@
+{
+    "name": "GlassheadNavlink/GoToPoints",
+    "root": "44ed11db-903b-41d9-b3a5-9b6d372865d1",
+    "nodes": {
+        "4093dbc5-795c-466b-865e-0f0cd4b316f1": {
+            "name": "FindNearestEntityWithTags",
+            "pos": {
+                "x": -285,
+                "y": 239
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Tag",
+                    "type": "Tag",
+                    "value": "Point1"
+                },
+                {
+                    "name": "ExtraTag",
+                    "type": "Tag",
+                    "value": ""
+                },
+                {
+                    "name": "ExcludeId",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                },
+                {
+                    "name": "Range",
+                    "type": "Float",
+                    "value": "0.00"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "EntityId",
+                    "type": "Variable",
+                    "value": [
+                        "Result"
+                    ]
+                },
+                {
+                    "name": "Distance",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "e53ac16b-47ea-47f0-954d-3b3b4a71ca6b": {
+            "name": "ApproachTo",
+            "pos": {
+                "x": 10,
+                "y": 278
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "Result"
+                    ]
+                },
+                {
+                    "name": "EndDistance",
+                    "type": "Float",
+                    "value": "0.00"
+                },
+                {
+                    "name": "UpdateDestinationPoint",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "44ed11db-903b-41d9-b3a5-9b6d372865d1": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 73
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "bd39f3ef-b3e1-4b18-b431-6eb4c8b39e1a",
+                "4093dbc5-795c-466b-865e-0f0cd4b316f1",
+                "e53ac16b-47ea-47f0-954d-3b3b4a71ca6b",
+                "f3452adc-1dd8-4b5a-a09c-813b360e5bb4",
+                "9b14642f-c2c9-4c1a-94ba-0ffcbe75d9af"
+            ]
+        },
+        "f3452adc-1dd8-4b5a-a09c-813b360e5bb4": {
+            "name": "FindNearestEntityWithTags",
+            "pos": {
+                "x": 295,
+                "y": 245
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Tag",
+                    "type": "Tag",
+                    "value": "Point2"
+                },
+                {
+                    "name": "ExtraTag",
+                    "type": "Tag",
+                    "value": ""
+                },
+                {
+                    "name": "ExcludeId",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                },
+                {
+                    "name": "Range",
+                    "type": "Float",
+                    "value": "0.00"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "EntityId",
+                    "type": "Variable",
+                    "value": [
+                        "Result"
+                    ]
+                },
+                {
+                    "name": "Distance",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "9b14642f-c2c9-4c1a-94ba-0ffcbe75d9af": {
+            "name": "ApproachTo",
+            "pos": {
+                "x": 590,
+                "y": 284
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "Result"
+                    ]
+                },
+                {
+                    "name": "EndDistance",
+                    "type": "Float",
+                    "value": "0.00"
+                },
+                {
+                    "name": "UpdateDestinationPoint",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "bd39f3ef-b3e1-4b18-b431-6eb4c8b39e1a": {
+            "name": "SetStrafeAllowed",
+            "pos": {
+                "x": -570,
+                "y": 264
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Allow",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

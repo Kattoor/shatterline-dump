@@ -1,0 +1,11 @@
+{
+    "script": "scripts/ui/modal_window/mode_info_video_window.lua",
+    "view_path": "ModeInfoVideoWindow.html",
+    "send_stats": true,
+    "defined_actions": ["hide_gamepad_cursor"],
+    "children":
+    [
+        {"name": "container", "type": "Component", "view_path": "container"},
+        {"name": "video", "type": "Video", "view_path": "container.video", "background": false}
+    ]
+}

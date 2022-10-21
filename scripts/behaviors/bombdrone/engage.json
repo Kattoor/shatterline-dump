@@ -1,0 +1,1215 @@
+{
+    "name": "BombDrone/Engage",
+    "root": "c017dd76-1c62-4f82-b657-0e85934acb09",
+    "nodes": {
+        "45325f6c-e64f-4e84-bfea-8733a425d3e9": {
+            "name": "SetBBValueByPath",
+            "pos": {
+                "x": -1420,
+                "y": 898
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "BB Path",
+                    "type": "StringHash",
+                    "value": "Gai.BombDrone.AttackOnTargetPos"
+                },
+                {
+                    "name": "Value",
+                    "type": "Variable",
+                    "value": [
+                        "AttackOnTargetPos"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "c90b3fb6-dd6a-4b13-a5ac-4703265eff8a": {
+            "name": "CallSubtree",
+            "pos": {
+                "x": -930,
+                "y": 1728
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Label",
+                    "type": "StringHash",
+                    "value": "Approach"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "22e36148-ad4e-4f20-a33b-17e041c56f99"
+        },
+        "4b625f1a-e314-48c2-928f-5cb2ceabe13a": {
+            "name": "CallSubtree",
+            "pos": {
+                "x": 350,
+                "y": 827
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Label",
+                    "type": "StringHash",
+                    "value": "AOEMeleeAttack"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "cb9b8054-d8cd-419f-b005-fbc6619beb28"
+        },
+        "baa2fbdc-33cd-4046-9e72-ff48e57223a2": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -1005,
+                "y": 518
+            },
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "EffectiveRangeDeviation"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Float"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "6635691f-a525-4242-a60b-21a7287d5019": {
+            "name": "IsBBValueExist",
+            "pos": {
+                "x": -1385,
+                "y": 1114
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ValuePath",
+                    "type": "StringHash",
+                    "value": "Gai.ConditionVariables.TargetMissPosition"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "aff864ae-21bd-49a2-a55f-1b4d4186882f"
+        },
+        "dd6631ec-db50-4506-82b9-725f156d8b79": {
+            "name": "Selector",
+            "pos": {
+                "x": -1635,
+                "y": 1007
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "27f38ce6-0ccd-4af6-95c7-4c83da7447f7",
+                "6635691f-a525-4242-a60b-21a7287d5019"
+            ]
+        },
+        "454272a4-5edc-434c-8a45-0111c19d9919": {
+            "name": "Sequence",
+            "pos": {
+                "x": 1200,
+                "y": 865
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "67c31d23-6329-4bc9-8e4f-56e2f9ff9ccd",
+                "2a1b1245-c7f0-4139-9506-14f50feaa1d9"
+            ]
+        },
+        "cab8af33-b630-4941-a1f0-cf11e3365204": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -2040,
+                "y": 899
+            },
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "TargetNotInRange"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Boolean"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "eeb4bb80-0c85-4240-869e-af36977fad15": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -1385,
+                "y": 1515
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "TargetNotInRange"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "0726711c-b8e6-4068-ab98-a6bc532de106": {
+            "name": "Subtract",
+            "pos": {
+                "x": -685,
+                "y": 516
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "InputA",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Inventory",
+                        "CurrentItem",
+                        "effective_distance_max"
+                    ]
+                },
+                {
+                    "name": "InputB",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Inventory",
+                        "CurrentItem",
+                        "effective_distance_min"
+                    ]
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Result",
+                    "type": "Variable",
+                    "value": [
+                        "EffectiveRangeDeviation"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "ea97420a-b297-4e7f-ad25-cbcead647f22": {
+            "name": "ApproachToKeepDistance",
+            "pos": {
+                "x": 1340,
+                "y": 1312
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "Distance",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Inventory",
+                        "CurrentItem",
+                        "effective_distance_min"
+                    ]
+                },
+                {
+                    "name": "DistanceDeviationMin",
+                    "type": "Float",
+                    "value": "0.00"
+                },
+                {
+                    "name": "DistanceDeviationMax",
+                    "type": "Variable",
+                    "value": [
+                        "EffectiveRangeDeviation"
+                    ]
+                },
+                {
+                    "name": "MoveBackDirectionRandomization",
+                    "type": "Float",
+                    "value": "0"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "dfc73083-9452-451a-9db2-5008a3c9a3fd": {
+            "name": "IsBBValueExist",
+            "pos": {
+                "x": 1340,
+                "y": 1134
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ValuePath",
+                    "type": "StringHash",
+                    "value": "Gai.ConditionVariables.TargetMissPosition"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "ea97420a-b297-4e7f-ad25-cbcead647f22"
+        },
+        "cc0a1984-7ec9-4cea-aa1a-e13e724237cc": {
+            "name": "ApproachTo",
+            "pos": {
+                "x": 800,
+                "y": 1312
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "AttackOnTargetPos"
+                    ]
+                },
+                {
+                    "name": "EndDistance",
+                    "type": "Float",
+                    "value": "0.0"
+                },
+                {
+                    "name": "UpdateDestinationPoint",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "bee31d14-64d9-413f-b412-1c0393941d62": {
+            "name": "Selector",
+            "pos": {
+                "x": -775,
+                "y": 1569
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "c90b3fb6-dd6a-4b13-a5ac-4703265eff8a",
+                "7261c24a-3444-498e-b325-3e9a351b37ed"
+            ]
+        },
+        "27ced700-f218-43e3-bcdf-4b7ab1ae95a3": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -400,
+                "y": 516
+            },
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "StepBackPos"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Position"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "a41f5acf-4ae1-4091-93d7-ad97a0b63a0d": {
+            "name": "IsBBValueExist",
+            "pos": {
+                "x": -655,
+                "y": 1912
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ValuePath",
+                    "type": "StringHash",
+                    "value": "Gai.ConditionVariables.TargetMissPosition"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "52181919-a977-42ca-9153-0ff35a8d7190"
+        },
+        "59de8863-300d-4c07-ac24-930cf0ec1aad": {
+            "name": "IsBBValueExist",
+            "pos": {
+                "x": 800,
+                "y": 1134
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ValuePath",
+                    "type": "StringHash",
+                    "value": "Gai.ConditionVariables.TargetMissPosition"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "cc0a1984-7ec9-4cea-aa1a-e13e724237cc"
+        },
+        "6248911f-e94f-4a30-8386-c28f0fc595a3": {
+            "name": "Success",
+            "pos": {
+                "x": -240,
+                "y": 2317
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "ad5ce358-f77a-491c-86b1-25db0a704e42": {
+            "name": "Succeeder",
+            "pos": {
+                "x": -775,
+                "y": 1445
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "bee31d14-64d9-413f-b412-1c0393941d62"
+        },
+        "19da2426-c645-4108-b36a-edebd456a45b": {
+            "name": "EraseBBValueByPathOnExit",
+            "pos": {
+                "x": -775,
+                "y": 896
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "BB Path",
+                    "type": "StringHash",
+                    "value": "Gai.BombDrone.AttackOnTargetPos"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "ac3c9e9c-582b-4a82-950f-da49c2105d3f"
+        },
+        "4bb1382e-8a78-4ed7-89b0-a3825638f22a": {
+            "name": "Wait",
+            "pos": {
+                "x": 90,
+                "y": 1912
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Float",
+                    "value": "5"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "52181919-a977-42ca-9153-0ff35a8d7190": {
+            "name": "PointInHorizontalRange",
+            "pos": {
+                "x": -655,
+                "y": 2085
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Source",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Point",
+                    "type": "Variable",
+                    "value": [
+                        "AttackOnTargetPos"
+                    ]
+                },
+                {
+                    "name": "Min",
+                    "type": "Float",
+                    "value": "0"
+                },
+                {
+                    "name": "Max",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Inventory",
+                        "CurrentItem",
+                        "effective_distance_max"
+                    ]
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "e1d8518f-b713-4af3-b2d9-c6beedf0d422"
+        },
+        "2a1b1245-c7f0-4139-9506-14f50feaa1d9": {
+            "name": "WaitRandom",
+            "pos": {
+                "x": 1360,
+                "y": 977
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "MinWaitTime",
+                    "type": "Float",
+                    "value": "0.5"
+                },
+                {
+                    "name": "MaxWaitTime",
+                    "type": "Float",
+                    "value": "1"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "99615c8f-a450-47c9-bc2c-345a67b3f7b0": {
+            "name": "Equals",
+            "pos": {
+                "x": -775,
+                "y": 1234
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Lhs",
+                    "type": "Variable",
+                    "value": [
+                        "TargetNotInRange"
+                    ]
+                },
+                {
+                    "name": "Rhs",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "ad5ce358-f77a-491c-86b1-25db0a704e42"
+        },
+        "f41e9c8e-fe3f-4bbf-aa40-a4b3ede9b07c": {
+            "name": "IsBBValueExist",
+            "pos": {
+                "x": -240,
+                "y": 1911
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ValuePath",
+                    "type": "StringHash",
+                    "value": "Gai.ConditionVariables.TargetMissPosition"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "0863df67-c8b5-4463-8239-fecee5a469b0"
+        },
+        "c918ec32-4640-42d8-a21a-9441bfc6581a": {
+            "name": "PointInHorizontalRange",
+            "pos": {
+                "x": -1800,
+                "y": 1288
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Source",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Point",
+                    "type": "Variable",
+                    "value": [
+                        "AttackOnTargetPos"
+                    ]
+                },
+                {
+                    "name": "Min",
+                    "type": "Float",
+                    "value": "0.0"
+                },
+                {
+                    "name": "Max",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Inventory",
+                        "CurrentItem",
+                        "effective_distance_max"
+                    ]
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "0a8e4f5a-9213-4381-934d-414073645cba"
+        },
+        "0a8e4f5a-9213-4381-934d-414073645cba": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -1800,
+                "y": 1515
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "TargetNotInRange"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "24ee735a-d310-480b-a20d-bbcfb3046bcb": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -205,
+                "y": 515
+            },
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "AttackOnTargetPos"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Position"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "688c428c-384b-403c-a367-7672fc6d621e": {
+            "name": "Sequence",
+            "pos": {
+                "x": -1385,
+                "y": 738
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "cab8af33-b630-4941-a1f0-cf11e3365204",
+                "6ffd0ab7-7114-40fb-8c7e-4335d0ec0f78",
+                "25ac0824-45d8-4920-b3c6-e13b1f2b1e05",
+                "45325f6c-e64f-4e84-bfea-8733a425d3e9",
+                "c53995e6-c010-41c8-8671-3e74ec0c71f3",
+                "19da2426-c645-4108-b36a-edebd456a45b"
+            ]
+        },
+        "0863df67-c8b5-4463-8239-fecee5a469b0": {
+            "name": "TargetInHorizontalRange",
+            "pos": {
+                "x": -240,
+                "y": 2086
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Source",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Min",
+                    "type": "Float",
+                    "value": "0"
+                },
+                {
+                    "name": "Max",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Inventory",
+                        "CurrentItem",
+                        "effective_distance_max"
+                    ]
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "6248911f-e94f-4a30-8386-c28f0fc595a3"
+        },
+        "67c31d23-6329-4bc9-8e4f-56e2f9ff9ccd": {
+            "name": "Selector",
+            "pos": {
+                "x": 1055,
+                "y": 976
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "59de8863-300d-4c07-ac24-930cf0ec1aad",
+                "dfc73083-9452-451a-9db2-5008a3c9a3fd"
+            ]
+        },
+        "25ac0824-45d8-4920-b3c6-e13b1f2b1e05": {
+            "name": "Succeeder",
+            "pos": {
+                "x": -1635,
+                "y": 899
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "dd6631ec-db50-4506-82b9-725f156d8b79"
+        },
+        "a7d32fb2-743d-4b74-bc7d-9c64e082c124": {
+            "name": "SetStrafeAllowedAndRestoreOnExit",
+            "pos": {
+                "x": 0,
+                "y": 232
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Allow",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "158306ab-9c9c-4cdb-9941-e7e68c2eced8"
+        },
+        "cb9b8054-d8cd-419f-b005-fbc6619beb28": {
+            "name": "Success",
+            "pos": {
+                "x": 350,
+                "y": 946
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "e1d8518f-b713-4af3-b2d9-c6beedf0d422": {
+            "name": "Success",
+            "pos": {
+                "x": -655,
+                "y": 2318
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "cbaf5779-caf3-4d1e-9fea-6d75beb53e8d": {
+            "name": "Succeeder",
+            "pos": {
+                "x": 350,
+                "y": 516
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "9870a0a0-0454-453b-8028-af797e33d909"
+        },
+        "6ffd0ab7-7114-40fb-8c7e-4335d0ec0f78": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -1815,
+                "y": 900
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "TargetNotInRange"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "22e36148-ad4e-4f20-a33b-17e041c56f99": {
+            "name": "Success",
+            "pos": {
+                "x": -930,
+                "y": 1853
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "9870a0a0-0454-453b-8028-af797e33d909": {
+            "name": "Selector",
+            "pos": {
+                "x": 350,
+                "y": 624
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "688c428c-384b-403c-a367-7672fc6d621e",
+                "4b625f1a-e314-48c2-928f-5cb2ceabe13a",
+                "454272a4-5edc-434c-8a45-0111c19d9919"
+            ]
+        },
+        "aff864ae-21bd-49a2-a55f-1b4d4186882f": {
+            "name": "TargetInHorizontalRange",
+            "pos": {
+                "x": -1385,
+                "y": 1289
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Source",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Min",
+                    "type": "Float",
+                    "value": "0.0"
+                },
+                {
+                    "name": "Max",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Inventory",
+                        "CurrentItem",
+                        "effective_distance_max"
+                    ]
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "eeb4bb80-0c85-4240-869e-af36977fad15"
+        },
+        "158306ab-9c9c-4cdb-9941-e7e68c2eced8": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 343
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "baa2fbdc-33cd-4046-9e72-ff48e57223a2",
+                "0726711c-b8e6-4068-ab98-a6bc532de106",
+                "27ced700-f218-43e3-bcdf-4b7ab1ae95a3",
+                "24ee735a-d310-480b-a20d-bbcfb3046bcb",
+                "12e49168-266b-4cf1-b213-7db3637dfab7",
+                "cbaf5779-caf3-4d1e-9fea-6d75beb53e8d"
+            ]
+        },
+        "c53995e6-c010-41c8-8671-3e74ec0c71f3": {
+            "name": "SetBBValueByPath",
+            "pos": {
+                "x": -1115,
+                "y": 897
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "BB Path",
+                    "type": "StringHash",
+                    "value": "Gai.BombDrone.EffectiveRangeDeviation"
+                },
+                {
+                    "name": "Value",
+                    "type": "Variable",
+                    "value": [
+                        "EffectiveRangeDeviation"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "12e49168-266b-4cf1-b213-7db3637dfab7": {
+            "name": "FindPointForMeleeAttack",
+            "pos": {
+                "x": 90,
+                "y": 516
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "TargetID",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "BBPath",
+                    "type": "StringHash",
+                    "value": "Gai.ConditionVariables.TargetMissPosition"
+                },
+                {
+                    "name": "HitType",
+                    "type": "StringHash",
+                    "value": "AOE"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "ResultPosition",
+                    "type": "Variable",
+                    "value": [
+                        "AttackOnTargetPos"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "c017dd76-1c62-4f82-b657-0e85934acb09": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 103
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Engage"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "a7d32fb2-743d-4b74-bc7d-9c64e082c124"
+        },
+        "ac3c9e9c-582b-4a82-950f-da49c2105d3f": {
+            "name": "EraseBBValueByPathOnExit",
+            "pos": {
+                "x": -775,
+                "y": 1039
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "BB Path",
+                    "type": "StringHash",
+                    "value": "Gai.BombDrone.EffectiveRangeDeviation"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "99615c8f-a450-47c9-bc2c-345a67b3f7b0"
+        },
+        "7261c24a-3444-498e-b325-3e9a351b37ed": {
+            "name": "ParallelUntilAnyComplete",
+            "pos": {
+                "x": -240,
+                "y": 1740
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "a41f5acf-4ae1-4091-93d7-ad97a0b63a0d",
+                "f41e9c8e-fe3f-4bbf-aa40-a4b3ede9b07c",
+                "4bb1382e-8a78-4ed7-89b0-a3825638f22a"
+            ]
+        },
+        "27f38ce6-0ccd-4af6-95c7-4c83da7447f7": {
+            "name": "IsBBValueExist",
+            "pos": {
+                "x": -1800,
+                "y": 1115
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ValuePath",
+                    "type": "StringHash",
+                    "value": "Gai.ConditionVariables.TargetMissPosition"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "c918ec32-4640-42d8-a21a-9441bfc6581a"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

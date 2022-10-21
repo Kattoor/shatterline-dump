@@ -1,0 +1,127 @@
+{
+    "name": "entity_hit_client",
+    "doc": "Origin: game session. Emitter: client. Emitted when player hits an entity while shooting (performing raycast)",
+    "type": "record",
+    "fields": [
+        {
+            "name": "is_player",
+            "type": "boolean",
+            "default": false,
+            "doc": "boolean flag to distinguish non-player objects. true - object is a player, false - otherwise"
+        },
+        {
+            "name": "pid",
+            "type": "long",
+            "default": -1,
+            "doc": "namespace-unique identifier of a player"
+        },
+        {
+            "name": "ts",
+            "type": "string",
+            "default": "-1",
+            "doc": "ISO8601 UTC timestamp of the event invocation"
+        },
+        {
+            "name": "gid",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace-unique identifier of the match"
+        },
+        {
+            "name": "pid_shooter",
+            "type": "long",
+            "default": -1,
+            "doc": "pid of a shooter"
+        },
+        {
+            "name": "ns",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace of the server's deployment (realm)"
+        },
+        {
+            "name": "stance",
+            "type": "string",
+            "default": "-1",
+            "doc": "current body stance of the entity (player or AI)"
+        },
+        {
+            "name": "a",
+            "type": "int",
+            "default": -1,
+            "doc": "world XY-plain angle of player's camera 0 to 360 clockwise direction (0.0 - straight along Y-axis, 90.0 - straight along X-axis)"
+        },
+        {
+            "name": "b",
+            "type": "int",
+            "default": -1,
+            "doc": "world YZ-plain angle of player's camera, 0 straight, 90 top, -90 bottom"
+        },
+        {
+            "name": "name",
+            "type": "string",
+            "default": "-1",
+            "doc": "unique name of the event"
+        },
+        {
+            "name": "body_part",
+            "type": "string",
+            "default": "-1",
+            "doc": "a target's body part affected by damage"
+        },
+        {
+            "name": "cid",
+            "type": "int",
+            "default": -1,
+            "doc": "team unique identifier. -6 pve players, -5 AI, -4 team B, -3 team A or pid in FFA modes"
+        },
+        {
+            "name": "team",
+            "type": "string",
+            "default": "-1",
+            "doc": "categorical definition of the team which player belongs to"
+        },
+        {
+            "name": "wid",
+            "type": "string",
+            "default": "-1",
+            "doc": "game-unique name of the weapon"
+        },
+        {
+            "name": "estimated_dmg",
+            "type": "double",
+            "default": -1,
+            "doc": "estimated amount of health withdrawn from target's HP on hit"
+        },
+        {
+            "name": "tick_id",
+            "type": "long",
+            "default": -1,
+            "doc": "tick id"
+        },
+        {
+            "name": "y",
+            "type": "double",
+            "default": -1,
+            "doc": "Y-axis coordinate of an object with decimal accuracy 1e-13"
+        },
+        {
+            "name": "x",
+            "type": "double",
+            "default": -1,
+            "doc": "X-axis coordinate of an object with decimal accuracy 1e-13"
+        },
+        {
+            "name": "z",
+            "type": "double",
+            "default": -1,
+            "doc": "Z-axis coordinate of an object with decimal accuracy 1e-13"
+        },
+        {    
+            "name": "pellet_id", 
+            "type": "long",
+            "default": -1,
+            "doc": "shot-unique pellet number"
+        }
+    ]
+}

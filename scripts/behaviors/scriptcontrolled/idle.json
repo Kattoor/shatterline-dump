@@ -1,0 +1,65 @@
+{
+    "name": "ScriptControlled/Idle",
+    "root": "e6cd2a3a-7af7-4149-abdb-20e5437a3165",
+    "nodes": {
+        "e6cd2a3a-7af7-4149-abdb-20e5437a3165": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 89
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Idle"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "ba8c5485-3557-4da2-b860-b90f934e2e27"
+        },
+        "ba8c5485-3557-4da2-b860-b90f934e2e27": {
+            "name": "SetBehaviorConditionAndResetOnExit",
+            "pos": {
+                "x": 0,
+                "y": 207
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Idle"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "b2cd6677-e4ab-40d5-a154-d39a87187aec"
+        },
+        "b2cd6677-e4ab-40d5-a154-d39a87187aec": {
+            "name": "Noop",
+            "pos": {
+                "x": 0,
+                "y": 346
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

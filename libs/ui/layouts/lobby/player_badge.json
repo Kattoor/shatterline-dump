@@ -1,0 +1,19 @@
+{
+    "script": "scripts/ui/lobby/player_badge.lua",
+    "view_path": "FriendsPlayerItem.html",
+    "children": [
+        {"name": "image", "type": "Image", "view_path": "wrapper.nameplate.background", "image": "nameplate_background_2"},
+        {"name": "avatar", "type": "Image", "view_path": "wrapper.nameplate.bodyWrapper.icon", "image": "nameplate_icon_2"},
+
+        {"name": "name", "type": "Label", "view_path": "wrapper.nameplate.bodyWrapper.nameWrapper.name"},
+        {"name": "clan", "type": "Label", "view_path": "wrapper.nameplate.bodyWrapper.nameWrapper.clan", "visible": false},
+
+        {"name": "presence", "type": "Label", "view_path": "wrapper.presence", "visible": false},
+
+        {"name": "profile", "type": "Button", "view_path": "wrapper.controlContainer.profile", "visible": false},
+        {"name": "inviteToSquad", "type": "Button", "view_path": "wrapper.controlContainer.inviteToSquad", "text": "@invite_to_squad"},
+        {"name": "joinToSquad", "type": "Button", "view_path": "wrapper.controlContainer.joinToSquad", "text": "@join_to_squad"},
+        {"name": "addToFriends", "type": "Button", "view_path": "wrapper.controlContainer.addToFriend", "text": "@add_to_friends"},
+        {"name": "removeFromFriends", "type": "Button", "view_path": "wrapper.controlContainer.removeFromFriends", "text": "@remove_from_friends"}
+    ]
+}

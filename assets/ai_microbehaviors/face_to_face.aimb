@@ -1,0 +1,108 @@
+
+{
+    "microbehaviors":
+    [
+        {
+            "name": "FaceToFaceReaction",
+            "execute_prob": 1.0,
+            "execute_once": false,
+            "conditions":
+            [
+                {
+                    "template": "IsBehaviorCondition",
+                    "origin": "source",
+                    "inverse": true,
+                    "params":
+                    {
+                        "name": "Healing"
+                    }
+                },
+                {
+                   "template": "InCover",
+                   "inverse": true
+                },
+                {
+                    "template": "AttackInProgress",
+                    "inverse": true
+                },
+                {
+                    "template":"IsReloading",
+                    "origin":"source",
+                    "inverse":true
+                },
+                {
+                    "template":"Range",
+                    "params":
+                    {
+                        "to":"target",
+                        "min":"0",
+                        "max":"#range"
+                    }
+                },
+                {
+                    "template": "CurTime",
+                    "params":
+                    {
+                        "greater": "false",
+                        "value_bb_path": "Gai.ConditionVariables.EnemyAcquireTime",
+                        "threshold": "#time_threshold"
+                    }
+                },
+                {
+                    "template":"AngleTo",
+                    "params":
+                    {
+                        "to":"target",
+                        "angle":"45"
+                    }
+                },
+                {
+                    "template":"FrequencyLimit",
+                    "origin":"source",
+                    "params":
+                    {
+                        "name":"FaceToFaceReaction",
+                        "delay_min":"5",
+                        "delay_max":"5"
+                    }
+                }
+            ],
+            "interrupt_conditions":
+            [
+                {
+                    "template": "IsBehaviorCondition",
+                    "origin": "source",
+                    "params":
+                    {
+                        "name": "Wounded"
+                    }
+                },
+                {
+                    "template": "IsBehaviorCondition",
+                    "origin": "source",
+                    "params":
+                    {
+                        "name": "Blinded"
+                    }
+                }
+            ],
+            "actions":
+            [
+                {
+                    "template": "RunMicrobehavior",
+                    "params":
+                    {
+                        "name": "FaceToFaceReaction",
+                        "animations_base_index": "0",
+                        "animations_count": "3"
+                    }
+                }
+            ],
+            "default_params":
+            {
+                "range":"5",
+                "time_threshold": "0.5"
+            }
+        }
+    ]
+}

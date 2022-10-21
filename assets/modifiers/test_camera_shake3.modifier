@@ -1,0 +1,42 @@
+{
+    "name": "test_camera_shake3",
+    "duration": 8.0,
+    "effects": [
+        {
+            "camera_shake":
+            {
+                "sinusoids":
+                [
+                    {
+                        "name": "A",
+                        "frequency": 0.25,
+                        "phase": 0.0,
+                        "random_phase": false
+                    }
+                ],
+                
+                "yaw_sinusoid": "A",
+                "pitch_sinusoid": "none",
+                "roll_sinusoid": "none",
+                "shift_x_sinusoid": "none",
+                "shift_y_sinusoid": "none",
+                "shift_z_sinusoid": "none",
+                
+                "yaw_amplitude": 22.2,
+                
+                "attack_duration": 1.0,
+                "sustain_duration": 6.0,
+                "decay_duration": 1.0,
+                
+                "ease_in_curvature": 10.0,
+                "ease_out_curvature": 20.0,
+                
+                "channel": "aiming_camera_shake",
+                "shift_coord_system": "Camera",
+                "rotation_coord_system": "Camera",
+                
+                "affect_aiming": true
+            }
+        }
+    ]
+}

@@ -1,0 +1,71 @@
+<ATLConfig atl_name="g_atl_default_controls">
+ <AudioTriggers>
+  <ATLTrigger atl_name="do_nothing"/>
+  <ATLTrigger atl_name="get_focus">
+   <WwiseEvent wwise_name="UnMute_all_g_default_controls"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="lose_focus">
+   <WwiseEvent wwise_name="Mute_all_g_default_controls"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="mute_all">
+   <WwiseEvent wwise_name="Mute_all_g_default_controls"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="unmute_all">
+   <WwiseEvent wwise_name="UnMute_all_g_default_controls"/>
+  </ATLTrigger>
+ </AudioTriggers>
+ <AudioRtpcs>
+  <ATLRtpc atl_name="SS_Air_Turbulence" path="wwise_ss">
+   <WwiseRtpc wwise_name="SS_Air_Turbulence"/>
+  </ATLRtpc>
+  <ATLRtpc atl_name="SS_Air_TimeOfDay" path="wwise_ss">
+   <WwiseRtpc wwise_name="SS_Air_TimeOfDay"/>
+  </ATLRtpc>
+  <ATLRtpc atl_name="SS_Air_Storm" path="wwise_ss">
+   <WwiseRtpc wwise_name="SS_Air_Storm"/>
+  </ATLRtpc>
+  <ATLRtpc atl_name="SS_Air_Size" path="wwise_ss">
+   <WwiseRtpc wwise_name="SS_Air_Size"/>
+  </ATLRtpc>
+  <ATLRtpc atl_name="SS_Air_RPM" path="wwise_ss">
+   <WwiseRtpc wwise_name="SS_Air_RPM"/>
+  </ATLRtpc>
+  <ATLRtpc atl_name="SS_Air_Presence" path="wwise_ss">
+   <WwiseRtpc wwise_name="SS_Air_Presence"/>
+  </ATLRtpc>
+  <ATLRtpc atl_name="SS_Air_Month" path="wwise_ss">
+   <WwiseRtpc wwise_name="SS_Air_Month"/>
+  </ATLRtpc>
+  <ATLRtpc atl_name="SS_Air_Fury" path="wwise_ss">
+   <WwiseRtpc wwise_name="SS_Air_Fury"/>
+  </ATLRtpc>
+  <ATLRtpc atl_name="SS_Air_Freefall" path="wwise_ss">
+   <WwiseRtpc wwise_name="SS_Air_Freefall"/>
+  </ATLRtpc>
+  <ATLRtpc atl_name="SS_Air_Fear" path="wwise_ss">
+   <WwiseRtpc wwise_name="SS_Air_Fear"/>
+  </ATLRtpc>
+  <ATLRtpc atl_name="distance">
+   <WwiseRtpc wwise_name="distance"/>
+  </ATLRtpc>
+ </AudioRtpcs>
+ <AudioSwitches>
+  <ATLSwitch atl_name="ObstructionOcclusionCalculationType">
+   <ATLSwitchState atl_name="Ignore">
+    <ATLSwitchRequest atl_name="ObstructionOcclusionCalculationType">
+     <ATLValue atl_name="Ignore"/>
+    </ATLSwitchRequest>
+   </ATLSwitchState>
+   <ATLSwitchState atl_name="SingleRay">
+    <ATLSwitchRequest atl_name="ObstructionOcclusionCalculationType">
+     <ATLValue atl_name="SingleRay"/>
+    </ATLSwitchRequest>
+   </ATLSwitchState>
+   <ATLSwitchState atl_name="MultiRay">
+    <ATLSwitchRequest atl_name="ObstructionOcclusionCalculationType">
+     <ATLValue atl_name="MultiRay"/>
+    </ATLSwitchRequest>
+   </ATLSwitchState>
+  </ATLSwitch>
+ </AudioSwitches>
+</ATLConfig>

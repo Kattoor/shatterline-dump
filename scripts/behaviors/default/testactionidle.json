@@ -1,0 +1,65 @@
+{
+    "name": "Default/TestActionIdle",
+    "root": "44686e40-f0ea-446b-a14b-517a62b956e4",
+    "nodes": {
+        "dea24233-cfaf-4dc9-99bc-333d66f06935": {
+            "name": "Noop",
+            "pos": {
+                "x": 0,
+                "y": 310
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "44686e40-f0ea-446b-a14b-517a62b956e4": {
+            "name": "LogGate",
+            "pos": {
+                "x": 0,
+                "y": 106
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CVar",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "OnEnter",
+                    "type": "StringHash",
+                    "value": "ActionTest: Idle started"
+                },
+                {
+                    "name": "OnExit",
+                    "type": "StringHash",
+                    "value": "ActionTest: Idle finished"
+                },
+                {
+                    "name": "Attribute1",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                },
+                {
+                    "name": "Attribute2",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "dea24233-cfaf-4dc9-99bc-333d66f06935"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

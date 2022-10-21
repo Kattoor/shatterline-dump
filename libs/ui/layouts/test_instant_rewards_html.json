@@ -1,0 +1,13 @@
+{
+    "script": "scripts/ui/test_instant_rewards_html.lua",
+    "view_path": "Component.html",
+    "children":
+    [
+        {"name": "InstantReward", "type": "InstantRewardHTML", "file": "hud/instant_rewards.json"},
+        
+        {"name": "filter_text", "type": "EditBox", "x":100, "y":200, "width":210},
+        {"name": "rewards_list", "type": "ListBox",  "x":100, "y":250},
+        
+        {"name": "give_reward_btn", "type": "Button",  "x":100, "y":620, "text": "@give_reward"}
+    ]
+}

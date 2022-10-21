@@ -1,0 +1,237 @@
+{
+    "name": "BombDrone/AOEMeleeAttack",
+    "root": "f7756e68-0e43-4ec5-920f-4522ee2b6e68",
+    "nodes": {
+        "f7756e68-0e43-4ec5-920f-4522ee2b6e68": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 108
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "AOEMeleeAttack"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "afcbda70-878c-4df0-b179-22ec2bde142a"
+        },
+        "0082e2a1-55a7-4ca8-9da2-4131b834ae13": {
+            "name": "SetAnimDrivenWithJumpAndResetOnExit",
+            "pos": {
+                "x": 80,
+                "y": 653
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "20f201d2-7216-4784-a0b2-8810fa97e260"
+        },
+        "ecbb84f0-dd1f-4a18-a6cb-b1da4d8fab9d": {
+            "name": "ClaimMeleeAttack",
+            "pos": {
+                "x": -155,
+                "y": 483
+            },
+            "inputs": [
+                {
+                    "name": "Target",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "MeleeGroup",
+                    "type": "StringHash",
+                    "value": ""
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "037261e9-34fb-42c9-ae80-89ff49414a3a": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 373
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "ecbb84f0-dd1f-4a18-a6cb-b1da4d8fab9d",
+                "c0640263-6393-4b23-8d36-c22d3c9f5a68",
+                "79aed82d-02e6-481f-a015-da4672b23bdd"
+            ]
+        },
+        "3162555b-172e-4813-8ff3-7f8789b8c591": {
+            "name": "LogGate",
+            "pos": {
+                "x": -2255,
+                "y": 2112
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CVar",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "OnEnter",
+                    "type": "StringHash",
+                    "value": "------------  MeleeInProgress true"
+                },
+                {
+                    "name": "OnExit",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "Attribute1",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                },
+                {
+                    "name": "Attribute2",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator"
+        },
+        "20f201d2-7216-4784-a0b2-8810fa97e260": {
+            "name": "AOEMeleeAttack",
+            "pos": {
+                "x": 80,
+                "y": 766
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "79aed82d-02e6-481f-a015-da4672b23bdd": {
+            "name": "EraseBBValueByPath",
+            "pos": {
+                "x": 400,
+                "y": 482
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "BB Path",
+                    "type": "StringHash",
+                    "value": "Gai.ConditionVariables.TargetMissPosition"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "afcbda70-878c-4df0-b179-22ec2bde142a": {
+            "name": "ReleaseClaimedMeleeAttackOnExit",
+            "pos": {
+                "x": 0,
+                "y": 244
+            },
+            "inputs": [
+                {
+                    "name": "MeleeGroup",
+                    "type": "StringHash",
+                    "value": ""
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "037261e9-34fb-42c9-ae80-89ff49414a3a"
+        },
+        "604a13aa-034d-4e16-8b8d-385c264dc24b": {
+            "name": "LogGate",
+            "pos": {
+                "x": -2255,
+                "y": 2112
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CVar",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "OnEnter",
+                    "type": "StringHash",
+                    "value": "------------  MeleeInProgress true"
+                },
+                {
+                    "name": "OnExit",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "Attribute1",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                },
+                {
+                    "name": "Attribute2",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator"
+        },
+        "c0640263-6393-4b23-8d36-c22d3c9f5a68": {
+            "name": "SetBehaviorConditionAndResetOnExit",
+            "pos": {
+                "x": 80,
+                "y": 482
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "MeleeEngageInProgress"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "0082e2a1-55a7-4ca8-9da2-4131b834ae13"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

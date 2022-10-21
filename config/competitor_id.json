@@ -1,0 +1,99 @@
+{
+    "competitors":
+    [
+        {
+            "name": "A",
+            "id": -3,
+            "can_chat": true
+        },
+        {
+            "name": "B",
+            "id": -4,
+            "can_chat": true
+        },
+          {
+            "name": "AI",
+            "id": -5,
+            "relationships":
+            [
+                {
+                    "competitor": "Strafer",
+                    "relationship": "friendly"
+                },
+                {
+                    "competitor": "Glasshead",
+                    "relationship": "friendly"
+                }
+            ]
+        },
+        {
+            "name": "Players",
+            "id": -6
+        },
+        {
+            "name": "Mine",
+            "id": -7
+        },
+        {
+            "name": "Strafer",
+            "id": -8,
+            "relationships":
+            [
+                {
+                    "competitor": "Invader",
+                    "relationship": "friendly"
+                },
+                {
+                    "competitor": "AI",
+                    "relationship": "friendly"
+                }
+            ]
+        },
+        {
+            "name": "Glasshead",
+            "id": -9,
+            "relationships":
+            [
+                {
+                    "competitor": "Invader",
+                    "relationship": "friendly"
+                },
+                {
+                    "competitor": "AI",
+                    "relationship": "friendly"
+                }
+            ]
+        },
+        {
+            "name": "Invader",
+            "id": -10,
+            "can_chat": true,
+            "relationships":
+            [
+                {
+                    "competitor": "Strafer",
+                    "relationship": "friendly"
+                },
+                {
+                    "competitor": "Glasshead",
+                    "relationship": "friendly"
+                },
+                {
+                    "competitor": "AI",
+                    "relationship": "friendly"
+                }
+            ]
+        },
+        {
+            "name": "Charmed",
+            "id": -11,
+            "relationships":
+            [
+                {
+                    "competitor": "Players",
+                    "relationship": "friendly"
+                }
+            ]
+        }
+    ]
+}

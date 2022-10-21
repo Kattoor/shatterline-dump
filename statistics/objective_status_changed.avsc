@@ -1,0 +1,85 @@
+{
+    "name": "objective_status_changed",
+    "doc": "Origin: game session. Emitter: dedicated server. Emitted when team objective changes its status or state",
+    "type": "record",
+    "fields": [
+        {
+            "name": "ts",
+            "type": "string",
+            "default": "-1",
+            "doc": "ISO8601 UTC timestamp of the event invocation"
+        },
+        {
+            "name": "gid",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace-unique identifier of the match"
+        },
+        {
+            "name": "ns",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace of the server's deployment (realm)"
+        },
+        {
+            "name": "name",
+            "type": "string",
+            "default": "-1",
+            "doc": "unique name of the event"
+        },
+        {
+            "name": "objective_name",
+            "type": "string",
+            "default": "-1",
+            "doc": "a unique name of an entity/objective(or gamemode rule) which is a reason for team score emission"
+        },
+        {
+            "name": "emission_cycle",
+            "type": "int",
+            "default": -1,
+            "doc": "zone-unique identifier (constant-growing counter) of emission cycle. increases every time zone changes its state."
+        },
+        {
+            "name": "cid",
+            "type": "int",
+            "default": -1,
+            "doc": "team unique identifier. -6 pve players, -5 AI, -4 team B, -3 team A or pid in FFA modes"
+        },
+        {
+            "name": "team",
+            "type": "string",
+            "default": "-1",
+            "doc": "categorical definition of the team which player belongs to"
+        },
+        {
+            "name": "objective_status",
+            "type": "string",
+            "default": "-1",
+            "doc": "categorial attribute of current status of objective. e.g.: captured, contested, etc."
+        },
+        {
+            "name": "dur",
+            "type": "int",
+            "default": -1,
+            "doc": "duration time in milliseconds passed since the action/feature/event start"
+        },
+        {
+            "name": "y",
+            "type": "double",
+            "default": -1,
+            "doc": "Y-axis coordinate of an object with decimal accuracy 1e-13"
+        },
+        {
+            "name": "x",
+            "type": "double",
+            "default": -1,
+            "doc": "X-axis coordinate of an object with decimal accuracy 1e-13"
+        },
+        {
+            "name": "z",
+            "type": "double",
+            "default": -1,
+            "doc": "Z-axis coordinate of an object with decimal accuracy 1e-13"
+        }
+    ]
+}

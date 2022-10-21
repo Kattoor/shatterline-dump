@@ -1,0 +1,321 @@
+{
+    "name": "Microbehaviors/NPCThrowMedkitToPlayer",
+    "root": "27a7ea4c-22b1-48a8-ab7c-0c18c3451f26",
+    "nodes": {
+        "8b204221-bc5a-439e-a501-faff28ff2bae": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 680
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "91d0abda-0f39-4be5-9376-2542dd51fffe",
+                "f3028e71-69e4-4fb7-99b9-2a3daabfe533",
+                "c5cfac5a-6455-43bb-8d69-36030cedacc0"
+            ]
+        },
+        "79f24567-bdf3-4310-a2db-14d2fd56ce57": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 383
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "3d2bd438-e9ce-49f5-95c2-b931be6314b7",
+                "bbe2a349-5186-4c8d-8108-6bcdedb4da1d",
+                "646f9382-527a-41bd-b70b-f0f82ad4ba58",
+                "66b819cf-e624-4991-afe8-be5f48e25f9e"
+            ]
+        },
+        "91d0abda-0f39-4be5-9376-2542dd51fffe": {
+            "name": "ExactBodyRotateTo",
+            "pos": {
+                "x": -375,
+                "y": 799
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Target",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "playerToHealId"
+                    ]
+                },
+                {
+                    "name": "DegreesPerSecond",
+                    "type": "Float",
+                    "value": "600"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "f3028e71-69e4-4fb7-99b9-2a3daabfe533": {
+            "name": "AngleToTarget",
+            "pos": {
+                "x": 0,
+                "y": 798
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Target",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "playerToHealId"
+                    ]
+                },
+                {
+                    "name": "MaxAngle",
+                    "type": "Float",
+                    "value": "10"
+                },
+                {
+                    "name": "UseBodyYaw",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "5f5ff61e-2646-4473-8118-dae80bbc2a56"
+        },
+        "27a7ea4c-22b1-48a8-ab7c-0c18c3451f26": {
+            "name": "ResetCurrentMicrobehaviorOnExit",
+            "pos": {
+                "x": 0,
+                "y": 76
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "ea5e9eb2-1241-48a8-8176-34af24159910"
+        },
+        "5f5ff61e-2646-4473-8118-dae80bbc2a56": {
+            "name": "Success",
+            "pos": {
+                "x": 0,
+                "y": 1013
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "646f9382-527a-41bd-b70b-f0f82ad4ba58": {
+            "name": "SetCustomTargetPosAndRestoreOnExit",
+            "pos": {
+                "x": 0,
+                "y": 528
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Position",
+                    "type": "Variable",
+                    "value": [
+                        "playerPos"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "8b204221-bc5a-439e-a501-faff28ff2bae"
+        },
+        "92a02e19-fa17-4dad-8e06-d856d51163d0": {
+            "name": "Selector",
+            "pos": {
+                "x": 0,
+                "y": 287
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "79f24567-bdf3-4310-a2db-14d2fd56ce57"
+            ]
+        },
+        "bbe2a349-5186-4c8d-8108-6bcdedb4da1d": {
+            "name": "GetEntityPos",
+            "pos": {
+                "x": -305,
+                "y": 528
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EntityId",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "playerToHealId"
+                    ]
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Position",
+                    "type": "Variable",
+                    "value": [
+                        "playerPos"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "66b819cf-e624-4991-afe8-be5f48e25f9e": {
+            "name": "Wait",
+            "pos": {
+                "x": 245,
+                "y": 527
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Float",
+                    "value": "0.1"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "ddab10a5-18fb-499b-a2a4-f13902a95a36": {
+            "name": "Play Animation",
+            "pos": {
+                "x": 330,
+                "y": 926
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "AnimationName",
+                    "type": "StringHash",
+                    "value": "stand_toss_throw_grenade_3p"
+                },
+                {
+                    "name": "IsLooped",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Duration",
+                    "type": "Float",
+                    "value": "0"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "3d2bd438-e9ce-49f5-95c2-b931be6314b7": {
+            "name": "Wait",
+            "pos": {
+                "x": -535,
+                "y": 528
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Float",
+                    "value": "0.1"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "ea5e9eb2-1241-48a8-8176-34af24159910": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 175
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "NPCThrowMedkitToPlayer"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "92a02e19-fa17-4dad-8e06-d856d51163d0"
+        },
+        "c5cfac5a-6455-43bb-8d69-36030cedacc0": {
+            "name": "ScriptEventGate",
+            "pos": {
+                "x": 330,
+                "y": 798
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EnterEvent",
+                    "type": "StringHash",
+                    "value": "NPCThrowMedkitBegin"
+                },
+                {
+                    "name": "ExitEvent",
+                    "type": "StringHash",
+                    "value": "NPCThrowMedkitEnd"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "ddab10a5-18fb-499b-a2a4-f13902a95a36"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

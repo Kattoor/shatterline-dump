@@ -1,0 +1,113 @@
+{
+  "metagame_info": {
+    "name_token": "@rtdm_label",
+    "mission": "t_rtdm",
+    "game_type": "pvp",
+    "voice_chat_mode": "party_only",
+    "game_mode": "ptb",
+    "min_players_count": 6,
+    "time_to_join_sec": 120
+  },
+  "session_info": {
+    "level": "pvp/t_rtdm",
+    "level_params": [
+      "rtdm_active"
+    ],
+    "game_mode": "rtdm"
+  },
+  "reward_info": {
+    "reward_calculators": [
+      {
+        "name": "session_outcome",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "win": 5,
+              "draw": 4,
+              "loss": 3
+            }
+          },
+          {
+            "type": "xp",
+            "values": {
+              "win": 800,
+              "draw": 700,
+              "loss": 600
+            }
+          },
+          {
+            "type": "skill",
+            "values": {
+              "win": 1,
+              "draw": 0,
+              "loss": -1
+            }
+          }
+        ]
+      },
+      {
+        "name": "session_play_time",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "reward": 0,
+              "max_reward": 500
+            }
+          }
+        ]
+      },
+      {
+        "name": "session_score",
+        "score": "BombArmed",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "reward": 0,
+              "max_reward": 100
+            }
+          }
+        ]
+      },
+      {
+        "name": "session_score",
+        "score": "BombDisarmed",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "reward": 0,
+              "max_reward": 0
+            }
+          }
+        ]
+      }
+    ],
+    "weapon_score": [
+      {
+        "event": {
+          "event_id": "Kill"
+        },
+        "score": 400
+      },
+      {
+        "event": {
+          "event_id": "Headshot"
+        },
+        "score": 500
+      },
+      {
+        "event": {
+          "event_id": "Assist"
+        },
+        "score": 200
+      }
+    ]
+  }
+}

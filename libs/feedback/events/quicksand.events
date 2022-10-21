@@ -1,0 +1,147 @@
+{
+    "events": [
+        {
+            "name": "pve_backstab_spawn",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_backstab_hughes_01", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"message_objective": {"message": "@obj_backstab_spawn", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_backstab_analyze_core",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_backstab_hughes_02", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"message_objective": {"message": "@obj_backstab_analyze", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_backstab_analyze_progress",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_backstab_hughes_03", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"message_objective": {"message": "@obj_backstab_analyze"}}
+            ]
+        },
+        {
+            "name": "pve_backstab_find_radio",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_backstab_hughes_04", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"message_objective": {"message": "@obj_backstab_find_radio"}}
+            ]
+        },
+        {
+            "name": "pve_backstab_dogs_corridor",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_backstab_hughes_05", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"message_objective": {"message": "@obj_backstab_find_radio", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_backstab_clear_enemies",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_backstab_hughes_06", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"message_objective": {"message": "@obj_backstab_clear_enemies", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_backstab_storm_warning",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_backstab_hughes_07", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"message_objective": {"message": "@obj_backstab_find_radio", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_backstab_snipers_warning",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_backstab_hughes_08", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"message_objective": {"message": "@obj_backstab_find_radio", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_backstab_clear_radio",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_backstab_hughes_09", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"message_objective": {"message": "@obj_backstab_clear_enemies", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_backstab_defend_radio",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_backstab_hughes_10", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"message_objective": {"message": "@obj_backstab_defend_radio"}}
+            ]
+        },
+        {
+            "name": "pve_backstab_mission_complete",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_backstab_hughes_11"}}
+            ]
+        },
+        {
+            "name": "defend_radio_hint",
+            "actions" : [
+                {"message_announcer": {"message": "@obj_backstab_defend_radio", "timeout": 4}}
+            ]
+        },
+        {
+            "name": "radio_destroyed_hint",
+            "actions" : [
+                {"message_announcer": {"message": "@obj_backstab_radio_destroyed", "timeout": 4}}
+            ]
+        },
+        {
+            "name": "pve_quicksand_spawn",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_quicksand_phillips_01", "img": "commander_phillips", "narrator": "@narrator_commander_phillips"}},
+                {"message_objective": {"message": "@obj_quicksand_exit_base", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_quicksand_exit_base",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_quicksand_phillips_02", "img": "commander_phillips", "narrator": "@narrator_commander_phillips"}},
+                {"message_objective": {"message": "@obj_quicksand_clear_path", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_quicksand_cavalry_arrived",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_quicksand_phillips_03", "img": "commander_phillips", "narrator": "@narrator_commander_phillips"}},
+                {"message_objective": {"message": "@obj_quicksand_reach_evac", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_quicksand_clear_path",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_quicksand_phillips_04", "img": "commander_phillips", "narrator": "@narrator_commander_phillips"}},
+                {"message_objective": {"message": "@obj_quicksand_clear_path", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_quicksand_reach_evac",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_quicksand_phillips_05", "img": "commander_phillips", "narrator": "@narrator_commander_phillips"}},
+                {"message_objective": {"message": "@obj_quicksand_reach_evac"}}
+            ]
+        },
+        {
+            "name": "pve_quicksand_mother_fuckers",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_quicksand_phillips_06", "img": "commander_phillips", "narrator": "@narrator_commander_phillips"}},
+                {"message_objective": {"message": "@obj_quicksand_reach_evac", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_quicksand_end_mission",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_quicksand_phillips_08"}}
+            ]
+        },
+        {
+            "name": "pve_quicksand_final_fight",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_quicksand_phillips_07", "img": "commander_phillips", "narrator": "@narrator_commander_phillips"}},
+                {"message_objective": {"message": "@obj_kill_all_minotaurs"}}
+            ]
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+{
+    "script": "scripts/ui/lobby/season_hub/about_season.lua",
+    "view_path": "AboutSeason.html",
+    "send_stats": true,
+    "children":
+    [
+
+        { "name": "season", "type": "Label", "view_path": "seasonPanel.seasonPassSeason.wrapper.header.season" },
+        { "name": "expire_time", "type": "Label", "view_path": "seasonPanel.seasonPassSeason.wrapper.header.expireTime" },
+        { "name": "title", "type": "Label", "view_path": "seasonPanel.seasonPassSeason.wrapper.title", "text": "@season_pass_season_title" },
+        { "name": "title_outline", "type": "Label", "view_path": "seasonPanel.seasonPassSeason.wrapper.titleOutline", "text": "@season_pass_season_title" },
+
+        { "name": "description", "type": "Label", "view_path": "seasonPanel.description", "text": "@season_pass_about_season_description" },
+
+        { "name": "item1_image", "type": "Image", "view_path": "content.item1.imageWrapper.image", "image": "season_pass_about_season_play" },
+        { "name": "item1_title", "type": "Label", "view_path": "content.item1.title", "text": "@season_pass_about_season_item1_title" },
+        { "name": "item1_text", "type": "Label", "view_path": "content.item1.text", "text": "@season_pass_about_season_item1_text" },
+
+        { "name": "item2_image", "type": "Image", "view_path": "content.item2.imageWrapper.image", "image": "season_pass_about_season_tasks" },
+        { "name": "item2_title", "type": "Label", "view_path": "content.item2.title", "text": "@season_pass_about_season_item2_title" },
+        { "name": "item2_text", "type": "Label", "view_path": "content.item2.text", "text": "@season_pass_about_season_item2_text" },
+
+        { "name": "item3_image", "type": "Image", "view_path": "content.item3.imageWrapper.image", "image": "season_pass_about_season_rewards" },
+        { "name": "item3_title", "type": "Label", "view_path": "content.item3.title", "text": "@season_pass_about_season_item3_title" },
+        { "name": "item3_text", "type": "Label", "view_path": "content.item3.text", "text": "@season_pass_about_season_item3_text" },
+
+        { "name": "get_premium_button", "type": "Button", "view_path": "getPremium.getPremiumButton", "text": "@season_pass_get_premium_button" },
+        { "name": "get_premium_button_hint", "type": "ActionLabel", "view_path": "getPremium.getPremiumButton.wrapper.key", "gamepad_only": true }
+
+    ]
+}

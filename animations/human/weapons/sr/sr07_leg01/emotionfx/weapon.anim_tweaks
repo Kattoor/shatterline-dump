@@ -1,0 +1,78 @@
+{
+    "weapon_assets":
+    [
+        "sr07_leg01"
+    ],
+    "motion_sets":
+    [
+        "sr07_leg01_1p",
+        "sr07_leg01_wpn",
+        "sr07_leg01_3p"
+    ],
+    "binding_motions_to_parameters":
+    [
+        {
+            "motion": "reload_begin",
+            "weapon_parameter" : "reload_starting_time"
+        },
+        {
+            "motion": "reload_begin_short",
+            "weapon_parameter" : "reload_starting_short_time"
+        },
+        {
+            "motion": "reload_chamber",
+            "weapon_parameter" : "reload_chamber_time",
+            "scale" : 0.95
+        },
+        {
+            "motion": "select",
+            "weapon_parameter" : "item_selection_duration",
+            "scale" : 0.99
+        },
+        {
+            "motion": "deselect",
+            "weapon_parameter" : "item_deselection_duration"
+        },
+        {
+            "motion": "quick_deselect",
+            "weapon_parameter" : "item_quick_deselection_duration"
+        },
+        {
+            "motion": "ironsight_in",
+            "weapon_parameter" : "zoom_in_time"
+        },
+        {
+            "motion": "ironsight_out",
+            "weapon_parameter" : "zoom_out_time"
+        },
+        {
+            "motion": "fireloop",
+            "weapon_parameter" : "rpm",
+            "scale" : 0.99
+        },
+        {
+            "motion": "ironsight_fireloop",
+            "weapon_parameter" : "rpm",
+            "scale" : 0.99
+        },
+        {
+            "motion": "stand_reload_begin_ar01_3p_01-1",
+            "weapon_parameter" : "reload_starting_time"
+        },
+        {
+            "motion": "stand_reload_begin_short_ar01_3p_01-1",
+            "weapon_parameter" : "reload_starting_short_time",
+            "scale" : 0.95
+        },
+        {
+            "motion": "stand_reload_chamber_ar01_3p_01-1",
+            "weapon_parameter" : "reload_chamber_time",
+            "scale" : 0.71
+        },
+        {
+            "motion": "fire_add_3p_01",
+            "weapon_parameter" : "rpm",
+            "scale" : 0.95
+        }
+    ]
+}

@@ -1,0 +1,181 @@
+{
+    "name": "Colossus/MoveBetweenSpawns",
+    "root": "54929492-e098-4625-8001-a5d89357956a",
+    "nodes": {
+        "c59de805-feda-4bf7-8e19-3b4c6f66abf4": {
+            "name": "GetRandomStoredPosition",
+            "pos": {
+                "x": -190,
+                "y": 534
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "Result",
+                    "type": "Variable",
+                    "value": [
+                        "RandomPos"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "b35f8dd6-eaa5-4c8b-9c15-ff7e521314a7": {
+            "name": "Succeeder",
+            "pos": {
+                "x": -30,
+                "y": 534
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "0236fc8c-719c-48c6-9a8c-43a2540b06d8"
+        },
+        "b1605730-9d60-4c0b-bfe6-757966ac883e": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 348
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "c59de805-feda-4bf7-8e19-3b4c6f66abf4",
+                "b35f8dd6-eaa5-4c8b-9c15-ff7e521314a7",
+                "da1a8e58-1052-46c0-9a3a-5dd7a6dd1928",
+                "519f78fc-f91c-4f48-9ab3-b37561a3027a"
+            ]
+        },
+        "9afc0170-8fe7-4b57-bd3c-9b432e71286e": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 234
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "MoveBetweenSpawns"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "b1605730-9d60-4c0b-bfe6-757966ac883e"
+        },
+        "519f78fc-f91c-4f48-9ab3-b37561a3027a": {
+            "name": "SetBehaviorCondition",
+            "pos": {
+                "x": 475,
+                "y": 532
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "SelectAttack"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "0236fc8c-719c-48c6-9a8c-43a2540b06d8": {
+            "name": "ApproachTo",
+            "pos": {
+                "x": -30,
+                "y": 643
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "RandomPos"
+                    ]
+                },
+                {
+                    "name": "EndDistance",
+                    "type": "Float",
+                    "value": "3.00"
+                },
+                {
+                    "name": "UpdateDestinationPoint",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "54929492-e098-4625-8001-a5d89357956a": {
+            "name": "Selector",
+            "pos": {
+                "x": 0,
+                "y": 129
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "9afc0170-8fe7-4b57-bd3c-9b432e71286e"
+            ]
+        },
+        "da1a8e58-1052-46c0-9a3a-5dd7a6dd1928": {
+            "name": "WaitRandom",
+            "pos": {
+                "x": 210,
+                "y": 532
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "MinWaitTime",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "attack_cooldown_min"
+                    ]
+                },
+                {
+                    "name": "MaxWaitTime",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "attack_cooldown_max"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

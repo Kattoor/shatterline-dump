@@ -1,0 +1,108 @@
+{
+    "waves": [
+        {
+            "name": "parasites_spawn_glassheads",
+            "totalLimit": 0,
+            "count": 6,
+            "groupCount": 3,
+            "spawnDelay": 6.0,
+            "filterTag": "parasites_generic",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(2) Glasshead: Basic ranged" ],
+                    "probability": 100,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                }
+            ]
+        },
+        {
+            "name": "parasites_spawn_spawn_adamant",
+            "totalLimit": 0,
+            "count": 0,
+            "groupCount": 1,
+            "spawnDelay": 20.0,
+            "filterTag": "parasites_generic",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "Adamant Glasshead" ],
+                    "probability": 100,
+                    "count": 2,
+                    "groupCount": 2,
+                    "spawnDelay": 30.0
+                },
+                {
+                    "tags": [ "(2) Glasshead: Jump" ],
+                    "probability": 100,
+                    "count": 4,
+                    "groupCount": 2,
+                    "spawnDelay": 4.0
+                }
+            ]
+        },
+        {
+            "name": "parasites_spawn_shardskin",
+            "totalLimit": 0,
+            "count": 0,
+            "groupCount": 1,
+            "spawnDelay": 0.0,
+            "filterTag": "parasites_generic",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "Shardskin Glasshead" ],
+                    "probability": 100,
+                    "count": 2,
+                    "groupCount": 2,
+                    "spawnDelay": 30.0
+                },
+                {
+                    "tags": [ "(2) Glasshead: Jump" ],
+                    "probability": 100,
+                    "count": 4,
+                    "groupCount": 2,
+                    "spawnDelay": 5.0
+                }
+            ]
+        },
+        {
+            "name": "parasites_wave",
+            "totalLimit": 0,
+            "count": 1,
+            "groupCount": 1,
+            "spawnDelay": 20.0,
+            "filterTag": "parasites",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(5) Glasshead: Carrier Dog" ],
+                    "probability": 100,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                }
+            ]
+        },
+        {
+            "name": "parasite_turret",
+            "totalLimit": 1,
+            "count": 1,
+            "groupCount": 1,
+            "spawnDelay": 0.0,
+            "filterTag": "parasite_turret",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(5)Glasshead: Parasite Turret" ],
+                    "probability": 100,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,81 @@
+{
+    "GemFormatVersion": 3,
+    "Uuid": "7e24ebb066104127a4abb14e13ec7bed",
+    "Name": "GameSession",
+    "DisplayName": "GameSession",
+    "Version": "0.1.0",
+    "LinkType": "Dynamic",
+    "Summary": "A short description of my Gem.",
+    "Tags": ["Untagged"],
+    "IconPath": "preview.png",
+    "EditorModule": false,
+    "EditorTargets": ["GameSessionEditorPlugin"],
+    "Dependencies": 
+    [
+        {
+            "Uuid": "e9f42946ff83451091589c3d585a09a8",
+            "VersionConstraints": ["~>0.1"],
+            "_comment": "BackendAssets"
+        },
+        {
+            "Uuid": "f12ac08609c0483486b4ff48ae193ee2",
+            "VersionConstraints": ["~>0.1"],
+            "_comment": "BackendAssetsInterfaces"
+        },
+        {
+            "Uuid": "71f233c8118b4c8283e3406b447657ab",
+            "VersionConstraints": ["~>0.1"],
+            "_comment": "BackendCommon"
+        },
+        {
+            "Uuid": "46f33e3a60c14b35b5bf843399f2a991",
+            "VersionConstraints": ["~>0.1"],
+            "_comment": "AssetCache"
+        },
+        {
+            "Uuid": "d3ed407a19bb4c0d92b7c4872313d600",
+            "VersionConstraints": ["~>1.0"],
+            "_comment": "Multiplayer"
+        },
+        {
+            "Uuid": "ff06785f7145416b9d46fde39098cb0c",
+            "VersionConstraints": ["~>0.1"],
+            "_comment": "LmbrCentral"
+        },
+        {
+            "Uuid": "7cedf2bfc6684bb8a046350371ca261c",
+            "VersionConstraints": ["~>0.1"],
+            "_comment": "Marshalers"
+        },
+        {
+            "Uuid": "1b84470a5c68417da323becf125ba847",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "GameSessionStatisticsProtocol"
+        },
+        {
+            "Uuid": "28502d2aff664e6b8ee01a8dc493a42f",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "StatisticsCore"
+        },
+        {
+            "Uuid": "94748877847b4749a583914e5b2c17ed",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "StatisticsProtocol"
+        },
+        {
+            "Uuid": "1edb80a54cc2431a91c02db7165f3e5c",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01Replay"
+        },
+        {
+            "Uuid": "8040a1a42c844b8abcf6ab387a7c8963",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "JWT"
+        },
+        {
+            "Uuid": "2ebd4481cbf142b89286f28b4c29ace3",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01Interfaces"
+        }
+    ]
+}

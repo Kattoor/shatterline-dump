@@ -1,0 +1,21 @@
+{
+    "script": "scripts/ui/lobby/lobby.lua",
+    "view_path": "RootScreen.html",
+    "send_stats": true,
+    "children":
+    [
+        {"name": "popup_group", "type": "Component", "file": "navigation/navigation_popup_group.json"},
+        {"name": "social_panel", "type": "Component", "file": "lobby/social_panel/social_panel.json", "visible": false},
+        {"name": "player_info_widget", "type": "Component", "file": "lobby/player_info_widget.json", "visible": false},
+        {"name": "matchmaking_info_widget", "type": "Component", "file": "lobby/matchmaking_info_widget.json"},
+        {"name": "pages", "type": "Component", "file": "lobby/lobby_pages.json"},
+        {"name": "popups", "type": "Component", "file": "lobby/lobby_popups.json"},
+        {"name": "cachet", "type": "Component", "file": "lobby/lobby_cachet.json"},
+        {"name": "hints", "type": "Component", "file": "common/general_hints.json", "visible": false},
+        {"name": "blocking_operation", "type": "Component", "file":"modal_window/blocking_operation.json", "visible": false},
+        {"name": "text_chat", "type": "Component", "file": "ingame/ingame_chat.json"},
+        {"name": "messages", "type": "Component", "file": "lobby/lobby_messages.json"},
+        {"name": "task_widget_container", "type": "Component", "file": "lobby/task_widget_container.json", "visible": false},
+        {"name": "navigation_bar", "type": "Component", "file": "lobby/navigation_bar.json", "visible": false}
+    ]
+}

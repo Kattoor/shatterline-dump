@@ -1,0 +1,31 @@
+{
+   "name": "test_item_purchased",
+   "type": "daily",
+   "active": true,
+   "image": "test_icon",
+   "rarity": "common",
+  "display_name": { "localization_key": "@test_item_purchased" },
+   "description": { "localization_key": "@test_task_description" },
+    "conditions": [
+        {
+          "name": "test_item_purchased",
+          "event_description": { "localization_key": "@test_task_event_description" },
+          "progress": 10,
+           "metagame_task_info": {
+              "event_name": "offer_purchased",
+              "event_attrs": {
+              "item_name": "test_grenade"
+                },
+              "value_from_key": "",
+              "type": "gauge"
+           }
+        }
+    ],
+   "rewards": [
+      {
+         "reward_type": "currency",
+         "name": "soft",
+         "amount": 1000
+      }
+   ]
+}

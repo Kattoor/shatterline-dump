@@ -1,0 +1,82 @@
+
+{
+   "microbehaviors":
+   [
+      {
+         "name": "PlaceDecoy",
+         "conditions":
+         [
+            {
+               "template": "TargetExistAndVisible"
+            },
+            {
+               "template": "FrequencyLimit",
+               "origin": "global",
+               "params":
+               {
+                  "name": "PlaceDecoy",
+                  "count": "#global_counter",
+                  "time": "#global_reset_time",
+                  "delay_min": "#global_delay_min",
+                  "delay_max": "#global_delay_max"
+               }
+            },
+            {
+               "template": "FrequencyLimit",
+               "origin": "source",
+               "params":
+               {
+                  "name": "PlaceDecoySelf",
+                  "count": "#source_counter",
+                  "time": "#source_reset_time",
+                  "delay_min": "#source_delay_min",
+                  "delay_max": "#source_delay_max"
+               }
+            },
+            {
+               "template": "StayInPlace",
+               "origin": "source",
+               "params":
+               {
+                  "range": "3.0",
+                  "duration": "3.0"
+               }
+            }
+         ],
+         "actions":
+         [
+            {
+                "template":"SendScriptEvent",
+                "params":
+                {
+                    "name":"SwitchToDefenseMode"
+                }
+            },
+            {
+               "template": "RunMicrobehavior",
+               "params":
+               {
+                  "name": "PlaceDecoy",
+                  "invisibility_slice": "#invisibility_slice",
+                  "decoy_slice": "#decoy_slice",
+                  "lifetime": "#lifetime"
+               }
+            }
+         ],
+         "default_params":
+         {
+            "lifetime": "7",
+            "decoy_slice": "slices/ai/decoy/decoy_machine.dynamicslice",
+            "invisibility_slice": "slices/ai/invisibility_machine.dynamicslice",
+            "global_counter": "1",
+            "global_reset_time": "1",
+            "global_delay_min": "7",
+            "global_delay_max": "8",
+            "source_counter": "1",
+            "source_reset_time": "1",
+            "source_delay_min": "15",
+            "source_delay_max": "17"
+         }
+      }
+   ]
+}

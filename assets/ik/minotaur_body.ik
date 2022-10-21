@@ -1,0 +1,30 @@
+{
+    "common":
+    {
+        "handler_bone":"IK_handler",
+        "handler_scale":0.01
+    },
+    
+    "hand_ik":
+    {
+        "l":"Bip01_L_Hand",
+        "r":"Bip01_R_Hand",
+        "l_handler":"IK_handler",
+        "r_handler":"IK_handler"
+    },
+    
+    "aim_ik":
+    {
+        "motion_ids":
+        [
+            "aim_pose"
+        ],
+        "ik":"weapon_bone",
+        "ik_root":"Bip01_R_Hand",
+        "anchored_nodes":
+        [
+            "Bip01_L_Foot",
+            "Bip01_R_Foot"
+        ]
+    }
+}

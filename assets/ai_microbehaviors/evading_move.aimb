@@ -1,0 +1,330 @@
+{
+    "microbehaviors":
+    [
+        {
+            "name": "evading_move_by_damage",
+            "conditions":
+            [
+                {
+                   "template": "InCover",
+                   "inverse": true
+                },
+                {
+                    "template": "GotDamage",
+                    "params":
+                    {
+                        "damage": "#damage",
+                        "time": "#damage_time",
+                        "prob": "#prob"
+                    }
+                },
+                {
+                    "template":"FrequencyLimit",
+                    "origin":"source",
+                    "params":
+                    {
+                        "name":"EvadingCounter",
+                        "count":"#counter",
+                        "time":"#reset_time",
+                        "delay_min":"#delay_min",
+                        "delay_max":"#delay_max"
+                    }
+                }
+            ],
+            "actions":
+            [
+                {
+                    "template": "RunMicrobehavior",
+                    "origin":"source",
+                    "params":
+                    {
+                        "name": "EvadingMove",
+                        "anim_duration":"#anim_duration",
+                        "move_distance":"#move_distance",
+                        "move_impulse":"#move_impulse",
+                        "impulse_start":"#impulse_start",
+                        "impulse_end":"#impulse_end",
+                        "use_under_fire_radius":"false"
+                    }
+                }
+            ],
+            "default_params":
+            {
+                "damage": "0",
+                "damage_time": "0",
+                "prob": "1.0",
+                "counter":"1",
+                "reset_time":"8",
+                "delay_min":"5",
+                "delay_max":"12",
+                "anim_duration": "1.0",
+                "move_distance": "0.0",
+                "move_impulse":"0.0",
+                "impulse_start":"0.0",
+                "impulse_end":"0.0"
+            }
+        },
+        {
+            "name":"EvadingMoveUnderFire",
+            "conditions":
+            [
+                {
+                    "template":"IsUnbreakableBehavior",
+                    "inverse":true
+                },
+                {
+                    "template":"IsUnderFire"
+                },
+                {
+                   "template": "AttackInProgress",
+                   "inverse": true
+                },
+                {
+                    "template": "Range",
+                    "inverse": true,
+                    "params":
+                    {
+                        "to":"target",
+                        "min":"0",
+                        "max":"#block_range"
+                    }
+                },
+                {
+                   "template": "InCover",
+                   "inverse": true
+                },
+                {
+                    "template":"UnderFireDirection",
+                    "params":
+                    {
+                        "angle":"45.0",
+                        "time":"0.1"
+                    }
+                },
+                {
+                    "template":"Random",
+                    "params":
+                    {
+                        "prob":"#probability",
+                        "time":"1"
+                    }
+                },
+                {
+                    "template":"FrequencyLimit",
+                    "origin":"source",
+                    "params":
+                    {
+                        "name":"EvadingMove",
+                        "delay_min":"#source_delay_min",
+                        "delay_max":"#source_delay_max"
+                    }
+                },
+                {
+                    "template":"FrequencyLimit",
+                    "origin":"global",
+                    "params":
+                    {
+                        "name":"EvadingMove",
+                        "count":"#global_freq_count",
+                        "time":"#global_freq_time",
+                        "delay_min":"#global_delay_min",
+                        "delay_max":"#global_delay_max"
+                    }
+                }
+            ],
+            "actions":
+            [
+                {
+                    "template":"RunMicrobehavior",
+                    "params":
+                    {
+                        "name":"EvadingMove",
+                        "anim_duration":"#anim_duration",
+                        "move_distance":"#move_distance",
+                        "move_impulse":"#move_impulse",
+                        "impulse_start":"#impulse_start",
+                        "impulse_end":"#impulse_end",
+                        "use_under_fire_radius":"true"
+                    }
+                }
+            ],
+            "default_params":
+            {
+                "probability":"0.3",
+                "source_delay_min":"3",
+                "source_delay_max":"3",
+                "global_freq_count":"3",
+                "global_freq_time":"0.5",
+                "global_delay_min":"0.1",
+                "global_delay_max":"0.25",
+                "anim_duration":"1.0",
+                "move_distance":"0.0",
+                "move_impulse":"0.0",
+                "impulse_start":"0.0",
+                "impulse_end":"0.0",
+                "block_range":"4.0"
+            }
+        },
+        {
+            "name":"EvadingMoveInCover",
+            "conditions":
+            [
+                {
+                    "template":"IsUnbreakableBehavior",
+                    "inverse":true
+                },
+                {
+                    "template":"IsUnderFire"
+                },
+                {
+                   "template": "AttackInProgress",
+                   "inverse": true
+                },
+                {
+                   "template": "InCover"
+                },
+                {
+                    "template":"UnderFireDirection",
+                    "params":
+                    {
+                        "angle":"60.0",
+                        "time":"0.01"
+                    }
+                },
+                {
+                    "template":"Random",
+                    "params":
+                    {
+                        "prob":"#probability",
+                        "time":"1"
+                    }
+                },
+                {
+                    "template":"FrequencyLimit",
+                    "origin":"source",
+                    "params":
+                    {
+                        "name":"EvadingMove",
+                        "delay_min":"#source_delay_min",
+                        "delay_max":"#source_delay_max"
+                    }
+                }
+            ],
+            "actions":
+            [
+                {
+                    "template":"SendScriptEvent",
+                    "params":
+                    {
+                        "name":"SwitchToDefenseMode"
+                    }
+                }
+            ],
+            "default_params":
+            {
+                "probability":"0.3",
+                "source_delay_min":"3",
+                "source_delay_max":"3"
+            }
+        },
+        {
+            "name":"EvadingMoveWhenTargeted",
+            "conditions":
+            [
+                {
+                    "template":"IsUnbreakableBehavior",
+                    "inverse":true
+                },
+                {
+                   "template": "InCover",
+                   "inverse": true
+                },
+                {
+                   "template": "AttackInProgress",
+                   "inverse": true
+                },
+                {
+                    "template": "Range",
+                    "inverse": true,
+                    "params":
+                    {
+                        "to":"target",
+                        "min":"0",
+                        "max":"#block_range"
+                    }
+                },
+                {
+                    "template":"IsTargeted",
+                    "params":
+                    {
+                        "angle": "45",
+                        "time":"#targeted_time"
+                    }
+                },
+                {
+                    "template":"Random",
+                    "params":
+                    {
+                        "prob":"#probability",
+                        "time":"1"
+                    }
+                },
+                {
+                    "template":"FrequencyLimit",
+                    "origin":"source",
+                    "params":
+                    {
+                        "name":"EvadingMove",
+                        "delay_min":"#source_delay_min",
+                        "delay_max":"#source_delay_max"
+                    }
+                },
+                {
+                    "template":"FrequencyLimit",
+                    "origin":"global",
+                    "params":
+                    {
+                        "name":"EvadingMove",
+                        "count":"#global_freq_count",
+                        "time":"#global_freq_time",
+                        "delay_min":"#global_delay_min",
+                        "delay_max":"#global_delay_max"
+                    }
+                }
+            ],
+            "actions":
+            [
+                {
+                    "template":"RunMicrobehavior",
+                    "params":
+                    {
+                        "name":"EvadingMove",
+                        "anim_duration":"#anim_duration",
+                        "move_distance":"#move_distance",
+                        "move_impulse":"#move_impulse",
+                        "impulse_start":"#impulse_start",
+                        "impulse_end":"#impulse_end",
+                        "use_under_fire_radius":"true"
+                    }
+                }
+            ],
+            "default_params":
+            {
+                "probability":"0.3",
+                "targeted_time":"0.3",
+                "source_delay_min":"3",
+                "source_delay_max":"4",
+                "global_freq_count":"3",
+                "global_freq_time":"1.0",
+                "global_delay_min":"0.1",
+                "global_delay_max":"0.25",
+                "anim_duration":"1.07",
+                "move_distance":"0.0",
+                "move_impulse":"5.0",
+                "impulse_start":"0.2",
+                "impulse_end":"0.75",
+                "block_range":"4.0"
+            }
+        }
+    ]
+}

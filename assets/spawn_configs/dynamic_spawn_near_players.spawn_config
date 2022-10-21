@@ -1,0 +1,53 @@
+{
+    "priorities":
+    [
+        {
+            "aggregation": "min",
+            "competitor": "opposite_team",
+            "entities": "character",
+            "measure": "distance",    
+            
+            "measure_min": 0,
+            "measure_max": 45,
+            "measure_default": 45,            
+            "priority_min": 0,
+            "priority_max": 200
+        },
+        {
+            "aggregation": "min",
+            "competitor": "same_team",
+            "entities": "player_character",
+            "measure": "distance",    
+            
+            "measure_min": 0,
+            "measure_max": 15,
+            "measure_default": 15,            
+            "priority_min": 0,
+            "priority_max": 100
+        },
+        {
+            "aggregation": "median",
+            "competitor": "same_team",
+            "entities": "player_character",
+            "measure": "distance",    
+            
+            "measure_min": 0,
+            "measure_max": 100,
+            "measure_default": 100,            
+            "priority_min": 70,
+            "priority_max": 0
+        },
+        {
+            "aggregation": "median",
+            "competitor": "opposite_team",
+            "entities": "character",
+            "measure": "distance",    
+            
+            "measure_min": 0,
+            "measure_max": 100,
+            "measure_default": 100,            
+            "priority_min": 30,
+            "priority_max": 0
+        }
+    ]
+}

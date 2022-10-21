@@ -1,0 +1,41 @@
+{
+  "name": "scheduled_coop_001",
+  "type": "scheduled",
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "rare",
+  "display_name": { "localization_key": "@scheduled_coop_001_name" },
+  "description": { "localization_key": "@scheduled_coop_001_description" },
+  "conditions": [
+    {
+      "name": "scheduled_coop_001_1",
+      "event_description": { "localization_key": "@scheduled_coop_001_1_event_description" },
+      "event": { "event_id": "HordeExtractionComplete", "actor_is_me": true, "target_status_is_not": []},
+      "progress": 4
+    },
+    {
+      "name": "scheduled_coop_001_2",
+      "event_description": { "localization_key": "@scheduled_coop_001_2_event_description" },
+      "event": { "event_id": "HordeBoxLooted", "actor_is_me": true},
+      "progress": 20
+    }
+  ],
+  
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 3000
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 2000
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 25
+    }
+  ]
+}

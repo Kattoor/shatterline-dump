@@ -1,0 +1,119 @@
+{
+    "name": "Colossus/LaserAttack",
+    "root": "ae2f3770-032e-4bd2-a0c3-c44020039d38",
+    "nodes": {
+        "570655da-6103-4e84-8323-699342e53a56": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 527
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "c027ed5c-312e-4cc4-9ae2-a72331e55e8d",
+                "a38f1854-55a3-45a5-a328-5431cf237a56"
+            ]
+        },
+        "ae2f3770-032e-4bd2-a0c3-c44020039d38": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 402
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "LaserAttack"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "570655da-6103-4e84-8323-699342e53a56"
+        },
+        "a38f1854-55a3-45a5-a328-5431cf237a56": {
+            "name": "Success",
+            "pos": {
+                "x": 0,
+                "y": 639
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "405802d2-370e-4879-b35f-0cbf2f69109d": {
+            "name": "FlyingAround",
+            "pos": {
+                "x": -180,
+                "y": 804
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "MinDistance",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "distance_to_player_min"
+                    ]
+                },
+                {
+                    "name": "UpdatePathRate",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "update_path_rate"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "c027ed5c-312e-4cc4-9ae2-a72331e55e8d": {
+            "name": "IsTargetPerceivedAndVisible",
+            "pos": {
+                "x": -180,
+                "y": 640
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "405802d2-370e-4879-b35f-0cbf2f69109d"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

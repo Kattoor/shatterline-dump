@@ -1,0 +1,84 @@
+{
+    "name": "Colossus/RocketAttack",
+    "root": "3253c3c7-f944-4cd4-bfd1-323887d583f6",
+    "nodes": {
+        "21ed890a-e3b8-49a1-b9f1-455c7d31884f": {
+            "name": "ExactBodyRotateTo",
+            "pos": {
+                "x": -95,
+                "y": 395
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Target",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "DegreesPerSecond",
+                    "type": "Float",
+                    "value": "360"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "510f4835-e2b4-4562-8153-118e1908cf8b": {
+            "name": "Success",
+            "pos": {
+                "x": 95,
+                "y": 395
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "3253c3c7-f944-4cd4-bfd1-323887d583f6": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 109
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "RocketAttack"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "2812275a-c86c-4fa6-903a-0ef302973892"
+        },
+        "2812275a-c86c-4fa6-903a-0ef302973892": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 276
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "21ed890a-e3b8-49a1-b9f1-455c7d31884f",
+                "510f4835-e2b4-4562-8153-118e1908cf8b"
+            ]
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

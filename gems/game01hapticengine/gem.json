@@ -1,0 +1,32 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "b7bae23799ba4610af67e47dfe48b95a",
+    "Name": "Game01HapticEngine",
+    "DisplayName": "Game01HapticEngine",
+    "Version": "0.1.0",
+    "Summary": "Custom vibration system implementation",
+    "Tags": ["Vibration", "Input"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        },
+        {
+            "Name": "Editor",
+            "Type": "EditorModule",
+            "Extends": "GameModule"
+        }
+    ],
+    "Dependencies": [
+        {
+            "Uuid": "7e24ebb066104127a4abb14e13ec7bed",
+            "VersionConstraints": ["~>0.1"],
+            "_comment": "GameSession"
+        },
+        {
+            "Uuid": "8f608e7ed6fe4047961dc990edc76285",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01JsonAssetBuilder"
+        }
+    ]
+}

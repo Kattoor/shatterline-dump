@@ -1,0 +1,329 @@
+{
+    "name": "QueenNew/TestActionAOE",
+    "root": "649ced1f-7129-4661-8a75-34292d15e472",
+    "nodes": {
+        "b3afab68-a09b-4c34-97b7-00b181ca6fc2": {
+            "name": "IsBehaviorCondition",
+            "pos": {
+                "x": 140,
+                "y": 1641
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "AOEAttack"
+                },
+                {
+                    "name": "ResetOnExit",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "dc545870-a6e9-4cac-a82b-8681dd2a3eb8"
+        },
+        "b901bd7a-1d3f-46f3-b618-0ee9f13d51f8": {
+            "name": "AngleToTarget",
+            "pos": {
+                "x": 140,
+                "y": 1305
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Target",
+                    "type": "Variable",
+                    "value": [
+                        "aoePos"
+                    ]
+                },
+                {
+                    "name": "MaxAngle",
+                    "type": "Float",
+                    "value": "15.00"
+                },
+                {
+                    "name": "UseBodyYaw",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "677e7d74-8770-451f-8838-66e22cf4ece6"
+        },
+        "616901a6-6387-48a0-9f5b-dd768ba9e834": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 909
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "37b4e4e4-8cf8-45a5-ac8e-78ea0ea1b956",
+                "f6ea675e-2570-47b6-9437-c8b2382a59fc"
+            ]
+        },
+        "f1e7f3bc-cbb0-4f58-8047-9f4261074cd9": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 244
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Test AOEAttack"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "76b9b89f-62d5-466e-b1be-ab2cbb4b4c55"
+        },
+        "dc545870-a6e9-4cac-a82b-8681dd2a3eb8": {
+            "name": "Success",
+            "pos": {
+                "x": 140,
+                "y": 1842
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "677e7d74-8770-451f-8838-66e22cf4ece6": {
+            "name": "DisableMovementAndRestoreOnExit",
+            "pos": {
+                "x": 140,
+                "y": 1525
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "b3afab68-a09b-4c34-97b7-00b181ca6fc2"
+        },
+        "f6ea675e-2570-47b6-9437-c8b2382a59fc": {
+            "name": "SetCustomTargetPosAndRestoreOnExit",
+            "pos": {
+                "x": 140,
+                "y": 1038
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Position",
+                    "type": "Variable",
+                    "value": [
+                        "aoePos"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "fd54bfba-f682-4dde-af36-91ecdc746dec"
+        },
+        "37b4e4e4-8cf8-45a5-ac8e-78ea0ea1b956": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -150,
+                "y": 1038
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "aoePos"
+                },
+                {
+                    "name": "Value",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Queen",
+                        "AoeAttackPos"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "649ced1f-7129-4661-8a75-34292d15e472": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 94
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ActionTest"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "f1e7f3bc-cbb0-4f58-8047-9f4261074cd9"
+        },
+        "76b9b89f-62d5-466e-b1be-ab2cbb4b4c55": {
+            "name": "SetBehaviorConditionAndResetOnExit",
+            "pos": {
+                "x": 0,
+                "y": 384
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "AOEAttack"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "b5a247a9-ad97-4423-8853-20d3a20a8f45"
+        },
+        "784d1699-6fd1-474f-a15c-f8cdfa198cf0": {
+            "name": "IsBBValueExist",
+            "pos": {
+                "x": 0,
+                "y": 707
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ValuePath",
+                    "type": "StringHash",
+                    "value": "Gai.Queen.AoeAttackPos"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "616901a6-6387-48a0-9f5b-dd768ba9e834"
+        },
+        "fd54bfba-f682-4dde-af36-91ecdc746dec": {
+            "name": "RepeatUntilSucceeds",
+            "pos": {
+                "x": 140,
+                "y": 1172
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Iterations",
+                    "type": "Integer",
+                    "value": "0"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "b901bd7a-1d3f-46f3-b618-0ee9f13d51f8"
+        },
+        "b5a247a9-ad97-4423-8853-20d3a20a8f45": {
+            "name": "ScriptEventGate",
+            "pos": {
+                "x": 0,
+                "y": 548
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EnterEvent",
+                    "type": "StringHash",
+                    "value": "AOEAttackStart"
+                },
+                {
+                    "name": "ExitEvent",
+                    "type": "StringHash",
+                    "value": "AOEAttackEnd"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "784d1699-6fd1-474f-a15c-f8cdfa198cf0"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

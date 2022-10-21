@@ -1,0 +1,47 @@
+{
+  "name": "scheduled_pvp_011",
+  "type": "scheduled",
+  "tags": [
+    "pve",
+    "pvp",
+    "operative"
+  ],
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "common",
+  "display_name": { "localization_key": "@scheduled_pvp_011_name" },
+  "description": { "localization_key": "@scheduled_pvp_011_description" },
+  "conditions": [
+    {
+      "name": "scheduled_pvp_011_1",
+      "event_description": { "localization_key": "@scheduled_pvp_011_1_event_description" },
+      "event": { "event_id": "OnHit", "actor_is_me": true, "game_type_is": ["pvp"], "actor_item_tag_is": ["PT"] },
+      "counter_type": "damage",
+      "progress": 10000
+    },
+    {
+      "name": "scheduled_pvp_011_2",
+      "event_description": { "localization_key": "@scheduled_pvp_011_2_event_description" },
+      "event": { "event_id": "OnHit", "actor_is_me": true, "game_type_is": ["pvp"], "actor_item_tag_is": ["SR"]},
+      "counter_type": "damage",
+      "progress": 10000
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 2000
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 1000
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 15
+    }
+  ]
+}

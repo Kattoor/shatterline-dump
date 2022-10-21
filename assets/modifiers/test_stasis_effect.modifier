@@ -1,0 +1,51 @@
+{
+    "name": "test_stasis_effect",
+    "duration": 5,
+    "effects": [
+        { "max_speed": { "speed_cap": 2.0 }},
+        {
+            "actor_morph": {
+                "start_amount": -0.01,
+                "dest_amount": -0.2,
+                "show_duration": 0.1,
+                "hide_duration": 0.6,
+                "color_r": 0.9,
+                "color_g": 0.9,
+                "color_b": 0.0,
+                "effect_texture": "textures/decals/crystalline/screen_nano_injection.tif",
+                "effect_diffuse_texture": "textures/decals/crystalline/crystal_damage_dif_.tif"
+            }
+        },
+        {
+            "input_filter":
+            {
+                "block_move": false,
+                "block_jump": true,
+                "block_sprint": true,
+                "block_crouch": true,
+                "block_selection_and_abilities": true,
+                "block_weapon": false,
+                "block_melee": true,
+                "block_usable_objects": true
+            }
+        },
+        { 
+            "spawn_personal_slice":
+            {
+                "slice_name": "slices/ai/feedback/timestop_fp_feedback.dynamicslice",
+                "position": [0, 0, 0],
+                "attach_to_fp": true,
+                "attach_to_tp": false
+            }
+        },
+        {
+            "add_tags":
+            {
+                "tags":
+                [
+                    "Stasis"
+                ]
+            }
+        }
+    ]
+}

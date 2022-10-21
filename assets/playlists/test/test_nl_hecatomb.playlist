@@ -1,0 +1,42 @@
+{
+    "lobby_config": {
+        "game_type": "pve",
+        "name_token": "@nl_hecatomb_label",
+        "type_token": "@long_story",
+        "info_token": "@nl_hecatomb_briefing",
+        "time_token": "@nl_hecatomb_time",
+        "location_token": "@nl_hecatomb_location",
+        "video_path": "videos/pve/pve_hecatomb.bk2",
+        "custom_audio": "pve_hecatomb_velasquez_00",
+        "small_image": "",
+        "background": "bg_play_screen_02"
+    },
+    "min_profile_level": 0,
+    "play_again_allowed": false,
+    "missions": [
+        "nl_hecatomb"
+    ],
+    "rewards": [
+        {
+            "type_token": "@pve_completion_rewards_title",
+            "items": [
+                {"image": "soft", "value": 100},
+                {"image": "hard", "value": 150},
+                {"image": "test_icon", "value": 800}
+            ]
+        },
+        {
+            "type_token": "@pve_completion_rewards_title",
+            "items": [
+                {"image": "blueprint", "value": 100},
+                {"image": "hard", "value": 10}
+            ]
+        },
+        {
+            "type_token": "@pve_completion_rewards_title",
+            "items": [
+                {"image": "soft", "value": 200}
+            ]
+        }
+    ]
+}

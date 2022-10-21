@@ -1,0 +1,1737 @@
+{
+    "name": "ResurrectionDrone/Root",
+    "root": "0d6e1910-30d9-4dec-9b23-8383a24b5468",
+    "nodes": {
+        "09af97fb-f6df-4c40-a53d-5ed727137b3b": {
+            "name": "LogGate",
+            "pos": {
+                "x": -1205,
+                "y": 1323
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CVar",
+                    "type": "StringHash",
+                    "value": "gai_resurrection_drone_debug"
+                },
+                {
+                    "name": "OnEnter",
+                    "type": "StringHash",
+                    "value": "ResurrectionDrone - Teleport 1 Enter"
+                },
+                {
+                    "name": "OnExit",
+                    "type": "StringHash",
+                    "value": "ResurrectionDrone - Teleport 1 Exit"
+                },
+                {
+                    "name": "Attribute1",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                },
+                {
+                    "name": "Attribute2",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "07e3724e-d862-4588-ad33-92b721be0e5f"
+        },
+        "202e9266-e435-4aeb-9775-3387e1702d04": {
+            "name": "CharacterTeleportToEntity",
+            "pos": {
+                "x": 190,
+                "y": 2564
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Source",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Entity",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "Direction",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Dir"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "9caf5cf7-9807-4259-be75-c4fc68d618b1": {
+            "name": "ApproachToKeepDistance",
+            "pos": {
+                "x": 545,
+                "y": 1890
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "ResurrectionDrone",
+                        "OwnerId"
+                    ]
+                },
+                {
+                    "name": "Distance",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "distance_to_keep"
+                    ]
+                },
+                {
+                    "name": "MaxVerticalDiff",
+                    "type": "Float",
+                    "value": "0"
+                },
+                {
+                    "name": "DistanceDeviationMin",
+                    "type": "Float",
+                    "value": "1"
+                },
+                {
+                    "name": "DistanceDeviationMax",
+                    "type": "Float",
+                    "value": "0.00"
+                },
+                {
+                    "name": "MoveBackDirectionRandomization",
+                    "type": "Float",
+                    "value": "0.00"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "83cc95b3-ec61-4267-8200-a10108e91430": {
+            "name": "IsValidID",
+            "pos": {
+                "x": 720,
+                "y": 505
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EntityId",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "ResurrectionDrone",
+                        "OwnerId"
+                    ]
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "3176504c-325f-4463-a89e-309ed4f4f952"
+        },
+        "1ce346f3-6ff9-4f2b-b432-ea3628ae4054": {
+            "name": "SetStrafeAllowedAndRestoreOnExit",
+            "pos": {
+                "x": 765,
+                "y": 1262
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Allow",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "fab9494c-20dc-4071-ac89-3ad06e38b858"
+        },
+        "dddadb7d-9c50-4c2a-816b-4fc68429c0c3": {
+            "name": "ParallelUntilAnyComplete",
+            "pos": {
+                "x": 50,
+                "y": 582
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "1cb9fee4-c9a8-42ba-bf90-4e7b2a78f437",
+                "b37aac01-d127-4644-8634-d9364731d071"
+            ]
+        },
+        "8160c810-5e67-49c4-9350-e83d9e5cd002": {
+            "name": "CharacterTeleportToEntity",
+            "pos": {
+                "x": -885,
+                "y": 1505
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Source",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Entity",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "Direction",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Dir"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "fab9494c-20dc-4071-ac89-3ad06e38b858": {
+            "name": "SetMovementPaceAndRestoreOnExit",
+            "pos": {
+                "x": 765,
+                "y": 1385
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "PaceType",
+                    "type": "StringHash",
+                    "value": "Regular"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "64aca0be-1294-44f5-9be5-7a338bc22eb5"
+        },
+        "c13ad20b-d7d3-4a48-af12-e3e474e205b5": {
+            "name": "Sequence",
+            "pos": {
+                "x": -160,
+                "y": 413
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "103aa90c-3120-4e80-b572-83539ad3df63",
+                "7ba18134-058f-4074-a676-99f58f9c1ac0",
+                "dddadb7d-9c50-4c2a-816b-4fc68429c0c3"
+            ]
+        },
+        "22ed4764-c183-459d-81e1-732e4be04d5c": {
+            "name": "Selector",
+            "pos": {
+                "x": -285,
+                "y": 1647
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "d1b35d2e-5d99-4748-9597-746ee459d986",
+                "b7034bea-cb28-4418-9a7b-caa7bb3bc245"
+            ]
+        },
+        "b7034bea-cb28-4418-9a7b-caa7bb3bc245": {
+            "name": "LogGate",
+            "pos": {
+                "x": -50,
+                "y": 1794
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CVar",
+                    "type": "StringHash",
+                    "value": "gai_resurrection_drone_debug"
+                },
+                {
+                    "name": "OnEnter",
+                    "type": "StringHash",
+                    "value": "ResurrectionDrone - approach failed, try to teleport to target"
+                },
+                {
+                    "name": "OnExit",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "Attribute1",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                },
+                {
+                    "name": "Attribute2",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "6ef213c9-01d4-4cdd-8c4a-866c7803ae59"
+        },
+        "07e3724e-d862-4588-ad33-92b721be0e5f": {
+            "name": "CharacterTeleportToEntity",
+            "pos": {
+                "x": -1205,
+                "y": 1527
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Source",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Entity",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "Direction",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Dir"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "1df3856b-8a40-4edb-b4bb-4424d1bcf9ce": {
+            "name": "CharacterTeleportToEntity",
+            "pos": {
+                "x": 1210,
+                "y": 1446
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Source",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Entity",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "ResurrectionDrone",
+                        "OwnerId"
+                    ]
+                },
+                {
+                    "name": "Direction",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Dir"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "9429271a-0849-4c9c-8e9a-57339539b776": {
+            "name": "LogGate",
+            "pos": {
+                "x": -885,
+                "y": 1322
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CVar",
+                    "type": "StringHash",
+                    "value": "gai_resurrection_drone_debug"
+                },
+                {
+                    "name": "OnEnter",
+                    "type": "StringHash",
+                    "value": "ResurrectionDrone - Teleport 2 Enter"
+                },
+                {
+                    "name": "OnExit",
+                    "type": "StringHash",
+                    "value": "ResurrectionDrone - Teleport 2 Exit"
+                },
+                {
+                    "name": "Attribute1",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                },
+                {
+                    "name": "Attribute2",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "8160c810-5e67-49c4-9350-e83d9e5cd002"
+        },
+        "103aa90c-3120-4e80-b572-83539ad3df63": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -345,
+                "y": 569
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "curTargetID"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "EntityId"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "570216ee-29c0-4421-9eae-5a7c245f6273": {
+            "name": "LogGate",
+            "pos": {
+                "x": 1210,
+                "y": 1256
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CVar",
+                    "type": "StringHash",
+                    "value": "gai_resurrection_drone_debug"
+                },
+                {
+                    "name": "OnEnter",
+                    "type": "StringHash",
+                    "value": "ResurrectionDrone - Teleport 3 Enter"
+                },
+                {
+                    "name": "OnExit",
+                    "type": "StringHash",
+                    "value": "ResurrectionDrone - Teleport 3 Exit"
+                },
+                {
+                    "name": "Attribute1",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                },
+                {
+                    "name": "Attribute2",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "1df3856b-8a40-4edb-b4bb-4424d1bcf9ce"
+        },
+        "7485c7cc-36c8-439f-b617-b31542ede5eb": {
+            "name": "LogGate",
+            "pos": {
+                "x": 545,
+                "y": 1668
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CVar",
+                    "type": "StringHash",
+                    "value": "gai_resurrection_drone_debug"
+                },
+                {
+                    "name": "OnEnter",
+                    "type": "StringHash",
+                    "value": "ResurrectionDrone - Follow Enter"
+                },
+                {
+                    "name": "OnExit",
+                    "type": "StringHash",
+                    "value": "ResurrectionDrone - Follow Exit"
+                },
+                {
+                    "name": "Attribute1",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                },
+                {
+                    "name": "Attribute2",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "9caf5cf7-9807-4259-be75-c4fc68d618b1"
+        },
+        "742c6a94-bf86-441f-9333-af7affb13af5": {
+            "name": "IsCharacterOnPlatform",
+            "pos": {
+                "x": -1205,
+                "y": 1159
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CharacterId",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "09af97fb-f6df-4c40-a53d-5ed727137b3b"
+        },
+        "3176504c-325f-4463-a89e-309ed4f4f952": {
+            "name": "Sequence",
+            "pos": {
+                "x": 720,
+                "y": 670
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "449f59c2-d5cd-451b-8372-d76dc4ccf1e3",
+                "4c900b5a-6478-4d19-9dc0-4b1beadd843e",
+                "01ba35dd-c7d5-4c77-9b28-66aac81ce912"
+            ]
+        },
+        "d9fba2a8-b4a5-42ea-aac5-b1a752e2e1d6": {
+            "name": "PointInHorizontalRange",
+            "pos": {
+                "x": 190,
+                "y": 2136
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Source",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Point",
+                    "type": "Variable",
+                    "value": [
+                        "targetPos"
+                    ]
+                },
+                {
+                    "name": "Min",
+                    "type": "Integer",
+                    "value": "0"
+                },
+                {
+                    "name": "Max",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "ignore_path_range"
+                    ]
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "4eefacfc-9aa3-4d6e-8bec-074ee15f836b"
+        },
+        "0c3de6cb-d2e3-4878-ac85-0f863bcd2208": {
+            "name": "Selector",
+            "pos": {
+                "x": -595,
+                "y": 979
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "742c6a94-bf86-441f-9333-af7affb13af5",
+                "2006e820-50a2-4c01-9fe0-0a7f5730771a",
+                "5d96003b-8815-453e-97fa-3fffbc8e0821"
+            ]
+        },
+        "4eefacfc-9aa3-4d6e-8bec-074ee15f836b": {
+            "name": "LogGate",
+            "pos": {
+                "x": 190,
+                "y": 2365
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CVar",
+                    "type": "StringHash",
+                    "value": "gai_resurrection_drone_debug"
+                },
+                {
+                    "name": "OnEnter",
+                    "type": "StringHash",
+                    "value": "ResurrectionDrone - teleporting to target"
+                },
+                {
+                    "name": "OnExit",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "Attribute1",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                },
+                {
+                    "name": "Attribute2",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "202e9266-e435-4aeb-9775-3387e1702d04"
+        },
+        "1cb9fee4-c9a8-42ba-bf90-4e7b2a78f437": {
+            "name": "ReleaseClaimedDeadBodyOnExit",
+            "pos": {
+                "x": -595,
+                "y": 750
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "0e81d2c7-6769-462c-a07c-438a79bfbb71"
+        },
+        "a76f7b8a-3033-4740-8ba7-a7a928daaada": {
+            "name": "PlayVO",
+            "pos": {
+                "x": -550,
+                "y": 1427
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Character",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "VOEventName",
+                    "type": "StringHash",
+                    "value": "go_resurrect"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "7ba18134-058f-4074-a676-99f58f9c1ac0": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -160,
+                "y": 567
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "curTargetID"
+                },
+                {
+                    "name": "Value",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "d02605a0-251b-43a3-be2b-9871d4db3e16": {
+            "name": "GetEntityPos",
+            "pos": {
+                "x": -50,
+                "y": 2135
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EntityId",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Position",
+                    "type": "Variable",
+                    "value": [
+                        "targetPos"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "29fc7c9d-d022-4f9b-a9f0-a8272d0c1f4b": {
+            "name": "Wait",
+            "pos": {
+                "x": 1010,
+                "y": 338
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Float",
+                    "value": "0.1"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "0e81d2c7-6769-462c-a07c-438a79bfbb71": {
+            "name": "Sequence",
+            "pos": {
+                "x": -595,
+                "y": 865
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "763f30a6-d50b-447d-94b7-717086e30294",
+                "0c3de6cb-d2e3-4878-ac85-0f863bcd2208",
+                "59fdd440-736e-4daf-ae22-98afd74f4d9d"
+            ]
+        },
+        "5b4cc811-05fd-4b73-90b0-c75bd00517bd": {
+            "name": "Resurrection",
+            "pos": {
+                "x": -30,
+                "y": 1289
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "bab274c0-bda9-4a5b-a949-ef968d5d7054": {
+            "name": "IsBBValueExist",
+            "pos": {
+                "x": 720,
+                "y": 338
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ValuePath",
+                    "type": "StringHash",
+                    "value": "Gai.ResurrectionDrone.OwnerId"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "83cc95b3-ec61-4267-8200-a10108e91430"
+        },
+        "21674000-e1c7-4d61-8b49-22c9610de500": {
+            "name": "CharacterTeleportToEntity",
+            "pos": {
+                "x": 160,
+                "y": 1289
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Source",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Entity",
+                    "type": "Variable",
+                    "value": [
+                        "curTargetID"
+                    ]
+                },
+                {
+                    "name": "Direction",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Dir"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "b37aac01-d127-4644-8634-d9364731d071": {
+            "name": "Equals",
+            "pos": {
+                "x": 215,
+                "y": 726
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Lhs",
+                    "type": "Variable",
+                    "value": [
+                        "curTargetID"
+                    ]
+                },
+                {
+                    "name": "Rhs",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "a3ff020e-32be-4d2e-ab22-fd94715e920a"
+        },
+        "4c900b5a-6478-4d19-9dc0-4b1beadd843e": {
+            "name": "GetEntityPos",
+            "pos": {
+                "x": 720,
+                "y": 782
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EntityId",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "ResurrectionDrone",
+                        "OwnerId"
+                    ]
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Position",
+                    "type": "Variable",
+                    "value": [
+                        "ownerPos"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "c758568e-d77d-42ec-9439-471c0ed9b3ca": {
+            "name": "IsCharacterOnPlatform",
+            "pos": {
+                "x": 765,
+                "y": 1095
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CharacterId",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "1ce346f3-6ff9-4f2b-b432-ea3628ae4054"
+        },
+        "520751cc-396e-42e2-9d73-8a37f9873da1": {
+            "name": "LogGate",
+            "pos": {
+                "x": -285,
+                "y": 1427
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CVar",
+                    "type": "StringHash",
+                    "value": "gai_resurrection_drone_debug"
+                },
+                {
+                    "name": "OnEnter",
+                    "type": "StringHash",
+                    "value": "ResurrectionDrone - Heal Approach Enter"
+                },
+                {
+                    "name": "OnExit",
+                    "type": "StringHash",
+                    "value": "ResurrectionDrone - Heal Approach Exit"
+                },
+                {
+                    "name": "Attribute1",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                },
+                {
+                    "name": "Attribute2",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "22ed4764-c183-459d-81e1-732e4be04d5c"
+        },
+        "2006e820-50a2-4c01-9fe0-0a7f5730771a": {
+            "name": "IsCharacterOnPlatform",
+            "pos": {
+                "x": -885,
+                "y": 1157
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CharacterId",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "9429271a-0849-4c9c-8e9a-57339539b776"
+        },
+        "6ef213c9-01d4-4cdd-8c4a-866c7803ae59": {
+            "name": "Sequence",
+            "pos": {
+                "x": -50,
+                "y": 2012
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "442d721b-78bf-4026-a6be-a5231fc49ab6",
+                "d02605a0-251b-43a3-be2b-9871d4db3e16",
+                "d9fba2a8-b4a5-42ea-aac5-b1a752e2e1d6"
+            ]
+        },
+        "d1b35d2e-5d99-4748-9597-746ee459d986": {
+            "name": "ApproachTo",
+            "pos": {
+                "x": -440,
+                "y": 1795
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "curTargetID"
+                    ]
+                },
+                {
+                    "name": "EndDistance",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Inventory",
+                        "CurrentItem",
+                        "effective_distance"
+                    ]
+                },
+                {
+                    "name": "UpdateDestinationPoint",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "05630bfa-74b2-4c65-b98e-992c9fe69c8c": {
+            "name": "Success",
+            "pos": {
+                "x": 215,
+                "y": 1091
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "20d34b36-531d-47b5-adc8-42e74e991315": {
+            "name": "IsCharacterOnPlatform",
+            "pos": {
+                "x": 1210,
+                "y": 1091
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CharacterId",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "ResurrectionDrone",
+                        "OwnerId"
+                    ]
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "570216ee-29c0-4421-9eae-5a7c245f6273"
+        },
+        "6367abb2-a732-4ba5-b16b-4894f42b3b16": {
+            "name": "LogGate",
+            "pos": {
+                "x": 965,
+                "y": 2013
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CVar",
+                    "type": "StringHash",
+                    "value": "gai_resurrection_drone_debug"
+                },
+                {
+                    "name": "OnEnter",
+                    "type": "StringHash",
+                    "value": "ResurrectionDrone - Target Exist"
+                },
+                {
+                    "name": "OnExit",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "Attribute1",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                },
+                {
+                    "name": "Attribute2",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "223cdb59-34c1-461f-94d6-6e323736ae91"
+        },
+        "0d6e1910-30d9-4dec-9b23-8383a24b5468": {
+            "name": "Selector",
+            "pos": {
+                "x": 0,
+                "y": 96
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "a36aea2d-2d9c-48ee-9b5c-f2d93fc80070",
+                "bab274c0-bda9-4a5b-a949-ef968d5d7054",
+                "29fc7c9d-d022-4f9b-a9f0-a8272d0c1f4b"
+            ]
+        },
+        "0b8554c9-9b33-4d07-bad0-58d2abb815bc": {
+            "name": "Selector",
+            "pos": {
+                "x": 17.601820728291388,
+                "y": 1190.3132709224042
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "5b4cc811-05fd-4b73-90b0-c75bd00517bd",
+                "21674000-e1c7-4d61-8b49-22c9610de500"
+            ]
+        },
+        "64aca0be-1294-44f5-9be5-7a338bc22eb5": {
+            "name": "ParallelUntilAnyComplete",
+            "pos": {
+                "x": 765,
+                "y": 1507
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "7485c7cc-36c8-439f-b617-b31542ede5eb",
+                "a0eb73f5-258e-4513-afb4-e0e1db5b07fd"
+            ]
+        },
+        "35d440e6-67b8-4b4b-a7fb-6e68055d3d5b": {
+            "name": "Selector",
+            "pos": {
+                "x": 1025,
+                "y": 985
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "c758568e-d77d-42ec-9439-471c0ed9b3ca",
+                "20d34b36-531d-47b5-adc8-42e74e991315"
+            ]
+        },
+        "449f59c2-d5cd-451b-8372-d76dc4ccf1e3": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": 495,
+                "y": 783
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ownerPos"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Position"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "a3ff020e-32be-4d2e-ab22-fd94715e920a": {
+            "name": "LogGate",
+            "pos": {
+                "x": 215,
+                "y": 908
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CVar",
+                    "type": "StringHash",
+                    "value": "gai_resurrection_drone_debug"
+                },
+                {
+                    "name": "OnEnter",
+                    "type": "StringHash",
+                    "value": "ResurrectionDrone - Target changed"
+                },
+                {
+                    "name": "OnExit",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "Attribute1",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                },
+                {
+                    "name": "Attribute2",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "05630bfa-74b2-4c65-b98e-992c9fe69c8c"
+        },
+        "59fdd440-736e-4daf-ae22-98afd74f4d9d": {
+            "name": "LogGate",
+            "pos": {
+                "x": -105,
+                "y": 997
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CVar",
+                    "type": "StringHash",
+                    "value": "gai_resurrection_drone_debug"
+                },
+                {
+                    "name": "OnEnter",
+                    "type": "StringHash",
+                    "value": "ResurrectionDrone - Resurrect Enter"
+                },
+                {
+                    "name": "OnExit",
+                    "type": "StringHash",
+                    "value": "ResurrectionDrone - Resurrect Exit"
+                },
+                {
+                    "name": "Attribute1",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                },
+                {
+                    "name": "Attribute2",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "0b8554c9-9b33-4d07-bad0-58d2abb815bc"
+        },
+        "442d721b-78bf-4026-a6be-a5231fc49ab6": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -210,
+                "y": 2136
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "targetPos"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Position"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "5d6b469b-f431-40b6-b062-93df612b2c66": {
+            "name": "Sequence",
+            "pos": {
+                "x": -430,
+                "y": 1291
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "a76f7b8a-3033-4740-8ba7-a7a928daaada",
+                "520751cc-396e-42e2-9d73-8a37f9873da1"
+            ]
+        },
+        "5d96003b-8815-453e-97fa-3fffbc8e0821": {
+            "name": "SetMovementPaceAndRestoreOnExit",
+            "pos": {
+                "x": -430,
+                "y": 1160
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "PaceType",
+                    "type": "StringHash",
+                    "value": "Sprint"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "5d6b469b-f431-40b6-b062-93df612b2c66"
+        },
+        "01ba35dd-c7d5-4c77-9b28-66aac81ce912": {
+            "name": "PointInHorizontalRange",
+            "pos": {
+                "x": 1025,
+                "y": 781
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Source",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Point",
+                    "type": "Variable",
+                    "value": [
+                        "ownerPos"
+                    ]
+                },
+                {
+                    "name": "Min",
+                    "type": "Integer",
+                    "value": "0"
+                },
+                {
+                    "name": "Max",
+                    "type": "Integer",
+                    "value": "5"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "35d440e6-67b8-4b4b-a7fb-6e68055d3d5b"
+        },
+        "763f30a6-d50b-447d-94b7-717086e30294": {
+            "name": "ClaimDeadBody",
+            "pos": {
+                "x": -905,
+                "y": 976
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Target",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "a0eb73f5-258e-4513-afb4-e0e1db5b07fd": {
+            "name": "IsBBValueExist",
+            "pos": {
+                "x": 965,
+                "y": 1660
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ValuePath",
+                    "type": "StringHash",
+                    "value": "Target.ID"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "1564e32b-f6af-4c21-9377-56777e8ef65d"
+        },
+        "1564e32b-f6af-4c21-9377-56777e8ef65d": {
+            "name": "IsValidID",
+            "pos": {
+                "x": 965,
+                "y": 1838
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EntityId",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "6367abb2-a732-4ba5-b16b-4894f42b3b16"
+        },
+        "223cdb59-34c1-461f-94d6-6e323736ae91": {
+            "name": "Success",
+            "pos": {
+                "x": 965,
+                "y": 2199
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "a36aea2d-2d9c-48ee-9b5c-f2d93fc80070": {
+            "name": "IsValidID",
+            "pos": {
+                "x": -160,
+                "y": 209
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EntityId",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "c13ad20b-d7d3-4a48-af12-e3e474e205b5"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

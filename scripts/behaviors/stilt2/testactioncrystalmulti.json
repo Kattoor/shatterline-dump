@@ -1,0 +1,415 @@
+{
+    "name": "Stilt2/TestActionCrystalMulti",
+    "root": "ab0fb9db-3144-49ad-82c8-b9676382dc12",
+    "nodes": {
+        "d3b5fb15-2aef-4cba-9523-5128f0f8aacc": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": -1025,
+                "y": 527
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Rotate To Target"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "b8690cd8-65b9-4b4d-9a11-8586ff5d997f"
+        },
+        "5954e7da-0553-483a-a773-40f05b6669dc": {
+            "name": "Add",
+            "pos": {
+                "x": -395,
+                "y": 522
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "InputA",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Pos"
+                    ]
+                },
+                {
+                    "name": "InputB",
+                    "type": "Variable",
+                    "value": [
+                        "lookOffset"
+                    ]
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Result",
+                    "type": "Variable",
+                    "value": [
+                        "targetPt"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "6b3aacd4-0087-4e86-bd88-ea4813fe2a40": {
+            "name": "SendEventToScript",
+            "pos": {
+                "x": 100,
+                "y": 773
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EventName",
+                    "type": "StringHash",
+                    "value": "LaunchMulti"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "b31b9f1c-ac8e-4399-9a6b-c683b199d003": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 381
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "0210f8a5-3516-428d-a70f-3458507523cb",
+                "d3b5fb15-2aef-4cba-9523-5128f0f8aacc",
+                "af8d8b52-3b00-44f2-8e15-e6eb42564430",
+                "5954e7da-0553-483a-a773-40f05b6669dc",
+                "81aed9c4-e8da-4955-b327-e1e8232d6089",
+                "bcfc100b-1162-4d17-a71f-ede6a090b19e",
+                "76316415-b995-4c4b-b834-7158a75883e0",
+                "6ebbfa1a-9e97-47a7-833d-3909572012d4"
+            ]
+        },
+        "d4713189-881a-4a3b-bdd1-dd2d85d7bbcf": {
+            "name": "Succeeder",
+            "pos": {
+                "x": -100,
+                "y": 775
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "e38df25c-133e-413a-8bd0-6680d288b7fe"
+        },
+        "adfe6289-f8d8-4c83-bf4b-c59e290ec1c6": {
+            "name": "ParallelUntilAllComplete",
+            "pos": {
+                "x": 5,
+                "y": 656
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "d4713189-881a-4a3b-bdd1-dd2d85d7bbcf",
+                "6b3aacd4-0087-4e86-bd88-ea4813fe2a40"
+            ]
+        },
+        "76316415-b995-4c4b-b834-7158a75883e0": {
+            "name": "CancelMeleeAttack",
+            "pos": {
+                "x": 245,
+                "y": 515
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "af8d8b52-3b00-44f2-8e15-e6eb42564430": {
+            "name": "Multiply",
+            "pos": {
+                "x": -635,
+                "y": 520
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "InputA",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "CharacterProperties",
+                        "BodyDirection"
+                    ]
+                },
+                {
+                    "name": "InputB",
+                    "type": "Integer",
+                    "value": "5"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Result",
+                    "type": "Variable",
+                    "value": [
+                        "lookOffset"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "81aed9c4-e8da-4955-b327-e1e8232d6089": {
+            "name": "SetCustomTargetPos",
+            "pos": {
+                "x": -235,
+                "y": 519
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Position",
+                    "type": "Variable",
+                    "value": [
+                        "targetPt"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "e38df25c-133e-413a-8bd0-6680d288b7fe": {
+            "name": "AOEMeleeSuperAttack",
+            "pos": {
+                "x": -100,
+                "y": 873
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "PrepareTime",
+                    "type": "Float",
+                    "value": "0.00"
+                },
+                {
+                    "name": "PrepareIndex",
+                    "type": "Integer",
+                    "value": "0"
+                },
+                {
+                    "name": "AttackIndex",
+                    "type": "Integer",
+                    "value": "3"
+                },
+                {
+                    "name": "AOE Attack slice",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "SliceRandomPostfix",
+                    "type": "Float",
+                    "value": "0"
+                },
+                {
+                    "name": "Close melee attack",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "bcfc100b-1162-4d17-a71f-ede6a090b19e": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 5,
+                "y": 521
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Launch Multiple Crystalines"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "adfe6289-f8d8-4c83-bf4b-c59e290ec1c6"
+        },
+        "a66b9a21-fcec-453c-a713-d7b80cc9b727": {
+            "name": "RepeatUntilSucceeds",
+            "pos": {
+                "x": -1025,
+                "y": 766
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Iterations",
+                    "type": "Integer",
+                    "value": "0"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "e5eef348-3001-410d-86d7-9b28980f75d6"
+        },
+        "ab0fb9db-3144-49ad-82c8-b9676382dc12": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 101
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ActionTest"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "6a58fd12-050d-4e60-80da-5ce78df5b324"
+        },
+        "e5eef348-3001-410d-86d7-9b28980f75d6": {
+            "name": "AngleToTargetNow",
+            "pos": {
+                "x": -1025,
+                "y": 878
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Target",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "MaxAngle",
+                    "type": "Float",
+                    "value": "15.00"
+                },
+                {
+                    "name": "UseBodyYaw",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "6a58fd12-050d-4e60-80da-5ce78df5b324": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 245
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Test Launch Multiple Crystalines"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "b31b9f1c-ac8e-4399-9a6b-c683b199d003"
+        },
+        "b8690cd8-65b9-4b4d-9a11-8586ff5d997f": {
+            "name": "Timer",
+            "pos": {
+                "x": -1025,
+                "y": 637
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "RunTime",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "crystaline_attack_max_rot_time"
+                    ]
+                },
+                {
+                    "name": "FailOnTimeout",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "a66b9a21-fcec-453c-a713-d7b80cc9b727"
+        },
+        "0210f8a5-3516-428d-a70f-3458507523cb": {
+            "name": "ResetCustomTargetPos",
+            "pos": {
+                "x": -1305,
+                "y": 529
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "6ebbfa1a-9e97-47a7-833d-3909572012d4": {
+            "name": "ResetCustomTargetPos",
+            "pos": {
+                "x": 415,
+                "y": 517
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

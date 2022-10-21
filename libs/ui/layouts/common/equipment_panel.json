@@ -1,0 +1,49 @@
+{
+    "script": "scripts/ui/common/equipment_panel.lua",
+    "view_path": "EquipmentPanel.html",
+    "children": 
+    [
+        {"name": "equipment", "type": "Component", "view_path": "equipment"},
+        {"name": "equipment_container", "type": "Component", "view_path": "equipment.container"},
+        {"name": "title", "type": "Label", "view_path": "equipment.title", "text": "@equipment_panel_title"},
+        
+        {"name": "primary_weapon", "type": "Component", "view_path": "equipment.container.wrapper.weapon1", "file": "common/equipment_panel_item.json"}, 
+        {"name": "secondary_weapon", "type": "Component", "view_path": "equipment.container.wrapper.weapon2", "file": "common/equipment_panel_item.json"},
+        {"name": "grenade", "type": "Component", "view_path": "equipment.container.wrapper.ability1", "file": "common/equipment_panel_item.json"},
+        {"name": "grenade_2", "type": "Component", "view_path": "equipment.container.wrapper.ability2", "file": "common/equipment_panel_item.json"},
+        {"name": "special_weapon", "type": "Component", "view_path": "equipment.container.wrapper.ultimate", "file": "common/equipment_panel_item.json"},
+
+        {"name": "equipment_lock", "type": "Component", "view_path": "equipment.container.lockBlock", "visible": false},
+        {"name": "equipment_lock_title", "type": "Label", "view_path": "equipment.container.lockBlock.wrapper.title", "text": "@equipment_panel_equipment_locked"},
+        {"name": "equipment_lock_progress_bar", "type": "ProgressBar", "view_path": "equipment.container.lockBlock.wrapper.circleProgressBar"},
+        {"name": "equipment_lock_timer", "type": "Label", "view_path": "equipment.container.lockBlock.wrapper.circleProgressBar.label"},
+
+        {"name": "customization_buttons_container", "type": "Component", "view_path": "customizationButtons", "visible": false}, 
+        {"name": "primary_customization_button", "type": "Component", "view_path": "customizationButtons.primaryCustomizationButton", "file": "common/equipment_panel_item_customization_button.json", "visible": false}, 
+        {"name": "secondary_customization_button", "type": "Component", "view_path": "customizationButtons.secondaryCustomizationButton", "file": "common/equipment_panel_item_customization_button.json", "visible": false},
+
+        {"name": "attachments_block", "type": "Component", "view_path": "attachments"},
+
+        {"name": "equipped_attachments", "type": "Component", "view_path": "attachments.equippedAttachments", "visible": false},
+        {"name": "equipped_attachments_title", "type": "Label", "view_path": "attachments.equippedAttachments.title", "text": "@equipment_panel_slots_title"},
+        {"name": "equipped_attachments_container", "type": "Component", "view_path": "attachments.equippedAttachments.container"},
+
+        {"name": "attachments", "type": "Component", "view_path": "attachments.reequipAttachments", "visible": false},
+        {"name": "attachments_title", "type": "Label", "view_path": "attachments.reequipAttachments.title", "text": "@attachments_title"},
+        {"name": "attachments_container", "type": "Component", "view_path": "attachments.reequipAttachments.container"},
+
+        {"name": "weapons", "type": "Component", "view_path": "reequipWeaponPanel", "visible": false},
+        {"name": "weapons_title", "type": "Label", "view_path": "reequipWeaponPanel.title"},
+        {"name": "weapons_container", "type": "Component", "view_path": "reequipWeaponPanel.container"},
+
+
+        {"name": "weapons_type", "type": "Component", "view_path": "reequipWeaponPanel.weaponTypesWrapper"},
+        {"name": "weapons_type_hint_left", "type": "ActionLabel", "view_path": "reequipWeaponPanel.weaponTypesWrapper.hintLeft", "gamepad_only": true},
+        {"name": "weapons_type_button_container", "type":"Component", "view_path": "reequipWeaponPanel.weaponTypesWrapper.weaponTypesButtonsContainer", "file": "common/equipment_panel_weapons_type_container.json"},
+        {"name": "weapons_type_hint_right", "type": "ActionLabel", "view_path": "reequipWeaponPanel.weaponTypesWrapper.hintRight", "gamepad_only": true},
+
+        {"name": "abilities", "type":"Component", "view_path": "abilityReequip", "visible": false},
+        {"name": "abilities_title", "type":"Label", "view_path": "abilityReequip.title", "text": "@equipment_panel_abilities_title"},
+        {"name": "abilities_container", "type":"Component", "view_path": "abilityReequip.container"}
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "script": "",
+    "view_path": "ItemPanel.html",
+    "hide_cursor": true,
+    "children":
+    [
+        {"name": "ItemImageMelee", "type": "FlippableItem", "view_path": "itemContainer2.itemImage"},
+        {"name": "ItemHotkeyMelee", "type": "ActionLabel", "view_path": "itemContainer2.hotkey"},
+
+        {"name": "ItemImageWeapon", "type": "FlippableItem", "view_path": "itemContainer1.itemImage"},
+        {"name": "ItemHotkeyWeapon", "type": "ActionLabel", "view_path": "itemContainer1.hotkey"},
+
+        {"name": "ItemImage", "type": "FlippableItem", "view_path": "itemImage"},
+        {"name": "ItemsCount", "type": "FlippableItem", "view_path": "itemsCount"},
+
+        {"name": "BackpackItemsCount", "type": "FlippableItem", "view_path": "backContainer.backpackItemsCount"},
+        {"name": "FireModeIcon", "type": "FlippableItem", "view_path": "backContainer.fireModeIcon"},
+
+        {"name": "ItemName", "type": "FlippableItem", "view_path": "itemName"}
+    ]
+}

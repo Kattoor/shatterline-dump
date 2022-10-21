@@ -1,0 +1,100 @@
+{
+    "name": "Minotaur/TestActionJump",
+    "root": "80badf6d-4804-4ec8-a978-0395a92626fa",
+    "nodes": {
+        "c65027e0-215c-462f-948e-43b4a9cba6aa": {
+            "name": "PlayRandomSideJumpAnimation",
+            "pos": {
+                "x": 0,
+                "y": 443
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Distance",
+                    "type": "Float",
+                    "value": "8"
+                },
+                {
+                    "name": "StateMachineName",
+                    "type": "StringHash",
+                    "value": "MinotaurJump_SM"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "68474c86-7f5a-47c1-9b32-70c70d35f0f1": {
+            "name": "LogGate",
+            "pos": {
+                "x": 0,
+                "y": 234
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CVar",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "OnEnter",
+                    "type": "StringHash",
+                    "value": "ActionTest: Jump started"
+                },
+                {
+                    "name": "OnExit",
+                    "type": "StringHash",
+                    "value": "ActionTest: Jump finished"
+                },
+                {
+                    "name": "Attribute1",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                },
+                {
+                    "name": "Attribute2",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "c65027e0-215c-462f-948e-43b4a9cba6aa"
+        },
+        "80badf6d-4804-4ec8-a978-0395a92626fa": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 87
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ActionTest"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "68474c86-7f5a-47c1-9b32-70c70d35f0f1"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

@@ -1,0 +1,171 @@
+{
+    "stages": {
+        "play_page": {
+            "outfits": {
+                "default": {
+                    "inventory_slot": "",
+                    "motion_in": "presentation_mongoose_in_01",
+                    "motion_idle": "presentation_mongoose_idle_01",
+                    "greeting": "chr_pres_mongoose_no_vo",
+                    "attachments": [
+                        {
+                            "slice": "slices/animals/fly01.dynamicslice",
+                            "target_bone": "bn_02",
+                            "motion_in": "presentation_mongoose_in_01",
+                            "motion_idle": "presentation_mongoose_idle_01"
+                        },
+                        {
+                            "slice": "slices/inventory/kn02_invader_presentation_tp.dynamicslice",
+                            "target_bone": "bn_01"
+                        },
+                        {
+                            "slice": "slices/vfx/lobby_characters/vfx_lobby_mongoose_sparks.dynamicslice",
+                            "target_bone": "bn_02"
+                        }
+                    ],
+                    "animation_controlled_rotation": false,
+                    "hero_rotation": {
+                        "rotation_limit_min": 25.0,
+                        "rotation_limit_max": 25.0,
+                        "dynamic_angular_speed": true
+                    }
+                }
+            }
+        },
+        "hero_selection": {
+            "outfits": {
+                "default": {
+                    "inventory_slot": "",
+                    "motion_in": "hero_selection_mongoose_01",
+                    "motion_idle": "hero_selection_mongoose_01",
+                    "greeting": "chr_pres_mongoose_pre",
+                    "animation_controlled_rotation": false,
+                    "name_image": "objects/lobby/hero_names/lobby_hero_name_mongoose.mtl",
+                    "background_image": "objects/lobby/lobby_hero_bg_mat.mtl"
+                }
+            }
+        },
+        "hero_container": {
+            "outfits": {
+                "default": {
+                    "inventory_slot": "",
+                    "motion_in": "customize_mongoose_in_01",
+                    "motion_idle": "customize_mongoose_idle_01",
+                    "greeting": "chr_cust_mongoose",
+                    "hero_rotation": 
+                    {
+                        "rollback" : false
+                    }
+                },
+                "a_mongoose_outfit03": {
+                    "inventory_slot": "",
+                    "motion_in": "result_screen_male_04_in",
+                    "motion_idle": "result_screen_male_04_in",
+                    "greeting": "chr_cust_mongoose",
+                    "hero_rotation": 
+                    {
+                        "rollback" : false
+                    }
+                }
+            }
+        },
+        "hero_equipment": {
+            "outfits": {
+                "default": {
+                    "inventory_slot": "primary_weapon",
+                    "motion_in": "lobby_idle_mongoose_01",
+                    "motion_idle": "lobby_idle_mongoose_01",
+                    "hero_rotation": 
+                    {
+                        "rollback" : false
+                    }
+                }
+            }
+        },
+        "hero_progression": {
+            "outfits": {
+                "default": {
+                    "inventory_slot": "",
+                    "motion_in": "presentation_mongoose_in_01",
+                    "motion_idle": "presentation_mongoose_idle_01",
+                    "greeting": "chr_pres_mongoose_no_vo",
+                    "attachments": [
+                        {
+                            "slice": "slices/animals/fly01.dynamicslice",
+                            "target_bone": "bn_02",
+                            "motion_in": "presentation_mongoose_in_01",
+                            "motion_idle": "presentation_mongoose_idle_01"
+                        },
+                        {
+                            "slice": "slices/inventory/kn02_invader_presentation_tp.dynamicslice",
+                            "target_bone": "bn_01"
+                        },
+                        {
+                            "slice": "slices/vfx/lobby_characters/vfx_lobby_mongoose_sparks.dynamicslice",
+                            "target_bone": "bn_02"
+                        }
+                    ],
+                    "animation_controlled_rotation": false
+                }
+            }
+        },
+        "pregame_hero_selection": {
+            "outfits": {
+                "default": {
+                    "inventory_slot": "primary_weapon",
+                    "motion_in": "lobby_idle_mongoose_01",
+                    "motion_idle": "lobby_idle_mongoose_01"
+                }
+            }
+        },
+        "session_mvp": {
+            "outfits": {
+                "default": {
+                    "inventory_slot": "primary_weapon",
+                    "win_pose_active": true,
+                    "motion_in": "result_screen_male_02_in",
+                    "motion_idle": "result_screen_male_02_idle"
+                }
+            }
+        },
+        "session_tasks": {
+            "outfits": {
+                "default": {
+                    "inventory_slot": "primary_weapon",
+                    "motion_in": "lobby_idle_mongoose_01",
+                    "motion_idle": "lobby_idle_mongoose_01"
+                }
+            }
+        },
+        "session_rewards": {
+            "outfits": {
+                "default": {
+                    "inventory_slot": "primary_weapon",
+                    "win_pose_active": true,
+                    "motion_in": "lobby_idle_mongoose_01",
+                    "motion_idle": "lobby_idle_mongoose_01"
+                }
+            }
+        },
+        "session_details": {
+            "outfits": {
+                "default": {
+                    "inventory_slot": "primary_weapon",
+                    "win_pose_active": true,
+                    "motion_in": "lobby_idle_mongoose_01",
+                    "motion_idle": "lobby_idle_mongoose_01"
+                }
+            }
+        },
+        "session_performance": {
+            "outfits": {
+                "default": {
+                    "inventory_slot": "primary_weapon",
+                    "win_pose_active": true,
+                    "motion_in": "lobby_result_screen_04",
+                    "motion_idle": "lobby_result_screen_04"
+                }
+            }
+        }
+    }
+}

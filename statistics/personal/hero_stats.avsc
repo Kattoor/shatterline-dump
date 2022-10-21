@@ -1,0 +1,81 @@
+{
+    "name": "hero_stats",
+    "doc": "Origin: game session. Emitter: dedicated server.",
+    "type": "record",
+    "fields": [
+        {
+            "name": "ts",
+            "type": "string",
+            "default": "",
+            "doc": "ISO8601 UTC timestamp of the event invocation"
+        },
+        {
+            "name": "name",
+            "type": "string",
+            "default": "-1",
+            "doc": "unique name of the event"
+        },
+        {
+            "name": "ns",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace of the server's deployment (realm)"
+        },
+        {
+            "name": "pid",
+            "type": "long",
+            "default": 0,
+            "doc": "Identifier of a player"
+        },
+        {
+            "name": "gid",
+            "type": "string",
+            "default": "",
+            "doc": "Identifier of a game session"
+        },
+        {
+            "name": "mission_name",
+            "type": "string",
+            "default": "",
+            "doc": "Mission name"
+        },
+        {
+            "name": "game_mode",
+            "type": "string",
+            "default": "",
+            "doc": "Game mode"
+        },
+        {
+            "name": "game_type",
+            "type": "string",
+            "default": "",
+            "doc": "Game type"
+        },
+        {
+            "name": "hero_name",
+            "type": "string",
+            "default": "",
+            "doc": "Hero name"
+        },
+        {
+            "name": "hero_healing",
+            "type": "int",
+            "default": 0
+        },
+        {
+            "name": "hero_revives",
+            "type": "int",
+            "default": 0
+        },
+        {
+            "name": "hero_deaths",
+            "type": "int",
+            "default": 0
+        },
+        {
+            "name": "hero_played_time",
+            "type": "int",
+            "default": 0
+        }
+    ]
+}

@@ -1,0 +1,229 @@
+{
+    "settings": {
+        "resolution_width": {
+            "value": 1280.0,
+            "cvar": "r_width",
+            "storage_type": "local",
+            "tip": {
+                "title": "@resolution",
+                "description": "@resolution_description"
+            }
+        },
+        "resolution_height": {
+            "value": 720.0,
+            "cvar": "r_height",
+            "storage_type": "local",
+            "tip": {
+                "title": "@resolution",
+                "description": "@resolution_description"
+            }
+        },
+        "graphics_preset": {
+            "value": 1.0,
+            "cvar": "s_graphics_preset",
+            "startup_only":true,
+            "storage_type": "local",
+            "tip": {
+                "title": "@specifications",
+                "description": "@specifications_description"
+            }
+        },
+        "quality_spec": {
+            "value": 1.0,
+            "cvar": "r_graphicsquality",
+            "storage_type": "local",
+            "startup_only":true
+        },
+        "texture_quality": {
+            "value": 5.0,
+            "cvar": "s_texture_quality",
+            "startup_only":true,
+            "storage_type": "local",
+            "tip": {
+                "title": "@texture_quality",
+                "description": "@texture_quality_description"
+            }
+        },
+        "object_quality": {
+            "value": 5.0,
+            "cvar": "sys_spec_objectdetail",
+            "startup_only":true,
+            "storage_type": "local",
+            "tip": {
+                "title": "@objects_quality",
+                "description": "@objects_quality_description"
+            }
+        },
+        "special_effects_quality": {
+            "value": 5.0,
+            "cvar": "s_special_effects_quality",
+            "startup_only":true,
+            "storage_type": "local",
+            "tip": {
+                "title": "@special_effects_quality",
+                "description": "@special_effects_quality_description"
+            }
+        },
+        "shading_quality": {
+            "value": 5.0,
+            "cvar": "s_shading_group_quality",
+            "startup_only":true,
+            "storage_type": "local",
+            "tip": {
+                "title": "@shading_quality",
+                "description": "@shading_quality_description"
+            }
+        },
+        "particles_quality": {
+            "value": 5.0,
+            "cvar": "sys_spec_particles",
+            "startup_only":true,
+            "storage_type": "local",
+            "tip": {
+                "title": "@particles_quality",
+                "description": "@particles_quality_description"
+            }
+        },
+        "water_quality": {
+            "value": 5.0,
+            "cvar": "sys_spec_water",
+            "startup_only":true,
+            "storage_type": "local",
+            "tip": {
+                "title": "@water_quality",
+                "description": "@water_quality_description"
+            }
+        },
+        "flares": {
+            "value": 0.0,
+            "cvar": "r_Flares",
+            "startup_only":true,
+            "storage_type": "local",
+            "tip": {
+                "title": "@lens_flare",
+                "description": "@lens_flare_description"
+            }
+        },
+        "screen_space_reflection": {
+            "value": 0.0,
+            "cvar": "r_SSReflections",
+            "startup_only":true,
+            "storage_type": "local",
+            "tip": {
+                "title": "@screen_space_reflections",
+                "description": "@screen_space_reflections_description"
+            }
+        },
+        "anti_aliasing": {
+            "value": 0.0,
+            "cvar": "r_AntialiasingMode",
+            "startup_only":true,
+            "storage_type": "local",
+            "tip": {
+                "title": "@anti_aliasing_quality",
+                "description": "@anti_aliasing_quality_description"
+            }
+        },
+        "bloom": {
+            "value": 0.0,
+            "cvar": "r_HDRBloom",
+            "startup_only":true,
+            "storage_type": "local",
+            "tip": {
+                "title": "@bloom",
+                "description": "@bloom_description"
+            }
+        },
+        "brigtness": {
+            "value": 1.0,
+            "cvar": "s_brightness",
+            "preview_enabled": true,
+            "storage_type": "local",
+            "tip": {
+                "title": "@brightness",
+                "description": "@brightness_description"
+            }
+        },
+        "gamma": {
+            "value": 1.0,
+            "cvar": "s_gamma",
+            "preview_enabled": true,
+            "storage_type": "local",
+            "tip": {
+                "title": "@gamma",
+                "description": "@gamma_description"
+            }
+        },
+        "sharpening": {
+            "value": 0.5,
+            "cvar": "r_sharpening",
+            "preview_enabled": true,
+            "storage_type": "local",
+            "tip": {
+                "title": "@sharpening",
+                "description": "@sharpening_description"
+            }
+        },
+        "full_screen": {
+            "value": 0.0,
+            "storage_type": "local",
+            "cvar": "r_Fullscreen",
+            "tip": {
+                "title": "",
+                "description": ""
+            }
+        },
+		"full_screen_windowed": {
+            "value": 1.0,
+            "storage_type": "local",
+            "cvar": "r_FullscreenWindow",
+            "tip": {
+                "title": "",
+                "description": ""
+            }
+        },
+        "display_mode": {
+            "value": 2.0,
+            "storage_type": "local",
+            "cvar": "s_display_mode",
+            "tip": {
+                "title": "@display_mode",
+                "description": "@display_mode_description"
+            }
+        },
+        "vsync": {
+            "value": 0.0,
+            "cvar": "r_VSync",
+            "storage_type": "local",
+            "tip": {
+                "title": "@vsync",
+                "description": "@vsync_description"
+            }
+        },
+        "voice_chat_activation_mode": {
+            "value": 1,
+            "cvar": "flow_push2talk",
+            "tip": {
+                "title": "@voip_activation_mode_title",
+                "description": "@voip_activation_mode_description"
+            }
+        },
+        "frame_limit": {
+            "value": 200.0,
+            "cvar": "sys_maxFPS",
+            "storage_type": "local",
+            "tip": {
+                "title": "@frame_limit",
+                "description": "@frame_limit_description"
+            }
+        },
+        "audio_panning_mode": {
+            "value": 1,
+            "cvar": "s_panning_mode",
+            "tip": {
+                "title": "@audio_panning_mode",
+                "description": "@audio_panning_mode_description"
+            }
+        }
+    }
+}

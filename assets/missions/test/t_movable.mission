@@ -1,0 +1,87 @@
+{
+  "metagame_info": {
+    "name_token": "@mission1",
+    "mission": "t_movable",
+    "game_type": "pvp",
+    "voice_chat_mode": "party_only",
+    "min_players_count": 1,
+    "time_to_join_sec": 240
+  },
+  "session_info": {
+    "level": "test_levels/movement/test_movable",
+    "game_mode": "test_ptb"
+  },
+  "reward_info": {
+    "reward_calculators": [
+      {
+        "name": "session_outcome",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "win": 500,
+              "draw": 400,
+              "loss": 300
+            }
+          }
+        ]
+      },
+      {
+        "name": "session_play_time",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "reward": 0,
+              "max_reward": 500
+            }
+          }
+        ]
+      },
+      {
+        "name": "session_score",
+        "score": "BombArmed",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "reward": 5,
+              "max_reward": 100
+            }
+          }
+        ]
+      },
+      {
+        "name": "session_score",
+        "score": "BombDisarmed",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "reward": 5,
+              "max_reward": 0
+            }
+          }
+        ]
+      }
+    ],
+    "weapon_score": [
+      {
+        "event": {
+          "event_id": "Kill"
+        },
+        "score": 100
+      },
+      {
+        "event": {
+          "event_id": "Headshot"
+        },
+        "score": 50
+      }
+    ]
+  }
+}

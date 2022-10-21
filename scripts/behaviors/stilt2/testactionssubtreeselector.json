@@ -1,0 +1,172 @@
+{
+    "name": "Stilt2/TestActionsSubtreeSelector",
+    "root": "71285a6e-e796-4032-b9ce-aec13d06878e",
+    "nodes": {
+        "71285a6e-e796-4032-b9ce-aec13d06878e": {
+            "name": "Selector",
+            "pos": {
+                "x": 0,
+                "y": 98
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "8d65c54c-330e-4b4f-9d13-96bdf9ad9c1c",
+                "fa712545-c57c-4940-b4b7-74923f43d695"
+            ]
+        },
+        "4c4f2b13-6cb2-439e-8b8a-c8dadae14ca1": {
+            "name": "Success",
+            "pos": {
+                "x": 75,
+                "y": 687
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "fa712545-c57c-4940-b4b7-74923f43d695": {
+            "name": "CallSubtree",
+            "pos": {
+                "x": 135,
+                "y": 244
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Label",
+                    "type": "StringHash",
+                    "value": "TestActionIdle"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "9113d356-e447-49fa-8850-9bd6a4a0bb46"
+        },
+        "337c86f7-4a0b-4f7b-926f-0e38d73ee75b": {
+            "name": "CallSubtree",
+            "pos": {
+                "x": 75,
+                "y": 565
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Label",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "BehaviorSelector",
+                        "DesiredBehavior"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "4c4f2b13-6cb2-439e-8b8a-c8dadae14ca1"
+        },
+        "26c89901-2dca-4abf-9e41-973a18a00c08": {
+            "name": "Sequence",
+            "pos": {
+                "x": -125,
+                "y": 452
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "93d1cf3a-4aad-488c-8e76-e77472a7c440",
+                "337c86f7-4a0b-4f7b-926f-0e38d73ee75b"
+            ]
+        },
+        "93d1cf3a-4aad-488c-8e76-e77472a7c440": {
+            "name": "SelectTestActionBehavior",
+            "pos": {
+                "x": -325,
+                "y": 565
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Behavior",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "ConditionVariables",
+                        "ActionTest",
+                        "ActionName"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "8d65c54c-330e-4b4f-9d13-96bdf9ad9c1c": {
+            "name": "IsBehaviorCondition",
+            "pos": {
+                "x": -125,
+                "y": 247
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ActionTest"
+                },
+                {
+                    "name": "ResetOnExit",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "26c89901-2dca-4abf-9e41-973a18a00c08"
+        },
+        "9113d356-e447-49fa-8850-9bd6a4a0bb46": {
+            "name": "Success",
+            "pos": {
+                "x": 135,
+                "y": 366
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

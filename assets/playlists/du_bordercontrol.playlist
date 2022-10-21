@@ -1,0 +1,28 @@
+{
+    "lobby_config": {
+        "game_type": "pve",
+        "name_token": "@bcontrol_label",
+        "type_token": "@long_story",
+        "info_token": "@du_bcontrol_briefing",
+        "time_token": "@du_bcontrol_time",
+        "location_token": "@du_bcontrol_location",
+        "video_path": "videos/pve/pve_border_control.bk2",
+        "custom_audio": "pve_bcontrol_hughes_00",
+        "small_image": "border_control_small",
+        "background": "bg_playlist_border_control"
+    },
+    "min_profile_level": 0,
+    "play_again_allowed": false,
+    "missions": [
+        "du_bordercontrol"
+    ],
+    "rewards": [
+        {
+            "type_token": "@pve_completion_rewards_title",
+            "items": [
+                {"image": "season_xp", "value": 30},
+                {"image": "soft", "value": 100}
+            ]
+        }
+    ]
+}

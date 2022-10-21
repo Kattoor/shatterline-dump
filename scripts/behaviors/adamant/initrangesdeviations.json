@@ -1,0 +1,262 @@
+{
+    "name": "Adamant/InitRangesDeviations",
+    "root": "2e304dcf-c88d-4c13-9263-6ca71e044b05",
+    "nodes": {
+        "a144909f-0e61-48ce-b54f-dd980cc600c9": {
+            "name": "SetBBValueByPath",
+            "pos": {
+                "x": 270,
+                "y": 615
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "BB Path",
+                    "type": "StringHash",
+                    "value": "Gai.RangesDeviations.range_for_jump_attack_top"
+                },
+                {
+                    "name": "Value",
+                    "type": "Variable",
+                    "value": [
+                        "RangeValue"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "85155812-357d-4a32-91a1-3afa2e1ab40b": {
+            "name": "Sequence",
+            "pos": {
+                "x": 795,
+                "y": 452
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "ec30753f-7fcf-47d1-ae7a-172e0b39d60d",
+                "d81bfd55-a777-4ba4-b971-9807da9b59c5"
+            ]
+        },
+        "2e304dcf-c88d-4c13-9263-6ca71e044b05": {
+            "name": "IsBBValueExist",
+            "pos": {
+                "x": 0,
+                "y": 141
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ValuePath",
+                    "type": "StringHash",
+                    "value": "Gai.RangesDeviations.Inited"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "49ce506c-61b2-4c12-b2e0-432f0b71afa3"
+        },
+        "e0ec3f49-93b9-491a-8e75-0f0bb9d3d51c": {
+            "name": "SetBBValueByPath",
+            "pos": {
+                "x": -280,
+                "y": 435
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "BB Path",
+                    "type": "StringHash",
+                    "value": "Gai.RangesDeviations.Inited"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "49ce506c-61b2-4c12-b2e0-432f0b71afa3": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 315
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "e0ec3f49-93b9-491a-8e75-0f0bb9d3d51c",
+                "acf93fa0-237f-4c17-9125-b065cb48b3c4",
+                "da0ec776-a7ab-4006-92e4-67ff141f2aaf",
+                "85155812-357d-4a32-91a1-3afa2e1ab40b"
+            ]
+        },
+        "318ddf97-3534-4647-a953-c36e5d9479f4": {
+            "name": "Add",
+            "pos": {
+                "x": -90,
+                "y": 615
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "InputA",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "range_for_jump_attack_max"
+                    ]
+                },
+                {
+                    "name": "InputB",
+                    "type": "Float",
+                    "value": "0.5"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Result",
+                    "type": "Variable",
+                    "value": [
+                        "RangeValue"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "ec30753f-7fcf-47d1-ae7a-172e0b39d60d": {
+            "name": "Subtract",
+            "pos": {
+                "x": 645,
+                "y": 613
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "InputA",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "range_for_jump_attack"
+                    ]
+                },
+                {
+                    "name": "InputB",
+                    "type": "Float",
+                    "value": "0.5"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Result",
+                    "type": "Variable",
+                    "value": [
+                        "RangeValue"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "acf93fa0-237f-4c17-9125-b065cb48b3c4": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -65,
+                "y": 437
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "RangeValue"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Float"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "da0ec776-a7ab-4006-92e4-67ff141f2aaf": {
+            "name": "Sequence",
+            "pos": {
+                "x": 95,
+                "y": 441
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "318ddf97-3534-4647-a953-c36e5d9479f4",
+                "a144909f-0e61-48ce-b54f-dd980cc600c9"
+            ]
+        },
+        "d81bfd55-a777-4ba4-b971-9807da9b59c5": {
+            "name": "SetBBValueByPath",
+            "pos": {
+                "x": 1000,
+                "y": 613
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "BB Path",
+                    "type": "StringHash",
+                    "value": "Gai.RangesDeviations.range_for_jump_attack_bottom"
+                },
+                {
+                    "name": "Value",
+                    "type": "Variable",
+                    "value": [
+                        "RangeValue"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

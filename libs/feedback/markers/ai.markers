@@ -1,0 +1,511 @@
+{
+    "markers": [
+        {
+            "name": "trash_hp_marker_head",
+            "elements": [
+                {
+                    "shield_hp_bar":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.4,
+                            "alpha_upper_bound": 0.0,
+                            "alpha_lower_bound": 1.0
+                        },
+                        "opacity": 0.0,
+                        "disappear_timeout": 1.5,                        
+                        "ui_component_file": "hud/ai_health_bars/normal.json",
+                        "offset": 0.5,
+                        "show_after_initial_damage": true,
+                        "visibility_mode": "IfVisible",
+                        "aim_area_radius": 1,
+                        "animation_driven": true,
+                        "race_icon_track_scale": 0,
+                        "race_icon_min_dist_visibility": 30,
+                        "image_color": "#D61919"
+                    }
+                }
+            ]
+        },
+        
+        {
+            "name": "visible_hp_marker",
+            "elements": [
+                {
+                    "shield_hp_bar":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.4,
+                            "alpha_upper_bound": 0.0,
+                            "alpha_lower_bound": 1.0
+                        },
+                        "opacity": 0.0,
+                        "disappear_timeout": 1.5,                        
+                        "ui_component_file": "hud/ai_health_bars/normal.json",
+                        "offset": 0.5,
+                        "show_after_initial_damage": true,
+                        "race_icon_track_scale": 0,
+                        "race_icon_min_dist_visibility": 30,
+                        "image_color": "#D61919"
+                    }
+                }
+            ]
+        },
+        
+        {
+            "name": "generic_hp_marker",
+            "elements": [
+                {
+                    "shield_hp_bar":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.4,
+                            "alpha_upper_bound": 0.0,
+                            "alpha_lower_bound": 1.0
+                        },
+                        "opacity": 0.0,
+                        "disappear_timeout": 1.5,                        
+                        "ui_component_file": "hud/ai_health_bars/normal.json",
+                        "offset": 0.5,
+                        "show_after_initial_damage": false,
+                        "visibility_mode": "IfVisible",
+                        "aim_area_radius": 1,
+                        "animation_driven": false,
+                        "race_icon_track_scale": 0,
+                        "race_icon_min_dist_visibility": 30,
+                        "image_color": "#D61919"
+                    }
+                }
+            ]
+        },
+        
+        {
+            "name": "generic_hp_marker_head",
+            "elements": [
+                {
+                    "shield_hp_bar":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.4,
+                            "alpha_upper_bound": 0.0,
+                            "alpha_lower_bound": 1.0
+                        },
+                        "opacity": 0.0,
+                        "disappear_timeout": 1.5,
+                        "ui_component_file": "hud/ai_health_bars/normal.json",
+                        "offset": 0.5,
+                        "show_after_initial_damage": false,
+                        "visibility_mode": "IfVisible",
+                        "aim_area_radius": 1,
+                        "show_delay": 1.0,
+                        "animation_driven": true,
+                        "race_icon_track_scale": 0,
+                        "image_color": "#D61919"
+                    }
+                }
+            ]
+        },
+        
+        {
+            "name": "purple_hp_marker_head",
+            "elements": [
+                {
+                    "shield_hp_bar":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.4,
+                            "alpha_upper_bound": 0.0,
+                            "alpha_lower_bound": 1.0
+                        },
+                        "opacity": 0.0,
+                        "disappear_timeout": 1.5,
+                        "ui_component_file": "hud/ai_health_bars/normal.json",
+                        "visibility_mode": "IfVisible",
+                        "offset": 0.5,
+                        "aim_area_radius": 1,
+                        "animation_driven": true,
+                        "show_delay": 1.0,
+                        "race_icon_min_dist_visibility": 50,
+                        "show_after_initial_damage": false,
+                        "race_icon_track_scale": 0,
+                        "image_color": "#CF79FF"
+                    }
+                }
+            ]
+        },
+        
+        {
+            "name": "yellow_hp_marker_head",
+            "elements": [
+                {
+                    "shield_hp_bar":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.4,
+                            "alpha_upper_bound": 0.0,
+                            "alpha_lower_bound": 1.0
+                        },
+                        "opacity": 0.0,
+                        "disappear_timeout": 1.5,
+                        "ui_component_file": "hud/ai_health_bars/normal.json",
+                        "visibility_mode": "IfVisible",
+                        "offset": 0.5,
+                        "aim_area_radius": 1,
+                        "animation_driven": true,
+                        "show_delay": 1.0,
+                        "race_icon_min_dist_visibility": 50,
+                        "show_after_initial_damage": false,
+                        "race_icon_track_scale": 0,
+                        "image_color": "#F2C014"
+                    }
+                }
+            ]
+        },
+        
+        {
+            "name": "dynamic_hp_marker_purple",
+            "elements": [
+                {
+                    "shield_hp_bar":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.4,
+                            "alpha_upper_bound": 0.0,
+                            "alpha_lower_bound": 1.0
+                        },
+                        "opacity": 0.0,
+                        "disappear_timeout": 1.5,
+                        "ui_component_file": "hud/ai_health_bars/normal.json",
+                        "visibility_mode": "IfVisible",
+                        "offset": 0.5,
+                        "aim_area_radius": 1,
+                        "animation_driven": true,
+                        "show_delay": 1.0,
+                        "race_icon_min_dist_visibility": 50,
+                        "show_after_initial_damage": false,
+                        "race_icon_track_scale": 0,
+                        "image_color": "#CF79FF"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "dynamic_hp_marker_yellow",
+            "elements": [
+                {
+                    "shield_hp_bar":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.4,
+                            "alpha_upper_bound": 0.0,
+                            "alpha_lower_bound": 1.0
+                        },
+                        "opacity": 0.0,
+                        "disappear_timeout": 1.5,
+                        "ui_component_file": "hud/ai_health_bars/normal.json",
+                        "visibility_mode": "IfVisible",
+                        "offset": 0.5,
+                        "aim_area_radius": 1,
+                        "animation_driven": true,
+                        "show_delay": 1.0,
+                        "race_icon_min_dist_visibility": 50,
+                        "show_after_initial_damage": false,
+                        "race_icon_track_scale": 0,
+                        "image_color": "#F2C014"
+                    }
+                }
+            ]
+        },
+        
+        {
+            "name": "miniboss_hp_marker_head",
+            "elements": [
+                {
+                    "shield_hp_bar":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.4,
+                            "alpha_upper_bound": 0.0,
+                            "alpha_lower_bound": 1.0
+                        },
+                        "opacity": 0.0,
+                        "disappear_timeout": 1.5,
+                        "ui_component_file": "hud/ai_health_bars/normal.json",
+                        "offset": 0.65,
+                        "show_after_initial_damage": false,
+                        "visibility_mode": "IfVisible",
+                        "aim_area_radius": 1,
+                        "show_delay": 1.0,
+                        "animation_driven": true,
+                        "race_icon_track_scale": 0,
+                        "image_color": "#F2C014"
+                    }
+                }
+            ]
+        },
+        
+        {
+            "name": "miniboss_hp_marker",
+            "elements": [
+                {
+                    "shield_hp_bar":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.4,
+                            "alpha_upper_bound": 0.0,
+                            "alpha_lower_bound": 1.0
+                        },
+                        "opacity": 0.0,
+                        "disappear_timeout": 1.5,
+                        "ui_component_file": "hud/ai_health_bars/normal.json",
+                        "offset": 0.0,
+                        "show_after_initial_damage": false,
+                        "visibility_mode": "IfVisible",
+                        "aim_area_radius": 1,
+                        "show_delay": 1.0,
+                        "animation_driven": false,
+                        "race_icon_track_scale": 0,
+                        "image_color": "#F2C014"
+                    }
+                }
+            ]
+        },
+        
+        {
+            "name": "boss_hp_marker",
+            "elements": [
+                {
+                    "shield_hp_bar":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.4,
+                            "alpha_upper_bound": 0.0,
+                            "alpha_lower_bound": 1.0
+                        },
+                        "opacity": 0.0,
+                        "disappear_timeout": 1.5,
+                        "ui_component_file": "hud/ai_health_bars/boss.json",
+                        "ui_component_file_static": "hud/ai_health_bars/boss_big.json",
+                        "offset": 0.0,
+                        "race_icon_track_scale": 0,
+                        "image_color": "#FF0000",
+                        "show_armor_enabled": true
+                    }
+                }
+            ]
+        },
+        
+        {
+            "name": "boss_hp_marker_no_top",
+            "elements": [
+                {
+                    "shield_hp_bar":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.4,
+                            "alpha_upper_bound": 0.0,
+                            "alpha_lower_bound": 1.0
+                        },
+                        "opacity": 0.0,
+                        "disappear_timeout": 1.5,
+                        "ui_component_file": "hud/ai_health_bars/boss.json",
+                        "offset": 0.0,
+                        "race_icon_track_scale": 0,
+                        "image_color": "#FF0000",
+                        "show_armor_enabled": true
+                    }
+                }
+            ]
+        },
+        
+        {
+            "name": "stilt_hp_marker",
+            "elements": [
+                {
+                    "shield_hp_bar":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.4,
+                            "alpha_upper_bound": 0.0,
+                            "alpha_lower_bound": 1.0
+                        },
+                        "opacity": 0.0,
+                        "disappear_timeout": 1.5,
+                        "ui_component_file": "hud/ai_health_bars/boss.json",
+                        "ui_component_file_static": "hud/ai_health_bars/boss_big.json",
+                        "offset": 0.0,
+                        "race_icon_track_scale": 0,
+                        "image_color": "#FF0000",
+                        "show_armor_enabled": true
+                    }
+                }
+            ]
+        },
+        
+        {
+            "name": "behemoth_hp_marker",
+            "elements": [
+                {
+                    "shield_hp_bar":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.4,
+                            "alpha_upper_bound": 0.0,
+                            "alpha_lower_bound": 1.0
+                        },
+                        "opacity": 0.0,
+                        "disappear_timeout": 1.5,
+                        "ui_component_file": "hud/ai_health_bars/boss.json",
+                        "ui_component_file_static": "hud/ai_health_bars/boss_big.json",
+                        "offset": 0.0,
+                        "race_icon_track_scale": 0,
+                        "image_color": "#FF0000"
+                    }
+                }
+            ]
+        },
+        
+        {
+            "name": "queen_hp_marker",
+            "elements": [
+                {
+                    "shield_hp_bar":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.4,
+                            "alpha_upper_bound": 0.0,
+                            "alpha_lower_bound": 1.0
+                        },
+                        "opacity": 0.0,
+                        "disappear_timeout": 1.5,
+                        "ui_component_file": "hud/ai_health_bars/boss.json",
+                        "ui_component_file_static": "hud/ai_health_bars/boss_big.json",
+                        "offset": 1.5,
+                        "race_icon_track_scale": 0,
+                        "animation_driven": true,
+                        "image_color": "#FF0000"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "minotaur_hp_marker",
+            "elements": [
+                {
+                    "shield_hp_bar":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.4,
+                            "alpha_upper_bound": 0.0,
+                            "alpha_lower_bound": 1.0
+                        },
+                        "opacity": 0.0,
+                        "disappear_timeout": 1.5,
+                        "ui_component_file": "hud/ai_health_bars/normal.json",
+                        "offset": 0.9,
+                        "race_icon_track_scale": 0,
+                        "show_after_initial_damage": false,
+                        "animation_driven": true,
+                        "image_color": "#FF0000"
+                    }
+                }
+            ]
+        },
+        
+        {
+            "name": "minotaur_shield_marker",
+            "elements": [
+                {
+                    "shield_hp_bar":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.4,
+                            "alpha_upper_bound": 0.0,
+                            "alpha_lower_bound": 1.0
+                        },
+                        "opacity": 0.0,
+                        "disappear_timeout": 1.5,
+                        "ui_component_file": "hud/ai_health_bars/normal.json",
+                        "offset": 2.25,
+                        "race_icon_track_scale": 0,
+                        "show_after_initial_damage": false,
+                        "image_color": "#D61919"
+                    }
+                }
+            ]
+        },
+        
+        {
+            "name": "impact_zone_marker",
+            "elements": [
+                {
+                    "generic_icon":
+                    {
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        "image_color": "#d00000",
+                        "image_alias": "marker_rocket_attack_warning_icon",
+                        "race_icon_max_scale": 1.3,
+                        "race_icon_min_scale": 1,
+                        "race_icon_track_scale": 0.9
+                    }
+                }
+            ]
+        },
+        {
+            "name": "nest_trap_marker",
+            "elements": [
+                {
+                    "generic_icon":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 1.0,
+                            "alpha_upper_bound": 1.0,
+                            "alpha_lower_bound": 0.0
+                        },
+                        "opacity": 1.0,
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        "image_alias": "contamination_icon_lighting_anomaly",
+                        "image_color": "#d00000",
+                        "race_track_type": 1,
+                        "visibility_mode": "IfNotVisible",
+                        "on_track_arrow_is_visible": true,
+                        "show_delay": 1.0,
+                        "offset": 1.9,
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": false,
+                        "wave_image_alias": "contamination_icon_lighting_anomaly",
+
+                        "race_icon_min_dist": 3,
+                        "race_icon_max_dist": 7,
+                        "race_icon_track_scale": 0.5,
+                        "race_icon_min_scale": 0.7,
+                        "race_icon_max_scale": 0.7,
+                        "race_icon_min_dist_visibility": 14
+                    }
+                },
+                { 
+                    "radar_icon": { "icon_alias": "contamination_icon_lighting_anomaly", "icon_color": "#d00000" } 
+                }
+            ]
+        }
+        
+        
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "script": "scripts/ui/modal_window/messagebox.lua",
+    "action_filter": "message_box",
+    "view_path": "MessageBox.html",
+    "send_stats": true,
+    "defined_actions": ["hide_gamepad_cursor"],
+    "children":
+    [
+        {"name": "message_title", "type": "Label", "view_path": "container.title", "text": "@test"},
+        {"name": "message_text", "type": "Label", "view_path": "container.content.text", "text": "@test"},
+
+        {"name": "yes_btn", "type": "Button", "view_path": "container.controlContainer.yesBtn", "text": "@yes_btn"},
+        {"name": "yes_btn_hint", "type": "ActionLabel", "view_path": "container.controlContainer.yesBtn.wrapper.key", "gamepad_only": true},
+
+        {"name": "no_btn", "type": "Button", "view_path": "container.controlContainer.noBtn", "text": "@no_btn"},
+        {"name": "no_btn_hint", "type": "ActionLabel", "view_path": "container.controlContainer.noBtn.wrapper.key", "gamepad_only": true},
+
+        {"name": "ok_btn", "type": "Button", "view_path": "container.controlContainer.okBtn", "text": "@ok_btn"},
+        {"name": "ok_btn_hint", "type": "ActionLabel", "view_path": "container.controlContainer.okBtn.wrapper.key", "gamepad_only": true}
+    ]
+}

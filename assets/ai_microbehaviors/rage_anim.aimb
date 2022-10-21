@@ -1,0 +1,127 @@
+
+{
+    "microbehaviors":
+    [
+        {
+            "name": "RageAnim",
+            "execute_prob": 1.0,
+            "execute_once": false,
+            "conditions":
+            [
+                {
+                    "template": "IsBehaviorCondition",
+                    "origin": "source",
+                    "inverse": true,
+                    "params":
+                    {
+                        "name": "Healing"
+                    }
+                },
+                {
+                    "template": "IsBehaviorCondition",
+                    "origin": "source",
+                    "inverse": true,
+                    "params":
+                    {
+                        "name": "AllDead"
+                    }
+                },
+                {
+                    "template": "IsBehaviorCondition",
+                    "origin": "source",
+                    "inverse": true,
+                    "params":
+                    {
+                        "name": "NavLinkMoveRequested"
+                    }
+                },
+                {
+                    "template": "IsTargetChanged",
+                    "params":
+                    {
+                        "time":"0.5"
+                    }
+                },
+                {
+                    "template": "AttackInProgress",
+                    "inverse": true
+                },
+                {
+                    "template": "FrequencyLimit",
+                    "origin": "source",
+                    "params":
+                    {
+                        "name": "RageFrequencySelf",
+                        "count": "#source_counter",
+                        "time": "#source_reset_time",
+                        "delay_min": "#source_delay_min",
+                        "delay_max": "#source_delay_max"
+                    }
+                },
+                {
+                    "template": "FrequencyLimit",
+                    "origin": "global",
+                    "params":
+                    {
+                        "name": "RageFrequencyGlobal",
+                        "count": "#global_counter",
+                        "time": "#global_reset_time",
+                        "delay_min": "#global_delay_min",
+                        "delay_max": "#global_delay_max"
+                    }
+                },
+                {
+                    "template": "Random",
+                    "params":
+                    {
+                        "prob": "#probability",
+                        "time": "10"
+                    }
+                }
+            ],
+            "interrupt_conditions":
+            [
+                {
+                    "template": "IsBehaviorCondition",
+                    "origin": "source",
+                    "params":
+                    {
+                        "name": "Wounded"
+                    }
+                },
+                {
+                    "template": "IsBehaviorCondition",
+                    "origin": "source",
+                    "params":
+                    {
+                        "name": "Blinded"
+                    }
+                }
+            ],
+            "actions":
+            [
+                {
+                    "template": "RunMicrobehavior",
+                    "params":
+                    {
+                        "name": "RageAnim",
+                        "rotation_speed": "#rotation_speed"
+                    }
+                }
+            ],
+            "default_params":
+            {
+                "global_counter": "5",
+                "global_reset_time": "3",
+                "global_delay_min": "0.3",
+                "global_delay_max": "0.8",
+                "source_counter": "1",
+                "source_reset_time": "30",
+                "source_delay_min": "10",
+                "source_delay_max": "12",
+                "probability": "1.0",
+                "rotation_speed": "500"
+            }
+        }
+    ]
+}

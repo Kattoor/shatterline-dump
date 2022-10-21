@@ -1,0 +1,33 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "2ebd4481cbf142b89286f28b4c29ace3",
+    "Name": "Game01Interfaces",
+    "DisplayName": "Game01Interfaces",
+    "Version": "0.1.0",
+    "Summary": "A short description of my Gem.",
+    "Tags": ["Untagged"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        }
+    ],
+    "Dependencies":
+    [
+        {
+            "Uuid": "a5af5a5e072741c4978f8f3bf765ce14",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "FixedTimestep"
+        },
+        {
+            "Uuid": "f12ac08609c0483486b4ff48ae193ee2",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "BackendAssetsInterfaces"
+        },
+        {
+            "Uuid": "352fef7706634c92814c587e84d7165a",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "CryLegacy"
+        }
+    ]
+}

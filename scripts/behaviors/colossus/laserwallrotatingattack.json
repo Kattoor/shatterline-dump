@@ -1,0 +1,146 @@
+{
+    "name": "Colossus/LaserWallRotatingAttack",
+    "root": "ae2f3770-032e-4bd2-a0c3-c44020039d38",
+    "nodes": {
+        "570655da-6103-4e84-8323-699342e53a56": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 527
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "93daab1e-1290-48a3-ad52-902ccaa36ce9",
+                "a2c897e4-a04b-4a3f-bd95-7c5440697cde"
+            ]
+        },
+        "8fb0b750-ea94-4c64-8f31-0b9949b7c4d8": {
+            "name": "ExactBodyRotateTo",
+            "pos": {
+                "x": -200,
+                "y": 636
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Target",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "DegreesPerSecond",
+                    "type": "Float",
+                    "value": "90"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "ae2f3770-032e-4bd2-a0c3-c44020039d38": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 402
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "LaserWallRotatingAttack"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "570655da-6103-4e84-8323-699342e53a56"
+        },
+        "a2c897e4-a04b-4a3f-bd95-7c5440697cde": {
+            "name": "Success",
+            "pos": {
+                "x": 0,
+                "y": 635
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "f59e6cc4-26b9-4695-95fd-7b1474a29763": {
+            "name": "FlyingAround",
+            "pos": {
+                "x": -435,
+                "y": 796
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "MinDistance",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "distance_to_player_min"
+                    ]
+                },
+                {
+                    "name": "UpdatePathRate",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "update_path_rate"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "93daab1e-1290-48a3-ad52-902ccaa36ce9": {
+            "name": "IsTargetPerceivedAndVisible",
+            "pos": {
+                "x": -435,
+                "y": 632
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "f59e6cc4-26b9-4695-95fd-7b1474a29763"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

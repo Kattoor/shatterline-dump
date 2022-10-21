@@ -1,0 +1,12 @@
+{
+    "script": "scripts/ui/options/options_key_bind.lua",
+    "view_path": "OptionsKeyBind.html",
+    "children":
+    [
+        {"name": "title", "type": "Label", "view_path": "title", "text": ""},
+        {"name": "container", "type": "Component", "view_path": "elementContainer"},
+        {"name": "binds_container", "type": "Component", "view_path": "elementContainer.bindsContainer"},
+        {"name": "primary_key", "type": "Button", "view_path": "elementContainer.bindsContainer.leftElement"},
+        {"name": "secondary_key", "type": "Button", "view_path": "elementContainer.bindsContainer.rightElement"}
+    ]
+}

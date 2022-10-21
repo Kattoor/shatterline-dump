@@ -1,0 +1,33 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "aa86a3ac41394c25abe546db56b167ed",
+    "Name": "ServerBackend",
+    "DisplayName": "ServerBackend",
+    "Version": "0.1.0",
+    "Summary": "A short description of my Gem.",
+    "Tags": ["Untagged"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        }
+    ],
+    "Dependencies":
+    [   
+        {
+            "Uuid": "e9f42946ff83451091589c3d585a09a8",
+            "VersionConstraints": ["~>0.1"],
+            "_comment": "BackendAssets"
+        },
+        {
+            "Uuid": "f12ac08609c0483486b4ff48ae193ee2",
+            "VersionConstraints": ["~>0.1"],
+            "_comment": "BackendAssetsInterfaces"
+        },
+        {
+            "Uuid": "46f33e3a60c14b35b5bf843399f2a991",
+            "VersionConstraints": ["~>0.1"],
+            "_comment": "AssetCache"
+        }
+    ]
+}

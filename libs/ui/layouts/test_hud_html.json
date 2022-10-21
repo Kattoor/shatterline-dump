@@ -1,0 +1,63 @@
+{
+    "script": "scripts/ui/test_hud_html.lua",
+    "view_path": "",
+    "children":
+    [
+        { "name": "ingame_chat", "type": "Component", "file": "ingame/ingame_chat.json"},
+
+        {"name": "kill_btn", "type": "Button", "view_path": "", "x":1000, "y":70, "text": "@kill"},
+        {"name": "hit_btn", "type": "Button", "view_path": "", "x":1100, "y":70, "text": "@hit"},
+        {"name": "shield_hit_btn", "type": "Button", "view_path": "", "x":1000, "y":120, "text": "@shield_hit"},
+        {"name": "shield_break_btn", "type": "Button", "view_path": "", "x":1000, "y":170, "text": "@shield_break"},
+        {"name": "weak_point_hit_btn", "type": "Button", "view_path": "", "x":1000, "y":220, "text": "@weak_point_hit"},
+        {"name": "not_weak_point_hit_btn", "type": "Button", "view_path": "", "x":1000, "y":270, "text": "@not_weak_point_hit"},
+        {"name": "invulnerable_hit_btn", "type": "Button", "view_path": "", "x":1000, "y":320, "text": "@invulnerable_hit"},
+        {"name": "test_weapon_perk", "type": "Button", "view_path": "", "x":1000, "y":370, "text": "@test_weapon_perk_name"},
+        {"name": "test_contamination_icon", "type": "Button", "view_path": "", "x":1000, "y":420, "text": "Contamination Panel"},
+
+        {"name": "reset_btn", "type": "Button", "view_path": "", "x": 100, "y": 260, "text": "Reset reloading"},
+        {"name": "reload_btn", "type": "Button", "view_path": "", "x":100, "y":310, "text": "Reloading"},
+        {"name": "greande_cooking_btn", "type": "Button", "view_path": "", "x":100, "y":360, "text": "Cooking"},
+        {"name": "healing_btn", "type": "Button", "view_path": "", "x":100, "y":410, "text": "Healing"},
+
+        {"name": "damage_btn", "type": "Button", "view_path": "", "x":380, "y":130, "text": "@damage"},
+        {"name": "idle_btn", "type": "Button", "view_path": "", "x":380, "y":500, "text": "@idle_btn"},
+        {"name": "ready_to_use_btn", "type": "Button", "view_path": "", "x":380, "y":550, "text": "@ready_to_use_btn"},
+        {"name": "using_btn", "type": "Button", "view_path": "", "x":380, "y":600, "text": "@using_btn"},
+        {"name": "used_btn", "type": "Button", "view_path": "", "x":380, "y":650, "text": "@used_btn"},
+        {"name": "dissapeared_btn", "type": "Button", "view_path": "", "x":380, "y":700, "text": "@dissapeared_btn"},
+        {"name": "invisible_btn", "type": "Button", "view_path": "", "x":380, "y":750, "text": "@invisible"},
+
+        {"name": "power_item_progress_time_btn", "type": "Button", "view_path": "", "x":380, "y":200, "text": "@power_item_progress_time"},
+        {"name": "power_item_progress_btn", "type": "Button", "view_path": "", "x":380, "y":250, "text": "@power_item_progress"},
+        {"name": "power_item_ready_btn", "type": "Button", "view_path": "", "x":380, "y":300, "text": "@power_item_ready"},
+        {"name": "power_item_wait_btn", "type": "Button", "view_path": "", "x":380, "y":350, "text": "@power_item_wait"},
+        {"name": "power_item_use_restricted_btn", "type": "Button", "view_path": "", "x":380, "y":400, "text": "@power_item_use_restricted"},
+
+        {"name": "hud_icons", "type": "HUDIcons", "file": "hud_icons.json"},
+        {"name": "hud", "type": "Component", "file": "hud_test.json"},
+        {"name": "hud_html", "type": "Component", "file": "hud.json"},
+
+        {"name": "playerName1", "type": "PlayerName", "file": "hud/player_name.json", "x":600, "y":150},
+        {"name": "playerName2", "type": "PlayerName", "file": "hud/player_name.json", "x":850, "y":400},
+        {"name": "playerName3", "type": "PlayerName", "file": "hud/player_name.json", "x":1200, "y":500},
+
+        {"name": "playerName_showLeft_btn", "type": "Button", "view_path": "", "x":1200, "y":590, "text": "@left_label"},
+        {"name": "playerName_showRight_btn", "type": "Button", "view_path": "", "x":1280, "y":590, "text": "@right_label"},
+        {"name": "playerName_hide_btn", "type": "Button", "view_path": "", "x":1200, "y":630, "text": "@hide"},
+        {"name": "playerName_health_btn", "type": "Button", "view_path": "", "x":1200, "y":670, "text": "@health"},
+        {"name": "playerName_visible_btn", "type": "Button", "view_path": "", "x":1200, "y":710, "text": "@visible"},
+        {"name": "playerName_invisible_btn", "type": "Button", "view_path": "", "x":1200, "y":750, "text": "@invisible"},
+        {"name": "playerName_death_btn", "type": "Button", "view_path": "", "x":1200, "y":790, "text": "@death"},
+
+        {"name": "heropanel_damage_btn", "type": "Button", "view_path": "", "x":380, "y":850, "text": "Damage"},
+        {"name": "heropanel_100_btn", "type": "Button", "view_path": "", "x":500, "y":850, "text": "100hp"},
+
+        {"name": "level_up_btn", "type": "Button", "view_path": "", "x":1000, "y":470, "text": "@weapon_level_up"},
+        {"name": "task_complete_btn", "type": "Button", "view_path": "", "x":1000, "y":520, "text": "@task_completed"},
+        {"name": "test_objective", "type": "Button", "view_path": "", "x":1000, "y":620, "text": "Objective"},
+        {"name": "test_revive", "type": "Button", "view_path": "", "x":1000, "y":670, "text": "Revive"},
+        {"name": "test_killer_info", "type": "Button", "view_path": "", "x":1220, "y":520, "text": "Killer Info"},
+        {"name": "test_spectator_info", "type": "Button", "view_path": "", "x":1000, "y":570, "text": "Spectator Info"}
+    ]
+}

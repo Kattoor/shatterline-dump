@@ -1,0 +1,72 @@
+{
+    "events": [
+        {
+            "name": "hold point",
+            "actions" : [
+                {"message_announcer": {"message": "@hold point", "timeout": 3}}
+               ]
+        },
+        {
+            "name": "enemy_hold_point",
+            "actions" : [
+                {"message_announcer": {"message": "@enemy_hold point", "timeout": 3}}
+               ]
+        },
+        {
+            "name": "conquest and hold point",
+            "actions" : [
+                {"message_objective": {"message": "@conquest and hold point", "show_in_center": true}},
+                {"narration_objective": {"trigger_name": "conq_hughes_announce"}}
+            ]
+        },
+        {
+            "name": "point expired",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "conq_hughes_expired"}}
+            ]
+        },
+        {
+            "name": "point wiil expire soon",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "conq_hughes_expiring"}}
+            ]
+        },
+        {
+            "name": "new point revealed",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "conq_hughes_appeared"}}
+            ]
+        },
+        {
+            "name": "OUR TEAM HAS HIGHER SCORE",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "conq_hughes_highscore"}}
+               ]
+        },
+        {
+            "name": "ENEMY TEAM HAS HIGHER SCORE",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "conq_hughes_lowscore"}}
+               ]
+        },
+        {
+            "name": "OUR TEAM IS CLOSE TO SCORE LIMIT",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "conq_hughes_winning"}}
+               ]
+        },
+        {
+            "name": "ENEMY TEAM IS CLOSE TO SCORE LIMIT",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "conq_hughes_losing"}}
+               ]
+        },
+        {
+            "name": "New point appeared",
+            "actions" : [
+                {"message_announcer": {"message": "@new_point_appeared", "timeout": 3}},
+                {"narration_objective": {"trigger_name": "conq_hughes_appeared"}}
+            ]
+        }
+    ]
+}

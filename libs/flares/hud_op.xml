@@ -1,0 +1,49 @@
+<LensFlareLibrary Name="hud_op">
+ <FlareItem Name="hud_op.box" Type="Root" Enable="1" Id="{c836db4f-09e3-4837-881f-75209881a009}" Library="hud_op">
+  <Params>
+   <Common Size="1" Perspectivefactor="1" DistanceFadingfactor="1" Brightness="1" Position="1,1" Tint="1,1,1" Tint.alpha="51" Orbitangle="0" OcclusionInteraction="0" AutoRotation="1" CorrectAspectRatio="1"/>
+   <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+   <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+   <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+   <GlobalSettings EnableOcclusion="1" OcclusionSize="0.02,0.02" Flarefadetime="0.2" Shaftfadetime="1" Affectedbylightcolor="0" Affectedbylightradius="0" AffectedbylightFOV="1" MultiplyColor="1"/>
+   <Sensor CustomSensorVariationMap="0" EffectiveSensorSize="0.8"/>
+  </Params>
+ </FlareItem>
+ <FlareItem Name="hud_op.glow_box" Type="Root" Enable="1" Id="{c465b78b-8966-4fc6-a6e8-bbcb1c2d36f4}" Library="hud_op">
+  <Params>
+   <Common Size="1" Perspectivefactor="1" DistanceFadingfactor="1" Brightness="1" Position="1,1" Tint="1,1,1" Tint.alpha="55" Orbitangle="0" OcclusionInteraction="1" AutoRotation="0" CorrectAspectRatio="1"/>
+   <Sensor Sensorimagesizevariationfactor="1" Sensorimagebrightnessvariationfactor="0.03"/>
+   <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+   <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+   <GlobalSettings EnableOcclusion="1" OcclusionSize="5e-06,5e-06" Flarefadetime="-0.0001" Shaftfadetime="-0.001" Affectedbylightcolor="0" Affectedbylightradius="0" AffectedbylightFOV="0" MultiplyColor="1"/>
+   <Sensor CustomSensorVariationMap="0" EffectiveSensorSize="0.8"/>
+  </Params>
+  <FlareItem Name="glow_box.ghost" Type="Ghost" Enable="1">
+   <Params>
+    <Common Size="0.3" Perspectivefactor="0.7" DistanceFadingfactor="0.01" Brightness="1" Position="1,1" Tint="1,1,1" Tint.alpha="10" Orbitangle="0" OcclusionInteraction="1" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1.5" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="0.1"/>
+    <LensGhost Texture="textures/lights/lens_flares/flare_e.dds"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="glow_box.ghost0" Type="Ghost" Enable="1">
+   <Params>
+    <Common Size="0.05" Perspectivefactor="0.7" DistanceFadingfactor="0.01" Brightness="0.5" Position="1,1" Tint="1,1,1" Tint.alpha="15" Orbitangle="0" OcclusionInteraction="1" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="0.5" TriggerFalloff="0.5"/>
+    <LensGhost Texture="textures/lights/lens_flares/flare02.dds"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="glow_box.glow" Type="Glow" Enable="0">
+   <Params>
+    <Common Size="0.04" Perspectivefactor="0" DistanceFadingfactor="1" Brightness="1" Position="1,1" Tint="1,0.00699541,0.0331048" Tint.alpha="255" Orbitangle="0" OcclusionInteraction="1" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,0.1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Glow Polygonfactor="32" Focusfactor="0.3" Gamma="1"/>
+   </Params>
+  </FlareItem>
+ </FlareItem>
+</LensFlareLibrary>

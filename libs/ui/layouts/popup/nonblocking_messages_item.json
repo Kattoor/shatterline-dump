@@ -1,0 +1,15 @@
+{
+    "script": "scripts/ui/popup/nonblocking_messages_item.lua",
+    "view_path": "NonBlockingNotificationsItem.html",
+    "action_map": "nonblocking_message",
+    "children": 
+    [
+        {"name": "title", "type": "Label", "view_path": "header.title"},
+        {"name": "message", "type": "Label", "view_path": "message"},
+        {"name": "button1", "type": "Button", "view_path": "buttonsContainer.button1", "visible": false},
+        {"name": "buttom1_label_hotkey", "type": "ActionLabel", "view_path": "buttonsContainer.button1.labelHotkey", "text": "@popup_btn_1_key", "gamepad_only":true },
+        {"name": "button2", "type": "Button", "view_path": "buttonsContainer.button2", "visible": false},
+        {"name": "buttom2_label_hotkey", "type": "ActionLabel", "view_path": "buttonsContainer.button2.labelHotkey", "text": "@popup_btn_2_key", "gamepad_only":true },
+        {"name": "close_button", "type": "Button", "view_path": "closeButton"}
+    ]
+}

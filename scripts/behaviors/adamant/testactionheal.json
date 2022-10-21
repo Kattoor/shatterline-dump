@@ -1,0 +1,443 @@
+{
+    "name": "Adamant/TestActionHeal",
+    "root": "80badf6d-4804-4ec8-a978-0395a92626fa",
+    "nodes": {
+        "22ef893a-350c-45f8-aaf5-2c6625badb4d": {
+            "name": "ScriptEventGate",
+            "pos": {
+                "x": 0,
+                "y": 376
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EnterEvent",
+                    "type": "StringHash",
+                    "value": "HealBegin"
+                },
+                {
+                    "name": "ExitEvent",
+                    "type": "StringHash",
+                    "value": "HealEnd"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "11ae55f2-4756-48c4-9167-2db406c8f8ee"
+        },
+        "d994d25c-0cc5-4f30-8f06-55c06740e658": {
+            "name": "Sequence",
+            "pos": {
+                "x": 4530,
+                "y": 1763
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "e1241830-ff19-4f4c-9aad-9b4a1ba3c79c",
+                "0cd6af0e-17d0-4f1f-866b-ffdcf48f888f",
+                "3e16a59c-3f31-4fb8-aa08-11a7f3f815b1",
+                "93e002a0-a4ac-4988-90e8-3ece994accf1",
+                "d121c39a-4914-41f1-b3d9-36640bf9fb3f",
+                "cc98d05a-e724-4c18-9135-43de074c9497"
+            ]
+        },
+        "11782570-631a-4a5f-b5fb-a990398460a7": {
+            "name": "AngleToTarget",
+            "pos": {
+                "x": 3670,
+                "y": 2157
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Target",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "MaxAngle",
+                    "type": "Float",
+                    "value": "15.00"
+                },
+                {
+                    "name": "UseBodyYaw",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "518bfa34-034a-4ed0-a2c5-6db20d283f88"
+        },
+        "80badf6d-4804-4ec8-a978-0395a92626fa": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 99
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ActionTest"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "484be838-4fb2-4e8b-8f55-d4efac9dbdba"
+        },
+        "d32a6d48-35cd-4e3c-9bc5-c7f0c290970c": {
+            "name": "Success",
+            "pos": {
+                "x": 4715,
+                "y": 2210
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "93e002a0-a4ac-4988-90e8-3ece994accf1": {
+            "name": "StartTimer",
+            "pos": {
+                "x": 4330,
+                "y": 1897
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "TimerName",
+                    "type": "StringHash",
+                    "value": "SlamCooldown"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "5bb74e1d-9fab-4286-89d7-6641d3facfbc": {
+            "name": "SetBehaviorConditionAndResetOnExit",
+            "pos": {
+                "x": 4530,
+                "y": 1622
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "SlamAttack"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "d994d25c-0cc5-4f30-8f06-55c06740e658"
+        },
+        "3e16a59c-3f31-4fb8-aa08-11a7f3f815b1": {
+            "name": "StartTimer",
+            "pos": {
+                "x": 4100,
+                "y": 1899
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "TimerName",
+                    "type": "StringHash",
+                    "value": "SpecialAttacksCooldown"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "cc98d05a-e724-4c18-9135-43de074c9497": {
+            "name": "RepeatUntilSucceeds",
+            "pos": {
+                "x": 4715,
+                "y": 1896
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Iterations",
+                    "type": "Integer",
+                    "value": "0"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "95658636-2fb1-414f-8de2-b7ca9407f6ef"
+        },
+        "58c75530-d1c7-48ac-bb3f-47bd5d037091": {
+            "name": "Timer",
+            "pos": {
+                "x": 3670,
+                "y": 2010
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "RunTime",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "attacks_rotate_to_target_max_time"
+                    ]
+                },
+                {
+                    "name": "FailOnTimeout",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "11782570-631a-4a5f-b5fb-a990398460a7"
+        },
+        "0cd6af0e-17d0-4f1f-866b-ffdcf48f888f": {
+            "name": "SetBehaviorCondition",
+            "pos": {
+                "x": 3875,
+                "y": 1900
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "SkipSpecialAttacks"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "d121c39a-4914-41f1-b3d9-36640bf9fb3f": {
+            "name": "SendEventToScript",
+            "pos": {
+                "x": 4530,
+                "y": 1896
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EventName",
+                    "type": "StringHash",
+                    "value": "StartSlamAttack"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "484be838-4fb2-4e8b-8f55-d4efac9dbdba": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 245
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Test Healing"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "22ef893a-350c-45f8-aaf5-2c6625badb4d"
+        },
+        "95658636-2fb1-414f-8de2-b7ca9407f6ef": {
+            "name": "IsBehaviorCondition",
+            "pos": {
+                "x": 4715,
+                "y": 2016
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "SlamAttack"
+                },
+                {
+                    "name": "ResetOnExit",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "d32a6d48-35cd-4e3c-9bc5-c7f0c290970c"
+        },
+        "e1241830-ff19-4f4c-9aad-9b4a1ba3c79c": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 3670,
+                "y": 1900
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "RotateToTarget"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "58c75530-d1c7-48ac-bb3f-47bd5d037091"
+        },
+        "518bfa34-034a-4ed0-a2c5-6db20d283f88": {
+            "name": "Success",
+            "pos": {
+                "x": 3670,
+                "y": 2364
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "11ae55f2-4756-48c4-9167-2db406c8f8ee": {
+            "name": "Heal",
+            "pos": {
+                "x": 0,
+                "y": 523
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "HP",
+                    "type": "Float",
+                    "value": "0.00"
+                },
+                {
+                    "name": "Rate",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "heal_hp_per_second"
+                    ]
+                },
+                {
+                    "name": "Timeout",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "healing_timeout"
+                    ]
+                },
+                {
+                    "name": "InvulnerabilityDuration",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "healing_invul_duration"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "f88e6a11-c609-4cf5-bda8-4c3bb7ffea50": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 4530,
+                "y": 1498
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Slam attack"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "5bb74e1d-9fab-4286-89d7-6641d3facfbc"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

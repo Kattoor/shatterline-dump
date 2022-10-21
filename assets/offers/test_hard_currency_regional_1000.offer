@@ -1,0 +1,30 @@
+{
+  "name": "test_hard_currency_regional_1000",
+  "icon": "test_icon",
+  "description": {
+    "en-us": "1000 hard currency"
+  },
+  "price": [{
+      "currency": "USD",
+      "amount": 100,
+      "initial_price": 120
+     }],
+  "regional_price": [
+    {
+      "currency": "UAH",
+      "amount": 2000
+    },
+    {
+      "currency": "EUR",
+      "amount": 500
+    }
+  ],
+  "currency": [
+    {
+      "name": "hard",
+      "amount": 1000
+    }
+  ],
+  "storefront": "hard_currency",
+  "steam": true
+}

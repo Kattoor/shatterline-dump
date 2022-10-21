@@ -1,0 +1,119 @@
+{
+    "name": "Behemoth/TestActionRangedAttack",
+    "root": "42f5b5c0-78bc-4978-bc90-9286b0b5c431",
+    "nodes": {
+        "01b8fe05-0e91-4c1c-91c9-c0d6af51605b": {
+            "name": "ScriptEventGate",
+            "pos": {
+                "x": 0,
+                "y": 475
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EnterEvent",
+                    "type": "StringHash",
+                    "value": "ranged_attack_begin"
+                },
+                {
+                    "name": "ExitEvent",
+                    "type": "StringHash",
+                    "value": "ranged_attack_end"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "001cd952-036d-4495-873b-fc10af82408d"
+        },
+        "251eeee3-8483-4b01-ac72-9172112b64b9": {
+            "name": "LogGate",
+            "pos": {
+                "x": 0,
+                "y": 250
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CVar",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "OnEnter",
+                    "type": "StringHash",
+                    "value": "ActionTest: RangedAttack started"
+                },
+                {
+                    "name": "OnExit",
+                    "type": "StringHash",
+                    "value": "ActionTest: RangedAttack finished"
+                },
+                {
+                    "name": "Attribute1",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                },
+                {
+                    "name": "Attribute2",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "01b8fe05-0e91-4c1c-91c9-c0d6af51605b"
+        },
+        "42f5b5c0-78bc-4978-bc90-9286b0b5c431": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 103
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ActionTest"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "251eeee3-8483-4b01-ac72-9172112b64b9"
+        },
+        "001cd952-036d-4495-873b-fc10af82408d": {
+            "name": "Wait",
+            "pos": {
+                "x": 0,
+                "y": 653
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Float",
+                    "value": "5"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

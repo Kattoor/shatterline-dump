@@ -1,0 +1,917 @@
+{
+    "name": "Queen/Spawn",
+    "root": "85d9eb72-47ff-4a29-9a8d-28be0dad9d50",
+    "nodes": {
+        "934e3508-564c-44f9-851a-90d0398e57da": {
+            "name": "Sequence",
+            "pos": {
+                "x": -35,
+                "y": 953
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "19169962-31af-45ba-ae8d-03c23ac8e731",
+                "1ed6b81e-f363-447d-aca6-1490bb679659",
+                "5f3f6b36-8ff1-4414-b033-6b454027a3d6"
+            ]
+        },
+        "1de952b0-7650-4535-b22a-4288c7dcebc9": {
+            "name": "SetInvulnerability",
+            "pos": {
+                "x": -495,
+                "y": 1108
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "5f3f6b36-8ff1-4414-b033-6b454027a3d6": {
+            "name": "Selector",
+            "pos": {
+                "x": 265,
+                "y": 1071
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "edbcc29b-c730-4b49-ac3f-f71201b564ce",
+                "a7ba3635-0c95-419f-84e4-073c626a9911",
+                "4c541928-d730-4893-9fff-0af7126e77f6"
+            ]
+        },
+        "5dbd26e0-ddf4-47d3-92ed-f322d6b27d61": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": -460,
+                "y": 841
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "GotoSpawnPoint7m"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "4570ec30-178b-46db-a990-8d60697ccbaa"
+        },
+        "96543fe5-8626-4eca-878f-cfd5787de5c7": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -775,
+                "y": 571
+            },
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "spawnPointId"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "EntityId"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "4f175b32-e30a-4716-9808-1f4a06e948cc": {
+            "name": "Play Animation",
+            "pos": {
+                "x": -240,
+                "y": 978
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "AnimationName",
+                    "type": "StringHash",
+                    "value": "spawn_gh"
+                },
+                {
+                    "name": "IsLooped",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Duration",
+                    "type": "Float",
+                    "value": "0.00"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "357ccdc2-d66d-4070-b007-0bc0d05a01c3": {
+            "name": "SetBBValueByPath",
+            "pos": {
+                "x": -545,
+                "y": 718
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "BB Path",
+                    "type": "StringHash",
+                    "value": "Gai.Queen.last_spawn_point_id"
+                },
+                {
+                    "name": "Value",
+                    "type": "Variable",
+                    "value": [
+                        "spawnPointId"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "a7ba3635-0c95-419f-84e4-073c626a9911": {
+            "name": "HealthLessPrc",
+            "pos": {
+                "x": 535,
+                "y": 1180
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Percent",
+                    "type": "Float",
+                    "value": "0.70"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "9ea60b69-f10c-4b81-b6a2-428dba119b02"
+        },
+        "72175b00-1b93-47b0-8804-6039b6f95f88": {
+            "name": "SetMovementPace",
+            "pos": {
+                "x": -1360,
+                "y": 842
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "PaceType",
+                    "type": "StringHash",
+                    "value": "Regular"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "d31a656e-b3d6-4c6d-96a1-e71d1243b8c6": {
+            "name": "ActivateComponents",
+            "pos": {
+                "x": -345,
+                "y": 1108
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Tag",
+                    "type": "StringHash",
+                    "value": "queen_shield"
+                },
+                {
+                    "name": "Enable",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "4570ec30-178b-46db-a990-8d60697ccbaa": {
+            "name": "Sequence",
+            "pos": {
+                "x": -495,
+                "y": 989
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "9957edaf-4d34-4221-adcd-e136754758c6",
+                "1de952b0-7650-4535-b22a-4288c7dcebc9",
+                "d31a656e-b3d6-4c6d-96a1-e71d1243b8c6"
+            ]
+        },
+        "ce5614ba-95ca-4c0a-9bf8-22bb5cb078ca": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 358
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "SpawnAI"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "b2ad3fc9-588f-4b99-9095-87e945991a8c"
+        },
+        "edbcc29b-c730-4b49-ac3f-f71201b564ce": {
+            "name": "HealthLessPrc",
+            "pos": {
+                "x": 220,
+                "y": 1172
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Percent",
+                    "type": "Float",
+                    "value": "0.40"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "21680b0a-e491-466f-892f-024cf0d2cbd4"
+        },
+        "85d9eb72-47ff-4a29-9a8d-28be0dad9d50": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 79
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "5952b6a5-ddd9-4916-bf98-4c784251c954",
+                "080402b1-6538-4ac8-a828-864ef5b74008",
+                "04b6095b-6372-4cee-b9d2-427aba2faa61"
+            ]
+        },
+        "3bbe24cf-4ee3-4629-a434-65b7ee753d63": {
+            "name": "ApproachTo",
+            "pos": {
+                "x": -5,
+                "y": 1185
+            },
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "spawnPointId"
+                    ]
+                },
+                {
+                    "name": "EndDistance",
+                    "type": "Float",
+                    "value": "1"
+                },
+                {
+                    "name": "UpdateDestinationPoint",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "9ea60b69-f10c-4b81-b6a2-428dba119b02": {
+            "name": "SpawnSlice",
+            "pos": {
+                "x": 545,
+                "y": 1339
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Slice",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "dynamic_spawner2"
+                    ]
+                },
+                {
+                    "name": "Position",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Pos"
+                    ]
+                },
+                {
+                    "name": "AngleZ",
+                    "type": "Float",
+                    "value": "0.00"
+                },
+                {
+                    "name": "lifetime",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "spawned_ai_lifetime"
+                    ]
+                },
+                {
+                    "name": "EntityOwner",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "cb927d73-703c-4605-9403-eab37af68c30": {
+            "name": "IsBBValueExist",
+            "pos": {
+                "x": -545,
+                "y": 569
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ValuePath",
+                    "type": "StringHash",
+                    "value": "Gai.Queen.last_spawn_point_id"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "357ccdc2-d66d-4070-b007-0bc0d05a01c3"
+        },
+        "8bc74313-3d9f-4bfb-8e49-a72b3291e89a": {
+            "name": "SpawnSlice",
+            "pos": {
+                "x": 915,
+                "y": 1328
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Slice",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "dynamic_spawner1"
+                    ]
+                },
+                {
+                    "name": "Position",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Pos"
+                    ]
+                },
+                {
+                    "name": "AngleZ",
+                    "type": "Float",
+                    "value": "0.00"
+                },
+                {
+                    "name": "lifetime",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "spawned_ai_lifetime"
+                    ]
+                },
+                {
+                    "name": "EntityOwner",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "7b680874-b69f-4cad-b87e-322a01dfa4d2": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 740
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "72175b00-1b93-47b0-8804-6039b6f95f88",
+                "eab9804c-5164-4235-89dd-942702be90ec",
+                "5dbd26e0-ddf4-47d3-92ed-f322d6b27d61",
+                "2caaf871-58c7-41d7-b02b-d3ed3e083bf5"
+            ]
+        },
+        "21680b0a-e491-466f-892f-024cf0d2cbd4": {
+            "name": "SpawnSlice",
+            "pos": {
+                "x": 205,
+                "y": 1344
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Slice",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "dynamic_spawner3"
+                    ]
+                },
+                {
+                    "name": "Position",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Pos"
+                    ]
+                },
+                {
+                    "name": "AngleZ",
+                    "type": "Float",
+                    "value": "0.00"
+                },
+                {
+                    "name": "lifetime",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "spawned_ai_lifetime"
+                    ]
+                },
+                {
+                    "name": "EntityOwner",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "9957edaf-4d34-4221-adcd-e136754758c6": {
+            "name": "ApproachTo",
+            "pos": {
+                "x": -710,
+                "y": 1108
+            },
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "spawnPointId"
+                    ]
+                },
+                {
+                    "name": "EndDistance",
+                    "type": "Float",
+                    "value": "7"
+                },
+                {
+                    "name": "UpdateDestinationPoint",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "b2ad3fc9-588f-4b99-9095-87e945991a8c": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 465
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "96543fe5-8626-4eca-878f-cfd5787de5c7",
+                "cb927d73-703c-4605-9403-eab37af68c30",
+                "57804177-500b-4acd-bbaf-e6e771c7881e",
+                "44250f59-22bb-4da6-9955-6d66e3fb3ba2",
+                "1e42fdb1-57f0-4788-8767-7043b0f4585b"
+            ]
+        },
+        "080402b1-6538-4ac8-a828-864ef5b74008": {
+            "name": "GetAliveAICount",
+            "pos": {
+                "x": -295,
+                "y": 188
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ArchetypeName1",
+                    "type": "StringHash",
+                    "value": "Shardskin"
+                },
+                {
+                    "name": "ArchetypeName2",
+                    "type": "StringHash",
+                    "value": "Adamant01"
+                },
+                {
+                    "name": "ArchetypeName3",
+                    "type": "StringHash",
+                    "value": ""
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Result",
+                    "type": "Variable",
+                    "value": [
+                        "totalAliveAICount"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "04b6095b-6372-4cee-b9d2-427aba2faa61": {
+            "name": "GreaterThan",
+            "pos": {
+                "x": 0,
+                "y": 186
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Lhs",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "max_total_alive_ai_count"
+                    ]
+                },
+                {
+                    "name": "Rhs",
+                    "type": "Variable",
+                    "value": [
+                        "totalAliveAICount"
+                    ]
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "ce5614ba-95ca-4c0a-9bf8-22bb5cb078ca"
+        },
+        "57804177-500b-4acd-bbaf-e6e771c7881e": {
+            "name": "FindRandomEntityWithTags",
+            "pos": {
+                "x": -245,
+                "y": 568
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Tag",
+                    "type": "Tag",
+                    "value": "queen_spawn"
+                },
+                {
+                    "name": "ExtraTag",
+                    "type": "Tag",
+                    "value": ""
+                },
+                {
+                    "name": "ExcludeId",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Queen",
+                        "last_spawn_point_id"
+                    ]
+                },
+                {
+                    "name": "Range",
+                    "type": "Float",
+                    "value": "0.00"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "EntityId",
+                    "type": "Variable",
+                    "value": [
+                        "spawnPointId"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "1ed6b81e-f363-447d-aca6-1490bb679659": {
+            "name": "Wait",
+            "pos": {
+                "x": 155,
+                "y": 1068
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Float",
+                    "value": "1.7"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "eab9804c-5164-4235-89dd-942702be90ec": {
+            "name": "SetCharacterOffsetZ",
+            "pos": {
+                "x": -1145,
+                "y": 843
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "OffsetZ",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "spawn_offset_z"
+                    ]
+                },
+                {
+                    "name": "VelocityZ",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "spawn_velocity_z"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "44250f59-22bb-4da6-9955-6d66e3fb3ba2": {
+            "name": "IsValidID",
+            "pos": {
+                "x": 0,
+                "y": 568
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EntityId",
+                    "type": "Variable",
+                    "value": [
+                        "spawnPointId"
+                    ]
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "7b680874-b69f-4cad-b87e-322a01dfa4d2"
+        },
+        "5952b6a5-ddd9-4916-bf98-4c784251c954": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -525,
+                "y": 186
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "totalAliveAICount"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Integer"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "1e42fdb1-57f0-4788-8767-7043b0f4585b": {
+            "name": "SetBBValueByPath",
+            "pos": {
+                "x": 220,
+                "y": 567
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "BB Path",
+                    "type": "StringHash",
+                    "value": "Gai.Queen.last_spawn_point_id"
+                },
+                {
+                    "name": "Value",
+                    "type": "Variable",
+                    "value": [
+                        "spawnPointId"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "19169962-31af-45ba-ae8d-03c23ac8e731": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": -10,
+                "y": 1067
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "GotoSpawnPoint1m"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "3bbe24cf-4ee3-4629-a434-65b7ee753d63"
+        },
+        "2caaf871-58c7-41d7-b02b-d3ed3e083bf5": {
+            "name": "ParallelUntilAllComplete",
+            "pos": {
+                "x": -115,
+                "y": 849
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "4f175b32-e30a-4716-9808-1f4a06e948cc",
+                "934e3508-564c-44f9-851a-90d0398e57da"
+            ]
+        },
+        "4c541928-d730-4893-9fff-0af7126e77f6": {
+            "name": "Succeeder",
+            "pos": {
+                "x": 915,
+                "y": 1188
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "8bc74313-3d9f-4bfb-8e49-a72b3291e89a"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

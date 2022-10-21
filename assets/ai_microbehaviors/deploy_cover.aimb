@@ -1,0 +1,96 @@
+
+{
+   "microbehaviors":
+   [
+      {
+         "name": "DeployCover",
+         "conditions":
+         [
+            {
+               "template": "TargetExistAndVisible"
+            },
+            {
+               "template": "HasCover",
+               "inverse": true
+            },
+            {
+               "template": "IsReloading",
+               "inverse": true
+            },
+            {
+               "template": "AttackInProgress",
+               "inverse": true
+            },
+            {
+               "template": "FrequencyLimit",
+               "origin": "global",
+               "params":
+               {
+                  "name": "DeployCover",
+                  "count": "#global_counter",
+                  "time": "#global_reset_time",
+                  "delay_min": "#global_delay_min",
+                  "delay_max": "#global_delay_max"
+               }
+            },
+            {
+               "template": "FrequencyLimit",
+               "origin": "source",
+               "params":
+               {
+                  "name": "DeployCoverSelf",
+                  "count": "#source_counter",
+                  "time": "#source_reset_time",
+                  "delay_min": "#source_delay_min",
+                  "delay_max": "#source_delay_max"
+               }
+            },
+            {
+               "template": "StayInPlace",
+               "origin": "source",
+               "params":
+               {
+                  "range": "4.0",
+                  "duration": "3.0"
+               }
+            }
+         ],
+         "actions":
+         [
+            {
+                "template":"SendScriptEvent",
+                "params":
+                {
+                    "name":"SwitchToDefenseMode"
+                }
+            },
+            {
+               "template": "RunMicrobehavior",
+               "params":
+               {
+                  "name": "DeployCover",
+                  "slice": "slices/ai/deployable_cover.dynamicslice",
+                  "lifetime": "#cover_lifetime",
+                  "animation": "#animation_to_play",
+                  "stay_in_cover_min": "10",
+                  "stay_in_cover_max": "15"
+               }
+            }
+         ],
+         "default_params":
+         {
+            "go_to_cover_event": "GoToDeployedCover",
+            "cover_lifetime": "30",
+            "global_counter": "2",
+            "global_reset_time": "60",
+            "global_delay_min": "15",
+            "global_delay_max": "20",
+            "source_counter": "1",
+            "source_reset_time": "1",
+            "source_delay_min": "35",
+            "source_delay_max": "40",
+            "animation_to_play": "stand_rifle_deploy_cover_01"
+         }
+      }
+   ]
+}

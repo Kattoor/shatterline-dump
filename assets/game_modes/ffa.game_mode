@@ -1,0 +1,683 @@
+{
+  "name_token": "@ffa_label",
+  "info_token": "@ffa_briefing",
+  "loading_tips_path": "libs/ui/loading_tips/tip_default.json",
+  "reequip_cooldown": 10,
+  
+  "radar_config": {
+    "spot_crouch_idle_dist": 2,
+    "spot_idle_dist": 12,
+    "spot_sprint_dist": 30,
+    "spot_crouch_dist": 5,
+    "spot_walk_dist": 20
+  },
+  
+  "mechanics_config": {
+    "pre_game_time": 90,
+    "team_balance_rule": "SimpleBalanceRule"
+  },
+  "pre_round_config": {
+    "timers": [
+      {
+        "name": "PreRoundTimesUp",
+        "start_on": [
+          {
+            "event_id": "PreRoundStart"
+          }
+        ],
+        "duration": 5
+      }
+    ],
+    "finish_on": [
+      {
+        "event_id": "PreRoundTimesUp"
+      }
+    ]
+  },
+  "round_config": {
+    "timers": [
+      {
+        "name": "RoundTimesUp",
+        "start_on": [
+          {
+            "event_id": "RoundStart"
+          }
+        ],
+        "duration": 420
+      }
+    ],
+    "finish_on": [
+      {
+        "event_id": "RoundTimesUp"
+      },
+      {
+        "event_id": "RoundScoreLimitReached"
+      }
+    ]
+  },
+  "post_round_config": {
+    "timers": [
+      {
+        "name": "PostRoundTimesUp",
+        "start_on": [
+          {
+            "event_id": "PostRoundStart"
+          }
+        ],
+        "duration": 3
+      }
+    ],
+    "finish_on": [
+      {
+        "event_id": "PostRoundTimesUp"
+      }
+    ]
+  },
+  "time_is_up_events": {
+    "event": [
+      {
+        "event_id": "RoundTimesUp"
+      }
+    ],
+    "win_event": "score_reached_ffa",
+    "defeat_event": "score_reached_ffa",
+    "draw_event": "score_reached_ffa"
+  },
+  "hud_config": {
+    "score_layout": "round",
+    "services": [
+      "BasicGameTimerService",
+      "LeaderboardScoreService",
+      "EventLogService"
+    ],
+    "team_layout": "multiple_team",
+    "show_result_place_in_post_session": true
+  },
+  "result_status_config": [
+    {
+      "event": {
+        "event_id": "RoundTimesUp"
+      },
+      "status": "round_times_up"
+    },
+    {
+      "event": {
+        "event_id": "RoundScoreLimitReached"
+      },
+      "status": "round_score_limit_reached"
+    }
+  ],
+  "auto_generate_result_score_messages": {
+    "team_score_messages": [
+      {
+        "min_ladder_position": 0,
+        "message_primary": "@session_draw"
+      },
+      {
+        "min_ladder_position": 1,
+        "message_primary": "@session_flawless_win"
+      },
+      {
+        "min_ladder_position": 2,
+        "message_primary": "@first_win_horde_03_name"
+      },
+      {
+        "min_ladder_position": 3,
+        "message_primary": "@first_win_horde_03_name"
+      },
+      {
+        "min_ladder_position": 4,
+        "message_primary": "@first_win_horde_03_name"
+      },
+      {
+        "min_ladder_position": 5,
+        "message_primary": "@first_win_horde_01_name"
+      }
+    ]
+  },
+  "session_result_messages_config": [
+    {
+      "result_status": "round_times_up",
+      "reason_message": "@session_reason_times_up"
+    },
+    {
+      "result_status": "round_score_limit_reached",
+      "reason_message": "@session_reason_score_limit_reached"
+    }
+  ],
+  "mvp_config": [
+    {
+      "scores": [
+        "PlayerKill"
+      ],
+      "title": "@best_kill"
+    },
+    {
+      "scores": [
+        "LeaderboardPlace"
+      ],
+      "title": "@best_leaderboard",
+      "searching_for_max": false,
+      "use_modified_score": false
+    },
+    {
+      "scores": [
+        "Bloodlust"
+      ],
+      "title": "@longest_streak"
+    },
+    {
+      "scores": [
+        "TotalSum"
+      ],
+      "title": "@best_score"
+    },
+    {
+      "scores": [
+        "KillStreak",
+        "Rampage",
+        "Bloodlust"
+      ],
+      "title": "@best_killstreaks"
+    },
+    {
+      "scores": [
+        "Headshot"
+      ],
+      "title": "@best_headshot"
+    },
+    {
+      "scores": [
+        "BladeMaster"
+      ],
+      "title": "@best_melee"
+    },
+    {
+      "scores": [
+        "DoubleKill",
+        "TripleKill"
+      ],
+      "title": "@best_multikiller"
+    },
+    {
+      "scores": [
+        "CollateralKill"
+      ],
+      "title": "@best_collateral"
+    },
+    {
+      "scores": [
+        "FirstBlood"
+      ],
+      "title": "@first_blood"
+    }
+  ],
+  "scoreboard": [
+    {
+      "scores": [
+        "LeaderboardPlace"
+      ],
+      "title": ""
+    },
+    {
+      "scores": [
+        "PlayerKill"
+      ],
+      "title": "@kills"
+    },
+    {
+      "scores": [
+        "TotalSum"
+      ],
+      "title": "@totalscore"
+    },
+    {
+      "scores": [
+        "Headshot"
+      ],
+      "title": "@headshots"
+    },
+    {
+      "scores": [
+        "Death"
+      ],
+      "title": "@deaths"
+    },
+    {
+      "scores": [
+        "PlayerKill",
+        "Death"
+      ],
+      "operations": [
+        "/"
+      ],
+      "title": "@k/d"
+    }
+  ],
+  "score": [
+    {
+      "event": {
+        "event_id": "LeaderboardPlace", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "Time", "actor_is_me": true
+      },
+      "score": 1
+    },
+    {
+      "event": {
+        "event_id": "PlayerKill", "actor_is_me": true
+      },
+      "score": 4
+    },
+    {
+      "event": {
+        "event_id": "Kill", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "Death", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "WeaponTick", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "Headshot", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "Viking", "actor_is_me": true
+      },
+      "score": 2
+    },
+    {
+      "event": {
+        "event_id": "SupportUse", "actor_is_me": true
+      },
+      "score": 2
+    },
+    {
+      "event": {
+        "event_id": "DoubleKill", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "TripleKill", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "KillStreak", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "Rampage", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "Bloodlust", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "FirstBlood", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "BladeMaster", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "FieldMedic", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "CollateralKill", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "ReturnFire", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "ShutDown", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "SlideKill", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "MovableObjectKill", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "ExplosiveObjectKill", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "KickKill", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "MedalAchieved", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "RamUltimateKillRam", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "StrixUltimateKillStrix", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "PillUltimateKillPill", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "KiteUltimateKillKite", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "BrisaUltimateKillBrisa", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "MongooseUltimateKillMongoose", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "OrbitUltimateKillOrbit", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "OtpistoletitBrisku", "actor_is_me": true
+      },
+      "score": 3
+    },
+    {
+      "event": {
+        "event_id": "OtpistoletitKite", "actor_is_me": true
+      },
+      "score": 3
+    },
+    {
+      "event": {
+        "event_id": "OtpistoletitPill", "actor_is_me": true
+      },
+      "score": 3
+    },
+    {
+      "event": {
+        "event_id": "OtpistoletitMalva", "actor_is_me": true
+      },
+      "score": 3
+    },
+    {
+      "event": {
+        "event_id": "OtpistoletitRam", "actor_is_me": true
+      },
+      "score": 3
+    },
+    {
+      "event": {
+        "event_id": "OtpistoletitStrix", "actor_is_me": true
+      },
+      "score": 3
+    },
+    {
+      "event": {
+        "event_id": "OtpistoletitOrbit", "actor_is_me": true
+      },
+      "score": 3
+    },
+    {
+      "event": {
+        "event_id": "OtpistoletitMongoose", "actor_is_me": true
+      },
+      "score": 3
+    },
+    {
+      "event": {
+        "event_id": "UltKill", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "MedalAchieved", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "LifeGuard", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "Savior", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "Marksman", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "Ultimator", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "Handyman", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "Pistolero", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "DestroyEnemyObjects", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "EnemyFrozen", "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "KillEnemyDrone", "actor_is_me": true
+      },
+      "score": 0
+    }
+  ],
+  "auto_generate_team_competitors": {
+    "teams_count": 12,
+    "count": 12,
+    "competitors": []
+  },
+  "auto_generate_team_template": {
+    "size": 1,
+    "score_limit": 30,
+    "spawn_config_params": {
+      "spawn_config": "dynamic_spawn_near_players",
+      "auto_respawn_time": 20,
+        "respawn_cooldown": 5
+    },
+    "hero_restriction": {
+      "hero_count": 1,
+      "preset_filter": {
+        "type": "restrict",
+        "presets": [
+          "a_nameless",
+            "a_restricted",
+          "i_chosen",
+          "preset_i02_proto",
+          "preset_i03_proto",
+          "preset_i04_proto",
+          "test_preset_i01",
+          "test_preset_a01",
+          "test_preset_m01",
+          "test_preset_s01",
+          "test_preset_h01",
+          "test_preset_s02_locked"
+        ]
+      }
+    },
+    "scoring_events": [
+      {
+        "event": {
+          "event_id": "PlayerKill",
+          "target_team": "Opposite",
+          "actor_team": "Same",
+          "target_player_class_is": [
+            "S",
+            "A",
+            "H",
+            "M"
+          ]
+        },
+        "score": 1
+      }
+    ],
+    "feedback_config": {
+      "round_start_event": "roundstart_ffa",
+      "round_end_events": [
+        {
+          "scoring_event": {
+            "event_id": "Kill",
+            "target_team": "Opposite",
+            "actor_team": "Same"
+          },
+          "feedback_event": "score_reached_ffa"
+        },
+        {
+          "scoring_event": {
+            "event_id": "Kill",
+            "target_team": "Same",
+            "actor_team": "Opposite"
+          },
+          "feedback_event": "enemy_score_ffa"
+        }
+      ]
+    }
+  },
+  "ability_mult": [
+    {
+      "event": {
+        "event_id": "Kill", "actor_is_me": true
+      },
+      "score": 0.5
+    },
+    {
+      "event": {
+        "event_id": "Headshot", "actor_is_me": true
+      },
+      "score": 0.6666
+    },
+    {
+      "event": {
+        "event_id": "FirstBlood", "actor_is_me": true
+      },
+      "score": 0.6666
+    },
+    {
+      "event": {
+        "event_id": "BladeMaster", "actor_is_me": true
+      },
+      "score": 0.6666
+    },
+    {
+      "event": {
+        "event_id": "CollateralKill", "actor_is_me": true
+      },
+      "score": 0.6666
+    },
+    {
+      "event": {
+        "event_id": "ReturnFire", "actor_is_me": true
+      },
+      "score": 0.6666
+    },
+    {
+      "event": {
+        "event_id": "SlideKill", "actor_is_me": true
+      },
+      "score": 0.6666
+    }
+  ],
+  "event_log": "default",
+  "skill_type": "ffa",
+  "highlight_enabled": true
+}

@@ -1,0 +1,16 @@
+{
+    "script": "scripts/ui/ingame/scoreboard/scoreboard_popup_window.lua",
+    "view_path": "",
+    "hide_cursor": true,
+
+    "children":
+    [
+        {"name": "container", "type": "HUDComponent", "view_path": "container"},
+
+        {"name": "mute_button", "type": "Button", "view_path": "container.item_1", "text": "@scoreboard_popup_mute"},
+        {"name": "profile_button", "type": "Button", "view_path": "container.item_2", "text": "@scoreboard_popup_view_profile"},
+        {"name": "add_friend_button", "type": "Button", "view_path": "container.item_3", "text": "@scoreboard_popup_add_friend"},
+        {"name": "report_button", "type": "Button", "view_path": "container.item_4", "text": "@scoreboard_popup_report"},
+        {"name": "block_button", "type": "Button", "view_path": "container.item_5"}
+    ]
+}

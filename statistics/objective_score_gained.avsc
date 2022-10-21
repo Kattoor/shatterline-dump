@@ -1,0 +1,61 @@
+{
+    "name": "objective_score_gained",
+    "doc": "Origin: game session. Emitter: dedicated server. Emits aggregated amount of scores each time a team stops gaining objectives scores",
+    "type": "record",
+    "fields": [
+        {
+            "name": "ts",
+            "type": "string",
+            "default": "-1",
+            "doc": "ISO8601 UTC timestamp of the event invocation"
+        },
+        {
+            "name": "gid",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace-unique identifier of the match"
+        },
+        {
+            "name": "ns",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace of the server's deployment (realm)"
+        },
+        {
+            "name": "name",
+            "type": "string",
+            "default": "-1",
+            "doc": "unique name of the event"
+        },
+        {
+            "name": "objective_name",
+            "type": "string",
+            "default": "-1",
+            "doc": "a unique name of an entity/objective(or gamemode rule) which is a reason for team score emission"
+        },
+        {
+            "name": "emission_cycle",
+            "type": "int",
+            "default": -1,
+            "doc": "zone-unique identifier (constant-growing counter) of emission cycle. increases every time zone changes its state."
+        },
+        {
+            "name": "cid",
+            "type": "int",
+            "default": -1,
+            "doc": "team unique identifier. -6 pve players, -5 AI, -4 team B, -3 team A or pid in FFA modes"
+        },
+        {
+            "name": "team",
+            "type": "string",
+            "default": "-1",
+            "doc": "categorical definition of the team which player belongs to"
+        },
+        {
+            "name": "team_score_emitted",
+            "type": "long",
+            "default": -1,
+            "doc": "amount of team scores received by competitior during rule or objective duration"
+        }
+    ]
+}

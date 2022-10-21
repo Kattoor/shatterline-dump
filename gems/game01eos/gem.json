@@ -1,0 +1,38 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "c20cc6692ebc434ea7b6ee6b3aa25e82",
+    "Name": "EOS",
+    "DisplayName": "EOS",
+    "Version": "0.1.0",
+    "Summary": "Epic Online Services",
+    "Tags": ["Untagged"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        }
+    ],
+    "Dependencies":
+    [
+        {
+            "Uuid": "8040a1a42c844b8abcf6ab387a7c8963",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "JWT"
+        },
+        {
+            "Uuid": "71f233c8118b4c8283e3406b447657ab",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01BackendCommon"
+        },
+        {
+            "Uuid": "28479e255bde466e91fc34eec808d9c7",
+            "VersionConstraints": [ "~>1.0.0" ],
+            "_comment": "HttpRequestor"
+        },
+        {
+            "Uuid": "d3ed407a19bb4c0d92b7c4872313d600",
+            "VersionConstraints": ["~>1.0"],
+            "_comment": "Multiplayer"
+        }
+    ]
+}

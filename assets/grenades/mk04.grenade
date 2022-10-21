@@ -1,0 +1,41 @@
+{
+       "destroy_on_act": false,
+       "time_to_action": 10,
+       "selection":
+       {
+          "quick_selection_duration": 0.0,
+          "quick_deselection_duration": 0.0,
+          "quick_deselect": true,
+          "deselection_duration": 0.0,
+          "selection_duration": 0.0
+       },
+       "time_to_throw": 0.035,
+       "act_reason": "time",
+       "projectile":
+       {
+          "speed": 30.0,
+          "time_to_action": 60.0,
+          "offset":
+          {
+             "z": 0.0,
+             "x": 0.0,
+             "y": 0.0
+          },
+          "config_name": "mk04",
+          "slice_name": "slices/projectiles/mk04.dynamicslice",
+          "velocity_character_multiplier": 0.5,
+          "time_to_destroy": 60.0,
+          "angle": 2.0
+       },
+       "time_to_destroy": 10.0,
+       "can_be_dropped": true,
+       "count": 1,
+       "common":
+       {
+          "item_tag": "MK"
+       },
+       "duration_throw": 0.4,
+       "duration_prepare": 0.02,
+       "can_cook": true,
+       "can_cook_indefinitely": true
+    }

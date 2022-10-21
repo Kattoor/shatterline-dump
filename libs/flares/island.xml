@@ -1,0 +1,50 @@
+<LensFlareLibrary Name="island">
+ <FlareItem Name="island.sun_a" Type="Root" Enable="1" Id="{349DD50E-5CA4-4E7C-8FD7-4B52D467A274}" Library="island">
+  <Params>
+   <Common Size="1" Perspectivefactor="1" DistanceFadingfactor="1" Brightness="1" Position="1,1" Tint="1,1,1" Tint.alpha="51" Orbitangle="0" OcclusionInteraction="0" AutoRotation="1" CorrectAspectRatio="1"/>
+   <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+   <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+   <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+   <GlobalSettings EnableOcclusion="1" OcclusionSize="0.02,0.02" Flarefadetime="0.2" Shaftfadetime="1" Affectedbylightcolor="0" Affectedbylightradius="0" AffectedbylightFOV="1" MultiplyColor="1"/>
+   <Sensor CustomSensorVariationMap="0" EffectiveSensorSize="0.8"/>
+  </Params>
+  <FlareItem Name="sun_a.ghost" Type="Ghost" Enable="1">
+   <Params>
+    <Common Size="1" Perspectivefactor="0" DistanceFadingfactor="1" Brightness="1" Position="1,1" Tint="1,1,1" Tint.alpha="5" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="2,2" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="1" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <LensGhost Texture="textures/lights/lens_flares/flare_sun001.dds"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="sun_a.orbs" Type="CameraOrbs" Enable="1">
+   <Params>
+    <Common Size="0.1" Perspectivefactor="0" DistanceFadingfactor="1" Brightness="3" Position="1,1" Tint="1,1,1" Tint.alpha="255" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="3,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <CameraOrbs Illumrange="1" OrbTexture="textures/lights/lens_flares/orb_01.dds" LensTexture="EngineAssets/Textures/flares/lens_dirtyglass.dds" Enablelenstexture="1" Enablelensdetailshading="0" Lenstexturestrength="1" Lensdetailshadingstrength="0.157" Lensdetailbumpiness="0.073" Enableorbdetailshading="0"/>
+    <Generator Numberoforbs="128" Noiseseed="2" Colorvariation="0.5" Sizevariation="0.8" Rotationvariation="0.8"/>
+    <AdvancedShading Enableadvshading="0" AmbientDiffuse="0,0,0" AmbientDiffuse.alpha="0" Absorptance="4" Transparency="0.37" Scattering="1"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="sun_a.chromatic ring" Type="ChromaticRing" Enable="1">
+   <Params>
+    <Common Size="1" Perspectivefactor="0" DistanceFadingfactor="1" Brightness="1" Position="1,1" Tint="1,1,1" Tint.alpha="51" Orbitangle="0" OcclusionInteraction="0" AutoRotation="1" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <ChromaticRing Locktolight="0" Thickness="0.5" Polygoncomplexity="160" GradientTexture="textures/lights/lens_flares/spectrum_a.dds" EnableGradientTexture="0" Noiseseed="428" Noisestrength="0" Completionfading="45" Completionspanangle="180" Completionrotation="180"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="sun_a.multi ghost" Type="Multi Ghost" Enable="1">
+   <Params>
+    <Common Size="0.07" Perspectivefactor="0" DistanceFadingfactor="1" Brightness="0.01" Position="1,1" Tint="1,1,1" Tint.alpha="10" Orbitangle="0" OcclusionInteraction="0" AutoRotation="1" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <MultiGhost Texture="textures/lights/lens_flares/orb_cell01.dds" Count="12" RandomSeed="0" Scatteringrange="-1,1" positionfactor="1,1" positionoffset="0,0" X-axisnoise="0.04" Y-axisnoise="0.01" SizeVariation="1" BrightnessVariation="1" ColorVariation="0.3"/>
+   </Params>
+  </FlareItem>
+ </FlareItem>
+</LensFlareLibrary>

@@ -1,0 +1,23 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "86d0ea625bfb4f80b041a05cdd287c48",
+    "Name": "Game01BlockList",
+    "DisplayName": "BlockList",
+    "Version": "0.1.0",
+    "Summary": "Block list support for various components",
+    "Tags": ["Block", "BlockList"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        }
+    ],
+    "Dependencies":
+    [   
+        {
+            "Uuid": "b8e16ebeec9346f18af81fe09b6844bf",
+            "VersionConstraints": ["~>0.1"],
+            "_comment": "ClientBackend"
+        }
+    ]
+}

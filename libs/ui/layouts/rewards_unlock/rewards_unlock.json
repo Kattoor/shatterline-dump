@@ -1,0 +1,23 @@
+{
+    "script": "scripts/ui/rewards_unlock/rewards_unlock.lua",
+    "view_path": "RewardsUnlock.html",
+    "defined_actions": ["hide_gamepad_cursor"],
+    "children":
+    [
+        {"name": "rewards", "type": "Panel", "view_path": "rewards"},
+
+        {"name": "rewards_list", "type": "RewardItemsGrid", "view_path": "rewards.rewardsList"},
+        {"name": "rewards_list_container", "type": "Component", "view_path": "rewards.rewardsList.container.contentContainer"},
+
+        {"name": "button", "type": "Button", "view_path": "rewards.buttons.buttonProceed", "text": "@proceed"},
+        {"name": "button_hint", "type": "ActionLabel", "view_path": "rewards.buttons.buttonProceed.wrapper.key", "gamepad_only": true},
+        
+        {"name": "view", "type": "Image", "view_path": "liveView" },
+        {"name": "video", "type": "Video", "view_path": "video", "video_path": "videos/celebration/rewards_unlock_full.bk2", "is_live_view": true },
+        {"name": "looped_video", "type": "Video", "view_path": "loopedVideo", "video_path": "videos/celebration/rewards_unlock_looped.bk2", "is_live_view": true, "loop": true },
+
+        {"name": "reward_info", "type": "Control", "view_path": "rewards.rewardInfo", "visible": false},
+        {"name": "reward_type", "type": "Label", "view_path": "rewards.rewardInfo.type"},
+        {"name": "reward_title", "type": "Label", "view_path": "rewards.rewardInfo.title"}
+    ]
+}

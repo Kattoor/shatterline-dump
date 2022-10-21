@@ -1,0 +1,14 @@
+{
+    "script": "scripts/ui/common/paginator.lua",
+    "view_path": "Paginator.html",
+    "children":
+    [
+        {"name": "buttons", "type": "ListBox", "view_path": "buttons"},
+
+        {"name": "left_arrow", "type": "Button", "view_path": "arrowLeft"},
+        {"name": "left_hint", "type": "ActionLabel", "view_path": "hintLeft", "gamepad_only": true},
+
+        {"name": "right_arrow", "type": "Button", "view_path": "arrowRight"},
+        {"name": "right_hint", "type": "ActionLabel", "view_path": "hintRight", "gamepad_only": true}
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "script": "scripts/ui/lobby/play/mode_info_pve.lua",
+    "view_path": "ModeInfoPVE.html",
+    "children":
+    [
+        {"name": "background", "type": "Image", "view_path": "background"},
+
+        {"name": "screen_header", "type": "Component", "file": "common/screen_header.json"},
+
+        {"name": "mission_name", "type": "Label", "view_path": "container.leftPanel.missionName"},
+
+        {"name": "time", "type": "Panel", "view_path": "container.leftPanel.wrapper.detail.time"},
+        {"name": "time_title", "type": "Label", "view_path": "container.leftPanel.wrapper.detail.time.title", "text": "@pve_time_title"},
+        {"name": "time_text", "type": "Label", "view_path": "container.leftPanel.wrapper.detail.time.text"},
+
+        {"name": "location", "type": "Panel", "view_path": "container.leftPanel.wrapper.detail.location"},
+        {"name": "location_title", "type": "Label", "view_path": "container.leftPanel.wrapper.detail.location.title", "text": "@pve_location_title"},
+        {"name": "location_text", "type": "Label", "view_path": "container.leftPanel.wrapper.detail.location.text"},
+
+        {"name": "squad", "type": "Panel", "view_path": "container.leftPanel.wrapper.detail.squad"},
+        {"name": "squad_title", "type": "Label", "view_path": "container.leftPanel.wrapper.detail.squad.title", "text": "@pve_team_size_title"},
+        {"name": "squad_text", "type": "Label", "view_path": "container.leftPanel.wrapper.detail.squad.text"},
+
+        {"name": "video_play_btn", "type": "Button", "view_path": "container.leftPanel.wrapper.videoPlayBtn"},
+        {"name": "video_play_image", "type": "Image", "view_path": "container.leftPanel.wrapper.videoPlayBtn.wrapper.content.container.image"},
+        {"name": "video_play_label", "type": "Label", "view_path": "container.leftPanel.wrapper.videoPlayBtn.wrapper.bottomContainer.itemTitle", "text": "@watch_video_tutorial"},
+
+        {"name": "briefing", "type": "Panel", "view_path": "container.leftPanel.wrapper.briefing"},
+        {"name": "briefing_label", "type": "Label", "view_path": "container.leftPanel.wrapper.briefing.wrapper.label", "text": "@pve_briefing_title"},
+        {"name": "briefing_play_btn", "type": "Button", "view_path": "container.leftPanel.wrapper.briefing.playBtn"},
+
+        {"name": "description", "type": "Label", "view_path": "container.leftPanel.wrapper.description"},
+
+        {"name": "modifiers", "type": "Panel", "view_path": "container.leftPanel.wrapper.modifiers"},
+        {"name": "modifiers_title", "type": "Label", "view_path": "container.leftPanel.wrapper.modifiers.titleWrapper.title", "text": "@pve_modifiers_title"},
+        {"name": "modifiers_container", "type": "Component", "view_path": "container.leftPanel.wrapper.modifiers.container"},
+
+        {"name": "rewards_container", "type": "Component", "view_path": "container.leftPanel.wrapper.rewardsContainer"},
+
+        {"name": "play_btn", "type": "Button", "view_path": "container.playButton", "text": "@play"},
+        {"name": "play_btn_hint", "type": "ActionLabel", "view_path": "container.playButton.wrapper.key", "gamepad_only": true}
+    ]
+}

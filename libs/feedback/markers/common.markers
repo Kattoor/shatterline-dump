@@ -1,0 +1,949 @@
+{
+    "markers": [
+        {
+            "name": "enemy_name",
+            "elements": [
+            ]
+        },
+        {
+            "name": "enemy_spotted",
+            "elements": [
+                { "spotting_icon": { "icon_alias": "snap_enemy_radar_icon", "snapped": true, "snapped_icon_alias": "snap_enemy_radar_icon"} }
+            ]
+        },
+        {
+            "name": "enemy_spotted_by_action",
+            "elements": [
+                { "spotting_icon": { "icon_alias": "snap_enemy_radar_icon", "snapped": true, "snapped_icon_alias": "snap_enemy_radar_icon"} },
+                { 
+                    "generic_icon":
+                    {
+                        "ui_component_file": "hud/enemy_badge.json",
+                        
+                        "image_alias": "snap_enemy_radar_icon",
+                        
+                        "race_icon_min_dist": 1,
+                        "race_icon_max_dist": 30,
+                        "race_icon_track_scale": 0.5,
+                        "race_icon_min_scale": 0.5,
+                        "race_icon_max_scale": 1,
+                        "on_track_arrow_is_visible": true
+                    }
+                }
+            ]
+        },
+        {
+            "name": "player_killer",
+            "elements": [
+                { "enemy_badge": { "ui_component_file": "hud/killer_badge.json", "hideOnObstacles": false } }
+            ]
+        },
+        {
+            "name": "enemy_dead",
+            "elements": [
+                { "radar_icon": { "icon_alias": "dead_enemy_radar_icon" } }
+            ]
+        },
+        {
+            "name": "teammate_name",
+            "elements": [
+                { "player_name": { "ui_component_file": "hud/teammate_marker.json", "hideOnObstacles": false } },
+                { "radar_icon": { "icon_alias": "teammate_radar_icon", "player_icon": true, "snapped": true, "snapped_icon_alias": "snap_teammate_radar_icon", "rotation_enabled":true } }
+            ]
+        },
+        {
+            "name": "teammate_dead",
+            "elements": [
+                { "player_name": { "ui_component_file": "hud/teammate_marker.json", "hideOnObstacles": false } },
+                { "radar_icon": { "icon_alias": "dead_teammate_radar_icon", "player_icon": true, "snapped": true } }
+            ]
+        },
+        {
+            "name": "teammate_dead_revivable",
+            "elements": [
+                { "radar_icon": { "icon_alias": "dead_teammate_radar_icon", "player_icon": true, "snapped": true } },
+                {
+                    "resurrect_icon":
+                    {
+                        "ui_component_file": "hud/markers/resurrection_icon.json",
+                        
+                        "image_alias": "marker_res_token_icon",
+                        "image_color": "#FFFFFF",
+
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_rhombus_icon_mask_npa",
+                        "radial_progress_bg_color": "#E9F0F3",
+                        "radial_progress_color": "#d00000",
+
+                        "race_icon_max_scale": 1.25,
+                        "race_icon_min_scale": 1,
+                        "race_icon_track_scale": 0.9
+                    }
+                },
+                { "instant_use_message": { "info_text":"@press_e_to_help_teammate", "hide_at_use": false}}
+            ]
+        },
+        {
+            "name": "teammate_dead_ai",
+            "elements": [
+                { "radar_icon": { "icon_alias": "dead_teammate_radar_icon" } }
+            ]
+        },
+        {
+            "name": "mvp_badge",
+            "elements": [
+                {
+                    "mvp_badge":
+                    {
+                        "ui_component_file": "post_session/player_results_badge.json",
+                        "icon": "nameplate_icon_2",
+                        "background": "nameplate_background_2"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "plant_icon_a",
+            "elements": [
+                {
+                    "plant_icon":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "image_alias": "marker_plant_icon_a",
+                        "image_color": "#FFE400",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_hexagon_icon_mask_npa",
+                        "radial_progress_bg_color": "#E9F0F3",
+                        "radial_progress_color": "#1494D8",
+                        "race_icon_track_scale": 1.0,
+                        "race_icon_min_scale": 1.1,
+                        "race_icon_max_scale": 1.3
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_plant_radar_icon_a", "snapped": true } }
+            ]
+        },
+         {
+            "name": "plant_icon_b",
+            "elements": [
+                {
+                    "plant_icon":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "image_alias": "marker_plant_icon_b",
+                        "image_color": "#FFE400",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_hexagon_icon_mask_npa",
+                        "radial_progress_bg_color": "#E9F0F3",
+                        "radial_progress_color": "#1494D8",
+                        "race_icon_track_scale": 1.0,
+                        "race_icon_min_scale": 1.1,
+                        "race_icon_max_scale": 1.3
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_plant_radar_icon_b", "snapped": true } }
+            ]
+        },
+        {
+            "name": "usable_icon",
+            "elements": [
+                { "instant_use_message": { "info_text":"@hold_to_use_btn",  "hide_at_use": false }}
+            ]
+        },
+        {
+            "name": "instant_usable_icon",
+            "elements": [
+                { "instant_use_message": { "info_text":"@ready_to_use_btn",  "hide_at_use": false }}
+            ]
+        },
+        {
+            "name": "competitor_icon",
+            "elements": [
+                {
+                    "competitor_icon":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "image_alias": "marker_way_point_icon",
+                        "image_color": "#ffffff",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_rhombus_icon_mask_npa",
+                        "radial_progress_bg_color": "#E9F0F3",
+                        "race_icon_min_dist_visibility": 0,
+                        "race_icon_min_dist": 1,
+                        "race_icon_max_dist": 30,
+                        "race_icon_track_scale": 0.5,
+                        "race_icon_min_scale": 0.5,
+                        "race_icon_max_scale": 1
+                    }
+                }
+            ]
+        },
+        {
+            "name": "contest_icon",
+            "elements": [
+                { 
+                    "contest_icon":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "image_alias": "marker_way_point_icon",
+                        "image_color": "#ffffff",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_hexagon_icon_mask_npa",
+                        "radial_progress_bg_color": "#E9F0F3",
+                        "race_icon_anim_start_x":0.5,
+                        "race_icon_anim_start_y":0.2,
+                        "race_icon_anim_duration":1.0,
+                        "race_icon_min_dist": 1, 
+                        "race_icon_max_dist": 100, 
+                        "race_icon_track_scale": 0.5, 
+                        "race_icon_min_scale": 0.6, 
+                        "race_icon_max_scale": 1.0
+                    }
+                }
+            ]
+        },
+        {
+            "name": "capture_icon",
+            "elements": [
+                {
+                    "capture_icon":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "image_alias": "marker_way_point_icon",
+                        "image_color": "#FFE400",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_hexagon_icon_mask_npa",
+                        "radial_progress_bg_color": "#E9F0F3",
+                        "race_icon_min_dist_visibility": 0,
+                        "race_icon_min_dist": 1,
+                        "race_icon_max_dist": 30,
+                        "race_icon_track_scale": 0.5,
+                        "race_icon_min_scale": 0.5,
+                        "race_icon_max_scale": 1,
+                        "capturing_text":"@capturing",
+                        "decapturing_text":"@decapturing",
+                        "contesting_text":"@contesting",
+                        "contested_text":"@contested"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "pve_capture_icon",
+            "elements": [
+                {
+                    "capture_icon":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "image_alias": "marker_way_point_icon",
+                        "image_color": "#FFE400",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_hexagon_icon_mask_npa",
+                        "radial_progress_bg_color": "#E9F0F3",
+                        "race_icon_min_dist_visibility": 30,
+                        "race_icon_min_dist": 1,
+                        "race_icon_max_dist": 30,
+                        "race_icon_track_scale": 0.5,
+                        "race_icon_min_scale": 0.5,
+                        "race_icon_max_scale": 1,
+                        "capturing_text":"@pve_capturing",
+                        "decapturing_text":"@decapturing",
+                        "contesting_text":"@contesting",
+                        "contested_text":"@contested",
+                        "visibility_mode": "Always"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "destructible_icon",
+            "elements": [
+                { "instant_use_message": { "info_text":"@hold_to_destruct", "hide_at_use": false}}
+            ]
+        },
+        {
+            "name": "claymore_friendly_icon",
+            "elements": [
+                {
+                    "generic_icon":
+                    {
+                        "ui_component_file": "hud/markers/throwable_icon.json",
+                        
+                        "image_alias": "marker_claymore_icon",
+                        "race_icon_min_dist_visibility": 12,
+                        "race_icon_min_scale": 0.5,
+                        "race_icon_max_scale": 1.2,
+                        "race_icon_track_scale": 0.0,
+                        "race_icon_max_dist": 12,
+                        "race_icon_min_dist": 1
+                    }
+                }
+            ]
+        },
+        {
+            "name": "way_point_default",
+            "elements": [
+                {
+                    "way_point":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "image_alias": "marker_way_point_icon",
+                        "image_color": "#E9F0F3",
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_hexagon_icon_wave_npa",
+
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.0,
+                        "race_icon_track_scale": 0.6,
+                        "race_icon_max_dist": 30,
+                        "offset": 1.5
+                    }
+                }
+            ]
+        },
+        {
+            "name": "ai_distance_marker",
+            "elements": [
+                { 
+                    "way_point":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        "opacity": 1,
+                        "image_alias": "marker_attack_target_ai_icon",
+                        "image_color": "#f4be34",
+                        "wave_is_visible": false,
+                        "is_radial_progress_visible": false,
+                        "visibility_mode":"IfVisible",
+                        "aim_area_radius": 5,
+                        "animation_driven":false,
+                        "disappear_timeout": 0.5,
+                        "race_icon_min_dist": 1,
+                        "race_icon_max_dist": 50,
+                        "offset": 0.7,
+                        "race_icon_min_scale": 0.7,
+                        "race_icon_max_scale": 0.7
+                    }
+                }
+            ]
+        },
+        {
+            "name": "way_point_minimalistic",
+            "elements": [
+                {
+                    "way_point":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "image_alias": "marker_way_point_icon",
+                        "image_color": "#E9F0F3"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "defend_marker",
+            "elements": [
+                {
+                    "defend_bar":
+                    {
+                        "ui_component_file": "hud/ai_health_bars/normal.json",
+                        "offset": 1.5,
+                        "race_icon_track_scale": 0,
+                        "image_color": "#DCDCDC"
+                    }
+                }
+            ]
+        },
+
+        {
+            "name": "movable_icon",
+            "elements": [
+                { "instant_use_message": { "info_text":"@hold_to_move",  "hide_at_use": false }}
+            ]
+        },
+        {
+            "name": "refill_icon",
+            "elements": [
+                {
+                    "usable_icon":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        "image_alias": "marker_ammo_dropped_icon",
+                        "info_text": "@ammo_box",
+                        "ready_to_use_text": "@hold_to_resupply",
+                        "using_text": "@resupplying",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_rhombus_icon_mask_npa",
+                        "radial_progress_bg_color": "#E9F0F3",
+                        "radial_progress_color": "#1494D8",
+                        "race_icon_min_dist_visibility": 10,
+                        "visibility_mode": "Always",
+                        "race_icon_max_dist": 10,
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.0
+                    }
+                },
+                { "radar_icon": { "icon_alias": "ammo_radar_icon", "player_icon": false } }
+            ]
+        },
+        {
+            "name": "refill_icon_far",
+            "elements": [
+                {
+                    "usable_icon":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        "image_alias": "marker_ammo_dropped_icon",
+                        "image_color": "#E9F0F3",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_rhombus_icon_mask_npa",
+                        "radial_progress_bg_color": "#E9F0F3",
+                        "radial_progress_color": "#1494D8",
+                        "race_icon_min_dist_visibility": 10,
+                        "race_icon_max_dist": 10,
+                        "race_icon_min_scale": 0.5,
+                        "race_icon_max_scale": 1.0,
+                        "visibility_mode": "Always",
+                        "info_text": "@ammo_box",
+                        "ready_to_use_text": "@hold_to_resupply",
+                        "using_text": "@using_btn"
+                    }
+                },
+                { "radar_icon": { "icon_alias": "ammo_radar_icon", "player_icon": false } }
+            ]
+        },
+        {
+            "name": "refill_icon_static",
+            "elements": [
+                {
+                    "usable_icon_static":
+                    {
+                        "ui_component_file": "hud/markers/throwable_icon.json",
+                        "image_alias": "marker_ammo_box_icon",
+                        "visibility_mode": "Always",
+                        "race_icon_min_dist_visibility": 10,
+                        "race_icon_max_dist": 10,
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.0
+                    }
+                },
+                { "radar_icon": { "icon_alias": "ammo_radar_icon", "player_icon": false } }
+            ]
+        },
+        {
+            "name": "climb_icon",
+            "elements": [
+                { "instant_use_message": { "info_text":"@hold_to_climb", "hide_at_use": false }}
+            ]
+        },
+        {
+            "name": "climb_icon_disabled",
+            "elements": [
+                { "instant_use_message": { "info_text":"@climb_disabled", "hide_at_use": false }}
+            ]
+        },
+        {
+            "name": "destuctible_door_disabled",
+            "elements": [
+                { "instant_use_message": { "info_text":"@destuctible_door_disabled", "hide_at_use": false }}
+            ]
+        },
+        {
+            "name": "zip_icon",
+            "elements": [
+                { "instant_use_message": { "info_text":"@hold_to_use_btn", "hide_at_use": false }}
+            ]
+        },
+        {
+            "name": "change_hero_icon",
+            "elements": [
+                {
+                    "usable_icon":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "image_alias": "marker_ammo_box_icon",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_rhombus_icon_mask_npa",
+                        "radial_progress_bg_color": "#E9F0F3",
+                        "radial_progress_color": "#1494D8",
+                        "info_text": "@press_to_change_hero",
+                        "race_icon_min_dist_visibility": 20,
+                        "visibility_mode": "Always",
+                        "race_icon_max_dist": 20,
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.0
+                    }
+                }
+            ]
+        },
+        {
+            "name": "medkit_icon",
+            "elements": [
+                {
+                    "usable_icon":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "image_alias": "marker_heal_icon",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_rhombus_icon_mask_npa",
+                        "radial_progress_bg_color": "#E9F0F3",
+                        "radial_progress_color": "#1494D8",
+                        "ready_to_use_text": "@pick_up_to_heal",
+                        "using_text": "@picking_up",
+                        "visibility_mode":"Always",
+                        "race_icon_track_scale": 0.5,
+                        "race_icon_min_dist_visibility": 20,
+                        "race_icon_min_dist": 1,
+                        "race_icon_max_dist": 20,
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.0,
+                        "offset": 0.3
+                    }
+                }
+            ]
+        },
+        {
+            "name": "medkit_auto_pickup_icon",
+            "elements": [
+                {
+                    "generic_icon":
+                    {
+                        "ui_component_file": "hud/markers/throwable_icon.json",
+                        
+                        "image_alias": "marker_heal_icon",
+                        "race_icon_track_scale": 0.1,
+                        "visibility_mode": "Always",
+                        "race_icon_min_dist_visibility": 20,
+                        "race_icon_max_dist": 20,
+                        "race_icon_min_dist": 1,
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.0,
+                        "offset": 0.3
+                    }
+                }
+            ]
+        },
+        {
+            "name": "healing_station_icon",
+            "elements": [
+                {
+                    "generic_icon":
+                    {
+                        "ui_component_file": "hud/markers/throwable_icon.json",
+                        
+                        "image_alias": "marker_healing_station_icon",
+                        "race_icon_track_scale": 0.1,
+                        "visibility_mode": "Always",
+                        "race_icon_min_dist_visibility": 20,
+                        "race_icon_max_dist": 20,
+                        "race_icon_min_dist": 1,
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.0,
+                        "offset": 0.3
+                    }
+                }
+            ]
+        },
+
+        {
+            "name": "grenade_zone_marker",
+            "elements": [
+                {
+                    "generic_icon":
+                    {
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        
+                        "image_alias": "marker_grenade_icon",
+                        "image_color": "#d00000",
+                        "race_icon_min_dist_visibility":8,
+                        "offset": 0.1,
+                        "race_icon_max_dist": 40,
+                        "visibility_mode":"Always",
+                        "race_icon_min_scale": 0.5,
+                        "race_icon_max_scale": 1
+                    }
+                }
+            ]
+        },
+        {
+            "name": "crystall_hp_marker",
+            "elements": [
+                {
+                    "shield_hp_bar":
+                    {
+                        "ui_component_file": "hud/ai_health_bars/normal.json",
+                        "offset": 2.0,
+                        "race_icon_track_scale": 0,
+                        "image_color": "#D21E46"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "fire_zone",
+            "elements": [
+                {
+                    "generic_icon":
+                    {
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        "image_alias": "kill_log_fire",
+                        "image_color": "#d00000",
+                        "race_track_type": 1,
+                        "visibility_mode": "IfNotVisible",
+                        "on_track_arrow_is_visible": true,
+                        "show_delay": 0.1,
+                        "offset": 0.3,
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": false,
+                        "wave_image_alias": "kill_log_fire",
+                        
+                        "race_icon_min_dist_visibility":7.5,
+                        "race_icon_min_scale": 0.3,
+                        "race_icon_max_scale": 1.3,
+                        "race_icon_track_scale": 0.7,
+                        "race_icon_max_dist": 12,
+                        "race_icon_min_dist": 1
+                    }
+                }
+            ]
+        },
+        {
+          "name": "conqest_capture_icon_pvp_a",
+            "elements": [
+                {
+                    "capture_icon":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "image_alias": "marker_plant_icon_a",
+                        "image_color": "#FFE400",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_hexagon_icon_mask_npa",
+                        "radial_progress_bg_color": "#E9F0F3",
+                        "radial_progress_color": "#1494D8",
+                        "race_icon_min_dist_visibility": 0,
+                        "race_icon_min_dist": 1,
+                        "race_icon_max_dist": 100,
+                        "race_icon_track_scale": 0.6,
+                        "race_icon_min_scale": 0.7,
+                        "race_icon_max_scale": 1.0,
+                        "offset": 2.5,
+                        "race_icon_anim_start_x":0.5,
+                        "race_icon_anim_start_y":0.2,
+                        "race_icon_anim_duration":1.0,
+                        "capturing_text":"@capturing",
+                        "decapturing_text":"@decapturing",
+                        "contesting_text":"@contesting",
+                        "contested_text":"@contested",
+                        "hide_after_capture":false
+                    }
+                }
+            ]
+        },
+        {
+          "name": "conqest_capture_icon_pvp_b",
+            "elements": [
+                {
+                    "capture_icon":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "image_alias": "marker_plant_icon_b",
+                        "image_color": "#FFE400",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_hexagon_icon_mask_npa",
+                        "radial_progress_bg_color": "#E9F0F3",
+                        "radial_progress_color": "#1494D8",
+                        "race_icon_min_dist_visibility": 0,
+                        "race_icon_min_dist": 1,
+                        "race_icon_max_dist": 100,
+                        "race_icon_track_scale": 0.6,
+                        "race_icon_min_scale": 0.7,
+                        "race_icon_max_scale": 1.0,
+                        "offset": 2.5,
+                        "race_icon_anim_start_x":0.5,
+                        "race_icon_anim_start_y":0.2,
+                        "race_icon_anim_duration":1.0,
+                        "capturing_text":"@capturing",
+                        "decapturing_text":"@decapturing",
+                        "contesting_text":"@contesting",
+                        "contested_text":"@contested",
+                        "hide_after_capture":false
+                    }
+                }
+            ]
+        },
+        {
+          "name": "conqest_capture_icon_pvp_c",
+            "elements": [
+                {
+                    "capture_icon":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "image_alias": "marker_plant_icon_c",
+                        "image_color": "#FFE400",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_hexagon_icon_mask_npa",
+                        "radial_progress_bg_color": "#E9F0F3",
+                        "radial_progress_color": "#1494D8",
+                        "race_icon_min_dist_visibility": 0,
+                        "race_icon_min_dist": 1,
+                        "race_icon_max_dist": 100,
+                        "race_icon_track_scale": 0.6,
+                        "race_icon_min_scale": 0.7,
+                        "race_icon_max_scale": 1.0,
+                        "offset": 2.5,
+                        "race_icon_anim_start_x":0.5,
+                        "race_icon_anim_start_y":0.2,
+                        "race_icon_anim_duration":1.0,
+                        "capturing_text":"@capturing",
+                        "decapturing_text":"@decapturing",
+                        "contesting_text":"@contesting",
+                        "contested_text":"@contested",
+                        "hide_after_capture":false
+                    }
+                }
+            ]
+        },
+        {
+          "name": "conqest_capture_icon_pvp_d",
+            "elements": [
+                {
+                    "capture_icon":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "image_alias": "marker_plant_icon_d",
+                        "image_color": "#FFE400",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_hexagon_icon_mask_npa",
+                        "radial_progress_bg_color": "#E9F0F3",
+                        "radial_progress_color": "#1494D8",
+                        "race_icon_min_dist_visibility": 0,
+                        "race_icon_min_dist": 1,
+                        "race_icon_max_dist": 100,
+                        "race_icon_track_scale": 0.6,
+                        "race_icon_min_scale": 0.7,
+                        "race_icon_max_scale": 1.0,
+                        "offset": 2.5,
+                        "race_icon_anim_start_x":0.5,
+                        "race_icon_anim_start_y":0.2,
+                        "race_icon_anim_duration":1.0,
+                        "capturing_text":"@capturing",
+                        "decapturing_text":"@decapturing",
+                        "contesting_text":"@contesting",
+                        "contested_text":"@contested",
+                        "hide_after_capture":false
+                    }
+                }
+            ]
+        },
+        {
+          "name": "conqest_capture_icon_pvp_e",
+            "elements": [
+                {
+                    "capture_icon":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "image_alias": "marker_plant_icon_e",
+                        "image_color": "#FFE400",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_hexagon_icon_mask_npa",
+                        "radial_progress_bg_color": "#E9F0F3",
+                        "radial_progress_color": "#1494D8",
+                        "race_icon_min_dist_visibility": 0,
+                        "race_icon_min_dist": 1,
+                        "race_icon_max_dist": 100,
+                        "race_icon_track_scale": 0.6,
+                        "race_icon_min_scale": 0.7,
+                        "race_icon_max_scale": 1.0,
+                        "offset": 2.5,
+                        "race_icon_anim_start_x":0.5,
+                        "race_icon_anim_start_y":0.2,
+                        "race_icon_anim_duration":1.0,
+                        "capturing_text":"@capturing",
+                        "decapturing_text":"@decapturing",
+                        "contesting_text":"@contesting",
+                        "contested_text":"@contested",
+                        "hide_after_capture":false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "pickup_icon",
+            "elements": [
+                { "instant_use_message": { "info_text":"@ready_to_pickup",  "hide_at_use": false }}
+            ]
+        },
+        {
+            "name": "spydrone_enemy_spotted",
+            "elements": [
+                {
+                    "generic_icon":
+                    {
+                        "ui_component_file": "hud/enemy_badge.json",
+                        "race_icon_min_dist_visibility":100,
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.3,
+                        "race_icon_track_scale": 1,
+                        "race_icon_min_dist": 3,
+                        "race_icon_max_dist": 25,
+                        "visibility_mode": "IfVisible",
+                        "offset": 0.6,
+                        "animation_driven": true
+                    }
+                }
+            ]
+        },
+        {
+            "name": "warning_icon",
+            "elements": [
+                { 
+                    "generic_icon":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "image_alias": "marker_warning_icon",
+                        "image_color": "#FFFFFF",
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "is_radial_progress_visible": true,
+                        "wave_image_alias": "marker_rhombus_icon_wave_npa",
+                        "radial_progress_mask_image_alias": "marker_rhombus_icon_wave_npa",
+                        "radial_progress_bg_color": "#D00000",
+
+                        "race_icon_min_dist": 1,
+                        "race_icon_max_dist": 30,
+                        "race_icon_track_scale": 0.75,
+                        "race_icon_min_scale": 0.75,
+                        "race_icon_max_scale": 1.0
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_warning_radar_icon", "icon_color": "#D00000" } }
+            ]
+        },
+        {
+            "name": "refill_icon_9m",
+            "elements": [
+                {
+                    "usable_icon":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        "image_alias": "marker_ammo_dropped_icon",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_rhombus_icon_mask_npa",
+                        "radial_progress_bg_color": "#E9F0F3",
+                        "radial_progress_color": "#1494D8",
+                        "race_icon_min_dist_visibility": 9,
+                        "race_icon_max_dist": 9,
+                        "visibility_mode": "Always",
+                        "info_text": "@ammo_box",
+                        "ready_to_use_text": "@hold_to_resupply",
+                        "using_text": "@using_btn"
+                    }
+                },
+                { "radar_icon": { "icon_alias": "ammo_radar_icon", "player_icon": false } }
+            ]
+        },
+        {
+            "name": "escort_platform_icon",
+            "elements": [
+                {
+                    "escort_icon":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.05
+                        },
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        "disable_image_color": true,
+                        "image_alias": "marker_escort_neutral_icon",
+                        "image_alias_moving": "marker_escort_moving_icon",
+                        "image_alias_contested": "marker_escort_contested_icon",
+
+                        "info_text": "@escort",
+
+                        "race_icon_min_scale": 1.0,
+                        "race_icon_max_scale": 1.0,
+                        "race_icon_track_scale": 0.6,
+                        "race_icon_max_dist": 30,
+                        "offset": 2.0
+                    }
+                },
+                {
+                    "radar_icon":
+                    {
+                        "icon_alias": "marker_escort_neutral_icon"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "escort_dog_spawn",
+            "elements": [
+                {
+                    "generic_icon":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.05
+                        },
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        "image_alias": "marker_escort_dogs_icon",
+                        "disable_image_color": true,
+
+                        "info_text": "@escort_dog_spawn",
+
+                        "race_icon_min_scale": 1.0,
+                        "race_icon_max_scale": 1.0,
+                        "race_icon_track_scale": 0.6,
+                        "race_icon_max_dist": 30,
+                        "offset": 2.0
+                    }
+                }
+            ]
+        },
+        {
+            "name": "disconnected_player",
+            "elements": [
+                { 
+                    "reconnection_progress_icon":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "image_alias": "marker_rhombus_icon_wave_npa",
+                        "image_color": "#f4be34",
+                        "info_text": "@mm_status_disconnected",
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_rhombus_icon_wave_npa",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_rhombus_icon_mask_npa",
+                        "radial_progress_bg_color": "#E9F0F3",
+                        "radial_progress_color": "#3a3a3a",
+
+                        "race_icon_min_dist": 1,
+                        "race_icon_max_dist": 50,
+                        "race_icon_track_scale": 0.5,
+                        "race_icon_min_scale": 0.5,
+                        "race_icon_max_scale": 1,
+                        "offset": 2.2
+                    }
+                }
+            ]
+        }
+    ]
+}

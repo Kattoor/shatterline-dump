@@ -1,0 +1,29 @@
+{
+  "name": "orbit_taskchain_011",
+  "type": "challenge",
+  "active": false,
+  "image": "hero_orbit_large",
+  "rarity": "rare",
+  "display_name": { "localization_key": "@orbit_taskchain_011_name" },
+  "description": { "localization_key": "@orbit_taskchain_011_description" },
+  "conditions": [
+    {
+      "name": "orbit_taskchain_011",
+      "event_description": { "localization_key": "@orbit_taskchain_011_event_description" },
+      "event": { "event_id": "StarBoy", "actor_is_me": true },
+      "progress": 2
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "item",
+      "name": "orbit_item_box",
+      "amount": 1
+    },
+    {
+      "reward_type": "task",
+      "name": "orbit_taskchain_012",
+      "amount": 1
+    }
+  ]
+}

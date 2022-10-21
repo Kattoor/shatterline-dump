@@ -1,0 +1,217 @@
+{
+    "markers": [
+        {
+            "name": "isl_redlake_twins_research_lowdist",
+            "elements": [
+                { 
+                    "radial_progress_icon":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "image_alias": "marker_rhombus_icon_wave_npa",
+                        "image_color": "#FFE400",
+                        "info_text": "@horde_phantom_core_portal",
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_rhombus_icon_wave_npa",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_rhombus_icon_mask_npa",
+                        "radial_progress_bg_color": "#E9F0F3",
+                        "radial_progress_color": "#3a3a3a",
+                        "race_icon_min_dist_visibility":120,
+                        "race_icon_min_dist": 1,
+                        "race_icon_max_dist": 50,
+                        "race_icon_track_scale": 0.5,
+                        "race_icon_min_scale": 0.5,
+                        "race_icon_max_scale": 1
+                    }
+                }
+            ]
+        },
+        {
+            "name": "twins_progress_marker",
+            "elements": [
+                { "shield_hp_bar": { "ui_component_file": "hud/shield_hp_bar.json", "offset": 0.0, "race_icon_track_scale": 0,  "race_icon_min_dist_visibility":80} }
+            ]
+        },
+        {
+            "name": "research_icon",
+            "elements": [
+                { "instant_use_message": { "info_text":"@hold_to_rsch", "hide_at_use": false }},
+                { "radar_icon": { "icon_alias": "race_icon_way_point", "player_icon": false, "snapped": true } }
+            ]
+        },
+        {
+            "name": "twins_crystal_sample_lowdist",
+            "elements": [
+                { 
+                    "radial_progress_icon":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "image_alias": "marker_rhombus_icon_wave_npa",
+                        "image_color": "#FFE400",
+                        "info_text": "@twins_crystal_sample",
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_rhombus_icon_wave_npa",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_rhombus_icon_mask_npa",
+                        "radial_progress_bg_color": "#E9F0F3",
+                        "radial_progress_color": "#3a3a3a",
+                        "race_icon_min_dist_visibility":80,
+                        "race_icon_min_dist": 1,
+                        "race_icon_max_dist": 50,
+                        "race_icon_track_scale": 0.5,
+                        "race_icon_min_scale": 0.5,
+                        "race_icon_max_scale": 1
+                    }
+                }
+            ]
+        },
+        {
+            "name": "horde_bombdog",
+            "elements": [
+                { 
+                    "generic_icon":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+
+                        "image_alias": "marker_attack_target_ai_icon",
+                        "image_color": "#f4be34",
+                        "wave_is_visible": false,
+                        "is_radial_progress_visible": false,
+                        "visibility_mode":"IfVisible",
+                        "aim_area_radius": 900,
+                        "animation_driven":true,
+                        "disappear_timeout": 0.5,
+                        "race_icon_min_dist": 1,
+                        "race_icon_max_dist": 50,
+                        "offset": 0.7,
+                        "race_icon_track_scale": 0.5,
+                        "race_icon_min_dist_visibility": 80,
+                        "race_icon_min_scale": 0.7,
+                        "race_icon_max_scale": 0.7
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_attack_target_ai_icon", "icon_color": "#f4be34" } }
+            ]
+        },
+        {
+            "name": "teamate_hp_marker",
+            "elements": [
+                {
+                    "defend_bar":
+                    {
+                        "ui_component_file": "hud/ai_health_bars/normal.json",
+                        "offset": 1.5,
+                        "race_icon_track_scale": 0,
+                        "race_icon_min_dist_visibility": 80,
+                        "image_color": "#DCDCDC"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "teamate_hp_text",
+            "elements": [
+                { 
+                    "radial_progress_icon":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "info_text": "@plc_tutorial_alive_teammate",
+                        "race_icon_min_dist_visibility":80,
+                        "race_icon_min_dist": 1,
+                        "race_icon_max_dist": 50,
+                        "race_icon_track_scale": 0.5,
+                        "race_icon_min_scale": 0.5,
+                        "race_icon_max_scale": 1
+                    }
+                }
+            ]
+        },
+        {
+            "name": "twins_crash_site",
+            "elements": [
+                {
+                    "way_point":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "image_alias": "marker_way_point_icon",
+                        "image_color": "#E9F0F3",
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_hexagon_icon_wave_npa",
+
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.0,
+                        "race_icon_track_scale": 0.6,
+                        "race_icon_max_dist": 30,
+                        "offset": 1.5
+                    }
+                },
+                { "radar_icon": { "icon_alias": "race_icon_way_point", "player_icon": false, "snapped": true } }
+            ]
+        },
+        {
+            "name": "twins_cave_exit",
+            "elements": [
+                {
+                    "way_point":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "image_alias": "marker_way_point_icon",
+                        "image_color": "#E9F0F3",
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_hexagon_icon_wave_npa",
+
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.0,
+                        "race_icon_track_scale": 0.6,
+                        "race_icon_max_dist": 30,
+                        "offset": 1.5
+                    }
+                },
+                { "radar_icon": { "icon_alias": "race_icon_way_point", "player_icon": false, "snapped": true } }
+            ]
+        },
+        {
+            "name": "twins_recharge_core",
+            "elements": [
+                { 
+                    "radial_progress_icon":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.4,
+                            "alpha_upper_bound": 0.5,
+                            "alpha_lower_bound": 1.0
+                        },
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "image_alias": "marker_rhombus_icon_wave_npa",
+                        "image_color": "#FFE400",
+                        "info_text": "@obj_twins_core",
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_rhombus_icon_wave_npa",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_rhombus_icon_mask_npa",
+                        "radial_progress_bg_color": "#E9F0F3",
+                        "radial_progress_color": "#3a3a3a",
+                        "race_icon_min_dist": 1,
+                        "race_icon_max_dist": 50,
+                        "race_icon_track_scale": 0.5,
+                        "race_icon_min_scale": 0.5,
+                        "race_icon_max_scale": 1,
+                        "offset": 1.5
+                    }
+                }
+            ]
+        }
+    ]
+}

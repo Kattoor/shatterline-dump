@@ -1,0 +1,62 @@
+{
+    "name": "GlassheadNavlink/BehaviorSelector",
+    "root": "a0c17859-8712-4ea5-8777-9541531dc47d",
+    "nodes": {
+        "a0c17859-8712-4ea5-8777-9541531dc47d": {
+            "name": "Repeater",
+            "pos": {
+                "x": 0,
+                "y": 78
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Iterations",
+                    "type": "Integer",
+                    "value": "0"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "b6926a76-d414-4faa-b1e9-5ade2db24af4"
+        },
+        "b6926a76-d414-4faa-b1e9-5ade2db24af4": {
+            "name": "Selector",
+            "pos": {
+                "x": 0,
+                "y": 202
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "799e8eb5-c96c-450e-bf3d-7b71433ed3d1"
+            ]
+        },
+        "799e8eb5-c96c-450e-bf3d-7b71433ed3d1": {
+            "name": "SelectDesiredBehavior",
+            "pos": {
+                "x": 0,
+                "y": 306
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Behavior",
+                    "type": "StringHash",
+                    "value": "GoToPoints"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

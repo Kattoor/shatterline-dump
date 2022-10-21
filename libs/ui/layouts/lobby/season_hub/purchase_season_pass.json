@@ -1,0 +1,33 @@
+{
+    "script": "scripts/ui/lobby/season_hub/purchase_season_pass.lua",
+    "view_path": "PurchaseSeasonPass.html",
+    "send_stats": true,
+    "children":
+    [
+        { "name": "screen_header", "type": "Component", "file": "common/screen_header.json", "visible": false },
+
+        { "name": "sale_marker_wrapper", "type": "Panel", "view_path": "leftPanel.saleMarkerWrapper", "visible": false },
+        { "name": "sale_marker", "type": "Label", "view_path": "leftPanel.saleMarkerWrapper.saleMarker.label", "visible": false },
+        { "name": "page_title", "type": "Label", "view_path": "leftPanel.pageTitleWrapper.pageTitle", "text": "@purchase_premium_pass_page_title" },
+
+        { "name": "description_title", "type": "Label", "view_path": "leftPanel.descriptionTitleWrapper.descriptionTitle.label", "text": "@purchase_premium_pass_description_title" },
+        { "name": "description", "type": "Label", "view_path": "leftPanel.description"},
+
+        { "name": "rewards_list_title", "type": "Label", "view_path": "leftPanel.rewardsListTitleWrapper.rewardsListTitle.label", "text": "@purchase_premium_pass_instant_unlocks" },
+        { "name": "rewards_list", "type": "RewardItemsGrid", "view_path": "leftPanel.rewardsList" },
+
+        { "name": "sale_tag", "type": "Panel", "view_path": "bottomPanel.buyBtnWrapper.saleTag", "visible": false },
+        { "name": "sale_tag_label", "type": "Label", "view_path": "bottomPanel.buyBtnWrapper.saleTag.label", "visible": false },
+
+        { "name": "price_wrapper", "type": "Panel", "view_path": "bottomPanel.buyBtnWrapper.priceWrapper", "visible": false },
+        { "name": "old_price", "type": "Label", "view_path": "bottomPanel.buyBtnWrapper.priceWrapper.oldPrice", "visible": false },
+        { "name": "price", "type": "Label", "view_path": "bottomPanel.buyBtnWrapper.priceWrapper.price" },
+        { "name": "not_enough_currency", "type": "Component", "view_path": "bottomPanel.buyBtnWrapper.priceWrapper.currencyWarningWrapper" },
+        { "name": "not_enough_currency_label", "type": "Label", "view_path": "bottomPanel.buyBtnWrapper.priceWrapper.currencyWarningWrapper.label", "text": "@currency_purchase_window_title" },
+
+        { "name": "buy_premium_button", "type": "Button", "view_path": "bottomPanel.buyBtnWrapper.buyBtn", "text": "@season_pass_buy_premium_button"},
+        { "name": "buy_premium_button_hint", "type": "ActionLabel", "view_path": "bottomPanel.buyBtnWrapper.buyBtn.wrapper.key", "text": "@season_pass_buy_premium_button", "gamepad_only": true },
+
+        { "name": "bg", "type": "Image", "view_path": "bg", "image": "bg_purchase_season_pass", "visible": true}
+    ]
+}

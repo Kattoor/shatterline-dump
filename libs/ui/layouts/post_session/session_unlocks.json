@@ -1,0 +1,10 @@
+{
+    "script": "scripts/ui/post_session/session_unlocks.lua",
+    "view_path": "SessionUnlocks.html",
+    "children":
+    [
+        {"name": "heroProgressionList", "type": "SessionHeroUnlocks", "view_path": "heroProgressionList"},
+        {"name": "weaponProgressionList", "type": "SessionWeaponUnlocks", "view_path": "weaponProgressionList"},
+        {"name": "armoryWeaponsList", "type": "SessionArmoryWeapons", "view_path": "armoryWeaponsList"}
+    ]
+}

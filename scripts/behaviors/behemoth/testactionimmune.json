@@ -1,0 +1,248 @@
+{
+    "name": "Behemoth/TestActionImmune",
+    "root": "258bc3b3-4838-486d-ae41-521a2ba79976",
+    "nodes": {
+        "f18aa999-ca57-4465-ae55-04ba2c7f8c8d": {
+            "name": "Wait",
+            "pos": {
+                "x": 280,
+                "y": 825
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Variable",
+                    "value": [
+                        "waitTime"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "a1bece7d-048d-4508-a7a2-0606c9bb63b1": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 716
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "a0e82266-9927-4069-a528-f88423392202",
+                "f94ba5d5-334d-45a2-a2db-ee307e568dac",
+                "f18aa999-ca57-4465-ae55-04ba2c7f8c8d"
+            ]
+        },
+        "2255a2d4-f058-4343-b598-b80e5fda400a": {
+            "name": "ScriptEventGate",
+            "pos": {
+                "x": 0,
+                "y": 421
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EnterEvent",
+                    "type": "StringHash",
+                    "value": "WantHideWeakpoints"
+                },
+                {
+                    "name": "ExitEvent",
+                    "type": "StringHash",
+                    "value": "ImmuneTest_End(NotUsed)"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "e4c57957-91e2-45df-9c67-357d539dcb4c"
+        },
+        "258bc3b3-4838-486d-ae41-521a2ba79976": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 74
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ActionTest"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "0227b934-fdbd-412e-8f76-0b1a567beb37"
+        },
+        "fb4591fc-8a48-43de-bf7e-4ef360251bd4": {
+            "name": "SetVariable",
+            "pos": {
+                "x": 0,
+                "y": 1002
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "waitTime"
+                },
+                {
+                    "name": "Value",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "ConditionVariables",
+                        "ActionTest",
+                        "param_1"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "0227b934-fdbd-412e-8f76-0b1a567beb37": {
+            "name": "LogGate",
+            "pos": {
+                "x": 0,
+                "y": 221
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CVar",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "OnEnter",
+                    "type": "StringHash",
+                    "value": "ActionTest: Immune started"
+                },
+                {
+                    "name": "OnExit",
+                    "type": "StringHash",
+                    "value": "ActionTest: Immune finished"
+                },
+                {
+                    "name": "Attribute1",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                },
+                {
+                    "name": "Attribute2",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "2255a2d4-f058-4343-b598-b80e5fda400a"
+        },
+        "f94ba5d5-334d-45a2-a2db-ee307e568dac": {
+            "name": "IsBBValueExist",
+            "pos": {
+                "x": 0,
+                "y": 826
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ValuePath",
+                    "type": "StringHash",
+                    "value": "Gai.ConditionVariables.ActionTest.param_1"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "fb4591fc-8a48-43de-bf7e-4ef360251bd4"
+        },
+        "a0e82266-9927-4069-a528-f88423392202": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -285,
+                "y": 826
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "waitTime"
+                },
+                {
+                    "name": "Value",
+                    "type": "Float",
+                    "value": "10"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "e4c57957-91e2-45df-9c67-357d539dcb4c": {
+            "name": "ScriptEventGate",
+            "pos": {
+                "x": 0,
+                "y": 574
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EnterEvent",
+                    "type": "StringHash",
+                    "value": "WantImmunePhase"
+                },
+                {
+                    "name": "ExitEvent",
+                    "type": "StringHash",
+                    "value": "ExitImmunePhase"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "a1bece7d-048d-4508-a7a2-0606c9bb63b1"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

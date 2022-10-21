@@ -1,0 +1,37 @@
+{
+    "name": "test_stat",
+    "doc": "Origin: test. Emitter: client. This is a test avro schema",
+    "type": "record",
+    "fields": [
+        {
+            "name": "name",
+            "type": "string",
+            "default": "-1",
+            "doc": "unique name of the event"
+        },
+        {
+            "name": "ns",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace of the server's deployment (realm)"
+        },
+        {
+            "name": "ts",
+            "type": "string",
+            "default": "-1",
+            "doc": "ISO8601 UTC timestamp of the event invocation"
+        },
+        {
+            "name": "tag",
+            "type": "string",
+            "default": "-1",
+            "doc": "TEST: this is a TAG field from test_stat event"
+        },
+        {
+            "name": "value",
+            "type": "string",
+            "default": "-1",
+            "doc": "TEST: this is a VALUE field from test_stat event"
+        }
+    ]
+}

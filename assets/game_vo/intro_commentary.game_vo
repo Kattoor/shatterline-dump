@@ -1,0 +1,33 @@
+{
+    "voice_events":
+    [
+        {
+            "audio_trigger": "death_feedback_common",
+            "event": [ { "event_id": "Death", "actor_player_preset_is_not": [] } ],
+            "event_priority": 30,
+            "ignore_commentator_cooldown": true,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "pain_feedback_common",
+            "event": [ { "event_id": "OnHit", "dot_type_is": ["Default"], "target_player_preset_is_not": [] } ],
+            "event_priority": -10,
+            "skip_chance": 0.50,
+            "commentator": {"actor": "Target"}
+        },
+        {
+            "audio_trigger": "pain_feedback_red_fog",
+            "event": [ { "event_id": "OnHit", "dot_type_is": ["Crystalline"], "target_player_preset_is_not": [] } ],
+            "event_priority": -10,
+            "skip_chance": 0.50,
+            "commentator": {"actor": "Target"}
+        },
+        {
+            "audio_trigger": "pain_feedback_fire",
+            "event": [ { "event_id": "OnHit", "dot_type_is": ["Fire"], "target_player_preset_is_not": [] } ],
+            "event_priority": -10,
+            "skip_chance": 0.50,
+            "commentator": {"actor": "Target"}
+        }
+    ]
+}

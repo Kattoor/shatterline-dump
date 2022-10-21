@@ -1,0 +1,1361 @@
+
+{
+    "ai_archetypes":
+    [
+        {
+            "name": "StraferGoliath",
+            "display_name": "@strafer_goliath",
+            "tags": ["prototype_strafer_goliath"],
+            "slice": "slices/ai/goliath/goliath.dynamicslice",
+            "tp_slice": "slices/ai/goliath/goliath_tp.dynamicslice",
+            "health": 10000,
+            "behavior":
+            {
+                "profile": "Goliath",
+                "behavior_tree": "BehaviorSelector",
+                "params":
+                {
+                    "backpack_health": "3000.0",
+                    "unit_marker_slice_name": "slices/ai/goliath/misc/goliath_crystalline_wave_unit_marker_alternative.dynamicslice",
+                    "crystalline_wave_sprout_slice_name": "slices/ai/goliath/misc/goliath_wave_sprout.dynamicslice",
+                    "crystalline_wave_killzones_max_lifetime": "4",
+                    "crystalline_wave_charge_time": "0.0",
+                    "crystalline_wave_units_count": "3",
+                    "crystalline_wave_units_angle": "90",
+                    "crystalline_wave_units_start_offset": "1",
+                    "crystalline_wave_unit_marker_lifetime": "1.0",
+                    "crystalline_wave_unit_marker_speed": "15",
+                    "death_from_above_fly_to_hammer_time": "2.3",
+                    "death_from_above_charge_time": "2.2",
+                    "death_from_above_hammer_target_offset": "7",
+                    "death_from_above_wave_units_count": "8",
+                    "melee_range": "2.0"
+                }
+            },
+            "equip":
+            [
+                {
+                    "item": "ml09_goliath_ai"
+                },
+                {
+                    "item": "wpn07_goliath_dfa_ai"
+                }
+            ],
+            "microbehaviors":
+            [
+                {
+                    "name":"GoliathCrystallineWave",
+                    "params":
+                    {
+                        "min_range": "4",
+                        "max_range": "9",
+                        "cooldown_min":"8.0",
+                        "cooldown_max":"10.0"
+                    }
+                },
+                {
+                    "name":"GoliathRush",
+                    "params":
+                    {
+                        "min_range": "9",
+                        "max_range": "16",
+                        "cooldown_min":"7.0",
+                        "cooldown_max":"10.0"
+                    }
+                },
+                {
+                    "name":"GoliathDeathFromAbove",
+                    "params":
+                    {
+                        "min_range": "14",
+                        "max_range": "24",
+                        "cooldown_min":"10.0",
+                        "cooldown_max":"15.0"
+                    }
+                },
+                {
+                    "name":"GoliathRush",
+                    "params":
+                    {
+                        "min_range": "25",
+                        "max_range": "50",
+                        "cooldown_min":"7.0",
+                        "cooldown_max":"10.0"
+                    }
+                }
+            ],
+            "wounds":
+            {
+                "animation": "Glasshead",
+                "damage": 300,
+                "time": 0.002,
+                "prob": 1.0,
+                "cooldown_min": 2.0,
+                "cooldown_max": 3.0
+            },
+            "speed":
+            {
+                "run": 4.2,
+                "walk": 4.2,
+                "strafe": 4.2,
+                "back": 4.2,
+                "crouch": 4.2,
+                "fire": 4.2
+            },
+            "leave_dead_body": true
+        },
+                
+        {
+            "name":"glasshead_gardener_boss",
+            "add_tags":["GlassheadAI", "SpecialAI", "SupporterAI","NonconvertableAI", "RamDashHitArticulated"],
+            "tags":["(5)Glasshead: Gardener Boss"],
+            "display_name": "@glasshead_nest_supporter",
+            "slice": "slices/ai/supporter_boss.dynamicslice",
+            "tp_slice": "slices/ai/supporter_boss_tp.dynamicslice",
+            "competitor": "Glasshead",
+            "hud_marker": "stilt_hp_marker",
+            "enemy_type": "boss",
+            "health": 14000,
+            "can_be_frozen": false,
+            "behavior":
+            {
+                "behavior_tree": "BehaviorSelector",
+                "profile": "ScriptControlled",
+                "params":
+                {
+                    "query_name":"RangedNoCover",
+                    "effective_distance_min": "6",
+                    "effective_distance_max": "50",
+                    
+                    "weakpoint_health": "390",
+                    "damage_per_weakpoint_min": "0.05",
+                    "damage_per_weakpoint_max": "0.1",
+                    
+                    
+                    "distance_to_target_mul": "1",
+                    "distance_to_target_weight_min": "0",
+                    "distance_to_target_weight_max": "10",
+                    "distance_to_self_mul": "0",
+                    "distance_to_self_weight_min": "0",
+                    "distance_to_self_weight_max": "10", 
+                    
+                    "change_position_target_far_cooldown": "8", 
+                    "change_position_target_close_cooldown": "12",
+                    "close_to_my_holding_pos_radius": "5",
+                    "close_to_my_holding_pos_weight": "-10",
+
+                    "secondary_front_of_target_angle": "180",
+                    "cancel_attack_radius": "7",
+                    "front_of_target_angle":"60",
+                    "min_group_size":"1",
+                    "group_area_radius":"12",
+                    "attack_duration":"1",
+                    "shots_count_min":"1",
+                    "shots_count_max":"1",
+                    "shots_delay_min":"3",
+                    "shots_delay_max":"5",
+                    "attack_radius":"15",
+                    "attack_radius_offset":"5",
+                    "action_during_animation_time":"1.05",
+                    "first_shot_delay":"0.1",
+                    "attack_slice_block_place_time":"1",
+                    "attack_slice_block_place_radius":"10",
+                    "attack_slice_name": "slices/ai/glasshead_supporter/supporter_boss_aoe_attack.dynamicslice",
+                    "move_out_slice_name": "slices/ai/glasshead_supporter/supporter_boss_close_melee.dynamicslice",
+                    "target_offset":"0"
+                }
+            },
+            "perception":
+            {
+                "sight_range": 100.0,
+                "weight_inc_step": 50,
+                "weight_inc_time": 0.3,
+                "weight_dec_step": 50,
+                "weight_dec_time": 0.7
+            },
+            "microbehaviors":
+            [
+                {
+                    "name":"WoundTrigger",
+                    "params":
+                    {
+                        "damage":"300",
+                        "delay_min":"5",
+                        "delay_max":"8",
+                        "profile":"Supporter",
+                        "trigger":"weakpoint"
+                    }
+                }
+            ],
+            "speed":
+            {
+                "run": 8,
+                "walk": 3,
+                "strafe": 3,
+                "back": 3,
+                "crouch": 4,
+                "fire": 4.9
+            }
+        },
+        
+        {
+            "name":"mass_healer_prototype",
+            "competitor": "Strafer",
+            "slice": "slices/ai/mass_healer_prototype.dynamicslice",
+            "tp_slice": "slices/ai/mass_healer_prototype_tp.dynamicslice",
+            "tags":["prototype_mass_healer"],
+            "vo_profile":"ResurrectionDrone",
+            "health":1000,
+            "speed":
+            {
+                "sprint":20,
+                "run":7,
+                "strafe":7,
+                "back":7,
+                "crouch":7,
+                "fire":7
+            },
+            "obstacle_radius_multiplier":2,
+            "body_turn_limit":360,
+            "behavior":
+            {
+                "behavior_tree": "Root",
+                "profile":"ResurrectionDrone",
+                "params":
+                {
+                    "range":"1",
+                    "distance_to_keep":"3"
+                }
+            },
+            "death":
+            {
+                "lifetime": 1.0
+            },
+            "can_be_blinded":false,
+            "count_as_ai":true
+        },
+        {
+            "name":"StraferWithProtectionSphere",
+            "competitor": "Strafer",
+            "slice": "slices/ai/strafer_with_protection_sphere.dynamicslice",
+            "tp_slice": "slices/ai/goliath/goliath_tp.dynamicslice",
+            "tags":["prototype_strafer_with_protection_sphere"],
+            "vo_profile":"ResurrectionDrone",
+            "health":1000,
+            "speed":
+            {
+                "sprint":3,
+                "run":3,
+                "strafe":1,
+                "back":1,
+                "crouch":1,
+                "fire":1
+            },
+            "obstacle_radius_multiplier":2,
+            "body_turn_limit":360,
+            "behavior":
+            {
+                "behavior_tree": "Root",
+                "profile":"ResurrectionDrone",
+                "params":
+                {
+                    "range":"60",
+                    "distance_to_keep":"5"
+                }
+            },
+            "can_be_blinded":false,
+            "count_as_ai":true
+        },
+        {
+            "name":"mass_healer_prototype_gh",
+            "parent": "mass_healer_prototype",
+            "competitor": "Glasshead",
+            "tp_slice": "slices/ai/mass_healer_prototype_gh_tp.dynamicslice",
+            "tags":["prototype_mass_healer_gh"],
+            "health":1000
+        },
+        {
+            "name": "StraferMinotaurChrono",
+            "leave_dead_body": true,
+            "health": 5000,
+            "display_name": "@strafer_minotaur_napalm",
+            "parent": "Minotaur_napalm",
+            "tags": ["prototype Minotaur Chrono"],
+            "slice": "slices/ai/minotaur/minotaur_chrono.dynamicslice",
+            "tp_slice": "slices/ai/minotaur/minotaur_combined_tp.dynamicslice",
+            "behavior":
+            {
+                "behavior_tree": "BehaviorSelector",
+                "profile": "Minotaur",
+                "projectile_launcher":
+                {
+                    "min_targets": 10,
+                    "scan_range": 0,
+                    "update_targets_delay": 99.0,
+                    "prepare_delay": 0.0,
+                    "fire_delay": 0.1,
+                    "out_delay": 0.0
+                }
+            },
+            "speed":
+            {
+                "sprint": 4,
+                "run": 4,
+                "strafe": 3.6,
+                "back": 2.5,
+                "crouch": 3.1,
+                "fire": 2
+            },
+            "equip": [
+                {
+                    "item": "hmg05_ai",
+                    "damage_multiplier": 1.0,
+                    "shooting_pattern": ["1; 0.01", "1; 0.01", "1; 0.2-0.4", "1; 0.05-0.1", "1; 0.01", "1; 0.01", "1; 0.2-0.3", "1; 0.05-0.1", "1; 0.05-0.1",
+                        "1; 0.01", "1; 0.01", "1; 0.01", "1; 0.01", "1; 0.01", "1; 0.01", "1; 0.01", "1; 0.01", "1; 0.6-1",
+                        "1; 0.01", "1; 0.01", "1; 0.01", "1; 0.01", "1; 0.01", "1; 0.01", "1; 0.01", "1; 0.05"
+                    ],
+                    "check_visible": false,
+                    "max_shooting_range": 12,
+                    "params":
+                    {
+                        "effective_distance_min": "2.8",
+                        "effective_distance_max": "8"
+                    }
+                },
+                {
+                    "item": "spg10"
+                }
+            ],
+            "microbehaviors": [
+                {
+                    "name": "MinotaurTeleportToTarget"
+                },
+                {
+                    "name": "MinotaurUseGrenadeLauncher"
+                }
+            ]
+        },
+        
+        {
+            "name": "glasshead_splinter_fire",
+            "parent": "glasshead_splinter_normal",
+            "display_name": "@lava_splinter_normal",
+            "grade": "normal",
+            "tags": ["Glasshead", "Proto_Glasshead_Fire"],
+            "slice": "slices/ai/glasshead_splinter_fire.dynamicslice",
+            "tp_slice": "slices/ai/glasshead_splinter_fire_tp.dynamicslice",
+            "leave_dead_body": false,
+            "health": 140,
+            "behavior":
+            {
+                "behavior_tree": "BehaviorSelector",
+                "profile": "Ranged",
+                "params":
+                {
+                    "idle_query_name": "RangedNoCover",
+                    "battle_query_name": "BattleRangedNoCover",
+                    "front_of_target_angle": "120",
+                    
+                    "attack_state_time_min": "9",
+                    "attack_state_time_max": "10",
+                    "defense_state_time_min": "1",
+                    "defense_state_time_max": "3",
+                    
+                    "change_position_if_target_too_close": "false",
+                    "change_position_target_far_cooldown": "5",
+                    "change_position_target_close_cooldown": "7",
+                    "change_position_in_cover_cooldown_min": "8",
+                    "change_position_in_cover_cooldown_max": "8",
+                    "change_position_in_openspace_cooldown_min": "7",
+                    "change_position_in_openspace_cooldown_max": "9",
+
+                    "defense_area_weight": "3",
+                    "effective_distance_min": "10",
+                    "effective_distance_max": "20",
+                    "distance_to_self_mul": "-0.4",
+                    "distance_to_self_weight_min": "-7",
+                    "distance_to_self_weight_max": "-3",
+                    "distance_to_target_mul": "1.0",
+                    "distance_to_target_weight_min": "1",
+                    "distance_to_target_weight_max": "25",
+                    "max_attack_time_during_move": "0.0",
+                    "defense_to_attack_during_move_prob": "1.0",
+                    "disable_defense_if_target_in_cone_and_move_angle": "45",
+                    "close_to_my_holding_pos_radius": "3",
+                    "close_to_my_holding_pos_weight": "5",
+                    "ally_distance": "5",
+                    "ally_count_max": "1",
+                    "ally_points": "-5",
+                    "side_strafe_length_min": "1",
+                    "side_strafe_length_max": "2",
+                    "wait_after_strafe_min": "2",
+                    "wait_after_strafe_max": "4",
+                    
+                    "stop_auto_aim_distance": "3.5",
+                    "stop_auto_aim_timer": "0.29",
+                    "auto_aim_amount": "1.0",
+                    "projectile_min_speed": "1.0",
+                    "projectile_max_speed": "30.0",
+                    
+                    "melee_range": "2.3",
+                    "deploy_weapon_exit_if_turn_angle": "60",
+                    "deploy_weapon_animation_base_index": "0",
+                    "deploy_weapon_fire_attacks_count":"1",
+                    "deploy_weapon_shot_time":"0.55"
+                }
+            },
+            "equip": [
+                {
+                    "item": "gl02_glasshead_ai",
+                    "check_visible": false,
+                    "damage_multiplier": 1.0,
+                    "shooting_pattern": ["1; 0.1"],
+                    "max_shooting_range": 30,
+                    "shoot_ballistic_projectile": true,
+                    "ballistic_projectile_target_offset": -0.1,
+                    "script_shooting_pattern": true
+                }
+            ]
+        },
+        {
+            "name": "glasshead_splinter_fire_grade2",
+            "parent": "glasshead_splinter_fire",
+            "grade": "grade2",
+            "display_name": "@lava_splinter_grade2",
+            "health": 150,
+            "equip": [
+                {
+                    "item": "gl02_glasshead_ai",
+                    "check_visible": false,
+                    "damage_multiplier": 1.2,
+                    "shooting_pattern": ["1; 0.1"],
+                    "max_shooting_range": 30,
+                    "shoot_ballistic_projectile": true,
+                    "ballistic_projectile_target_offset": -0.1,
+                    "script_shooting_pattern": true
+                }
+            ]
+        },
+        {
+            "name": "glasshead_splinter_fire_grade3",
+            "parent": "glasshead_splinter_fire",
+            "grade": "grade3",
+            "display_name": "@lava_splinter_grade3",
+            "health": 160,
+            "equip": [
+                {
+                    "item": "gl02_glasshead_ai",
+                    "check_visible": false,
+                    "damage_multiplier": 1.3,
+                    "shooting_pattern": ["1; 0.1"],
+                    "max_shooting_range": 30,
+                    "shoot_ballistic_projectile": true,
+                    "ballistic_projectile_target_offset": -0.1,
+                    "script_shooting_pattern": true
+                }
+            ]
+        },
+        {
+            "name": "FlamethrowerWithGrenade",
+            "add_tags":["StraferAI", "SpecialAI", "FlamethrowerAI"],
+            "tags": ["prototype_flame_with_grenade"],
+            "display_name": "@strafer_flamethrower",
+            "parent": "Minotaur",
+            "slice": "slices/ai/ai_strafer_flamethrower.dynamicslice",
+            "tp_slice": "slices/ai/ai_strafer_flamethrower_tp.dynamicslice",
+            "health": 1200,
+            "behavior":
+            {
+                "projectile_launcher":
+                {
+                    "min_targets": 10
+                },
+                "params":
+                {
+                    "flame_damage_amount": "3.0",
+                    "flame_damage_period": "0.1",
+                    "weakpoint_health": "300.0",
+                    "roll_probability": "0",
+                    "strafe_step_min": "1.5",
+                    "strafe_step_max": "3.2",
+                    "strafe_step_delay_min": "1",
+                    "strafe_step_delay_max": "1",
+                    "delay_after_chase_lost_target": "0",
+                    "melee_range": "0",
+                    "waiting_for_lost_target": "0"
+                }
+            },
+            "equip":
+            [
+                {
+                    "item": "wpn05_flamethrower_ai",
+                    "shooting_pattern": ["5-12; 0.4-0.9"],
+                    "check_visible": false,
+                    "max_shooting_range": 8,
+                    "params":
+                    {
+                        "effective_distance_min": "1",
+                        "effective_distance_max": "6"
+                    }
+                },
+                {
+                    "item": "gr_sg03_ai"
+                }
+            ],
+            "microbehaviors": [
+                {
+                    "name": "ThrowGrenadeToMovingTarget",
+                    "params":
+                    {
+                        "self_frequency_limit_name":"SmokeGrenadeThrowSelf",
+                        "global_frequency_limit_name":"SmokeGrenadeThrowGlobal"
+                    }
+                }
+            ],
+            "hit_reactions":
+            {
+                "probability": 0
+            },
+            "wounds":
+            {
+                "damage":
+                {
+                    "profile": "Gunman",
+                    "value": 200,
+                    "time": 0.15,
+                    "prob": 0.0,
+                    "cooldown_min": 3.0,
+                    "cooldown_max": 5.0
+                }
+            },
+            "eye_offset_z": -0.6
+        },
+        
+        {
+            "name": "StraferAR_Decoy",
+            "parent": "StraferAR",
+            "tags": ["prototype_strafer_decoy"],
+            "microbehaviors": [
+                {
+                    "name": "ThrowGrenade"
+                },
+                {
+                    "name": "EvadingMoveInCover"
+                },
+                {
+                    "name": "PlaceDecoy"
+                }
+            ]
+        },
+        {
+            "name": "StraferAR_Decoy_grade2",
+            "parent": "StraferAR_grade2",
+            "tags": ["prototype_strafer_decoy"],
+            "microbehaviors": [
+                {
+                    "name": "ThrowGrenade"
+                },
+                {
+                    "name": "EvadingMoveInCover"
+                },
+                {
+                    "name": "PlaceDecoy"
+                }
+            ]
+        },
+        {
+            "name": "StraferAR_Decoy_grade3",
+            "parent": "StraferAR_grade3",
+            "tags": ["prototype_strafer_decoy"],
+            "microbehaviors": [
+                {
+                    "name": "ThrowGrenade"
+                },
+                {
+                    "name": "EvadingMoveInCover"
+                },
+                {
+                    "name": "PlaceDecoy"
+                }
+            ]
+        },
+        {
+            "name": "prototype_maze_key_catcher",
+            "tags": ["prototype_maze_key_catcher"],
+            "display_name": "@strafer_flamethrower",
+            "parent": "StraferFlamethrower",
+            "health": 1000,
+            "slice": "slices/ai/horde_mode/ai_maze_key_catcher.dynamicslice",
+            "tp_slice": "slices/ai/ai_strafer_flamethrower_tp.dynamicslice",
+            "add_tags":["MazeKeyCatcher", "NonconvertableAI"],
+            "speed":
+            {
+                "sprint": 5,
+                "run": 5,
+                "strafe": 2.6,
+                "back": 3.1,
+                "crouch": 3.1,
+                "fire": 2
+            },
+            "microbehaviors": [
+                {
+                    "name": "MoveToEntitySentFromLua"
+                }
+            ]
+        },
+        {
+            "name": "StraferMineSpawner",
+            "tags": ["prototype Mine Spawner"],
+            "display_name": "@strafer_shg",
+            "parent": "StraferMainArchetype",
+            "tp_slice": "slices/ai/strafer_mine_spawner_tp.dynamicslice",
+            "health": 500,
+            "behavior":
+            {
+                "params":
+                {
+                    "idle_query_name": "HidingFromPlayers",
+                    "battle_query_name": "HidingFromPlayers",
+                    "defense_state_time_min": "5",
+                    "defense_state_time_max": "7",
+                    "attack_state_time_min": "0",
+                    "attack_state_time_max": "0",
+                    "target_too_close_range": "10",
+                    "front_of_target_angle": "120",
+                    "cover_weight_mul": "-50",
+                    "defense_area_weight": "10",
+                    "effective_distance_min": "5",
+                    "effective_distance_max": "50",
+                    "distance_to_self_mul": "0",
+                    "distance_to_self_weight_min": "0",
+                    "distance_to_self_weight_max": "0",
+                    "distance_to_target_mul": "1.0",
+                    "distance_to_target_weight_min": "1",
+                    "distance_to_target_weight_max": "40",
+                    "max_attack_time_during_move": "3.0",
+                    "defense_to_attack_during_move_prob": "0.0",
+                    "ally_points": "0",
+                    "side_strafe_length_min": "0",
+                    "side_strafe_length_max": "0",
+                    "wait_after_strafe_min": "99",
+                    "wait_after_strafe_max": "99",
+                    "non_visible_close_distance": "99",
+                    "close_to_my_holding_pos_radius": "5",
+                    "close_to_my_holding_pos_weight": "10",
+                    "change_position_in_cover_cooldown_min": "3",
+                    "change_position_in_cover_cooldown_max": "4",
+                    "change_position_in_openspace_cooldown_min": "3",
+                    "change_position_in_openspace_cooldown_max": "4",
+                    "flashlight_spawn_probability": "0.0"
+                }
+            },
+            "microbehaviors": [
+                {
+                    "name": "SpawnAIProjectile",
+                    "params":
+                    {
+                        "slice_name": "slices/ai/bomb_drone_launcher.dynamicslice",
+                        "slice_lifetime": "2"
+                    }
+                }
+            ],
+            "equip": [
+                {
+                    "item": "shg01_ai",
+                    "shooting_pattern": ["1; 0.8-1.4"],
+                    "max_shooting_range": 30
+                }
+            ],
+            "wounds":
+            {
+                "damage":
+                {
+                    "value": 250
+                }
+            },
+            "speed":
+            {
+                "run": 7.2,
+                "strafe": 2.5,
+                "fire": 2.5
+            }
+        },
+        
+        {
+            "name": "grenader_prototype",
+            "tags": ["prototype_strafer_with_grenade_launcher"],
+            "slice": "slices/ai/minotaur/minotaur.dynamicslice",
+            "tp_slice": "slices/ai/minotaur/minotaur_tp.dynamicslice",
+            "vo_profile": "Gunman",
+            "competitor": "Strafer",
+            "enemy_type": "miniboss_01",
+            "health": 2800,
+            "behavior":
+            {
+                "behavior_tree": "BehaviorSelector",
+                "profile": "Minotaur",
+                "projectile_launcher":
+                {
+                    "bullets_per_shot": 1,
+                    "delay_for_bullet": 0.03,
+                    "bullet_spread": 5,
+                    "min_targets": 1,
+                    "min_distance": 10,
+                    "scan_range": 30,
+                    "group_radius": 10,
+                    "update_targets_delay": 2.0,
+                    "find_targets_sector_angle": 360.0,
+                    "prepare_delay": 1.7,
+                    "fire_delay": 1.2,
+                    "out_delay": 1.9,
+                    "cooldown_delay": 2.2
+                },
+                "params":
+                {
+                    "strafe_step_min": "1.5",
+                    "strafe_step_max": "3.2",
+                    "strafe_step_delay_min": "4",
+                    "strafe_step_delay_max": "8",
+                    "strafe_angle_max": "10",
+                    "gun_track_delay": "0.00",
+                    "gun_track_buffer": "12",
+                    "gun_track_vertical_deviation_time": "3.0",
+                    "gun_trace_min_distance": "6",
+                    "gun_trace_offset": "9",
+                    "gun_trace_duration": "2.0",
+                    "melee_range": "2.8",
+                    "melee_jump_probability": "1.0",
+                    "delay_after_chase_lost_target": "1.6",
+                    "waiting_for_lost_target": "4",
+                    "fire_in_open_space_crouch_prob": "0",
+                    "roll_probability": "0",
+                    "distance_to_cover_for_reload": "0",
+                    "leave_cover_target_distance": "0",
+                    "reload_in_crouch_prc": "0"
+                }
+            },
+            "equip":
+            [
+                {
+                    "item": "ar02_ai",
+                    "shooting_pattern": ["1; 0.6-0.9", "4-5; 1.3-2.1", "1; 0.8-1.1", "3-5; 1.4-1.9", "3-4; 1.3-1.8",
+                        "1; 0.7-0.9", "1; 0.7-1.0", "1-3; 1.7-2.1", "1; 0.8", "4; 1.6", "1; 0.7-1.1", "4-5; 1.7-1.7", "1; 1.0", "1; 1.1", "6-12; 1.9-2.1"],
+                    "params":
+                    {
+                        "effective_distance_min": "30",
+                        "effective_distance_max": "30",
+                        "low_ammo": "7"
+                    }
+                },
+                {
+                    "item": "spg02"
+                }
+            ],
+            "perception":
+            {
+                "sight_range": 90.0,
+                "max_memory_time": 60.0,
+                "sound_stimulus_scale": 1.0
+            },
+
+            "speed":
+            {
+                "sprint": 4,
+                "run": 3,
+                "strafe": 1.6,
+                "back": 1.1,
+                "crouch": 1.1,
+                "fire": 3
+            },
+            "target_selection":
+            {
+                "tag_weights":
+                {
+                    "ShooterPriority": 100,
+                    "Breakable": -10
+                },
+                "thresholds":
+                {
+                    "critical_range": 20,
+                    "damage_dealer_duration": 6
+                },
+                "weights":
+                {
+                    "critical_range": 50,
+                    "damage_dealer": 20,
+                    "target_visible": 15,
+                    "target_sound": 10,
+                    "target_memory": 5
+                }
+            },
+            "wounds":
+            {
+                "damage":
+                {
+                    "profile": "",
+                    "value": 200,
+                    "time": 0.2,
+                    "prob": 0.5
+                }
+            },
+            "avoidance_radius_multiplier": 12.5,
+            "body_turn_limit": 360,
+            "eye_offset_z": -0.7
+        },
+        {
+            "name":"ShieldDrone",
+            "competitor": "Strafer",
+            "slice": "slices/ai/shield_drone/shield_drone_ai.dynamicslice",
+            "tp_slice": "slices/ai/shield_drone/shield_drone_ai_tp.dynamicslice",
+            "tags":["prototype_shield_drone"],
+            "vo_profile":"ResurrectionDrone",
+            "health":100,
+            "speed":
+            {
+                "sprint":25,
+                "run":25,
+                "strafe":25,
+                "back":25,
+                "crouch":25,
+                "fire":25
+            },
+            "obstacle_radius_multiplier":2,
+            "body_turn_limit":360,
+            "behavior":
+            {
+                "behavior_tree": "Root",
+                "profile":"ResurrectionDrone",
+                "params":
+                {
+                    "range":"1",
+                    "distance_to_keep":"0"
+                }
+            },
+            "death":
+            {
+                "lifetime": 3.0
+            },
+            "can_be_blinded":false,
+            "count_as_ai":false
+        },
+        {
+            "name": "StrafeAirDronePrototype",
+            "tags": ["prototype_strafer_airdrone"],
+            "slice": "slices/ai/scanning_drone/air_drone.dynamicslice",
+            "tp_slice": "slices/ai/scanning_drone/air_drone_tp.dynamicslice",
+            "vo_profile": "",
+            "competitor": "Strafer",
+            "enemy_type": "regular_02",
+            "health": 680,
+            "behavior":
+            {
+                "behavior_tree": "BehaviorSelector",
+                "profile": "Gunmen",
+                "params":
+                {
+                    "strafe_step_min": "4",
+                    "strafe_step_max": "4",
+                    "strafe_step_delay_min": "3",
+                    "strafe_step_delay_max": "5",
+                    "strafe_angle_max": "45",
+                    "leave_cover_target_distance": "6",
+                    "reload_in_crouch_prc": "0",
+                    "distance_to_cover_for_reload": "10",
+                    "waiting_for_lost_target": "0.25",
+                    "delay_after_chase_lost_target": "3",
+                    "roll_probability": "0",
+                    "roll_delay_min": "3",
+                    "roll_delay_max": "5"
+                }
+            },
+            "equip":
+            [
+                {
+                    "item": "rl01_air_drone_ai",
+                    "shooting_pattern": ["3; 1.8-2.2"],
+                    "params":
+                    {
+                        "effective_distance_min": "6",
+                        "effective_distance_max": "14",
+                        "low_ammo": "0"
+                    }
+                }
+            ],
+            "perception":
+            {
+                "sight_range": 60.0,
+                "max_memory_time": 60.0,
+                "sound_stimulus_scale": 1.0
+            },
+            "speed":
+            {
+                "run": 4,
+                "strafe": 2.5,
+                "back": 2.5,
+                "crouch": 1,
+                "fire": 2.5
+            },
+
+            "target_selection":
+            {
+                "tag_weights":
+                {
+                    "VIP": -10,
+                    "ShooterPriority": 100,
+                    "Breakable": -10
+                },
+                "thresholds":
+                {
+                    "critical_range": 10,
+                    "damage_dealer_duration": 6
+                },
+                "weights":
+                {
+                    "critical_range": 50,
+                    "damage_dealer": 20,
+                    "target_visible": 15,
+                    "target_sound": 10,
+                    "target_memory": 5
+                }
+            },
+            "wounds":
+            {
+                "damage":
+                {
+                    "profile": "Gunman",
+                    "value": 53,
+                    "time": 0.5,
+                    "prob": 0.3
+                }
+            }
+        },
+        {
+            "name": "StraferBoss_prototype",
+            "slice": "slices/ai/strafer_boss_proto.dynamicslice",
+            "tp_slice": "slices/ai/strafer_boss_proto_tp.dynamicslice",
+            "competitor": "Strafer",
+            "tags": ["StraferBoss_prototype"],
+            "enemy_type": "miniboss_01",
+            "perception":
+            {
+                "sight_range": 90.0,
+                "max_memory_time": 60.0,
+                "visual_stimulus_scale": 1.0,
+                "sound_stimulus_scale": 1.0
+            },
+            "vo_profile": "Gunman",
+            "health": 15000,
+            "equip":
+            [
+                {
+                    "item": "wpn04_gauss_ai",
+                    "shooting_pattern": ["2; 2.0"],
+                    "laser_sight":
+                    {
+                        "wandering_time": 1.6,
+                        "after_shot_time": 0.1,
+                        "keeping_target_time": 0.0
+                    },
+                    "check_visible": false,
+                    "params":
+                    {
+                        "effective_distance_min": "3.2",
+                        "effective_distance_max": "20"
+                    }
+                }
+            ],
+            "speed":
+            {
+                "sprint": 4,
+                "run": 3,
+                "strafe": 1.6,
+                "back": 1.1,
+                "crouch": 1.1,
+                "fire": 3
+            },
+            "avoidance_radius_multiplier": 2.5,
+            "body_turn_limit": 360,
+            "eye_offset_z": -0.7,
+            "behavior":
+            {
+                "behavior_tree": "BehaviorSelector",
+                "profile": "Minotaur",
+                "projectile_launcher":
+                {
+                    "bullets_per_shot": 1,
+                    "delay_for_bullet": 0.03,
+                    "bullet_spread": 5,
+                    "min_targets": 1,
+                    "min_distance": 10,
+                    "scan_range": 90,
+                    "group_radius": 10,
+                    "update_targets_delay": 3.0,
+                    "find_targets_sector_angle": 120.0,
+                    "prepare_delay": 1.2,
+                    "fire_delay": 1.2,
+                    "out_delay": 1.5,
+                    "cooldown_delay": 10
+                },
+                "params":
+                {
+                    "strafe_step_min": "1.8",
+                    "strafe_step_max": "4.2",
+                    "strafe_step_delay_min": "6",
+                    "strafe_step_delay_max": "18",
+                    "strafe_angle_max": "30",
+                    "leave_cover_target_distance": "0",
+                    "reload_in_crouch_prc": "0",
+                    "distance_to_cover_for_reload": "0",
+                    "waiting_for_lost_target": "6",
+                    "roll_probability": "0",
+                    "gun_trace_offset": "0",
+                    "gun_trace_duration": "0.0",
+                    "gun_track_delay": "0.05",
+                    "gun_track_buffer": "1",
+                    "gun_track_vertical_deviation_time": "3.0",
+                    "gun_trace_min_distance": "0",
+                    "melee_range": "2.8",
+                    "melee_jump_probability": "0.05",
+                    "delay_after_chase_lost_target": "1.6",
+                    "fire_in_open_space_crouch_prob": "0"
+                }
+            },
+            "target_selection":
+            {
+                "tag_weights":
+                {
+                    "Breakable": -10
+                },
+                "thresholds":
+                {
+                    "critical_range": 20,
+                    "damage_dealer_duration": 6
+                },
+                "weights":
+                {
+                    "critical_range": 50,
+                    "damage_dealer": 20,
+                    "target_visible": 15,
+                    "target_sound": 10,
+                    "target_memory": 5
+                }
+            },
+            "wounds":
+            {
+                "damage":
+                {
+                    "profile": "",
+                    "value": 200,
+                    "time": 0.2,
+                    "prob": 0.5
+                }
+            }
+        },
+
+        {
+            "name": "drone_boss_prototype",
+            "tags": ["DroneBossProto"],
+            "competitor": "Strafer",
+            "slice": "slices/ai/drone_boss_proto.dynamicslice",
+            "tp_slice": "slices/ai/drone_boss_proto_tp.dynamicslice",
+            "wounds":
+            {
+                "damage":
+                {
+                    "profile": "",
+                    "value": 50000,
+                    "time": 0.5,
+                    "prob": 0.0
+                }
+            },
+            "vo_profile": "Glasshead",
+            "health": 7000,
+            "equip":
+            [
+                {
+                    "item": "wpn03_droneboss_ai",
+                    "shooting_pattern": ["5-10; 2-4"],
+                    "check_visible": false,
+                    "params":
+                    {
+                        "effective_distance_min": "10",
+                        "effective_distance_max": "30",
+                        "low_ammo": "0"
+                    }
+                }
+            ],
+            "speed":
+            {
+                "run": 15,
+                "strafe": 15,
+                "back": 15,
+                "crouch": 0,
+                "fire": 0
+            },
+            "behavior":
+            {
+                "behavior_tree": "BehaviorSelector",
+                "profile": "Gunmen",
+                "params":
+                {
+                    "strafe_step_min": "2",
+                    "strafe_step_max": "5",
+                    "strafe_step_delay_min": "3",
+                    "strafe_step_delay_max": "5",
+                    "strafe_angle_max": "45",
+                    "leave_cover_target_distance": "6",
+                    "reload_in_crouch_prc": "0.5",
+                    "distance_to_cover_for_reload": "35",
+                    "waiting_for_lost_target": "1",
+                    "delay_after_chase_lost_target": "3",
+                    "roll_probability": "0",
+                    "roll_delay_min": "3",
+                    "roll_delay_max": "5",
+                    "weakpoint_health": "600"
+                }
+            },
+            "body_turn_limit": 90
+        },
+
+        {
+            "name": "StrafeSuppressorPrototype",
+            "tags": ["prototype_strafer_suppressor"],
+            "slice": "slices/ai/strafer_suppressor.dynamicslice",
+            "tp_slice": "slices/ai/strafer_suppressor_tp.dynamicslice",
+            "vo_profile": "Gunman",
+            "competitor": "Strafer",
+            "enemy_type": "miniboss_01",
+            "health": 150,
+            "behavior":
+            {
+                "behavior_tree": "BehaviorSelector",
+                "profile": "Minotaur",
+                "projectile_launcher":
+                {
+                    "bullets_per_shot": 1,
+                    "delay_for_bullet": 0.03,
+                    "bullet_spread": 6,
+                    "min_targets": 1,
+                    "min_distance": 3,
+                    "scan_range": 15,
+                    "group_radius": 10,
+                    "update_targets_delay": 2.0,
+                    "find_targets_sector_angle": 45.0,
+                    "prepare_delay": 1.2,
+                    "fire_delay": 1.2,
+                    "out_delay": 1.5,
+                    "cooldown_delay": 1.2
+                },
+                "params":
+                {
+                    "strafe_step_min": "0",
+                    "strafe_step_max": "0",
+                    "strafe_step_delay_min": "6",
+                    "strafe_step_delay_max": "18",
+                    "strafe_angle_max": "30",
+                    "leave_cover_target_distance": "0",
+                    "reload_in_crouch_prc": "0",
+                    "distance_to_cover_for_reload": "0",
+                    "waiting_for_lost_target": "6",
+                    "roll_probability": "0",
+                    "gun_trace_offset": "9",
+                    "gun_trace_duration": "2.0",
+                    "gun_track_delay": "0.05",
+                    "gun_track_buffer": "15",
+                    "gun_track_vertical_deviation_time": "3.0",
+                    "gun_trace_min_distance": "6",
+                    "melee_range": "2.8",
+                    "melee_jump_probability": "0",
+                    "delay_after_chase_lost_target": "1.6",
+                    "fire_in_open_space_crouch_prob": "1"
+                }
+            },
+            "equip":
+            [
+                {
+                    "item": "hmg04_ai",
+                    "shooting_pattern": ["20-30; 0.2-0.4", "1-5; 0.05-0.1", "30-40; 0.2-0.3", "1-5; 0.05-0.1", "1-3; 0.05-0.1", "60; 0.4-0.6", "20-40; 0.6-1",
+                        "1; 0.25", "1; 0.2", "3; 0.15", "3; 0.1", "3; 0.05", "30; 0.05"],
+                    "check_visible": false,
+                    "params":
+                    {
+                        "effective_distance_min": "3.2",
+                        "effective_distance_max": "45"
+                    }
+                }
+            ],
+            "perception":
+            {
+                "sight_range": 90.0,
+                "max_memory_time": 60.0,
+                "visual_stimulus_scale": 1.0,
+                "sound_stimulus_scale": 1.0
+            },
+            "speed":
+            {
+                "sprint": 4,
+                "run": 3,
+                "strafe": 1.6,
+                "back": 1.1,
+                "crouch": 1.1,
+                "fire": 0
+            },
+            "target_selection":
+            {
+                "tag_weights":
+                {
+                    "Breakable": -10
+                },
+                "thresholds":
+                {
+                    "critical_range": 20,
+                    "damage_dealer_duration": 6
+                },
+                "weights":
+                {
+                    "critical_range": 50,
+                    "damage_dealer": 20,
+                    "target_visible": 15,
+                    "target_sound": 10,
+                    "target_memory": 5
+                }
+            },
+            "wounds":
+            {
+                "damage":
+                {
+                    "profile": "",
+                    "value": 200,
+                    "time": 0.2,
+                    "prob": 0
+                }
+            },
+            "avoidance_radius_multiplier": 2.5,
+            "body_turn_limit": 10,
+            "eye_offset_z": 0.7
+        },
+
+        {
+            "name": "strafer_deployable_turret",
+            "slice": "slices/ai/strafer_deployable_turret.dynamicslice",
+            "tp_slice": "slices/ai/strafer_deployable_turret_tp.dynamicslice",
+            "enemy_type": "special_ranged",
+            "tags": ["(1) Strafer: Turret"],
+            "competitor": "Strafer",
+            "health": 2000,
+            "behavior":
+            {
+                "behavior_tree": "BehaviorSelector",
+                "profile": "BasicRange"
+            },
+            "equip":
+            [
+                {
+                    "item": "hmg03_ai",
+                    "damage_multiplier": 0.5,
+                    "shooting_pattern": ["50; 1"],
+                    "check_visible": true
+                }
+            ],
+            "perception":
+            {
+                "sight_range": 100.0,
+                "max_memory_time": 3.0,
+                "sound_stimulus_scale": 0.0,
+                "weight_inc_step": 100,
+                "weight_inc_time": 0.1,
+                "weight_dec_step": 50,
+                "weight_dec_time": 1
+            },
+            "target_selection":
+            {
+                "tag_distance":
+                {
+                    "Character":
+                    {
+                        "weights":
+                        [
+                            {
+                                "weight":10,
+                                "distance":30
+                            }
+                        ]
+                    },
+                    "RegularAI":
+                    {
+                        "weights":
+                        [
+                            {
+                                "weight":10,
+                                "distance":50
+                            }
+                        ]
+                    },
+                    "Player":
+                    {
+                        "weights":
+                        [
+                            {
+                                "weight":10,
+                                "distance":50
+                            }
+                        ]
+                    }
+                },
+                "tag_weights":
+                {
+                    "VIP": -10,
+                    "ShooterPriority": 100,
+                    "Breakable": -10
+                },
+                "weights":
+                {
+                    "critical_range": 10,
+                    "damage_dealer": 10,
+                    "target_visible": 5,
+                    "target_sound": 0,
+                    "target_memory": 0
+                },
+                "thresholds":
+                {
+                    "critical_range": 15,
+                    "damage_dealer_duration": 5
+                }
+            },
+            "death":
+            {
+                "lifetime": 0.5
+            },
+            "body_turn_limit": 360,
+
+            "body_yaw_angle_limit": 180,
+            "aim_yaw_angle_limit": 5,
+            "aim_pitch_up_angle_limit": 45,
+            "aim_pitch_down_angle_limit": 45,
+
+            "can_be_blinded":false,
+            "static_ai": true
+        },
+ 
+        {
+            "name": "glasshead_fairfly_turret_inside_out",
+            "parent": "glasshead_fairfly_turret",
+            "add_tags":["GlassheadAI", "SpecialAI", "FairflyTurretAI", "RamDashHitArticulated"],
+            "display_name": "@glasshead_nest",
+            "enemy_type": "special_ranged",
+            "tags": ["(2)Glasshead: Range", "(2)Glasshead: Fairfly Turret Inside-Out"],
+            "slice": "slices/ai/fairfly_turret_inside_out.dynamicslice",
+            "tp_slice": "slices/ai/fairfly_turret_inside_out_tp.dynamicslice",
+            "health": 500,
+            "equip":
+            [
+                {
+                    "item": "wpn08_fairfly_turret_inside_out",
+                    "shooting_pattern": ["1-2; 4-6"],
+                    "check_visible": false,
+                    "damage_multiplier": 1.0
+                }
+            ]
+        }
+    ]
+}

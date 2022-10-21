@@ -1,0 +1,43 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "7c4fbdffa9d2456bbeccb4dda59fd4ba",
+    "Name": "FleetIQ",
+    "DisplayName": "FleetIQ",
+    "Version": "0.1.0",
+    "Summary": "FleetIQ support",
+    "Tags": ["Untagged"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        }
+    ],
+    "Dependencies":
+    [
+        {
+            "Uuid": "28502d2aff664e6b8ee01a8dc493a42f",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "StatisticsCore"
+        },
+        {
+            "Uuid": "1b84470a5c68417da323becf125ba847",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "GameSessionStatisticsProtocol"
+        },
+        {
+            "Uuid": "94748877847b4749a583914e5b2c17ed",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "StatisticsProtocol"
+        },
+        {
+            "Uuid": "2ebd4481cbf142b89286f28b4c29ace3",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01Interfaces"
+        },
+        {
+            "Uuid": "aa86a3ac41394c25abe546db56b167ed",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "ServerBackend"
+        }
+    ]
+}

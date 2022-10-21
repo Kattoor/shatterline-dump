@@ -1,0 +1,86 @@
+{
+    "name": "ScriptControlled/TakePosition",
+    "root": "f42356c7-8b8d-4a19-a8af-94bca4319f4a",
+    "nodes": {
+        "01ed87c8-0a1d-4e07-b51c-96e5bebfe8a6": {
+            "name": "ApproachTo",
+            "pos": {
+                "x": 0,
+                "y": 332
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "ScriptControlled",
+                        "SQSPos"
+                    ]
+                },
+                {
+                    "name": "EndDistance",
+                    "type": "Float",
+                    "value": "0.00"
+                },
+                {
+                    "name": "UpdateDestinationPoint",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "f42356c7-8b8d-4a19-a8af-94bca4319f4a": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 79
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "TakePosition"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "4f5bde7e-5b4a-4ec1-8545-d81fd7297c89"
+        },
+        "4f5bde7e-5b4a-4ec1-8545-d81fd7297c89": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 192
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "TakePosition"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "01ed87c8-0a1d-4e07-b51c-96e5bebfe8a6"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

@@ -1,0 +1,844 @@
+{
+    "name": "Default/PatrolSelector",
+    "root": "09aceefc-af73-476b-8bc0-a680793b65dc",
+    "nodes": {
+        "e47f7a47-e176-4566-b2e8-6775ac03e45f": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 549
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "8838b232-9e4c-47b7-b29f-4ce960511e8c",
+                "6ed59a2f-30cb-48cc-912b-c9170150c7e3",
+                "bf96b341-79a1-4927-a056-1bf62faa0fd2"
+            ]
+        },
+        "b7397bdd-4ed5-4905-825f-221c1319e71b": {
+            "name": "InterruptPatrolInRange",
+            "pos": {
+                "x": 360,
+                "y": 1476
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Center",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Pos"
+                    ]
+                },
+                {
+                    "name": "Radius",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "PatrolInit",
+                        "PatrolInterruptSignalRadius"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "c69ff4dc-b3c2-4c77-a37a-6b04694eb606"
+        },
+        "357fb4e7-ae87-4fc2-9ed5-585ff6c4e56b": {
+            "name": "UnderFire",
+            "pos": {
+                "x": 360,
+                "y": 1279
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "b7397bdd-4ed5-4905-825f-221c1319e71b"
+        },
+        "28a1df3c-767a-4130-9ff8-91c97aaf58a0": {
+            "name": "Succeeder",
+            "pos": {
+                "x": 0,
+                "y": 216
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "196f911d-4a1b-4bd8-af91-5c330958dae7"
+        },
+        "245af19c-40ee-4447-8094-ac34da98ad1d": {
+            "name": "SetVariable",
+            "pos": {
+                "x": 360,
+                "y": 1806
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "SelectPatrol"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "8838b232-9e4c-47b7-b29f-4ce960511e8c": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -180,
+                "y": 654
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "SelectPatrol"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "676cb6e6-d846-4b02-aad7-e1ffccb0ebfc": {
+            "name": "Equals",
+            "pos": {
+                "x": 180,
+                "y": 928
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Lhs",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "PatrolInit",
+                        "PatrolInterruption"
+                    ]
+                },
+                {
+                    "name": "Rhs",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "9694bfbc-5069-4639-8a5a-f40381776434"
+        },
+        "02855cda-a603-4517-aa02-22219f6db1c3": {
+            "name": "Equals",
+            "pos": {
+                "x": 290,
+                "y": 220
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Lhs",
+                    "type": "Variable",
+                    "value": [
+                        "SelectPatrol"
+                    ]
+                },
+                {
+                    "name": "Rhs",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "cad50eb9-7abc-4e5d-b8c9-c52cedfcbde4"
+        },
+        "bf96b341-79a1-4927-a056-1bf62faa0fd2": {
+            "name": "Equals",
+            "pos": {
+                "x": 590,
+                "y": 675
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Lhs",
+                    "type": "Variable",
+                    "value": [
+                        "SelectPatrol"
+                    ]
+                },
+                {
+                    "name": "Rhs",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "1fc029fb-2e38-47e0-ac98-7be8b165c465"
+        },
+        "6eccaa29-d1e9-4b7c-a552-0ab51c74e2a4": {
+            "name": "TargetInHorizontalRange",
+            "pos": {
+                "x": 0,
+                "y": 1277
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Source",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Min",
+                    "type": "Float",
+                    "value": "0"
+                },
+                {
+                    "name": "Max",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "PatrolInit",
+                        "PatrolInterruptRadius"
+                    ]
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "917e6fb0-3a17-49c7-b729-fcce4b7f1e42"
+        },
+        "196f911d-4a1b-4bd8-af91-5c330958dae7": {
+            "name": "IsBehaviorCondition",
+            "pos": {
+                "x": 0,
+                "y": 339
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "PatrolInterrupted"
+                },
+                {
+                    "name": "ResetOnExit",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "e47f7a47-e176-4566-b2e8-6775ac03e45f"
+        },
+        "cad50eb9-7abc-4e5d-b8c9-c52cedfcbde4": {
+            "name": "SelectDesiredBehavior",
+            "pos": {
+                "x": 290,
+                "y": 415
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Behavior",
+                    "type": "StringHash",
+                    "value": "Patrol"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "e16aa4db-99c9-420a-aea3-7f546a7217f6": {
+            "name": "LogGate",
+            "pos": {
+                "x": -320,
+                "y": 1611
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CVar",
+                    "type": "StringHash",
+                    "value": "gai_patrol_debug"
+                },
+                {
+                    "name": "OnEnter",
+                    "type": "StringHash",
+                    "value": "'%s': InterruptPatrol - signal"
+                },
+                {
+                    "name": "OnExit",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "Attribute1",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Attribute2",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "c0be7e9a-0f7f-446c-9eb8-d42669c54308"
+        },
+        "3bbfe281-f91e-4d2d-ac1c-2a7f2d5f2e12": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -285,
+                "y": 207
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "SelectPatrol"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Boolean"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "f6bb56c6-1a60-4bb0-98d6-8f05ea0917e7": {
+            "name": "SetVariable",
+            "pos": {
+                "x": 0,
+                "y": 1807
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "SelectPatrol"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "1dac3be3-2002-4356-947a-8775768e1297": {
+            "name": "LogGate",
+            "pos": {
+                "x": 0,
+                "y": 1611
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CVar",
+                    "type": "StringHash",
+                    "value": "gai_patrol_debug"
+                },
+                {
+                    "name": "OnEnter",
+                    "type": "StringHash",
+                    "value": "'%s': InterruptPatrol - target too close"
+                },
+                {
+                    "name": "OnExit",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "Attribute1",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Attribute2",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "f6bb56c6-1a60-4bb0-98d6-8f05ea0917e7"
+        },
+        "1fc029fb-2e38-47e0-ac98-7be8b165c465": {
+            "name": "Sequence",
+            "pos": {
+                "x": 590,
+                "y": 856
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "e7bfc38a-7e4a-452f-ae7d-712658a1353f"
+            ]
+        },
+        "840a7353-31e0-43ba-9a0c-3e616867f9b4": {
+            "name": "IsBBValueExist",
+            "pos": {
+                "x": 180,
+                "y": 765
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ValuePath",
+                    "type": "StringHash",
+                    "value": "Gai.PatrolInit.PatrolInterruption"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "676cb6e6-d846-4b02-aad7-e1ffccb0ebfc"
+        },
+        "6ed59a2f-30cb-48cc-912b-c9170150c7e3": {
+            "name": "Succeeder",
+            "pos": {
+                "x": 180,
+                "y": 674
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "840a7353-31e0-43ba-9a0c-3e616867f9b4"
+        },
+        "7b9f59de-3866-4fb1-bf66-9c939f3ee77d": {
+            "name": "IsBehaviorCondition",
+            "pos": {
+                "x": -319.5233918128654,
+                "y": 1281.0467836257308
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "WantInterruptPatrol"
+                },
+                {
+                    "name": "ResetOnExit",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "01ef444e-0800-47bc-b977-5b91749213df"
+        },
+        "01ef444e-0800-47bc-b977-5b91749213df": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": -320,
+                "y": 1479
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "WantInterruptPatrol"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "e16aa4db-99c9-420a-aea3-7f546a7217f6"
+        },
+        "9694bfbc-5069-4639-8a5a-f40381776434": {
+            "name": "Selector",
+            "pos": {
+                "x": 180,
+                "y": 1143
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "7b9f59de-3866-4fb1-bf66-9c939f3ee77d",
+                "6eccaa29-d1e9-4b7c-a552-0ab51c74e2a4",
+                "357fb4e7-ae87-4fc2-9ed5-585ff6c4e56b"
+            ]
+        },
+        "09aceefc-af73-476b-8bc0-a680793b65dc": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 91
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "3bbfe281-f91e-4d2d-ac1c-2a7f2d5f2e12",
+                "28a1df3c-767a-4130-9ff8-91c97aaf58a0",
+                "02855cda-a603-4517-aa02-22219f6db1c3"
+            ]
+        },
+        "917e6fb0-3a17-49c7-b729-fcce4b7f1e42": {
+            "name": "InterruptPatrolInRange",
+            "pos": {
+                "x": 0,
+                "y": 1475
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Center",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Pos"
+                    ]
+                },
+                {
+                    "name": "Radius",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "PatrolInit",
+                        "PatrolInterruptSignalRadius"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "1dac3be3-2002-4356-947a-8775768e1297"
+        },
+        "b8b7196f-4ae0-4442-b38f-b2fb70ca862c": {
+            "name": "SetBehaviorCondition",
+            "pos": {
+                "x": 590,
+                "y": 1185
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "PatrolInterrupted"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "c0be7e9a-0f7f-446c-9eb8-d42669c54308": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -320,
+                "y": 1807
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "SelectPatrol"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "c69ff4dc-b3c2-4c77-a37a-6b04694eb606": {
+            "name": "LogGate",
+            "pos": {
+                "x": 360,
+                "y": 1610
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CVar",
+                    "type": "StringHash",
+                    "value": "gai_patrol_debug"
+                },
+                {
+                    "name": "OnEnter",
+                    "type": "StringHash",
+                    "value": "'%s': InterruptPatrol - under fire"
+                },
+                {
+                    "name": "OnExit",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "Attribute1",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Attribute2",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "245af19c-40ee-4447-8094-ac34da98ad1d"
+        },
+        "e7bfc38a-7e4a-452f-ae7d-712658a1353f": {
+            "name": "LogGate",
+            "pos": {
+                "x": 590,
+                "y": 969
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CVar",
+                    "type": "StringHash",
+                    "value": "gai_patrol_debug"
+                },
+                {
+                    "name": "OnEnter",
+                    "type": "StringHash",
+                    "value": "Patrol: Agent '%s' interrupts patrol going to waypoint '%s'"
+                },
+                {
+                    "name": "OnExit",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "Attribute1",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Attribute2",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "PatrolInit",
+                        "LastWaypoint"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "b8b7196f-4ae0-4442-b38f-b2fb70ca862c"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

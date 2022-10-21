@@ -1,0 +1,65 @@
+{
+    "name": "Default/AllDead",
+    "root": "362c89c9-5116-405d-bbbd-f81845a3083d",
+    "nodes": {
+        "362c89c9-5116-405d-bbbd-f81845a3083d": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 110
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "AllDead"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "2aec7b9e-9859-4cf1-956e-190492cb1099"
+        },
+        "040fe7df-a8b9-4015-b33a-17fced072445": {
+            "name": "RunRegularBehavior",
+            "pos": {
+                "x": 0,
+                "y": 396
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "2aec7b9e-9859-4cf1-956e-190492cb1099": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 232
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "AllDead"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "040fe7df-a8b9-4015-b33a-17fced072445"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

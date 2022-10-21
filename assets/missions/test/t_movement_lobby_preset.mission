@@ -1,0 +1,51 @@
+{
+  "metagame_info": {
+    "name_token": "@mission1",
+    "mission": "t_movement_lobby_preset",
+    "game_type": "pvp",
+    "voice_chat_mode": "party_only",
+    "min_players_count": 1,
+    "time_to_join_sec": 240
+  },
+  "session_info": {
+    "level": "test_levels/movement/t_movement",
+    "game_mode": "test_tdm",
+    "mission_modifiers": [
+      "test_markup_trigger"
+    ],
+    "use_lobby_initial_hero": true
+  },
+  "ui_info": {
+    "background_image": "loading_pvp"
+  },
+  "reward_info": {
+    "reward_calculators": [
+      {
+        "name": "session_outcome",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "win": 500,
+              "draw": 400,
+              "loss": 300
+            }
+          },
+          {
+            "type": "skill",
+            "values": {
+              "win": 1,
+              "draw": 0,
+              "loss": -1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "game_vo_info": {
+    "game_vo": "test_vo_commentary",
+    "ignore_default_vo": true
+  }
+}

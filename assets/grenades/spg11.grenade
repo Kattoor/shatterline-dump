@@ -1,0 +1,58 @@
+{
+       "time_to_action": 0.0,
+       "selection":
+       {
+          "quick_selection_duration": 0.0,
+          "quick_deselection_duration": 0.0,
+          "quick_deselect": true,
+          "deselection_duration": 0.0,
+          "selection_duration": 0.0
+       },
+       "time_to_throw": 0.05,
+       "act_reason": "sleep",
+       "projectile":
+       {
+          "speed": 15.0,
+          "multi_projectile":
+          {
+             "max_distance": 15.0,
+             "angle": 15.0,
+             "max_angle": 20.0,
+             "projectile_count": 2
+          },
+          "offset":
+          {
+             "z": 0.0,
+             "x": 0.0,
+             "y": 0.35
+          },
+          "config_name": "spg11",
+          "slice_name": "slices/projectiles/throwables/spg11.dynamicslice",
+          "velocity_character_multiplier": 0.5,
+          "angle": -10.0
+       },
+       "icon_activation_distance": 8.0,
+       "time_to_destroy": -1.0,
+       "count": 1,
+       "crystalline_wall":
+       {
+          "secondary_spawn_delay_variance": 0.025,
+          "position_variance": 0.025,
+          "scale_variance": 0.025,
+          "connection_max_distance": 3.0,
+          "lifetime": 40.0,
+          "lifetime_variance": 0.3,
+          "secondary_spawn_delay": 0.01,
+          "secondary_height_scale": 0.6,
+          "secondary_lifetime_variance": 0.3,
+          "secondary_collision_check_radius": 0.3,
+          "secondary_collision_check_height": 1.9
+       },
+       "common":
+       {
+          "item_tag": "WG"
+       },
+       "duration_throw": 0.23,
+       "duration_prepare": 0.02,
+       "can_cook": true
+    }

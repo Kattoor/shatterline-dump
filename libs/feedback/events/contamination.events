@@ -1,0 +1,278 @@
+{
+    "events": 
+    [
+        {
+            "name": "contamination_increased",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_contamination_increase", "img": "doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "contamination_decreased",
+            "actions" : [
+                {"message_announcer": {"message": "@contamination_decreased", "timeout": 4}},
+                {"sound_trigger": {"trigger_name": "contamination_decreased"}}
+            ]
+        },
+        {
+            "name": "contamination_final_round",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_contamination_increase", "img": "doctor_sullivan"}},
+                {"sound_trigger": {"trigger_name": "contamination_increase"}}
+            ]
+        },
+        {
+            "name": "contamination_near_max",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_contamin_07", "img": "doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "contamination_almost_max",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_contamin_06", "img": "doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_contamination_critical",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_contamination_critical", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "maximum_contamination",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_contamination_maximum", "img": "doctor_velasquez"}},
+                {"message_objective": {"message": "@horde_extraction_objective"}}
+            ]
+        },
+        {
+            "name": "impact_zone_collapse",
+            "actions" : [
+                {"countdown_message": {"message": "@impact_zone_collapse", "timeout": 20}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_contamin_17", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "collapse_imminent",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "contamination_increase"}},
+                {"fader": {"fade_out": 100, "fade_in": 0}}
+            ]
+        },
+        {
+            "name": "remove_last_contamination",
+            "actions" : [
+                {"decrease_contamination_event": {}}
+            ]
+        },
+        {
+            "name": "earthquake_impulse",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "rocks_fall_cave_rl_placeholder"}}
+            ]
+        },
+        {
+            "name": "contamination_sound",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "whoosh_presentation"}}
+            ]
+        },
+        {
+            "name": "IncreasedMeleeMod",
+            "actions" : [
+                {"message_announcer": {"message": "@IncreasedMelee", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "test_alarm_02"}}
+            ]
+        },
+        {
+            "name": "IncreasedMeleeModIcon",
+            "actions" : [
+                {"contamination_event": {"image": "contamination_icon_increased_melee", "name": "@increased_melee_label", "description": "@increased_melee_description"}},
+                {"sound_trigger": {"trigger_name": "contamination_increase"}}
+            ]
+        },
+        {
+            "name": "EarthquakeMod",
+            "actions" : [
+                {"message_announcer": {"message": "@Earthquake", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "test_alarm_02"}}
+            ]
+        },
+        {
+            "name": "EarthquakeModIcon",
+            "actions" : [
+                {"contamination_event": {"image": "contamination_icon_earthquake", "name": "@earthquake_label", "description": "@earthquake_description"}},
+                {"sound_trigger": {"trigger_name": "contamination_increase"}}
+            ]
+        },
+        {
+            "name": "BurnChanceMod",
+            "actions" : [
+                {"message_announcer": {"message": "@BurnChance", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "test_alarm_02"}}
+            ]
+        },
+        {
+            "name": "BurnChanceModIcon",
+            "actions" : [
+                {"contamination_event": {"image": "contamination_icon_incendiary_ammo", "name": "@burn_chance_label", "description": "@burn_chance_description"}},
+                {"sound_trigger": {"trigger_name": "contamination_increase"}}
+            ]
+        },
+        {
+            "name": "ChaserMod",
+            "actions" : [
+                {"message_announcer": {"message": "@TheHunt", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "test_alarm_02"}}
+            ]
+        },
+        {
+            "name": "ChaserModIcon",
+            "actions" : [
+                {"contamination_event": {"image": "contamination_icon_hunt", "name": "@the_hunt_label", "description": "@the_hunt_description"}},
+                {"sound_trigger": {"trigger_name": "contamination_increase"}}
+            ]
+        },
+        {
+            "name": "FirefliesMod",
+            "actions" : [
+                {"message_announcer": {"message": "@fireflies", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "test_alarm_02"}}
+            ]
+        },
+        {
+            "name": "FirefliesModIcon",
+            "actions" : [
+                {"contamination_event": {"image": "contamination_icon_firefly", "name": "@fireflies_label", "description": "@fireflies_description"}},
+                {"sound_trigger": {"trigger_name": "contamination_increase"}}
+            ]
+        },
+        {
+            "name": "GlassheadBirdsModIcon",
+            "actions" : [
+                {"contamination_event": {"image": "contamination_icon_crystalline_birds", "name": "@glasshead_birds_label", "description": "@glasshead_birds_description"}},
+                {"sound_trigger": {"trigger_name": "contamination_increase"}}
+            ]
+        },
+        {
+            "name": "ShieldedStrafersModIcon",
+            "actions" : [
+                {"contamination_event": {"image": "contamination_icon_shielded_strafers", "name": "@shielded_strafers_label", "description": "@shielded_strafers_description"}},
+                {"sound_trigger": {"trigger_name": "contamination_increase"}}
+            ]
+        },
+        {
+            "name": "StarBombsMod",
+            "actions" : [
+                {"message_announcer": {"message": "@star_bombs", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "test_alarm_02"}}
+            ]
+        },
+        {
+            "name": "StarBombsModIcon",
+            "actions" : [
+                {"contamination_event": {"image": "contamination_icon_star_bomb", "name": "@star_bombs_label", "description": "@star_bombs_description"}},
+                {"sound_trigger": {"trigger_name": "contamination_increase"}}
+            ]
+        },
+        {
+            "name": "PrecisionStrikeMod",
+            "actions" : [
+                {"message_announcer": {"message": "@precision_strike", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "test_alarm_02"}}
+            ]
+        },
+        {
+            "name": "PrecisionStrikeModIcon",
+            "actions" : [
+                {"contamination_event": {"image": "contamination_icon_strafer_uav", "name": "@precision_strike_label", "description": "@precision_strike_description"}},
+                {"sound_trigger": {"trigger_name": "contamination_increase"}}
+            ]
+        },
+        {
+            "name": "LightningAnomalyMod",
+            "actions" : [
+                {"message_announcer": {"message": "@lightning_anomaly", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "test_alarm_02"}}
+            ]
+        },
+        {
+            "name": "LightningAnomalyModIcon",
+            "actions" : [
+                {"contamination_event": {"image": "contamination_icon_lighting_anomaly", "name": "@lightning_anomaly_label", "description": "@lightning_anomaly_description"}},
+                {"sound_trigger": {"trigger_name": "contamination_increase"}}
+            ]
+        },
+        {
+            "name": "AirstrikeMod",
+            "actions" : [
+                {"message_announcer": {"message": "@horde_meteor_strike", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "test_alarm_02"}}
+            ]
+        },
+        {
+            "name": "AirstrikeModIcon",
+            "actions" : [
+                {"contamination_event": {"image": "contamination_icon_orbital_strike", "name": "@airstrike_label", "description": "@airstrike_description"}},
+                {"sound_trigger": {"trigger_name": "contamination_increase"}}
+            ]
+        },
+        {
+            "name": "NoregenMod",
+            "actions" : [
+                {"message_announcer": {"message": "@horde_noregen", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "test_alarm_02"}}
+            ]
+        },
+        {
+            "name": "NoregenModIcon",
+            "actions" : [
+                {"contamination_event": {"image": "contamination_icon_regen_stop", "name": "@horde_noregen_label", "description": "@horde_noregen_description"}},
+                {"sound_trigger": {"trigger_name": "contamination_increase"}}
+            ]
+        },
+        {
+            "name": "PushbackAnomalyMod",
+            "actions" : [
+                {"message_announcer": {"message": "@horde_pushback", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "test_alarm_02"}}
+            ]
+        },
+        {
+            "name": "PushbackAnomalyModIcon",
+            "actions" : [
+                {"contamination_event": {"image": "contamination_icon_pushback", "name": "@pushback_label", "description": "@pushback_description"}},
+                {"sound_trigger": {"trigger_name": "contamination_increase"}}
+            ]
+        },
+        {
+            "name": "EruptionMod",
+            "actions" : [
+                {"message_announcer": {"message": "@Earthquake", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "test_alarm_02"}}
+            ]
+        },
+        {
+            "name": "EruptionModIcon",
+            "actions" : [
+                {"contamination_event": {"image": "contamination_icon_earthquake", "name": "@eruption_label", "description": "@eruption_description"}},
+                {"sound_trigger": {"trigger_name": "contamination_increase"}}
+            ]
+        },
+        {
+            "name": "TornadoModIcon",
+            "actions" : [
+                {"contamination_event": {"image": "contamination_icon_tornado", "name": "@tornado_mod_label", "description": "@tornado_mod_description"}},
+                {"sound_trigger": {"trigger_name": "contamination_increase"}}
+            ]
+        },
+        {
+            "name": "DeathRattleCurse",
+            "actions" : [
+                {"contamination_event": {"image": "contamination_icon_regen_stop", "name": "@death_rattle_curse_label", "description": "@death_rattle_curse_description"}},
+                {"sound_trigger": {"trigger_name": "contamination_increase"}}
+            ]
+        }
+    ]
+}

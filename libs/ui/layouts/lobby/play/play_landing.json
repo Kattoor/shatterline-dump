@@ -1,0 +1,29 @@
+{
+    "script": "scripts/ui/lobby/play/play_landing.lua",
+    "view_path": "PlayLanding.html",
+    "children":
+    [
+        {"name": "grid", "type": "Component", "view_path": "content.leftPanel.grid"},
+        {"name": "container", "type": "Component", "view_path": "content.leftPanel.grid.container", "file": "common/skip_focus_container.json"},
+
+        {"name": "play_label", "type": "Component", "view_path": "content.leftPanel.grid.container.playLabel", "visible": false},
+        {"name": "play_label_image", "type": "Image", "view_path": "content.leftPanel.grid.container.playLabel.imageWrapper.image"},
+        {"name": "play_label_title", "type": "Label", "view_path": "content.leftPanel.grid.container.playLabel.wrapper.titleWrapper.title"},
+
+        {"name": "loading", "type": "Component", "view_path": "content.leftPanel.grid.container.playLabel.wrapper.titleWrapper.loading"},
+        {"name": "loading_title", "type": "Label", "view_path": "content.leftPanel.grid.container.playLabel.wrapper.titleWrapper.loading.title", "text": "@mm_status_searching"},
+
+        {"name": "cancel_btn", "type": "Component", "view_path": "content.leftPanel.grid.container.cancelBtn", "file": "lobby/play/play_landing_small_btn.json"},
+
+        {"name": "banner", "type": "Component", "file": "common/scrolling_banner.json"},
+
+        {"name": "links_container", "type": "Component", "view_path": "linksContainer"},
+
+        {"name": "feedback_button", "type": "Button", "view_path": "linksContainer.feedbackButton", "text": "@leave_feedback"},
+        {"name": "invite_button", "type": "Button", "view_path": "linksContainer.inviteButton", "text": "@invite_friend"},
+        {"name": "license_button", "type": "Button", "view_path": "linksContainer.licenseButton", "text": "@license_title"},
+        {"name": "support_button", "type": "Button", "view_path": "linksContainer.supportButton", "text": "@support_window"},
+
+        {"name": "rotation_area", "type": "Panel", "view_path": "rotationArea"}
+    ]
+}

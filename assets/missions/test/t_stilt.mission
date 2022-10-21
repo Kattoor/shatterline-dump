@@ -1,0 +1,73 @@
+{
+  "metagame_info": {
+    "name_token": "@mission1",
+    "mission": "t_stilt",
+    "game_type": "pve",
+    "voice_chat_mode": "team_and_party",
+    "min_players_count": 1,
+    "time_to_join_sec": 240
+  },
+  "session_info": {
+    "level": "test_levels/ai/t_stilt",
+    "game_mode": "test_pve",
+    "default_class": "M"
+  },
+  "ui_info": {
+    "background_image": "level_loading"
+  },
+  "reward_info": {
+    "reward_calculators": [
+      {
+        "name": "pve_session_outcome",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "win": 500,
+              "draw": 400,
+              "loss": 300
+            }
+          },
+          {
+            "type": "xp",
+            "values": {
+              "win": 800,
+              "draw": 700,
+              "loss": 600
+            }
+          },
+          {
+            "type": "skill",
+            "values": {
+              "win": 1,
+              "draw": 0,
+              "loss": -1
+            }
+          }
+        ]
+      },
+      {
+        "name": "session_score",
+        "score": "Kill",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "reward": 5,
+              "max_reward": 100
+            }
+          },
+          {
+            "type": "xp",
+            "values": {
+              "reward": 10,
+              "max_reward": 1000
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

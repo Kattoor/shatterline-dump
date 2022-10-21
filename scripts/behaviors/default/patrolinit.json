@@ -1,0 +1,61 @@
+{
+    "name": "Default/PatrolInit",
+    "root": "4b4814fb-ab12-42f0-b5f3-4decc123558e",
+    "nodes": {
+        "78cd2a8b-b5b9-445d-8b10-55c3be91cac0": {
+            "name": "SetBehaviorCondition",
+            "pos": {
+                "x": -170,
+                "y": 199
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Patrol"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "4b4814fb-ab12-42f0-b5f3-4decc123558e": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 83
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "78cd2a8b-b5b9-445d-8b10-55c3be91cac0",
+                "8dec05b9-f0f9-4543-955b-cde8c09de1d4"
+            ]
+        },
+        "8dec05b9-f0f9-4543-955b-cde8c09de1d4": {
+            "name": "RunRegularBehavior",
+            "pos": {
+                "x": 130,
+                "y": 219
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

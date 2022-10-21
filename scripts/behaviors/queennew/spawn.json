@@ -1,0 +1,162 @@
+{
+    "name": "QueenNew/Spawn",
+    "root": "54f61d8c-2c4f-4ea9-a36a-262854fdecc9",
+    "nodes": {
+        "39dd1a49-c1af-48a5-8a71-dc514580457e": {
+            "name": "SendEventToScript",
+            "pos": {
+                "x": 115,
+                "y": 694
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EventName",
+                    "type": "StringHash",
+                    "value": "SpawnSlice"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "4f175b32-e30a-4716-9808-1f4a06e948cc": {
+            "name": "Play Animation",
+            "pos": {
+                "x": -85,
+                "y": 693
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "AnimationName",
+                    "type": "StringHash",
+                    "value": "spawn_gh"
+                },
+                {
+                    "name": "IsLooped",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Duration",
+                    "type": "Float",
+                    "value": "0.00"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "ce5614ba-95ca-4c0a-9bf8-22bb5cb078ca": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 229
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "SpawnAI"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "c26a58c1-9a35-4f58-9247-14d8ae16339b"
+        },
+        "e83fbc61-b807-4e85-a16f-940633d1634b": {
+            "name": "UnbreakableBehavior",
+            "pos": {
+                "x": 0,
+                "y": 479
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "2caaf871-58c7-41d7-b02b-d3ed3e083bf5"
+        },
+        "54f61d8c-2c4f-4ea9-a36a-262854fdecc9": {
+            "name": "SetBehaviorConditionAndResetOnExit",
+            "pos": {
+                "x": 0,
+                "y": 96
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Attack"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "ce5614ba-95ca-4c0a-9bf8-22bb5cb078ca"
+        },
+        "2caaf871-58c7-41d7-b02b-d3ed3e083bf5": {
+            "name": "ParallelUntilAllComplete",
+            "pos": {
+                "x": 0,
+                "y": 573
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "4f175b32-e30a-4716-9808-1f4a06e948cc",
+                "39dd1a49-c1af-48a5-8a71-dc514580457e"
+            ]
+        },
+        "6c1beb86-9968-459b-b512-466b57e5917e": {
+            "name": "StopTimer",
+            "pos": {
+                "x": -175,
+                "y": 479
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "TimerName",
+                    "type": "StringHash",
+                    "value": "FlightTime"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "c26a58c1-9a35-4f58-9247-14d8ae16339b": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 355
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "6c1beb86-9968-459b-b512-466b57e5917e",
+                "e83fbc61-b807-4e85-a16f-940633d1634b"
+            ]
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

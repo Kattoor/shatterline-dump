@@ -1,0 +1,12 @@
+{
+    "script": "scripts/ui/lobby/season_hub/season_hub.lua",
+    "view_path": "SeasonHub.html",
+    "send_stats": true,
+    "children":
+    [
+        { "name": "subtab_menu", "type": "Component", "file": "lobby/subtab_menu.json" },
+        { "name": "season_pass", "type": "Component", "file": "lobby/season_hub/season_pass.json", "visible": false },
+        { "name": "tasks", "type": "Component", "file": "lobby/tasks/tasks.json", "visible": false},
+        { "name": "about_season", "type": "Component", "file": "lobby/season_hub/about_season.json", "visible": false }
+    ]
+}

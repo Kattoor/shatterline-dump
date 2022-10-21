@@ -1,0 +1,461 @@
+{
+    "name": "Adamant/AdamantJump",
+    "root": "0fd28f17-2fe8-42b2-9cb5-f8e75d172b27",
+    "nodes": {
+        "7488d9bc-b650-4577-a61e-604ee532722a": {
+            "name": "MeleeJumpAttack",
+            "pos": {
+                "x": 440,
+                "y": 1663
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "AttackIndexSelectorBBPath",
+                    "type": "StringHash",
+                    "value": "Gai.Behavior"
+                },
+                {
+                    "name": "AddTargetVelocityDuration",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "jump_target_pos_track_time"
+                    ]
+                },
+                {
+                    "name": "MeleeDistanceDeviation",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "jump_target_point_distance_offset"
+                    ]
+                },
+                {
+                    "name": "DisableGravityDuration",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "jump_disable_gravity_duration"
+                    ]
+                },
+                {
+                    "name": "PrepareTime",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "before_jump_delay"
+                    ]
+                },
+                {
+                    "name": "PrepareIndex",
+                    "type": "Integer",
+                    "value": "1"
+                },
+                {
+                    "name": "KnockdownMaxHorAngle",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "jump_knockdown_max_hor_angle"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "f744dd67-b3ae-487e-a680-d917837b5211": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 135,
+                "y": 483
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "UnbreakableBehavior"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "5bd59f37-079b-439a-8ed3-4ae7d0c8984b"
+        },
+        "38a16cc3-a891-46e5-a707-fb355980d850": {
+            "name": "ClaimMeleeAttack",
+            "pos": {
+                "x": -140,
+                "y": 352
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Target",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "MeleeGroup",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "claim_melee_group"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "08527b62-9b67-4705-a772-407ed0117af2": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 440,
+                "y": 1264
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "JumpAttack"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "0011e9e0-5449-4b62-819f-21b79f91cfab"
+        },
+        "5f03ece1-9a89-43b5-a39d-14174e33f8f5": {
+            "name": "Sequence",
+            "pos": {
+                "x": 440,
+                "y": 1531
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "797a997a-7652-484d-b46f-6829a030f332",
+                "7488d9bc-b650-4577-a61e-604ee532722a",
+                "321685bb-92de-478a-b6a9-36ed75da6e72"
+            ]
+        },
+        "36edf827-070f-4971-bd6d-17ec1a5c27a7": {
+            "name": "AngleToTarget",
+            "pos": {
+                "x": 440,
+                "y": 1057
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Target",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "MaxAngle",
+                    "type": "Float",
+                    "value": "15.00"
+                },
+                {
+                    "name": "UseBodyYaw",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "08527b62-9b67-4705-a772-407ed0117af2"
+        },
+        "e0078fab-7278-43e3-94d8-bb5180373e51": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 440,
+                "y": 946
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "RotateToTargetForJump"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "36edf827-070f-4971-bd6d-17ec1a5c27a7"
+        },
+        "797a997a-7652-484d-b46f-6829a030f332": {
+            "name": "SelectItem",
+            "pos": {
+                "x": 105,
+                "y": 1666
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "TagName",
+                    "type": "StringHash",
+                    "value": "KNJump"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "321685bb-92de-478a-b6a9-36ed75da6e72": {
+            "name": "SelectItem",
+            "pos": {
+                "x": 755,
+                "y": 1666
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "TagName",
+                    "type": "StringHash",
+                    "value": "KN"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "0fd28f17-2fe8-42b2-9cb5-f8e75d172b27": {
+            "name": "ReleaseClaimedMeleeAttackOnExit",
+            "pos": {
+                "x": 0,
+                "y": 102
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "MeleeGroup",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "claim_melee_group"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "4f0ce82a-b1c5-46f3-9ebf-4a5c2194e6e4"
+        },
+        "e9d30271-ff70-4bbc-87d4-778632a11c5a": {
+            "name": "EraseBBValueByPath",
+            "pos": {
+                "x": 20,
+                "y": 823
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "BB Path",
+                    "type": "StringHash",
+                    "value": "Gai.Adamant.JumpCooldown"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "d58b0d39-254d-41ac-aeb0-a19feead9814": {
+            "name": "StartTimer",
+            "pos": {
+                "x": 235,
+                "y": 822
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "TimerName",
+                    "type": "StringHash",
+                    "value": "Jump"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "5bd59f37-079b-439a-8ed3-4ae7d0c8984b": {
+            "name": "Sequence",
+            "pos": {
+                "x": 135,
+                "y": 637
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "94804c52-c411-45ea-8b4e-1f5a83a5c2f2",
+                "e9d30271-ff70-4bbc-87d4-778632a11c5a",
+                "d58b0d39-254d-41ac-aeb0-a19feead9814",
+                "abb85294-b749-4c25-bc66-674915f6b4f3"
+            ]
+        },
+        "4f0ce82a-b1c5-46f3-9ebf-4a5c2194e6e4": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 226
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "38a16cc3-a891-46e5-a707-fb355980d850",
+                "c2f2cb4d-a612-46f7-9f17-6295de918681"
+            ]
+        },
+        "94804c52-c411-45ea-8b4e-1f5a83a5c2f2": {
+            "name": "SetBehaviorCondition",
+            "pos": {
+                "x": -225,
+                "y": 822
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "UnbreakableBehavior"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "0011e9e0-5449-4b62-819f-21b79f91cfab": {
+            "name": "ScriptEventGate",
+            "pos": {
+                "x": 440,
+                "y": 1385
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EnterEvent",
+                    "type": "StringHash",
+                    "value": "StartJumpAttack"
+                },
+                {
+                    "name": "ExitEvent",
+                    "type": "StringHash",
+                    "value": "FinishJumpAttack"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "5f03ece1-9a89-43b5-a39d-14174e33f8f5"
+        },
+        "c2f2cb4d-a612-46f7-9f17-6295de918681": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 135,
+                "y": 353
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Jumping"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "f744dd67-b3ae-487e-a680-d917837b5211"
+        },
+        "abb85294-b749-4c25-bc66-674915f6b4f3": {
+            "name": "LockTargetAndUnlockOnExit",
+            "pos": {
+                "x": 440,
+                "y": 823
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Target",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "e0078fab-7278-43e3-94d8-bb5180373e51"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

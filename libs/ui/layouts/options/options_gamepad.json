@@ -1,0 +1,20 @@
+{
+    "script": "scripts/ui/options/options_gamepad.lua",
+    "view_path": "OptionsListGamepad.html",
+    "send_stats": true,
+    "children":
+    [
+        {"name": "grid", "type": "Component", "view_path": "wrapper.container.optionsListGrid"},
+        {"name": "container", "type": "Component", "view_path": "wrapper.container.optionsListGrid.container.content"},
+        {"name": "scroll", "type": "Component", "view_path": "wrapper.container.optionsListGrid.sliderWrapper", "visible": false},
+
+        {"name": "info", "type": "Label", "view_path": "wrapper.container.parameterInfo", "visible": false},
+        {"name": "info_title", "type": "Label", "view_path": "wrapper.container.parameterInfo.title", "visible": false},
+        {"name": "info_image", "type": "Image", "view_path": "wrapper.container.parameterInfo.image", "visible": false},
+        {"name": "info_description", "type": "Label", "view_path": "wrapper.container.parameterInfo.description", "visible": false},
+
+        {"name": "gamepad", "type": "Image", "view_path": "wrapper.container.layoutInfo"},
+        {"name": "gamepad_image", "type": "Image", "view_path": "wrapper.container.layoutInfo.image"},
+        {"name": "gamepad_layout", "type": "Component", "view_path": "wrapper.container.layoutInfo", "file": "options/gamepad_layout.json"}
+    ]
+}

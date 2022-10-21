@@ -1,0 +1,13 @@
+{
+    "script": "scripts/ui/lobby/hero_container.lua",
+    "view_path": "HeroContainer.html",
+    "children": [
+
+        { "name": "navigation_bar", "type": "Component", "file": "lobby/navigation_bar_tiny.json" },
+        
+        { "name": "equipment", "type": "Component", "file": "lobby/hero_equipment.json", "visible": false },
+        { "name": "customization", "type": "Component", "file": "lobby/hero_customization.json", "visible": false },
+        { "name": "progression", "type": "Component", "file": "lobby/hero_progression.json", "visible": false }
+
+    ]
+}

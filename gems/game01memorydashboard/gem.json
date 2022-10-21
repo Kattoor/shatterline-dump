@@ -1,0 +1,24 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "0e4761040c1b452487989b5494614ee2",
+    "Name": "Game01MemoryDashboard",
+    "DisplayName": "Game01MemoryDashboard",
+    "Version": "0.1.0",
+    "Summary": "Provides debug visualization of memory used by the game per asset category",
+    "Tags": ["debug"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        }
+    ],
+    "Dependencies": [
+        {
+            "Uuid": "bab8807a1bc646b3909f3cc200ffeedf",
+            "VersionConstraints": [
+                "~>0.1"
+            ],
+            "_comment": "ImGui GEM"
+        }
+    ]
+}

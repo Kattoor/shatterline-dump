@@ -1,0 +1,349 @@
+{
+    "name": "Colossus/Death",
+    "root": "c2f4e730-9482-4078-bf60-1eb6d3ee38c2",
+    "nodes": {
+        "c2f4e730-9482-4078-bf60-1eb6d3ee38c2": {
+            "name": "UnbreakableBehavior",
+            "pos": {
+                "x": 0,
+                "y": 92
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "e2ee269a-8e33-4cbb-9888-3cf1135fba74"
+        },
+        "321642bf-7389-4621-a543-c6a5464ec6eb": {
+            "name": "Noop",
+            "pos": {
+                "x": 900,
+                "y": 531
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "a3c9e169-b70f-4cb9-82ec-ec9c90cd999d": {
+            "name": "SendEventToScript",
+            "pos": {
+                "x": -80,
+                "y": 539
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EventName",
+                    "type": "StringHash",
+                    "value": "OnBeforeQueenDeath"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "6d38d22d-d9b6-4d94-bfbc-51bd502990fd": {
+            "name": "ActivateComponents",
+            "pos": {
+                "x": 600,
+                "y": 529
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Tag",
+                    "type": "StringHash",
+                    "value": "queen_shield"
+                },
+                {
+                    "name": "Enable",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "e2ee269a-8e33-4cbb-9888-3cf1135fba74": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 203
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Death"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "631a76ca-3703-4059-90ae-5e9941aef959"
+        },
+        "50b6e386-89fa-4dca-8cdf-d3c293d34246": {
+            "name": "FindNearestEntityWithTags",
+            "pos": {
+                "x": -1220,
+                "y": 547
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Tag",
+                    "type": "Tag",
+                    "value": "queen_death_point"
+                },
+                {
+                    "name": "ExtraTag",
+                    "type": "Tag",
+                    "value": ""
+                },
+                {
+                    "name": "ExcludeId",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                },
+                {
+                    "name": "Range",
+                    "type": "Float",
+                    "value": "0.00"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "EntityId",
+                    "type": "Variable",
+                    "value": [
+                        "deathPointId"
+                    ]
+                },
+                {
+                    "name": "Distance",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "41e02c43-e780-4a7b-87a4-85ade13b9622": {
+            "name": "ActivateComponents",
+            "pos": {
+                "x": -885,
+                "y": 545
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Tag",
+                    "type": "StringHash",
+                    "value": "queen_shield"
+                },
+                {
+                    "name": "Enable",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "cf1b7790-61e2-4e8b-9fea-26bad901f51b": {
+            "name": "ApproachTo",
+            "pos": {
+                "x": -265,
+                "y": 674
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "deathPointId"
+                    ]
+                },
+                {
+                    "name": "EndDistance",
+                    "type": "Float",
+                    "value": "0.5"
+                },
+                {
+                    "name": "UpdateDestinationPoint",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "267184e1-92cd-4e65-b710-77572c5826e1": {
+            "name": "SetInvulnerability",
+            "pos": {
+                "x": -1035,
+                "y": 548
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "febb6e19-4937-485c-9fa7-132d4ed61580": {
+            "name": "Wait",
+            "pos": {
+                "x": 205,
+                "y": 528
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "death_voice_duration"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "631a76ca-3703-4059-90ae-5e9941aef959": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 320
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "50b6e386-89fa-4dca-8cdf-d3c293d34246",
+                "267184e1-92cd-4e65-b710-77572c5826e1",
+                "41e02c43-e780-4a7b-87a4-85ade13b9622",
+                "4c24520b-241b-48e1-b63c-627ea95f4569",
+                "029960bc-d80a-4971-9e76-6491befbe2f1",
+                "a3c9e169-b70f-4cb9-82ec-ec9c90cd999d",
+                "febb6e19-4937-485c-9fa7-132d4ed61580",
+                "3bffcc58-127c-46db-95f4-ae7375246327",
+                "6d38d22d-d9b6-4d94-bfbc-51bd502990fd",
+                "b073e460-0488-4838-ad5a-21b600007065",
+                "321642bf-7389-4621-a543-c6a5464ec6eb"
+            ]
+        },
+        "8612785e-2ae2-4ca6-824f-d6d4a39c1667": {
+            "name": "SetAnimState",
+            "pos": {
+                "x": -585,
+                "y": 543
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "AGInput",
+                    "type": "StringHash",
+                    "value": "None"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "4c24520b-241b-48e1-b63c-627ea95f4569": {
+            "name": "SetHealthFloor",
+            "pos": {
+                "x": -720,
+                "y": 543
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "HealthFloor",
+                    "type": "Float",
+                    "value": "0.00"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "b073e460-0488-4838-ad5a-21b600007065": {
+            "name": "Wait",
+            "pos": {
+                "x": 755,
+                "y": 530
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Float",
+                    "value": "0.5"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "029960bc-d80a-4971-9e76-6491befbe2f1": {
+            "name": "Succeeder",
+            "pos": {
+                "x": -265,
+                "y": 539
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "cf1b7790-61e2-4e8b-9fea-26bad901f51b"
+        },
+        "3bffcc58-127c-46db-95f4-ae7375246327": {
+            "name": "SetInvulnerability",
+            "pos": {
+                "x": 440,
+                "y": 528
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

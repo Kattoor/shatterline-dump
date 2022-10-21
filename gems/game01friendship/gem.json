@@ -1,0 +1,33 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "cba91ba6ed694420ba0d9fffcc0a2541",
+    "Name": "Friendship",
+    "DisplayName": "Friendship",
+    "Version": "0.1.0",
+    "Summary": "Friends management system",
+    "Tags": ["Untagged"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        }
+    ],
+    "Dependencies":
+    [   
+        {
+            "Uuid": "b8e16ebeec9346f18af81fe09b6844bf",
+            "VersionConstraints": ["~>0.1"],
+            "_comment": "ClientBackend"
+        },
+        {
+            "Uuid": "4d5d71b02d454ca3be846eb7e16b82f3",
+            "VersionConstraints": ["~>0.1"],
+            "_comment": "Notification"
+        },
+        {
+            "Uuid": "93ccb44a96b142f7942a3fb6b9ca36e1",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "LocalUser"
+        }
+    ]
+}

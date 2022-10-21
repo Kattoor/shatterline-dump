@@ -1,0 +1,23 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "94748877847b4749a583914e5b2c17ed",
+    "Name": "StatisticsProtocol",
+    "DisplayName": "StatisticsProtocol",
+    "Version": "0.1.0",
+    "Summary": "Common statistics protocol components",
+    "Tags": ["Untagged"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        }
+    ],
+    "Dependencies":
+    [
+        {
+            "Uuid": "28502d2aff664e6b8ee01a8dc493a42f",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "StatisticsCore"
+        }
+    ]
+}

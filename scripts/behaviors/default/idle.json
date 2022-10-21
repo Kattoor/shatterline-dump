@@ -1,0 +1,359 @@
+{
+    "name": "Default/Idle",
+    "root": "28e145ff-e501-45e1-ae81-e3708f870e2d",
+    "nodes": {
+        "a2a9efad-26ab-4b93-8fd2-fe53a8915ac7": {
+            "name": "FindNearestEntityWithTags",
+            "pos": {
+                "x": 95,
+                "y": 895
+            },
+            "inputs": [
+                {
+                    "name": "Tag",
+                    "type": "Tag",
+                    "value": "AIIdlePoint"
+                },
+                {
+                    "name": "ExtraTag",
+                    "type": "Tag",
+                    "value": "AIIdlePointEnabled"
+                },
+                {
+                    "name": "ExcludeId",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                },
+                {
+                    "name": "Range",
+                    "type": "Float",
+                    "value": "350"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "EntityId",
+                    "type": "Variable",
+                    "value": [
+                        "IdlePointId"
+                    ]
+                },
+                {
+                    "name": "Distance",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "fdbf4214-68f8-400e-880c-8e80ab333c22": {
+            "name": "Wait",
+            "pos": {
+                "x": 525,
+                "y": 649
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Float",
+                    "value": "1"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "bf132799-0a31-448e-b0ea-23991b0c6117": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": -460,
+                "y": 759
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "InvitedToDefenseZone"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "02ffe939-29fe-49c1-b553-78fe7179cd36"
+        },
+        "f3ce1926-9275-4320-94ce-d9e9ce69a3af": {
+            "name": "Sequence",
+            "pos": {
+                "x": 180,
+                "y": 747
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "f8ce0566-1536-4ac2-98c0-2e208f4c4607",
+                "a2a9efad-26ab-4b93-8fd2-fe53a8915ac7",
+                "a81ed0b7-f7d5-4024-bcfb-fa69a3fc2f7c",
+                "62850dbd-5eed-43b2-9c6c-71012574f2e2"
+            ]
+        },
+        "62850dbd-5eed-43b2-9c6c-71012574f2e2": {
+            "name": "ApproachTo",
+            "pos": {
+                "x": 540,
+                "y": 907
+            },
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "IdlePointId"
+                    ]
+                },
+                {
+                    "name": "EndDistance",
+                    "type": "Float",
+                    "value": "2.00"
+                },
+                {
+                    "name": "UpdateDestinationPoint",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "28e145ff-e501-45e1-ae81-e3708f870e2d": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 84
+            },
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Idle"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "bcc22e03-ab12-4bd3-af1a-79e86a0020e2"
+        },
+        "f5240725-1ac7-4486-a342-745ec78042a6": {
+            "name": "Sequence",
+            "pos": {
+                "x": 330,
+                "y": 541
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "ef4e504e-9cb1-4b98-aeef-fc9ffb3fc289",
+                "fdbf4214-68f8-400e-880c-8e80ab333c22"
+            ]
+        },
+        "a344b905-acf4-414e-9d80-5cb4894230f5": {
+            "name": "IsBehaviorCondition",
+            "pos": {
+                "x": -460,
+                "y": 578
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "InvitedToDefenseZone"
+                },
+                {
+                    "name": "ResetOnExit",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "bf132799-0a31-448e-b0ea-23991b0c6117"
+        },
+        "7d0f2db0-b446-4393-87bf-62dbbc973181": {
+            "name": "Selector",
+            "pos": {
+                "x": -11.5,
+                "y": 386
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "a344b905-acf4-414e-9d80-5cb4894230f5",
+                "20ee4f1e-90e4-41e8-b48c-1079ddc7ffd9",
+                "f5240725-1ac7-4486-a342-745ec78042a6"
+            ]
+        },
+        "ef4e504e-9cb1-4b98-aeef-fc9ffb3fc289": {
+            "name": "Succeeder",
+            "pos": {
+                "x": 180,
+                "y": 650
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "f3ce1926-9275-4320-94ce-d9e9ce69a3af"
+        },
+        "bcc22e03-ab12-4bd3-af1a-79e86a0020e2": {
+            "name": "SetStrafeAllowedAndRestoreOnExit",
+            "pos": {
+                "x": 0,
+                "y": 205
+            },
+            "inputs": [
+                {
+                    "name": "Allow",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "7d0f2db0-b446-4393-87bf-62dbbc973181"
+        },
+        "a81ed0b7-f7d5-4024-bcfb-fa69a3fc2f7c": {
+            "name": "SendBehaviorEvent",
+            "pos": {
+                "x": 310,
+                "y": 910
+            },
+            "inputs": [
+                {
+                    "name": "EventName",
+                    "type": "StringHash",
+                    "value": "start_moving"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "02ffe939-29fe-49c1-b553-78fe7179cd36": {
+            "name": "NavigateToNearestDefenseZone",
+            "pos": {
+                "x": -460,
+                "y": 887
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "22b10f0a-7184-4c53-a031-533f83c16f7e": {
+            "name": "Wait",
+            "pos": {
+                "x": -245,
+                "y": 756
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Float",
+                    "value": "1"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "f8ce0566-1536-4ac2-98c0-2e208f4c4607": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -100,
+                "y": 899
+            },
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "IdlePointId"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "EntityId"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "20ee4f1e-90e4-41e8-b48c-1079ddc7ffd9": {
+            "name": "IsInsideDefenseArea",
+            "pos": {
+                "x": -245,
+                "y": 578
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "22b10f0a-7184-4c53-a031-533f83c16f7e"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

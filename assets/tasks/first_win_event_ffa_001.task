@@ -1,0 +1,30 @@
+{
+  "name": "first_win_event_ffa_001",
+  "type": "daily",
+  "tags": [
+    "first_win_event_ffa_001"
+  ],
+  "ui_tags": ["mode_specific", "event_ffa"],
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "uncommon",
+  "display_name": { "localization_key": "@first_win_event_ffa_001_name" },
+  "description": { "localization_key": "@first_win_event_ffa_001_description" },
+  "conditions": [
+    {
+      "name": "first_win_event_ffa_001",
+      "event_description": { "localization_key": "@first_win_event_ffa_001_event_description" },
+      "event": { "event_id": "MVP", "actor_is_me": true, "actor_status_is": ["@best_score", "@best_kill", "@zone_captured_mvp", "@best_leaderboard", "@longest_streak", "@best_kill", "@best_killstreaks", 
+      "@best_headshot", "@best_melee", "@most_ult_kills", "@best_pistolero", "@most_ability_kills"], 
+      "actor_playlist_name_is": ["event_ffa"]},
+      "progress": 1
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 5
+    }
+  ]
+}

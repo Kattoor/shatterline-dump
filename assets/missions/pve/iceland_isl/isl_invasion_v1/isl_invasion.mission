@@ -1,0 +1,252 @@
+{
+  "metagame_info": {
+    "name_token": "@invasion_label",
+    "mission": "isl_invasion",
+    "game_type": "pvp",
+    "voice_chat_mode": "party_only",
+    "min_players_count": 4,
+    "time_to_join_sec": 900,
+    "reconnect_enable": true
+  },
+  "session_info": {
+    "level": "pve/iceland_isl/isl_invasion_v1",
+    "game_mode": "invasion",
+    "result_scene": "levels/pve/iceland_isl/isl_invasion_v1/slices/result_stage/result_stage_invasion.dynamicslice",
+    "mission_modifiers": [
+      "player_inventory",
+      "ai_director_invasion_proto",
+      "restore_checkpoint_invasion",
+      "invasion_pushback",
+      "task_custom_event_sender"
+    ]
+  },
+  "ui_info": {
+    "background_image": "loading_invasion",
+    "sound_event": "invasion_loading",
+    "sound_stop_event": "invasion_loading_stop"
+  },
+  "reward_info": {
+    "reward_calculators": [
+      {
+        "name": "session_outcome",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "win": 300,
+              "draw": 200,
+              "loss": 15
+            }
+          },
+          {
+            "type": "xp",
+            "values": {
+              "win": 1200,
+              "draw": 1000,
+              "loss": 800
+            }
+          },
+          {
+             "type": "season_xp",
+             "values": {
+             "win": 10,
+              "draw": 7,
+              "loss": 5
+            }
+          },
+          {
+            "type": "skill",
+            "values": {
+              "win": 1,
+              "draw": 0,
+              "loss": -1
+            }
+          }
+        ]
+      },
+      {
+        "name": "session_score",
+        "score": "Time",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "range_based": true,
+            "cumulative": true,
+            "values": {
+              "60": 3,
+              "120": 3,
+              "180": 3,
+              "240": 3,
+              "300": 3,
+              "360": 3,
+              "420": 3,
+              "480": 3,
+              "540": 3,
+              "600": 3,
+              "660": 3,
+              "720": 3,
+              "780": 3,
+              "840": 3,
+              "900": 3,
+              "960": 3,
+              "1020": 3,
+              "1080": 3,
+              "1140": 3,
+              "1200": 3,
+              "1260": 3,
+              "1320": 3,
+              "1380": 3,
+              "1440": 3,
+              "1500": 3,
+              "1560": 3,
+              "1620": 3,
+              "1680": 3,
+              "1740": 3,
+              "1800": 3
+            }
+          }
+        ]
+      },
+      {
+        "name": "session_score",
+        "score": "Time",
+        "configs": [
+          {
+            "type": "season_xp",
+            "name": "",
+            "range_based": true,
+            "cumulative": true,
+            "values": {
+              "60": 1,
+              "120": 1,
+              "180": 1,
+              "240": 1,
+              "300": 1,
+              "360": 1,
+              "420": 1,
+              "480": 1,
+              "540": 1,
+              "600": 1,
+              "660": 1,
+              "720": 1,
+              "780": 1,
+              "840": 1,
+              "900": 1,
+              "960": 1,
+              "1020": 1,
+              "1080": 1,
+              "1140": 1,
+              "1200": 1,
+              "1260": 1,
+              "1320": 1,
+              "1380": 1,
+              "1440": 1,
+              "1500": 1,
+              "1560": 1,
+              "1620": 1,
+              "1680": 1,
+              "1740": 1,
+              "1800": 1
+            }
+          }
+        ]
+      },
+      {
+        "name": "session_score",
+        "score": "Kill",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "reward": 0,
+              "max_reward": 1
+            }
+          },
+          {
+            "type": "xp",
+            "values": {
+              "reward": 1,
+              "max_reward": 500
+            }
+          }
+        ]
+      }
+    ],
+    "weapon_score": [
+      {
+        "event": {
+          "event_id": "Kill",
+          "target_ai_archetype_is_not": []
+        },
+        "score": 70
+      },
+      {
+        "event": {
+          "event_id": "Headshot"
+        },
+        "score": 25
+      },
+      {
+        "event": {
+          "event_id": "WeaponTick"
+        },
+        "score": 12
+      },
+      {
+        "event": {
+          "event_id": "Assist"
+        },
+        "score": 70
+      },
+      {
+        "event": {
+          "event_id": "PlayerKill"
+        },
+        "score": 200
+      }
+    ],
+    "hero_score": [
+      {
+        "event": {
+          "event_id": "Kill",
+          "target_ai_archetype_is_not": []
+        },
+        "score": 50
+      },
+      {
+        "event": {
+          "event_id": "Assist"
+        },
+        "score": 25
+      },
+      {
+        "event": {
+          "event_id": "Heal",
+          "target_team": "Same"
+        },
+        "score": 0.5
+      },
+      {
+        "event": {
+          "event_id": "Resurrect"
+        },
+        "score": 100
+      },
+      {
+        "event": {
+          "event_id": "WeaponTick"
+        },
+        "score": 5
+      },
+      {
+        "event": {
+          "event_id": "PlayerKill"
+        },
+        "score": 200
+      }
+    ]
+  }
+}

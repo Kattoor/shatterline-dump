@@ -1,0 +1,99 @@
+{
+    "name": "Colossus/Spawn",
+    "root": "54f61d8c-2c4f-4ea9-a36a-262854fdecc9",
+    "nodes": {
+        "39dd1a49-c1af-48a5-8a71-dc514580457e": {
+            "name": "SendEventToScript",
+            "pos": {
+                "x": 115,
+                "y": 538
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EventName",
+                    "type": "StringHash",
+                    "value": "SpawnSlice"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "2caaf871-58c7-41d7-b02b-d3ed3e083bf5": {
+            "name": "ParallelUntilAllComplete",
+            "pos": {
+                "x": 0,
+                "y": 417
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "39dd1a49-c1af-48a5-8a71-dc514580457e"
+            ]
+        },
+        "ce5614ba-95ca-4c0a-9bf8-22bb5cb078ca": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 219
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "SpawnAI"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "e83fbc61-b807-4e85-a16f-940633d1634b"
+        },
+        "e83fbc61-b807-4e85-a16f-940633d1634b": {
+            "name": "UnbreakableBehavior",
+            "pos": {
+                "x": 0,
+                "y": 323
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "2caaf871-58c7-41d7-b02b-d3ed3e083bf5"
+        },
+        "54f61d8c-2c4f-4ea9-a36a-262854fdecc9": {
+            "name": "SetBehaviorConditionAndResetOnExit",
+            "pos": {
+                "x": 0,
+                "y": 86
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Attack"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "ce5614ba-95ca-4c0a-9bf8-22bb5cb078ca"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

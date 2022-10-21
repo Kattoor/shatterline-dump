@@ -1,0 +1,47 @@
+{
+    "script": "scripts/ui/lobby/play/mode_info_pvp.lua",
+    "view_path": "ModeInfoPVP.html",
+    "children":
+    [
+        {"name": "screen_header", "type": "Component", "file": "common/screen_header.json"},
+
+        {"name": "mode_title", "type": "Label", "view_path": "container.leftPanel.title"},
+        {"name": "mode_description", "type": "Label", "view_path": "container.leftPanel.description"},
+        {"name": "mode_hint", "type": "Label", "view_path": "container.leftPanel.hint"},
+
+        {"name": "list_box", "type": "FiltersListBox", "view_path": "container.leftPanel"},
+        {"name": "list_box_container", "type": "Component", "view_path": "container.leftPanel.container"},
+
+        {"name": "modifiers", "type": "Panel", "view_path": "container.leftPanel.modifiers"},
+        {"name": "modifiers_title", "type": "Label", "view_path": "container.leftPanel.modifiers.titleWrapper.title", "text": "@pve_modifiers_title"},
+        {"name": "modifiers_container", "type": "Component", "view_path": "container.leftPanel.modifiers.container"},
+
+        {"name": "mode_info_title", "type": "Label", "view_path": "container.centerPanel.title"},
+        {"name": "mode_info_video", "type": "Video", "view_path": "container.centerPanel.video", "loop": true, "background": true},
+
+        {"name": "parameter1", "type": "Label", "view_path": "container.centerPanel.modeParameters.parameter1"},
+        {"name": "parameter1_title", "type": "Label", "view_path": "container.centerPanel.modeParameters.parameter1.title"},
+        {"name": "parameter1_container", "type": "Label", "view_path": "container.centerPanel.modeParameters.parameter1.text"},
+
+        {"name": "parameter2", "type": "Label", "view_path": "container.centerPanel.modeParameters.parameter2"},
+        {"name": "parameter2_title", "type": "Label", "view_path": "container.centerPanel.modeParameters.parameter2.title"},
+        {"name": "parameter2_container", "type": "Label", "view_path": "container.centerPanel.modeParameters.parameter2.text"},
+
+        {"name": "parameter3", "type": "Label", "view_path": "container.centerPanel.modeParameters.parameter3"},
+        {"name": "parameter3_title", "type": "Label", "view_path": "container.centerPanel.modeParameters.parameter3.title"},
+        {"name": "parameter3_container", "type": "Label", "view_path": "container.centerPanel.modeParameters.parameter3.text"},
+
+        {"name": "parameter4", "type": "Label", "view_path": "container.centerPanel.modeParameters.parameter4"},
+        {"name": "parameter4_title", "type": "Label", "view_path": "container.centerPanel.modeParameters.parameter4.title"},
+        {"name": "parameter4_container", "type": "Label", "view_path": "container.centerPanel.modeParameters.parameter4.text"},
+
+        {"name": "parameter5", "type": "Label", "view_path": "container.centerPanel.modeParameters.parameter5"},
+        {"name": "parameter5_title", "type": "Label", "view_path": "container.centerPanel.modeParameters.parameter5.title"},
+        {"name": "parameter5_container", "type": "Label", "view_path": "container.centerPanel.modeParameters.parameter5.text"},
+
+        {"name": "mode_info_description", "type": "Label", "view_path": "container.centerPanel.description"},
+
+        {"name": "play_btn", "type": "Button", "view_path": "container.rightPanel.playButton", "text": "@play"},
+        {"name": "play_btn_hint", "type": "ActionLabel", "view_path": "container.rightPanel.playButton.wrapper.key", "gamepad_only": true}
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "weapon_assets":
+    [
+        "fg01",
+        "fg02",
+        "sg01",
+        "test_flg01",
+        "gr_frag02_ai",
+        "flg01_ai",
+        "flg01",
+        "spg01",
+        "spg07"
+    ],
+    "motion_sets":
+    [
+        "fg01_1p",
+        "fg02_3p",
+        "strafer",
+        "fg01_wpn"
+    ],
+    "binding_motions_to_parameters":
+    [
+        {
+            "motion": "stand_toss_prepare_grenade_3p",
+            "weapon_parameter" : "duration_prepare"
+        },
+        {
+            "motion": "stand_toss_throw_grenade_3p",
+            "weapon_parameter" : "duration_throw"
+        },
+        {
+            "motion": "toss_throw",
+            "weapon_parameter" : "grenade_duration_throw"
+        },
+        {
+            "motion": "toss_throw_wpn",
+            "weapon_parameter" : "grenade_duration_throw"
+        }
+    ]
+}

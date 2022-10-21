@@ -1,0 +1,398 @@
+{
+    "name": "Behemoth/RangedAttack",
+    "root": "a677026b-c648-4537-a6c4-becc9f34dead",
+    "nodes": {
+        "a677026b-c648-4537-a6c4-becc9f34dead": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 113
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Shooting"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "af967d8c-d13d-400b-95e3-d3f53082ac80"
+        },
+        "ea5d6b7f-8203-43e1-8a82-9320c7fc1326": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": -260,
+                "y": 351
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "WaitForAngleToTarget"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "a8571013-231c-4e1d-bef7-9865d665c852"
+        },
+        "f75a72fa-8b7b-4c4e-b03c-ba738261598e": {
+            "name": "RandomChance",
+            "pos": {
+                "x": 295,
+                "y": 838
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Probability",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "jump_during_fire_prob"
+                    ]
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "8ddb3fff-3ae7-400d-9e4a-1ce709aca336"
+        },
+        "b615ccd6-ff45-4c22-bcca-915541a95f7c": {
+            "name": "ParallelUntilAnyComplete",
+            "pos": {
+                "x": 255,
+                "y": 474
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "ea24fedf-a128-469c-9857-c87ebab88daf",
+                "e1a55e97-074c-4a33-b9b4-f2bd2a87d13a",
+                "56f17647-627a-4ae6-9fbb-4907344ad514"
+            ]
+        },
+        "a4cd2fff-0e22-42da-af28-3066db37708a": {
+            "name": "Success",
+            "pos": {
+                "x": 875,
+                "y": 796
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "56f17647-627a-4ae6-9fbb-4907344ad514": {
+            "name": "AngleToTarget",
+            "pos": {
+                "x": 875,
+                "y": 582
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Target",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "MaxAngle",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "ranged_attack_cancel_if_angle"
+                    ]
+                },
+                {
+                    "name": "UseBodyYaw",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "a4cd2fff-0e22-42da-af28-3066db37708a"
+        },
+        "af967d8c-d13d-400b-95e3-d3f53082ac80": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 232
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "ea5d6b7f-8203-43e1-8a82-9320c7fc1326",
+                "c47878ef-ee52-4cf5-bf24-72764bb1c462"
+            ]
+        },
+        "fbf494f3-0e17-4097-a6c0-4eeded2698b1": {
+            "name": "WaitRandom",
+            "pos": {
+                "x": -125,
+                "y": 854
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "MinWaitTime",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "jump_during_fire_delay_min"
+                    ]
+                },
+                {
+                    "name": "MaxWaitTime",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "jump_during_fire_delay_max"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "603ec6bc-5c83-4454-ad90-748b697469e0": {
+            "name": "Success",
+            "pos": {
+                "x": -260,
+                "y": 671
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "c47878ef-ee52-4cf5-bf24-72764bb1c462": {
+            "name": "ScriptEventGate",
+            "pos": {
+                "x": 255,
+                "y": 350
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EnterEvent",
+                    "type": "StringHash",
+                    "value": "ranged_attack_begin"
+                },
+                {
+                    "name": "ExitEvent",
+                    "type": "StringHash",
+                    "value": "ranged_attack_end"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "b615ccd6-ff45-4c22-bcca-915541a95f7c"
+        },
+        "e1a55e97-074c-4a33-b9b4-f2bd2a87d13a": {
+            "name": "WaitRandom",
+            "pos": {
+                "x": 460,
+                "y": 583
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "MinWaitTime",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "ranged_attack_duration_min"
+                    ]
+                },
+                {
+                    "name": "MaxWaitTime",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "ranged_attack_duration_max"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "ea8c16c5-65da-4b92-aeb0-90c197fce9e0": {
+            "name": "Sequence",
+            "pos": {
+                "x": 95,
+                "y": 713
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "fbf494f3-0e17-4097-a6c0-4eeded2698b1",
+                "f75a72fa-8b7b-4c4e-b03c-ba738261598e"
+            ]
+        },
+        "a8571013-231c-4e1d-bef7-9865d665c852": {
+            "name": "AngleToTarget",
+            "pos": {
+                "x": -260,
+                "y": 466
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Target",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "MaxAngle",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "attacks_angle_to_target"
+                    ]
+                },
+                {
+                    "name": "UseBodyYaw",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "603ec6bc-5c83-4454-ad90-748b697469e0"
+        },
+        "8ddb3fff-3ae7-400d-9e4a-1ce709aca336": {
+            "name": "SetBehaviorCondition",
+            "pos": {
+                "x": 295,
+                "y": 1029
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "BehemothJump"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "ea24fedf-a128-469c-9857-c87ebab88daf": {
+            "name": "Repeater",
+            "pos": {
+                "x": 95,
+                "y": 585
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Iterations",
+                    "type": "Integer",
+                    "value": "0"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "ea8c16c5-65da-4b92-aeb0-90c197fce9e0"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

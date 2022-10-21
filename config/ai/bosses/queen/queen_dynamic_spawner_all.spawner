@@ -1,0 +1,72 @@
+{
+    "waves": [
+        {
+            "name": "wave1",
+            "totalLimit": 8,
+            "count": 0,
+            "groupCount": 1,
+            "spawnDelay": 2.0,
+            "filterTag": "queen_boss_spawn",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(2) Glasshead: Jump" ],
+                    "probability": 100,
+                    "count": 4,
+                    "groupCount": 3,
+                    "spawnDelay": 3.0
+                }
+            ]
+        },
+        {
+            "name": "wave2",
+            "totalLimit": 10,
+            "count": 0,
+            "groupCount": 1,
+            "spawnDelay": 2.0,
+            "filterTag": "queen_boss_spawn",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(2) Glasshead: Jump" ],
+                    "probability": 100,
+                    "count": 4,
+                    "groupCount": 3,
+                    "spawnDelay": 3.0
+                },
+                {
+                    "tags": [ "Shardskin Glasshead" ],
+                    "probability": 30,
+                    "count": 1,
+                    "groupCount": 1,
+                    "spawnDelay": 20.0
+                }
+            ]
+        },
+        {
+            "name": "wave3",
+            "totalLimit": 12,
+            "count": 0,
+            "groupCount": 1,
+            "spawnDelay": 2.5,
+            "filterTag": "queen_boss_spawn",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "Adamant Glasshead" ],
+                    "probability": 10,
+                    "count": 1,
+                    "groupCount": 1,
+                    "spawnDelay": 20.0
+                },
+                {
+                    "tags": [ "(2) Glasshead: Jump" ],
+                    "probability": 90,
+                    "count": 4,
+                    "groupCount": 3,
+                    "spawnDelay": 3.0
+                }
+            ]
+        }
+    ]
+}

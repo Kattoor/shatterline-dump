@@ -1,0 +1,922 @@
+{
+  "events": [
+    {
+      "name": "OnHit"
+    },
+    {
+      "name": "Kill"
+    },
+    {
+      "name": "HipKill"
+    },
+    {
+      "name": "AdsKill"
+    },
+    {
+      "name": "ResurrectInvis"
+    },
+    {
+      "name": "KillAfterInvis"
+    },
+    {
+      "name": "Assist"
+    },
+    {
+      "name": "LeaderboardPlace"
+    },
+    {
+      "name": "Resurrect"
+    },
+    {
+      "name": "Death"
+    },
+    {
+      "name": "Heal"
+    },
+    {
+      "name": "FirstBlood"
+    },
+    {
+      "name": "Revenge"
+    },
+    {
+      "name": "ReturnFire"
+    },
+    {
+      "name": "ShutDown"
+    },
+    {
+      "name": "MedkitUsed"
+    },
+    {
+      "name": "ZoneCaptured"
+    },
+    {
+      "name": "Suicide"
+    },
+    {
+      "name": "WeaponTick"
+    },
+    {
+      "name": "DestroyEnemyObjects"
+    },
+    {
+      "name": "EscortDogSpawn"
+    },
+    {
+      "name": "EnemyFrozen"
+    },
+    {
+      "name": "KillEnemyDrone"
+    },
+    {
+      "name": "Headshot",
+      "event": [
+        {
+          "event_id": "Kill",
+          "hit_part_is": ["Head", "Weakpoint"]
+        }
+      ]
+    },
+    {
+      "name": "BladeMaster",
+      "event": [
+        {
+          "event_id": "Kill",
+          "hit_type_is": ["Melee"],
+          "target_player_preset_is_not": []
+        }
+      ]
+    },
+    {
+      "name": "SlideKill",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_stance_is": ["Slide"],
+          "actor_item_tag_is_not": ["CM"],
+          "target_player_preset_is_not": []
+        }
+      ]
+    },
+    {
+      "name": "CollateralKill",
+      "event": [
+        {
+          "event_id": "Kill",
+          "hit_type_is": ["AOE"],
+          "target_player_preset_is_not": []
+        }
+      ],
+      "count": 2,
+      "time_to_perform": 0.1,
+      "reset_on_completion": true
+    },
+    {
+      "name": "FieldMedic",
+      "event": [
+        {
+          "event_id": "Resurrect"
+        }
+      ],
+      "count": 2,
+      "reset_on_death": true,
+      "reset_on_completion": false
+    },
+    {
+      "name": "DoubleKill",
+      "event": [
+        {
+          "event_id": "Kill",
+          "target_player_preset_is_not": []
+        },
+        {
+          "event_id": "Assist",
+          "target_player_preset_is_not": []
+        }
+      ],
+      "count": 2,
+      "time_to_perform": 2,
+      "reset_on_completion": true
+    },
+    {
+      "name": "DoubleHit",
+      "event": [
+        {
+          "event_id": "OnHit",
+          "target_player_preset_is_not": [],
+          "actor_item_tag_is": ["FG", "CG", "CM", "KD", "AXE", "IK03", "RD"]
+        }
+      ],
+      "count": 2,
+      "time_to_perform": 2,
+      "reset_on_completion": true
+    },
+    {
+      "name": "TripleKill",
+      "event": [
+        {
+          "event_id": "Kill",
+          "target_player_preset_is_not": []
+        },
+        {
+          "event_id": "Assist",
+          "target_player_preset_is_not": []
+        }
+      ],
+      "count": 3,
+      "time_to_perform": 2,
+      "reset_on_completion": false
+    },
+    {
+      "name": "KillStreak",
+      "event": [
+        {
+          "event_id": "Kill",
+          "target_player_preset_is_not": []
+        },
+        {
+          "event_id": "Assist",
+          "target_player_preset_is_not": []
+        }
+      ],
+      "count": 3,
+      "reset_on_completion": false
+    },
+    {
+      "name": "Rampage",
+      "event": [
+        {
+          "event_id": "Kill",
+          "target_player_preset_is_not": []
+        },
+        {
+          "event_id": "Assist",
+          "target_player_preset_is_not": []
+        }
+      ],
+      "count": 5,
+      "reset_on_completion": false
+    },
+    {
+      "name": "Bloodlust",
+      "event": [
+        {
+          "event_id": "Kill",
+          "target_player_preset_is_not": []
+        },
+        {
+          "event_id": "Assist",
+          "target_player_preset_is_not": []
+        }
+      ],
+      "count": 7,
+      "reset_on_completion": false
+    },
+    {
+      "name": "Defender",
+      "event": [
+        {
+          "event_id": "Kill",
+          "target_team": "Opposite",
+          "actor_team": "Same",
+          "target_in_objective": true,
+          "target_player_preset_is_not": []
+        }
+      ],
+      "count": 2
+    },
+    {
+      "name": "Dominator",
+      "event": [
+        {
+          "event_id": "Kill",
+          "target_team": "Opposite",
+          "actor_team": "Same",
+          "actor_in_objective": true,
+          "target_player_preset_is_not": []
+        }
+      ],
+      "count": 2
+    },
+    {
+      "name": "FirstCapture"
+    },
+    {
+      "name": "ConquestDiscoverer"
+    },
+    {
+      "name": "Pistolero",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_item_tag_is": ["PT"],
+          "target_player_preset_is_not": []
+        }
+      ],
+      "count": 2,
+      "reset_on_death": true,
+      "reset_on_completion": true
+    },
+    {
+      "name": "OtpistoletitBrisku",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_item_tag_is": ["PT"],
+          "target_player_preset_is":["s_brisa"]
+        }
+      ],
+      "count": 1,
+      "reset_on_completion": true
+    },
+    {
+      "name": "OtpistoletitKite",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_item_tag_is": ["PT"],
+          "target_player_preset_is":["s_kite"]
+        }
+      ],
+      "count": 1,
+      "reset_on_completion": true
+    },
+    {
+      "name": "OtpistoletitMongoose",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_item_tag_is": ["PT"],
+          "target_player_preset_is":["a_mongoose"]
+        }
+      ],
+      "count": 1,
+      "reset_on_completion": true
+    },
+    {
+      "name": "OtpistoletitPill",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_item_tag_is": ["PT"],
+          "target_player_preset_is":["m_pill"]
+        }
+      ],
+      "count": 1,
+      "reset_on_completion": true
+    },
+    {
+      "name": "OtpistoletitMalva",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_item_tag_is": ["PT"],
+          "target_player_preset_is":["m_malva"]
+        }
+      ],
+      "count": 1,
+      "reset_on_completion": true
+    },
+    {
+      "name": "OtpistoletitRam",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_item_tag_is": ["PT"],
+          "target_player_preset_is":["h_ram"]
+        }
+      ],
+      "count": 1,
+      "reset_on_completion": true
+    },
+    {
+      "name": "OtpistoletitOrbit",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_item_tag_is": ["PT"],
+          "target_player_preset_is":["a_orbit"]
+        }
+      ],
+      "count": 1,
+      "reset_on_completion": true
+    },
+    {
+      "name": "OtpistoletitStrix",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_item_tag_is": ["PT"],
+          "target_player_preset_is":["h_strix"]
+        }
+      ],
+      "count": 1,
+      "reset_on_completion": true
+    },
+    {
+      "name": "UltKill",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_item_tag_is": ["ULT", "ult_ik01"],
+          "target_player_preset_is_not": []
+        }
+      ]
+    },
+    {
+      "name": "AbilityKill",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_item_tag_is": ["FG", "CG", "CM", "KD", "AXE", "IK03", "RD"],
+          "target_player_preset_is_not": []
+        }
+      ]
+    },
+    {
+      "name": "Support",
+      "event": [
+        {
+          "event_id": "Throw",
+          "actor_item_tag_is": ["FLG", "SG", "MK", "MD", "FD", "CG", "WG"]
+        },
+        {
+          "event_id": "PowerItemStart",
+          "actor_item_tag_is": ["IK02"]
+        }
+      ]
+    },
+    {
+      "name": "SupportUse",
+      "event": [
+        {
+          "event_id": "Throw",
+          "actor_item_tag_is": ["FLG", "SG", "MK", "MD", "FD", "WG", "CG"]
+        }
+      ],
+      "count": 2,
+      "reset_on_death": true,
+      "reset_on_completion": true
+    },
+    {
+      "name": "PlayerKill",
+      "event": [
+        {
+          "event_id": "Kill",
+          "target_player_class_is": ["A", "M", "H", "S"]
+        }
+      ]
+    },
+    {
+      "name": "ExplosiveObjectKill",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_item_tag_is": ["explosive"],
+          "target_player_class_is_not": []
+        }
+      ]
+    },
+    {
+      "name": "MovableObjectKill",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_item_tag_is": ["movable"],
+          "target_player_class_is_not": []
+        }
+      ]
+    },
+    {
+      "name": "Viking",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_item_tag_is": ["AXE"],
+          "actor_is_me": true
+        }
+      ],
+      "count": 1,
+      "reset_on_death": true,
+      "reset_on_completion": true
+    },
+    {
+      "name": "KickKill",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_item_tag_is": ["character_kick"],
+          "target_player_class_is_not": []
+        }
+      ]
+    },
+    {
+      "name": "RamUltimateKillRam",
+      "event": [
+        {
+          "event_id": "Kill", "actor_item_tag_is": ["ULT", "ult_ik01"], "actor_player_preset_is": ["h_ram"], 
+          "target_player_preset_is": ["h_ram"]
+        }
+      ],
+      "count": 1
+    },
+    {
+      "name": "StrixUltimateKillStrix",
+      "event": [
+        {
+          "event_id": "Kill", "actor_item_tag_is": ["ULT", "ult_ik01"], "actor_player_preset_is": ["h_strix"], 
+          "target_player_preset_is": ["h_strix"]
+        }
+      ],
+      "count": 1
+    },
+    {
+      "name": "OrbitUltimateKillOrbit",
+      "event": [
+        {
+          "event_id": "Kill", "actor_item_tag_is": ["ULT", "ult_ik01"], "actor_player_preset_is": ["a_orbit"], 
+          "target_player_preset_is": ["a_orbit"]
+        }
+      ],
+      "count": 1
+    },
+    {
+      "name": "MongooseUltimateKillMongoose",
+      "event": [
+        {
+          "event_id": "Kill", "actor_item_tag_is": ["ULT", "ult_ik01"], "actor_player_preset_is": ["a_mongoose"], 
+          "target_player_preset_is": ["a_mongoose"]
+        }
+      ],
+      "count": 1
+    },
+    {
+      "name": "KiteUltimateKillKite",
+      "event": [
+        {
+          "event_id": "Kill", "actor_item_tag_is": ["ULT", "ult_ik01"], "actor_player_preset_is": ["s_kite"], 
+          "target_player_preset_is": ["s_kite"]
+        }
+      ],
+      "count": 1
+    }, 
+    {
+      "name": "BrisaUltimateKillBrisa",
+      "event": [
+        {
+          "event_id": "Kill", "actor_item_tag_is": ["ULT", "ult_ik01"], "actor_player_preset_is": ["s_brisa"], 
+          "target_player_preset_is": ["s_brisa"]
+        }
+      ],
+      "count": 1
+    },
+    {
+      "name": "PillUltimateKillPill",
+      "event": [
+        {
+          "event_id": "Kill", "actor_item_tag_is": ["ULT", "ult_ik01"], "actor_player_preset_is": ["m_pill"], 
+          "target_player_preset_is": ["m_pill"]
+        }
+      ],
+      "count": 1
+    },    
+    {
+      "name": "MedalAchieved",
+      "event": [
+        {"event_id": "DoubleKill"},
+        {"event_id": "SlideKill"},
+        {"event_id": "BladeMaster"},
+        {"event_id": "FieldMedic"},
+        {"event_id": "FirstBlood"},
+        {"event_id": "KillStreak"},
+        {"event_id": "Rampage"},
+        {"event_id": "ReturnFire"},
+        {"event_id": "Revenge"},
+        {"event_id": "TripleKill"},
+        {"event_id": "SupportUse"},
+        {"event_id": "ConquestDiscoverer"},
+        {"event_id": "ZoneCaptured"},
+        {"event_id": "Defender"},
+        {"event_id": "FirstCapture"},
+        {"event_id": "Dominator"},
+        {"event_id": "Discoverer"},
+        {"event_id": "ShutDown"},
+        {"event_id": "Lifeguard"},
+        {"event_id": "Marksman"},
+        {"event_id": "MovableObjectKill"},
+        {"event_id": "KickKill"},
+        {"event_id": "RamUltimateKillRam"},
+        {"event_id": "StrixUltimateKillStrix"},
+        {"event_id": "OrbitUltimateKillOrbit"},
+        {"event_id": "MongooseUltimateKillMongoose"},
+        {"event_id": "KiteUltimateKillKite"},
+        {"event_id": "BrisaUltimateKillBrisa"},
+        {"event_id": "PillUltimateKillPill"},
+        {"event_id": "Ultimator"},
+        {"event_id": "Handyman"},
+        {"event_id": "FieldMedic"},
+        {"event_id": "Pistolero"},
+        {"event_id": "OtpistoletitBrisku"},
+        {"event_id": "OtpistoletitKite"},
+        {"event_id": "OtpistoletitMongoose"},
+        {"event_id": "OtpistoletitOrbit"},
+        {"event_id": "OtpistoletitStrix"},
+        {"event_id": "OtpistoletitRam"},
+        {"event_id": "OtpistoletitPill"},
+        {"event_id": "OtpistoletitMalva"},
+        {"event_id": "BombPlant"},
+        {"event_id": "BombDefuse"},
+        {"event_id": "Savior"}
+      ]
+    },
+     {
+      "name": "BombPlant",
+      "event": [
+        {
+          "event_id": "BombArmed",
+          "actor_is_me": true
+        }
+      ]
+    },
+    {
+      "name": "BombDefuse",
+      "event": [
+        {
+          "event_id": "BombDisarmed",
+          "actor_is_me": true
+        }
+      ]
+    },
+    {
+      "name": "KillOneLife",
+      "event": [
+        {
+          "event_id": "Kill",
+          "target_player_preset_is_not": []
+        }
+      ],
+      "count": 4,
+      "reset_on_death": true,
+      "reset_on_completion": true
+    },
+    {
+      "name": "ThreeKillOneLife",
+      "event": [
+        {
+          "event_id": "Kill",
+          "target_player_preset_is_not": [],
+          "actor_is_me": true, "actor_item_tag_is": ["KN"]
+        },
+        {
+         "event_id": "Kill",
+          "target_player_preset_is_not": [],
+          "actor_is_me": true, "actor_item_tag_is": ["PT"]
+        },
+        {
+          "event_id": "Kill",
+          "target_player_preset_is_not": [],
+          "actor_is_me": true, "actor_item_tag_is": ["AR", "SR", "SHG", "SMG"]
+        }
+      ],
+      "count": 1,
+      "reset_on_death": true,
+      "reset_on_completion": true
+    },
+    {
+      "name": "FiveMeans",
+      "event": [
+        {
+          "event_id": "Kill",
+          "target_player_preset_is_not": [],
+          "actor_is_me": true, "actor_item_tag_is": ["KN"]
+        },
+        {
+         "event_id": "Kill",
+          "target_player_preset_is_not": [],
+          "actor_is_me": true, "actor_item_tag_is": ["PT"]
+        },
+        {
+          "event_id": "Kill",
+          "target_player_preset_is_not": [],
+          "actor_is_me": true, "actor_item_tag_is": ["AR", "SR", "SHG", "SMG"]
+        },
+        {
+          "event_id": "Kill",
+          "target_player_preset_is_not": [],
+          "actor_is_me": true, "actor_item_tag_is": ["ULT", "ult_ik01"]
+        },
+        {
+          "event_id": "Kill",
+          "target_player_preset_is_not": [],
+          "actor_is_me": true, "actor_item_tag_is": ["movable"]
+        }
+      ],
+      "count": 5,
+      "reset_on_death": true,
+      "reset_on_completion": true
+    },
+    {
+      "name": "ArKillOneLife",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_item_tag_is": ["AR"],
+          "target_player_preset_is_not": []
+        }
+      ],
+      "count": 3,
+      "reset_on_death": true,
+      "reset_on_completion": true
+    },
+    {
+      "name": "SrKillOneLife",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_item_tag_is": ["SR"],
+          "target_player_preset_is_not": []
+        }
+      ],
+      "count": 3,
+      "reset_on_death": true,
+      "reset_on_completion": true
+    },
+    {
+      "name": "SmgKillOneLife",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_item_tag_is": ["SMG"],
+          "target_player_preset_is_not": []
+        }
+      ],
+      "count": 3,
+      "reset_on_death": true,
+      "reset_on_completion": true
+    },
+    {
+      "name": "ShgKillOneLife",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_item_tag_is": ["SHG"],
+          "target_player_preset_is_not": []
+        }
+      ],
+      "count": 3,
+      "reset_on_death": true,
+      "reset_on_completion": true
+    },
+    {
+      "name": "HeadshotKillOneLife",
+      "event": [
+        {
+          "event_id": "kill",
+          "hit_part_is": ["Head"],
+          "target_player_preset_is_not":[]
+        }
+      ],
+      "count": 3,
+      "reset_on_death": true,
+      "reset_on_completion": true
+    },
+    {
+      "name": "UltKillOneLife",
+      "event": [
+        {
+          "event_id": "kill",
+          "actor_item_tag_is": ["ULT", "ult_ik01"],
+          "target_player_preset_is_not": []
+        }
+      ],
+      "count": 4,
+      "reset_on_death": true,
+      "reset_on_completion": true
+    },
+    {
+      "name": "MeleeKillOneLife",
+      "event": [
+        {
+          "event_id": "kill",
+          "actor_item_tag_is": ["KN"],
+          "target_player_preset_is_not": []
+        }
+      ],
+      "count": 2,
+      "reset_on_death": true,
+      "reset_on_completion": true
+    },
+    {
+      "name": "SidearmKillOneLife",
+      "event": [
+        {
+          "event_id": "kill", 
+          "actor_item_tag_is": ["PT"],
+          "target_player_preset_is_not": []
+        }
+      ],
+      "count": 2,
+      "reset_on_death": true,
+      "reset_on_completion": true
+    },
+    {
+      "name": "LifeGuard",
+      "event": [
+        {"event_id": "Resurrect"}
+      ],
+      "count": 3,
+      "reset_on_death": true,
+      "reset_on_completion": false
+    },
+    {
+      "name": "Savior",
+      "event": [
+        {"event_id": "Resurrect"}
+      ],
+      "count": 5,
+      "reset_on_death": true,
+      "reset_on_completion": false
+    },
+    {
+      "name": "Marksman",
+      "event": [
+        {
+          "event_id": "Headshot",
+          "target_player_preset_is_not": []
+        }
+      ],
+      "count": 3,
+      "reset_on_death": true,
+      "reset_on_completion": true
+    },
+    {
+      "name": "Ultimator",
+      "event": [
+        {
+          "event_id": "UltKill",
+          "target_player_preset_is_not": []
+         }
+      ],
+      "count": 3,
+      "time_to_perform": 10
+    },
+    {
+      "name": "Handyman",
+      "event": [
+        {"event_id": "AbilityKill"}
+      ],
+      "count": 4,
+      "reset_on_death": true,
+      "reset_on_completion": true
+    },
+    {
+      "name": "MongoHack",
+      "event": [
+        {"event_id": "Kill", "actor_player_preset_is":["a_mongoose"]}
+      ],
+      "count": 1,
+      "reset_on_death": false,
+      "reset_on_completion": false
+    },
+    {
+      "name": "StrixHack",
+      "event": [
+        {"event_id": "Kill", "actor_player_preset_is":["h_strix"]}
+      ],
+      "count": 1,
+      "reset_on_death": false,
+      "reset_on_completion": false
+    },
+    {
+      "name": "MalvOrbit",
+      "event": [
+        {"event_id": "Kill", "actor_player_preset_is":["m_malva", "a_orbit"]}
+      ],
+      "count": 1,
+      "reset_on_death": false,
+      "reset_on_completion": false
+    },
+    {
+      "name": "PiloRam",
+      "event": [
+        {"event_id": "Kill", "actor_player_preset_is":["m_pill", "h_ram"]}
+      ],
+      "count": 1,
+      "reset_on_death": false,
+      "reset_on_completion": false
+    },
+    {
+      "name": "RamPlay",
+      "event": [
+        {"event_id": "Kill", "actor_player_preset_is":["h_ram"]}
+      ],
+      "count": 1,
+      "reset_on_death": false,
+      "reset_on_completion": false
+    },
+     {
+      "name": "StarBoy",
+      "event": [
+        {"event_id": "Kill", "actor_player_preset_is":["a_orbit"]}
+      ],
+      "count": 1,
+      "reset_on_death": false,
+      "reset_on_completion": false
+    },
+    {
+      "name": "BrisaPlay",
+      "event": [
+        {"event_id": "Kill", "actor_player_preset_is":["s_brisa"]}
+      ],
+      "count": 1,
+      "reset_on_death": false,
+      "reset_on_completion": false
+    },
+    {
+      "name": "KitePlay",
+      "event": [
+        {"event_id": "Kill", "actor_player_preset_is":["s_kite"]}
+      ],
+      "count": 1,
+      "reset_on_death": false,
+      "reset_on_completion": false
+    },
+    {
+      "name": "PillPlay",
+      "event": [
+        {"event_id": "Kill", "actor_player_preset_is":["m_pill"]}
+      ],
+      "count": 1,
+      "reset_on_death": false,
+      "reset_on_completion": false
+    },
+    {
+      "name": "StrixPlay",
+      "event": [
+        {"event_id": "Kill", "actor_player_preset_is":["h_strix"]}
+      ],
+      "count": 1,
+      "reset_on_death": false,
+      "reset_on_completion": false
+    },
+    {
+      "name": "MalvaPlay",
+      "event": [
+        {"event_id": "Kill", "actor_player_preset_is":["m_malva"]}
+      ],
+      "count": 1,
+      "reset_on_death": false,
+      "reset_on_completion": false
+    },
+    {
+      "name": "SessionPlay",
+      "event": [
+        {"event_id": "Kill"}
+      ],
+      "count": 1,
+      "reset_on_death": false,
+      "reset_on_completion": false
+    }    
+  ]
+}

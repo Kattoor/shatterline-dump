@@ -1,0 +1,34 @@
+{
+  "name_token": "",
+  "info_token": "",
+  "loading_tips_path": "libs/ui/loading_tips/tip_default.json",
+  "game_event_config": "pve",
+  "pre_round_config": {
+    "timers": [
+      {
+        "name": "PreRoundTimesUp",
+        "start_on": [
+          {
+            "event_id": "PreRoundStart"
+          }
+        ],
+        "duration": 5
+      }
+    ],
+    "finish_on": [
+      {
+        "event_id": "PreRoundTimesUp"
+      }
+    ]
+  },
+  "event_log": "default",
+  "skill_type": "lobby",
+  "teams": [
+    {
+      "competitor": "A",
+      "size": 1,
+      "scoring_events": [],
+      "feedback_config": {}
+    }
+  ]
+}

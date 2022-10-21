@@ -1,0 +1,12 @@
+{
+    "name": "reduce_aoe_intro",
+    "duration": 3000,
+    "effects": [
+        { "damage_filter": {"damage_modifiers": [
+            { "filter_type": "hit", "hit_type": "Shot", "modifier": 1 },
+            { "filter_type": "hit", "hit_type": "AOE", "modifier": 0.4 },
+            { "filter_type": "hit", "hit_type": "DOT", "modifier": 1 },
+            { "filter_type": "hit", "hit_type": "Melee", "modifier": 1 }
+        ]}}
+    ]
+}

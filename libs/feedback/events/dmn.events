@@ -1,0 +1,96 @@
+{
+    "events": [
+        {
+            "name": "point captured_a",
+            "actions" : [
+                {"message_announcer": {"message": "@point_captured", "timeout": 2}}
+               ]
+        },
+        {
+            "name": "point captured_b",
+            "actions" : [
+                {"message_announcer": {"message": "@point_captured", "timeout": 2}}
+               ]
+        },
+        {
+            "name": "point captured_c",
+            "actions" : [
+                {"message_announcer": {"message": "@point_captured", "timeout": 2}}
+               ]
+        },
+        {
+            "name": "losing point_a",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "domin_hughes_losing_a"}}
+               ]
+        },
+        {
+            "name": "losing point_b",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "domin_hughes_losing_b"}}
+               ]
+        },
+        {
+            "name": "losing point_c",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "domin_hughes_losing_c"}}
+               ]
+        },
+        {
+            "name": "our team win",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "domin_hughes_winning"}}
+               ]
+        },
+        {
+            "name": "enemy team win",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "domin_hughes_losing"}}
+               ]
+        },
+        {
+            "name": "Our team has higher score",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "domin_hughes_highscore"}}
+               ]
+        },
+        {
+            "name": "enemy team has higher score",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "domin_hughes_lowscore"}}
+               ]
+        },
+        {
+            "name": "our team is close to score limit",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "domin_hughes_winning"}}
+               ]
+        },
+        {
+            "name": "enemy team is close to score limit",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "domin_hughes_losing"}}
+               ]
+        },
+        {
+            "name": "roundstart_dmn",
+            "actions" : [
+                {"message_announcer": {"message": "@conquest and hold points", "timeout": 3}},
+                {"message_objective": {"message": "@conquest and hold points"}},
+                {"sound_trigger": {"trigger_name": "domin_hughes_announce"}}
+            ]
+        },
+        {
+            "name": "point_captured",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "point_captured"}}
+            ]
+        },
+        {
+            "name": "point_lost",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "point_lost"}}
+            ]
+        }
+    ]
+}

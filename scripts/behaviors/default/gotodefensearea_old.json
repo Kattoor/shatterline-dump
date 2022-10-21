@@ -1,0 +1,608 @@
+{
+    "name": "Default/GoToDefenseArea_Old",
+    "root": "a1b328b2-2bb8-4d0e-95d3-d72a905cb10c",
+    "nodes": {
+        "43d005bd-e6c3-4e71-9bce-1b9fbaa15700": {
+            "name": "Sequence",
+            "pos": {
+                "x": -230,
+                "y": 1145
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "5d33e9ab-153b-48f2-930b-b013567fe6ad",
+                "c31b994b-bc8d-4474-9c98-386e0cba22e9",
+                "e4af6cc9-e572-47d3-be18-f7be1ed24de8"
+            ]
+        },
+        "16b1cb20-0486-4936-9317-b5233813fe2b": {
+            "name": "ParallelUntilAnyComplete",
+            "pos": {
+                "x": -5,
+                "y": 564
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "163eeb48-c0bf-4f2c-aaf0-03aa81dfcb8a",
+                "c5f67793-b0f0-49dc-a120-0d790f957a16"
+            ]
+        },
+        "43333f30-f4da-48fa-b4aa-c5bae13d3ea2": {
+            "name": "RunRegularBehavior",
+            "pos": {
+                "x": 260,
+                "y": 407
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "23049c46-b572-4b94-a0bd-a3e6a066adb5": {
+            "name": "Succeeder",
+            "pos": {
+                "x": -5,
+                "y": 437
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "16b1cb20-0486-4936-9317-b5233813fe2b"
+        },
+        "bb51247f-41ce-4339-ae5e-7dbfc0a8e434": {
+            "name": "Selector",
+            "pos": {
+                "x": -570,
+                "y": 788
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "96dbfce3-03a6-4777-90fb-12bf9b7cc25b",
+                "56c3bdd4-9f44-4973-999e-b96d57c63a76"
+            ]
+        },
+        "c7cebecd-a0d4-4ab4-a7f8-b3fca28e938e": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -905,
+                "y": 424
+            },
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "CoverInShape"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "EntityId"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "646c63d4-d4ad-47d6-9373-454d2325f387": {
+            "name": "FindCoverInShapeRequest",
+            "pos": {
+                "x": -1400,
+                "y": 1374
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Area",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "GoToDefenseArea",
+                        "defenseArea"
+                    ]
+                },
+                {
+                    "name": "AgainstTarget",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "TargetVisibility",
+                    "type": "StringHash",
+                    "value": "Visible"
+                },
+                {
+                    "name": "MinDistFromTarget",
+                    "type": "Float",
+                    "value": "0.00"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "CoverPoint",
+                    "type": "Variable",
+                    "value": [
+                        "CoverInShape"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "163eeb48-c0bf-4f2c-aaf0-03aa81dfcb8a": {
+            "name": "ReleaseEntityOnExit",
+            "pos": {
+                "x": -570,
+                "y": 664
+            },
+            "inputs": [
+                {
+                    "name": "ObjectSlot",
+                    "type": "StringHash",
+                    "value": "CoverInShape"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "bb51247f-41ce-4339-ae5e-7dbfc0a8e434"
+        },
+        "e0b6bc62-45fe-412e-9836-586361cd64be": {
+            "name": "ClaimEntity",
+            "pos": {
+                "x": -1085,
+                "y": 1137
+            },
+            "inputs": [
+                {
+                    "name": "EntityId",
+                    "type": "Variable",
+                    "value": [
+                        "CoverInShape"
+                    ]
+                },
+                {
+                    "name": "ObjectSlot",
+                    "type": "StringHash",
+                    "value": "CoverInShape"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "5d33e9ab-153b-48f2-930b-b013567fe6ad": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -480,
+                "y": 1382
+            },
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "PointInShape"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Position"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "05a1aa4f-7f4e-45d3-acda-5f0c85fb53b8": {
+            "name": "ReleaseEntity",
+            "pos": {
+                "x": -460,
+                "y": 1136
+            },
+            "inputs": [
+                {
+                    "name": "ObjectSlot",
+                    "type": "StringHash",
+                    "value": "CoverInShape"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "2f29f1ba-c3b7-4852-8668-3334a3af9d28": {
+            "name": "Sequence",
+            "pos": {
+                "x": -5,
+                "y": 318
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "c7cebecd-a0d4-4ab4-a7f8-b3fca28e938e",
+                "23049c46-b572-4b94-a0bd-a3e6a066adb5",
+                "43333f30-f4da-48fa-b4aa-c5bae13d3ea2"
+            ]
+        },
+        "e4af6cc9-e572-47d3-be18-f7be1ed24de8": {
+            "name": "ApproachTo",
+            "pos": {
+                "x": 55,
+                "y": 1380
+            },
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "PointInShape"
+                    ]
+                },
+                {
+                    "name": "EndDistance",
+                    "type": "Float",
+                    "value": "1.00"
+                },
+                {
+                    "name": "UpdateDestinationPoint",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "9ee1f438-f01e-4ce4-9a9c-599e882d0e98": {
+            "name": "SetStrafeAllowedAndRestoreOnExit",
+            "pos": {
+                "x": -5,
+                "y": 204
+            },
+            "inputs": [
+                {
+                    "name": "Allow",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "2f29f1ba-c3b7-4852-8668-3334a3af9d28"
+        },
+        "c31b994b-bc8d-4474-9c98-386e0cba22e9": {
+            "name": "GetRandomPointInAreaShape",
+            "pos": {
+                "x": -235,
+                "y": 1381
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Area",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "GoToDefenseArea",
+                        "defenseArea"
+                    ]
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Result",
+                    "type": "Variable",
+                    "value": [
+                        "PointInShape"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "c5f67793-b0f0-49dc-a120-0d790f957a16": {
+            "name": "RepeatUntilSucceeds",
+            "pos": {
+                "x": 295,
+                "y": 699
+            },
+            "inputs": [
+                {
+                    "name": "Iterations",
+                    "type": "Integer",
+                    "value": "0"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "8901bd42-412a-47d8-9221-e4bb1d7723bd"
+        },
+        "56c3bdd4-9f44-4973-999e-b96d57c63a76": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": -230,
+                "y": 965
+            },
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "GoToRandomAreaPoint"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "43d005bd-e6c3-4e71-9bce-1b9fbaa15700"
+        },
+        "555a8cec-f8c0-4fef-9acd-86967b853ffc": {
+            "name": "TargetInRange",
+            "pos": {
+                "x": 480,
+                "y": 1103
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Source",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Min",
+                    "type": "Integer",
+                    "value": "0"
+                },
+                {
+                    "name": "Max",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "GoToDefenseArea",
+                        "enemyCriticalRange"
+                    ]
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "9e095c75-6502-4113-88d9-cbc841d222d9"
+        },
+        "96dbfce3-03a6-4777-90fb-12bf9b7cc25b": {
+            "name": "Sequence",
+            "pos": {
+                "x": -690,
+                "y": 965
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "1f295e3c-e1bf-4237-ae50-c9998de8c338",
+                "e0b6bc62-45fe-412e-9836-586361cd64be",
+                "c0d767a6-8e37-43db-9f2c-8ab4b18bf8d3",
+                "4495f9ea-9210-4465-8780-329ae50a3182",
+                "05a1aa4f-7f4e-45d3-acda-5f0c85fb53b8"
+            ]
+        },
+        "a1b328b2-2bb8-4d0e-95d3-d72a905cb10c": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": -5,
+                "y": 80
+            },
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "GoToDefenseArea_Old"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "9ee1f438-f01e-4ce4-9a9c-599e882d0e98"
+        },
+        "40819519-24a1-470b-814a-03fe7bb3f2a8": {
+            "name": "Wait",
+            "pos": {
+                "x": 105,
+                "y": 946
+            },
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Float",
+                    "value": "0.01"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "60d899c8-59bb-426f-a273-0d8e8d84d388": {
+            "name": "IsTargetPerceivedAndVisible",
+            "pos": {
+                "x": 485,
+                "y": 953
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "555a8cec-f8c0-4fef-9acd-86967b853ffc"
+        },
+        "1f295e3c-e1bf-4237-ae50-c9998de8c338": {
+            "name": "Selector",
+            "pos": {
+                "x": -1230,
+                "y": 1140
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "646c63d4-d4ad-47d6-9373-454d2325f387",
+                "278219ad-672f-46d8-8ad3-370d4d450089"
+            ]
+        },
+        "c0d767a6-8e37-43db-9f2c-8ab4b18bf8d3": {
+            "name": "ApproachTo",
+            "pos": {
+                "x": -865,
+                "y": 1136
+            },
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "CoverInShape"
+                    ]
+                },
+                {
+                    "name": "EndDistance",
+                    "type": "Float",
+                    "value": "0.00"
+                },
+                {
+                    "name": "UpdateDestinationPoint",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "8901bd42-412a-47d8-9221-e4bb1d7723bd": {
+            "name": "Sequence",
+            "pos": {
+                "x": 305,
+                "y": 817
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "40819519-24a1-470b-814a-03fe7bb3f2a8",
+                "60d899c8-59bb-426f-a273-0d8e8d84d388"
+            ]
+        },
+        "4495f9ea-9210-4465-8780-329ae50a3182": {
+            "name": "EnterCover",
+            "pos": {
+                "x": -650,
+                "y": 1137
+            },
+            "inputs": [
+                {
+                    "name": "CoverId",
+                    "type": "Variable",
+                    "value": [
+                        "CoverInShape"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "278219ad-672f-46d8-8ad3-370d4d450089": {
+            "name": "FindCoverInShapeRequest",
+            "pos": {
+                "x": -965,
+                "y": 1373
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Area",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "GoToDefenseArea",
+                        "defenseArea"
+                    ]
+                },
+                {
+                    "name": "AgainstTarget",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "TargetVisibility",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "MinDistFromTarget",
+                    "type": "Float",
+                    "value": "0.00"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "CoverPoint",
+                    "type": "Variable",
+                    "value": [
+                        "CoverInShape"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "9e095c75-6502-4113-88d9-cbc841d222d9": {
+            "name": "Success",
+            "pos": {
+                "x": 480,
+                "y": 1320
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

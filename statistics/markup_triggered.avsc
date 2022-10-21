@@ -1,0 +1,37 @@
+{
+    "name": "markup_triggered",
+    "doc": "Origin: game session. Emitter: dedicated server. Emmited when a corresponding script node was triggered",
+    "type": "record",
+    "fields": [        
+        {
+            "name": "name",
+            "type": "string",
+            "default": "-1",
+            "doc": "unique name of the event"
+        },        
+        {
+            "name": "ts",
+            "type": "string",
+            "default": "-1",
+            "doc": "ISO8601 UTC timestamp of the event invocation"
+        },        
+        {
+            "name": "ns",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace of the server's deployment (realm)"
+        },
+        {
+            "name": "gid",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace-unique identifier of the match"
+        },
+        {
+            "name": "markup_id",
+            "type": "string",
+            "default": "-1",
+            "doc": "text from a corresponding field in node in script canvas"
+        }
+    ]
+}

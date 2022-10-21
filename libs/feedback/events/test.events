@@ -1,0 +1,157 @@
+{
+    "events": [
+        {
+            "name": "NarrationTest",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "ptb_hughes_defeat_bomb_detonated", "img": "test_hero"}},
+                {"message_objective": {"message": "@defend_drone"}}
+            ]
+        },
+        {
+            "name": "GameObjectiveTest",
+            "actions" : [
+                {"message_objective": {"message": "@defend_drone"}}
+            ]
+        },
+        {
+            "name": "GameObjectiveTest_narration",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "ptb_hughes_defeat_bomb_defused", "img": "test_hero"}}
+            ]
+        },
+        {
+            "name": "GameObjectiveTest_narration_instant",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "ptb_hughes_defeat_team_eliminated", "img": "test_hero", "play_instantly": true}}
+            ]
+        },
+        {
+            "name": "ForTeamATest",
+            "actions" : [
+                {"message_announcer": {"message": "@for_team_a_test", "timeout": 3}}
+            ]
+        },
+        {
+            "name": "ForTeamBTest",
+            "actions" : [
+                {"message_announcer": {"message": "@for_team_b_test", "timeout": 3}}
+            ]
+        },
+        {
+          "name": "NarrationAndObjectiveTest",
+          "actions" : [
+              {"narration_objective": {"trigger_name": "pve_stormb_phillips_07", "img": "commander_phillips", "narrator": "@narrator_commander_phillips"}},
+              {"message_objective": {"message": "@obj_kill_stilt"}}
+            ]
+        },
+        {
+          "name": "pve_redlake_stilt_fight",
+          "actions" : [
+              {"narration_objective": {"trigger_name": "pve_stormb_phillips_07", "img": "commander_phillips", "narrator": "@narrator_commander_phillips"}},
+              {"message_objective": {"message": "@obj_kill_stilt"}}
+            ]
+        },
+        {
+            "name": "pve_redlake_third_transmitter",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_redlake_hughes_36", "img": "specialist_hughes", "narrator":"@narrator_specialist_hughes"}},
+                {"message_objective": {"message": "@obj_activate_transfer"}}
+            ]
+        },
+        {
+          "name": "TeleportBeaconDestroyedTest",
+          "actions" : [
+              {"message_announcer": {"message": "@test_teleport_beacon_destroyed", "timeout": 3}}
+            ]
+        },
+        {
+          "name": "RegroupTest",
+          "actions" : [
+              {"countdown_message": {"message": "@regroup_countdown", "timeout": 5}},
+              {"fader": {"pre_fade_out_duration": 5, "pre_fade_out_intensity": 0.4, "fade_out": 1, "fade_in": 2}}
+            ]
+        },
+        {
+            "name": "narration_subtitles_test_1",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "subtitles_test_12_sec", "img": "test_hero", "narrator":"@narrator_commander_phillips"}}
+            ]
+        },
+        {
+            "name": "narration_subtitles_test_2",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "subtitles_test_30_sec", "img": "test_hero", "narrator":"@narrator_commander_phillips"}}
+            ]
+        },
+        {
+            "name": "subtitles_without_narration_test",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "subtitles_test_12_sec"}}
+            ]
+        },
+        {
+            "name": "narration_subtitles_cutscene_test",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_hecatomb_cutscene_outro"}}
+            ]
+        },
+        {
+            "name": "test_contamination_event_1",
+            "actions" : [
+                {"message_announcer": {"message": "@test_contamination_event_1", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "test_alarm_02"}},
+                {"contamination_event": {"image": "glasshead_spawn_icon", "name": "@test_contamination_modifier_name", "description": "@test_contamination_modifier_description"}}
+            ]
+        },
+        {
+            "name": "test_contamination_event_2",
+            "actions" : [
+                {"message_announcer": {"message": "@test_contamination_event_2", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "test_alarm_02"}},
+                {"contamination_event": {"image": "orbital_strike_icon", "name": "@test_contamination_modifier_name", "description": "@test_contamination_modifier_description"}}
+            ]
+        },
+        {
+            "name": "TestPerkActivation",
+            "actions" : [
+                {"activate_perk": {"perk_name": "test_weapon_perk_02", "timeout": 5, "show_timer": true}}
+            ]
+        },
+        {
+            "name": "test_encounter_completion",
+            "actions" : [
+                {
+                    "encounter_completion_event":
+                    {
+                        "name": "@encounter_name",
+                        "text": "@encounter_completion_text",
+                        "stage_1": "@encounter_completion_description",
+                        "stage_2": "@encounter_completion_description",
+                        "stage_3": "@encounter_completion_description"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "TestCustomPerk",
+            "actions" : [
+                {"activate_custom_perk": {"perk_name": "test_weapon_perk_02", "text": "Test Custom Perk", "icon": "test_icon", "crosshair_image": "test_icon", "timeout": 5, "show_timer": true}}
+            ]
+        },
+        {
+            "name": "test_spotting_01",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "test_alarm_02"}},
+                {"contamination_event": {"image": "orbital_strike_icon", "name": "@test_contamination_modifier_name", "description": "@test_contamination_modifier_description"}},
+                {"message_announcer": {"message": "@ammo_refilled", "timeout": 2}}
+            ]
+        },
+        {
+            "name": "test_spotting_02",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "teammate_down"}},
+                {"narration_objective": {"trigger_name": "subtitles_test_12_sec", "img": "test_hero", "narrator":"@narrator_commander_phillips"}}
+            ]
+        }
+    ]
+}

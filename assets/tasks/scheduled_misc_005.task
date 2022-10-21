@@ -1,0 +1,36 @@
+{
+  "name": "scheduled_misc_005",
+  "type": "scheduled",
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "epic",
+  "display_name": { "localization_key": "@scheduled_misc_005_name" },
+  "description": { "localization_key": "@scheduled_misc_005_description" },
+  "conditions": [
+    {
+      "name": "scheduled_misc_005",
+      "event_description": { "localization_key": "@scheduled_misc_005_event_description" },
+      "event": { "event_id": "Kill", "actor_is_me": true,  "actor_playlist_name_is": ["event_barricade", "event_conq_hardcore", "event_conq_headshot_only", "event_conq_promenade",
+      "event_conq_tdm_island", "event_conq", "event_escort_hardcore", "event_ffa_fast_ult", "event_ffa", "event_ptb", "event_redlake", "event_sunken_lab", "event_tdm_fast_ult", "event_tdm_hardcore",
+      "event_tdm_headshot_only", "event_tdm_megaheads", "event_ptb_hardcore", "event_hecatomb", "event_esc_march", "event_barricade_fast_ult", "event_harbor"]},
+      "progress": 150
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 2000
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 1000
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 15
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+    "name": "entity_activated",
+    "doc": "Origin: game session. Emitter: dedicated server. Indicates when entity like usables, traps etc was activated for the first time during session",
+    "type": "record",
+    "fields": [
+        {
+            "name": "enid",
+            "type": "long",
+            "default": -1,
+            "doc": "match-unique entity id as a unique identifier of non-player entities (AIs, active objects, projectiles)"
+        },
+        {
+            "name": "entity_name",
+            "type": "string",
+            "default": "-1",
+            "doc": "name of entity"
+        },
+        {
+            "name": "category",
+            "type": "string",
+            "default": "-1",
+            "doc": "name of object type (e.g. movable, bomb, resurrect, disabler etc)"
+        },
+        {
+            "name": "ns",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace of the server's deployment (realm)"
+        },
+        {
+            "name": "name",
+            "type": "string",
+            "default": "-1",
+            "doc": "unique name of the event"
+        },
+        {
+            "name": "ts",
+            "type": "string",
+            "default": "-1",
+            "doc": "ISO8601 UTC timestamp of the event invocation"
+        },
+        {
+            "name": "gid",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace-unique identifier of the match"
+        },
+        {
+            "name": "x",
+            "type": "double",
+            "default": -1,
+            "doc": "X-axis coordinate of an object with decimal accuracy 1e-13"
+        },
+        {
+            "name": "y",
+            "type": "double",
+            "default": -1,
+            "doc": "Y-axis coordinate of an object with decimal accuracy 1e-13"
+        },
+        {
+            "name": "z",
+            "type": "double",
+            "default": -1,
+            "doc": "Z-axis coordinate of an object with decimal accuracy 1e-13"
+        }
+    ]
+}

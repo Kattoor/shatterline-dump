@@ -1,0 +1,22 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "a15689f2de9c4058a81a01dec718d3b7",
+    "Name": "Game01TerritoryProvider",
+    "DisplayName": "Game01TerritoryProvider",
+    "Version": "0.1.0",
+    "Summary": "Provide basic game settings manager functionality",
+    "Tags": ["Untagged"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        }
+    ],
+    "Dependencies" : [
+        {
+            "Uuid": "71f233c8118b4c8283e3406b447657ab",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "BackendCommon"
+        }
+    ]
+}

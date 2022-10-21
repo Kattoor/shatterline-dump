@@ -1,0 +1,149 @@
+{
+    "movement": {
+        "sprint_speed_multiplier": 1.0,
+        "zoom_speed_multiplier": 0.65,
+        "walk_speed_multiplier": 1.0,
+        "crouch_speed_multiplier": 1.0
+    },
+    "sounds": {
+        "sets": [
+            {
+                "tag": "default",
+                "triggers": {
+                    "fire_start": "sr05_fire"
+                }
+            },
+            {
+                "tag": "silenced",
+                "triggers": {
+                    "fire_start": "sr05_fire"
+                }
+            }
+        ],
+        "tag": "default"
+    },
+    "selection": {
+        "nearest_camera_offset": {
+            "z": 0.0,
+            "x": 0.0,
+            "y": 0.0
+        },
+        "deselection_duration": 0.2,
+        "selection_duration": 0.7,
+        "nearest_camera_rotation": {
+            "pitch": 0.0,
+            "roll": 0.0,
+            "yaw": 0.0
+        },
+        "nearest_view_fov": 55.0
+    },
+    "fp_mass_effect_hip": 3.0,
+    "spread": {
+        "max_hip_spread": 5.0,
+        "decay_time": 0.4,
+        "slide_multiplier": 0.6,
+        "zoom_multiplier": 0.0,
+        "crouch_multiplier": 0.25,
+        "hip_step": 1.0,
+        "crouch_idle_multiplier": 0.2,
+        "min_hip_spread": 5.0,
+        "decay_delay": 0.1,
+        "stand_multiplier": 0.3,
+        "walk_multiplier": 0.6,
+        "jump_multiplier": 1.0
+    },
+    "zoom": {
+        "weapon_offset": {
+            "z": 0.003,
+            "x": 0.0,
+            "y": 0.115
+        },
+        "delay_after_jump": 0.3,
+        "scope_max_transp": 0.3,
+        "weapon_fov": 19.5,
+        "scope_aiming_treshold": 0.8,
+        "zoom_out_time": 0.2,
+        "scope_fake_shadow_radius": 0.8,
+        "scope_fake_shadow_interpolation_pow": 1.0,
+        "scope_reflection_intensity": 0.1,
+        "scope_aiming_out_treshold": 0.7,
+        "scope_aiming_out_progress_mult": 1.0,
+        "scope_aiming_progress_mult": 1.0,
+        "scope_grid_shot_max_scale": 1.0,
+        "scope_grid": "objects/weaponry/attachments/ss/ss03/textures/ss03_grid.tif",
+        "scope_reflection_radius": 0.6,
+        "scope_grid_intensity": 3.0,
+        "hide_crosshair": true,
+        "zoom_fov": 8.0,
+        "zoom_in_time": 0.1,
+        "scope_grid_default_scale": 0.85,
+        "blur_amount": 2.0,
+        "scope_reflection_interpolation_pow": 2.0,
+        "scope_grid_scale_lerp_time": 0.3,
+        "scope_aiming_offset_forward": 0.03,
+        "sniper_scope": true,
+        "in_air": false
+    },
+    "common": {
+        "item_tag": "ULT"
+    },
+    "muzzle_sight_distance": 0.5,
+    "fp_mass_effect_zoom": 0.0,
+    "shooting": {
+        "base_damage_distribution": {
+            "points": [
+                {
+                    "distance": 60.0,
+                    "damage": 1700.0
+                }
+            ]
+        },
+        "backpack_capacity": 0,
+        "chamber_capacity": 1,
+        "pierceability": {
+            "pierceability_level": 3,
+            "type": "none"
+        },
+        "head_damage_distribution": {
+            "points": [
+                {
+                    "distance": 60.0,
+                    "damage": 1700.0
+                }
+            ]
+        },
+        "pellets_count": 1.0,
+        "chambers_fired_per_shot": 1,
+        "hit_feedback": "server",
+        "rpm": 280.0,
+        "auto_reload_mode": "Chamber",
+        "bullet_type": "CrystallineRifle",
+        "clip_capacity": 2,
+        "reload": {
+            "reload_time": 2.3,
+            "reload_chamber_time": 1.3,
+            "reload_out_complete_threshold": 0.7,
+            "reload_in_complete_threshold": 0.7
+        }
+    },
+    "recoil": {
+        "kick_time": 0.1,
+        "decay_time": 0.16,
+        "max_vertical_angle": 45.0,
+        "decay_delay": 0.03,
+        "recoil_points": [
+            {
+                "num": 1,
+                "force": {
+                    "min": 0.35,
+                    "max": 0.52
+                },
+                "angle": {
+                    "min": 0.0,
+                    "max": 0.0
+                }
+            }
+        ]
+    },
+    "crosshair_skin": 5
+}

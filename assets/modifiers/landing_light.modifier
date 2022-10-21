@@ -1,0 +1,49 @@
+{
+    "name": "landing_light",
+    "duration": 0.4,
+    "effects": [
+        { "max_speed": { "speed_cap": 5.5 }},
+        {   "camera_shake": {
+                "sinusoids":
+                [
+                    {
+                        "name": "A",
+                        "frequency": 18.0,
+                        "random_phase": true
+                    },
+                    {
+                        "name": "B",
+                        "frequency": 16.0,
+                        "phase": 0.0,
+                        "random_phase": false
+                    },
+                    {
+                        "name": "C",
+                        "frequency": 14.0,
+                        "phase": 0.0,
+                        "random_phase": false
+                    }
+                ],
+                
+                "yaw_sinusoid": "A",
+                "pitch_sinusoid": "B",
+                "roll_sinusoid": "C",
+                "shift_x_sinusoid": "none",
+                "shift_y_sinusoid": "none",
+                "shift_z_sinusoid": "none",
+                
+                "yaw_amplitude": 0.5,
+                "pitch_amplitude": 0.7,
+                "roll_amplitude": 1.5,
+                
+                "attack_duration": 0.01,
+                "sustain_duration": 0.0,
+                "decay_duration": 0.2,
+                
+                "channel": "queen_camera_shake",
+                "shift_coord_system": "Camera",
+                "rotation_coord_system": "Camera"
+            }
+        }
+    ]
+}

@@ -1,0 +1,3976 @@
+{
+    "events": 
+    [
+        {
+            "name": "ModifiersDisabled",
+            "actions" : [
+                {"message_announcer": {"message": "@ModifiersDisabled", "timeout": 4}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+          "name": "TimeRemaining",
+          "actions" : [
+              {"countdown_message": {"message": "@time_remaining", "timeout": 60}}
+            ]
+        },
+        {
+            "name": "ObjectiveCountdown",
+            "actions" : [
+                {"countdown_message": {"message": "@objective_countdown", "timeout": 20}}
+            ]
+        },
+        {
+            "name": "StayInArea",
+            "actions" : [
+                {"message_announcer": {"message": "@stay_in_area", "timeout": 300}}
+            ]
+        },
+        {
+            "name": "HordeObjectiveIntro",
+            "actions" : [
+                {"message_announcer": {"message": "@horde_objective_intro", "timeout": 6}},
+                {"narration_objective": {"trigger_name": "pve_horde_start", "img": "doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_stage0_complete"}}
+            ]
+        },
+        {
+            "name": "HordeBossIntro",
+            "actions" : [
+                {"message_announcer": {"message": "@horde_boss_intro", "timeout": 5}},
+                {"sound_trigger": {"trigger_name": "logo_shatterline"}},
+                {"narration_objective": {"trigger_name": "pve_horde_boss", "img": "doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_boss"}}
+            ]
+        },
+        {
+            "name": "horde_stage1_complete",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "instant_reward"}},
+                {"message_objective": {"message": "@obj_horde_stage1_complete"}}
+            ]
+        },
+        {
+            "name": "horde_stage2_complete",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "instant_reward"}},
+                {"message_objective": {"message": "@obj_horde_stage2_complete"}}
+            ]
+        },
+        {
+            "name": "horde_stage3_complete",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "instant_reward"}},
+                {"message_objective": {"message": "@obj_horde_stage3_complete"}}
+            ]
+        },
+        {
+            "name": "horde_stage4_complete",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "instant_reward"}},
+                {"message_objective": {"message": "@obj_horde_stage4_complete"}}
+            ]
+        },
+        {
+            "name": "horde_stage5_complete",
+            "actions" : [
+                {"message_announcer": {"message": "@horde_stage5_complete", "timeout": 4}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "horde_1_stages_complete",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_victory_01"}}
+            ]
+        },
+        {
+            "name": "horde_2_stages_complete",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_victory_02"}}
+            ]
+        },
+        {
+            "name": "horde_3_stages_complete",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_victory_03"}}
+            ]
+        },
+        {
+            "name": "horde_4_stages_complete",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_victory_05"}}
+            ]
+        },
+        {
+            "name": "horde_5_stages_complete",
+            "actions" : [
+                {"message_announcer": {"message": "@horde_5_stages_complete", "timeout": 4}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_victory_05"}}
+            ]
+        },
+
+        {
+            "name": "generating_environment",
+            "actions" : [
+                {"countdown_message": {"message": "@generating_environment", "timeout": 10}},
+                {"fader": {"pre_fade_out_duration": 10, "pre_fade_out_intensity": 0.4}}
+            ]
+        },
+        {
+            "name": "pve_horde_start",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_start"}},
+                {"message_objective": {"message": "@obj_horde_stage0_complete", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_start_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_start_01", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_stage0_complete", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_start_02",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_start_02", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_stage0_complete", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_start_03",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_start_03", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_stage0_complete", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_start_04",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_start_04", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_stage0_complete", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_start_05",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_start_05", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_stage0_complete", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_start_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_start_01", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_stage0_complete", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_start_02",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_start_02", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_stage0_complete", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_start_03",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_start_03", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_stage0_complete", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_horde_convo_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_convo_01", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_01", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_convo_02", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_02", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_convo_02",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_03", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_convo_03", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_04", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_convo_03",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_convo_04", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_05", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_convo_05", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_06", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_convo_04",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_07", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_convo_06", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_08", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_convo_07", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_convo_05",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_convo_08", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_09", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_convo_09", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_10", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_convo_06",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_11", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_convo_10", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_12", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_convo_11", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_13", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_convo_07",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_14", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_convo_12", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_15", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_convo_13", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_convo_08",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_convo_14", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_16", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_convo_15", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_17", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_convo_16", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_18", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_convo_09",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_19", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_convo_17", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_20", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_convo_18", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_convo_10",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_21", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_convo_19", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_22", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_convo_20", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_23", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_convo_21", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_convo_11",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_24", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_convo_22", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_25", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_convo_23", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_26", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_convo_12",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_convo_24", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_27", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_convo_25", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_convo_13",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_28", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_convo_26", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_29", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_convo_14",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_30", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_convo_27", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_31", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_convo_28", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_32", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_convo_15",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_33", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_convo_29", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_34", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_convo_30", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_convo_16",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_convo_31", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_35", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_convo_32", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_36", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_convo_33", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_37", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_convo_17",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_38", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_convo_34", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_39", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_convo_35", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convo_40", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_contamination_increase",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_contamination_increase", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_contamin_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_contamin_01", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_contamin_02",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_contamin_02", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_contamin_03",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_contamin_03", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_contamin_04",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_contamin_04", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_contamin_05",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_contamin_05", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_contamin_06",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_contamin_06", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_contamin_07",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_contamin_07", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_contamin_08",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_contamin_08", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_contamin_09",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_contamin_09", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_contamin_10",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_contamin_10", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_contamin_11",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_contamin_11", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_contamin_12",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_contamin_12", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_contamin_13",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_contamin_13", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_contamin_14",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_contamin_14", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_contamin_15",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_contamin_15", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_contamin_16",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_contamin_16", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_contamin_17",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_contamin_17", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_contamination_maximum",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_contamination_maximum", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_modifier",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_modifier"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_modif_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_modif_01", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_modif_02",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_modif_02", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_modif_03",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_modif_03", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_modif_04",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_modif_04", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_modif_05",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_modif_05", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_modif_06",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_modif_06", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_base_00",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_base_00", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_base"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_base_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_base_01", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_base_pass"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_base_02",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_base_02", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_base_pass"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_base_03",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_base_03", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_base_alarm"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_base_04",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_base_04", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_base_pass"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_base_05",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_base_05", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_base_pass"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_base_06",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_base_06"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_base_07",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_base_07", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_base_pass"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_base_08",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_base_08", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_samples_signal"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_base_09",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_base_09", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_wait_shuttle"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_base_10",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_base_10", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_base_11",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_base_11", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_base_12",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_base_12", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_base_121",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_base_121", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_base_122",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_base_122", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_base_123",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_base_123", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_base_13",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_base_13", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_base_14",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_base_14", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_base_14_a",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_base_14_a", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_base_14_b",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_base_14_b", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_base_14_c",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_base_14_c", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_base_15",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_base_15", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_base_15_a",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_base_15_a", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_base_15_b",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_base_15_b", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_labyrinth_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_01", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_labyrinth_02",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_02", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_labyrinth_03",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_03", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_labyrinth_04",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_04", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_labyrinth_05",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_05", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_labyrinth_05_a",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_05_a", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_labyrinth_05_b",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_05_b", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_labyrinth_05_c",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_05_c", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_labyrinth_06",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_06", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_labyrinth_061",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_061", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_labyrinth_07",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_07", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_labyrinth_071",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_071", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_labyrinth_072",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_072", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_labyrinth_08",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_08", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_labyrinth_08_a",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_08_a", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_labyrinth_08_b",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_08_b", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_labyrinth_09",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_09", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_labyrinth_09_a",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_09_a", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_labyrinth_09_b",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_09_b", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_labyrinth_09_c",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_09_c", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_labyrinth_10",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_10", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_labyrinth_10_a",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_10_a", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_labyrinth_10_b",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_10_b", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_labyrinth_11",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_11", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_labyrinth_12",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_12", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@horde_maze_use_elevator"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_labyrinth_13",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_13", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_labyrinth_13_a",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_13_a", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_labyrinth_13_b",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_13_b", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_labyrinth_13_c",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_13_c", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_labyrinth_14",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_14", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_3point_00",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_3point_00", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_3point_boss"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_3point_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_3point_01", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_3point_stones"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_3point_restore",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_3point_restore", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_3point_stones"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_3point_02_a",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_3point_02_a", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_3point_stones"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_3point_02_b",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_3point_02_b", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_3point_stones"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_3point_02_c",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_3point_02_c", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_3point_stones"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_3point_shield",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_3point_shield", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_3point_boss"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_3point_03_a",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_3point_03_a", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_3point_stones"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_3point_03_b",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_3point_03_b", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_3point_stones"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_3point_03_c",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_3point_03_c", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_3point_stones"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_3point_04",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_3point_04", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_3point_boss"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_3point_041",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_3point_041", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_3point_05",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_3point_05"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_3point_06",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_3point_06"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_3point_end",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_3point_end"}},
+                {"message_objective": {"message": "@obj_horde_stage0_complete", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_parasites_00",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_parasites_00", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@tmp_horde_enc_parsites_start"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_parasites_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_parasites_01", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_parasites_02",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_parasites_02", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_parasites_02_a",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_parasites_02_a", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_parasites_02_b",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_parasites_02_b", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_parasites_02_c",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_parasites_02_c", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_parasites_03",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_parasites_03", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_parasites_04",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_parasites_04", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_parasites_05",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_parasites_05", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_parasites_06",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_parasites_06", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_parasites_07",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_parasites_07", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_kill_dogs",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_kill_dogs", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_pick_spines",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_pick_spines", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_parasites_end",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_parasites_end"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_parasites_00",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_parasites_00", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@tmp_horde_enc_parsites_start"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_parasites_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_parasites_01", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_parasites_02",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_parasites_02", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_parasites_02_a",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_parasites_02_a", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_parasites_02_b",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_parasites_02_b", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_parasites_02_c",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_parasites_02_c", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_parasites_03",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_parasites_03", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_parasites_04",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_parasites_04", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_parasites_05",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_parasites_05", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_parasites_06",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_parasites_06"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_parasites_07",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_parasites_07"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_parasites_end",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_parasites_end"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_parasites_08_a",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_parasites_08_a", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_parasites_08_b",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_parasites_08_b", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_kill_dogs",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_kill_dogs", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_parasites_09_a",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_parasites_09_a", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_parasites_09_b",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_parasites_09_b", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_pick_spines",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_pick_spines", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_worm_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_worm_01", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_vault_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_vault_01", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_vault_02",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_vault_02", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_vault_03",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_vault_03", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_vault_04",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_vault_04", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_vault_05",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_vault_05"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_vault_tips",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_vault_tips", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_vault_07",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_vault_07", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_vault_08",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_vault_08", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_drill_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_drill_01", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_drill_02",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_drill_02", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_ball_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_ball_01", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_ball_hack",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_ball_hack", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_ball_push",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_ball_push", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_ball_02",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_ball_02"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_hunt_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_hunt_01", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_dark_search"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_hunt_02",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_hunt_02", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@horde_enc_chaser_activate_trap"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_hunt_03",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_hunt_03", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_hunt_04",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_hunt_04", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_hunt_05",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_hunt_05", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_hunt_06",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_hunt_06", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_hunt_07",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_hunt_07", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_pit_escape"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_hunt_08",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_hunt_08", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_hunt_09",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_hunt_09", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_stage0_complete", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_nursery_keeper",
+            "actions" : [
+                {"message_objective": {"message": "@tmp_nursery_keeper", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "kill_feedback"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_nursery_clear_area",
+            "actions" : [
+                {"message_objective": {"message": "@tmp_nursery_area", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "kill_feedback"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_nursery_boss",
+            "actions" : [
+                {"message_objective": {"message": "@tmp_nursery_boss", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "kill_feedback"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_powerplant_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_powerplant_01", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@tmp_horde_enc_powerplant_generator"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_powerplant_02",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_powerplant_02", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@tmp_horde_enc_powerplant_mino"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_powerplant_03",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_powerplant_03", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@tmp_str_powerplant_gate"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_powerplant_04",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_powerplant_04", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@tmp_horde_enc_powerplant_generator"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_powerplant_05",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_powerplant_05", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_powerplant_06",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_powerplant_06", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_powerplant_07",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_powerplant_07", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_powerplant_08",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_powerplant_08", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_powerplant_09",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_powerplant_09", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_stage0_complete", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_cradle_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_cradle_01", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@tmp_horde_enc_cradle"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_cradle_02",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_cradle_02", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_cradle_03",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_cradle_03", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@tmp_horde_enc_cradle_sphere"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_cradle_04",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_cradle_04", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@tmp_horde_enc_cradle_detonator"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_cradle_05",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_cradle_05", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_cradle_06",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_cradle_06", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@tmp_horde_enc_cradle"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_cradle_07",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_cradle_07", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_cradle_08",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_cradle_08", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_cradle_09",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_cradle_09", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_stage0_complete", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_burrows_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_burrows_01", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_burrows_seal"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_burrows_02",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_burrows_02", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_burrows_seal"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_burrows_03",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_burrows_03", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_burrows_seal"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_burrows_04",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_burrows_04", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_anomaly_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_anomaly_01", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_anomaly_disrupt"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_anomaly_02",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_anomaly_02", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_anomaly_portal"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_anomaly_03",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_anomaly_03", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_samples_00",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_samples_00", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_samples"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_samples_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_samples_01", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_samples"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_samples_02",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_samples_02", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_samples"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_samples_03",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_samples_03", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_samples_signal"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_samples_04",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_samples_04", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_samples_protect"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_samples_05",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_samples_05", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_samples_protect"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_samples_06",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_samples_06", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_samples_07",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_samples_07"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_samples_08",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_samples_08", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_samples"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_samples",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_samples", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_samples"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_samples_09",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_samples_09", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_samples"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_samples_10",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_samples_10", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_samples"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_samples_11",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_samples_11", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_samples"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_parasites_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_parasites_01", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_parasites_disrupt"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_parasites_02",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_parasites_02", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_parasites_disrupt"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_parasites_03",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_parasites_03", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_parasites_disrupt"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_parasites_04",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_parasites_04", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_parasites_disrupt"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_parasites_05",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_parasites_05", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_stage0_complete", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_parasites_06",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_parasites_06"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_pit_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_pit_01", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_pit_escape"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_pit_02",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_pit_02", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_pit_escape"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_pit_03",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_pit_03", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_pit_escape"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_pit_04",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_pit_04", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_pit_escape"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_pit_05",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_pit_05", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_pit_escape"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_pit_06",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_pit_06", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_pit_escape"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_orchid_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_orchid_01", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_orchid_gardener"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_orchid_02",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_orchid_02", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_orchid_gardener"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_orchid_03",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_orchid_03", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_orchid_destroy"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_orchid_04",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_orchid_04", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_orchid_destroy"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_orchid_05",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_orchid_05", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_orchid_destroy"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_orchid_06",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_orchid_06", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_orchid_gardener"}}
+            ]
+        },
+        {
+            "name": "pve_horde_orchid_sullivan_07",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_orchid_sullivan_07", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_orchid_destroy"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_orchid_07_a",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_orchid_07_a", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_orchid_destroy"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_orchid_07_b",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_orchid_07_b", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_orchid_destroy"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_orchid_07_c",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_orchid_07_c", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_orchid_destroy"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_orchid_08",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_orchid_08", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_dark_start",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_dark_01", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_dark_01", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_dark_search"}}
+            ]
+        },
+        {
+            "name": "pve_horde_dark_split",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_dark_02", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_dark_02", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_dark_03", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_dark_search"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_dark_03",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_dark_03", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_dark_search"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_dark_03_a",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_dark_03_a", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_dark_search"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_dark_03_b",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_dark_03_b", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_dark_search"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_dark_03_c",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_dark_03_c", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_dark_search"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_dark_03_d",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_dark_03_d", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_dark_search"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_dark_04",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_dark_04", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_dark_destroy"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_dark_04",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_dark_04", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_nest_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_nest_01", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_nest_destroy"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_nest_02",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_nest_02", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_nest_destroy"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_nest_03",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_nest_03", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_nest_destroy"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_nest_04",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_nest_04", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_probe_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_probe_01", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_probe_protect"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_probe_02",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_probe_02", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_probe_protect"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_probe_03",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_probe_03", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_probe_protect"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_probe_04",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_probe_04", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_probe_protect"}}
+            ]
+        },
+        {
+            "name": "pve_horde_probe_lost",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_probe_lost", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_probe_protect"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_probe_05_a",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_probe_05_a", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_probe_protect"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_probe_05_b",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_probe_05_b", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_probe_protect"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_probe_05_c",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_probe_05_c", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_probe_protect"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_probe_06_a",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_probe_06_a", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_probe_protect"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_probe_06_b",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_probe_06_b", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_probe_protect"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_probe_06_c",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_probe_06_c", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_probe_protect"}}
+            ]
+        },
+        {
+            "name": "pve_horde_probe_complete",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_probe_complete", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_probe_protect"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_probe_07_a",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_probe_07_a", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_probe_protect"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_probe_07_b",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_probe_07_b", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_probe_protect"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_probe_07_c",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_probe_07_c", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_probe_protect"}}
+            ]
+        },
+        {
+            "name": "pve_horde_probe_working",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_probe_working", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_probe_protect"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_probe_08_a",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_probe_08_a", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_stage0_complete", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_probe_08_b",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_probe_08_b", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_stage0_complete", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_probe_09_a",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_probe_09_a", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_probe_09_b",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_probe_09_b", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_probe_09_c",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_probe_09_c", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_probe_defend_reminder",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_probe_defend_reminder", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_probe_end",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_probe_end"}},
+                {"message_objective": {"message": "@obj_horde_stage0_complete", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_probe_10",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_probe_10", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_koschei_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_koschei_01", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@tmp_horde_enc_kill_koschei"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_koschei_02",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_koschei_02", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@tmp_horde_enc_koschei_stones"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_koschei_03",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_koschei_03", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@tmp_horde_enc_kill_koschei"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_koschei_04",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_koschei_04", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@tmp_horde_enc_kill_koschei"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_koschei_05",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_koschei_05"}},
+                {"message_objective": {"message": "@obj_horde_stage0_complete", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_phantom_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_phantom_01", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_phantom_02",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_phantom_02", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@tmp_horde_enc_phantom_core_inside"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_phantom_02_obj",
+            "actions" : [
+                {"message_objective": {"message": "@tmp_horde_enc_phantom_core_inside"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_phantom_03",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_phantom_03", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@tmp_horde_enc_phantom_core_inside_obj"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_phantom_04",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_phantom_04", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@tmp_horde_enc_phantom_core"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_phantom_05",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_phantom_05", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_phantom_06",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_phantom_06", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_phantom_07",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_phantom_07", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_convertor_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convertor_01", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_convertor"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_convertor_02_a",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convertor_02_a", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_convertor"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_convertor_02_b",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convertor_02_b", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_convertor"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_convertor_02_c",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convertor_02_c", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_convertor"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_convertor_vulnerable",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convertor_vulnerable", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_convertor"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_convertor_03",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convertor_03", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_convertor"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_convertor_04",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convertor_04", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_convertor"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_convertor_05",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convertor_05"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_convertor_runner",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convertor_runner", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_convertor"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_convertor_07",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convertor_07", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_convertor"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_convertor_08",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convertor_08", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_convertor"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_convertor_09",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convertor_09", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_convertor"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_convertor_10_a",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convertor_10_a", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_convertor_10_b",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convertor_10_b", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_convertor_10_c",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convertor_10_c", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_convertor_10_d",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convertor_10_d", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_convertor_11",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convertor_11", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_convertor_attack",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_convertor_attack", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_explosive_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_explosive_01", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_convertor"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_explosive_02",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_explosive_02", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_convertor"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_explosive_03",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_explosive_03", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_convertor"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_explosive_04",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_explosive_04", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_boss",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_boss_00", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_defeat_envoy"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_boss_00",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_boss_00", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_defeat_envoy"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_boss_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_boss_01", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_defeat_envoy"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_boss_02",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_boss_02", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_defeat_envoy"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_boss_03",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_boss_03", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_defeat_envoy"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_boss_04",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_boss_04", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_horde_defeat_envoy"}}
+            ]
+        },
+        {
+            "name": "pve_horde_boss_casual",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_boss_casual", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_supplies_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_supplies_01", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_supplies_01_a",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_supplies_01_a", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_supplies_01_b",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_supplies_01_b", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_supplies_01_c",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_supplies_01_c", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_supplies_01_d",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_supplies_01_d", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_supplies_02",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_supplies_02", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_supplies_02_a",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_supplies_02_a", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_supplies_02_b",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_supplies_02_b", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_supplies_02_c",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_supplies_02_c", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_supplies_03",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_supplies_03", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_supplies_03_a",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_supplies_03_a", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_supplies_03_b",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_supplies_03_b", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_supplies_03_c",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_supplies_03_c", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_extraction_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_extraction_01", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_extraction_02",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_extraction_02", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_extraction_03",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_extraction_03", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_extraction_04",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_extraction_04", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_extraction_05",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_extraction_05", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_extraction_06",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_extraction_06", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_extraction_07",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_extraction_07", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_extraction_08",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_extraction_08", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_extraction_09",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_extraction_09", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_extraction_vote",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_extraction_vote", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_extraction_confirmed",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_extraction_confirmed", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_extraction_point",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_extraction_point", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_horde_velasquez_boss_00",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_boss_00", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_horde_defeat_envoy"}}
+            ]
+        },
+        {
+            "name": "pve_horde_defeat",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_defeat"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_victory_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_victory_01"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_victory_02",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_victory_02"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_victory_03",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_victory_03"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_victory_04",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_victory_04"}}
+            ]
+        },
+        {
+            "name": "pve_horde_sullivan_victory_05",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_victory_05"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_01_init",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_01_init", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "kill_feedback"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_01_boss_appear",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_01_boss_appear", "timeout": 6}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_01_shield_down",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_01_shield_down", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "kill_feedback"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_01_shield_up",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_01_shield_up", "timeout": 6}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_01_win",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_01_win", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "inv_hughes_goto_banished"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_02_init",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_02_init", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "kill_feedback"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_02_collecting",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_02_collecting", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "kill_feedback"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_02_sample_spawned",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_02_sample_spawned", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "bomb_spot"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_02_sample_deliver_prompt",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_02_sample_deliver_prompt", "timeout": 20}},
+                {"sound_trigger": {"trigger_name": "bomb_spot"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_02_sample_picked",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_02_sample_picked", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "point_captured"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_02_sample_delivered",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_02_sample_delivered", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "enc_02_sample_delivered"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_02_call_for_extraction",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_02_call_for_extraction", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_02_extraction_called",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_02_extraction_called", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "kill_feedback"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_02_extraction_on_its_way",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_02_extraction_on_its_way", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "kill_feedback"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_02_extraction_arrived",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_02_extraction_arrived", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "kill_feedback"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_02_cargo_lost",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_02_cargo_lost", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "inv_hughes_defeat"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_02_win",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_02_win", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_03_init",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_03_init", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "conq_hughes_announce"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_03_probe_working",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_03_probe_working", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_03_defend_probes",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_03_defend_probes", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_03_probe_lost",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_03_probe_lost", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "test_alarm_02"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_03_probe_redeploy",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_03_probe_redeploy", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_03_analysis_complete",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_03_analysis_complete", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_03_receiveng_data",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_03_receiveng_data", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "kill_feedback"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_03_win",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_03_win", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_04_init",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_04_init", "timeout": 6}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_04_keep_mobs_away",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_04_keep_mobs_away", "timeout": 6}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_04_damage_window",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_04_damage_window", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "crystalline_birds_alarm"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_04_regular_phase",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_04_regular_phase", "timeout": 6}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_04_weak_mob_spawned",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_04_weak_mob_spawned", "timeout": 6}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_04_transmutator_spawns",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_04_transmutator_spawns", "timeout": 6}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_04_big_mobs",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_04_big_mobs", "timeout": 6}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_04_win",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_04_win", "timeout": 6}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_05_find_all_keys",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_05_find_all_keys", "timeout": 6}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_03", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_05_place_key",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_05_place_key", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_05_case_deliver_prompt",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_05_case_deliver_prompt", "timeout": 20}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_05_key_placed_1_3",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_05_key_placed_1_3", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_05_key_placed_2_3",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_05_key_placed_2_3", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_05_key_placed_3_3",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_05_key_placed_3_3", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_05_key_placed_1_2",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_05_key_placed_1_2", "timeout": 6}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_07", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_05_key_placed_2_2",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_05_key_placed_2_2", "timeout": 6}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_09", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_05_protect_the_key",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_05_protect_the_key", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_05_key_stolen",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_05_key_stolen", "timeout": 6}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_10", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_05_win",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_05_win", "timeout": 6}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_12"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_kill_stilt",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_kill_stilt", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_kill_colossus",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_kill_colossus", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_06_hack_main_pc",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_06_hack_main_pc", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_06_hack_main_pc_start",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_06_hack_main_pc_start", "timeout": 10}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_06_search_for_exposed_server",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_06_search_for_exposed_server", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_06_one_more",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_06_one_more", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_06_good_job",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_06_good_job", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_cradle",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_dark_02", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@tmp_horde_enc_cradle"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_cradle_mino",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_cradle_mino", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "kill_feedback"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_cradle_sphere",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_cradle_sphere", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "kill_feedback"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_cradle_sphere_exp",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_cradle_sphere_exp", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "kill_feedback"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_cradle_detonator",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_cradle_detonator", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "kill_feedback"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_powerplant",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_dark_02", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@tmp_horde_enc_powerplant"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_powerplant_generator",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_powerplant_generator", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "kill_feedback"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_powerplant_mino",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_powerplant_mino", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "kill_feedback"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_powerplant_mino",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_powerplant_mino", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "kill_feedback"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_powerplant_pickup",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_powerplant_pickup", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "kill_feedback"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_parsites_start",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_parsites_start", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_parsites_dog_spawn",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_parsites_dog_spawn", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_parsites_get_weapon",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_parsites_get_weapon", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_parsites_use_weapon",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_parsites_use_weapon", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "horde_hp_buff",
+            "actions" : [
+                {"message_announcer": {"message": "@horde_hp_buff", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "heal_feedback"}},
+                {"fader": {"pre_fade_out_duration": 3, "pre_fade_out_intensity": 0.4}}
+            ]
+        },
+        {
+            "name": "horde_primary_backpack",
+            "actions" : [
+                {"message_announcer": {"message": "@horde_primary_backpack", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}},
+                {"fader": {"pre_fade_out_duration": 3, "pre_fade_out_intensity": 0.4}}
+            ]
+        },
+        {
+            "name": "horde_secondary_backpack",
+            "actions" : [
+                {"message_announcer": {"message": "@horde_secondary_backpack", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}},
+                {"fader": {"pre_fade_out_duration": 3, "pre_fade_out_intensity": 0.4}}
+            ]
+        },
+        {
+            "name": "horde_duplicate",
+            "actions" : [
+                {"message_announcer": {"message": "@horde_duplicate", "timeout": 4}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "ammo_refilled_pickup",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "ammo_receive"}}
+            ]
+        },
+        {
+            "name": "horde_heal",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "heal_feedback"}}
+            ]
+        },
+        {
+            "name": "horde_ability",
+            "actions" : [
+                {"message_announcer": {"message": "@horde_ability", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}},
+                {"fader": {"pre_fade_out_duration": 3, "pre_fade_out_intensity": 0.4}}
+            ]
+        },
+        {
+            "name": "horde_t1_weapon",
+            "actions" : [
+                {"message_announcer": {"message": "@horde_t1_weapon", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}},
+                {"fader": {"pre_fade_out_duration": 3, "pre_fade_out_intensity": 0.4}}
+            ]
+        },
+        {
+            "name": "horde_t2_weapon",
+            "actions" : [
+                {"message_announcer": {"message": "@horde_t2_weapon", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}},
+                {"fader": {"pre_fade_out_duration": 3, "pre_fade_out_intensity": 0.4}}
+            ]
+        },
+        {
+            "name": "horde_t3_weapon",
+            "actions" : [
+                {"message_announcer": {"message": "@horde_t3_weapon", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}},
+                {"fader": {"pre_fade_out_duration": 3, "pre_fade_out_intensity": 0.4}}
+            ]
+        },
+        {
+            "name": "horde_t4_weapon",
+            "actions" : [
+                {"message_announcer": {"message": "@horde_t4_weapon", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}},
+                {"fader": {"pre_fade_out_duration": 3, "pre_fade_out_intensity": 0.4}}
+            ]
+        },
+        {
+            "name": "horde_ult_score_on_kill",
+            "actions" : [
+                {"message_announcer": {"message": "@horde_ult_score_on_kill", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}},
+                {"fader": {"pre_fade_out_duration": 3, "pre_fade_out_intensity": 0.4}}
+            ]
+        },
+        {
+            "name": "horde_ult_score_on_headshot",
+            "actions" : [
+                {"message_announcer": {"message": "@horde_ult_score_on_headshot", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}},
+                {"fader": {"pre_fade_out_duration": 3, "pre_fade_out_intensity": 0.4}}
+            ]
+        },
+        {
+            "name": "horde_ult_score_on_melee",
+            "actions" : [
+                {"message_announcer": {"message": "@horde_ult_score_on_melee", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}},
+                {"fader": {"pre_fade_out_duration": 3, "pre_fade_out_intensity": 0.4}}
+            ]
+        },
+        {
+            "name": "horde_heal_on_melee",
+            "actions" : [
+                {"message_announcer": {"message": "@horde_heal_on_melee", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}},
+                {"fader": {"pre_fade_out_duration": 3, "pre_fade_out_intensity": 0.4}}
+            ]
+        },
+        {
+            "name": "horde_heal_on_secondary_headshot",
+            "actions" : [
+                {"message_announcer": {"message": "@horde_heal_on_secondary_headshot", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}},
+                {"fader": {"pre_fade_out_duration": 3, "pre_fade_out_intensity": 0.4}}
+            ]
+        },
+        {
+            "name": "horde_aoe_resist",
+            "actions" : [
+                {"message_announcer": {"message": "@horde_aoe_resist", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}},
+                {"fader": {"pre_fade_out_duration": 3, "pre_fade_out_intensity": 0.4}}
+            ]
+        },
+        {
+            "name": "horde_kn03",
+            "actions" : [
+                {"message_announcer": {"message": "@horde_kn03", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}},
+                {"fader": {"pre_fade_out_duration": 3, "pre_fade_out_intensity": 0.4}}
+            ]
+        },
+        {
+            "name": "horde_electrify_on_damage",
+            "actions" : [
+                {"message_announcer": {"message": "@horde_electrify_on_damage", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}},
+                {"fader": {"pre_fade_out_duration": 3, "pre_fade_out_intensity": 0.4}}
+            ]
+        },
+        {
+            "name": "horde_mine_trail",
+            "actions" : [
+                {"message_announcer": {"message": "@horde_mine_trail", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}},
+                {"fader": {"pre_fade_out_duration": 3, "pre_fade_out_intensity": 0.4}}
+            ]
+        },
+        {
+            "name": "horde_power_wpn",
+            "actions" : [
+                {"message_announcer": {"message": "@horde_power_wpn", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}},
+                {"fader": {"pre_fade_out_duration": 3, "pre_fade_out_intensity": 0.4}}
+            ]
+        },
+        {
+            "name": "horde_stage0_complete_r",
+            "actions" : [
+                {"message_objective": {"message": "@obj_horde_stage0_complete", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "horde_stage1_complete_r",
+            "actions" : [
+                {"message_objective": {"message": "@obj_horde_stage1_complete", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "horde_stage2_complete_r",
+            "actions" : [
+                {"message_objective": {"message": "@obj_horde_stage2_complete", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "horde_stage3_complete_r",
+            "actions" : [
+                {"message_objective": {"message": "@obj_horde_stage3_complete", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "horde_stage4_complete_r",
+            "actions" : [
+                {"message_objective": {"message": "@obj_horde_stage4_complete", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "horde_envoy_15",
+            "actions" : [
+                {"countdown_message": {"message": "@horde_envoy", "timeout": 15}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_contamin_09", "img": "doctor_sullivan"}},
+                {"sound_trigger": {"trigger_name": "whoosh_presentation"}}
+            ]
+        },
+        {
+            "name": "horde_envoy_5",
+            "actions" : [
+                {"countdown_message": {"message": "@horde_envoy", "timeout": 5}},
+                {"sound_trigger": {"trigger_name": "whoosh_presentation"}}
+            ]
+        },
+        {
+            "name": "horde_envoy_vo",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "pve_tutorial_voice_01"}},
+                {"message_objective": {"message": "@obj_horde_boss"}}
+            ]
+        },
+        {
+            "name": "horde_envoy_vo2",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "pve_tutorial_voice_02"}},
+                {"message_objective": {"message": "@obj_horde_boss"}}
+            ]
+        },
+        {
+            "name": "horde_maze_approach_the_bunker",
+            "actions" : [
+                {"message_objective": {"message": "@horde_maze_approach_the_bunker"}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_01", "img": "doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "horde_maze_use_elevator",
+            "actions" : [
+                {"message_objective": {"message": "@horde_maze_use_elevator"}},
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_02", "img": "doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "horde_maze_find_keys",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_03", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "horde_maze_check_the_rooms",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_04", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "horde_maze_room_close",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_06", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "horde_maze_keys_0_2",
+            "actions" : [
+                {"message_objective": {"message": "@horde_maze_keys_0_2"}}
+            ]
+        },
+        {
+            "name": "horde_maze_keys_1_narration",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_07", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "horde_maze_keys_1_2",
+            "actions" : [
+                {"message_objective": {"message": "@horde_maze_keys_1_2"}}
+            ]
+        },
+        {
+            "name": "horde_maze_keys_2_narration",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_08", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "horde_maze_keys_2_2",
+            "actions" : [
+                {"message_objective": {"message": "@horde_maze_keys_2_2"}}
+            ]
+        },
+        {
+            "name": "horde_maze_keys_all_narration",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_09", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "horde_maze_key_stolen_narration",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_10", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "horde_maze_care_narration",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_11", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "horde_maze_clear_wave",
+            "actions" : [
+                {"message_objective": {"message": "@horde_maze_clear_wave"}}
+            ]
+        },
+        {
+            "name": "horde_maze_complete_narration",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_sullivan_labyrinth_12"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_02_samples_delivered_1",
+            "actions" : [
+                {"message_objective": {"message": "@tmp_horde_enc_02_samples_delivered_1"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_02_samples_delivered_2",
+            "actions" : [
+                {"message_objective": {"message": "@tmp_horde_enc_02_samples_delivered_2"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_02_samples_delivered_3",
+            "actions" : [
+                {"message_objective": {"message": "@tmp_horde_enc_02_samples_delivered_3"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_02_samples_delivered_4",
+            "actions" : [
+                {"message_objective": {"message": "@tmp_horde_enc_02_samples_delivered_4"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_02_samples_delivered_5",
+            "actions" : [
+                {"message_objective": {"message": "@tmp_horde_enc_02_samples_delivered_5"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_02_samples_delivered_6",
+            "actions" : [
+                {"message_objective": {"message": "@tmp_horde_enc_02_samples_delivered_6"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_02_samples_delivered_7",
+            "actions" : [
+                {"message_objective": {"message": "@tmp_horde_enc_02_samples_delivered_7"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_02_samples_delivered_8",
+            "actions" : [
+                {"message_objective": {"message": "@tmp_horde_enc_02_samples_delivered_8"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_02_samples_delivered_9",
+            "actions" : [
+                {"message_objective": {"message": "@tmp_horde_enc_02_samples_delivered_9"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_02_call_for_extraction_obj",
+            "actions" : [
+                {"message_objective": {"message": "@tmp_horde_enc_02_call_for_extraction_obj"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_02_wait_until_complete",
+            "actions" : [
+                {"message_objective": {"message": "@tmp_horde_enc_02_wait_until_complete"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_03_probe_done_0",
+            "actions" : [
+                {"message_objective": {"message": "@tmp_horde_enc_03_probe_done_0"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_03_probe_done_1",
+            "actions" : [
+                {"message_objective": {"message": "@tmp_horde_enc_03_probe_done_1"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_03_probe_done_2",
+            "actions" : [
+                {"message_objective": {"message": "@tmp_horde_enc_03_probe_done_2"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_enc_ball_catcher_hit",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_enc_ball_catcher_hit", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}},
+                {"message_objective": {"message": "@tmp_horde_enc_enc_ball_catcher_hit"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_enc_ball_catcher_hack",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_ball_catcher_hack", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}},
+                {"message_objective": {"message": "@tmp_horde_enc_ball_catcher_hack"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_generator_hack",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_generator_hack", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}},
+                {"message_objective": {"message": "@tmp_horde_enc_generator_hack"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_generator_hack_destroy",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_generator_hack_destroy", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}},
+                {"message_objective": {"message": "@tmp_horde_enc_generator_hack_destroy"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_kill_koschei",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_kill_koschei", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}},
+                {"message_objective": {"message": "@tmp_horde_enc_kill_koschei"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_koschei_stones",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_koschei_stones", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}},
+                {"message_objective": {"message": "@tmp_horde_enc_koschei_stones"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_phantom_core",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_phantom_01", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@tmp_horde_enc_phantom_core"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_phantom_core_portal",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_phantom_core_portal", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}},
+                {"message_objective": {"message": "@tmp_horde_enc_phantom_core_portal"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_phantom_core_inside",
+            "actions" : [
+                {"message_objective": {"message": "@tmp_horde_enc_phantom_core_inside"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_phantom_core_shield",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_phantom_core_shield", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_phantom_core_inside_obj",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_phantom_core_inside_obj", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_phantom_core_sting",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_phantom_core_sting", "timeout": 2}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_phantom_core_adamant",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_phantom_core_adamant", "timeout": 3}}
+            ]
+        },
+        {
+            "name": "horde_datacenter_hack",
+            "actions" : [
+                {"message_objective": {"message": "@horde_datacenter_hack"}}
+            ]
+        },
+        {
+            "name": "horde_datacenter_status_01",
+            "actions" : [
+                {"message_objective": {"message": "@horde_datacenter_status_01"}}
+            ]
+        },
+        {
+            "name": "horde_datacenter_status_02",
+            "actions" : [
+                {"message_objective": {"message": "@horde_datacenter_status_02"}}
+            ]
+        },
+        {
+            "name": "horde_datacenter_status_03",
+            "actions" : [
+                {"message_objective": {"message": "@horde_datacenter_status_03"}}
+            ]
+        },
+        {
+            "name": "horde_datacenter_status_04",
+            "actions" : [
+                {"message_objective": {"message": "@horde_datacenter_status_04"}}
+            ]
+        },
+        {
+            "name": "horde_datacenter_status_05",
+            "actions" : [
+                {"message_objective": {"message": "@horde_datacenter_status_05"}}
+            ]
+        },
+        {
+            "name": "horde_datacenter_clear_remaining_reinforcements",
+            "actions" : [
+                {"message_objective": {"message": "@horde_datacenter_clear_remaining_reinforcements"}}
+            ]
+        },
+        {
+            "name": "horde_datacenter_gh_ventilation_off",
+            "actions" : [
+                {"message_objective": {"message": "@horde_datacenter_gh_ventilation_off"}}
+            ]
+        },
+        {
+            "name": "horde_datacenter_gh_wait_maxtemperture",
+            "actions" : [
+                {"message_objective": {"message": "@horde_datacenter_gh_wait_maxtemperture"}}
+            ]
+        },
+        {
+            "name": "horde_datacenter_gh_destroy_hotspot",
+            "actions" : [
+                {"message_objective": {"message": "@horde_datacenter_gh_destroy_hotspot"}}
+            ]
+        },
+        {
+            "name": "horde_parasites_get_orbs",
+            "actions" : [
+                {"message_objective": {"message": "@horde_parasites_get_orbs"}}
+            ]
+        },
+        {
+            "name": "horde_parasites_destroy_boss",
+            "actions" : [
+                {"message_objective": {"message": "@horde_parasites_destroy_boss"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_turret_destroy_weakpoint",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_turret_destroy_weakpoint", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "tmp_horde_enc_turret_defend_emp",
+            "actions" : [
+                {"message_announcer": {"message": "@tmp_horde_enc_turret_defend_emp", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "horde_kill_stilt",
+            "actions" : [
+                {"message_objective": {"message": "@horde_kill_stilt"}}
+            ]
+        },
+        {
+            "name": "horde_kill_colossus",
+            "actions" : [
+                {"message_objective": {"message": "@horde_kill_colossus"}}
+            ]
+        },
+        {
+            "name": "horde_armor",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "point_lost"}}
+            ]
+        },
+        {
+            "name": "horde_extraction_hint",
+            "actions" : [
+                {"message_announcer": {"message": "@horde_extraction_hint", "timeout": 6}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "horde_extraction_begin",
+            "actions" : [
+                {"countdown_message": {"message": "@horde_extraction_begin", "timeout": 5}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "BloodThirsty",
+            "actions" : [
+        {"activate_perk": {"perk_name": "heal_on_melee_tier2", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "heal_feedback"}}
+            ]
+        },
+        {
+            "name": "VampiricShot",
+            "actions" : [
+        {"activate_perk": {"perk_name": "heal_on_pistol_headshot_tier3", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "heal_feedback"}}
+            ]
+        },
+        {
+            "name": "BlastArmor",
+            "actions" : [
+        {"activate_perk": {"perk_name": "aoe_resist_tier3", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "heal_feedback"}}
+            ]
+        },
+        {
+            "name": "KillUltimateCharger",
+            "actions" : [
+        {"activate_perk": {"perk_name": "ult_score_on_kill_tier1", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "item_ult_charger"}}
+            ]
+        },
+        {
+            "name": "HeadshotUltimateCharger",
+            "actions" : [
+        {"activate_perk": {"perk_name": "ult_score_on_headshot_tier1", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "item_ult_charger"}}
+            ]
+        },
+        {
+            "name": "HordeExtractionInitiated",
+            "actions" : [
+                {"message_announcer": {"message": "@horde_extraction_initiated", "timeout": 6}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_extraction_vote", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "HordeExtractionConfirmed",
+            "actions" : [
+                {"message_announcer": {"message": "@horde_extraction_confirmed", "timeout": 6}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_extraction_confirmed", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@horde_extraction_objective"}}
+            ]
+        },
+        {
+            "name": "HordeExtractionSecure",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_extraction_point", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@horde_extraction_secure"}}
+            ]
+        },
+        {
+            "name": "HordeIntroVO",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "pve_horde_sullivan_00_long"}}
+            ]
+        },
+        {
+            "name": "HordeIntroVO_2",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "pve_horde_sullivan_01"}}
+            ]
+        },
+        {
+            "name": "HordeIntroVO_3",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "pve_horde_sullivan_02"}}
+            ]
+        },
+        {
+            "name": "HordeIntroVO_4",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "pve_horde_phillips_00"}}
+            ]
+        },
+        {
+            "name": "HordeIntroVO_5",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "pve_horde_velasquez_00"}}
+            ]
+        },
+        {
+            "name": "HordeHelicopter",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "horde_helicopter_01"}}
+            ]
+        },
+        {
+            "name": "HordeLostSupply",
+            "actions" : [
+                 {"narration_objective": {"trigger_name": "pve_horde_sullivan_supplies_01", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "horde_encounter_complete",
+            "actions" : [
+                {
+                    "encounter_completion_event":
+                    {
+                        "name": "@tmp_horde_enc_01_win",
+                        "text": "@horde_encounter_complete",
+                        "stage_1": "@horde_stage1_complete",
+                        "stage_2": "@horde_stage2_complete",
+                        "stage_3": "@horde_stage3_complete",
+                        "stage_4": "@horde_stage4_complete"
+                    }
+                },
+                    {"sound_trigger": {"trigger_name": "encounter_completion"}
+                }
+            ]
+        },
+        {
+            "name": "horde_power_stones_complete",
+            "actions" : [
+                {
+                    "encounter_completion_event":
+                    {
+                        "name": "@horde_great_success",
+                        "text": "@horde_power_stones_complete",
+                        "stage_1": "@horde_stage1_complete",
+                        "stage_2": "@horde_stage2_complete",
+                        "stage_3": "@horde_stage3_complete",
+                        "stage_4": "@horde_stage4_complete"
+                    }
+                },
+                    {"sound_trigger": {"trigger_name": "encounter_completion"}
+                }
+            ]
+        },
+        {
+            "name": "horde_sample_extraction_complete",
+            "actions" : [
+                {
+                    "encounter_completion_event":
+                    {
+                        "name": "@horde_great_success",
+                        "text": "@horde_sample_extraction_complete",
+                        "stage_1": "@horde_stage1_complete",
+                        "stage_2": "@horde_stage2_complete",
+                        "stage_3": "@horde_stage3_complete",
+                        "stage_4": "@horde_stage4_complete"
+                    }
+                },
+                    {"sound_trigger": {"trigger_name": "encounter_completion"}
+                }
+            ]
+        },
+        {
+            "name": "horde_probe_defense_complete",
+            "actions" : [
+                {
+                    "encounter_completion_event":
+                    {
+                        "name": "@horde_great_success",
+                        "text": "@horde_probe_defense_complete",
+                        "stage_1": "@horde_stage1_complete",
+                        "stage_2": "@horde_stage2_complete",
+                        "stage_3": "@horde_stage3_complete",
+                        "stage_4": "@horde_stage4_complete"
+                    }
+                },
+                    {"sound_trigger": {"trigger_name": "encounter_completion"}
+                }
+            ]
+        },
+        {
+            "name": "horde_research_station_complete",
+            "actions" : [
+                {
+                    "encounter_completion_event":
+                    {
+                        "name": "@horde_great_success",
+                        "text": "@horde_research_station_complete",
+                        "stage_1": "@horde_stage1_complete",
+                        "stage_2": "@horde_stage2_complete",
+                        "stage_3": "@horde_stage3_complete",
+                        "stage_4": "@horde_stage4_complete"
+                    }
+                },
+                    {"sound_trigger": {"trigger_name": "encounter_completion"}
+                }
+            ]
+        },
+        {
+            "name": "horde_transmutator_complete",
+            "actions" : [
+                {
+                    "encounter_completion_event":
+                    {
+                        "name": "@horde_great_success",
+                        "text": "@horde_transmutator_complete",
+                        "stage_1": "@horde_stage1_complete",
+                        "stage_2": "@horde_stage2_complete",
+                        "stage_3": "@horde_stage3_complete",
+                        "stage_4": "@horde_stage4_complete"
+                    }
+                },
+                    {"sound_trigger": {"trigger_name": "encounter_completion"}
+                }
+            ]
+        },
+        {
+            "name": "horde_cyber_stilt_complete",
+            "actions" : [
+                {
+                    "encounter_completion_event":
+                    {
+                        "name": "@horde_great_success",
+                        "text": "@horde_cyber_stilt_complete",
+                        "stage_1": "@horde_stage1_complete",
+                        "stage_2": "@horde_stage2_complete",
+                        "stage_3": "@horde_stage3_complete",
+                        "stage_4": "@horde_stage4_complete"
+                    }
+                },
+                    {"sound_trigger": {"trigger_name": "encounter_completion"}
+                }
+            ]
+        },
+        {
+            "name": "horde_parasites_complete",
+            "actions" : [
+                {
+                    "encounter_completion_event":
+                    {
+                        "name": "@horde_great_success",
+                        "text": "@horde_parasites_complete",
+                        "stage_1": "@horde_stage1_complete",
+                        "stage_2": "@horde_stage2_complete",
+                        "stage_3": "@horde_stage3_complete",
+                        "stage_4": "@horde_stage4_complete"
+                    }
+                },
+                    {"sound_trigger": {"trigger_name": "encounter_completion"}
+                }
+            ]
+        },
+        {
+            "name": "horde_maze_complete",
+            "actions" : [
+                {
+                    "encounter_completion_event":
+                    {
+                        "name": "@horde_great_success",
+                        "text": "@horde_maze_complete",
+                        "stage_1": "@horde_stage1_complete",
+                        "stage_2": "@horde_stage2_complete",
+                        "stage_3": "@horde_stage3_complete",
+                        "stage_4": "@horde_stage4_complete"
+                    }
+                },
+                    {"sound_trigger": {"trigger_name": "encounter_completion"}
+                }
+            ]
+        },
+        {
+            "name": "horde_crystal_inception_complete",
+            "actions" : [
+                {
+                    "encounter_completion_event":
+                    {
+                        "name": "@horde_great_success",
+                        "text": "@horde_crystal_inception_complete",
+                        "stage_1": "@horde_stage1_complete",
+                        "stage_2": "@horde_stage2_complete",
+                        "stage_3": "@horde_stage3_complete",
+                        "stage_4": "@horde_stage4_complete"
+                    }
+                },
+                    {"sound_trigger": {"trigger_name": "encounter_completion"}
+                }
+            ]
+        },
+        {
+            "name": "horde_chaser_hunt_complete",
+            "actions" : [
+                {
+                    "encounter_completion_event":
+                    {
+                        "name": "@horde_great_success",
+                        "text": "@horde_chaser_hunt_complete",
+                        "stage_1": "@horde_stage1_complete",
+                        "stage_2": "@horde_stage2_complete",
+                        "stage_3": "@horde_stage3_complete",
+                        "stage_4": "@horde_stage4_complete"
+                    }
+                },
+                    {"sound_trigger": {"trigger_name": "encounter_completion"}
+                }
+            ]
+        },
+        {
+            "name": "horde_ball_catcher_complete",
+            "actions" : [
+                {
+                    "encounter_completion_event":
+                    {
+                        "name": "@horde_great_success",
+                        "text": "@horde_ball_catcher_complete",
+                        "stage_1": "@horde_stage1_complete",
+                        "stage_2": "@horde_stage2_complete",
+                        "stage_3": "@horde_stage3_complete",
+                        "stage_4": "@horde_stage4_complete"
+                    }
+                },
+                    {"sound_trigger": {"trigger_name": "encounter_completion"}
+                }
+            ]
+        },
+        {
+            "name": "horde_color_hack_complete",
+            "actions" : [
+                {
+                    "encounter_completion_event":
+                    {
+                        "name": "@horde_great_success",
+                        "text": "@horde_color_hack_complete",
+                        "stage_1": "@horde_stage1_complete",
+                        "stage_2": "@horde_stage2_complete",
+                        "stage_3": "@horde_stage3_complete",
+                        "stage_4": "@horde_stage4_complete"
+                    }
+                },
+                    {"sound_trigger": {"trigger_name": "encounter_completion"}
+                }
+            ]
+        },
+        {
+            "name": "horde_protection_sphere_complete",
+            "actions" : [
+                {
+                    "encounter_completion_event":
+                    {
+                        "name": "@horde_great_success",
+                        "text": "@horde_protection_sphere_complete",
+                        "stage_1": "@horde_stage1_complete",
+                        "stage_2": "@horde_stage2_complete",
+                        "stage_3": "@horde_stage3_complete",
+                        "stage_4": "@horde_stage4_complete"
+                    }
+                },
+                    {"sound_trigger": {"trigger_name": "encounter_completion"}
+                }
+            ]
+        },
+        {
+            "name": "horde_crystalline_worm_complete",
+            "actions" : [
+                {
+                    "encounter_completion_event":
+                    {
+                        "name": "@horde_great_success",
+                        "text": "@horde_crystalline_worm_complete",
+                        "stage_1": "@horde_stage1_complete",
+                        "stage_2": "@horde_stage2_complete",
+                        "stage_3": "@horde_stage3_complete",
+                        "stage_4": "@horde_stage4_complete"
+                    }
+                },
+                    {"sound_trigger": {"trigger_name": "encounter_completion"}
+                }
+            ]
+        },
+        {
+            "name": "horde_overcharge_complete",
+            "actions" : [
+                {
+                    "encounter_completion_event":
+                    {
+                        "name": "@horde_great_success",
+                        "text": "@horde_overcharge_complete",
+                        "stage_1": "@horde_stage1_complete",
+                        "stage_2": "@horde_stage2_complete",
+                        "stage_3": "@horde_stage3_complete",
+                        "stage_4": "@horde_stage4_complete"
+                    }
+                },
+                    {"sound_trigger": {"trigger_name": "encounter_completion"}
+                }
+            ]
+        },
+        {
+            "name": "horde_dark_maze_complete",
+            "actions" : [
+                {
+                    "encounter_completion_event":
+                    {
+                        "name": "@horde_great_success",
+                        "text": "@horde_dark_maze_complete",
+                        "stage_1": "@horde_stage1_complete",
+                        "stage_2": "@horde_stage2_complete",
+                        "stage_3": "@horde_stage3_complete",
+                        "stage_4": "@horde_stage4_complete"
+                    }
+                },
+                    {"sound_trigger": {"trigger_name": "encounter_completion"}
+                }
+            ]
+        },
+        {
+            "name": "expedition_complete",
+            "actions" : [
+                {
+                    "encounter_completion_event":
+                    {
+                        "name": "@horde_expedition_complete",
+                        "text": "@horde_draw",
+                        "stage_1": "@horde_stage1_complete",
+                        "stage_2": "@horde_stage2_complete",
+                        "stage_3": "@horde_stage3_complete",
+                        "stage_4": "@horde_stage4_complete"
+                    }
+                },
+                    {"sound_trigger": {"trigger_name": "encounter_completion"}
+                }
+            ]
+        },
+        {
+            "name": "FindChaser",
+            "actions" : [
+                {"message_announcer": {"message": "FIND CHASER", "timeout": 3}}
+            ]
+        },
+        {
+            "name": "Shoot_eye",
+            "actions" : [
+                {"message_announcer": {"message": "Shoot eyes", "timeout": 3}}
+            ]
+        },
+        {
+            "name": "CatсhChaser",
+            "actions" : [
+                {"message_announcer": {"message": "LEAD CHASER TO THE TRAP", "timeout": 3}}
+            ]
+        },
+        {
+            "name": "ChaserEnergy",
+            "actions" : [
+                {"message_announcer": {"message": "HOLD CHASER IN THE TRAP POINTS ", "timeout": 3}}
+            ]
+        },
+        {
+            "name": "ExtractionAvailable",
+            "actions" : [
+                {"activate_custom_perk": {"perk_name": "@extraction_available", "text": "@extraction_available", "icon": "blueprint_white", "timeout": 100, "show_timer": true}}
+        ]
+        },
+        {
+            "name": "NoregenModEvent",
+            "actions" : [
+                {
+                    "encounter_completion_event":
+                    {
+                        "name": "@horde_noregen_mod_name",
+                        "text": "@horde_noregen_mod_descr",
+                        "stage_1": "@horde_noregen_mod_descr",
+                        "stage_2": "@horde_noregen_mod_descr",
+                        "stage_3": "@horde_noregen_mod_descr",
+                        "stage_4": "@horde_noregen_mod_descr"
+                    }
+                },
+                    {"sound_trigger": {"trigger_name": "instant_reward_high"}
+                }
+            ]
+        },
+        {
+            "name": "ContaminationRate",
+            "actions" : [
+                {"activate_custom_perk": {"perk_name": "@contamination_rate_x5", "text": "@contamination_rate_x5", "icon": "horde_contamination", "show_timer": false}}
+        ]
+        }
+
+    ]
+}

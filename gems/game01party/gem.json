@@ -1,0 +1,28 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "efb3ce36ef7a4ee7bfbaf064de07ef49",
+    "Name": "Party",
+    "DisplayName": "Party",
+    "Version": "0.1.0",
+    "Summary": "game party system",
+    "Tags": ["Untagged"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        }
+    ],
+    "Dependencies":
+    [   
+        {
+            "Uuid": "b8e16ebeec9346f18af81fe09b6844bf",
+            "VersionConstraints": ["~>0.1"],
+            "_comment": "ClientBackend"
+        },
+        {
+            "Uuid": "4d5d71b02d454ca3be846eb7e16b82f3",
+            "VersionConstraints": ["~>0.1"],
+            "_comment": "Notification"
+        }
+    ]
+}

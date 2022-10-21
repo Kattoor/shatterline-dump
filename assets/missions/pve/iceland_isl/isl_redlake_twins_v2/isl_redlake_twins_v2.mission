@@ -1,0 +1,140 @@
+{
+  "metagame_info": {
+    "name_token": "@short_twins_name",
+    "mission": "isl_redlake_twins_v2",
+    "game_type": "pve",
+    "voice_chat_mode": "team_and_party",
+    "min_players_count": 3,
+    "time_to_join_sec": 900,
+    "reconnect_enable": true
+  },
+  "session_info": {
+    "level": "pve/iceland_isl/isl_redlake_twins_v2",
+    "mission_modifiers": [
+      "ai_director",
+      "normal_ai_spawn_modifier",
+      "restore_checkpoint",
+      "pve_pushback"
+    ],
+    "game_mode": "pve",
+    "result_scene": "levels/pve/iceland_isl/isl_redlake/slices/result_stage_redlake/result_stage_redlake.dynamicslice"
+  },
+  "ui_info": {
+    "background_image": "loading_redlake",
+    "sound_event": "redlake_loading"
+  },
+  "reward_info": {
+    "reward_calculators": [
+      {
+        "name": "pve_session_outcome",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "win": 100,
+              "draw": 15,
+              "loss": 10
+            }
+          },
+          {
+            "type": "xp",
+            "values": {
+              "win": 325,
+              "draw": 275,
+              "loss": 200
+            }
+          },
+          {
+            "type": "skill",
+            "values": {
+              "win": 1,
+              "draw": 0,
+              "loss": -1
+            }
+          }
+        ]
+      },
+      {
+        "name": "session_score",
+        "score": "Kill",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "reward": 0,
+              "max_reward": 1
+            }
+          },
+          {
+            "type": "xp",
+            "values": {
+              "reward": 1,
+              "max_reward": 75
+            }
+          }
+        ]
+      }
+    ],
+    "weapon_score": [
+      {
+        "event": {
+          "event_id": "Kill"
+        },
+        "score": 70
+      },
+      {
+        "event": {
+          "event_id": "Headshot"
+        },
+        "score": 25
+      },
+      {
+        "event": {
+          "event_id": "WeaponTick"
+        },
+        "score": 12
+      },
+      {
+        "event": {
+          "event_id": "Assist"
+        },
+        "score": 70
+      }
+    ],
+    "hero_score": [
+      {
+        "event": {
+          "event_id": "Kill"
+        },
+        "score": 50
+      },
+      {
+        "event": {
+          "event_id": "Assist"
+        },
+        "score": 25
+      },
+      {
+        "event": {
+          "event_id": "Heal",
+          "target_team": "Same"
+        },
+        "score": 0.5
+      },
+      {
+        "event": {
+          "event_id": "Resurrect"
+        },
+        "score": 100
+      },
+      {
+        "event": {
+          "event_id": "WeaponTick"
+        },
+        "score": 5
+      }
+    ]
+  }
+}

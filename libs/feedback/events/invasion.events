@@ -1,0 +1,836 @@
+{
+    "events": 
+    [
+        {
+            "name": "InvaderDeath",
+            "actions" : 
+            [
+                {"message_announcer": {"message": "@InvaderDeath", "timeout": 4}},
+                {"narration_objective": {"trigger_name": "inv_hughes_banished"}}
+            ]
+        },
+        {
+            "name": "inv_shellguard_mission_start",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_hughes_phase_01", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"message_objective": {"message": "@shellguard_mission_start", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "inv_shellguard_wait_drone",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_hughes_drone", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"message_objective": {"message": "@obj_inv_defend_drone"}}
+            ]
+        },
+        {
+            "name": "inv_shellguard_gate_hacked",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_hughes_phase_02", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"narration_objective": {"trigger_name": "inv_hughes_goto_base", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"message_objective": {"message": "@inv_shellguard_goto_base", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "inv_shellguard_capture_base",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_hughes_capture", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"message_objective": {"message": "@inv_shellguard_plant_virus"}}
+            ]
+        },
+        {
+            "name": "inv_shellguard_capture_reminder",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_hughes_reminder", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"message_objective": {"message": "@inv_shellguard_plant_virus", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "inv_shellguard_goto_pits",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_hughes_phase_03", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"message_objective": {"message": "@inv_shellguard_goto_pits"}}
+            ]
+        },
+        {
+            "name": "inv_shellguard_breeding",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_hughes_phase_02", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}}
+            ]
+        },
+        {
+            "name": "inv_shellguard_hatch_warning",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_hughes_hatch_warning", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"message_objective": {"message": "@inv_shellguard_goto_pits", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "inv_shellguard_kill_boss",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_hughes_kill_boss", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"message_objective": {"message": "@inv_shellguard_defeat_boss"}}
+            ]
+        },
+        {
+            "name": "next_point_obj",
+            "actions" : 
+            [
+                {"message_objective": {"message": "@next_point"}}
+            ]
+        },
+        {
+            "name": "isl_inv_defend_drone_obj",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_hughes_drone", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"message_objective": {"message": "@obj_inv_defend_drone", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "drone_destroyed_win",
+            "actions" : 
+            [
+                {"message_objective": {"message": "@drone_destroyed_win"}},
+                {"narration_objective": {"trigger_name": "inv_voice_brief_08", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "drone_destroyed_defeat",
+            "actions" : 
+            [
+                {"message_objective": {"message": "@drone_destroyed_defeat"}},
+                {"narration_objective": {"trigger_name": "inv_hughes_brief_06"}}
+            ]
+        },
+        {
+            "name": "isl_inv_capture_base_obj",
+            "actions" : 
+            [
+                {"message_objective": {"message": "@obj_capture_base", "show_in_center": false}},
+                {"narration_objective": {"trigger_name": "inv_hughes_goto_base", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}}
+            ]
+        },
+        {
+            "name": "isl_inv_capture_base_invader_obj",
+            "actions" : 
+            [
+                {"message_objective": {"message": "@obj_capture_base_invader"}},
+                {"narration_objective": {"trigger_name": "inv_voice_brief_05", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "isl_inv_protect_pits_invader_obj",
+            "actions" : 
+            [
+                {"message_objective": {"message": "@obj_protect_breeding_pits"}},
+                {"narration_objective": {"trigger_name": "inv_voice_brief_06", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "isl_inv_killstilt_obj",
+            "actions" : 
+            [
+                {"message_objective": {"message": "@obj_killstilt", "show_in_center": false}},
+                {"narration_objective": {"trigger_name": "inv_hughes_kill_boss", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}}
+            ]
+        },
+        {
+            "name": "isl_inv_protect_stilt_invader_obj",
+            "actions" : 
+            [
+                {"message_objective": {"message": "@obj_protect_stilt_invader"}},
+                {"narration_objective": {"trigger_name": "inv_voice_brief_07", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "enemy_ult",
+            "actions" : [
+                {"message_announcer": {"message": "@enemy_ult", "timeout": 3}}
+            ]
+        },
+        {
+            "name": "too_close_to_enemies",
+            "actions" : [
+                {"message_announcer": {"message": "@too_close_to_enemies", "timeout": 3}}
+            ]
+        },
+        {
+            "name": "InvaderUlt",
+            "actions" : [
+                {"message_announcer": {"message": "@invader_ult", "timeout": 10}},
+                {"sound_trigger": {"trigger_name": "test_alarm_02"}}
+            ]
+        },
+        {
+            "name": "InvaderStrike",
+            "actions" : [
+                {"message_announcer": {"message": "@invader_strike", "timeout": 4}},
+                {"sound_trigger": {"trigger_name": "test_alarm_02"}}
+            ]
+        },
+        {
+            "name": "InvaderSpawn",
+            "actions" : [
+                {"message_announcer": {"message": "@invader_spawn", "timeout": 5}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "isl_inv_shellguard_start_obj",
+            "actions" : 
+            [
+                {"message_objective": {"message": "@inv_defend_drone_label", "show_in_center": false}},
+                {"narration_objective": {"trigger_name": "inv_hughes_phase_01", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}}
+            ]
+        },
+        {
+            "name": "isl_inv_invader_start_obj",
+            "actions" : 
+            [
+                {"message_announcer": {"message": "@invader_tutorial_1", "timeout": 5}},
+                {"message_objective": {"message": "@obj_inv_destroy_drone_invader", "show_in_center": false}},
+                {"narration_objective": {"trigger_name": "inv_voice_brief_01", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "isl_base_captured_invader_obj",
+            "actions" : 
+            [
+                {"message_objective": {"message": "@obj_protect_breeding_pits", "show_in_center": false}},
+                {"narration_objective": {"trigger_name": "inv_voice_brief_06", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "shellguard_win",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_hughes_victory", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"message_objective": {"message": "@obj_bcontrol_victory", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "shellguard_lose",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_hughes_defeat", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}}
+            ]
+        },
+        {
+            "name": "inv_hughes_defeat_01",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_hughes_defeat_01", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}}
+            ]
+        },
+        {
+            "name": "inv_hughes_defeat_02",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_hughes_defeat_02", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}}
+            ]
+        },
+        {
+            "name": "inv_hughes_defeat_03",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_hughes_defeat_03", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}}
+            ]
+        },
+        {
+            "name": "inv_hughes_wipe",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_hughes_wipe", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}}
+            ]
+        },
+        {
+            "name": "inv_hughes_capture_03",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_hughes_capture_03", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}}
+            ]
+        },
+        {
+            "name": "inv_hughes_power",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_hughes_power", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}}
+            ]
+        },
+        {
+            "name": "invader_win",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_brief_08", "img": "exalted_one", "narrator": "@narrator_exalted_one"}},
+                {"message_objective": {"message": "@obj_bcontrol_victory", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "invader_lose",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_brief_09", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "PlayerKilled",
+            "actions" : 
+            [
+                {"message_announcer": {"message": "@player_killed", "timeout": 4}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "AbilityCharged",
+            "actions" : 
+            [
+                {"message_announcer": {"message": "@invader_ability_ready", "timeout": 4}},
+                {"narration_objective": {"trigger_name": "inv_voice_brief_109"}}
+            ]
+        },
+        {
+            "name": "AbilityFailed",
+            "actions" : 
+            [
+                {"message_announcer": {"message": "@invader_ability_fail", "timeout": 4}},
+                {"sound_trigger": {"trigger_name": "stop_laser"}}
+            ]
+        },
+        {
+            "name": "BeaconExpired",
+            "actions" : 
+            [
+                {"message_announcer": {"message": "@beacon_expired", "timeout": 4}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "BeaconPlanted",
+            "actions" : 
+            [
+                {"message_announcer": {"message": "@beacon_planted", "timeout": 4}}
+            ]
+        },
+        {
+            "name": "TeammateResurrected",
+            "actions" : 
+            [
+                {"message_announcer": {"message": "@teammate_resurrected", "timeout": 4}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "d_up",
+            "actions" : 
+            [
+                {"sound_trigger": {"trigger_name": "shardskin_attack_fire"}}
+            ]
+        },
+        {
+            "name": "d_down",
+            "actions" : 
+            [
+                {"sound_trigger": {"trigger_name": "stop_laser"}}
+            ]
+        },
+        {
+            "name": "d_flat",
+            "actions" : 
+            [
+                {"sound_trigger": {"trigger_name": "start_laser"}}
+            ]
+        },
+        {
+            "name": "MissionCritical",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_hughes_norespawn"}}
+            ]
+        },
+        {
+            "name": "TwoPlayersDown",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_hughes_team_losing"}}
+            ]
+        },
+        {
+            "name": "TeammateDown",
+            "actions" : 
+            [
+                {"message_announcer": {"message": "@teammate_down", "timeout": 4}},
+                {"sound_trigger": {"trigger_name": "headshot_fatal_player_fb"}}
+            ]
+        },
+        {
+            "name": "invader_tutorial_1",
+            "actions" : 
+            [
+                {"message_announcer": {"message": "@invader_tutorial_1", "timeout": 5}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "invader_tutorial_2",
+            "actions" : 
+            [
+                {"message_announcer": {"message": "@invader_tutorial_2", "timeout": 5}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "shellguard_tutorial_1",
+            "actions" : 
+            [
+                {"message_announcer": {"message": "@shellguard_tutorial_1", "timeout": 5}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "shellguard_tutorial_2",
+            "actions" : 
+            [
+                {"message_announcer": {"message": "@shellguard_tutorial_2", "timeout": 5}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "shellguard_tutorial_3",
+            "actions" : 
+            [
+                {"message_announcer": {"message": "@shellguard_tutorial_3", "timeout": 5}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "respawns_increased_sg",
+            "actions" : 
+            [
+                {"message_announcer": {"message": "@respawns_increased_sg", "timeout": 4}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "respawns_increased_inv",
+            "actions" : 
+            [
+                {"message_announcer": {"message": "@respawns_increased_inv", "timeout": 4}},
+                {"narration_objective": {"trigger_name": "inv_voice_brief_103"}}
+            ]
+        },
+        {
+            "name": "invader_supply_drop_base",
+            "actions" : 
+            [
+                {"message_announcer": {"message": "@invader_supply_drop_base", "timeout": 4}},
+                {"narration_objective": {"trigger_name": "inv_voice_brief_101"}}
+            ]
+        },
+        {
+            "name": "shellguard_supply_drop_base",
+            "actions" : 
+            [
+                {"message_announcer": {"message": "@shellguard_supply_drop_base", "timeout": 4}},
+                {"sound_trigger": {"trigger_name": "rank_up"}}
+            ]
+        },
+        {
+            "name": "invader_supply_drop_pit",
+            "actions" : 
+            [
+                {"message_announcer": {"message": "@invader_supply_drop_pit", "timeout": 4}},
+                {"narration_objective": {"trigger_name": "inv_voice_brief_101"}}
+            ]
+        },
+        {
+            "name": "shellguard_supply_drop_pit",
+            "actions" : 
+            [
+                {"message_announcer": {"message": "@shellguard_supply_drop_pit", "timeout": 4}},
+                {"sound_trigger": {"trigger_name": "rank_up"}}
+            ]
+        },
+        {
+            "name": "invader_supply_delivered",
+            "actions" : 
+            [
+                {"message_announcer": {"message": "@invader_supply_delivered", "timeout": 4}},
+                {"narration_objective": {"trigger_name": "inv_voice_brief_102"}}
+            ]
+        },
+        {
+            "name": "shellguard_supply_delivered",
+            "actions" : 
+            [
+                {"message_announcer": {"message": "@shellguard_supply_delivered", "timeout": 4}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "strategic_tutorial",
+            "actions" : 
+            [
+                {"message_announcer": {"message": "@strategic_tutorial", "timeout": 300}}
+            ]
+        },
+        {
+            "name": "boss_spawn_warning",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_hughes_hatch_warning", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}}
+            ]
+        },
+        {
+            "name": "booby_trap_armed",
+            "actions" : 
+            [
+                {"message_announcer": {"message": "@booby_trap_armed", "timeout": 4}},
+                {"sound_trigger": {"trigger_name": "sa_bomb_planted_01"}}
+            ]
+        },
+        {
+            "name": "booby_trap_activated",
+            "actions" : 
+            [
+                {"message_announcer": {"message": "@booby_trap_activated", "timeout": 4}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "booby_trap_alarm",
+            "actions" : 
+            [
+                {"message_announcer": {"message": "@booby_trap_alarm", "timeout": 4}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "invader_protect_the_gate",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_brief_04", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_multikill",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_brief_104", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_wipeout",
+            "actions" : 
+            [
+                {"message_announcer": {"message": "@chosen_wipeout", "timeout": 4}},
+                {"narration_objective": {"trigger_name": "inv_voice_brief_107", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_minion_kill",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_brief_108", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_enemy_no_tokens",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_brief_113", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_death_common",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_brief_51", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_death_rush",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_brief_51", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_venture_compromised",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_brief_54", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "InvasionAlarmTriggered",
+            "actions" : 
+            [
+                {"message_announcer": {"message": "@invasion_alarm", "timeout": 4}},
+                {"sound_trigger": {"trigger_name": "test_alarm_02"}}
+            ]
+        },
+        {
+            "name": "2_retries_left_for_sg",
+            "actions" : [
+                {"message_announcer": {"message": "@2_retries_left_for_sg", "timeout": 4}},
+                {"narration_objective": {"trigger_name": "inv_voice_retries_02", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "1_retry_left_for_sg",
+            "actions" : [
+                {"message_announcer": {"message": "@1_retry_left_for_sg", "timeout": 4}},
+                {"narration_objective": {"trigger_name": "inv_voice_retries_03", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "0_retries_left_for_sg",
+            "actions" : [
+                {"message_announcer": {"message": "@0_retries_left_for_sg", "timeout": 4}},
+                {"narration_objective": {"trigger_name": "inv_voice_retries_04", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "LastManStandingInv",
+            "actions" : [
+                {"message_announcer": {"message": "@last_man_standing", "timeout": 300}},
+                {"narration_objective": {"trigger_name": "inv_hughes_team_losing"}}
+            ]
+        },
+        {
+            "name": "invader_death_rush",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "inv_hughes_team_losing"}}
+            ]
+        },
+        {
+            "name": "invader_strategic_01",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_ability_hint_03", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_strategic_02",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_ability_hint_05", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_strategic_03",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_rushing_02", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_ability_01",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_ability_hint_04", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_ability_02",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_ability_hint_01", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_ability_03",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_rushing_03", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_ability_04",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_rushing_06", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_ability_05",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_ability_hint_08", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_chakram_01",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_misc_hint_03", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_chakram_02",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_misc_hint_07", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_chakram_03",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_misc_hint_08", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_chakram_04",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_misc_hint_09", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_incarnate_01",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_ability_hint_07", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_incarnate_02",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_ability_hint_09", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_close_01",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_misc_hint_01", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_close_01",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_misc_hint_01", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_close_02",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_ability_hint_02", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_close_03",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_misc_hint_02", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_close_04",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_rushing_07", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_close_05",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_rushing_08", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_close_06",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_rushing_05", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_misc_01",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_misc_hint_01", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_misc_02",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_rushing_01", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_misc_03",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_rushing_04", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_misc_04",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_tutorial_03", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_misc_05",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_tutorial_01", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_melee_01",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_ability_hint_06", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_defeat_ignore",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_defeat_ignore", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_defeat_learn",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_defeat_learn", "img": "exalted_one", "narrator": "@narrator_exalted_one"}}
+            ]
+        },
+        {
+            "name": "invader_intro_tutorial",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_voice_tutorial_02", "img": "exalted_one", "narrator": "@narrator_exalted_one"}},
+                {"message_announcer": {"message": "@invader_tutorial_1", "timeout": 5}},
+                {"message_objective": {"message": "@obj_inv_destroy_drone_invader", "show_in_center": false}}
+            ]
+        }, 
+        {
+            "name": "invasion_capture_reminder",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "inv_hughes_reminder", "narrator": "@narrator_specialist_hughes"}}
+            ]
+        }
+    ]
+}

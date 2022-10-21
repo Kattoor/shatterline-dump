@@ -1,0 +1,37 @@
+{
+    "script": "scripts/ui/lobby/shop_product_preview.lua",
+    "view_path": "ShopProductPreview.html",
+    "defined_actions": ["hide_gamepad_cursor"],
+    "children":
+    [
+        {"name": "screen_header", "type": "Component", "file": "common/screen_header.json"},
+
+        {"name": "fullscreen_image", "type": "Image", "view_path": "fullscreenImage"},
+        {"name": "item_image_large", "type": "Image", "view_path": "wrapper.imageWrapper.itemImage"},
+
+        {"name": "title", "type": "Label", "view_path": "wrapper.header.title"},
+        {"name": "hero_label", "type": "Label", "view_path": "wrapper.header.heroLabel", "visible": false},
+
+        {"name": "item", "type": "Control", "view_path": "wrapper.itemWrapper", "visible": false},
+        {"name": "item_image", "type": "Image", "view_path": "wrapper.itemWrapper.item"},
+        {"name": "item_rarity", "type": "Label", "view_path": "wrapper.itemWrapper.rarity"},
+        {"name": "discount_marker", "type": "Component", "view_path": "wrapper.itemWrapper.marker", "visible": false},
+        
+        {"name": "description", "type": "Label", "view_path": "wrapper.descriptionContainer.description"},
+
+        {"name": "initial_price_1", "type": "Label", "view_path": "wrapper.priceContainer.priceWrapper.oldPrice1", "visible": false},
+        {"name": "price_1", "type": "Label", "view_path": "wrapper.priceContainer.priceWrapper.price1", "visible": false},
+
+        {"name": "price_divider", "type": "Component", "view_path": "wrapper.priceContainer.priceWrapper.divider"},
+        {"name": "price_divider_label", "type": "Label", "view_path": "wrapper.priceContainer.priceWrapper.divider.label", "text": "@or_divider_label"},
+
+        {"name": "initial_price_2", "type": "Label", "view_path": "wrapper.priceContainer.priceWrapper.oldPrice2", "visible": false},
+        {"name": "price_2", "type": "Label", "view_path": "wrapper.priceContainer.priceWrapper.price2", "visible": false},
+
+        {"name": "expire_container", "type": "Component", "view_path": "wrapper.expireWrapper"},
+        {"name": "expire_timer", "type": "Label", "view_path": "wrapper.expireWrapper.timerContainer.expireTimer"},
+
+        {"name": "buy_button", "type": "Button", "view_path": "wrapper.priceContainer.buyButton", "text": "@buy_label"},
+        {"name": "buy_button_hint", "type": "ActionLabel", "view_path": "wrapper.priceContainer.buyButton.wrapper.key", "gamepad_only": true}
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "script": "",
+    "view_path": "",
+    "children": [
+
+        {"name": "progress", "type": "ProgressBar", "view_path": "progress", "min": 0, "max": 1},
+        {"name": "label", "type": "Button", "view_path": "content.label", "text": "@modifications_craft_btn"},
+        {"name": "indent", "type": "Control", "view_path": "content.indent"},
+        {"name": "available_blueprints", "type": "Label", "view_path": "content.availableBlueprints"},
+        {"name": "separator", "type": "Control", "view_path": "content.separator"},
+        {"name": "required_blueprints", "type": "Label", "view_path": "content.requiredBlueprints"},
+        {"name": "currency_icon", "type": "Image", "view_path": "content.currency", "image": "blueprint_white"},
+        {"name": "hint", "type": "ActionLabel", "view_path": "content.key", "gamepad_only": true}
+    ]
+}

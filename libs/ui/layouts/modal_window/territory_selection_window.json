@@ -1,0 +1,16 @@
+{
+    "script": "scripts/ui/modal_window/territory_selection_window.lua",
+    "view_path": "TerritorySelectionWindow.html",
+    "defined_actions": ["hide_gamepad_cursor"],
+    "children": [
+        {"name": "title", "type": "Label", "view_path": "container.title", "text": "@choose_territory"},
+
+        {"name": "territory_list", "type": "Component", "view_path": "container.content.territoryList"},
+
+        {"name": "cancel_button", "type": "Button", "view_path": "container.controlContainer.cancelButton", "text": "@cancel_btn"},
+        {"name": "cancel_button_hint", "type": "ActionLabel", "view_path": "container.controlContainer.cancelButton.wrapper.key", "gamepad_only": true},
+
+        {"name": "apply_button", "type": "Button", "view_path": "container.controlContainer.applyButton", "text": "@apply_btn"},
+        {"name": "apply_button_hint", "type": "ActionLabel", "view_path": "container.controlContainer.applyButton.wrapper.key", "gamepad_only": true}
+    ]
+}

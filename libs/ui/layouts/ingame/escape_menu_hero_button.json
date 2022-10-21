@@ -1,0 +1,13 @@
+{
+    "script": "scripts/ui/ingame/escape_menu_hero_button.lua",
+    "view_path": "EscapeMenuHeroButton.html",
+    "children": 
+    [
+        {"name": "counter_container", "type": "Component", "view_path": "wrapper.counterContainer", "visible": false},
+        {"name": "counter_current", "type": "Label", "view_path": "wrapper.counterContainer.current"}, 
+        {"name": "counter_max", "type": "Label", "view_path": "wrapper.counterContainer.max"},
+        {"name": "image", "type": "Image", "view_path": "wrapper.image"},
+        {"name": "alert", "type": "Label", "view_path": "wrapper.innerAlert", "visible": false},
+        {"name": "change_hero_alert", "type": "Label", "view_path": "outerAlert", "text": "@escape_menu_change_hero_after_respawn_alert", "visible": false}
+    ]
+}

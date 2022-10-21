@@ -1,0 +1,55 @@
+{
+    "script": "scripts/ui/lobby/hero_selection.lua",
+    "view_path": "HeroSelection.html",
+    "children":
+    [
+        { "name": "hero_content", "type": "Component", "view_path": "content" },
+
+        { "name": "hero_specialization", "type": "Label", "view_path": "content.heroName.specialization" },
+        { "name": "hero_name", "type": "Label", "view_path": "content.heroName.title" },
+        { "name": "hero_name_outline", "type": "Label", "view_path": "content.heroName.titleOutline" },
+
+        { "name": "hero_progress_container", "type": "Component", "view_path": "content.heroProgressWrapper"},
+
+        { "name": "abilities_list_hint_left", "type": "ActionLabel", "view_path": "content.heroPerksList.hintLeft", "gamepad_only": true },
+        { "name": "abilities_list", "type": "HeroAbilitiesGrid", "view_path": "content.heroPerksList" },
+        { "name": "abilities_list_container", "type": "Component", "view_path": "content.heroPerksList.container" },
+        { "name": "abilities_list_hint_right", "type": "ActionLabel", "view_path": "content.heroPerksList.hintRight", "gamepad_only": true },
+       
+       { "name": "hero_info", "type": "Component", "view_path": "content.heroInfoPanel.heroInfo", "visible": false },
+       { "name": "hero_info_name_title", "type": "Label", "view_path": "content.heroInfoPanel.heroInfo.nameContainer.nameTitle", "text": "@hero_info_name" },
+       { "name": "hero_info_name", "type": "Label", "view_path": "content.heroInfoPanel.heroInfo.nameContainer.name" },
+       { "name": "hero_info_origin_title", "type": "Label", "view_path": "content.heroInfoPanel.heroInfo.originContainer.originTitle", "text": "@hero_info_origin" },
+       { "name": "hero_info_origin", "type": "Label", "view_path": "content.heroInfoPanel.heroInfo.originContainer.origin" },
+       { "name": "hero_info_specialization_title", "type": "Label", "view_path": "content.heroInfoPanel.heroInfo.specializationContainer.specializationTitle", "text": "@hero_info_weapon_specialization" },
+       { "name": "hero_info_specialization", "type": "Label", "view_path": "content.heroInfoPanel.heroInfo.specializationContainer.specialization" },
+       { "name": "hero_info_description", "type": "Label", "view_path": "content.heroInfoPanel.heroInfo.heroDescription" },
+       
+       { "name": "item_info", "type": "Component", "view_path": "content.heroInfoPanel.itemInfo", "visible": false },
+       { "name": "item_info_title", "type": "Label", "view_path": "content.heroInfoPanel.itemInfo.titleWrapper.title" },
+       { "name": "item_info_video", "type": "Video", "view_path": "content.heroInfoPanel.itemInfo.videoWrapper.video", "loop": true, "background": true },
+       { "name": "item_info_description", "type": "ActionLabel", "view_path": "content.heroInfoPanel.itemInfo.description" },
+       
+       { "name": "heroes_list", "type": "HeroSelectionGrid", "view_path": "content.bottomWrapper.heroesList" },
+       { "name": "heroes_list_container", "type": "Component", "view_path": "content.bottomWrapper.heroesList.container.contentContainer" },
+
+       { "name": "customize_btn", "type": "Button", "view_path": "content.bottomWrapper.buttonsPanel.customizeBtnWrapper.customizeBtn", "text": "@customize_label" },
+       { "name": "customize_btn_hint", "type": "ActionLabel", "view_path": "content.bottomWrapper.buttonsPanel.customizeBtnWrapper.customizeBtn.wrapper.key", "gamepad_only": true },
+       { "name": "customize_btn_recent_icon", "type": "Component", "view_path": "content.bottomWrapper.buttonsPanel.customizeBtnWrapper.customizeBtn.recentIcon", "visible": false },
+       { "name": "customize_btn_recent_wave", "type": "Component", "view_path": "content.bottomWrapper.buttonsPanel.customizeBtnWrapper.recentWave", "visible": false },
+
+       { "name": "buy_container", "type": "Component", "view_path": "content.bottomWrapper.buttonsPanel.buyBtnWrapper", "visible": false },
+
+       { "name": "price_1", "type": "Label", "view_path": "content.bottomWrapper.buttonsPanel.buyBtnWrapper.priceContainer.price1" },
+
+       { "name": "price_divider", "type": "Component", "view_path": "content.bottomWrapper.buttonsPanel.buyBtnWrapper.priceContainer.divider" },
+       { "name": "price_divider_label", "type": "Label", "view_path": "content.bottomWrapper.buttonsPanel.buyBtnWrapper.priceContainer.divider.label", "text": "@or_divider_label" },
+
+       { "name": "price_2", "type": "Label", "view_path": "content.bottomWrapper.buttonsPanel.buyBtnWrapper.priceContainer.price2" },
+       
+       { "name": "buy_btn", "type": "Button", "view_path": "content.bottomWrapper.buttonsPanel.buyBtnWrapper.buyBtn", "text": "@unlock_btn" },
+       { "name": "buy_btn_hint", "type": "ActionLabel", "view_path": "content.bottomWrapper.buttonsPanel.buyBtnWrapper.buyBtn.wrapper.key", "gamepad_only": true },
+
+       { "name": "rotation_area", "type": "Panel", "view_path": "content.rotationArea" }
+    ]
+}

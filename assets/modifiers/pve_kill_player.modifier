@@ -1,0 +1,17 @@
+{
+    "name": "pve_kill_player",
+    "remove_on_death": true,
+    "effects": [
+        { 
+            "bleed": 
+            { 
+                "threshold": 0,
+                "hp_decrease_per_time_interval": 150,
+                "time_interval": 0.1,
+                "screen_effect_intensity_param": "ScreenBlood_Amount",
+                "screen_effect_intensity_value": 0.6,
+                "screen_effect_fade_out_time": 3
+            }
+        }
+    ]
+}

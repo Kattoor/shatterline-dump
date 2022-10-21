@@ -1,0 +1,38 @@
+{
+  "name": "scheduled_weapon_009",
+  "type": "scheduled",
+  "tags": [
+    "gun"
+  ],
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "uncommon",
+  "display_name": { "localization_key": "@scheduled_weapon_009_name" },
+  "description": { "localization_key": "@scheduled_weapon_009_description" },
+  "conditions": [
+    {
+      "name": "scheduled_weapon_009",
+      "event_description": { "localization_key": "@scheduled_weapon_009_event_description" },
+      "event": { "event_id": "HeadShot", "actor_is_me": true, "actor_item_tag_is": ["SR"]},
+      "progress": 10
+    }
+  ],
+  
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 2500
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 1500
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 20
+    }
+  ]
+}

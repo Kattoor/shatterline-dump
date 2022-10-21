@@ -1,0 +1,68 @@
+{
+    "events": [
+        {
+            "name": "ProtectTheWielder",
+            "actions" : [
+                {"message_announcer": {"message": "@the_ultimate_is_ours", "timeout": 4}},
+                {"message_objective": {"message": "@protect_possessor"}},
+                { "sound_trigger": { "trigger_name": "instant_reward_high" } }
+            ]
+        },
+        {
+            "name": "DefeatTheWielder",
+            "actions" : [
+                {"message_announcer": {"message": "@enemy_claimed_the_ultimate", "timeout": 4}},
+                {"message_objective": {"message": "@defeat_possessor"}},
+                { "sound_trigger": { "trigger_name": "contamination_decreased" } }
+            ]
+        },
+        {
+            "name": "PosessTheUltimate",
+            "actions" : [
+                {"message_announcer": {"message": "@possess_the_ultimate", "timeout": 4}},
+                {"message_objective": {"message": "@possess_the_ultimate"}},
+                { "sound_trigger": { "trigger_name": "contamination_decreased" } }
+            ]
+        },
+        {
+            "name": "PosessTheUltimate",
+            "actions" : [
+                {"message_announcer": {"message": "@possess_the_ultimate", "timeout": 4}},
+                {"message_objective": {"message": "@possess_the_ultimate"}},
+                { "sound_trigger": { "trigger_name": "contamination_decreased" }}
+            ]
+        },
+        {
+            "name": "rtdm_respawn_friend",
+            "actions" : [
+                {"activate_custom_perk": {"perk_name": "@5_respawn_friend", "text": "@5_respawn_friend", "icon": "", "crosshair_image": "", "show_timer": false}}
+            ]
+        },
+        {
+            "name": "rtdm_respawn_enemy",
+            "actions" : [
+                {"activate_custom_perk": {"perk_name": "@5_respawn_enemy", "text": "@5_respawn_enemy", "icon": "", "crosshair_image": "", "show_timer": false}}
+            ]
+        },
+        {
+            "name": "no_res_friend",
+            "actions" : [
+                {"message_announcer": {"message": "@no_respawns_left_f", "timeout": 5}},
+                { "sound_trigger": { "trigger_name": "inv_hughes_norespawn" }}
+            ]
+        },
+        {
+            "name": "no_res_enemy",
+            "actions" : [
+                {"message_announcer": {"message": "@no_respawns_left_e", "timeout": 5}},
+                { "sound_trigger": { "trigger_name": "domin_hughes_comeback" }}
+            ]
+        },
+        {
+            "name": "HeadEnlarged",
+            "actions" : [
+                {"activate_custom_perk": {"perk_name": "@megahead_1", "text": "@megahead_1", "show_timer": false, "icon": "horde_happy_bullet"}}
+            ]
+        }
+    ]
+}

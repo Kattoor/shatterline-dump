@@ -1,0 +1,21 @@
+{
+    "script": "scripts/ui/ingame/perks_panel.lua",
+    "view_path": "HordePerks.html",
+    "hide_cursor": true,
+    "children": 
+    [
+        {"name": "list_title", "type": "Label", "view_path": "title", "text": "@perk_panel_title"},
+        {"name": "list", "type": "PerksItemsGrid", "view_path": "hordePerksList"},
+        {"name": "list_container", "type": "Control", "view_path": "hordePerksList.container"},
+
+        {"name": "paginator_wrapper", "type":"Control", "view_path": "paginatorWrapper"},
+
+        {"name": "paginator_left_hint", "type": "ActionLabel", "view_path": "paginatorWrapper.hintLeft", "gamepad_only": true},
+        {"name": "paginator_right_hint", "type": "ActionLabel", "view_path": "paginatorWrapper.hintRight", "gamepad_only": true},
+
+        {"name": "paginator_left_button", "type": "Button", "view_path": "paginatorWrapper.arrowLeft"},
+        {"name": "paginator_right_button", "type": "Button", "view_path": "paginatorWrapper.arrowRight"},
+        
+        {"name": "paginator_buttons", "type": "ListBox", "view_path": "paginatorWrapper.buttons"}
+    ]
+}

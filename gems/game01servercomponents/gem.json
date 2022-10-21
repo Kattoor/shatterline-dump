@@ -1,0 +1,63 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "91d08142abc745c181792d06dfbbb5d4",
+    "Name": "Game01ServerComponents",
+    "DisplayName": "Game01ServerComponents",
+    "Version": "0.1.0",
+    "Summary": "Game01 Server Components",
+    "Tags": ["Untagged"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        }
+    ],
+    "Dependencies":
+    [
+        {
+            "Uuid": "aa86a3ac41394c25abe546db56b167ed",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "ServerBackend"
+        },
+        {
+            "Uuid": "d3ed407a19bb4c0d92b7c4872313d600",
+            "VersionConstraints": [ "~>1.0" ],
+            "_comment": "Multiplayer"
+        },
+        {
+            "Uuid": "7e24ebb066104127a4abb14e13ec7bed",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "GameSession"
+        },
+        {
+            "Uuid": "2ebd4481cbf142b89286f28b4c29ace3",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01Interfaces"
+        },
+        {
+            "Uuid": "6558887e825b49bf942837959f3db39a",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01ServerActionChain"
+        },
+        {
+            "Uuid": "a5af5a5e072741c4978f8f3bf765ce14",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "FixedTimestep"
+        },
+        {
+            "Uuid": "e53fc556e709402688402f65cab8f670",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01Common"
+        },
+        {
+            "Uuid": "8040a1a42c844b8abcf6ab387a7c8963",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "JWT"
+        },
+        {
+            "Uuid": "e9f42946ff83451091589c3d585a09a8",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "BackendAssets"
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "events": [
+        {
+            "name": "roundstart_ffa",
+            "actions" : [
+                {"message_objective": {"message": "@kill_them_all"}},
+                {"sound_trigger": {"trigger_name": "ffa_phillips_announce"}}
+            ]
+        },
+        {
+            "name": "score_reached_ffa",
+            "actions" : [
+                {"message_announcer": {"message": "@score_reached_ffa", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "ffa_phillips_endmatch"}}
+            ]
+        },
+        {
+            "name": "enemy_score_ffa",
+            "actions" : [
+                {"message_announcer": {"message": "@enemy_score_ffa", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "ffa_phillips_endmatch"}}
+            ]
+        }
+    ]
+}

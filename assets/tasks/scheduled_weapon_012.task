@@ -1,0 +1,39 @@
+{
+  "name": "scheduled_weapon_012",
+  "type": "scheduled",
+  "tags": [
+    "gun"
+  ],
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "rare",
+  "display_name": { "localization_key": "@scheduled_weapon_012_name" },
+  "description": { "localization_key": "@scheduled_weapon_012_description" },
+  "conditions": [
+    {
+      "name": "scheduled_weapon_012",
+      "event_description": { "localization_key": "@scheduled_weapon_012_event_description" },
+      "event": { "event_id": "Kill", "actor_is_me": true, "actor_item_tag_is": ["SMG"], "target_ai_archetype_is": ["StraferAR", "StraferAR_grade2", "StraferAR_grade2_firegrenade", "StraferAR_grade3", 
+      "StraferSMG", "StraferSMG_grade2", "StraferSMG_grade3", "StraferSHG", "StraferSHG_grade2", "StraferSHG_grade3", "StraferGL", "StraferRL", "StraferRL_grade2", "StraferFlamethrower", "Minotaur"]},
+      "progress": 10
+    }
+  ],
+  
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 2000
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 1000
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 15
+    }
+  ]
+}

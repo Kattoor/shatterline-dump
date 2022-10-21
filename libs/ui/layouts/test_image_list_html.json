@@ -1,0 +1,13 @@
+{
+    "script": "scripts/ui/test_image_list.lua",
+    "view_path": "Component.html",
+    "children":
+    [
+        {"name": "ImageListPanel", "type": "Panel", "x":0, "y":0, "width":1600, "height":900},
+        {"name": "FilterTextLbl", "type": "Label", "x":10, "y":10, "width":100, "text": "@image"},
+        {"name": "FilterText", "type": "EditBox", "x":100, "y":10, "width":210},
+        {"name": "ClearBtn", "type": "Button", "x":315, "y":10, "width":80, "text": "@clear"},
+        {"name": "ImageList", "type": "ListBox", "x":10, "y":50, "width":400, "height":700},
+        {"name": "TestImage", "type": "Image", "x":420, "y":50}
+  ]
+}

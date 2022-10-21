@@ -1,0 +1,77 @@
+{
+  "metagame_info": {
+    "name_token": "@mission1",
+    "mission": "t_rotating_spawn_areas",
+    "game_type": "pvp",
+    "voice_chat_mode": "party_only",
+    "min_players_count": 1,
+    "time_to_join_sec": 240
+  },
+  "session_info": {
+    "level": "test_levels/game_mechanics/t_rotating_spawn_areas",
+    "game_mode": "test_tdm",
+    "result_scene": "slices/result_view/test_result_stage_snowy.dynamicslice"
+  },
+  "reward_info": {
+    "reward_calculators": [
+      {
+        "name": "session_outcome",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "win": 500,
+              "draw": 400,
+              "loss": 300
+            }
+          },
+          {
+            "type": "xp",
+            "values": {
+              "win": 800,
+              "draw": 700,
+              "loss": 600
+            }
+          },
+          {
+            "type": "skill",
+            "values": {
+              "win": 1,
+              "draw": 0,
+              "loss": -1
+            }
+          }
+        ]
+      },
+      {
+        "name": "session_score",
+        "score": "Kill",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "reward": 5,
+              "max_reward": 100
+            }
+          }
+        ]
+      }
+    ],
+    "weapon_score": [
+      {
+        "event": {
+          "event_id": "Kill"
+        },
+        "score": 100
+      },
+      {
+        "event": {
+          "event_id": "Headshot"
+        },
+        "score": 50
+      }
+    ]
+  }
+}

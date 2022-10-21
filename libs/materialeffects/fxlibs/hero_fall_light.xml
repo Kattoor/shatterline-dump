@@ -1,0 +1,160 @@
+<FXLib>
+	<Effect name="default">
+		<Audio trigger="jump">
+			<Switch name="surface_type" state="dirt" />
+		</Audio>
+		<!--
+		<Particle>
+			<Name minscale="1" maxscale="1" maxscaledist="100">heroes_effects.hero_landing</Name>
+		</Particle>
+		
+		<Decal minscale="1" maxscale="1" lifetime="60.0">
+			<Material>materials/decals/bullet_hits/ceramics_a</Material>
+		</Decal>
+		-->
+	</Effect>
+
+	<Effect name="concrete">
+		<Audio trigger="jump">
+			<Switch name="surface_type" state="concrete" />
+		</Audio>	
+	</Effect>
+
+	<Effect name="concrete_yellow">
+		<Audio trigger="jump">
+			<Switch name="surface_type" state="concrete" />
+		</Audio>
+	</Effect>
+
+	<Effect name="fabric">
+		<Audio trigger="jump">
+			<Switch name="surface_type" state="sand" />
+		</Audio>
+	</Effect>
+
+	<Effect name="plastic">
+		<Audio trigger="jump">
+			<Switch name="surface_type" state="concrete" />
+		</Audio>
+	</Effect>
+
+	<Effect name="grass">
+		<Audio trigger="jump">
+			<Switch name="surface_type" state="grass" />
+		</Audio>
+	</Effect>
+
+	<Effect name="grass_tall">
+		<Audio trigger="jump">
+			<Switch name="surface_type" state="grass_tall" />
+		</Audio>
+	</Effect>
+	
+	<Effect name="dirt">
+		<Audio trigger="jump">
+			<Switch name="surface_type" state="dirt" />
+		</Audio>
+	</Effect>
+	
+	<Effect name="mud">
+		<Audio trigger="jump">
+			<Switch name="surface_type" state="mud" />
+		</Audio>
+	</Effect>
+	
+	<Effect name="sand">
+		<Audio trigger="jump">
+			<Switch name="surface_type" state="sand" />
+		</Audio>
+		
+	</Effect>
+
+	<Effect name="gravel">
+		<Audio trigger="jump">
+			<Switch name="surface_type" state="gravel" />
+		</Audio>
+	</Effect>
+
+	<Effect name="wood_solid">
+		<Audio trigger="jump">
+			<Switch name="surface_type" state="wood" />
+		</Audio>
+	</Effect>
+
+	<Effect name="wood_hollow">
+		<Audio trigger="jump">
+			<Switch name="surface_type" state="wood_hollow" />
+		</Audio>
+	</Effect>
+
+	<Effect name="metal_thick">
+		<Audio trigger="jump">
+			<Switch name="surface_type" state="metal_solid" />
+		</Audio>
+	</Effect>
+	
+	<Effect name="metal_grate">
+		<Audio trigger="jump">
+			<Switch name="surface_type" state="metal_grate" />
+		</Audio>
+	</Effect>
+	
+	<Effect name="metal_sheet">
+		<Audio trigger="jump">
+			<Switch name="surface_type" state="metal_sheet" />
+		</Audio>
+	</Effect>
+
+	<Effect name="metal_chainlink">
+		<Audio trigger="jump">
+			<Switch name="surface_type" state="metal_grate" />
+		</Audio>
+	</Effect>
+	
+	<Effect name="metal_ladder">
+		<Audio trigger="jump">
+			<Switch name="surface_type" state="metal_ladder" />
+		</Audio>
+	</Effect>
+
+	<Effect name="metal_thin">
+		<Audio trigger="jump">
+			<Switch name="surface_type" state="metal_sheet" />
+		</Audio>
+	</Effect>
+	
+	<Effect name="glass">
+		<Audio trigger="jump">
+			<Switch name="surface_type" state="concrete" />
+		</Audio>
+	</Effect>
+	
+	<Effect name="snow">
+		<Audio trigger="jump">
+			<Switch name="surface_type" state="snow" />
+		</Audio>
+	</Effect>
+	
+	<Effect name="ice">
+		<Audio trigger="jump">
+			<Switch name="surface_type" state="ice" />
+		</Audio>
+	</Effect>
+
+
+	<!--water_shallow & water_deep required by game code-->
+	<Effect name="water_shallow">
+		<Audio trigger="jump">
+			<Switch name="surface_type" state="water" />
+		</Audio>
+
+	</Effect>
+
+	<Effect name="water_deep">
+		<Audio trigger="jump">
+			<Switch name="surface_type" state="water_deep" />
+		</Audio>
+
+	</Effect>
+	<!--End-->
+</FXLib>

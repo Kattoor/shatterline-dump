@@ -1,0 +1,326 @@
+{
+    "events": [
+        {
+            "name": "HealOnUltActivation",
+            "actions" : [
+                {"activate_perk": {"perk_name": "heal_on_ult_tier1", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "heal_feedback"}}
+            ]
+        },
+        {
+            "name": "AiFreezeOnUltActivation",
+            "actions" : [
+                {"activate_perk": {"perk_name": "aifreeze_on_ult_tier1", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "item_ult_charger"}}
+            ]
+        },
+        {
+            "name": "RechargeAbilityWhileFullUltActivation",
+            "actions" : [
+                {"activate_perk": {"perk_name": "ability_charge_on_full_ult", "timeout": 0}},
+                {"sound_trigger": {"trigger_name": "item_ult_charger"}}
+            ]
+        },
+        {
+            "name": "IncreasedDamagePrimary",
+            "actions" : [
+                {"activate_perk": {"perk_name": "increased_damage_primary", "timeout": 0}},
+                {"sound_trigger": {"trigger_name": "item_ult_charger"}}
+            ]
+        },
+        {
+            "name": "IncreasedDamageSecondary",
+            "actions" : [
+                {"activate_perk": {"perk_name": "increased_damage_secondary", "timeout": 0}},
+                {"sound_trigger": {"trigger_name": "item_ult_charger"}}
+            ]
+        },
+        {
+            "name": "ExplosiveShotPrimary",
+            "actions" : [
+                {"activate_perk": {"perk_name": "explosive_shot_primary", "timeout": 0}},
+                {"sound_trigger": {"trigger_name": "item_ult_charger"}}
+            ]
+        },
+        {
+            "name": "ExplosiveShotSecondary",
+            "actions" : [
+                {"activate_perk": {"perk_name": "explosive_shot_secondary", "timeout": 0}},
+                {"sound_trigger": {"trigger_name": "item_ult_charger"}}
+            ]
+        },
+        {
+            "name": "EnemiesExplodeWhenDiePerk",
+            "actions" : [
+                {"activate_perk": {"perk_name": "enemies_explode_when_die_perk", "timeout": 1}},
+                {"sound_trigger": {"trigger_name": "item_ult_charger"}}
+            ]
+        },
+        {
+            "name": "IncreaseDamageToMarkedPerk",
+            "actions" : [
+                {"activate_perk": {"perk_name": "increase_damage_to_marked_enemy_perk", "timeout": 0}},
+                {"sound_trigger": {"trigger_name": "item_ult_charger"}}
+            ]
+        },
+        {
+            "name": "CreateFunnelByKillPerk",
+            "actions" : [
+                {"activate_perk": {"perk_name": "create_funnel_on_kill_perk", "timeout": 0}},
+                {"sound_trigger": {"trigger_name": "item_ult_charger"}}
+            ]
+        },
+        {
+            "name": "AOEDamageByCooldownPerk",
+            "actions" : [
+                {"activate_perk": {"perk_name": "player_explosion_by_cooldown_perk", "timeout": 0}},
+                {"sound_trigger": {"trigger_name": "item_ult_charger"}}
+            ]
+        },
+        {
+            "name": "InstantKillOnHitPerk",
+            "actions" : [
+                {"activate_perk": {"perk_name": "instant_kill_on_hit_perk", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "item_ult_charger"}}
+            ]
+        },
+        {
+            "name": "AOEHealByCooldownPerk",
+            "actions" : [
+                {"activate_perk": {"perk_name": "player_aoe_heal_by_cooldown_perk", "timeout": 0}},
+                {"sound_trigger": {"trigger_name": "heal_feedback"}}
+            ]
+        },
+        {
+            "name": "IncreaseDamageForAlliesPerk",
+            "actions" : [
+                {"activate_perk": {"perk_name": "increase_damage_for_allies_perk", "timeout": 0}},
+                {"sound_trigger": {"trigger_name": "item_ult_charger"}}
+            ]
+        },
+        {
+            "name": "BindPlayersWithLazerPerk",
+            "actions" : [
+                {"activate_perk": {"perk_name": "bind_players_with_lazer_perk", "timeout": 0}},
+                {"sound_trigger": {"trigger_name": "item_ult_charger"}}
+            ]
+        },
+        {
+            "name": "GiveBarrierOnLowHealthPerk",
+            "actions" : [
+                {"activate_perk": {"perk_name": "give_barrier_on_low_health_perk", "timeout": 0}},
+                {"sound_trigger": {"trigger_name": "item_ult_charger"}}
+            ]
+        },
+        {
+            "name": "AOEHealByCooldownPerk",
+            "actions" : [
+                {"activate_perk": {"perk_name": "player_aoe_heal_by_cooldown_perk", "timeout": 0}},
+                {"sound_trigger": {"trigger_name": "heal_feedback"}}
+            ]
+        },
+        {
+            "name": "ammo_drop_perk",
+            "actions" : [
+                {"activate_perk": {"perk_name": "ammo_drop_perk", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "item_ult_charger"}}
+            ]
+        },
+        {
+            "name": "OverhasteOnAbilityUse",
+            "actions" : [
+                {"activate_perk": {"perk_name": "overhaste_on_ability_use", "timeout": 0}},
+                {"sound_trigger": {"trigger_name": "item_ult_charger"}}
+            ]
+        },
+        {
+            "name": "ExplodeOnSlideKill",
+            "actions" : [
+                {"activate_perk": {"perk_name": "explode_on_slide_kill", "timeout": 0}}
+            ]
+        },
+        {
+            "name": "CreateLaserSawOnKill",
+            "actions" : [
+                {"activate_perk": {"perk_name": "create_laser_saw_on_kill_perk", "timeout": 0}}
+            ]
+        },
+        {
+            "name": "FreezeEnemiesByHit",
+            "actions" : [
+                {"activate_perk": {"perk_name": "freeze_enemies_by_hit_perk", "timeout": 2}}
+            ]
+        },
+        {
+            "name": "HomingMissiles",
+            "actions" : [
+                {"activate_perk": {"perk_name": "homing_missiles_perk", "timeout": 1}}
+            ]
+        },
+        {
+            "name": "CreateProjectileByHit",
+            "actions" : [
+                {"activate_perk": {"perk_name": "create_projectile_by_hit_perk", "timeout": 2}}
+            ]
+        },
+        {
+            "name": "strife_perk",
+            "actions" : [
+                {"activate_perk": {"perk_name": "strife_perk", "timeout": 2}}
+            ]
+        },
+        {
+            "name": "projectile_launch_on_hp_treshold_perk",
+            "actions" : [
+                {"activate_perk": {"perk_name": "projectile_launch_on_hp_treshold_perk", "timeout": 2}}
+            ]
+        },
+        {
+            "name": "GenericPerkSound",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "item_ult_charger"}}
+            ]
+        },
+        {
+            "name": "TestPerkEvent",
+            "actions" : [
+                {"activate_perk": {"perk_name": "heal_on_ult_tier1", "timeout": 5, "show_timer": true}},
+                {"sound_trigger": {"trigger_name": "item_ult_charger"}}
+            ]
+        },
+        {
+            "name": "UltChargeEvent",
+            "actions" : [
+                {"activate_perk": {"perk_name": "ult_score_on_kill_tier1", "timeout": 4, "show_timer": false}},
+                {"sound_trigger": {"trigger_name": "perk_on_kill_ultimate_charger"}}
+            ]
+        },
+        {
+            "name": "UltChargerEvent",
+            "actions" : [
+                {"activate_perk": {"perk_name": "ult_charger", "timeout": 4, "show_timer": false}}
+            ]
+        },
+        {
+            "name": "ElectrifiedEvent",
+            "actions" : [
+                {"activate_perk": {"perk_name": "modifier_electrifier", "timeout": 10, "show_timer": true}}
+            ]
+        },
+        {
+            "name": "StationaryZoomDamageEvent",
+            "actions" : [
+                {"activate_perk": {"perk_name": "stationary_zoom_damage", "show_timer": false}}
+            ]
+        },
+        {
+            "name": "StationaryZoomAmmoEvent",
+            "actions" : [
+                {"activate_perk": {"perk_name": "stationary_zoom_ammo", "show_timer": false}}
+            ]
+        },
+        {
+            "name": "BodyBuilderCap",
+            "actions" : [
+                {"activate_perk": {"perk_name": "hp_cap_on_pt_kill", "show_timer": false}}
+            ]
+        },
+        {
+            "name": "BodyBuilderPT",
+            "actions" : [
+                {
+                    "encounter_completion_event":
+                    {
+                        "name": "@horde_bodybuilder_pt_name",
+                        "text": "@horde_bodybuilder_pt_descr",
+                        "stage_1": "@horde_bodybuilder_pt_descr",
+                        "stage_2": "@horde_bodybuilder_pt_descr",
+                        "stage_3": "@horde_bodybuilder_pt_descr",
+                        "stage_4": "@horde_bodybuilder_pt_descr"
+                    }
+                },
+                    {"sound_trigger": {"trigger_name": "instant_reward_high"}
+                }
+            ]
+        },
+        {
+            "name": "BodyBuilderAR",
+            "actions" : [
+                {
+                    "encounter_completion_event":
+                    {
+                        "name": "@horde_bodybuilder_ar_name",
+                        "text": "@horde_bodybuilder_ar_descr",
+                        "stage_1": "@horde_bodybuilder_ar_descr",
+                        "stage_2": "@horde_bodybuilder_ar_descr",
+                        "stage_3": "@horde_bodybuilder_ar_descr",
+                        "stage_4": "@horde_bodybuilder_ar_descr"
+                    }
+                },
+                    {"sound_trigger": {"trigger_name": "instant_reward_high"}
+                }
+            ]
+        },
+        {
+            "name": "BodyBuilderSHG",
+            "actions" : [
+                {
+                    "encounter_completion_event":
+                    {
+                        "name": "@horde_bodybuilder_shg_name",
+                        "text": "@horde_bodybuilder_shg_descr",
+                        "stage_1": "@horde_bodybuilder_shg_descr",
+                        "stage_2": "@horde_bodybuilder_shg_descr",
+                        "stage_3": "@horde_bodybuilder_shg_descr",
+                        "stage_4": "@horde_bodybuilder_shg_descr"
+                    }
+                },
+                    {"sound_trigger": {"trigger_name": "instant_reward_high"}
+                }
+            ]
+        },
+        {
+            "name": "BodyBuilderSR",
+            "actions" : [
+                {
+                    "encounter_completion_event":
+                    {
+                        "name": "@horde_bodybuilder_sr_name",
+                        "text": "@horde_bodybuilder_sr_descr",
+                        "stage_1": "@horde_bodybuilder_sr_descr",
+                        "stage_2": "@horde_bodybuilder_sr_descr",
+                        "stage_3": "@horde_bodybuilder_sr_descr",
+                        "stage_4": "@horde_bodybuilder_sr_descr"
+                    }
+                },
+                    {"sound_trigger": {"trigger_name": "instant_reward_high"}
+                }
+            ]
+        },
+        {
+            "name": "BodyBuilderSMG",
+            "actions" : [
+                {
+                    "encounter_completion_event":
+                    {
+                        "name": "@horde_bodybuilder_smg_name",
+                        "text": "@horde_bodybuilder_smg_descr",
+                        "stage_1": "@horde_bodybuilder_smg_descr",
+                        "stage_2": "@horde_bodybuilder_smg_descr",
+                        "stage_3": "@horde_bodybuilder_smg_descr",
+                        "stage_4": "@horde_bodybuilder_smg_descr"
+                    }
+                },
+                    {"sound_trigger": {"trigger_name": "instant_reward_high"}
+                }
+            ]
+        },
+        {
+            "name": "ManualTherapy",
+            "actions" : [
+                {"activate_perk": {"perk_name": "heal_on_ability_kill", "show_timer": false, "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "heal_feedback"}}
+            ]
+        }
+    ]
+}

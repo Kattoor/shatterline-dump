@@ -1,0 +1,165 @@
+{
+    "waves": [
+        {
+            "name": "maze_bombs",
+            "totalLimit": 1000,
+            "count": 0,
+            "groupCount": 3,
+            "spawnDelay": 8.000000,
+            "filterTag": "maze_bombs",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(1) Strafer: Bomb Drone" ],
+                    "probability": 100,
+                    "count": 3,
+                    "groupCount": 1,
+                    "spawnDelay": 10.000000
+                }
+            ]
+        },
+        {
+            "name": "minotaur",
+            "totalLimit": 100,
+            "count": 1,
+            "groupCount": 1,
+            "spawnDelay": 0.000000,
+            "filterTag": "",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(1) Strafer: Minotaur" ],
+                    "probability": 100,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.000000
+                }
+            ]
+        },
+        {
+            "name": "maze_attackers",
+            "totalLimit": 1000,
+            "count": 3,
+            "groupCount": 3,
+            "spawnDelay": 7.000000,
+            "filterTag": "maze_attackers",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(1) Strafer: AR" ],
+                    "probability": 2,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.000000
+                },
+                {
+                    "tags": [ "(1) Strafer: SMG" ],
+                    "probability": 1,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.000000
+                },
+                {
+                    "tags": [ "(1) Strafer: SHG" ],
+                    "probability": 1,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.000000
+                }
+            ]
+        },
+        {
+            "name": "maze_attackers_special",
+            "totalLimit": 1000,
+            "count": 1,
+            "groupCount": 1,
+            "spawnDelay": 16.000000,
+            "filterTag": "maze_attackers",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(1) Strafer: GL" ],
+                    "probability": 2,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.000000
+                },
+                {
+                    "tags": [ "(1) Strafer: SR" ],
+                    "probability": 5,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.000000
+                }
+            ]
+        },
+        {
+            "name": "maze_attackers_capture",
+            "totalLimit": 100,
+            "count": 1,
+            "groupCount": 1,
+            "spawnDelay": 10.000000,
+            "filterTag": "maze_attackers_capture",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "prototype_maze_key_catcher" ],
+                    "probability": 100,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.000000
+                }
+            ]
+        },
+        {
+            "name": "maze_final_generic",
+            "totalLimit": 100,
+            "count": 0,
+            "groupCount": 1,
+            "spawnDelay": 0.000000,
+            "filterTag": "maze_attackers",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(1) Strafer: AR" ],
+                    "probability": 100,
+                    "count": 4,
+                    "groupCount": 4,
+                    "spawnDelay": 10.000000
+                },
+                {
+                    "tags": [ "(1) Strafer: SHG" ],
+                    "probability": 100,
+                    "count": 2,
+                    "groupCount": 2,
+                    "spawnDelay": 15.000000
+                },
+                {
+                    "tags": [ "(1) Strafer: SR" ],
+                    "probability": 100,
+                    "count": 2,
+                    "groupCount": 2,
+                    "spawnDelay": 20.000000
+                }
+            ]
+        },
+        {
+            "name": "maze_final_minotaurs",
+            "totalLimit": 2,
+            "count": 2,
+            "groupCount": 2,
+            "spawnDelay": 0.000000,
+            "filterTag": "maze_final_minotaurs",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(1) Strafer: Minotaur" ],
+                    "probability": 100,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.000000
+                }
+            ]
+        }
+    ]
+}

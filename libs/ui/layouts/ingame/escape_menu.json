@@ -1,0 +1,42 @@
+{
+    "script": "scripts/ui/ingame/escape_menu.lua",
+    "view_path": "EscapeMenu.html",
+    "action_filter": "ingame_menu",
+    "send_stats": true,
+    "children":
+    [
+        {"name": "top_block", "type": "Component", "view_path": "wrapper.topBlock"},
+        
+        {"name": "equipment_panel_container", "type": "Component", "view_path": "wrapper.topBlock.equipmentPanelContainer", "visible": false},
+
+        {"name": "static_hint", "type": "Component", "view_path": "wrapper.escapeMenuStaticHint.StaticHint", "file": "common/static_hint.json", "visible": false},
+
+        {"name": "hero_change", "type": "Component", "view_path": "wrapper.heroPanel", "visible": false},
+
+        {"name": "hint_left", "type": "ActionLabel", "view_path": "wrapper.heroPanel.titleWrapper.leftHintKey", "gamepad_only": true},
+        {"name": "hero_change_title", "type": "Label", "view_path": "wrapper.heroPanel.titleWrapper.title", "text": "@escape_menu_change_hero_title"},
+        {"name": "hint_right", "type": "ActionLabel", "view_path": "wrapper.heroPanel.titleWrapper.rightHintKey", "gamepad_only": true},
+
+        {"name": "hint_select", "type": "ActionLabel", "view_path": "wrapper.heroPanel.titleWrapper.selectHint.key", "gamepad_only": true},
+        {"name": "hint_select_title", "type": "ActionLabel", "view_path": "wrapper.heroPanel.titleWrapper.selectHint.title", "text": "@select", "gamepad_only": true},
+
+        {"name": "hero_container", "type":"Component", "view_path": "wrapper.heroPanel.container"},
+
+        {"name": "tasks_panel_container", "type": "Component", "view_path": "wrapper.topBlock.tasksBlockContainer", "visible": false},
+        
+        {"name": "auto_respawn", "type": "Component", "view_path": "wrapper.respawnTimer", "visible": false},
+        {"name": "auto_respawn_label", "type": "Label", "view_path": "wrapper.respawnTimer.text", "text": "@escape_menu_auto_respawn"},
+        {"name": "auto_respawn_timer", "type": "Label", "view_path": "wrapper.respawnTimer.time"},
+
+        {"name": "buttons_container", "type": "Component", "view_path": "wrapper.buttonsPanel", "visible": false},
+
+        {"name": "leave_button", "type": "Button", "view_path": "wrapper.buttonsPanel.leave", "text": "@leave"},
+        {"name": "leave_button_hint", "type": "ActionLabel", "view_path": "wrapper.buttonsPanel.leave.wrapper.key", "gamepad_only": true},
+
+        {"name": "settings_button", "type": "Button", "view_path": "wrapper.buttonsPanel.settings", "text": "@options"},
+        {"name": "settings_button_hint", "type": "ActionLabel", "view_path": "wrapper.buttonsPanel.settings.wrapper.key", "gamepad_only": true},
+
+        {"name": "confirm_button", "type": "Button", "view_path": "wrapper.buttonsPanel.confirm", "text": "@resume"},
+        {"name": "confirm_button_hint", "type": "ActionLabel", "view_path": "wrapper.buttonsPanel.confirm.wrapper.key", "gamepad_only": true}
+    ]
+}

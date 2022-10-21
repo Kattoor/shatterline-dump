@@ -1,0 +1,27 @@
+{
+    "script": "scripts/ui/post_session/session_details.lua",
+    "view_path": "SessionDetails.html",
+    "send_stats": true,
+
+    "children":
+    [
+        {"name": "navigation_bar", "type": "Component", "file": "lobby/navigation_bar_tiny.json"},
+        {"name": "background", "type": "Component", "file": "lobby/lobby_background.json"},
+
+        {"name": "play_again_btn", "type": "Button", "view_path": "container.content.buttonsPanel.playAgainBtn", "text": "@play_again", "visible": false},
+        {"name": "play_again_btn_hint", "type": "ActionLabel", "view_path": "container.content.buttonsPanel.playAgainBtn.wrapper.key", "gamepad_only": true},
+        {"name": "play_again_btn_timer", "type": "Label", "view_path": "container.content.buttonsPanel.playAgainBtn.wrapper.timer", "visible": false},
+
+        {"name": "back_btn", "type": "Button", "view_path": "container.content.buttonsPanel.leaveBtn", "text": "@leave", "visible": false},
+        {"name": "back_btn_hint", "type": "ActionLabel", "view_path": "container.content.buttonsPanel.leaveBtn.wrapper.key", "gamepad_only": true},
+
+        {"name": "quickplay_cancel_btn", "type": "Button", "view_path": "container.content.buttonsPanel.cancelBtn", "text": "@cancel", "visible": false},
+        {"name": "quickplay_cancel_btn_hint", "type": "ActionLabel", "view_path": "container.content.buttonsPanel.cancelBtn.wrapper.key", "gamepad_only": true},
+
+        {"name": "time_title_label", "type": "Label", "view_path": "container.content.header.title", "text": "@returning_to_lobby"},
+        {"name": "time_label", "type": "Label", "view_path": "container.content.header.timer"},
+
+        {"name": "season_pass_progress", "type": "Component", "file":"post_session/season_pass_progress.json", "visible": false},
+        {"name": "session_unlocks", "type": "Component", "file":"post_session/session_unlocks.json", "visible": false}
+    ]
+}

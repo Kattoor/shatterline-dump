@@ -1,0 +1,28 @@
+{
+   "name": "test_level_gained",
+   "type": "daily",
+   "active": true,
+   "image": "test_icon",
+   "rarity": "common",
+  "display_name": { "localization_key": "@test_level_gained" },
+   "description": { "localization_key": "@test_task_description" },
+    "conditions": [
+        {
+          "name": "test_level_gained",
+          "event_description": { "localization_key": "@test_task_event_description" },
+          "progress": 10,
+           "metagame_task_info": {
+              "event_name": "new_level_gained",
+              "value_from_key": "level",
+              "type": "gauge"
+           }
+        }
+    ],
+   "rewards": [
+      {
+         "reward_type": "currency",
+         "name": "soft",
+         "amount": 1000
+      }
+   ]
+}

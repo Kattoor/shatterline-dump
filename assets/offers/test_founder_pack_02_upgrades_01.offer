@@ -1,0 +1,36 @@
+{
+  "name": "test_founder_pack_02_upgrades_01",
+  "icon": "test_icon",
+  "display_name": "@offer_founder_pack_02_upgrades_01_name",
+  "text_description": "@offer_founder_pack_02_upgrades_01_description",
+  "icon_size": "1x2",
+  "prerequisites": {
+    "unavailable_if_purchased_any": ["test_founder_pack_02_upgrades_01", "test_founder_pack_03_upgrades_01"],
+    "available_if_purchased_any": ["test_founder_pack_01"]
+  },
+  "price": [
+    {
+      "currency": "hard",
+      "amount": 1000
+    }
+  ],
+  "items": [
+    {
+      "item_name": "kite_uppart09",
+      "amount": 1
+    },
+    {
+      "item_name": "malva_uppart07",
+      "amount": 1
+    },
+    {
+      "item_name": "mongoose_lowpart05",
+      "amount": 1
+    },
+    {
+      "item_name": "ram_uppart01",
+      "amount": 1
+    }
+  ],
+  "storefront": "founders"
+}

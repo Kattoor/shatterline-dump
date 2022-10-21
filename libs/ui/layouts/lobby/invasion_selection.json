@@ -1,0 +1,10 @@
+{
+    "script": "scripts/ui/lobby/invasion_selection.lua",
+    "view_path": "PlaylistSelectionContainer.html",
+    "send_stats": true,
+    "children":
+    [
+        {"name": "grid", "type": "Component", "view_path": "grid"},
+        {"name": "selection_container", "type": "Component", "view_path": "grid.container.content"}
+    ]
+}

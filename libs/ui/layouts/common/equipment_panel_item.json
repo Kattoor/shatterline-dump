@@ -1,0 +1,14 @@
+{
+    "script": "scripts/ui/common/equipment_panel_item.lua",
+    "view_path": "EquipmentPanelButton.html",
+    "children": 
+    [
+        {"name": "name", "type": "Label", "view_path": "wrapper.weaponName"},
+        {"name": "level_container", "type": "Component", "view_path": "wrapper.weaponLevel", "visible": false},
+        {"name": "level_label", "type": "Label", "view_path": "wrapper.weaponLevel.text", "text": "@escape_menu_item_level"}, 
+        {"name": "level_number", "type": "Label", "view_path": "wrapper.weaponLevel.number"},
+        {"name": "image", "type": "Image", "view_path": "wrapper.weaponImage"},
+        {"name": "progress_bar", "type": "ProgressBar", "view_path": "progressBar"},
+        {"name": "item_rarity", "type": "Label", "view_path": "wrapper.rarity"}
+    ]
+}

@@ -1,0 +1,88 @@
+{
+    "common":
+    {
+        "handler_bone":"IK_handler",
+        "handler_scale":0.01
+    },
+
+    "hand_ik":
+    {
+        "l":"weapon_bone",
+        "r":"weapon_bone",
+        "l_handler":"IK_handler",
+        "r_handler":"IK_handler"
+    },
+    
+    "aim_ik":
+    {
+        "motion_ids":
+        [
+            "aim_pose"
+        ],
+        "motion_blend_time":0.2,
+        "ik":"weapon_bone",
+        "ik_root":"Bip01_Head",
+        "anchored_nodes":
+        [
+            "Bip01_L_Foot",
+            "Bip01_R_Foot",
+            "Bip01_L_Wrist",
+            "Bip01_L_Hand",
+            "Bip01_L_Finger0",
+            "Bip01_R_Wrist",
+            "Bip01_R_Hand",
+            "Bip01_R_Finger0"
+        ]
+    },
+    "foot_ik":
+    [
+        {
+            "heel":
+            {
+                "bone_name":"Bip01_R_Finger0",
+                "angle_tolerance":5.0,
+                "top_bound":0.3,
+                "bot_bound":0.2
+            },
+            "max_ik_angle":75.0,
+            "smooth_time":0.03,
+            "reference_bone": "Bip01"
+        },
+        {
+            "heel":
+            {
+                "bone_name":"Bip01_L_Finger0",
+                "angle_tolerance":5.0,
+                "top_bound":0.3,
+                "bot_bound":0.2
+            },
+            "max_ik_angle":75.0,
+            "smooth_time":0.03,
+            "reference_bone": "Bip01"
+        },
+        {
+            "heel":
+            {
+                "bone_name":"Bip01_R_Toe0",
+                "angle_tolerance":5.0,
+                "top_bound":0.7,
+                "bot_bound":0.3
+            },
+            "max_ik_angle":75.0,
+            "smooth_time":0.03,
+            "reference_bone": "Bip01"
+        },
+        {
+            "heel":
+            {
+                "bone_name":"Bip01_L_Toe0",
+                "angle_tolerance":5.0,
+                "top_bound":0.7,
+                "bot_bound":0.3
+            },
+            "max_ik_angle":75.0,
+            "smooth_time":0.03,
+            "reference_bone": "Bip01"
+        }
+    ]
+}

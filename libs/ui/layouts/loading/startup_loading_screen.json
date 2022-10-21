@@ -1,0 +1,26 @@
+{
+    "view_path": "LoadingScreen.html",
+    "hide_cursor": true,
+    "send_stats": true,
+    "children":
+    [
+        {"name": "background", "type": "Image", "view_path": "background"},
+
+        {"name": "match_info", "type": "Control", "view_path": "wrapper.topBlock.matchInfo", "visible": false},
+        {"name": "match_type", "type": "Label", "view_path": "wrapper.topBlock.matchInfo.matchType"},
+        {"name": "mode_name", "type": "Label", "view_path": "wrapper.topBlock.matchInfo.mode"},
+        {"name": "map_name", "type": "Label", "view_path": "wrapper.topBlock.matchInfo.mapName"},
+
+        {"name": "event_info", "type": "Control", "view_path": "wrapper.topBlock.modeInfo", "visible": false},
+        {"name": "event", "type": "Label", "view_path": "wrapper.topBlock.modeInfo.event", "text": "@loading_screen_event"},
+        {"name": "event_name", "type": "Label", "view_path": "wrapper.topBlock.modeInfo.wrapper.mode"},
+
+        {"name": "description", "type": "Label", "view_path": "wrapper.topBlock.description", "visible": false},
+
+        {"name": "tip", "type": "Control", "view_path": "wrapper.bottomBlock.tip", "visible": false},
+        {"name": "tip_title", "type": "Label", "view_path": "wrapper.bottomBlock.tip.wrapper.title", "text": "@loading_screen_tip"},
+        {"name": "tip_text", "type": "Label", "view_path": "wrapper.bottomBlock.tip.wrapper.text"},
+
+        {"name": "loading_screen_controller", "type": "LoadingScreen", "view_path":"wrapper"}
+    ]
+}

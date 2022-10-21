@@ -1,0 +1,179 @@
+{
+    "name": "HunterPetDrone/HunterFollowOwner",
+    "root": "71996ba0-7bb0-4e2f-8e60-026735161329",
+    "nodes": {
+        "25f81939-d039-4ec3-bbb8-17914460377b": {
+            "name": "ApproachToKeepDistance",
+            "pos": {
+                "x": 0,
+                "y": 805
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "HunterPetDrone",
+                        "OwnerId"
+                    ]
+                },
+                {
+                    "name": "Distance",
+                    "type": "Float",
+                    "value": "1"
+                },
+                {
+                    "name": "MaxVerticalDiff",
+                    "type": "Float",
+                    "value": "0.00"
+                },
+                {
+                    "name": "DistanceDeviationMin",
+                    "type": "Float",
+                    "value": "-1"
+                },
+                {
+                    "name": "DistanceDeviationMax",
+                    "type": "Float",
+                    "value": "0.00"
+                },
+                {
+                    "name": "MoveBackDirectionRandomization",
+                    "type": "Float",
+                    "value": "0.00"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "c893c10c-2ec2-4806-8d14-1108429d8e62": {
+            "name": "SetStrafeAllowedAndRestoreOnExit",
+            "pos": {
+                "x": 0,
+                "y": 228
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Allow",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "eb5c48cc-6246-4c5a-bfb8-f59bf36eddb2"
+        },
+        "eb5c48cc-6246-4c5a-bfb8-f59bf36eddb2": {
+            "name": "IsBBValueExist",
+            "pos": {
+                "x": 0,
+                "y": 370
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ValuePath",
+                    "type": "StringHash",
+                    "value": "Gai.HunterPetDrone.OwnerId"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "c2816e6d-493f-49d2-93b9-dd108527ce4e"
+        },
+        "c2816e6d-493f-49d2-93b9-dd108527ce4e": {
+            "name": "TargetInHorizontalRange",
+            "pos": {
+                "x": 0,
+                "y": 565
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Source",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "HunterPetDrone",
+                        "OwnerId"
+                    ]
+                },
+                {
+                    "name": "Min",
+                    "type": "Float",
+                    "value": "0"
+                },
+                {
+                    "name": "Max",
+                    "type": "Float",
+                    "value": "5"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "25f81939-d039-4ec3-bbb8-17914460377b"
+        },
+        "71996ba0-7bb0-4e2f-8e60-026735161329": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 99
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "FollowOwner"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "c893c10c-2ec2-4806-8d14-1108429d8e62"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

@@ -1,0 +1,249 @@
+{
+    "events": [
+        {
+            "name": "pve_vdream_briefing",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_vdream_phillips_00"}}
+            ]
+        },
+        {
+            "name": "pve_vdream_hub_spawn",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_vdream_phillips_01", "img": "commander_phillips", "narrator": "@narrator_commander_phillips"}},
+                {"message_objective": {"message": "@obj_vdream_hub_spawn"}}
+            ]
+        },
+        {
+            "name": "pve_vdream_choose_level",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_vdream_phillips_02", "img": "commander_phillips", "narrator": "@narrator_commander_phillips"}},
+                {"message_objective": {"message": "@obj_vdream_choose_level"}}
+            ]
+        },
+        {
+            "name": "pve_vdream_kioni_start",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_hecatomb_kioni_03", "img": "kioni", "narrator": "@narrator_kioni"}},
+                {"message_objective": {"message": "@obj_vdream_kioni_start"}}
+            ]
+        },
+        {
+            "name": "pve_vdream_kioni_reaction",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_hecatomb_kioni_04", "img": "kioni", "narrator": "@narrator_kioni"}},
+                {"narration_objective": {"trigger_name": "pve_vdream_phillips_05", "img": "commander_phillips", "narrator": "@narrator_commander_phillips"}},
+                {"message_objective": {"message": "@obj_vdream_kioni_start"}}
+            ]
+        },
+        {
+            "name": "pve_vdream_kioni_lava",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_vdream_phillips_06", "img": "commander_phillips", "narrator": "@narrator_commander_phillips"}},
+                {"message_objective": {"message": "@obj_vdream_kioni_start"}}
+            ]
+        },
+        {
+            "name": "pve_vdream_kioni_trolling",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_vdream_kioni_03", "img": "kioni", "narrator": "@narrator_kioni"}},
+                {"narration_objective": {"trigger_name": "pve_vdream_phillips_07", "img": "commander_phillips", "narrator": "@narrator_commander_phillips"}},
+                {"narration_objective": {"trigger_name": "pve_vdream_kioni_04", "img": "kioni", "narrator": "@narrator_kioni"}},
+                {"narration_objective": {"trigger_name": "pve_vdream_phillips_08", "img": "commander_phillips", "narrator": "@narrator_commander_phillips"}},
+                {"message_objective": {"message": "@obj_vdream_kioni_start"}}
+            ]
+        },
+        {
+            "name": "pve_vdream_kioni_statues",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_vdream_kioni_05", "img": "kioni", "narrator": "@narrator_kioni"}},
+                {"narration_objective": {"trigger_name": "pve_vdream_phillips_09", "img": "commander_phillips", "narrator": "@narrator_commander_phillips"}},
+                {"message_objective": {"message": "@obj_vdream_kioni_statues"}}
+            ]
+        },
+        {
+            "name": "pve_vdream_kioni_glassheads",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_vdream_kioni_06", "img": "kioni", "narrator": "@narrator_kioni"}},
+                {"narration_objective": {"trigger_name": "pve_vdream_phillips_10", "img": "commander_phillips", "narrator": "@narrator_commander_phillips"}},
+                {"message_objective": {"message": "@obj_vdream_kioni_statues"}}
+            ]
+        },
+        {
+            "name": "pve_vdream_kioni_boss",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_vdream_kioni_07", "img": "kioni", "narrator": "@narrator_kioni"}},
+                {"narration_objective": {"trigger_name": "pve_vdream_phillips_11", "img": "commander_phillips", "narrator": "@narrator_commander_phillips"}},
+                {"message_objective": {"message": "@obj_vdream_kioni_boss"}}
+            ]
+        },
+        {
+            "name": "pve_vdream_kioni_fight",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_vdream_kioni_08", "img": "kioni", "narrator": "@narrator_kioni"}},
+                {"narration_objective": {"trigger_name": "pve_vdream_phillips_13", "img": "commander_phillips", "narrator": "@narrator_commander_phillips"}},
+                {"message_objective": {"message": "@obj_vdream_kioni_boss"}}
+            ]
+        },
+        {
+            "name": "pve_vdream_kioni_final",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_redlake_voice_11", "img": "kioni", "narrator": "@narrator_kioni"}},
+                {"message_objective": {"message": "@obj_vdream_hub_spawn"}}
+            ]
+        },
+        {
+            "name": "pve_vdream_brandon_start",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_vdream_brandon_01", "img": "brandon_phillips", "narrator": "@narrator_brandon_phillips"}},
+                {"message_objective": {"message": "@obj_vdream_brandon_start"}}
+            ]
+        },
+        {
+            "name": "pve_vdream_brandon_clusterfuck",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_vdream_brandon_02", "img": "brandon_phillips", "narrator": "@narrator_brandon_phillips"}},
+                {"message_objective": {"message": "@obj_vdream_brandon_start"}}
+            ]
+        },
+        {
+            "name": "pve_vdream_brandon_dish",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_vdream_brandon_03", "img": "brandon_phillips", "narrator": "@narrator_brandon_phillips"}},
+                {"message_objective": {"message": "@obj_vdream_brandon_start"}}
+            ]
+        },
+        {
+            "name": "pve_vdream_brandon_exfil",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_vdream_brandon_041", "img": "brandon_phillips", "narrator": "@narrator_brandon_phillips"}},
+                {"message_objective": {"message": "@obj_vdream_brandon_start"}}
+            ]
+        },
+        {
+            "name": "pve_vdream_brandon_dispatching",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_vdream_brandon_042", "img": "brandon_phillips", "narrator": "@narrator_brandon_phillips"}},
+                {"message_objective": {"message": "@obj_vdream_brandon_start"}}
+            ]
+        },
+        {
+            "name": "pve_vdream_brandon_saaha",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_vdream_brandon_05", "img": "brandon_phillips", "narrator": "@narrator_brandon_phillips"}},
+                {"message_objective": {"message": "@obj_vdream_brandon_start"}}
+            ]
+        },
+        {
+            "name": "pve_vdream_brandon_turrets",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_vdream_brandon_071", "img": "brandon_phillips", "narrator": "@narrator_brandon_phillips"}},
+                {"message_objective": {"message": "@obj_vdream_brandon_start"}}
+            ]
+        },
+        {
+            "name": "pve_vdream_brandon_gate",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_vdream_brandon_073", "img": "brandon_phillips", "narrator": "@narrator_brandon_phillips"}},
+                {"message_objective": {"message": "@obj_vdream_brandon_start"}}
+            ]
+        },
+        {
+            "name": "pve_vdream_brandon_bravo",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_vdream_brandon_06", "img": "brandon_phillips", "narrator": "@narrator_brandon_phillips"}},
+                {"message_objective": {"message": "@obj_vdream_brandon_start"}}
+            ]
+        },
+        {
+            "name": "pve_vdream_brandon_glass",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_vdream_brandon_072", "img": "brandon_phillips", "narrator": "@narrator_brandon_phillips"}},
+                {"message_objective": {"message": "@obj_vdream_brandon_start"}}
+            ]
+        },
+        {
+            "name": "pve_vdream_brandon_fate",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_vdream_brandon_051", "img": "brandon_phillips", "narrator": "@narrator_brandon_phillips"}},
+                {"message_objective": {"message": "@obj_vdream_brandon_start"}}
+            ]
+        },
+        {
+            "name": "pve_vdream_brandon_down",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_vdream_brandon_07", "img": "brandon_phillips", "narrator": "@narrator_brandon_phillips"}},
+                {"message_objective": {"message": "@obj_vdream_brandon_start"}}
+            ]
+        },
+        {
+            "name": "pve_vdream_brandon_beacon",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_vdream_brandon_074", "img": "brandon_phillips", "narrator": "@narrator_brandon_phillips"}},
+                {"message_objective": {"message": "@obj_vdream_brandon_start"}}
+            ]
+        },
+        {
+            "name": "pve_vdream_brandon_soldier_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_vdream_hero1_01", "narrator": "@narrator_soldier"}},
+                {"message_objective": {"message": "@obj_vdream_brandon_start"}}
+            ]
+        },
+        {
+            "name": "pve_vdream_brandon_soldier_02",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_vdream_hero1_02", "narrator": "@narrator_soldier"}},
+                {"message_objective": {"message": "@obj_vdream_brandon_start"}}
+            ]
+        },
+        {
+            "name": "pve_vdream_brandon_soldier_03",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_vdream_hero1_03", "narrator": "@narrator_soldier"}},
+                {"message_objective": {"message": "@obj_vdream_brandon_start"}}
+            ]
+        },
+        {
+            "name": "pve_vdream_brandon_soldier_04",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_vdream_hero1_04", "narrator": "@narrator_soldier"}},
+                {"message_objective": {"message": "@obj_vdream_brandon_start"}}
+            ]
+        },
+        {
+            "name": "pve_vdream_brandon_dead",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_vdream_brandon_08", "img": "brandon_phillips", "narrator": "@narrator_brandon_phillips"}},
+                {"message_objective": {"message": "@obj_vdream_brandon_start"}}
+            ]
+        },
+        {
+            "name": "pve_vdream_brandon_final",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_vdream_seer_01", "narrator": "@narrator_seer"}},
+                {"message_objective": {"message": "@obj_vdream_choose_level"}}
+            ]
+        },
+        {
+            "name": "pve_vdream_hub_kioni",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_vdream_phillips_03", "img": "commander_phillips", "narrator": "@narrator_commander_phillips"}},
+                {"message_objective": {"message": "@obj_vdream_choose_level"}}
+            ]
+        },
+        {
+            "name": "pve_vdream_hub_brandon",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_vdream_phillips_04", "img": "commander_phillips", "narrator": "@narrator_commander_phillips"}},
+                {"message_objective": {"message": "@obj_vdream_choose_level"}}
+            ]
+        },
+        {
+            "name": "pve_vdream_sublevel_obj",
+            "actions" : 
+            [
+                {"message_objective": {"message": "@obj_vdream_choose_level"}}
+            ]
+        }
+    ]
+}

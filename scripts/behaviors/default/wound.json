@@ -1,0 +1,184 @@
+{
+    "name": "Default/Wound",
+    "root": "08969797-3cf2-4efe-8581-ec16314b0dd8",
+    "nodes": {
+        "04bfc3a9-1bcb-427b-92f4-cfdd8eb7d58e": {
+            "name": "Wait",
+            "pos": {
+                "x": 140,
+                "y": 828
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Float",
+                    "value": "0.25"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "0120ee6a-981d-40e6-8d93-cb0e25ec301e": {
+            "name": "UnbreakableBehavior",
+            "pos": {
+                "x": -110,
+                "y": 826
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "6efcb194-f62c-44b0-9ca0-6831407fc804"
+        },
+        "5b12b0ed-8432-4d87-82bd-ad0130b49a80": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 720
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "0120ee6a-981d-40e6-8d93-cb0e25ec301e",
+                "04bfc3a9-1bcb-427b-92f4-cfdd8eb7d58e"
+            ]
+        },
+        "182c0e9c-d471-4abf-85d9-e87ac45134a7": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 217
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Wounded"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "76832b95-0ac2-49ec-a634-a6f965c14f74"
+        },
+        "6efcb194-f62c-44b0-9ca0-6831407fc804": {
+            "name": "DisableBodyRotationAndEnableOnExit",
+            "pos": {
+                "x": -110,
+                "y": 927
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "dcf082c5-73bb-4dc2-ac87-d0f385490ac6"
+        },
+        "909e7f22-439e-4e8e-bf3a-1eb379a2aebd": {
+            "name": "SetIgnoreImpulseAndResetOnExit",
+            "pos": {
+                "x": 0,
+                "y": 504
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "a1af77fb-9934-451c-aea1-a4642c8bfc13"
+        },
+        "dcf082c5-73bb-4dc2-ac87-d0f385490ac6": {
+            "name": "EnterWoundState",
+            "pos": {
+                "x": -110,
+                "y": 1034
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "AnimationName",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "ConditionVariables",
+                        "WoundAnim"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "08969797-3cf2-4efe-8581-ec16314b0dd8": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 93
+            },
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Wounded"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "182c0e9c-d471-4abf-85d9-e87ac45134a7"
+        },
+        "76832b95-0ac2-49ec-a634-a6f965c14f74": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 360
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Blinded"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "909e7f22-439e-4e8e-bf3a-1eb379a2aebd"
+        },
+        "a1af77fb-9934-451c-aea1-a4642c8bfc13": {
+            "name": "StopFireAndRestoreOnExit",
+            "pos": {
+                "x": 0,
+                "y": 612
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "5b12b0ed-8432-4d87-82bd-ad0130b49a80"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

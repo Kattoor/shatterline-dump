@@ -1,0 +1,78 @@
+{
+    "name": "test_ai_spawn_modifier",
+    "effects": [
+        {
+            "ai_spawner_modification":
+            {
+                "setups":
+                {
+                    "test_easy":
+                    {
+                        "ai_types":
+                        {
+                            "test_grade_2":
+                            {
+                                "rare":
+                                {
+                                    "probability": 80,
+                                    "soft_cap": 15
+                                },
+                                "epic":
+                                {
+                                    "probability": 20,
+                                    "soft_cap": 15
+                                }
+                            }
+                        }
+                    },
+                    "test_normal":
+                    {
+                        "ai_types":
+                        {
+                            "test_grade_2":
+                            {
+                                "rare":
+                                {
+                                    "probability": 90,
+                                    "soft_cap": 3
+                                },
+                                "normal":
+                                {
+                                    "probability": 10,
+                                    "soft_cap": 1
+                                }
+                            }
+                        }
+                    },
+                    "test_hard":
+                    {
+                        "ai_types":
+                        {
+                            "test_grade_1":
+                            {
+                                "rare":
+                                {
+                                    "probability": 100,
+                                    "soft_cap": 15
+                                }
+                            },
+                            "test_grade_3":
+                            {
+                                "epic":
+                                {
+                                    "probability": 90,
+                                    "soft_cap": 3
+                                },
+                                "rare":
+                                {
+                                    "probability": 90,
+                                    "soft_cap": 3
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,129 @@
+
+{
+   "microbehaviors":
+   [
+      {
+         "name": "MeleeMissing",
+         "conditions":
+         [
+            {
+               "template": "StayInPlace",
+               "origin": "target",
+               "params":
+               {
+                  "range": "2.0",
+                  "duration": "3.0"
+               }
+            },
+            {
+               "template": "MeleeMissing",
+               "params":
+               {
+                  "range": "1.0",
+                  "duration": "3.0"
+               }
+            },
+            {
+               "template": "AttackInProgress",
+               "inverse": true
+            },
+            {
+               "template": "FrequencyLimit",
+               "params":
+               {
+                  "name": "RageMelee",
+                  "delay_min": "5",
+                  "delay_max": "5"
+               }
+            }
+         ],
+         "actions":
+         [
+            {
+               "template": "RunMicrobehavior",
+               "params":
+               {
+                  "name": "RageMelee",
+                  "animation": "gh_ranged_attack_01",
+                  "slice": "ai/melee/rage_melee",
+                  "lifetime": "10",
+                  "impulse_radius": "5",
+                  "impulse": "-2000",
+                  "impulse_damage": "10"
+               }
+            }
+         ]
+      },
+      {
+         "name": "MeleeFailingApproach",
+         "conditions":
+         [
+            {
+               "template": "TargetExistAndVisible"
+            },
+            {
+               "template": "StayInPlace",
+               "origin": "target",
+               "params":
+               {
+                  "range": "2.0",
+                  "duration": "3.0"
+               }
+            },
+            {
+               "template": "StayInPlace",
+               "origin": "source",
+               "params":
+               {
+                  "range": "1.0",
+                  "duration": "4.0"
+               }
+            },
+            {
+               "template": "RecentMelee",
+               "inverse": true,
+               "params":
+               {
+                  "time": "5.0"
+               }
+            },
+            {
+               "template": "DamagePerSecond",
+               "inverse": true,
+               "origin": "target",
+               "params":
+               {
+                  "damage": "1.0",
+                  "decay": "1000.0",
+                  "decay_delay": "5.0"
+               }
+            },
+            {
+               "template": "FrequencyLimit",
+               "params":
+               {
+                  "name": "RageMelee",
+                  "delay_min": "5",
+                  "delay_max": "5"
+               }
+            }
+         ],
+         "actions":
+         [
+            {
+               "template": "RunMicrobehavior",
+               "params":
+               {
+                  "name": "RageMelee",
+                  "animation": "gh_ranged_attack_01",
+                  "slice": "ai/melee/rage_melee",
+                  "lifetime": "10",
+                  "impulse_radius": "5",
+                  "impulse": "-2000",
+                  "impulse_damage": "10"
+               }
+            }
+         ]
+      }
+   ]
+}

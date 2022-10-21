@@ -1,0 +1,277 @@
+{
+    "name": "GlassheadMelee/Rage",
+    "root": "db049390-8f36-4dc3-8e25-cb56a1b580ff",
+    "nodes": {
+        "43cd0a2a-1a2d-400f-aa81-5504500dad2e": {
+            "name": "Wait",
+            "pos": {
+                "x": 315,
+                "y": 714
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "rage_duration"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "02db5052-8a59-4eab-be8e-e630583324dd": {
+            "name": "GenerateRandomFloat",
+            "pos": {
+                "x": -300,
+                "y": 504
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Min",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "rage_min_delay"
+                    ]
+                },
+                {
+                    "name": "Max",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "rage_max_delay"
+                    ]
+                },
+                {
+                    "name": "Scale",
+                    "type": "Float",
+                    "value": "1.00"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Result",
+                    "type": "Variable",
+                    "value": [
+                        "PreRageDelay"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "c5610b70-f24b-4928-bea8-5accea11c435": {
+            "name": "GreaterThan",
+            "pos": {
+                "x": -65,
+                "y": 504
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Lhs",
+                    "type": "Variable",
+                    "value": [
+                        "PreRageDelay"
+                    ]
+                },
+                {
+                    "name": "Rhs",
+                    "type": "Float",
+                    "value": "0"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "ba4153ea-f890-4a45-a830-310ea2f22136"
+        },
+        "db5335fa-72fa-43bf-865f-82c98c7f1945": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 221
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Rage"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "619396ed-b1e9-4a64-acae-6fde25b075aa"
+        },
+        "db049390-8f36-4dc3-8e25-cb56a1b580ff": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 102
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Rage"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "db5335fa-72fa-43bf-865f-82c98c7f1945"
+        },
+        "77a52230-c53e-48cb-a244-b40097ed5524": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -530,
+                "y": 503
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "PreRageDelay"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Float"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "76f1ae06-2085-408f-ade5-abd0e94bac4d": {
+            "name": "SetAnimState",
+            "pos": {
+                "x": 95,
+                "y": 714
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "AGInput",
+                    "type": "StringHash",
+                    "value": "Rage"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "619396ed-b1e9-4a64-acae-6fde25b075aa": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 353
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "77a52230-c53e-48cb-a244-b40097ed5524",
+                "02db5052-8a59-4eab-be8e-e630583324dd",
+                "c5610b70-f24b-4928-bea8-5accea11c435",
+                "dd475203-cb53-473f-b22b-83afbe4540cc"
+            ]
+        },
+        "4d469009-3c0b-4e84-9e86-b6bb477942e1": {
+            "name": "Sequence",
+            "pos": {
+                "x": 180,
+                "y": 614
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "76f1ae06-2085-408f-ade5-abd0e94bac4d",
+                "43cd0a2a-1a2d-400f-aa81-5504500dad2e"
+            ]
+        },
+        "ba4153ea-f890-4a45-a830-310ea2f22136": {
+            "name": "Wait",
+            "pos": {
+                "x": -65,
+                "y": 680
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Variable",
+                    "value": [
+                        "PreRageDelay"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "dd475203-cb53-473f-b22b-83afbe4540cc": {
+            "name": "SetAnimStateOnExit",
+            "pos": {
+                "x": 180,
+                "y": 507
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "AGInput",
+                    "type": "StringHash",
+                    "value": "None"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "4d469009-3c0b-4e84-9e86-b6bb477942e1"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

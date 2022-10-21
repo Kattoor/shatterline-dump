@@ -1,0 +1,407 @@
+{
+    "name": "Gunmen/Engage",
+    "root": "3d17b23d-55b5-47c6-83f9-6de8d66f885b",
+    "nodes": {
+        "bf60b27b-5cd4-41f8-a233-ba33d43bf0cb": {
+            "name": "SetAutoReload",
+            "pos": {
+                "x": -260,
+                "y": 625
+            },
+            "inputs": [
+                {
+                    "name": "Enable",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "312be6df-7a43-4f76-a0ca-12de594b9e49": {
+            "name": "CallSubtree",
+            "pos": {
+                "x": 160,
+                "y": 989
+            },
+            "inputs": [
+                {
+                    "name": "Label",
+                    "type": "StringHash",
+                    "value": "FireInOpenspace"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "ac393709-dd5b-439f-9c9a-0da780e8d0dd"
+        },
+        "6d46b4be-892f-46dd-ab6c-c06ab625eb3f": {
+            "name": "ParallelUntilAnyComplete",
+            "pos": {
+                "x": 0,
+                "y": 762
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "84e21369-8959-494c-8a75-be6abf63aeb8",
+                "312be6df-7a43-4f76-a0ca-12de594b9e49"
+            ]
+        },
+        "ac393709-dd5b-439f-9c9a-0da780e8d0dd": {
+            "name": "Success",
+            "pos": {
+                "x": 160,
+                "y": 1140
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "c76c11e4-e5e7-446e-8053-d201543abd21": {
+            "name": "StartFire",
+            "pos": {
+                "x": -125,
+                "y": 626
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "0bfeef8e-a085-4ed9-a8f0-d360a09ce257": {
+            "name": "CVarEnabled",
+            "pos": {
+                "x": -430,
+                "y": 625
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CVar",
+                    "type": "StringHash",
+                    "value": "gai_auto_covers_enabled"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "c8404aac-f957-4db6-b43d-e8fb64c657e1"
+        },
+        "c98f3471-6118-4148-8dab-4838b9d4ec9d": {
+            "name": "Fail",
+            "pos": {
+                "x": -140,
+                "y": 1394
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "69ee241d-aaf6-46d5-bfde-38b04c4be41f": {
+            "name": "CallSubtree",
+            "pos": {
+                "x": -215,
+                "y": 764
+            },
+            "inputs": [
+                {
+                    "name": "Label",
+                    "type": "Variable",
+                    "value": [
+                        "SelectCoverSubtreeName"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "bec64a9e-3e01-4dd9-896c-ccc74282c355"
+        },
+        "bec64a9e-3e01-4dd9-896c-ccc74282c355": {
+            "name": "Success",
+            "pos": {
+                "x": -215,
+                "y": 895
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "9d0451f0-febf-41d8-afdd-e66db189bdab": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 476
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "0d73851b-9e97-478d-a32f-ebba3bcd59f7",
+                "0bfeef8e-a085-4ed9-a8f0-d360a09ce257",
+                "bf60b27b-5cd4-41f8-a233-ba33d43bf0cb",
+                "c76c11e4-e5e7-446e-8053-d201543abd21",
+                "4e093bab-d823-4058-8e7f-c3917c4a49fb"
+            ]
+        },
+        "dc177f29-1d36-4b62-a9d2-10e234922852": {
+            "name": "IsItemSelected",
+            "pos": {
+                "x": 0,
+                "y": 197
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "TagName",
+                    "type": "StringHash",
+                    "value": "FG"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "1804f386-7dc0-46af-aaa0-d96740116fbe"
+        },
+        "0888c261-433e-42f0-9142-4f14884d2f9d": {
+            "name": "TargetInRange",
+            "pos": {
+                "x": -140,
+                "y": 1191
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Source",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Min",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Inventory",
+                        "CurrentItem",
+                        "effective_distance_min"
+                    ]
+                },
+                {
+                    "name": "Max",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Inventory",
+                        "CurrentItem",
+                        "effective_distance_max"
+                    ]
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "c98f3471-6118-4148-8dab-4838b9d4ec9d"
+        },
+        "1804f386-7dc0-46af-aaa0-d96740116fbe": {
+            "name": "StopFireOnExit",
+            "pos": {
+                "x": 0,
+                "y": 376
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "9d0451f0-febf-41d8-afdd-e66db189bdab"
+        },
+        "4e093bab-d823-4058-8e7f-c3917c4a49fb": {
+            "name": "Selector",
+            "pos": {
+                "x": 0,
+                "y": 626
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "69ee241d-aaf6-46d5-bfde-38b04c4be41f",
+                "6d46b4be-892f-46dd-ab6c-c06ab625eb3f"
+            ]
+        },
+        "c8404aac-f957-4db6-b43d-e8fb64c657e1": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -565,
+                "y": 796
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "SelectCoverSubtreeName"
+                },
+                {
+                    "name": "Value",
+                    "type": "StringHash",
+                    "value": "SelectCover"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "3d17b23d-55b5-47c6-83f9-6de8d66f885b": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 77
+            },
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Engage"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "dc177f29-1d36-4b62-a9d2-10e234922852"
+        },
+        "0d73851b-9e97-478d-a32f-ebba3bcd59f7": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -670,
+                "y": 625
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "SelectCoverSubtreeName"
+                },
+                {
+                    "name": "Value",
+                    "type": "StringHash",
+                    "value": "SelectCover_Old"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "84e21369-8959-494c-8a75-be6abf63aeb8": {
+            "name": "TargetInRange",
+            "pos": {
+                "x": -140,
+                "y": 987
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Source",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Min",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Inventory",
+                        "CurrentItem",
+                        "effective_distance_min"
+                    ]
+                },
+                {
+                    "name": "Max",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Inventory",
+                        "CurrentItem",
+                        "effective_distance_max"
+                    ]
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "0888c261-433e-42f0-9142-4f14884d2f9d"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

@@ -1,0 +1,451 @@
+{
+    "name": "Behemoth/TestActionJump",
+    "root": "464172dd-4b64-4315-a2bd-b9dccd1fb7b3",
+    "nodes": {
+        "59641c92-ddff-488b-a021-dd2f81d46384": {
+            "name": "LogGate",
+            "pos": {
+                "x": 0,
+                "y": 238
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CVar",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "OnEnter",
+                    "type": "StringHash",
+                    "value": "ActionTest: Jump started"
+                },
+                {
+                    "name": "OnExit",
+                    "type": "StringHash",
+                    "value": "ActionTest: Jump finished"
+                },
+                {
+                    "name": "Attribute1",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                },
+                {
+                    "name": "Attribute2",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "6c972dd0-3e0e-431c-8a92-74546b1303c6"
+        },
+        "9da6eefe-a6f2-4e63-bb7e-b59fb4af0c95": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -1290,
+                "y": 642
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "JumpOutPoint"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Position"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "27e053bf-c5f5-401a-b3a0-f0afc5fa9b17": {
+            "name": "AccurateJumpToPoint",
+            "pos": {
+                "x": 25,
+                "y": 1077
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Point",
+                    "type": "Variable",
+                    "value": [
+                        "JumpOutPoint"
+                    ]
+                },
+                {
+                    "name": "BeforeJumpDelay",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "jump_out_delay"
+                    ]
+                },
+                {
+                    "name": "InAirDuration",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "jump_out_in_air_time"
+                    ]
+                },
+                {
+                    "name": "TotalAnimationDuration",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "jump_out_animation_duration"
+                    ]
+                },
+                {
+                    "name": "DirectionsCount",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "jump_out_directions_count"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "536ec28e-4292-4cd5-a99b-da86982487eb": {
+            "name": "SpatialQuerySimple",
+            "pos": {
+                "x": -1110,
+                "y": 946
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Query",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "jump_out_sqs_name"
+                    ]
+                },
+                {
+                    "name": "Origin",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "SQSPoint",
+                    "type": "Variable",
+                    "value": [
+                        "JumpOutPoint"
+                    ]
+                },
+                {
+                    "name": "SQSPointId",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "9b2f09e8-7230-435c-aeb4-9f11b95daacd": {
+            "name": "SendEventToScript",
+            "pos": {
+                "x": 335,
+                "y": 926
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EventName",
+                    "type": "StringHash",
+                    "value": "BehemothJumpEnd"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "de28a08e-31bf-4f36-bf90-6edf8e73591e": {
+            "name": "Equals",
+            "pos": {
+                "x": 0,
+                "y": 563
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Lhs",
+                    "type": "Variable",
+                    "value": [
+                        "JumpOutPointValid"
+                    ]
+                },
+                {
+                    "name": "Rhs",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "3f1c2e79-0555-4d99-9aea-d7bcb8d2ac03"
+        },
+        "f06ac1c5-0ecb-42a6-91d2-5544d825669d": {
+            "name": "Sequence",
+            "pos": {
+                "x": -945,
+                "y": 801
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "536ec28e-4292-4cd5-a99b-da86982487eb",
+                "6ae82646-0f3f-4873-ad35-9a9ea0241175"
+            ]
+        },
+        "464172dd-4b64-4315-a2bd-b9dccd1fb7b3": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 91
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ActionTest"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "59641c92-ddff-488b-a021-dd2f81d46384"
+        },
+        "6c972dd0-3e0e-431c-8a92-74546b1303c6": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 447
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "9da6eefe-a6f2-4e63-bb7e-b59fb4af0c95",
+                "cfa8e016-6598-4555-871b-0a081454c45e",
+                "a7366414-e1d9-4158-b5f7-fd29ff153d9f",
+                "de28a08e-31bf-4f36-bf90-6edf8e73591e"
+            ]
+        },
+        "e9d942ae-4d10-4488-ac22-f61f26b8f6b1": {
+            "name": "LogGate",
+            "pos": {
+                "x": -565,
+                "y": 801
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CVar",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "OnEnter",
+                    "type": "StringHash",
+                    "value": "JumpFail"
+                },
+                {
+                    "name": "OnExit",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "Attribute1",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                },
+                {
+                    "name": "Attribute2",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "a5c7a31e-423f-45ad-a1b5-66957375ead0"
+        },
+        "6ae82646-0f3f-4873-ad35-9a9ea0241175": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -810,
+                "y": 946
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "JumpOutPointValid"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "cfa8e016-6598-4555-871b-0a081454c45e": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -1070,
+                "y": 641
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "JumpOutPointValid"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Boolean"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "a7366414-e1d9-4158-b5f7-fd29ff153d9f": {
+            "name": "Selector",
+            "pos": {
+                "x": -810,
+                "y": 650
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "f06ac1c5-0ecb-42a6-91d2-5544d825669d",
+                "e9d942ae-4d10-4488-ac22-f61f26b8f6b1"
+            ]
+        },
+        "a5c7a31e-423f-45ad-a1b5-66957375ead0": {
+            "name": "Success",
+            "pos": {
+                "x": -565,
+                "y": 991
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "1378abbc-6ebd-48e4-8cb4-da707f1915df": {
+            "name": "SendEventToScript",
+            "pos": {
+                "x": -235,
+                "y": 926
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EventName",
+                    "type": "StringHash",
+                    "value": "BehemothJumpBegin"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "3f1c2e79-0555-4d99-9aea-d7bcb8d2ac03": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 798
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "1378abbc-6ebd-48e4-8cb4-da707f1915df",
+                "27e053bf-c5f5-401a-b3a0-f0afc5fa9b17",
+                "9b2f09e8-7230-435c-aeb4-9f11b95daacd"
+            ]
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

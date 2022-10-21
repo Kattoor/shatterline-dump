@@ -1,0 +1,190 @@
+{
+    "name": "Microbehaviors/ActivateScript",
+    "root": "2f92b563-8aad-4ae2-8da0-d04573ebf65a",
+    "nodes": {
+        "2f92b563-8aad-4ae2-8da0-d04573ebf65a": {
+            "name": "ResetCurrentMicrobehaviorOnExit",
+            "pos": {
+                "x": 0,
+                "y": 93
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "a507bdba-e752-43ae-9493-3fbab6dde637"
+        },
+        "a507bdba-e752-43ae-9493-3fbab6dde637": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 193
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ActivateScript"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "faf90d3f-24c3-4e15-b7ab-b74de2cf6bcb"
+        },
+        "faf90d3f-24c3-4e15-b7ab-b74de2cf6bcb": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 310
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Microbehaviors",
+                        "Params",
+                        "script_event_enter"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "0406889c-b3f1-4a9c-a8c1-67c5f4c00a32"
+        },
+        "39d88f14-4a47-4ce5-8a52-422f61268e56": {
+            "name": "ScriptEventGate",
+            "pos": {
+                "x": 0,
+                "y": 600
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EnterEvent",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Microbehaviors",
+                        "Params",
+                        "script_event_enter"
+                    ]
+                },
+                {
+                    "name": "ExitEvent",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Microbehaviors",
+                        "Params",
+                        "script_event_exit"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "f180d195-244f-4090-8733-8ac4c7453f62"
+        },
+        "f180d195-244f-4090-8733-8ac4c7453f62": {
+            "name": "IsBehaviorCondition",
+            "pos": {
+                "x": 0,
+                "y": 747
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Microbehaviors",
+                        "Params",
+                        "complete_condition"
+                    ]
+                },
+                {
+                    "name": "ResetOnExit",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "882fdd6b-dd75-4ec4-bbec-9c687e3b609c"
+        },
+        "882fdd6b-dd75-4ec4-bbec-9c687e3b609c": {
+            "name": "Success",
+            "pos": {
+                "x": 0,
+                "y": 944
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "0406889c-b3f1-4a9c-a8c1-67c5f4c00a32": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 436
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Microbehaviors",
+                        "Params",
+                        "complete_condition"
+                    ]
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "39d88f14-4a47-4ce5-8a52-422f61268e56"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

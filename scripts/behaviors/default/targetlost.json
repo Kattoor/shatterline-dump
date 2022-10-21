@@ -1,0 +1,99 @@
+{
+    "name": "Default/TargetLost",
+    "root": "f351787c-a103-4988-af3f-f6b073e34837",
+    "nodes": {
+        "ad019b48-1dbe-471a-9593-14b99ef552ab": {
+            "name": "ApproachTo",
+            "pos": {
+                "x": 0,
+                "y": 412
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "Pos"
+                    ]
+                },
+                {
+                    "name": "EndDistance",
+                    "type": "Float",
+                    "value": "2"
+                },
+                {
+                    "name": "UpdateDestinationPoint",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "f703e1ba-f774-4226-8100-d1de24a63196": {
+            "name": "SetStrafeAllowedAndRestoreOnExit",
+            "pos": {
+                "x": 0,
+                "y": 290
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Allow",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "ad019b48-1dbe-471a-9593-14b99ef552ab"
+        },
+        "c3ebf2fb-5ced-4163-b397-c65b3e051a77": {
+            "name": "SetMovementPaceAndRestoreOnExit",
+            "pos": {
+                "x": 0,
+                "y": 173
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "PaceType",
+                    "type": "StringHash",
+                    "value": "Regular"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "f703e1ba-f774-4226-8100-d1de24a63196"
+        },
+        "f351787c-a103-4988-af3f-f6b073e34837": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 71
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ApproachToLostTarget"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "c3ebf2fb-5ced-4163-b397-c65b3e051a77"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

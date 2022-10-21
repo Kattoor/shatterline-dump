@@ -1,0 +1,309 @@
+{
+    "name": "Behemoth/TooCloseForBurrow",
+    "root": "69a7d4fd-1732-4107-bbbd-e7a939ee1d50",
+    "nodes": {
+        "69a7d4fd-1732-4107-bbbd-e7a939ee1d50": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 77
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "TooCloseForBurrow"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "71414e62-7b82-49e3-b7ae-0be550a7f6d9"
+        },
+        "3dd781e1-47b1-4fc2-b452-f2a91ef62c24": {
+            "name": "Selector",
+            "pos": {
+                "x": 0,
+                "y": 346
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "92d57790-517c-4d17-9d7f-7ede0d6668d3",
+                "12f61a8f-40c7-405e-a12f-025b1ce1c5dc"
+            ]
+        },
+        "094c7683-ccb8-4ae6-8510-fbb6d3b807f0": {
+            "name": "CallSubtree",
+            "pos": {
+                "x": 51.67942996116085,
+                "y": 937.2635817055316
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Label",
+                    "type": "StringHash",
+                    "value": "ShockwaveAttackSingle"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "3032eede-46ef-40ff-80d7-95d705620aa1"
+        },
+        "44ea14a1-9e98-479c-9715-a4c2c0f15b7f": {
+            "name": "Succeeder",
+            "pos": {
+                "x": -160,
+                "y": 666
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "2303082a-36cf-4689-8206-d56fa83a9c49"
+        },
+        "12f61a8f-40c7-405e-a12f-025b1ce1c5dc": {
+            "name": "CallSubtree",
+            "pos": {
+                "x": 275,
+                "y": 450
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Label",
+                    "type": "StringHash",
+                    "value": "BehemothJump"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "189ae39c-c3e5-4244-a033-d4e99103a6b7"
+        },
+        "a6735af1-d853-42df-9f2a-1ec688258526": {
+            "name": "TargetInRange",
+            "pos": {
+                "x": -315,
+                "y": 915
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Source",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Min",
+                    "type": "Float",
+                    "value": "0"
+                },
+                {
+                    "name": "Max",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "close_to_target_range"
+                    ]
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "f28fdedb-5b6c-4eb4-be74-9e120cd03a67"
+        },
+        "92d57790-517c-4d17-9d7f-7ede0d6668d3": {
+            "name": "AngleToTarget",
+            "pos": {
+                "x": -160,
+                "y": 450
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Target",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "MaxAngle",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "max_angle_for_close_melee"
+                    ]
+                },
+                {
+                    "name": "UseBodyYaw",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "44ea14a1-9e98-479c-9715-a4c2c0f15b7f"
+        },
+        "2303082a-36cf-4689-8206-d56fa83a9c49": {
+            "name": "Selector",
+            "pos": {
+                "x": -160,
+                "y": 776
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "a6735af1-d853-42df-9f2a-1ec688258526",
+                "094c7683-ccb8-4ae6-8510-fbb6d3b807f0"
+            ]
+        },
+        "71414e62-7b82-49e3-b7ae-0be550a7f6d9": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 207
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "TooCloseForBurrow"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "3dd781e1-47b1-4fc2-b452-f2a91ef62c24"
+        },
+        "c5509e44-462c-485a-8435-7a82ea35383f": {
+            "name": "Success",
+            "pos": {
+                "x": -315,
+                "y": 1333
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "550c933d-3821-45e7-a75c-bbe8ba63ad82": {
+            "name": "CallSubtree",
+            "pos": {
+                "x": -315,
+                "y": 1209
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Label",
+                    "type": "StringHash",
+                    "value": "BehemothCloseAOE"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "c5509e44-462c-485a-8435-7a82ea35383f"
+        },
+        "3032eede-46ef-40ff-80d7-95d705620aa1": {
+            "name": "Success",
+            "pos": {
+                "x": 50,
+                "y": 1053
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "f28fdedb-5b6c-4eb4-be74-9e120cd03a67": {
+            "name": "Succeeder",
+            "pos": {
+                "x": -315,
+                "y": 1111
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "550c933d-3821-45e7-a75c-bbe8ba63ad82"
+        },
+        "189ae39c-c3e5-4244-a033-d4e99103a6b7": {
+            "name": "Success",
+            "pos": {
+                "x": 275,
+                "y": 563
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

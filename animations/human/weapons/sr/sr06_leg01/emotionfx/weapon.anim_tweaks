@@ -1,0 +1,123 @@
+{
+    "weapon_assets": [
+        "sr06_leg01"
+    ],
+    "motion_sets": [
+        "sr06_leg01_1p",
+        "sr06_leg01_wpn",
+        "sr06_3p"
+    ],
+    "binding_motions_to_parameters": [
+        {
+            "motion": "select",
+            "weapon_parameter": "item_selection_duration",
+            "scale": 0.99
+        },
+        {
+            "motion": "deselect",
+            "weapon_parameter": "item_deselection_duration"
+        },
+        {
+            "motion": "stand_select_rifle_3p_01",
+            "weapon_parameter": "item_selection_duration",
+            "scale": 0.8
+        },
+        {
+            "motion": "quick_deselect",
+            "weapon_parameter": "item_quick_deselection_duration"
+        },
+        {
+            "motion": "ironsight_in",
+            "weapon_parameter": "zoom_in_time"
+        },
+        {
+            "motion": "ironsight_out",
+            "weapon_parameter": "zoom_out_time"
+        },
+        {
+            "motion": "fireloop",
+            "weapon_parameter": "rpm",
+            "scale": 0.99
+        },
+        {
+            "motion": "ironsight_fireloop",
+            "weapon_parameter": "rpm",
+            "scale": 0.99
+        },        
+        {
+            "motion": "fire_add_3p_01",
+            "weapon_parameter": "rpm",
+            "scale": 0.5
+        },
+        {
+            "motion": "reload_mag_out_empty",
+            "weapon_parameter": "reload_mag_out_time",
+            "scale": 1.0
+        },
+        {
+            "motion": "reload_mag_in_empty",
+            "weapon_parameter": "reload_mag_in_time",
+            "scale": 1.0
+        },
+        {
+            "motion": "reload_mag_chamber",
+            "weapon_parameter": "reload_chamber_time",
+            "scale": 0.98
+        },
+        {
+            "motion": "reload_mag_end_empty",
+            "weapon_parameter": "reload_end_time",
+            "scale": 1.0
+        },
+        {
+            "motion": "reload_mag_out",
+            "weapon_parameter": "reload_mag_out_time",
+            "scale": 1.0
+        },
+        {
+            "motion": "reload_mag_in",
+            "weapon_parameter": "reload_mag_in_time",
+            "scale": 1.0
+        },
+        {
+            "motion": "reload_mag_end",
+            "weapon_parameter": "reload_end_time",
+            "scale": 1.0
+        },
+        {
+            "motion": "reload_mag_out_empty_3p",
+            "weapon_parameter": "reload_mag_out_time",
+            "scale": 0.99
+        },
+        {
+            "motion": "reload_mag_in_empty_3p",
+            "weapon_parameter": "reload_mag_in_time",
+            "scale": 0.99
+        },
+        {
+            "motion": "reload_mag_chamber_3p",
+            "weapon_parameter": "reload_chamber_time",
+            "scale": 1.0
+        },
+        {
+            "motion": "reload_mag_end_empty_3p",
+            "weapon_parameter": "reload_end_time",
+            "scale": 1
+        },
+        {
+            "motion": "reload_mag_out_3p",
+            "weapon_parameter": "reload_mag_out_time",
+            "scale": 1
+        },
+        {
+            "motion": "reload_mag_in_3p",
+            "weapon_parameter": "reload_mag_in_time",
+            "scale": 1
+        },
+        {
+            "motion": "reload_mag_end_3p",
+            "weapon_parameter": "reload_end_time",
+            "scale": 0.8
+        }
+    ]
+}

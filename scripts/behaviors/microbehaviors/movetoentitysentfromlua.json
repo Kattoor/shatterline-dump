@@ -1,0 +1,163 @@
+{
+    "name": "Microbehaviors/MoveToEntitySentFromLua",
+    "root": "4f532503-bee3-43aa-bac6-e5dea2947f08",
+    "nodes": {
+        "9ca88db4-a86f-40d3-8723-dfdcd50d9187": {
+            "name": "Wait",
+            "pos": {
+                "x": -430,
+                "y": 408
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Float",
+                    "value": "0.1"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "8c9ad7a7-d467-4b87-9f09-65b39ea1e726": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 187
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "MoveToEntitySentFromLua"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "02da10ec-e999-4a98-9280-10ff3a526401"
+        },
+        "4f532503-bee3-43aa-bac6-e5dea2947f08": {
+            "name": "ResetCurrentMicrobehaviorOnExit",
+            "pos": {
+                "x": 0,
+                "y": 88
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "8c9ad7a7-d467-4b87-9f09-65b39ea1e726"
+        },
+        "09b5a9cf-f7c3-46e6-9942-975b4145bf1c": {
+            "name": "GetEntityPos",
+            "pos": {
+                "x": 0,
+                "y": 406
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EntityId",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Microbehaviors",
+                        "ParamsFromLua",
+                        "entityToMoveTo"
+                    ]
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Position",
+                    "type": "Variable",
+                    "value": [
+                        "entityPos"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "02da10ec-e999-4a98-9280-10ff3a526401": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 308
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "9ca88db4-a86f-40d3-8723-dfdcd50d9187",
+                "ff86cd07-e534-4d3c-8a90-ef28a3171ff2",
+                "09b5a9cf-f7c3-46e6-9942-975b4145bf1c",
+                "f88d587e-780a-4052-852a-798bbf988aeb"
+            ]
+        },
+        "ff86cd07-e534-4d3c-8a90-ef28a3171ff2": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -285,
+                "y": 408
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "entityPos"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Position"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "f88d587e-780a-4052-852a-798bbf988aeb": {
+            "name": "ApproachTo",
+            "pos": {
+                "x": 355,
+                "y": 406
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "entityPos"
+                    ]
+                },
+                {
+                    "name": "EndDistance",
+                    "type": "Float",
+                    "value": "0.00"
+                },
+                {
+                    "name": "UpdateDestinationPoint",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

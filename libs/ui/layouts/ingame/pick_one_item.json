@@ -1,0 +1,16 @@
+{
+    "script": "scripts/ui/ingame/pick_one_item.lua",
+    "view_path": "PickOneItem.html",
+    "action_filter": "ingame_menu",
+    "children":
+    [
+        {"name": "image", "type": "Image", "view_path": "wrapper.header.image"},
+        {"name": "rarity_label", "type": "Label", "view_path": "wrapper.header.rarityLabel"},
+        {"name": "name", "type": "Label", "view_path": "wrapper.description.itemName"},
+        {"name": "type", "type": "Label", "view_path": "wrapper.description.itemType"},
+        {"name": "description", "type": "Label", "view_path": "wrapper.description.itemDescription"},
+        {"name": "perks_container", "type": "Component", "view_path": "wrapper.description.perkContainer"},
+        {"name": "alert", "type": "Component", "view_path": "wrapper.alert", "visible": false},
+        {"name": "alert_title", "type": "Label", "view_path": "wrapper.alert.label", "text": "@pick_one_primary_weapon_alert"}
+    ]
+}

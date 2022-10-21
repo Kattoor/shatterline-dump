@@ -1,0 +1,90 @@
+<BehaviorTree>
+<Root>
+<StateMachine>
+
+    <State name="Idle">
+        <Transitions>
+            <Transition onEvent="Attack" to="Attack" />
+            <Transition onEvent="LookingForMemoryTarget" to="LookingForMemoryTarget" />
+        </Transitions>
+        <BehaviorTree>
+            <Loop>
+                <SuppressFailure>
+                    <Selector>
+                        <LuaGate code="return AI.GetAttentionTargetType(entity.id) == AITARGET_VISUAL">
+                            <SendTransitionSignal name="Attack" />
+                        </LuaGate>
+                        <LuaGate code="return AI.GetAttentionTargetType(entity.id) == AITARGET_MEMORY">
+                            <SendTransitionSignal name="LookingForMemoryTarget" />
+                        </LuaGate>
+                    </Selector>
+                </SuppressFailure>
+            </Loop>
+        </BehaviorTree>
+    </State>
+
+    <State name="Attack">
+        <Transitions>
+            <Transition onEvent="OnNewAttentionTarget" to="Idle" />
+            <Transition onEvent="OnLostSightOfTarget" to="LookingForMemoryTarget" />
+            <Transition onEvent="OnTargetDead" to="Idle" />
+            <Transition onEvent="OnOutOfAmmo" to="OutOfAmmo" />
+        </Transitions>
+        <BehaviorTree>
+            <Sequence>
+                <ExecuteLua code="AI.TriggerCurrentTargetTrackPulse(entity.id, 'VisualPrimary', 'LockTarget')" />
+                <SelectItem itemTag="AR" />
+                <Loop>
+                    <SuppressFailure>
+                        <Sequence>
+                            <Selector>
+                                <QueryTPS name="MidRangeCoverToAttentionTarget" register="RefPoint" />
+                                <QueryTPS name="MidRangeTowardsAttentionTarget" register="RefPoint" />
+                            </Selector>
+                            <Approach to="RefPoint" />
+                        </Sequence>
+                    </SuppressFailure>
+                </Loop>
+            </Sequence>
+        </BehaviorTree>
+    </State>
+
+    <State name="LookingForMemoryTarget">
+        <Transitions>
+            <Transition onEvent="Attack" to="Attack" />
+        </Transitions>
+        <BehaviorTree>
+            <Sequence>
+                <Parallel>
+                    <Loop>
+                        <Sequence>
+                            <Wait duration="2" />
+                            <Approach to="Target" />
+                        </Sequence>
+                    </Loop>
+                    <LoopUntilSuccess>
+                        <LuaGate code="return AI.GetAttentionTargetType(entity.id) == AITARGET_VISUAL">
+                            <SendTransitionSignal name="Attack" />
+                        </LuaGate>
+                    </LoopUntilSuccess>
+                </Parallel>
+                <Halt />
+            </Sequence>
+        </BehaviorTree>
+    </State>
+
+    <State name="OutOfAmmo">
+        <Transitions>
+            <Transition onEvent="OnHasAmmo" to="Idle" />
+        </Transitions>
+        <BehaviorTree>
+            <Sequence>
+                <Reload blocking="true" />
+                <Halt />
+            </Sequence>
+        </BehaviorTree>
+    </State>
+
+</StateMachine>
+</Root>
+</BehaviorTree>

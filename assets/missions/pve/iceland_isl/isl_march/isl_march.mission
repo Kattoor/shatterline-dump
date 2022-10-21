@@ -1,0 +1,293 @@
+{
+  "metagame_info": {
+    "name_token": "@horde_title",
+    "mission": "isl_march",
+    "game_type": "pve",
+    "voice_chat_mode": "team_and_party",
+    "min_players_count": 3,
+    "time_to_join_sec": 24000,
+    "weapon_progression_enable": true,
+    "reconnect_enable": true
+  },
+  "session_info": {
+    "level": "pve/iceland_isl/isl_march",
+    "mission_modifiers": [
+      "ai_director_horde_proto",
+      "horde_ai_spawn_modifier",
+      "contamination_horde",
+      "ammo_pickup_proto",
+      "horde_initial_inventory",
+      "horde_music_modifier",
+      "pve_pushback",
+      "pick_one_horde",
+      "horde_fog_modifier",
+      "task_custom_event_sender"
+    ],
+    "game_mode": "pve_horde",
+    "ingame_reequip_enable": false,
+    "allow_customization": true,
+    "hero_change_enable": true,
+    "result_scene": "levels/pve/iceland_isl/isl_march/slices/result_stage/result_stage_march.dynamicslice"
+  },
+  "ui_info": {
+    "background_image": "loading_hordemode",
+    "sound_event": "march_loading"
+  },
+  "reward_info": {
+    "reward_calculators": [
+      {
+        "name": "session_outcome",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "win": 0,
+              "draw": 0,
+              "loss": 0
+            }
+          },
+          {
+             "type": "season_xp",
+             "values": {
+             "win": 30,
+              "draw": 20,
+              "loss": 15
+            }
+          },
+          {
+            "type": "xp",
+            "values": {
+              "win": 0,
+              "draw": 0,
+              "loss": 0
+            }
+          },
+          {
+            "type": "skill",
+            "values": {
+              "win": 1,
+              "draw": 0,
+              "loss": -1
+            }
+          }
+        ]
+      },
+      {
+        "name": "session_score",
+        "score": "Time",
+        "configs": [
+          {
+            "type": "season_xp",
+            "name": "",
+            "range_based": true,
+            "cumulative": true,
+            "values": {
+              "60": 5,
+              "120": 5,
+              "180": 5,
+              "240": 5,
+              "300": 5,
+              "360": 5,
+              "420": 5,
+              "480": 5,
+              "540": 5,
+              "600": 5,
+              "660": 5,
+              "720": 5,
+              "780": 5,
+              "840": 5,
+              "900": 5,
+              "960": 5,
+              "1020": 5,
+              "1080": 5,
+              "1140": 5,
+              "1200": 5,
+              "1260": 5,
+              "1320": 5,
+              "1380": 5,
+              "1440": 5,
+              "1500": 5,
+              "1560": 5,
+              "1620": 5,
+              "1680": 5,
+              "1740": 5,
+              "1800": 5
+            }
+          }
+        ]
+      },
+      {
+        "name": "session_score",
+        "score": "StageScore",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "reward": 50,
+              "max_reward": 1000
+            }
+          },
+          {
+            "type": "currency",
+            "name": "blueprint",
+            "values": {
+              "reward": 2,
+              "max_reward": 16
+            }
+          },
+          {
+            "type": "xp",
+            "values": {
+              "reward": 100,
+              "max_reward": 1000
+            }
+          },
+          {
+            "type": "season_xp",
+            "values": {
+              "reward": 75,
+              "max_reward": 1000
+            }
+          }
+        ]
+      },
+      {
+        "name": "session_score",
+        "score": "HordeVictoryBox",
+        "configs": [
+          {
+            "type": "item",
+            "name": "horde_item_box",
+            "range_based": true,
+            "cumulative": false,
+            "values": {"1": 1}
+          }
+        ]
+      },
+      {
+        "name": "session_score",
+        "score": "Time",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "range_based": true,
+            "cumulative": true,
+            "values": {
+              "60": 3,
+              "120": 3,
+              "180": 3,
+              "240": 3,
+              "300": 3,
+              "360": 3,
+              "420": 3,
+              "480": 3,
+              "540": 3,
+              "600": 3,
+              "660": 3,
+              "720": 3,
+              "780": 3,
+              "840": 3,
+              "900": 3,
+              "960": 3,
+              "1020": 3,
+              "1080": 3,
+              "1140": 3,
+              "1200": 3,
+              "1260": 3,
+              "1320": 3,
+              "1380": 3,
+              "1440": 3,
+              "1500": 3,
+              "1560": 3,
+              "1620": 3,
+              "1680": 3,
+              "1740": 3,
+              "1800": 3,
+              "1860": 3,
+              "1920": 3,
+              "1980": 3,
+              "2040": 3,
+              "2100": 3,
+              "2160": 3,
+              "2220": 3,
+              "2280": 3,
+              "2340": 3,
+              "2400": 3
+            }
+          },
+          {
+            "type": "xp",
+            "values": {
+              "reward": 1,
+              "max_reward": 1000
+            }
+          }
+        ]
+      }
+    ],
+    "weapon_score": [
+      {
+        "event": {
+          "event_id": "Kill",
+          "target_ai_archetype_is_not": []
+        },
+        "score": 110
+      },
+      {
+        "event": {
+          "event_id": "Headshot"
+        },
+        "score": 30
+      },
+      {
+        "event": {
+          "event_id": "WeaponTick"
+        },
+        "score": 12
+      },
+      {
+        "event": {
+          "event_id": "Assist"
+        },
+        "score": 110
+      }
+    ],
+    "hero_score": [
+      {
+        "event": {
+          "event_id": "Kill",
+          "target_ai_archetype_is_not": []
+        },
+        "score": 75
+      },
+      {
+        "event": {
+          "event_id": "Assist"
+        },
+        "score": 50
+      },
+      {
+        "event": {
+          "event_id": "Heal",
+          "target_team": "Same"
+        },
+        "score": 1
+      },
+      {
+        "event": {
+          "event_id": "Resurrect"
+        },
+        "score": 150
+      },
+      {
+        "event": {
+          "event_id": "WeaponTick"
+        },
+        "score": 10
+      }
+    ]
+  }
+}

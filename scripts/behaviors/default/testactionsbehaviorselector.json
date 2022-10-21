@@ -1,0 +1,107 @@
+{
+    "name": "Default/TestActionsBehaviorSelector",
+    "root": "7ac02bea-b44f-4135-946c-a764bbfd4990",
+    "nodes": {
+        "499e4ea5-cf3f-42c4-893a-e831a356a8cd": {
+            "name": "SelectTestActionBehavior",
+            "pos": {
+                "x": 185,
+                "y": 252
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Behavior",
+                    "type": "StringHash",
+                    "value": "Idle"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "2bcae7a9-8fa8-4328-b73d-885077f4e7f0": {
+            "name": "SelectTestActionBehavior",
+            "pos": {
+                "x": -125,
+                "y": 458
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Behavior",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "ConditionVariables",
+                        "ActionTest",
+                        "ActionName"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "0bd4b598-8759-441d-a820-25348e010f48": {
+            "name": "IsBehaviorCondition",
+            "pos": {
+                "x": -125,
+                "y": 252
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ActionTest"
+                },
+                {
+                    "name": "ResetOnExit",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "2bcae7a9-8fa8-4328-b73d-885077f4e7f0"
+        },
+        "7ac02bea-b44f-4135-946c-a764bbfd4990": {
+            "name": "Selector",
+            "pos": {
+                "x": 0,
+                "y": 103
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "0bd4b598-8759-441d-a820-25348e010f48",
+                "499e4ea5-cf3f-42c4-893a-e831a356a8cd"
+            ]
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

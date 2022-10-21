@@ -1,0 +1,33 @@
+{
+  "name": "daily_operative_ability_034",
+  "type": "daily",
+  "tags": [
+    "daily_operative_ability"
+  ],
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "uncommon",
+  "display_name": { "localization_key": "@daily_operative_ability_034_name" },
+  "description": { "localization_key": "@daily_operative_ability_034_description" },
+  "conditions": [
+    {
+      "name": "daily_operative_ability_034",
+      "event_description": { "localization_key": "@daily_operative_ability_034_event_description" },
+      "event": { "event_id": "MedkitUsed", "actor_is_me": true, "actor_item_tag_is": ["MK"], "target_player_preset_is_not":[""]},
+      "progress": 10
+    }
+  ],
+  
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 250
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 200
+    }
+  ]
+}

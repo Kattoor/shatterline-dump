@@ -1,0 +1,151 @@
+
+{
+    "microbehaviors":
+    [
+        {
+            "name": "GoliathDeathFromAbove",
+            "conditions":
+            [
+                {
+                    "template": "TargetExistAndVisible"
+                },
+                {
+                    "template": "Range",
+                    "params":
+                    {
+                        "to": "target",
+                        "min": "#min_range",
+                        "max": "#max_range",
+                        "direction": "3d"
+                    }
+                },
+                {
+                    "template": "Range",
+                    "params":
+                    {
+                        "to": "target",
+                        "min": "0",
+                        "max": "2",
+                        "direction": "vert"
+                    }
+                },
+                {
+                    "template": "AngleTo",
+                    "params":
+                    {
+                        "to": "target",
+                        "angle": "10"
+                    }
+                },
+                {
+                    "template": "IsAGParam",
+                    "inverse": true,
+                    "params":
+                    {
+                        "name": "out_attack_active"
+                    }
+                },
+                {
+                    "template": "IsBehaviorCondition",
+                    "inverse": true,
+                    "params":
+                    {
+                        "name": "Wounded"
+                    }
+                },
+                {
+                    "template": "IsBehaviorCondition",
+                    "inverse": true,
+                    "params":
+                    {
+                        "name": "Blinded"
+                    }
+                },
+                {
+                    "template": "AttackInProgress",
+                    "inverse": true
+                },
+                {
+                    "template":"FrequencyLimit",
+                    "origin":"source",
+                    "params":
+                    {
+                        "name":"GoliathDeathFromAboveLocal",
+                        "delay_min":"#local_dfa_cd_min",
+                        "delay_max":"#local_dfa_cd_max"
+                    }
+                },
+                {
+                    "template":"FrequencyLimit",
+                    "origin":"global",
+                    "params":
+                    {
+                        "name":"GoliathDeathFromAboveGlobal",
+                        "delay_min":"#global_dfa_cd_min",
+                        "delay_max":"#global_dfa_cd_max"
+                    }
+                },
+                {
+                    "template":"FrequencyLimit",
+                    "origin":"source",
+                    "params":
+                    {
+                        "name":"GoliathLocal",
+                        "delay_min":"#shared_local_cooldown_min",
+                        "delay_max":"#shared_local_cooldown_max"
+                    }
+                },
+                {
+                    "template":"FrequencyLimit",
+                    "origin":"global",
+                    "params":
+                    {
+                        "name":"GoliathGlobal",
+                        "delay_min":"#shared_global_cooldown_min",
+                        "delay_max":"#shared_global_cooldown_max"
+                    }
+                },
+                {
+                    "template":"Raycast",
+                    "params":
+                    {
+                        "from":"source",
+                        "from_offset_z":"#fly_up_height",
+                        "to":"target",
+                        "to_offset_z":"0.2"
+                    }
+                }
+            ],
+            "actions":
+            [
+                {
+                    "template": "RunMicrobehavior",
+                    "params":
+                    {
+                        "name": "ActivateScript",
+                        "script_event_enter": "GoliathDeathFromAbove",
+                        "script_event_exit": "GoliathDeathFromAbove_Exit",
+                        "complete_condition": "GoliathDeathFromAbove_Complete",
+                        "fly_up_height": "#fly_up_height",
+                        "fly_up_speed": "#fly_up_speed"
+                    }
+                }
+            ],
+            "default_params":
+            {
+                "min_range": "12",
+                "max_range": "24",
+                "local_dfa_cd_min": "12.0",
+                "local_dfa_cd_max": "15.0",
+                "global_dfa_cd_min": "8.0",
+                "global_dfa_cd_max": "10.0",
+                "shared_local_cooldown_min": "3.0",
+                "shared_local_cooldown_max": "3.0",
+                "shared_global_cooldown_min": "3.0",
+                "shared_global_cooldown_max": "3.0",
+                "fly_up_height": "4.0",
+                "fly_up_speed": "3.0"
+            }
+        }
+    ]
+}

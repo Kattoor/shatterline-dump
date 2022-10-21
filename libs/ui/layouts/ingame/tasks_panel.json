@@ -1,0 +1,11 @@
+{
+    "script": "scripts/ui/ingame/tasks_panel.lua",
+    "view_path": "TasksPanel.html",
+    "children": 
+    [
+        {"name": "tasks_list_title", "type": "Label", "view_path": "tasksList.title", "text": "@escape_task_panel_title"},
+        {"name": "tasks_list_container", "type": "Component", "view_path": "tasksList.container"},
+        
+        {"name": "task_description_card", "type": "Component", "view_path": "taskDescriptionCard", "file": "ingame/task_description_card.json", "visible": false}
+    ]
+}

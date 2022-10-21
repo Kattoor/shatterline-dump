@@ -1,0 +1,43 @@
+{
+    "name": "difficulty_changed",
+    "doc": "Origin: game session. Emitter: dedicated server. Thrown on any AI diffuculty change in PVE",
+    "type": "record",
+    "fields": [
+        {
+            "name": "name",
+            "type": "string",
+            "default": "-1",
+            "doc": "unique name of the event"
+        },
+        {
+            "name": "ts",
+            "type": "string",
+            "default": "-1",
+            "doc": "ISO8601 UTC timestamp of the event invocation"
+        },
+        {
+            "name": "gid",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace-unique identifier of the match"
+        },
+        {
+            "name": "current_diff",
+            "type": "string",
+            "default": "-1",
+            "doc": "categorial representation of current AI difficulty setting"
+        },
+        {
+            "name": "ns",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace of the server's deployment (realm)"
+        },
+        {
+            "name": "cp_id",
+            "type": "int",
+            "default": -1,
+            "doc": "recently activated checkpoint number (0 for starting difficulty set)"
+        }
+    ]
+}

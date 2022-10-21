@@ -1,0 +1,77 @@
+{
+       "time_to_action": 3000.0,
+       "selection":
+       {
+          "quick_selection_duration": 0.0,
+          "quick_deselection_duration": 0.0,
+          "quick_deselect": true,
+          "deselection_duration": 0.0,
+          "selection_duration": 0.0
+       },
+       "time_to_throw": 0.2,
+       "explosion_impulse":
+       {
+          "radius": 15.0,
+          "impulse": 700.0
+       },
+       "act_reason": "collision_proxy",
+       "projectile":
+       {
+          "speed": 2.0,
+          "offset":
+          {
+             "z": -0.4,
+             "x": 0.0,
+             "y": 0.5
+          },
+          "rotation_lock": true,
+          "velocity_character_multiplier": 1.0,
+          "offset_from_wall": 0.150,
+          "angle": 0.0,
+          "config_name": "cm01",
+          "slice_name": "slices/projectiles/cm01.dynamicslice"
+       },
+       "count": 1,
+       "pierceability_level" : 2,
+       "explosion_damage":
+       {
+          "points":
+          [
+             {
+                "distance": 1.6,
+                "damage": 250.0
+             },
+             {
+                "distance": 1.6,
+                "damage": 130.0
+             },
+             {
+                "distance": 6.0,
+                "damage": 35.0
+             },
+             {
+                "distance": 8.0,
+                "damage": 35.0
+             },
+             {
+                "distance": 8.0,
+                "damage": 0.0
+             }
+          ]
+       },
+       "common":
+       {
+          "item_tag": "CM"
+       },
+       "duration_throw": 0.4,
+       "duration_prepare": 0.02,
+       "can_cook": true,
+       "proximity":
+       {
+          "radius_delay": 1.5,
+          "radius_delayed": 3.0,
+          "delay": 0.4,
+          "radius": 0.010,
+          "check_visibility": true
+       }
+    }

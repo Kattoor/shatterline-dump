@@ -1,0 +1,25 @@
+{
+    "script": "scripts/ui/lobby/custom_game/join_game.lua",
+    "view_path": "JoinGamePage.html",
+    "send_stats": true,
+    "children":
+    [
+        {"name": "games_list_title", "type": "Label", "view_path": "container.leftContainer.listTitle", "text": "@custom_games_list_title"},
+        {"name": "games_list", "type": "ListBox", "view_path": "container.leftContainer.gamesList"},
+        {"name": "games_container", "type": "Component", "view_path": "container.leftContainer.gamesList.container"},
+
+        {"name": "empty_container", "type": "Component", "view_path": "container.leftContainer.gamesList.emptyContainer"},
+        {"name": "empty_label", "type": "Label", "view_path": "container.leftContainer.gamesList.emptyContainer.emptyLabel", "text": "@no_active_games"},
+
+        {"name": "refresh_btn", "type": "Button", "view_path": "container.leftContainer.refreshButton", "text": "@custom_refresh_btn"},
+        {"name": "refresh_btn_hint", "type": "ActionLabel", "view_path": "container.leftContainer.refreshButton.wrapper.key", "gamepad_only": true},
+
+        {"name": "players_container", "type": "Component", "view_path": "container.rightContainer.playersWrapper"},
+
+        {"name": "join_btn", "type": "Button", "view_path": "container.rightContainer.buttonsWrapper.joinButton", "text": "@custom_join_btn"},
+        {"name": "join_btn_hint", "type": "ActionLabel", "view_path": "container.rightContainer.buttonsWrapper.joinButton.wrapper.key", "gamepad_only": true},
+
+        {"name": "spectate_btn", "type": "Button", "view_path": "container.rightContainer.buttonsWrapper.spectatorButton", "text": "@custom_spectate_btn"},
+        {"name": "spectate_btn_hint", "type": "ActionLabel", "view_path": "container.rightContainer.buttonsWrapper.spectatorButton.wrapper.key", "gamepad_only": true}
+    ]
+}

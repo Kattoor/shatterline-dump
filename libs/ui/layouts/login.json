@@ -1,0 +1,11 @@
+{
+    "script": "scripts/ui/login.lua",
+    "view_path": "RootScreen.html",
+    "hide_cursor": true,
+    "send_stats": true,
+    "children": [
+        { "name": "wait_input", "type": "Component", "file": "login/wait_input.json" },
+        { "name": "error_message", "type": "Component", "file": "modal_window/error_message_container.json" },
+        { "name": "okay_message", "type": "Component", "file": "modal_window/messagebox_container.json"}
+    ]
+}

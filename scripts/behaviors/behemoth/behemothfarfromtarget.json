@@ -1,0 +1,404 @@
+{
+    "name": "Behemoth/BehemothFarFromTarget",
+    "root": "8dc2dfba-7a0f-4305-874e-89d3e0c5f415",
+    "nodes": {
+        "3b41a902-c1bd-4d9f-a796-5a29be1c2fae": {
+            "name": "GetNearestPointOnNavMesh",
+            "pos": {
+                "x": -270,
+                "y": 814
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "x_tolerance",
+                    "type": "Float",
+                    "value": "0.5"
+                },
+                {
+                    "name": "y_tolerance",
+                    "type": "Float",
+                    "value": "0.5"
+                },
+                {
+                    "name": "z_tolerance",
+                    "type": "Float",
+                    "value": "1.00"
+                },
+                {
+                    "name": "Position",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Result Position",
+                    "type": "Variable",
+                    "value": [
+                        "TargetPoint"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "89b8248c-c88e-4d25-9524-f9f38598c771": {
+            "name": "ApproachToKeepDistance",
+            "pos": {
+                "x": 125,
+                "y": 984
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "Distance",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "far_from_target_out"
+                    ]
+                },
+                {
+                    "name": "DistanceDeviationMin",
+                    "type": "Variable",
+                    "value": [
+                        "FarFromTargetDeviation"
+                    ]
+                },
+                {
+                    "name": "DistanceDeviationMax",
+                    "type": "Variable",
+                    "value": [
+                        "FarFromTargetDeviation"
+                    ]
+                },
+                {
+                    "name": "MoveBackDirectionRandomization",
+                    "type": "Float",
+                    "value": "0.00"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "84a6de08-9f98-4e62-813e-dbcfd650afab": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 390
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "e27a36bb-0aed-4853-85cc-ab52e6af104e",
+                "680c8c08-929b-4c15-83d5-0d6413d868e6",
+                "5a2eed24-1a7a-4546-9343-dcec1b533454"
+            ]
+        },
+        "5b1cbb37-1901-4192-a766-8a1066eee3b8": {
+            "name": "Succeeder",
+            "pos": {
+                "x": 125,
+                "y": 787
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "98f72cd3-257c-42a8-ae40-96a16800c181"
+        },
+        "523cd0ef-0be1-4475-a175-631540e31a55": {
+            "name": "GetNearestPointOnNavMesh",
+            "pos": {
+                "x": 525,
+                "y": 937
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "x_tolerance",
+                    "type": "Float",
+                    "value": "20.00"
+                },
+                {
+                    "name": "y_tolerance",
+                    "type": "Float",
+                    "value": "20.00"
+                },
+                {
+                    "name": "z_tolerance",
+                    "type": "Float",
+                    "value": "1.00"
+                },
+                {
+                    "name": "Position",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Result Position",
+                    "type": "Variable",
+                    "value": [
+                        "TargetPoint"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "680c8c08-929b-4c15-83d5-0d6413d868e6": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": 0,
+                "y": 528
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "TargetPoint"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Position"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "98f72cd3-257c-42a8-ae40-96a16800c181": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 125,
+                "y": 875
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ApproachToTarget"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "89b8248c-c88e-4d25-9524-f9f38598c771"
+        },
+        "02739bad-1cff-466f-a904-c8d21df8b933": {
+            "name": "Sequence",
+            "pos": {
+                "x": 125,
+                "y": 689
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "3b41a902-c1bd-4d9f-a796-5a29be1c2fae",
+                "5b1cbb37-1901-4192-a766-8a1066eee3b8"
+            ]
+        },
+        "8dc2dfba-7a0f-4305-874e-89d3e0c5f415": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 102
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "BehemothFarFromTarget"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "2ab9c3b2-d346-40c7-b6a8-ebe149dbf962"
+        },
+        "8a6d0a9a-baff-4690-93dd-9931920e36f7": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 835,
+                "y": 933
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ApproachFailed - GoToNearest"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "2e5ff5c3-7c55-4247-bad1-803a12a23b45"
+        },
+        "e27a36bb-0aed-4853-85cc-ab52e6af104e": {
+            "name": "Subtract",
+            "pos": {
+                "x": -270,
+                "y": 536
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "InputA",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "far_from_target_in"
+                    ]
+                },
+                {
+                    "name": "InputB",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "far_from_target_out"
+                    ]
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Result",
+                    "type": "Variable",
+                    "value": [
+                        "FarFromTargetDeviation"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "2e5ff5c3-7c55-4247-bad1-803a12a23b45": {
+            "name": "ApproachTo",
+            "pos": {
+                "x": 835,
+                "y": 1048
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "TargetPoint"
+                    ]
+                },
+                {
+                    "name": "EndDistance",
+                    "type": "Float",
+                    "value": "0.00"
+                },
+                {
+                    "name": "UpdateDestinationPoint",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "2ab9c3b2-d346-40c7-b6a8-ebe149dbf962": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 239
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "BehemothFarFromTarget"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "84a6de08-9f98-4e62-813e-dbcfd650afab"
+        },
+        "5a2eed24-1a7a-4546-9343-dcec1b533454": {
+            "name": "Selector",
+            "pos": {
+                "x": 345,
+                "y": 528
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "02739bad-1cff-466f-a904-c8d21df8b933",
+                "cf3d7c00-7b1f-48f4-9e0d-16915ffe4036"
+            ]
+        },
+        "cf3d7c00-7b1f-48f4-9e0d-16915ffe4036": {
+            "name": "Sequence",
+            "pos": {
+                "x": 610,
+                "y": 809
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "523cd0ef-0be1-4475-a175-631540e31a55",
+                "8a6d0a9a-baff-4690-93dd-9931920e36f7"
+            ]
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

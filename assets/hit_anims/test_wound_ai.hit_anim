@@ -1,0 +1,23 @@
+{
+    "context": "Wound",
+    "profiles":
+    [
+        {
+            "profile":"WoundTest",
+            "hits":
+            [
+                {
+                    "hit_pattern": { "hit_part_is": ["Torso"], "hit_side_is": ["Back"] },
+                    "animations": ["wounded5"]
+                },
+                {
+                    "hit_pattern": { "custom_animation_is": ["earthquake_test"] },
+                    "animations": ["wounded1", "wounded2", "wounded3", "wounded4", "wounded5"]
+                },
+                {
+                    "animations": ["wounded1", "wounded2", "wounded3", "wounded4", "wounded5"]
+                }
+            ]
+        }
+    ]
+}

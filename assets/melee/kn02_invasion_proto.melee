@@ -1,0 +1,53 @@
+{
+    "hit_feedback": "server",
+    "common":
+    {
+        "item_tag": "KNI"
+    },
+    "selection":
+    {
+        "selection_duration": 0.0,
+        "deselection_duration": 0.0
+    },
+    "attacks":
+    [
+        {
+            "animation_index": [1],
+            "duration": 1.0,
+            "hits":
+            [
+                {
+                    "damage": 300.0,
+                    "hit_delay": 0.13,
+                    "shape": "shape_2",
+                    "melee_type": "KnifeStab"
+                }
+            ]
+        }
+    ],
+    "quick_attacks":
+    [
+        {
+            "animation_index": [1],
+            "duration": 0.65,
+            "prepare_duration": 0.05,
+            "hits":
+            [
+                {
+                    "damage": 150.0,
+                    "hit_delay": 0.1,
+                    "shape": "shape_2",
+                    "melee_type": "KnifeStab"
+                }
+            ]
+        }
+    ],
+    "snapping":
+    {
+        "max_distance": 3.0,
+        "angle": 80,
+        "max_height_delta": 1.7,
+        "gap": 0.25,
+        "offset": 0.25
+    }
+}

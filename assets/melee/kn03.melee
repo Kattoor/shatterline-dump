@@ -1,0 +1,45 @@
+{
+    "hit_feedback": "server",
+    "common":
+    {
+        "item_tag": "KN"
+    },
+    "selection":
+    {
+        "selection_duration": 0.0,
+        "deselection_duration": 0.0
+    },
+    "attacks": 
+    [
+        {
+            "animation_index": [1],
+            "duration": 1.8,
+            "hits":
+            [
+                {
+                    "damage": 300.0,
+                    "hit_delay": 0.13,
+                    "shape": "shape_2",
+                    "melee_type": "KnifeStab"
+                }
+            ]
+        }
+    ],
+    "quick_attacks": 
+    [
+        {
+            "animation_index": [1],
+            "duration": 0.78,
+            "prepare_duration": 0.05,
+            "hits":
+            [
+                {
+                    "damage": 50.0,
+                    "hit_delay": 0.1,
+                    "shape": "shape_2",
+                    "melee_type": "KnifeStab"
+                }
+            ]
+        }
+    ]
+}

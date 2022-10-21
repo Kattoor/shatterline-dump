@@ -1,0 +1,11 @@
+{
+    "script": "scripts/ui/lobby/armory/armory_hub.lua",
+    "view_path": "ArmoryHub.html",
+    "send_stats": true,
+    "children":
+    [
+        { "name": "subtab_menu", "type": "Component", "file": "lobby/subtab_menu.json" },
+        { "name": "armory", "type": "Component", "file": "lobby/armory/armory.json", "visible": false },
+        { "name": "modifications", "type": "Component", "file": "lobby/modifications/modifications.json", "visible": false }
+    ]
+}

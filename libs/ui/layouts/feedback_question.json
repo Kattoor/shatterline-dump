@@ -1,0 +1,21 @@
+{
+    "script": "scripts/ui/feedback_question.lua",
+    "view_path": "FeedbackQuestion.html",
+    "children":
+    [
+        {"name": "title", "type": "Label", "view_path": "container.title"},
+        {"name": "description", "type": "Label", "view_path": "container.text", "text": "@your_feedback_is"},
+
+        {"name": "rate_hint_left", "type": "ActionLabel", "view_path": "container.content.ratingWrapper.hintLeft", "gamepad_only": true},
+        {"name": "rating_buttons", "type": "Component", "view_path": "container.content.ratingWrapper.ratingButtons"},
+        {"name": "rate_1", "type": "Button", "view_path": "container.content.ratingWrapper.ratingButtons.rate1"},
+        {"name": "rate_2", "type": "Button", "view_path": "container.content.ratingWrapper.ratingButtons.rate2"},
+        {"name": "rate_3", "type": "Button", "view_path": "container.content.ratingWrapper.ratingButtons.rate3"},
+        {"name": "rate_4", "type": "Button", "view_path": "container.content.ratingWrapper.ratingButtons.rate4"},
+        {"name": "rate_5", "type": "Button", "view_path": "container.content.ratingWrapper.ratingButtons.rate5"},
+        {"name": "rate_hint_right", "type": "ActionLabel", "view_path": "container.content.ratingWrapper.hintRight", "gamepad_only": true},
+
+        {"name": "rate_hint", "type": "ActionLabel", "view_path": "container.controlContainer.hintWrapper.hint", "gamepad_only": true},
+        {"name": "rate_hint_text", "type": "ActionLabel", "view_path": "container.controlContainer.hintWrapper.hintText", "text": "@rate", "gamepad_only": true}
+    ]
+}

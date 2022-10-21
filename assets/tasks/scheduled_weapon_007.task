@@ -1,0 +1,44 @@
+{
+  "name": "scheduled_weapon_007",
+  "type": "scheduled",
+  "tags": [
+    "gun"
+  ],
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "common",
+  "display_name": { "localization_key": "@scheduled_weapon_007_name" },
+  "description": { "localization_key": "@scheduled_weapon_007_description" },
+  "conditions": [
+    {
+      "name": "scheduled_weapon_007_1",
+      "event_description": { "localization_key": "@scheduled_weapon_007_1_event_description" },
+      "event": { "event_id": "HipKill", "actor_is_me": true, "actor_item_tag_is": ["SMG"], "game_type_is": ["pvp"]},
+      "progress": 10
+    },
+    {
+      "name": "scheduled_weapon_007_2",
+      "event_description": { "localization_key": "@scheduled_weapon_007_2_event_description" },
+      "event": { "event_id": "HipKill", "actor_is_me": true, "actor_item_tag_is": ["SHG"], "game_type_is": ["pvp"]},
+      "progress": 3
+    }
+  ],
+  
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 2000
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 1000
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 15
+    }
+  ]
+}

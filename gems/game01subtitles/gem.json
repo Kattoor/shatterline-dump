@@ -1,0 +1,33 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "258e26b7db2549cabc1286528bb6418c",
+    "Name": "Game01Subtitles",
+    "DisplayName": "Game01Subtitles",
+    "Version": "0.1.0",
+    "Summary": "Simple subtitle system",
+    "Tags": ["Untagged"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        },
+        {
+            "Name": "Editor",
+            "Type": "EditorModule",
+            "Extends": "GameModule"
+        }
+    ],
+    "Dependencies": 
+    [ 
+        {
+            "Uuid": "7e24ebb066104127a4abb14e13ec7bed",
+            "VersionConstraints": ["~>0.1"],
+            "_comment": "GameSession"
+        },
+        {
+            "Uuid": "8f608e7ed6fe4047961dc990edc76285",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01JsonAssetBuilder"
+        }
+    ]
+}

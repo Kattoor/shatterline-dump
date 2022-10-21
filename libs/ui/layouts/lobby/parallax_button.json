@@ -1,0 +1,29 @@
+{
+    "view_path": "ParallaxButton.html",
+    "children":
+    [
+        {"name": "label", "type": "Label", "view_path": "wrapper.content.bottomBlock.descriptionContainer.title"},
+        {"name": "title", "type": "Label", "view_path": "wrapper.content.bottomBlock.descriptionContainer.description"},
+
+        {"name": "image1", "type": "Image", "view_path": "wrapper.content.imageContainer.image1"},
+        {"name": "image2", "type": "Image", "view_path": "wrapper.content.imageContainer.image2"},
+        {"name": "image3", "type": "Image", "view_path": "wrapper.content.imageContainer.image3"},
+        {"name": "image4", "type": "Image", "view_path": "wrapper.content.imageContainer.image4"},
+
+        {"name": "marker", "type": "Label", "view_path": "wrapper.content.bottomBlock.playlistTypeContainer.playlistType", "visible": false},
+
+        {"name": "lockTitle", "type": "Label", "view_path": "wrapper.content.bottomBlock.descriptionContainer.lockTitle", "visible": false},
+        {"name": "lockExpireTitle", "type": "Label", "view_path": "wrapper.content.bottomBlock.descriptionContainer.expireTitle", "visible": false},
+        {"name": "timer", "type": "Label", "view_path": "wrapper.content.bottomBlock.descriptionContainer.timer", "visible": false},
+
+        {"name": "lockRankIcon", "type": "Component", "view_path": "wrapper.content.bottomBlock.lockIconContainer", "visible": false},
+        {"name": "lockExpireIcon", "type": "Component", "view_path": "wrapper.content.lockerWrapper.lockerIcons.expireIcon", "visible": false},
+
+        {"name": "details_button", "type": "Button", "view_path": "wrapper.content.bottomBlock.buttonsContainer.detailsButton"},
+        {"name": "details_button_hint", "type": "ActionLabel", "view_path": "wrapper.content.bottomBlock.buttonsContainer.detailsButton.wrapper.key", "gamepad_only": true},
+        {"name": "play_button", "type":"Button", "view_path": "wrapper.content.bottomBlock.buttonsContainer.playButton"},
+        {"name": "play_button_hint", "type": "ActionLabel", "view_path": "wrapper.content.bottomBlock.buttonsContainer.playButton.wrapper.key", "gamepad_only": true},
+
+        {"name": "first_win_of_the_day", "type": "Label", "view_path": "wrapper.content.firstWinOfTheDay.label", "text": "@first_win_of_the_day", "visible": false}
+    ]
+}

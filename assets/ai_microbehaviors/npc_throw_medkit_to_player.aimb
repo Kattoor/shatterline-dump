@@ -1,0 +1,62 @@
+
+{
+    "microbehaviors":
+    [
+        {
+            "name": "NPCThrowMedkitToPlayer",
+            "execute_prob": 1.0,
+            "execute_once": false,
+            "conditions":
+            [
+                {
+                    "template": "IsBehaviorCondition",
+                    "origin": "source",
+                    "params":
+                    {
+                        "name": "PlayerIsWounded"
+                    }
+                },
+                {
+                    "template": "FrequencyLimit",
+                    "origin": "source",
+                    "params":
+                    {
+                        "name": "RageFrequencySelf",
+                        "count": "#source_counter",
+                        "time": "#source_reset_time",
+                        "delay_min": "#source_delay_min",
+                        "delay_max": "#source_delay_max"
+                    }
+                }
+            ],
+            "interrupt_conditions":
+            [
+                {
+                    "template": "IsBehaviorCondition",
+                    "origin": "source",
+                    "params":
+                    {
+                        "name": "Wounded"
+                    }
+                }
+            ],
+            "actions":
+            [
+                {
+                    "template": "RunMicrobehavior",
+                    "params":
+                    {
+                        "name": "NPCThrowMedkitToPlayer"
+                    }
+                }
+            ],
+            "default_params":
+            {
+                "source_counter": "2",
+                "source_reset_time": "25",
+                "source_delay_min": "7",
+                "source_delay_max": "9"
+            }
+        }
+    ]
+}

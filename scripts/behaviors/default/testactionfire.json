@@ -1,0 +1,213 @@
+{
+    "name": "Default/TestActionFire",
+    "root": "0ee3499c-d7c3-4e17-baf0-e7f173754879",
+    "nodes": {
+        "2013e581-498a-465b-a1c4-c9b7719325f8": {
+            "name": "LogGate",
+            "pos": {
+                "x": 0,
+                "y": 254
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CVar",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "OnEnter",
+                    "type": "StringHash",
+                    "value": "ActionTest: Fire started"
+                },
+                {
+                    "name": "OnExit",
+                    "type": "StringHash",
+                    "value": "ActionTest: Fire finished"
+                },
+                {
+                    "name": "Attribute1",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                },
+                {
+                    "name": "Attribute2",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "14a538d6-a151-4e48-a2f3-72fc2e41e2d5"
+        },
+        "0ee3499c-d7c3-4e17-baf0-e7f173754879": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 107
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ActionTest"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "2013e581-498a-465b-a1c4-c9b7719325f8"
+        },
+        "14a538d6-a151-4e48-a2f3-72fc2e41e2d5": {
+            "name": "StartFireAndStopOnExit",
+            "pos": {
+                "x": 0,
+                "y": 438
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "dcc75b42-ee77-4911-b398-d6703a316cf3"
+        },
+        "e48f5384-2126-4876-a8ab-2c302f33e411": {
+            "name": "Wait",
+            "pos": {
+                "x": 280,
+                "y": 660
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Variable",
+                    "value": [
+                        "waitTime"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "dcc75b42-ee77-4911-b398-d6703a316cf3": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 551
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "1d79df37-1c1f-4aec-8887-4272b7ad3e1b",
+                "cc2f3deb-e7ae-4154-a401-9642f54d6fdf",
+                "e48f5384-2126-4876-a8ab-2c302f33e411"
+            ]
+        },
+        "1d79df37-1c1f-4aec-8887-4272b7ad3e1b": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -285,
+                "y": 661
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "waitTime"
+                },
+                {
+                    "name": "Value",
+                    "type": "Float",
+                    "value": "10"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "cc2f3deb-e7ae-4154-a401-9642f54d6fdf": {
+            "name": "IsBBValueExist",
+            "pos": {
+                "x": 0,
+                "y": 661
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ValuePath",
+                    "type": "StringHash",
+                    "value": "Gai.ConditionVariables.ActionTest.param_1"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "f83da758-f727-458d-88c4-42132e0a7b9a"
+        },
+        "f83da758-f727-458d-88c4-42132e0a7b9a": {
+            "name": "SetVariable",
+            "pos": {
+                "x": 0,
+                "y": 837
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "waitTime"
+                },
+                {
+                    "name": "Value",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "ConditionVariables",
+                        "ActionTest",
+                        "param_1"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

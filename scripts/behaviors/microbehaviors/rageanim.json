@@ -1,0 +1,181 @@
+{
+    "name": "Microbehaviors/RageAnim",
+    "root": "4ea327c2-6286-47b8-a6ee-2a5d60c5d6ef",
+    "nodes": {
+        "291acdee-dc60-45ae-8772-81a9718eb3f5": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 699
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "658d7f53-fea6-4f03-add4-89a2b21d19c2",
+                "72a87f2d-c637-414b-be32-7044d159ab82"
+            ]
+        },
+        "72a87f2d-c637-414b-be32-7044d159ab82": {
+            "name": "PlayAnimState",
+            "pos": {
+                "x": 220,
+                "y": 801
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "AGInput",
+                    "type": "StringHash",
+                    "value": "Rage"
+                },
+                {
+                    "name": "AGNode",
+                    "type": "StringHash",
+                    "value": "Rage_StateMachine_CODE"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "af298a63-ec58-4ddf-8490-1d2a80e147a3": {
+            "name": "SetAnimStateOnExit",
+            "pos": {
+                "x": 0,
+                "y": 446
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "AGInput",
+                    "type": "StringHash",
+                    "value": "None"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "e82f50d1-9baf-4257-a2f5-dcc50dfa97b8"
+        },
+        "b1e941f8-e987-400d-bb95-e383e0a5a257": {
+            "name": "ResetCurrentMicrobehaviorOnExit",
+            "pos": {
+                "x": 0,
+                "y": 209
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "46f6bb08-e7e0-4572-a4dc-17adbd319218"
+        },
+        "46f6bb08-e7e0-4572-a4dc-17adbd319218": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 295
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "RageAnim"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "af298a63-ec58-4ddf-8490-1d2a80e147a3"
+        },
+        "658d7f53-fea6-4f03-add4-89a2b21d19c2": {
+            "name": "ExactBodyRotateTo",
+            "pos": {
+                "x": -200,
+                "y": 807
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Target",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "DegreesPerSecond",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Microbehaviors",
+                        "Params",
+                        "rotation_speed"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "e82f50d1-9baf-4257-a2f5-dcc50dfa97b8": {
+            "name": "ScriptEventGate",
+            "pos": {
+                "x": 0,
+                "y": 555
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EnterEvent",
+                    "type": "StringHash",
+                    "value": "RageBegin"
+                },
+                {
+                    "name": "ExitEvent",
+                    "type": "StringHash",
+                    "value": "RageEnd"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "291acdee-dc60-45ae-8772-81a9718eb3f5"
+        },
+        "4ea327c2-6286-47b8-a6ee-2a5d60c5d6ef": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 96
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Rage"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "b1e941f8-e987-400d-bb95-e383e0a5a257"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

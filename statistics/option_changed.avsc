@@ -1,0 +1,67 @@
+{
+    "name": "option_changed",
+    "doc": "Origin: ui. Emitter: client. Indicates when option was changed on the client",
+    "type": "record",
+    "fields": [
+        {
+            "name": "option_id",
+            "type": "string",
+            "default": "-1",
+            "doc": "explicit name of changed option"
+        },
+        {
+            "name": "prev_status",
+            "type": "string",
+            "default": "-1",
+            "doc": "old value of changed option"
+        },
+        {
+            "name": "name",
+            "type": "string",
+            "default": "-1",
+            "doc": "unique name of the event"
+        },
+        {
+            "name": "pid",
+            "type": "long",
+            "default": -1,
+            "doc": "namespace-unique identifier of a player"
+        },
+        {
+            "name": "option_type",
+            "type": "int",
+            "default": -1,
+            "doc": "a type of an option: 1-key bind, 2-generic, 3-mute, 4-unmute"
+        },
+        {
+            "name": "current_status",
+            "type": "string",
+            "default": "-1",
+            "doc": "newly assigned value"
+        },
+        {
+            "name": "ts",
+            "type": "string",
+            "default": "-1",
+            "doc": "ISO8601 UTC timestamp of the event invocation"
+        },
+        {
+            "name": "gid",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace-unique identifier of the match"
+        },
+        {
+            "name": "sid",
+            "type": "string",
+            "default": "-1",
+            "doc": "global-unique identifier of the player's login session (time between login and logout)"
+        },
+        {
+            "name": "ns",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace of the server's deployment (realm)"
+        }
+    ]
+}

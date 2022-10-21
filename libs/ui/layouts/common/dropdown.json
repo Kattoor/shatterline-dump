@@ -1,0 +1,11 @@
+{
+    "script": "scripts/ui/common/dropdown.lua",
+    "view_path": "Dropdown.html",
+    "children":
+    [
+        {"name": "wrapper", "type": "Component", "view_path": "wrapper"},
+        {"name": "selected", "type": "Button", "view_path": "wrapper.selected"},
+        {"name": "list_box", "type": "ListBox", "view_path": "wrapper.listBox"},
+        {"name": "container", "type": "Component", "view_path": "wrapper.listBox.container"}
+    ]
+}

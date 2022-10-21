@@ -1,0 +1,23 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "9d3d9509ec0c4c3ebae0488f19b83f3d",
+    "Name": "Game01EditorTools",
+    "DisplayName": "Game01EditorTools",
+    "Version": "0.1.0",
+    "Summary": "Additional tools for editor",
+    "Tags": [ "Untagged" ],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Name": "Editor",
+            "Type": "EditorModule"
+        }
+    ],
+    "Dependencies": [
+        {
+            "Uuid": "2ebd4481cbf142b89286f28b4c29ace3",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01Interfaces"
+        }
+    ]
+}

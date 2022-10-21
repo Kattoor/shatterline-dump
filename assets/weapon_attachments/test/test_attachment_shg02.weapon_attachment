@@ -1,0 +1,79 @@
+{
+    "settings":
+    {
+        "impulse_override":
+        {
+            "distance": 12.12,
+            "hit_impulse": 700.7
+        },
+
+        "sprint_to_shoot_time_override": 0.8,
+        
+        "applied_hit_effect_strength_override": 1.0,
+        "received_hit_effect_strength_override": 0.7,
+
+        "recoil_angle_multiplier": 0.1,
+        "recoil_force_multiplier": 0.2,
+        "recoil_decay_time_multiplier": 0.3,
+        "recoil_decay_delay_multiplier": 0.4,
+        "recoil_max_vertical_angle_multiplier": 0.5,
+        "recoil_camera_shake_power_override": 0.6,
+    
+        "pellets_bonus_damage_distribution_override":
+        {
+            "points":
+            [
+                { "distance": 2.2, "damage": 7.7 }
+            ]
+        },
+        "pellets_bonus_damage_head_multiplier": 3.3,
+        "pellets_bonus_head_min_damage_multiplier": 1.1,
+        "pellets_bonus_head_distance_multiplier": 5.5,
+
+        "spread_pellets_distribution_override":
+        {
+            "pellets_distribution":
+            [
+                {
+                   "num": 1,
+                   "force":
+                   {
+                      "min": 0.00,
+                      "max": 0.01
+                   },
+                   "angle":
+                   {
+                      "min": 0.00,
+                      "max": 0.01
+                   }
+                },
+                {
+                   "num": 2,
+                   "force":
+                   {
+                      "min": 0.00,
+                      "max": 0.01
+                   },
+                   "angle":
+                   {
+                      "min": 0.00,
+                      "max": 0.01
+                   }
+                },
+                {
+                   "num": 3,
+                   "force":
+                   {
+                      "min": 0.00,
+                      "max": 0.01
+                   },
+                   "angle":
+                   {
+                      "min": 0.00,
+                      "max": 0.01
+                   }
+                }
+            ]
+        }
+    }
+}

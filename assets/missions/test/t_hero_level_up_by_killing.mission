@@ -1,0 +1,202 @@
+{
+    "metagame_info": {
+        "name_token": "@mission1",
+        "mission": "t_hero_level_up_by_killing",
+        "game_type": "pvp",
+    "voice_chat_mode": "party_only",
+        "min_players_count": 1,
+        "time_to_join_sec": 240
+    },
+    "session_info": {
+        "level": "test_levels/movement/t_movement",
+        "game_mode": "test_tdm",
+        "mission_modifiers": [
+            "test_markup_trigger"
+        ]
+    },
+    "ui_info": {
+        "background_image": "loading_pvp"
+    },
+    "reward_info": {
+        "reward_calculators": [
+          {
+            "name": "session_outcome",
+            "configs": [
+              {
+                "type": "currency",
+                "name": "soft",
+                "values": {
+                  "win": 30,
+                  "draw": 25,
+                  "loss": 20
+                }
+              },
+              {
+                "type": "xp",
+                "values": {
+                  "win": 300,
+                  "draw": 225,
+                  "loss": 175
+                }
+              },
+              {
+                "type": "season_xp",
+                "values": {
+                  "win": 10,
+                  "draw": 7,
+                  "loss": 5
+                }
+              },
+              {
+                "type": "skill",
+                "values": {
+                  "win": 1,
+                  "draw": 0,
+                  "loss": -1
+                }
+              }
+            ]
+          },
+          {
+            "name": "session_score",
+            "score": "Time",
+            "configs": [
+              {
+                "type": "season_xp",
+                "name": "",
+                "range_based": true,
+                "cumulative": true,
+                "values": {
+                  "60": 1,
+                  "120": 1,
+                  "180": 1,
+                  "240": 1,
+                  "300": 1,
+                  "360": 1,
+                  "420": 1,
+                  "480": 1,
+                  "540": 1,
+                  "600": 1
+                }
+              }
+            ]
+          },
+          {
+            "name": "session_play_time",
+            "configs": [
+              {
+                "type": "currency",
+                "name": "soft",
+                "values": {
+                  "reward": 0,
+                  "max_reward": 1
+                }
+              },
+              {
+                "type": "xp",
+                "values": {
+                  "reward": 0.33,
+                  "max_reward": 200
+                }
+              }
+            ]
+          },
+          {
+            "name": "session_score",
+            "score": "Kill",
+            "configs": [
+              {
+                "type": "currency",
+                "name": "soft",
+                "values": {
+                  "reward": 0,
+                  "max_reward": 1
+                }
+              },
+              {
+                "type": "xp",
+                "values": {
+                  "reward": 5,
+                  "max_reward": 200
+                }
+              }
+            ]
+          }
+        ],
+        "weapon_score": [
+          {
+            "event": {
+              "event_id": "Kill",
+              "target_player_preset_is_not": []
+            },
+            "score": 300
+          },
+          {
+            "event": {
+              "event_id": "Kill",
+              "target_ai_archetype_is_not": []
+            },
+            "score": 300
+          },
+          {
+            "event": {
+              "event_id": "Headshot"
+            },
+            "score": 50
+          },
+          {
+            "event": {
+              "event_id": "WeaponTick"
+            },
+            "score": 12
+          },
+          {
+            "event": {
+              "event_id": "Assist"
+            },
+            "score": 300
+          }
+        ],
+        "hero_score": [
+          {
+            "event": {
+              "event_id": "Kill",
+              "target_player_preset_is_not": []
+            },
+            "score": 1500
+          },
+          {
+            "event": {
+              "event_id": "Kill",
+              "target_ai_archetype_is_not": []
+            },
+            "score": 150
+          },
+          {
+            "event": {
+              "event_id": "Assist"
+            },
+            "score": 100
+          },
+          {
+            "event": {
+              "event_id": "Heal",
+              "target_team": "Same"
+            },
+            "score": 5
+          },
+          {
+            "event": {
+              "event_id": "Resurrect"
+            },
+            "score": 150
+          },
+          {
+            "event": {
+              "event_id": "WeaponTick"
+            },
+            "score": 15
+          }
+        ]
+      }
+}

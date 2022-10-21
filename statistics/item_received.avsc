@@ -1,0 +1,61 @@
+{
+    "name": "item_received",
+    "doc": "Origin:. Emitter: backend. Indicates when player receives an item from any source",
+    "type": "record",
+    "fields": [
+        {
+            "name": "gained_item",
+            "type": "string",
+            "default": "-1",
+            "doc": "unique service name of an item"
+        },
+        {
+            "name": "name",
+            "type": "string",
+            "default": "-1",
+            "doc": "unique name of the event"
+        },
+        {
+            "name": "pid",
+            "type": "long",
+            "default": -1,
+            "doc": "namespace-unique identifier of a player"
+        },
+        {
+            "name": "ts",
+            "type": "string",
+            "default": "-1",
+            "doc": "ISO8601 UTC timestamp of the event invocation"
+        },
+        {
+            "name": "sid",
+            "type": "string",
+            "default": "-1",
+            "doc": "global-unique identifier of the player's login session (time between login and logout)"
+        },
+        {
+            "name": "ns",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace of the server's deployment (realm)"
+        },
+        {
+            "name": "item_source",
+            "type": "string",
+            "default": "-1",
+            "doc": "an exact text description of item's origin: level_up_reward;level_cap_reward;purchase;giveaway"
+        },        
+        {
+            "name": "reward_id",
+            "type": "string",
+            "default": "-1",
+            "doc": "globally-unique identifier of the gained reward"
+        },
+        {
+            "name": "gid",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace-unique identifier of the match"
+        }
+    ]
+}

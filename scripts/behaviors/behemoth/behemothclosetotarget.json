@@ -1,0 +1,213 @@
+{
+    "name": "Behemoth/BehemothCloseToTarget",
+    "root": "00a9887e-0657-4572-81b5-0140bba59b5d",
+    "nodes": {
+        "4717840a-1f45-4bbc-b23d-ee779fc92cff": {
+            "name": "Succeeder",
+            "pos": {
+                "x": -160,
+                "y": 829
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "3ec9ae4f-9f04-438f-8f9c-6da38b2643fc"
+        },
+        "74684836-1dd1-47db-9b71-05bf0fb6444a": {
+            "name": "Selector",
+            "pos": {
+                "x": 0,
+                "y": 509
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "6f4e03d1-9c02-4603-b2ac-cec3ce885877",
+                "f613907d-3b2f-41e8-b4cd-2614943a521d"
+            ]
+        },
+        "c05f61ac-2cbf-4d11-9032-e8ad5ecca04d": {
+            "name": "Success",
+            "pos": {
+                "x": -160,
+                "y": 1074
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "e636871f-983d-44c9-baa5-312c96e97c54": {
+            "name": "ScriptEventGate",
+            "pos": {
+                "x": 0,
+                "y": 353
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EnterEvent",
+                    "type": "StringHash",
+                    "value": "CloseToTarget_Enter"
+                },
+                {
+                    "name": "ExitEvent",
+                    "type": "StringHash",
+                    "value": "CloseToTarget_Exit"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "74684836-1dd1-47db-9b71-05bf0fb6444a"
+        },
+        "3ec9ae4f-9f04-438f-8f9c-6da38b2643fc": {
+            "name": "CallSubtree",
+            "pos": {
+                "x": -160,
+                "y": 950
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Label",
+                    "type": "StringHash",
+                    "value": "BehemothCloseAOE"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "c05f61ac-2cbf-4d11-9032-e8ad5ecca04d"
+        },
+        "6f4e03d1-9c02-4603-b2ac-cec3ce885877": {
+            "name": "AngleToTarget",
+            "pos": {
+                "x": -160,
+                "y": 613
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Target",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "MaxAngle",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "max_angle_for_close_melee"
+                    ]
+                },
+                {
+                    "name": "UseBodyYaw",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "4717840a-1f45-4bbc-b23d-ee779fc92cff"
+        },
+        "f613907d-3b2f-41e8-b4cd-2614943a521d": {
+            "name": "SetBehaviorCondition",
+            "pos": {
+                "x": 195,
+                "y": 613
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "BehemothJump"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "00a9887e-0657-4572-81b5-0140bba59b5d": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 89
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "BehemothCloseToTarget"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "a6a049cc-1ebc-4cfb-aef6-396ff89ec07c"
+        },
+        "a6a049cc-1ebc-4cfb-aef6-396ff89ec07c": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 219
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "BehemothCloseToTarget"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "e636871f-983d-44c9-baa5-312c96e97c54"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

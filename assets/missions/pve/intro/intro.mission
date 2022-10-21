@@ -1,0 +1,50 @@
+{
+  "metagame_info": {
+    "name_token": "@intro_name",
+    "mission": "intro",
+    "game_type": "pve",
+    "min_players_count": 1,
+    "time_to_join_sec": 100,
+    "weapon_progression_enable": false,
+    "hero_progression_enable": false,
+    "task_progression_enable": false,
+    "text_chat_enable": false,
+    "voice_chat_mode": "disabled"
+  },
+  "session_info": {
+    "level": "pve/intro",
+    "mission_modifiers": [],
+    "game_mode": "pve_intro",
+    "ingame_reequip_enable": true,
+    "allow_customization": false,
+    "pre_game_enable": true,
+    "post_session_enable": false,
+    "result_scene": "slices/result_view/empty_hero_selection.dynamicslice"
+  },
+  "game_vo_info": {
+    "game_vo": "intro_commentary.game_vo",
+    "ignore_default_vo": true
+  },
+  "ui_info": {
+    "background_image": "loading_intro",
+    "sound_event": "lobby_intro",
+    "sound_stop_event": "lobby_intro_stop"
+  },
+  "reward_info": {
+    "reward_calculators": [
+      {
+        "name": "pve_session_outcome",
+        "configs": [
+          {
+            "type": "xp",
+            "values": {
+              "win": 1,
+              "draw": 0,
+              "loss": 0
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,105 @@
+{
+    "context": "Wound",
+    "profiles":
+    [
+        {
+            "profile":"Gunman",
+            "hits":
+            [
+                {
+                    "hit_pattern": { "hit_part_is": ["Torso"], "hit_side_is": ["Back"] },
+                    "animations": ["wounded5"]
+                },
+                {
+                    "animations": ["wounded1", "wounded2", "wounded3", "wounded4", "wounded5"]
+                }
+            ]
+        },
+        {
+            "profile":"Sniper",
+            "hits":
+            [
+                {
+                    "hit_pattern": { "hit_part_is": ["Torso"], "hit_side_is": ["Back"] },
+                    "animations": ["wounded5"]
+                },
+                {
+                    "animations": ["wounded1", "wounded2", "wounded3", "wounded4"]
+                }
+            ]
+        },
+        {
+            "profile":"Glasshead",
+            "hits":
+            [
+                {
+                    "hit_pattern": {"hit_side_is": ["Left"] },
+                    "animations": ["wounded1"]
+                },
+                {
+                    "hit_pattern": {"hit_side_is": ["Right"] },
+                    "animations": ["wounded2"]
+                },
+                {
+                    "hit_pattern": {"hit_side_is": ["Front"] },
+                    "animations": ["wounded1", "wounded2", "wounded3"]
+                },
+                {
+                    "hit_pattern": {"hit_side_is": ["Back"] },
+                    "animations": ["wounded4"]
+                },
+                {
+                    "animations": ["wounded3"]
+                }
+            ]
+        },
+        {
+            "profile":"Behemoth",
+            "hits":
+            [
+                {
+                    "hit_pattern": { "custom_animation_is": ["weakpoint"] },
+                    "animations": ["wounded1"]
+                }
+            ]
+        },
+        {
+            "profile":"Supporter",
+            "hits":
+            [
+                {
+                    "hit_pattern": { "hit_part_is": ["Torso"], "hit_side_is": ["Back"] },
+                    "animations": ["wounded4"]
+                },
+                {
+                    "hit_pattern": { "hit_part_is": ["Leg"] },
+                    "animations": ["wounded4"]
+                },
+                {
+                    "hit_pattern": { "hit_part_is": ["Arm"] },
+                    "animations": ["wounded1", "wounded2"]
+                },
+                {
+                    "animations": ["wounded1", "wounded2", "wounded3"]
+                },
+                {
+                    "hit_pattern": { "custom_animation_is": ["weakpoint"] },
+                    "animations": ["wounded1", "wounded2", "wounded3"]
+                }
+            ]
+        },
+        {
+            "profile":"Minotaur",
+            "hits":
+            [
+                {
+                    "hit_pattern": { "hit_part_is": ["Torso"], "hit_side_is": ["Back"] },
+                    "animations": ["wounded1"]
+                },
+                {
+                    "animations": ["wounded1", "wounded2", "wounded3"]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "slow_bleed_to_50",
+    "remove_on_death": true,
+    "effects": [
+        { 
+            "bleed": 
+            { 
+                "threshold": 75,
+                "hp_decrease_per_time_interval": 4,
+                "time_interval": 1.5,
+                "screen_effect_intensity_param": "Game01Blood_MainBloodSplatAmount",
+                "screen_effect_intensity_value": 1.0,
+                "screen_effect_fade_out_time": 1
+            }
+        }
+    ]
+}

@@ -1,0 +1,411 @@
+{
+    "name": "Colossus/LaserWallPatternAttack",
+    "root": "ae2f3770-032e-4bd2-a0c3-c44020039d38",
+    "nodes": {
+        "bf2b6789-2371-495a-9dfd-a759b32ad0b9": {
+            "name": "SetMovementPaceAndRestoreOnExit",
+            "pos": {
+                "x": 0,
+                "y": 224
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "PaceType",
+                    "type": "StringHash",
+                    "value": "Sprint"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "c32091cc-f366-4d0a-ade2-bd601e984af9"
+        },
+        "09b078da-7db8-48b0-986e-4b26e22d4ef0": {
+            "name": "ExactBodyRotateTo",
+            "pos": {
+                "x": -265,
+                "y": 1767
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Target",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Colossus",
+                        "BattleAreaCenterPos"
+                    ]
+                },
+                {
+                    "name": "DegreesPerSecond",
+                    "type": "Float",
+                    "value": "180"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "01135fc1-4beb-4112-95f8-71d1962718c0": {
+            "name": "IsBBValueExist",
+            "pos": {
+                "x": -155,
+                "y": 1362
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ValuePath",
+                    "type": "StringHash",
+                    "value": "Gai.Colossus.BattleAreaCenterPos"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "d4490e46-bd0f-4fb8-a14a-6383d10a1f5a"
+        },
+        "9d166c9e-8c80-4aab-8229-05e9e21661d1": {
+            "name": "SendEventToScript",
+            "pos": {
+                "x": 235,
+                "y": 1364
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EventName",
+                    "type": "StringHash",
+                    "value": "InPositionForLaserWallPatternAttack"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "6e0fd28d-8040-4d2b-a20c-fc7aca798631": {
+            "name": "SetTracePosAndRestoreOnExit",
+            "pos": {
+                "x": 185,
+                "y": 676
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Position",
+                    "type": "Variable",
+                    "value": [
+                        "MovePos"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "f30030ca-ec1a-43ac-b3eb-25deea5c13ea"
+        },
+        "be70376d-7552-4610-a2bf-323a927f9b4b": {
+            "name": "PointInHorizontalRange",
+            "pos": {
+                "x": 95,
+                "y": 1041
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Source",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Point",
+                    "type": "Variable",
+                    "value": [
+                        "MovePos"
+                    ]
+                },
+                {
+                    "name": "Min",
+                    "type": "Integer",
+                    "value": "0"
+                },
+                {
+                    "name": "Max",
+                    "type": "Integer",
+                    "value": "1"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "2823e64b-9630-470b-abe3-4172af0a865e"
+        },
+        "2823e64b-9630-470b-abe3-4172af0a865e": {
+            "name": "Sequence",
+            "pos": {
+                "x": 95,
+                "y": 1265
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "01135fc1-4beb-4112-95f8-71d1962718c0",
+                "9d166c9e-8c80-4aab-8229-05e9e21661d1"
+            ]
+        },
+        "d4490e46-bd0f-4fb8-a14a-6383d10a1f5a": {
+            "name": "Succeeder",
+            "pos": {
+                "x": -155,
+                "y": 1543
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "63787af8-4e09-4d5e-bc03-77b0492672f3"
+        },
+        "8d120cf0-2750-4d36-b86d-6ee76a2ce1a6": {
+            "name": "Selector",
+            "pos": {
+                "x": 185,
+                "y": 935
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "be70376d-7552-4610-a2bf-323a927f9b4b",
+                "b897f112-eaa4-4d56-babc-b5c953efd211"
+            ]
+        },
+        "b897f112-eaa4-4d56-babc-b5c953efd211": {
+            "name": "ApproachTo",
+            "pos": {
+                "x": 300,
+                "y": 1041
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "MovePos"
+                    ]
+                },
+                {
+                    "name": "EndDistance",
+                    "type": "Float",
+                    "value": "1"
+                },
+                {
+                    "name": "UpdateDestinationPoint",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "c32091cc-f366-4d0a-ade2-bd601e984af9": {
+            "name": "IsBBValueExist",
+            "pos": {
+                "x": 0,
+                "y": 345
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ValuePath",
+                    "type": "StringHash",
+                    "value": "Gai.Colossus.LaserWallPatternAttackBossPosition"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "ae82e779-e3be-4c19-a193-80368a18aded"
+        },
+        "f30030ca-ec1a-43ac-b3eb-25deea5c13ea": {
+            "name": "SetCustomTargetPosAndRestoreOnExit",
+            "pos": {
+                "x": 185,
+                "y": 804
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Position",
+                    "type": "Variable",
+                    "value": [
+                        "MovePos"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "8d120cf0-2750-4d36-b86d-6ee76a2ce1a6"
+        },
+        "ae2f3770-032e-4bd2-a0c3-c44020039d38": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 102
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "LaserWallPatternAttack"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "bf2b6789-2371-495a-9dfd-a759b32ad0b9"
+        },
+        "ae82e779-e3be-4c19-a193-80368a18aded": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 528
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "bacfb6c2-49f8-4272-9863-252596d99599",
+                "6e0fd28d-8040-4d2b-a20c-fc7aca798631"
+            ]
+        },
+        "63787af8-4e09-4d5e-bc03-77b0492672f3": {
+            "name": "ParallelUntilAnyComplete",
+            "pos": {
+                "x": -155,
+                "y": 1640
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "09b078da-7db8-48b0-986e-4b26e22d4ef0",
+                "e5a732b9-8346-4fa6-93d0-e791a3b12e34"
+            ]
+        },
+        "e5a732b9-8346-4fa6-93d0-e791a3b12e34": {
+            "name": "Wait",
+            "pos": {
+                "x": 20,
+                "y": 1768
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Float",
+                    "value": "2"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "bacfb6c2-49f8-4272-9863-252596d99599": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -190,
+                "y": 677
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "MovePos"
+                },
+                {
+                    "name": "Value",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Colossus",
+                        "LaserWallPatternAttackBossPosition"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

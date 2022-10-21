@@ -1,0 +1,31 @@
+{
+    "script": "scripts/ui/test_controls.lua",
+    "view_path": "Component.html",
+    "children": [
+        { "name": "test_panel", "type": "Panel", "x":0, "y":0, "width":900, "height":1000},
+        
+        { "name": "test_label", "type": "Label",  "x":100, "y":100, "width":300, "text": "@init"},
+        { "name": "test_action_label", "type": "ActionLabel", "view_path":"Label.html", "x":100, "y":150, "width":300, "text": "@test", "gamepad_only": true},
+        { "name": "test_editbox", "type": "EditBox",  "x":100, "y":200, "text": "@init" },
+        { "name": "test_editbox2", "type": "EditBox",  "x":100, "y":250, "text": "@init" },
+        
+        { "name": "test_button", "type": "Button",  "x":100, "y":300, "text": "@init" },
+        { "name": "test_button_disabled", "type": "Button",  "x":250, "y":300, "text": "@disabled" },
+        { "name": "test_button_invisible", "type": "Button", "x":400, "y":300, "text": "@invisible" },
+        
+        { "name": "test_checkbox", "type": "CheckBox", "x":100, "y":400 },
+        
+        { "name": "test_progressbar", "type": "ProgressBar","x":100, "y":500},
+        { "name": "test_slider", "type": "Slider", "x":100, "y":600},
+        { "name": "test_scroll", "type": "ScrollBar", "x":100, "y":700},
+        
+        { "name": "test_listbox", "type": "ListBox", "x":600, "y":100},
+        { "name": "test_combobox", "type": "ComboBox", "x":600, "y":400},
+        
+        { "name": "test_video", "type": "Video", "video_path":"videos/celebration/gacha_box.bk2", "x":940, "y":10, "width":640, "height":480, "loop":true},
+
+        { "name": "test_image", "type": "Image","x":100, "y":750, "width":128, "height":128, "image": "test_hero_7"},
+        { "name": "test_atlas_image", "type": "Image","x":300, "y":750, "width":128, "height":128, "image": "hero_malva"},
+        { "name": "test_animated_image", "type": "AnimatedImage", "x":600, "y":650, "width":256, "height":256, "sprite":"libs/ui/spritesheets/instant_awards/test/test_reward_1.dds", "loop":"linear", "autoplay":true}
+    ]
+}

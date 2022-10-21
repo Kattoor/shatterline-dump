@@ -1,0 +1,35 @@
+{
+  "name": "test_task3",
+  "type": "daily",
+  "active": true,
+  "image": "test_icon",
+  "rarity": "common",
+  "display_name": { "localization_key": "@test_task3" },
+  "description": { "localization_key": "@test_task_description" },
+  "conditions": [
+    {
+      "name": "test_task3",
+      "event_description": { "localization_key": "@test_task_1_event_description" },
+      "event": { "event_id": "Headshot", "actor_is_me": true },
+      "progress": 10
+    },
+    {
+      "name": "test_task5",
+      "event_description": { "localization_key": "@test_task_2_event_description" },
+      "event": { "event_id": "Kill", "actor_is_me": true },
+      "progress": 5
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 1000
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 3
+    }
+  ]
+}

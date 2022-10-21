@@ -1,0 +1,144 @@
+{
+    "markers": [
+        {
+            "name": "pve_tutorial_portal",
+            "elements": [
+                { 
+                    "way_point":
+                    {
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        
+                        "image_alias": "marker_way_point_icon",
+                        "info_text": "@plc_tutorial_portal",
+                        "image_color": "#E9F0F3",
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_hexagon_icon_wave_npa",
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.0,
+                        "race_icon_track_scale": 0.6,
+                        "offset": 1.5
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_way_point_radar_icon", "snapped": true } }
+            ]
+        },
+        {
+            "name": "pve_tutorial_portal_blue",
+            "elements": [
+                { 
+                    "way_point":
+                    {
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        
+                        "image_alias": "marker_way_point_icon",
+                        "info_text": "@plc_tutorial_portal",
+                        "image_color": "#143FA2",
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_hexagon_icon_wave_npa",
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.0,
+                        "race_icon_track_scale": 0.6,
+                        "offset": 1.5
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_way_point_radar_icon", "snapped": true } }
+            ]
+        },
+        {
+            "name": "pve_tutorial_safe_area",
+            "elements": [
+                { 
+                    "way_point":
+                    {
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        
+                        "image_alias": "marker_way_point_icon",
+                        "info_text": "@plc_tutorial_safe_area",
+                        "image_color": "#E9F0F3",
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_hexagon_icon_wave_npa",
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.0,
+                        "race_icon_track_scale": 0.6,
+                        "offset": 0
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_way_point_radar_icon", "snapped": true } }
+            ]
+        },
+        {
+            "name": "pve_tutorial_voice_ball",
+            "elements": [
+                { 
+                    "way_point":
+                    {
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        
+                        "image_alias": "marker_way_point_icon",
+                        "info_text": "@plc_tutorial_ball",
+                        "image_color": "#E9F0F3",
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_hexagon_icon_wave_npa",
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.0,
+                        "race_icon_track_scale": 0.6,
+                        "offset": 1.5
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_way_point_radar_icon", "snapped": true } }
+            ]
+        },
+        {
+            "name": "pve_tutorial_dead_teammate",
+            "elements": [
+                { 
+                    "way_point":
+                    {
+                        "ui_component_file": "hud/markers/resurrection_icon.json",
+                        
+                        "image_alias": "marker_res_token_icon",
+                        "image_color": "#FFFFFF",
+
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_rhombus_icon_mask_npa",
+                        "radial_progress_bg_color": "#E9F0F3",
+                        "radial_progress_color": "#d00000",
+
+                        "race_icon_max_scale": 1.25,
+                        "race_icon_min_scale": 1,
+                        "race_icon_track_scale": 0.9,
+                        "offset": 0.7
+                    }
+                },
+                { "radar_icon": { "icon_alias": "dead_teammate_radar_icon", "snapped": true } }
+            ]
+        },
+        {
+            "name": "pve_tutorial_alive_teammate",
+            "elements": [
+                { 
+                    "way_point":
+                    {
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        
+                        "image_alias": "marker_way_point_icon",
+                        "info_text": "@plc_tutorial_alive_teammate",
+                        "image_color": "#E9F0F3",
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_hexagon_icon_wave_npa",
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.0,
+                        "race_icon_track_scale": 0.6,
+                        "offset": 1.5
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_way_point_radar_icon", "snapped": true } }
+            ]
+        }
+    ]
+}

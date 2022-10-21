@@ -1,0 +1,161 @@
+{
+  "metagame_info": {
+    "name_token": "@tdm_label",
+    "mission": "t_tdm_highpick_lastkill",
+    "game_type": "pvp",
+    "voice_chat_mode": "party_only",
+    "min_players_count": 6,
+    "time_to_join_sec": 120
+  },
+  "session_info": {
+    "level": "pvp/ptb_highpick",
+    "level_params": [
+      "tdm_active"
+    ],
+    "game_mode": "test_tdm_lastkill",
+    "mission_modifiers": [
+      "instant_spawn_round_events",
+      "tdm_music_modifier",
+      "ult_feedback_in_radius"
+    ]
+  },
+  "reward_info": {
+    "reward_calculators": [
+      {
+        "name": "session_outcome",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "win": 30,
+              "draw": 25,
+              "loss": 20
+            }
+          },
+          {
+            "type": "xp",
+            "values": {
+              "win": 800,
+              "draw": 700,
+              "loss": 600
+            }
+          },
+          {
+            "type": "skill",
+            "values": {
+              "win": 1,
+              "draw": 0,
+              "loss": -1
+            }
+          }
+        ]
+      },
+      {
+        "name": "session_play_time",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "reward": 0,
+              "max_reward": 100
+            }
+          },
+          {
+            "type": "xp",
+            "values": {
+              "reward": 1,
+              "max_reward": 200
+            }
+          }
+        ]
+      },
+      {
+        "name": "session_score",
+        "score": "Kill",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "reward": 0,
+              "max_reward": 100
+            }
+          },
+          {
+            "type": "xp",
+            "values": {
+              "reward": 10,
+              "max_reward": 1000
+            }
+          }
+        ]
+      }
+    ],
+    "weapon_score": [
+      {
+        "event": {
+          "event_id": "Kill"
+        },
+        "score": 300
+      },
+      {
+        "event": {
+          "event_id": "Headshot"
+        },
+        "score": 50
+      },
+      {
+        "event": {
+          "event_id": "Assist"
+        },
+        "score": 300
+      },
+      {
+        "event": {
+          "event_id": "WeaponTick"
+        },
+        "score": 12
+      }
+    ],
+    "hero_score": [
+      {
+        "event": {
+          "event_id": "Kill"
+        },
+        "score": 150
+      },
+      {
+        "event": {
+          "event_id": "Assist"
+        },
+        "score": 100
+      },
+      {
+        "event": {
+          "event_id": "Heal",
+          "target_team": "Same"
+        },
+        "score": 5
+      },
+      {
+        "event": {
+          "event_id": "Resurrect"
+        },
+        "score": 150
+      },
+      {
+        "event": {
+          "event_id": "WeaponTick"
+        },
+        "score": 15
+      }
+    ]
+  },
+  "ui_info": {
+    "background_image": "level_loading",
+    "sound_event": "pvp_pregame",
+    "sound_stop_event": "pvp_pregame_stop"
+  }
+}

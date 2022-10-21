@@ -1,0 +1,33 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "1dee7b2cd245485990ffe85747d64ab8",
+    "Name": "ImageRequestor",
+    "DisplayName": "ImageRequestor",
+    "Version": "0.1.0",
+    "Summary": "Download images over HTTP protocol. Support local cache.",
+    "Tags": ["Untagged"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        }
+    ],
+    "Dependencies":
+    [
+        {
+            "Uuid": "28479e255bde466e91fc34eec808d9c7",
+            "VersionConstraints": [ "~>1.0" ],
+            "_comment": "HttpRequestor"
+        },
+        {
+            "Uuid": "d96ab03f53d14c9e83f9b4528c8576d7",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "SaveData"
+        },
+        {
+            "Uuid": "93ccb44a96b142f7942a3fb6b9ca36e1",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "LocalUser"
+        }
+    ]
+}

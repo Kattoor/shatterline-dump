@@ -1,0 +1,57 @@
+{
+       "destroy_on_act": false,
+       "time_to_action": 10.0,
+       "selection":
+       {
+          "quick_selection_duration": 0.0,
+          "quick_deselection_duration": 0.0,
+          "quick_deselect": true,
+          "deselection_duration": 0.0,
+          "selection_duration": 0.0
+       },
+       "time_to_throw": 0.0,
+       "act_reason": "time",
+       "projectile":
+       {
+          "speed": 60.0,
+          "offset":
+          {
+             "z": 0.0,
+             "x": 0.0,
+             "y": 0.0
+          },
+          "config_name": "axe02",
+          "slice_name": "slices/projectiles/throwables/axe02.dynamicslice",
+          "velocity_character_multiplier": 0.5,
+          "time_to_destroy": 60.0,
+          "angle": 0.5
+       },
+       "explosion_damage":
+       {
+          "points":
+          [
+              {
+                 "distance": 1.5,
+                 "damage": 300.0
+              },
+              {
+                 "distance": 1.51,
+                 "damage": 0.0
+              }
+          ]
+       },
+       "explosion_impulse":
+       {
+          "radius": 0.10,
+          "impulse": 500.0
+       },
+       "count": 1,
+       "common":
+       {
+          "item_tag": "AXE"
+       },
+       "duration_throw": 0.5,
+       "duration_prepare": 0.05,
+       "can_cook": true,
+       "can_cook_indefinitely": true
+    }

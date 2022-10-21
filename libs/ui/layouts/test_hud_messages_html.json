@@ -1,0 +1,32 @@
+{
+    "script": "scripts/ui/test_hud_messages.lua",
+    "view_path": "",
+    "hide_cursor": false,
+    "children":
+    [
+        {"name": "hud_messages", "type": "Component", "file": "hud_messages.json"},
+
+        {"name": "message_title", "type": "Label", "x": 10, "y": 10},
+        {"name": "show_message_btn", "type": "Button", "x": 10, "y": 50},
+        {"name": "hide_message_btn", "type": "Button", "x": 150, "y": 50},
+
+        {"name": "warning_title", "type": "Label", "x": 10, "y": 110},
+        {"name": "show_warning_btn", "type": "Button", "x": 10, "y": 150},
+        {"name": "hide_warning_btn", "type": "Button", "x": 150, "y": 150},
+
+        {"name": "instant_message_title", "type": "Label", "x": 10, "y": 210},
+        {"name": "show_instant_message_btn", "type": "Button", "x": 10, "y": 250},
+        {"name": "show_instant_message2_btn", "type": "Button", "x": 10, "y": 300},
+        {"name": "show_instant_message3_btn", "type": "Button", "x": 10, "y": 350},
+        {"name": "show_instant_message4_btn", "type": "Button", "x": 10, "y": 400},
+        {"name": "hide_instant_message_btn", "type": "Button", "x": 150, "y": 250},
+        {"name": "instant_progress50_btn", "type": "Button", "x": 150, "y": 300},
+        {"name": "instant_progress100_btn", "type": "Button", "x": 150, "y": 350},
+        
+        {"name": "objective_message_title", "type": "Label", "x": 10, "y": 460},
+        {"name": "set_text_btn", "type": "Button", "x": 10, "y": 500, "text": "@set_text"},
+        {"name": "change_text_btn", "type": "Button", "x": 10, "y": 550, "text": "@change_text"},
+        {"name": "show_narration_btn", "type": "Button", "x": 10, "y": 600, "text": "@show_narration"},
+        {"name": "hide_btn", "type": "Button", "x": 10, "y": 650, "text": "@hide"}
+    ]
+}

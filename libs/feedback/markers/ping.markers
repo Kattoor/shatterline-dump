@@ -1,0 +1,365 @@
+{
+    "markers": [
+        {
+            "name": "ping_goto",
+            "elements": [
+                {
+                    "generic_icon":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.05
+                        },
+                        "ui_component_file": "hud/markers/ping_icon.json",
+                        "image_alias": "marker_ping_goto",
+                        "image_color": "#FFC21C",
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_ping_icon_wave_npa",
+                        "offset": 0.0,
+                        "race_icon_track_scale": 0.85,
+                        "race_icon_min_scale": 0.9,
+                        "race_icon_max_scale": 1.3
+                    }
+                }
+            ]
+        },
+        {
+            "name": "ping_beware",
+            "elements": [
+                {
+                    "generic_icon":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.05
+                        },
+                        "ui_component_file": "hud/markers/ping_icon.json",
+                        "image_alias": "marker_ping_beware",
+                        "info_text": "@beware_explosive_object",
+                        "disable_image_color": true,
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_ping_icon_wave_npa",
+                        "offset": 0.0,
+                        "race_icon_track_scale": 0.85,
+                        "race_icon_min_scale": 0.9,
+                        "race_icon_max_scale": 1.3
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_ping_beware", "snapped": false } }
+            ]
+        },
+        {
+            "name": "ping_enemy_spot",
+            "elements": [
+                {
+                    "generic_icon":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.1
+                        },
+                        "ui_component_file": "hud/markers/ping_icon.json",
+                        "image_alias": "marker_ping_enemy",
+                        "info_text": "@attack",
+                        "disable_image_color": true,
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_ping_icon_wave_npa",
+                        "offset": 0.0,
+                        "race_icon_track_scale": 0.85,
+                        "race_icon_min_scale": 0.9,
+                        "race_icon_max_scale": 1.3
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_ping_enemy", "snapped": false } }
+            ]
+        },
+        {
+            "name": "ping_weakpoint",
+            "elements": [
+                {
+                    "generic_icon":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.05
+                        },
+                        "ui_component_file": "hud/markers/ping_icon.json",
+                        "image_alias": "marker_ping_enemy",
+                        "info_text": "@weakpoint_spotted",
+                        "disable_image_color": true,
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_ping_icon_wave_npa",
+                        "offset": 0.0,
+                        "race_icon_track_scale": 0.85,
+                        "race_icon_min_scale": 0.9,
+                        "race_icon_max_scale": 1.3
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_ping_enemy", "snapped": true } }
+            ]
+        },
+        {
+            "name": "ping_teammate_revive",
+            "elements": [
+                {
+                    "generic_icon":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.1
+                        },
+                        "ui_component_file": "hud/markers/ping_icon.json",
+                        "image_alias": "marker_ping_help",
+                        "info_text": "@teammate_revive",
+                        "disable_image_color": true,
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_ping_icon_wave_npa",
+                        "offset": 0.0,
+                        "race_icon_track_scale": 0.85,
+                        "race_icon_min_scale": 0.9,
+                        "race_icon_max_scale": 1.3
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_ping_help", "snapped": true } }
+            ]
+        },
+        {
+            "name": "ping_bomb_drone",
+            "elements": [
+                {
+                    "generic_icon":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.05
+                        },
+                        "ui_component_file": "hud/markers/ping_icon.json",
+                        "image_alias": "marker_ping_beware",
+                        "info_text": "@strafer_bomb_drone",
+                        "disable_image_color": true,
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_ping_icon_wave_npa",
+                        "offset": 0.0,
+                        "race_icon_track_scale": 0.85,
+                        "race_icon_min_scale": 0.9,
+                        "race_icon_max_scale": 1.3
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_ping_beware", "snapped": false } }
+            ]
+        },
+        {
+            "name": "ping_bomb_dog",
+            "elements": [
+                {
+                    "generic_icon":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.05
+                        },
+                        "ui_component_file": "hud/markers/ping_icon.json",
+                        "image_alias": "marker_ping_beware",
+                        "info_text": "@glasshead_bomb_dog",
+                        "disable_image_color": true,
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_ping_icon_wave_npa",
+                        "offset": 0.0,
+                        "race_icon_track_scale": 0.85,
+                        "race_icon_min_scale": 0.9,
+                        "race_icon_max_scale": 1.3
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_ping_beware", "snapped": false } }
+            ]
+        },
+        {
+            "name": "ping_highclimb",
+            "elements": [
+                {
+                    "generic_icon":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.05
+                        },
+                        "ui_component_file": "hud/markers/ping_icon.json",
+                        "image_alias": "marker_ping_highclimb",
+                        "info_text": "@passive_perk_climb_name",
+                        "disable_image_color": true,
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_ping_icon_wave_npa",
+                        "offset": 0.0,
+                        "race_icon_track_scale": 0.85,
+                        "race_icon_min_scale": 0.9,
+                        "race_icon_max_scale": 1.3
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_ping_highclimb", "snapped": false } }
+            ]
+        },
+        {
+            "name": "ping_zipline",
+            "elements": [
+                {
+                    "generic_icon":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.05
+                        },
+                        "ui_component_file": "hud/markers/ping_icon.json",
+                        "image_alias": "marker_ping_zipline",
+                        "info_text": "@plc_insideout_zip_line",
+                        "disable_image_color": true,
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_ping_icon_wave_npa",
+                        "offset": 0.0,
+                        "race_icon_track_scale": 0.85,
+                        "race_icon_min_scale": 0.9,
+                        "race_icon_max_scale": 1.3
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_ping_zipline", "snapped": false } }
+            ]
+        },
+        {
+            "name": "ping_movable_object",
+            "elements": [
+                {
+                    "generic_icon":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.05
+                        },
+                        "ui_component_file": "hud/markers/ping_icon.json",
+                        "image_alias": "marker_ping_movable_object",
+                        "info_text": "@movable_object",
+                        "disable_image_color": true,
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_ping_icon_wave_npa",
+                        "offset": 0.0,
+                        "race_icon_track_scale": 0.85,
+                        "race_icon_min_scale": 0.9,
+                        "race_icon_max_scale": 1.3
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_ping_movable_object", "snapped": false } }
+            ]
+        },
+        {
+            "name": "ping_destructible_object",
+            "elements": [
+                {
+                    "generic_icon":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.05
+                        },
+                        "ui_component_file": "hud/markers/ping_icon.json",
+                        "image_alias": "marker_ping_destructible_door",
+                        "info_text": "@destructible_object",
+                        "disable_image_color": true,
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_ping_icon_wave_npa",
+                        "offset": 0.0,
+                        "race_icon_track_scale": 0.85,
+                        "race_icon_min_scale": 0.9,
+                        "race_icon_max_scale": 1.3
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_ping_destructible_door", "snapped": false } }
+            ]
+        },
+        {
+            "name": "ping_pickup_object",
+            "elements": [
+                {
+                    "generic_icon":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.05
+                        },
+                        "ui_component_file": "hud/markers/ping_icon.json",
+                        "image_alias": "marker_ping_pickup_object",
+                        "info_text": "@pickup_object",
+                        "disable_image_color": true,
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_ping_icon_wave_npa",
+                        "offset": 0.0,
+                        "race_icon_track_scale": 0.85,
+                        "race_icon_min_scale": 0.9,
+                        "race_icon_max_scale": 1.3
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_ping_pickup_object", "snapped": true } }
+            ]
+        },
+        {
+            "name": "ping_restricted_object",
+            "elements": [
+                {
+                    "generic_icon":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.05
+                        },
+                        "ui_component_file": "hud/markers/ping_icon.json",
+                        "image_alias": "marker_ping_restricted_object",
+                        "disable_image_color": true,
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_ping_icon_wave_npa",
+                        "offset": 0.0,
+                        "race_icon_track_scale": 0.85,
+                        "race_icon_min_scale": 0.9,
+                        "race_icon_max_scale": 1.3
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_ping_restricted_object", "snapped": false } }
+            ]
+        },
+        {
+            "name": "ping_spotted_foe",
+            "elements": [
+                {
+                    "generic_icon":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.0
+                        },
+                        "ui_component_file": "hud/markers/ping_icon.json",
+                        "image_alias": "marker_ping_enemy",
+                        "info_text": "@enemy_spotted",
+                        "disable_image_color": true,
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_ping_icon_wave_npa",
+                        "offset": 0.0,
+                        "race_icon_track_scale": 0.85,
+                        "race_icon_min_scale": 0.9,
+                        "race_icon_max_scale": 1.3
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_ping_enemy", "snapped": true } }
+            ]
+        }
+    ]
+}

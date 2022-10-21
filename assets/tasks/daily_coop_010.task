@@ -1,0 +1,40 @@
+{
+  "name": "daily_coop_010",
+  "type": "daily",
+  "tags": [
+    "daily_coop"
+  ],
+  "image": "weekly_temp_icon",
+  "rarity": "uncommon",
+  "display_name": { "localization_key": "@daily_coop_010_name" },
+  "description": { "localization_key": "@daily_coop_010_description" },
+  "conditions": [
+    {
+      "name": "daily_coop_010",
+      "event_description": { "localization_key": "@daily_coop_010_event_description" },
+      "event": { "event_id": "Kill", "actor_is_me": true, "target_ai_archetype_is": ["glasshead", "glasshead_grade2", "glasshead_grade3", "glasshead_grade4",
+                            "glasshead_basic_melee_normal", "glasshead_basic_melee_grade2", "glasshead_basic_melee_grade3", "glasshead_basic_melee_grade4",
+                            "glasshead_lava", "glasshead_lava_grade2","glasshead_lava_grade3",
+                            "glasshead_splinter_normal", "glasshead_splinter_grade2", "glasshead_splinter_grade3",
+                            "glasshead_basic_ranged_normal", "glasshead_basic_ranged_grade2", "glasshead_basic_ranged_grade3", "glasshead_basic_ranged_grade4",
+                            "adamant", "adamant_grade2", "adamant_grade", "Shardskin", "glasshead_turret", "glasshead_fairfly_turret", "chaser",
+                            "GlassheadBombDog", "glasshead_nest_supporter", "glasshead_fairfly_turret", 
+                            "chaserModifier", "HordeStiltMelee", "horde_fairfly_turret_boss", "horde_parasite_turret", "horde_glasshead_runner", "horde_carrier_dog", "chaserMaze",
+                            "glasshead_fairfly_turret_no_jump", "horde_phantomcore_boss",
+                            "Stilt", "Stilt_Strafer", "Behemoth", "queen_new"]},
+      "progress": 40
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 250
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 200
+    }
+  ]
+}

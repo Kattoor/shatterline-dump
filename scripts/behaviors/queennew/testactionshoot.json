@@ -1,0 +1,237 @@
+{
+    "name": "QueenNew/TestActionShoot",
+    "root": "f585a788-7295-410a-abe6-5fd1cd9e52a2",
+    "nodes": {
+        "f585a788-7295-410a-abe6-5fd1cd9e52a2": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 98
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ActionTest"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "5f0d6483-1323-4142-92ea-4e4eb0196cbb"
+        },
+        "d5767b89-90e1-4a31-8898-5c65337149c4": {
+            "name": "SetBehaviorConditionAndResetOnExit",
+            "pos": {
+                "x": 0,
+                "y": 539
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "RangeAttack"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "651b8471-6579-41c9-8544-2fb90212a1a4"
+        },
+        "5f0d6483-1323-4142-92ea-4e4eb0196cbb": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 242
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Test RangeAttack"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "d323c22d-e07b-4e23-8c95-5441a5a9d023"
+        },
+        "8fb0b750-ea94-4c64-8f31-0b9949b7c4d8": {
+            "name": "ExactBodyRotateTo",
+            "pos": {
+                "x": -200,
+                "y": 1080
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Target",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "DegreesPerSecond",
+                    "type": "Float",
+                    "value": "360"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "651b8471-6579-41c9-8544-2fb90212a1a4": {
+            "name": "IsTargetPerceivedAndVisible",
+            "pos": {
+                "x": 0,
+                "y": 689
+            },
+            "inputs": [
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "ae2f3770-032e-4bd2-a0c3-c44020039d38"
+        },
+        "fc61d6bb-389d-4e11-87fa-248358f2387b": {
+            "name": "ScriptEventGate",
+            "pos": {
+                "x": 205,
+                "y": 1080
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EnterEvent",
+                    "type": "StringHash",
+                    "value": "RangedAttackStart"
+                },
+                {
+                    "name": "ExitEvent",
+                    "type": "StringHash",
+                    "value": "RangedAttackEnd"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "8889a7aa-b9e6-4722-9af7-ea0103365176"
+        },
+        "570655da-6103-4e84-8323-699342e53a56": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 971
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "8fb0b750-ea94-4c64-8f31-0b9949b7c4d8",
+                "fc61d6bb-389d-4e11-87fa-248358f2387b"
+            ]
+        },
+        "8889a7aa-b9e6-4722-9af7-ea0103365176": {
+            "name": "Wait",
+            "pos": {
+                "x": 205,
+                "y": 1224
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "range_attack_firing_time"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "ae2f3770-032e-4bd2-a0c3-c44020039d38": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 846
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "RangeAttack"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "570655da-6103-4e84-8323-699342e53a56"
+        },
+        "d323c22d-e07b-4e23-8c95-5441a5a9d023": {
+            "name": "SetBehaviorConditionAndResetOnExit",
+            "pos": {
+                "x": 0,
+                "y": 395
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Attack"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "d5767b89-90e1-4a31-8898-5c65337149c4"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

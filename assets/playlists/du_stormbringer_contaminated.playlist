@@ -1,0 +1,32 @@
+{
+    "lobby_config": {
+        "game_type": "pve",
+        "name_token": "@stormb_contam_label",
+        "type_token": "@modified_long_story",
+        "info_token": "@contaminated_briefing",
+        "time_token": "@stormbringer_time",
+        "location_token": "@stormbringer_location",
+        "video_path": "",
+        "small_image": "pve1_mods_small",
+        "background": "bg_playlist_stormbringer"
+    },
+    "min_profile_level": 0,
+    "play_again_allowed": false,
+    "missions": [
+        "du_stormbringer_contaminated"
+    ],
+    "modifiers": ["precision_strike", "lightning_anomaly", "explosive_anomaly"],
+    "loading_backgrounds": [
+        "bg_playlist_stormbringer"
+    ],
+    "rewards": [
+        {
+            "type_token": "@pve_completion_rewards_title",
+            "items": [
+                {"image": "blueprint", "value": 3},
+                {"image": "season_xp", "value": 50},
+                {"image": "soft", "value": 400}
+            ]
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+  "name": "scheduled_misc_004",
+  "type": "scheduled",
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "uncommon",
+  "display_name": { "localization_key": "@scheduled_misc_004_name" },
+  "description": { "localization_key": "@scheduled_misc_004_description" },
+  "conditions": [
+    {
+      "name": "scheduled_misc_004_1",
+      "event_description": { "localization_key": "@scheduled_misc_004_1_event_description" },
+      "event": { "event_id": "Kill", "actor_is_me": true, "actor_item_tag_is": ["ULT", "ult_ik01"], "target_player_class_is": ["A", "M", "H", "S"] },
+      "progress": 15
+    },
+    {
+      "name": "scheduled_misc_004_2",
+      "event_description": { "localization_key": "@scheduled_misc_004_2_event_description" },
+      "event": { "event_id": "Kill", "actor_is_me": true, "actor_item_tag_is": ["ULT", "ult_ik01"], "game_type_is": ["pve"] },
+      "progress": 30
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 2500
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 1500
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 20
+    }
+  ]
+}

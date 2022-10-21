@@ -1,0 +1,12 @@
+{
+    "script": "scripts/ui/common/static_hint_hero_information.lua",
+    "view_path": "StaticHintHeroInformation.html",
+    "children": 
+    [
+        {"name": "hero_name", "type": "Label", "view_path": "heroName"},
+        {"name": "hero_level_label", "type": "Label", "view_path": "heroLevel.label", "text": "@global_hint_hero_level_label"},
+        {"name": "hero_level_number", "type": "Label", "view_path": "heroLevel.number"},
+        {"name": "hero_progress_bar", "type": "ProgressBar", "view_path": "heroProgressBar", "min": 0, "max": 1},
+        {"name": "hero_perks_container", "type": "Component", "view_path": "perkContainer"}
+    ]
+}

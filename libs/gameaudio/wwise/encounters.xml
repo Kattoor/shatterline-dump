@@ -1,0 +1,490 @@
+<ATLConfig atl_name="encounters">
+ <AudioTriggers>
+  <ATLTrigger atl_name="enc_elemental_spawn_spawn" path="enc_elemental_spawn">
+   <WwiseEvent wwise_name="enc_elemental_spawn_spawn"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_elemental_spawn_rocks_destroy" path="enc_elemental_spawn">
+   <WwiseEvent wwise_name="enc_elemental_spawn_rocks_destroy"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_elemental_spawn_lightning" path="enc_elemental_spawn">
+   <WwiseEvent wwise_name="enc_elemental_spawn_lightning"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_gls_dublicator_mark_idle" path="enc_gls_dublicator">
+   <WwiseEvent wwise_name="enc_gls_dublicator_mark_idle"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_gls_dublicator_spawn_stop" path="enc_gls_dublicator">
+   <WwiseEvent wwise_name="enc_gls_dublicator_spawn_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_gls_dublicator_spawn_start" path="enc_gls_dublicator">
+   <WwiseEvent wwise_name="enc_gls_dublicator_spawn_start"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_gls_dublicator_mark_swap" path="enc_gls_dublicator">
+   <WwiseEvent wwise_name="enc_gls_dublicator_mark_swap"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_gls_dublicator_doubling" path="enc_gls_dublicator">
+   <WwiseEvent wwise_name="enc_gls_dublicator_doubling"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_gls_dublicator_dissolve_stop" path="enc_gls_dublicator">
+   <WwiseEvent wwise_name="enc_gls_dublicator_dissolve_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_gls_dublicator_dissolve_start" path="enc_gls_dublicator">
+   <WwiseEvent wwise_name="enc_gls_dublicator_dissolve_start"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_gls_flying_sphere_sphere_prespawn" path="enc_gls_flying_sphere">
+   <WwiseEvent wwise_name="enc_gls_flying_sphere_sphere_prespawn"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_gls_flying_sphere_weak_points_explode" path="enc_gls_flying_sphere">
+   <WwiseEvent wwise_name="enc_gls_flying_sphere_weak_points_explode"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_gls_flying_sphere_sphere_spawn" path="enc_gls_flying_sphere">
+   <WwiseEvent wwise_name="enc_gls_flying_sphere_sphere_spawn"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_gls_flying_sphere_sphere_destruction" path="enc_gls_flying_sphere">
+   <WwiseEvent wwise_name="enc_gls_flying_sphere_sphere_destruction"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_gls_flying_sphere_spawner_spawn" path="enc_gls_flying_sphere">
+   <WwiseEvent wwise_name="enc_gls_flying_sphere_spawner_spawn"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_gls_flying_sphere_lightning_arc" path="enc_gls_flying_sphere">
+   <WwiseEvent wwise_name="enc_gls_flying_sphere_lightning_arc"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_carousel_explosions" path="enc_carousel">
+   <WwiseEvent wwise_name="enc_carousel_explosions"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_carousel_spike_spawner" path="enc_carousel">
+   <WwiseEvent wwise_name="enc_carousel_spike_spawner"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_carousel_core_spawn" path="enc_carousel">
+   <WwiseEvent wwise_name="enc_carousel_core_spawn"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_carousel_core_destroy" path="enc_carousel">
+   <WwiseEvent wwise_name="enc_carousel_core_destroy"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_carousel_columns_spin" path="enc_carousel">
+   <WwiseEvent wwise_name="enc_carousel_columns_spin"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_phantom_core_sting_loop" path="enc_phantom_core">
+   <WwiseEvent wwise_name="enc_phantom_core_sting_loop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_phantom_core_points_active_loop" path="enc_phantom_core">
+   <WwiseEvent wwise_name="enc_phantom_points_active_loop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_phantom_core_main_core_loop" path="enc_phantom_core">
+   <WwiseEvent wwise_name="enc_phantom_main_core_loop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_phantom_core_teleport" path="enc_phantom_core">
+   <WwiseEvent wwise_name="enc_phantom_core_teleport"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_phantom_core_shield_destroy" path="enc_phantom_core">
+   <WwiseEvent wwise_name="enc_phantom_core_shield_destroy"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_phantom_core_shield_activating" path="enc_phantom_core">
+   <WwiseEvent wwise_name="enc_phantom_core_shield_activating"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_phantom_core_portal" path="enc_phantom_core">
+   <WwiseEvent wwise_name="enc_phantom_core_portal"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_phantom_core_oneshots" path="enc_phantom_core">
+   <WwiseEvent wwise_name="enc_phantom_core_oneshots"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_phantom_core_main_core_explosion" path="enc_phantom_core">
+   <WwiseEvent wwise_name="enc_phantom_core_main_core_explosion"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_phantom_core_indoor" path="enc_phantom_core">
+   <WwiseEvent wwise_name="enc_phantom_core_indoor"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_phantom_core_energy_beam_stop" path="enc_phantom_core">
+   <WwiseEvent wwise_name="enc_phantom_core_energy_beam_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_phantom_core_energy_beam_start" path="enc_phantom_core">
+   <WwiseEvent wwise_name="enc_phantom_core_energy_beam_start"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_phantom_core_enc_start" path="enc_phantom_core">
+   <WwiseEvent wwise_name="enc_phantom_core_enc_start"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_phantom_core_amb_red_zone" path="enc_phantom_core">
+   <WwiseEvent wwise_name="enc_phantom_amb_red_zone"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_ballcatcher_hatch_open" path="enc_ball_catcher">
+   <WwiseEvent wwise_name="enc_ballcatcher_hatch_open"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_ballcatcher_hatch_close" path="enc_ball_catcher">
+   <WwiseEvent wwise_name="enc_ballcatcher_hatch_close"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_ballcatcher_anomaly_spawner_main_ton" path="enc_ball_catcher">
+   <WwiseEvent wwise_name="enc_ballcatcher_anomaly_spawner_main_ton"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_ballcatcher_tower_core" path="enc_ball_catcher">
+   <WwiseEvent wwise_name="enc_ballcatcher_tower_core"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_ballcatcher_tower_rotation_slow_start" path="enc_ball_catcher">
+   <WwiseEvent wwise_name="enc_ballcatcher_tower_rotation_slow_start"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_ballcatcher_tower_rotation_fast_stop" path="enc_ball_catcher">
+   <WwiseEvent wwise_name="enc_ballcatcher_tower_rotation_fast_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_ballcatcher_tower_rotation_fast_start" path="enc_ball_catcher">
+   <WwiseEvent wwise_name="enc_ballcatcher_tower_rotation_fast_start"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_ballcatcher_anomaly_spawner_stop" path="enc_ball_catcher">
+   <WwiseEvent wwise_name="enc_ballcatcher_anomaly_spawner_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_ballcatcher_anomaly_spawner_ready" path="enc_ball_catcher">
+   <WwiseEvent wwise_name="enc_ballcatcher_anomaly_spawner_ready"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_ball_catcher_anomaly_spawner_start" path="enc_ball_catcher">
+   <WwiseEvent wwise_name="enc_ball_catcher_anomaly_spawner_start"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="perk_crystalline_soles_start" path="perks">
+   <WwiseEvent wwise_name="perk_crystalline_soles_start"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="perk_crystalline_soles_sparks" path="perks">
+   <WwiseEvent wwise_name="perk_crystalline_soles_sparks"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="perk_on_kill_ultimate_charger" path="perks">
+   <WwiseEvent wwise_name="perk_on_kill_ultimate_charger"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="perk_protective_barrage_start" path="perks">
+   <WwiseEvent wwise_name="perk_protective_barrage_start"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="perk_homing_missiles_start" path="perks">
+   <WwiseEvent wwise_name="perk_homing_missiles_start"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="perk_homing_missiles_hit" path="perks">
+   <WwiseEvent wwise_name="perk_homing_missiles_hit"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="perk_instant_kill_on_hit_meteor_incoming" path="perks">
+   <WwiseEvent wwise_name="perk_instant_kill_on_hit_meteor_incoming"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="perk_instant_kill_on_hit_explode" path="perks">
+   <WwiseEvent wwise_name="perk_instant_kill_on_hit_explode"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="perk_thunderfoot_weak" path="perks">
+   <WwiseEvent wwise_name="perk_thunderfoot_weak"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="perk_thunderfoot_strong" path="perks">
+   <WwiseEvent wwise_name="perk_thunderfoot_strong"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="perk_gravity_reversal_stop" path="perks">
+   <WwiseEvent wwise_name="perk_gravity_reversal_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="perk_gravity_reversal_start" path="perks">
+   <WwiseEvent wwise_name="perk_gravity_reversal_start"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="perk_strife_fire" path="perks">
+   <WwiseEvent wwise_name="perk_strife_fire"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="perk_protection_system_stop" path="perks">
+   <WwiseEvent wwise_name="perk_protection_system_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="perk_protection_system_start" path="perks">
+   <WwiseEvent wwise_name="perk_protection_system_start"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="perk_protection_system_loop" path="perks">
+   <WwiseEvent wwise_name="perk_protection_system_loop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="perk_mark_of_hatred_start" path="perks">
+   <WwiseEvent wwise_name="perk_mark_of_hatred_start"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="dynamic_crystal_spawn_group_dissolve" path="enc_dynamic_spikes">
+   <WwiseEvent wwise_name="dynamic_crystal_spawn_group_dissolve"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="dynamic_crystal_spawn_group_appear" path="enc_dynamic_spikes">
+   <WwiseEvent wwise_name="dynamic_crystal_spawn_group_appear"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="dynamic_spike_spawn_sphere_01" path="enc_dynamic_spikes">
+   <WwiseEvent wwise_name="dynamic_spike_spawn_sphere_01"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="dynamic_spike_grow_spike_02" path="enc_dynamic_spikes">
+   <WwiseEvent wwise_name="dynamic_spike_grow_spike_02"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="dynamic_spike_grow_spike_01" path="enc_dynamic_spikes">
+   <WwiseEvent wwise_name="dynamic_spike_grow_spike_01"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="dynamic_spike_grow_main_01" path="enc_dynamic_spikes">
+   <WwiseEvent wwise_name="dynamic_spike_grow_main_01"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="dynamic_spike_despawn_01" path="enc_dynamic_spikes">
+   <WwiseEvent wwise_name="dynamic_spike_despawn_01"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="mod_meteor_incoming" path="modificators">
+   <WwiseEvent wwise_name="mod_meteor_incoming"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="mod_lightning_anomaly_voice" path="modificators">
+   <WwiseEvent wwise_name="mod_lightning_anomaly_voice"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="mod_lightning_anomaly_spawn" path="modificators">
+   <WwiseEvent wwise_name="mod_lightning_anomaly_spawn"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="mod_lightning_anomaly_idle" path="modificators">
+   <WwiseEvent wwise_name="mod_lightning_anomaly_idle"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="mod_lightning_anomaly_attack" path="modificators">
+   <WwiseEvent wwise_name="mod_lightning_anomaly_attack"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="mod_precision_strike_zone" path="modificators">
+   <WwiseEvent wwise_name="mod_precision_strike_zone"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="mod_precision_strike_impact" path="modificators">
+   <WwiseEvent wwise_name="mod_precision_strike_impact"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="mod_earthquake_start" path="modificators">
+   <WwiseEvent wwise_name="mod_earthquake_start"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="mod_earthquake_rocks" path="modificators">
+   <WwiseEvent wwise_name="mod_earthquake_rocks"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="mod_earthquake_loop" path="modificators">
+   <WwiseEvent wwise_name="mod_earthquake_loop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_transmutator_gate_explode" path="enc_04_transmutator">
+   <WwiseEvent wwise_name="enc_transmutator_gate_explode"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_transmutator_core_explode" path="enc_04_transmutator">
+   <WwiseEvent wwise_name="enc_transmutator_core_explode"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_04_core_death" path="enc_04_transmutator">
+   <WwiseEvent wwise_name="enc_04_core_death"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_04_core_close" path="enc_04_transmutator">
+   <WwiseEvent wwise_name="enc_04_core_close"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_04_runners_spawn_ligtning" path="enc_04_transmutator">
+   <WwiseEvent wwise_name="enc_04_runners_spawn_ligtning"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_04_gate_open" path="enc_04_transmutator">
+   <WwiseEvent wwise_name="enc_04_gate_open"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_04_gate_idle" path="enc_04_transmutator">
+   <WwiseEvent wwise_name="enc_04_gate_idle"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_04_gate_fire" path="enc_04_transmutator">
+   <WwiseEvent wwise_name="enc_04_gate_fire"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_04_gate_close" path="enc_04_transmutator">
+   <WwiseEvent wwise_name="enc_04_gate_close"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_04_core_open" path="enc_04_transmutator">
+   <WwiseEvent wwise_name="enc_04_core_open"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_04_core_idle" path="enc_04_transmutator">
+   <WwiseEvent wwise_name="enc_04_core_idle"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_04_core_beam_strike" path="enc_04_transmutator">
+   <WwiseEvent wwise_name="enc_04_core_beam_strike"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_04_core_beam_charge" path="enc_04_transmutator">
+   <WwiseEvent wwise_name="enc_04_core_beam_charge"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_04_capsule_land" path="enc_04_transmutator">
+   <WwiseEvent wwise_name="enc_04_capsule_land"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="strafer_drop_pod_shield_stop" path="enc_strafer_drop_pod">
+   <WwiseEvent wwise_name="strafer_drop_pod_shield_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="strafer_drop_pod_shield_loop" path="enc_strafer_drop_pod">
+   <WwiseEvent wwise_name="strafer_drop_pod_shield_loop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_04_gate_idle_closed" path="enc_strafer_drop_pod">
+   <WwiseEvent wwise_name="enc_04_gate_idle_closed"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="destucted_drop_pod_sparks" path="enc_strafer_drop_pod">
+   <WwiseEvent wwise_name="destucted_drop_pod_sparks"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="drop_pod_selfdestruct_alarm_01" path="enc_strafer_drop_pod">
+   <WwiseEvent wwise_name="drop_pod_selfdestruct_alarm_01"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="strafer_drop_pod_spawner_01" path="enc_strafer_drop_pod">
+   <WwiseEvent wwise_name="strafer_drop_pod_spawner_01"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="strafer_drop_pod_landing" path="enc_strafer_drop_pod">
+   <WwiseEvent wwise_name="strafer_drop_pod_landing"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="drop_pod_incoming_01" path="enc_strafer_drop_pod">
+   <WwiseEvent wwise_name="drop_pod_incoming_01"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_parasites_eye_explode_disappear" path="enc_parasite">
+   <WwiseEvent wwise_name="enc_parasites_eye_explode_disappear"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_parasites_eye_death_rise" path="enc_parasite">
+   <WwiseEvent wwise_name="enc_parasites_eye_death_rise"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="energy_beam_stop" path="enc_parasite">
+   <WwiseEvent wwise_name="energy_beam_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="energy_beam_start" path="enc_parasite">
+   <WwiseEvent wwise_name="energy_beam_start"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_parasites_eye_powerup" path="enc_parasite">
+   <WwiseEvent wwise_name="enc_parasites_eye_powerup"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_parasites_eye_death" path="enc_parasite">
+   <WwiseEvent wwise_name="enc_parasites_eye_death"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_parasites_eye_beam_stop" path="enc_parasite">
+   <WwiseEvent wwise_name="enc_parasites_eye_beam_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_parasites_weapon_spawn" path="enc_parasite">
+   <WwiseEvent wwise_name="enc_parasites_weapon_spawn"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_parasites_shield_appear" path="enc_parasite">
+   <WwiseEvent wwise_name="enc_parasites_shield_appear"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_parasites_shield_start" path="enc_parasite">
+   <WwiseEvent wwise_name="enc_parasites_shield_start"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_parasites_shield_destroy" path="enc_parasite">
+   <WwiseEvent wwise_name="enc_parasites_shield_destroy"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_parasites_eye_spawn" path="enc_parasite">
+   <WwiseEvent wwise_name="enc_parasites_eye_spawn"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_parasites_eye_beam_start" path="enc_parasite">
+   <WwiseEvent wwise_name="enc_parasites_eye_beam_start"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_parasites_enemies_spawn_ligtning" path="enc_parasite">
+   <WwiseEvent wwise_name="enc_parasites_enemies_spawn_ligtning"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_parasites_dog_spawn" path="enc_parasite">
+   <WwiseEvent wwise_name="enc_parasites_dog_spawn"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_data_center_lights_turn_on" path="enc_06_data_center">
+   <WwiseEvent wwise_name="enc_data_center_lights_turn_on"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_data_center_shut_down" path="enc_06_data_center">
+   <WwiseEvent wwise_name="enc_data_center_shut_down"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="cin_data_center" path="enc_06_data_center">
+   <WwiseEvent wwise_name="cin_data_center"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_06_straifer_terminal_close" path="enc_06_data_center">
+   <WwiseEvent wwise_name="enc_06_straifer_terminal_close"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_06_server_hacked" path="enc_06_data_center">
+   <WwiseEvent wwise_name="enc_06_server_hacked"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="rnd_data_center" path="enc_06_data_center">
+   <WwiseEvent wwise_name="rnd_data_center"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_06_point_capture_start" path="enc_06_data_center">
+   <WwiseEvent wwise_name="enc_06_point_capture_start"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_06_amb_data_center" path="enc_06_data_center">
+   <WwiseEvent wwise_name="enc_06_amb_data_center"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_03_probe_stop" path="enc_03_probe_defence">
+   <WwiseEvent wwise_name="enc_03_probe_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_03_probe_warning" path="enc_03_probe_defence">
+   <WwiseEvent wwise_name="enc_03_probe_warning"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_03_probe_takes_damage" path="enc_03_probe_defence">
+   <WwiseEvent wwise_name="enc_03_probe_takes_damage"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_03_probe_idle_damaged" path="enc_03_probe_defence">
+   <WwiseEvent wwise_name="enc_03_probe_idle_damaged"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_03_probe_idle" path="enc_03_probe_defence">
+   <WwiseEvent wwise_name="enc_03_probe_idle"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_03_probe_half_full_warning" path="enc_03_probe_defence">
+   <WwiseEvent wwise_name="enc_03_probe_half_full_warning"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_03_probe_full_signal" path="enc_03_probe_defence">
+   <WwiseEvent wwise_name="enc_03_probe_full_signal"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_03_probe_drop" path="enc_03_probe_defence">
+   <WwiseEvent wwise_name="enc_03_probe_drop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_03_probe_destroyed" path="enc_03_probe_defence">
+   <WwiseEvent wwise_name="enc_03_probe_destroyed"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_03_probe_activation" path="enc_03_probe_defence">
+   <WwiseEvent wwise_name="enc_03_probe_activation"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_03_beacon_opens" path="enc_03_probe_defence">
+   <WwiseEvent wwise_name="enc_03_beacon_opens"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_01_nest_death" path="enc_01_power_stones">
+   <WwiseEvent wwise_name="enc_01_nest_death"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_01_enemies_spawn_lightning" path="enc_01_power_stones">
+   <WwiseEvent wwise_name="enc_01_enemies_spawn_lightning"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_01_link_activated" path="enc_01_power_stones">
+   <WwiseEvent wwise_name="enc_01_link_activated"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_01_shield_pulse" path="enc_01_power_stones">
+   <WwiseEvent wwise_name="enc_01_shield_pulse"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_01_shield_loop" path="enc_01_power_stones">
+   <WwiseEvent wwise_name="enc_01_shield_loop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_01_shield_destroy" path="enc_01_power_stones">
+   <WwiseEvent wwise_name="enc_01_shield_destroy"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_01_rock_restore" path="enc_01_power_stones">
+   <WwiseEvent wwise_name="enc_01_rock_restore"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_01_nest_prespawn_loop" path="enc_01_power_stones">
+   <WwiseEvent wwise_name="enc_01_nest_prespawn_loop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_01_nest_no_shield_loop" path="enc_01_power_stones">
+   <WwiseEvent wwise_name="enc_01_nest_no_shield_loop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_01_rock_spawn" path="enc_01_power_stones">
+   <WwiseEvent wwise_name="enc_01_rock_spawn"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_01_rock_prespawn_loop_02_stop" path="enc_01_power_stones">
+   <WwiseEvent wwise_name="enc_01_rock_prespawn_loop_02_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_01_rock_prespawn_loop_02" path="enc_01_power_stones">
+   <WwiseEvent wwise_name="enc_01_rock_prespawn_loop_02"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_01_rock_prespawn_loop_01_stop" path="enc_01_power_stones">
+   <WwiseEvent wwise_name="enc_01_rock_prespawn_loop_01_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_01_rock_prespawn_loop_01" path="enc_01_power_stones">
+   <WwiseEvent wwise_name="enc_01_rock_prespawn_loop_01"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_01_rock_destroy" path="enc_01_power_stones">
+   <WwiseEvent wwise_name="enc_01_rock_destroy"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_01_rock_broken_loop_stop" path="enc_01_power_stones">
+   <WwiseEvent wwise_name="enc_01_rock_broken_loop_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_01_rock_broken_loop" path="enc_01_power_stones">
+   <WwiseEvent wwise_name="enc_01_rock_broken_loop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_01_rock_active_loop_stop" path="enc_01_power_stones">
+   <WwiseEvent wwise_name="enc_01_rock_active_loop_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_01_rock_active_loop" path="enc_01_power_stones">
+   <WwiseEvent wwise_name="enc_01_rock_active_loop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_02_shardskin_prespawn" path="enc_02_sample_extraction">
+   <WwiseEvent wwise_name="enc_02_shardskin_prespawn"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_02_bombdog_prespawn" path="enc_02_sample_extraction">
+   <WwiseEvent wwise_name="enc_02_bombdog_prespawn"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_02_shardsin_spawn" path="enc_02_sample_extraction">
+   <WwiseEvent wwise_name="enc_02_shardsin_spawn"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_02_sample_delivered" path="enc_02_sample_extraction">
+   <WwiseEvent wwise_name="enc_02_sample_delivered"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_02_sample_pick_drop" path="enc_02_sample_extraction">
+   <WwiseEvent wwise_name="enc_02_sample_pick_drop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_02_sample_idle_loop" path="enc_02_sample_extraction">
+   <WwiseEvent wwise_name="enc_02_sample_idle_loop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_02_bsl4_container_idle" path="enc_02_sample_extraction">
+   <WwiseEvent wwise_name="enc_02_bsl4_container_idle"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="enc_02_bsl4_container_close" path="enc_02_sample_extraction">
+   <WwiseEvent wwise_name="enc_02_bsl4_container_close"/>
+  </ATLTrigger>
+ </AudioTriggers>
+</ATLConfig>

@@ -1,0 +1,589 @@
+{
+  "events": [
+    {
+      "event_icon": "kill_log_barrel_kill",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_item_tag_is": ["explosive"],
+          "target_player_class_is_not": []
+        }
+      ]
+    },
+    {
+      "event": [
+        {
+          "event_id": "Kill",
+          "target_ai_enemy_type_is": ["boss", "miniboss"]
+        }
+      ]
+    },
+    {
+      "event": [
+        {
+          "event_id": "Kill",
+          "target_player_class_is_not": []
+        }
+      ]
+    },
+    {
+      "event_icon": "falldown",
+      "event": [
+        {
+          "event_id": "Suicide",
+          "hit_type_is": ["Fall"]
+        }
+      ]
+    },
+    {
+      "event_icon": "explosion",
+      "event": [
+        {
+          "event_id": "Suicide",
+          "hit_type_is": ["AOE"]
+        }
+      ]
+    },
+    {
+      "event_icon": "killzone_crystal",
+      "event": [
+        {
+          "event_id": "Suicide",
+          "hit_type_is": ["DOT"],
+          "dot_type_is": ["Crystalline"]
+        }
+      ]
+    },
+    {
+      "event_icon": "killzone_fire",
+      "event": [
+        {
+          "event_id": "Suicide",
+          "hit_type_is": ["DOT"],
+          "dot_type_is": ["Fire"]
+        }
+      ]
+    },
+    {
+      "event_icon": "kill_log_suicide",
+      "event": [
+        {
+          "event_id": "Suicide",
+          "target_player_class_is_not": []
+        }
+      ]
+    },
+    {
+      "item_icon": "resurrect_drone",
+      "event": [
+        {
+          "event_id": "Resurrect",
+          "actor_item_tag_is": ["drone"]
+        }
+      ]
+    },
+    {
+      "item_icon": "resurrect",
+      "event": [
+        {
+          "event_id": "Resurrect"
+        }
+      ]
+    },
+    {
+      "event_text": "@event_log_ultimate",
+      "event": [
+        {
+          "event_id": "Ultimate"
+        }
+      ]
+    },
+    {
+      "event_text": "@event_log_first_blood",
+      "event": [
+        {
+          "event_id": "FirstBlood"
+        }
+      ]
+    },
+    {
+      "event_text": "@event_log_kill_streak",
+      "event": [
+        {
+          "event_id": "KillStreak"
+        }
+      ]
+    },
+    {
+      "event_text": "@event_log_bomb_planted",
+      "event": [
+        {
+          "event_id": "BombArmed"
+        }
+      ]
+    },
+    {
+      "event_text": "@event_log_bomb_defused",
+      "event": [
+        {
+          "event_id": "BombDisarmed"
+        }
+      ]
+    },
+    {
+      "event_text": "@event_log_discoverer",
+      "event": [
+        {
+          "event_id": "Discoverer"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_perk_hp_name",
+      "event": [
+        {
+          "event_id": "horde_hp_buff"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_perk_primary_backpack_name",
+      "event": [
+        {
+          "event_id": "horde_primary_backpack"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_ability",
+      "event": [
+        {
+          "event_id": "horde_ability"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_t1_weapon",
+      "event": [
+        {
+          "event_id": "horde_t1_weapon"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_t2_weapon",
+      "event": [
+        {
+          "event_id": "horde_t2_weapon"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_t3_weapon",
+      "event": [
+        {
+          "event_id": "horde_t3_weapon"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_t4_weapon",
+      "event": [
+        {
+          "event_id": "horde_t4_weapon"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_t5_weapon",
+      "event": [
+        {
+          "event_id": "horde_t5_weapon"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_perk_ult_kill_name",
+      "event": [
+        {
+          "event_id": "horde_ult_score_on_kill"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_perk_ult_headshot_name",
+      "event": [
+        {
+          "event_id": "horde_ult_score_on_headshot"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_perk_melee_heal_name",
+      "event": [
+        {
+          "event_id": "horde_heal_on_melee"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_perk_pistol_heal_name",
+      "event": [
+        {
+          "event_id": "horde_heal_on_secondary_headshot"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_perk_aoe_resist_name",
+      "event": [
+        {
+          "event_id": "horde_aoe_resist"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_perk_shot_resist_name",
+      "event": [
+        {
+          "event_id": "horde_shot_resist"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_perk_melee_resist_name",
+      "event": [
+        {
+          "event_id": "horde_melee_resist"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_electrify_on_damage_name",
+      "event": [
+        {
+          "event_id": "horde_electrify_on_damage"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_kn03",
+      "event": [
+        {
+          "event_id": "horde_kn03"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_mine_trail_name",
+      "event": [
+        {
+          "event_id": "horde_mine_trail"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_power_weapon",
+      "event": [
+        {
+          "event_id": "horde_power_weapon"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_recharge_while_full_ult_name",
+      "event": [
+        {
+          "event_id": "horde_ability_charge_on_full_ult"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_aifreeze_on_ult_name",
+      "event": [
+        {
+          "event_id": "horde_aifreeze_on_ult"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_heal_on_ult_name",
+      "event": [
+        {
+          "event_id": "horde_heal_on_ult"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_increased_damage_primary_name",
+      "event": [
+        {
+          "event_id": "horde_increased_damage_primary"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_increased_damage_secondary_name",
+      "event": [
+        {
+          "event_id": "horde_increased_damage_secondary"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_explosive_shot_secondary_name",
+      "event": [
+        {
+          "event_id": "horde_explosive_shot_secondary"
+        }
+      ]
+    },    {
+      "event_text": "@horde_explosive_shot_primary_name",
+      "event": [
+        {
+          "event_id": "horde_explosive_shot_primary"
+        }
+      ]
+    },
+    {
+      "event_text": "@ammo_drop_perk_name",
+      "event": [
+        {
+          "event_id": "ammo_drop_perk"
+        }
+      ]
+    },
+    {
+      "event_text": "@overhaste_on_ability_use_name",
+      "event": [
+        {
+          "event_id": "overhaste_on_ability_use"
+        }
+      ]
+    },
+    {
+      "event_text": "@explode_on_slide_kill_name",
+      "event": [
+        {
+          "event_id": "explode_on_slide_kill"
+        }
+      ]
+    },
+    {
+      "event_text": "@decontamination_name",
+      "event": [
+        {
+          "event_id": "decontamination"
+        }
+      ]
+    },
+    {
+      "event_text": "@strife_perk_name",
+      "event": [
+        {
+          "event_id": "strife_perk"
+        }
+      ]
+    },
+    {
+      "event_text": "@projectile_launch_on_hp_treshold_perk_name",
+      "event": [
+        {
+          "event_id": "projectile_launch_on_hp_treshold_perk"
+        }
+      ]
+    },
+    {
+      "event_text": "@vote_for_extraction",
+      "event": [
+        {
+          "event_id": "VoteExtract"
+        }
+      ]
+    },
+    {
+      "event_text": "@vote_to_continue",
+      "event": [
+        {
+          "event_id": "VotePlay"
+        }
+      ]
+    },
+    {
+      "event_text": "@ult_charger_name",
+      "event": [
+        {
+          "event_id": "unstable_ultimate_charger"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_staionary_zoom_damage_name",
+      "event": [
+        {
+          "event_id": "stationary_zoom_damage"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_staionary_zoom_ammo_name",
+      "event": [
+        {
+          "event_id": "stationary_zoom_ammo"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_explosive_jump_perk_name",
+      "event": [
+        {
+          "event_id": "horde_explosive_jump_perk"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_increase_damage_to_marked_name",
+      "event": [
+        {
+          "event_id": "horde_increase_damage_to_marked"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_homing_missiles_perk_name",
+      "event": [
+        {
+          "event_id": "horde_homing_missiles_perk"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_give_barrier_on_low_health_name",
+      "event": [
+        {
+          "event_id": "horde_give_barrier_on_low_health"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_freeze_enemies_by_hit_perk_name",
+      "event": [
+        {
+          "event_id": "horde_freeze_enemies_by_hit_perk"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_create_laser_saw_on_kill_perk_name",
+      "event": [
+        {
+          "event_id": "horde_create_laser_saw_on_kill_perk"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_create_funnel_on_kill_name",
+      "event": [
+        {
+          "event_id": "horde_create_funnel_on_kill"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_instant_kill_on_hit_name",
+      "event": [
+        {
+          "event_id": "horde_instant_kill_on_hit"
+        }
+      ]
+    },
+    {
+      "event_text": "@possessor_enthroned",
+      "event": [
+        {
+          "event_id": "PossessorEnthroned"
+        }
+      ]
+    },
+    {
+      "event_text": "@possessor_defeated",
+      "event": [
+        {
+          "event_id": "PossessorDefeated"
+        }
+      ]
+    },
+    {
+      "event_text": "@regen_lifetime_perk_name",
+      "event": [
+        {
+          "event_id": "regen_lifetime_perk"
+        }
+      ]
+    },
+    {
+      "event_text": "@regen_chance_perk_name",
+      "event": [
+        {
+          "event_id": "regen_chance_perk"
+        }
+      ]
+    },
+    {
+      "event_text": "@regen_limit_perk_name",
+      "event": [
+        {
+          "event_id": "regen_limit_perk"
+        }
+      ]
+    },
+    {
+      "event_text": "@regen_explosion_perk_name",
+      "event": [
+        {
+          "event_id": "regen_explosion_perk"
+        }
+      ]
+    },
+    {
+      "event_text": "@regen_speedup_name",
+      "event": [
+        {
+          "event_id": "regen_speedup"
+        }
+      ]
+    },
+    {
+      "event_text": "@invul_on_regen_pickup_name",
+      "event": [
+        {
+          "event_id": "invul_on_regen_pickup"
+        }
+      ]
+    },
+    {
+      "event_text": "@regen_pickup_impulse_perk_name",
+      "event": [
+        {
+          "event_id": "regen_pickup_impulse_perk"
+        }
+      ]
+    },
+    {
+      "event_text": "@arsenal_perk_name",
+      "event": [
+        {
+          "event_id": "arsenal_perk"
+        }
+      ]
+    },
+    {
+      "event_text": "@horde_perk_manual_therapy_name",
+      "event": [
+        {
+          "event_id": "heal_on_ability_kill"
+        }
+      ]
+    }
+  ]
+}

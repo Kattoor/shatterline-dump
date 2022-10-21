@@ -1,0 +1,59 @@
+{
+    "name": "test_camera_shake2",
+    "duration": 8.0,
+    "effects": [
+        {
+            "camera_shake":
+            {
+                "sinusoids":
+                [
+                    {
+                        "name": "A",
+                        "frequency": 6.0,
+                        "phase": 0.0,
+                        "random_phase": false
+                    },
+                    {
+                        "name": "B",
+                        "frequency": 4.0,
+                        "phase": 180.0,
+                        "random_phase": false
+                    },
+                    {
+                        "name": "C",
+                        "frequency": 2.0,
+                        "phase": 45.0,
+                        "random_phase": false
+                    },
+                    {
+                        "name": "D",
+                        "frequency": 3.5,
+                        "phase": 30.0,
+                        "random_phase": false
+                    }
+                ],
+                
+                "yaw_sinusoid": "D",
+                "pitch_sinusoid": "B",
+                "roll_sinusoid": "none",
+                "shift_x_sinusoid": "A",
+                "shift_y_sinusoid": "C",
+                "shift_z_sinusoid": "none",
+                
+                "yaw_amplitude": 4.0,
+                "pitch_amplitude": -4.0,
+                "shift_x_amplitude": -0.04,
+                "shift_y_amplitude": 0.05,
+                "shift_z_amplitude": 0.06,
+                
+                "attack_duration": 3.0,
+                "sustain_duration": 2.0,
+                "decay_duration": 3.0,
+                
+                "channel": "king_camera_shake",
+                "shift_coord_system": "Global",
+                "rotation_coord_system": "Camera"
+            }
+        }
+    ]
+}

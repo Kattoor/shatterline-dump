@@ -1,0 +1,31 @@
+{
+    "weapon_assets":
+    [
+        "cm02"
+    ],
+    "motion_sets":
+    [
+        "cm02_1p",
+        "cm02_wpn",
+        "cm02_3p"
+    ],
+    "binding_motions_to_parameters":
+    [
+        {
+            "motion": "toss_throw",
+            "weapon_parameter" : "grenade_duration_throw"
+        },
+        {
+            "motion": "toss_throw_wpn",
+            "weapon_parameter" : "grenade_duration_throw"
+        },
+        {
+            "motion": "stand_toss_throw_grenade_3p",
+            "weapon_parameter" : "grenade_duration_throw"
+        },
+        {
+            "motion": "stand_toss_prepare_grenade_3p",
+            "weapon_parameter" : "grenade_duration_prepare"
+        }
+    ]
+}

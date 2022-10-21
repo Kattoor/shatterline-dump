@@ -1,0 +1,32 @@
+{
+  "name": "daily_operative_kills_010",
+  "type": "daily",
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "common",
+  "tags": [
+    "daily_operative_kills"
+  ],
+  "display_name": { "localization_key": "@daily_operative_kills_010_name" },
+  "description": { "localization_key": "@daily_operative_kills_010_description" },
+  "conditions": [
+   {
+      "name": "daily_operative_kills_010",
+      "event_description": { "localization_key": "@daily_operative_kills_010_event_description" },
+      "event": { "event_id": "Kill", "actor_is_me": true, "actor_player_preset_is":["m_pill"], "game_type_is": ["pve"] },
+      "progress": 50
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 200
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 175
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "4d5d71b02d454ca3be846eb7e16b82f3",
+    "Name": "Notification",
+    "DisplayName": "Notification",
+    "Version": "0.1.0",
+    "Summary": "game notification receiver/consumer",
+    "Tags": ["Untagged"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        }
+    ],
+    "Dependencies":
+    [
+        {
+            "Uuid": "71f233c8118b4c8283e3406b447657ab",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "BackendCommon"
+        },
+		{
+            "Uuid": "c0bf497f08e64a38ad901aecf5ce4f1d",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01PlayerProfile"
+        },
+        {
+            "Uuid": "c7d1af5bc3eb423193bd9100c32d26cd",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Websockets"
+        }
+    ]
+}

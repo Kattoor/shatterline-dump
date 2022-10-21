@@ -1,0 +1,133 @@
+{
+    "name": "projectile_launched",
+    "doc": "Origin: game session. Emitter: dedicated server. Indicates any kind of spawned projectile (grenades, rockets, drones, medkits etc.)",
+    "type": "record",
+    "fields": [
+        {
+            "name": "a",
+            "type": "int",
+            "default": -1,
+            "doc": "world XY-plain angle of player's camera 0 to 360 clockwise direction (0.0 - straight along Y-axis, 90.0 - straight along X-axis)"
+        },
+        {
+            "name": "lid",
+            "type": "int",
+            "default": -1,
+            "doc": "match-unique incremental id of a player's lifetime (time between spawn-death, including coma time)"
+        },
+        {
+            "name": "b",
+            "type": "int",
+            "default": -1,
+            "doc": "world YZ-plain angle of player's camera, 0 straight, 90 top, -90 bottom"
+        },
+        {
+            "name": "name",
+            "type": "string",
+            "default": "-1",
+            "doc": "unique name of the event"
+        },
+        {
+            "name": "stance",
+            "type": "string",
+            "default": "-1",
+            "doc": "current body stance of the entity (player or AI)"
+        },
+        {
+            "name": "cid",
+            "type": "int",
+            "default": -1,
+            "doc": "team unique identifier. -6 pve players, -5 AI, -4 team B, -3 team A or pid in FFA modes"
+        },
+        {
+            "name": "team",
+            "type": "string",
+            "default": "-1",
+            "doc": "categorical definition of the team which player belongs to"
+        },
+        {
+            "name": "pid",
+            "type": "long",
+            "default": -1,
+            "doc": "namespace-unique identifier of a player"
+        },
+        {
+            "name": "burst_id",
+            "type": "long",
+            "default": -1,
+            "doc": "match-unique identifier of the burst - all shots made inbetween press and release fire button is a single burst"
+        },
+        {
+            "name": "ts",
+            "type": "string",
+            "default": "-1",
+            "doc": "ISO8601 UTC timestamp of the event invocation"
+        },
+        {
+            "name": "ns",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace of the server's deployment (realm)"
+        },
+        {
+            "name": "is_zoomed",
+            "type": "boolean",
+            "default": false,
+            "doc": "0-not zoomed, 1-zoomed"
+        },
+        {
+            "name": "wid",
+            "type": "string",
+            "default": "-1",
+            "doc": "game-unique name of the weapon"
+        },
+        {
+            "name": "x",
+            "type": "double",
+            "default": -1,
+            "doc": "X-axis coordinate of an object with decimal accuracy 1e-13"
+        },
+        {
+            "name": "sid",
+            "type": "string",
+            "default": "-1",
+            "doc": "global-unique identifier of the player's login session (time between login and logout)"
+        },
+        {
+            "name": "y",
+            "type": "double",
+            "default": -1,
+            "doc": "Y-axis coordinate of an object with decimal accuracy 1e-13"
+        },
+        {
+            "name": "gid",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace-unique identifier of the match"
+        },
+        {
+            "name": "z",
+            "type": "double",
+            "default": -1,
+            "doc": "Z-axis coordinate of an object with decimal accuracy 1e-13"
+        },
+        {
+            "name": "shot_id",
+            "type": "long",
+            "default": -1,
+            "doc": "match-unique incremetal identifier of each shot or projectile launch. being incremented on every gunfire shot and launch of projectile. its a key field to join in order to get a weapon/item name, damage type, shooter lifetime and so on from entity_shot or projectile_launched."
+        },
+        {
+            "name": "enid",
+            "type": "long",
+            "default": -1,
+            "doc": "match-unique entity id as a unique identifier of non-player entities (AIs, active objects, projectiles)"
+        },
+        {
+            "name": "weapon_set_id",
+            "type": "int",
+            "default": -1,
+            "doc": "game-unique id of weapon customization set. being incremented each time any of players changes attachments"
+        }
+    ]
+}

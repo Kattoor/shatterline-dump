@@ -1,0 +1,35 @@
+{
+    "weapon_assets":
+    [
+        "rd01_use",
+        "rd01_throw"
+    ],
+    "motion_sets":
+    [
+        "rd01_use_1p",
+        "rd01_use_wpn",
+        "rd01_use_3p",
+        "rd01_throw_1p",
+        "rd01_throw_wpn",
+        "rd01_throw_3p"
+    ],
+    "binding_motions_to_parameters":
+    [
+        {
+            "motion": "throw",
+            "weapon_parameter" : "grenade_duration_throw"
+        },
+        {
+            "motion": "throw_wpn",
+            "weapon_parameter" : "grenade_duration_throw"
+        },
+        {
+            "motion": "stand_throw_grenade_3p",
+            "weapon_parameter" : "grenade_duration_throw"
+        },
+        {
+            "motion": "stand_prepare_grenade_3p",
+            "weapon_parameter" : "grenade_duration_prepare"
+        }
+    ]
+}

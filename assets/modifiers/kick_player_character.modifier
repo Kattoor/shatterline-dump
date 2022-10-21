@@ -1,0 +1,67 @@
+{
+    "name": "kick_player_character",
+    "duration": 1.1,
+    "effects": [
+        { "max_speed": { "speed_cap": 0.0 }},
+        { "ag_input": { "input_name": "hard_land", "value_bool": true }},
+        { "input_filter": { "block_weapon": true }},
+        { "input_disable": { }},
+        
+        {   "camera_shake": {
+                "sinusoids":
+                [
+                    {
+                        "name": "A",
+                        "frequency": 6.0,
+                        "random_phase": true
+                    },
+                    {
+                        "name": "B",
+                        "frequency": 5.0,
+                        "phase": 45.0,
+                        "random_phase": true
+                    },
+                    {
+                        "name": "C",
+                        "frequency": 2.0,
+                        "phase": 0.0,
+                        "random_phase": true
+                    },
+                    {
+                        "name": "D",
+                        "frequency": 0.75,
+                        "phase": -0.5,
+                        "random_phase": false
+                    }
+                ],
+                
+                "yaw_sinusoid": "D",
+                "yaw_amplitude": 10.1,
+                
+                "pitch_sinusoid": "D",
+                "pitch_amplitude": -90,    
+
+                "roll_sinusoid": "C",
+                "roll_amplitude": 30,
+                
+                "shift_x_sinusoid": "B",
+                "shift_x_amplitude": 0.3,
+                
+                "shift_y_sinusoid": "A",
+                "shift_y_amplitude": 0.3,
+                
+                "shift_z_sinusoid": "D",
+                "shift_z_amplitude": -1.5,
+                
+                "attack_duration": 0.01,
+                "sustain_duration": 0.09,
+                "decay_duration": 1,
+                
+                "channel": "queen_camera_shake",
+                "shift_coord_system": "Camera",
+                "rotation_coord_system": "Camera",
+                "ease_out_curvature": 5.0
+            }
+        }
+    ]
+}

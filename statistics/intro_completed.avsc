@@ -1,0 +1,61 @@
+{
+    "name": "intro_completed",
+    "doc": "Origin: game session. Emitter: game client. Indicates when intro was ended",
+    "type": "record",
+    "fields": [
+        {
+            "name": "team_winner",
+            "type": "string",
+            "default": "-1",
+            "doc": "categorical definition of the team which player belongs to"
+        },
+        {
+            "name": "name",
+            "type": "string",
+            "default": "-1",
+            "doc": "unique name of the event"
+        },
+        {
+            "name": "ts",
+            "type": "string",
+            "default": "-1",
+            "doc": "ISO8601 UTC timestamp of the event invocation"
+        },
+        {
+            "name": "dur",
+            "type": "int",
+            "default": -1,
+            "doc": "duration time in milliseconds passed since the action/feature/event start"
+        },
+        {
+            "name": "ns",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace of the server's deployment (realm)"
+        },
+        {
+            "name": "round_er",
+            "type": "string",
+            "default": "-1",
+            "doc": "explicit name of the round end reason"
+        },
+        {
+            "name": "pid",
+            "type": "long",
+            "default": -1,
+            "doc": "namespace-unique identifier of a player"
+        },
+        {
+            "name": "gid",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace-unique identifier of the match"
+        },
+        {
+            "name": "sid",
+            "type": "string",
+            "default": "-1",
+            "doc": "global-unique identifier of the player's login session (time between login and logout)"
+        }
+    ]
+}

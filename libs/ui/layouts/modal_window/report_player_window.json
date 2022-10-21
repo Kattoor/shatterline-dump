@@ -1,0 +1,16 @@
+{
+    "script": "scripts/ui/modal_window/report_player_window.lua",
+    "view_path": "ReportPlayerWindow.html",
+    "children": [
+        {"name": "title", "type": "Label", "view_path": "container.title", "text": "@report_user_title"},
+
+        {"name": "nickname", "type": "Label", "view_path": "container.content.nickname" },
+        {"name": "report_title", "type": "Label", "view_path": "container.content.reportListTitle", "text": "@select_reason"},
+
+        {"name": "report_list", "type": "ListBox", "view_path": "container.content.reportList"},
+        {"name": "report_list_container", "type": "Component", "view_path": "container.content.reportList.container"},
+
+        {"name": "applyButton", "type": "Button", "view_path": "container.controlContainer.applyButton", "text": "@report_btn"},
+        {"name": "cancelButton", "type": "Button", "view_path": "container.controlContainer.cancelButton", "text": "@cancel_btn"}
+    ]
+}

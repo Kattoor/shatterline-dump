@@ -1,0 +1,37 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "6a248a9d95b54f1da37dca5aa87fb29b",
+    "Name": "Game01Settings",
+    "DisplayName": "Game01Settings",
+    "Version": "0.1.0",
+    "Summary": "Provide basic game settings manager functionality",
+    "Tags": ["Untagged"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        }
+    ],
+    "Dependencies" : [
+        {
+            "Uuid": "2ebd4481cbf142b89286f28b4c29ace3",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01Interfaces"
+        },
+        {
+            "Uuid": "352fef7706634c92814c587e84d7165a",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "CryLegacy"
+        },
+        {
+            "Uuid": "d96ab03f53d14c9e83f9b4528c8576d7",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "SaveData"
+        },
+        {
+            "Uuid": "93ccb44a96b142f7942a3fb6b9ca36e1",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "LocalUser"
+        }
+    ]
+}

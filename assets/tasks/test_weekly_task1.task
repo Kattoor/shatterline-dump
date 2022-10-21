@@ -1,0 +1,29 @@
+{
+  "name": "test_weekly_task1",
+  "type": "weekly",
+  "active": false,
+  "image": "test_icon",
+  "rarity": "common",
+  "display_name": { "localization_key": "@test_weekly_task1" },
+  "description": { "localization_key": "@test_task_description" },
+  "conditions": [
+    {
+      "name": "test_weekly_task1",
+      "event_description": { "localization_key": "@test_task_event_description" },
+      "progress": 1,
+      "event": { "event_id": "Headshot", "actor_is_me": true }
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 1000
+    },
+    {
+      "reward_type": "currency",
+      "name": "hard",
+      "amount": 1000
+    }
+  ]
+}

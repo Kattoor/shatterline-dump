@@ -1,0 +1,29 @@
+{
+  "name": "strix_taskchain_010",
+  "type": "challenge",
+  "active": false,
+  "image": "hero_strix_large",
+  "rarity": "uncommon",
+  "display_name": { "localization_key": "@strix_taskchain_010_name" },
+  "description": { "localization_key": "@strix_taskchain_010_description" },
+  "conditions": [
+    {
+      "name": "strix_taskchain_010",
+      "event_description": { "localization_key": "@strix_taskchain_010_event_description" },
+      "event": { "event_id": "StrixPlay", "actor_is_me": true },
+      "progress": 1
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "item",
+      "name": "strix_item_box",
+      "amount": 1
+    },
+    {
+      "reward_type": "task",
+      "name": "strix_taskchain_011",
+      "amount": 1
+    }
+  ]
+}

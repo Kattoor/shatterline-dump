@@ -1,0 +1,30 @@
+{
+    "script": "",
+    "view_path": "InboxItem.html",
+    "children": [
+
+        {"name": "recent_bg", "type": "Component", "view_path": "wrapper.recentBg", "visible": false},
+        
+        {"name": "type_icon", "type": "Image", "view_path": "wrapper.typeIcon"},
+
+        {"name": "nameplate", "type": "Control", "view_path": "wrapper.nameplate"},
+        {"name": "image", "type": "Image", "view_path": "wrapper.nameplate.background", "image": "nameplate_background_2"},
+        {"name": "avatar", "type": "Image", "view_path": "wrapper.nameplate.bodyWrapper.icon", "image": "nameplate_icon_2"},
+
+        {"name": "message", "type": "Label", "view_path": "wrapper.message"},
+
+        {"name": "name", "type": "Label", "view_path": "wrapper.nameplate.bodyWrapper.nameWrapper.name"},
+        {"name": "clan", "type": "Label", "view_path": "wrapper.nameplate.bodyWrapper.nameWrapper.clan", "visible": false},
+        
+        {"name": "presence", "type": "Component", "view_path": "wrapper.presence", "visible": false},
+        {"name": "presence_icon", "type": "Image", "view_path": "wrapper.presence.icon"},
+        {"name": "presence_label", "type": "Label", "view_path": "wrapper.presence.label"},
+
+        {"name": "type", "type": "Label", "view_path": "wrapper.messageInfo.type"},
+        {"name": "expire", "type": "Label", "view_path": "wrapper.messageInfo.expire"},
+        
+        {"name": "accept", "type": "Button", "view_path": "wrapper.controlContainer.accept", "text": "@accept"},
+        {"name": "refuse", "type": "Button", "view_path": "wrapper.controlContainer.reject", "text": "@refuse"}
+
+    ]
+}

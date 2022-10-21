@@ -1,0 +1,52 @@
+{
+  "name": "scheduled_coop_003",
+  "type": "scheduled",
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "common",
+  "display_name": { "localization_key": "@scheduled_coop_003_name" },
+  "description": { "localization_key": "@scheduled_coop_003_description" },
+  "conditions": [
+    {
+      "name": "scheduled_coop_003_1",
+      "event_description": { "localization_key": "@scheduled_coop_003_1_event_description" },
+      "event": { "event_id": "Kill", "actor_is_me": true, "target_ai_archetype_is": ["StraferAR", "StraferAR_grade2", "StraferAR_grade2_firegrenade", "StraferAR_grade3", "StraferSMG", "StraferSMG_grade2", "StraferSMG_grade3",
+                           "StraferSHG", "StraferSHG_grade2", "StraferSHG_grade3", "StraferSR", "StraferSR_grade2", "StraferRL", "StraferRL_grade2", "StraferGL", 
+                           "StraferFlamethrower", "Minotaur",  "Minotaur_napalm", "StraferBombDrone", "Stilt_Strafer", "Colossus"]},
+      "progress": 200
+    },
+    {
+      "name": "scheduled_coop_003_2",
+      "event_description": { "localization_key": "@scheduled_coop_003_2_event_description" },
+      "event": { "event_id": "Kill", "actor_is_me": true, "target_ai_archetype_is": ["glasshead", "glasshead_grade2", "glasshead_grade3", "glasshead_grade4",
+                            "glasshead_basic_melee_normal", "glasshead_basic_melee_grade2", "glasshead_basic_melee_grade3", "glasshead_basic_melee_grade4",
+                            "glasshead_lava", "glasshead_lava_grade2","glasshead_lava_grade3",
+                            "glasshead_splinter_normal", "glasshead_splinter_grade2", "glasshead_splinter_grade3",
+                            "glasshead_basic_ranged_normal", "glasshead_basic_ranged_grade2", "glasshead_basic_ranged_grade3", "glasshead_basic_ranged_grade4",
+                            "adamant", "adamant_grade2", "adamant_grade", "Shardskin", "glasshead_turret", "chaser",
+                            "GlassheadBombDog", "glasshead_nest_supporter", "glasshead_fairfly_turret", 
+                            "chaserModifier", "HordeStiltMelee", "horde_fairfly_turret_boss", "horde_parasite_turret", "horde_glasshead_runner", "horde_carrier_dog", "chaserMaze",
+                            "glasshead_fairfly_turret_no_jump", "horde_phantomcore_boss",
+                            "Stilt","Stilt_Strafer","Behemoth","queen_new"]},
+      "progress": 200
+    }
+  ],
+  
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 2000
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 1000
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 15
+    }
+  ]
+}

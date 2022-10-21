@@ -1,0 +1,48 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "691814ecc31340a0b930382129a59569",
+    "Name": "ClientStatisticsReporting",
+    "DisplayName": "ClientStatisticsReporting",
+    "Version": "0.1.0",
+    "Summary": "Client statistics reporting components",
+    "Tags": ["Untagged"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        }
+    ],
+    "Dependencies":
+    [
+        {
+            "Uuid": "e41015ed6a144133bef885062f4b4a54",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "PerformanceStatisticsProtocol"
+        },
+        {
+            "Uuid": "1b84470a5c68417da323becf125ba847",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "GameSessionStatisticsProtocol"
+        },
+        {
+            "Uuid": "163db08db2f74a65a5143d1b48963efe",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "UIStatisticsProtocol"
+        },
+        {
+            "Uuid": "28502d2aff664e6b8ee01a8dc493a42f",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "StatisticsCore"
+        },
+        {
+            "Uuid": "94748877847b4749a583914e5b2c17ed",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "StatisticsProtocol"
+        },
+        {
+            "Uuid": "fdf835172a854155ac2aecd75989dd99",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "StatisticsReporting"
+        }
+    ]
+}

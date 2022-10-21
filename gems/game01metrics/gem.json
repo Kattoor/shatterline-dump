@@ -1,0 +1,48 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "ad094c3b6702497cafdcb5f331ab6b8a",
+    "Name": "Game01Metrics",
+    "DisplayName": "Game01Metrics",
+    "Version": "0.1.0",
+    "Summary": "Collect and report metrics to elastic",
+    "Tags": ["Untagged"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        }
+    ],
+    "Dependencies":
+    [
+        {
+            "Uuid": "71f233c8118b4c8283e3406b447657ab",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01BackendCommon"
+        },
+        {
+            "Uuid": "aa86a3ac41394c25abe546db56b167ed",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01ServerBackend"
+        },
+        {
+            "Uuid": "28502d2aff664e6b8ee01a8dc493a42f",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01StatisticsCore"
+        },
+        {
+            "Uuid": "94748877847b4749a583914e5b2c17ed",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01StatisticsProtocol"
+        },
+        {
+            "Uuid": "28479e255bde466e91fc34eec808d9c7",
+            "VersionConstraints": [ "~>1.0.0" ],
+            "_comment": "HttpRequestor"
+        },
+        {
+            "Uuid": "2ebd4481cbf142b89286f28b4c29ace3",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01Interfaces"
+        }
+    ]
+}

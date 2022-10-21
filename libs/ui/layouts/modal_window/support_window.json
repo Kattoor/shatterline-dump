@@ -1,0 +1,28 @@
+{
+    "script": "scripts/ui/modal_window/support_window.lua",
+    "view_path": "SupportWindow.html",
+    "children": [
+        {"name": "title", "type": "Label", "view_path": "container.title", "text": "@support_window"},
+
+        {"name": "content", "type": "Component", "view_path": "container.content"},
+
+        {"name": "faq_label", "type": "Label", "view_path": "container.content.faqWrapper.faqLabel", "text": "@support_window_faq_label"},
+        {"name": "faq_button", "type": "Button", "view_path": "container.content.faqWrapper.faqButton", "text": "@support_window_faq_button"},
+
+        {"name": "subject_list", "type": "ListBox", "view_path": "container.content.subjectList"},
+        {"name": "subject_list_container", "type": "Component", "view_path": "container.content.subjectList.container"},
+
+        {"name": "sender_email_label", "type": "Label", "view_path": "container.content.senderEmailLabel", "text": "@support_window_email"},
+        {"name": "sender_email", "type": "EditBox", "view_path": "container.content.senderEmail"},
+
+        {"name": "message_label", "type": "Label", "view_path": "container.content.messageLabel", "text": "@support_window_message"},
+        {"name": "message", "type": "EditBox", "view_path": "container.content.message"},
+        {"name": "maximumCharacters", "type": "Label", "view_path": "container.content.maximumCharacters", "text": "@support_window_limit"},
+
+        {"name": "cancel_button", "type": "Button", "view_path": "container.controlContainer.cancelButton", "text": "@cancel_btn"},
+        {"name": "cancel_button_hint", "type": "ActionLabel", "view_path": "container.controlContainer.cancelButton.wrapper.key", "gamepad_only": true},
+
+        {"name": "apply_button", "type": "Button", "view_path": "container.controlContainer.applyButton", "text": "@apply_btn"},
+        {"name": "apply_button_hint", "type": "ActionLabel", "view_path": "container.controlContainer.applyButton.wrapper.key", "gamepad_only": true}
+    ]
+}

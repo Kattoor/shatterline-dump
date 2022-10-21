@@ -1,0 +1,215 @@
+{
+  "events": [
+    {
+      "name": "OnHit" 
+    },
+    {
+      "name": "Kill"
+    },
+    {
+      "name": "Assist"
+    },
+    {
+      "name": "LeaderboardPlace"
+    },
+    {
+      "name": "Resurrect"
+    },
+    {
+      "name": "Death"
+    },
+    {
+      "name": "Heal"
+    },
+    {
+      "name": "FirstBlood"
+    },
+    {
+      "name": "Revenge"
+    },
+    {
+      "name": "ReturnFire"
+    },
+    {
+      "name": "ShutDown"
+    },
+    {
+      "name": "SpotTarget"
+    },
+    {
+      "name": "SpotPosition"
+    },
+    {
+      "name": "MedkitUsed"
+    },
+    {
+      "name": "Suicide"
+    },
+    {
+      "name": "WeaponTick"
+    },
+    {
+      "name": "DestroyEnemyObjects"
+    },
+    {
+      "name": "EnemyFrozen"
+    },
+    {
+      "name": "KillEnemyDrone"
+    },
+    {
+      "name": "Headshot",
+      "event": [
+        {
+          "event_id": "Kill",
+          "hit_part_is": [
+            "Head"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "BladeMaster",
+      "event": [
+        {
+          "event_id": "Kill",
+          "hit_type_is": [
+            "Melee"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SlideKill",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_stance_is": [
+            "Slide"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "CollateralKill",
+      "event": [
+        {
+          "event_id": "Kill",
+          "hit_type_is": [
+            "AOE"
+          ]
+        }
+      ],
+      "count": 2,
+      "time_to_perform": 0.1,
+      "reset_on_completion": false
+    },
+    {
+      "name": "FieldMedic",
+      "event": [
+        {
+          "event_id": "Resurrect"
+        }
+      ],
+      "count": 2
+    },
+    {
+      "name": "DoubleKill",
+      "event": [
+        {
+          "event_id": "Kill"
+        },
+        {
+          "event_id": "Assist"
+        }
+      ],
+      "count": 2,
+      "time_to_perform": 2,
+      "reset_on_completion": true
+    },
+    {
+      "name": "TripleKill",
+      "event": [
+        {
+          "event_id": "Kill"
+        },
+        {
+          "event_id": "Assist"
+        }
+      ],
+      "count": 3,
+      "time_to_perform": 2,
+      "reset_on_completion": false
+    },
+    {
+      "name": "KillStreak",
+      "event": [
+        {
+          "event_id": "Kill"
+        },
+        {
+          "event_id": "Assist"
+        }
+      ],
+      "count": 3,
+      "reset_on_completion": false
+    },
+    {
+      "name": "Rampage",
+      "event": [
+        {
+          "event_id": "Kill"
+        },
+        {
+          "event_id": "Assist"
+        }
+      ],
+      "count": 5,
+      "reset_on_completion": false
+    },
+    {
+      "name": "Bloodlust",
+      "event": [
+        {
+          "event_id": "Kill"
+        },
+        {
+          "event_id": "Assist"
+        }
+      ],
+      "count": 7,
+      "reset_on_completion": false,
+      "reset_on_death": false
+    },
+    {
+      "name": "ExplosiveObjectKill",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_item_tag_is": ["explosive"],
+          "target_player_class_is_not": []
+        }
+      ]
+    },
+    {
+      "name": "MovableObjectKill",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_item_tag_is": ["movable"],
+          "target_player_class_is_not": []
+        }
+      ]
+    },
+    {
+      "name": "KickKill",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_item_tag_is": ["character_kick"],
+          "target_player_class_is_not": []
+        }
+      ]
+    }
+  ]
+}

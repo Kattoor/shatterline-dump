@@ -1,0 +1,31 @@
+{
+    "descriptors": [
+        {
+            "hit_type_match": "Melee",
+            "melee_type_match": "KnifeStab",
+
+            "sound_trigger": "hit_player_knife_fb",
+            "effect_type": "blood",
+            "effect_animation": "fadeout",
+            "ui_direction_enabled": true
+        },
+        {
+            "hit_type_match": "Melee",
+            "melee_type_match": "KnifeBackstab",
+
+            "sound_trigger": "hit_player_knife_fb",
+            "effect_type": "blood",
+            "effect_animation": "fadeout",
+            "ui_direction_enabled": true
+        },
+        {
+            "hit_type_match": "Melee",
+            "melee_type_match": "Default",
+
+            "sound_trigger": "hit_player_melee_fb",
+            "effect_type": "blood",
+            "effect_animation": "fadeout",
+            "ui_direction_enabled": true
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "script": "scripts/ui/lobby/custom_game/custom_game.lua",
+    "view_path": "CustomGame.html",
+    "send_stats": true,
+    "children":
+    [
+        {"name": "navigation_bar", "type": "Component", "file": "lobby/navigation_bar_tiny.json"},
+        {"name": "join_game", "type": "Component", "file": "lobby/custom_game/join_game.json", "visible": false},
+        {"name": "create_game", "type": "Component", "file": "lobby/custom_game/create_game.json", "visible": false}
+    ]
+}

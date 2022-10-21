@@ -1,0 +1,29 @@
+{
+    "descriptors": [
+        {
+            "hit_type_match": "Shot",
+
+            "sound_trigger": "hit_player_fb",
+            "effect_type": "blood",
+            "effect_animation": "fadeout",
+            "ui_direction_enabled": true
+        },
+        {
+            "hit_type_match": "AOE",
+
+            "effect_type": "blood",
+            "effect_animation": "fadeout",
+            "ui_direction_enabled": true
+        },
+        {
+            "hit_type_match": "Fall",
+
+            "effect_type": "blood",
+            "effect_animation": "fadeout",
+            "ui_direction_enabled": false
+        },
+        {
+            "hit_type_match": "Bleed"
+        }
+    ]
+}

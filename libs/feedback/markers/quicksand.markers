@@ -1,0 +1,125 @@
+{
+    "markers": [
+        {
+            "name": "du_quicksand_strafer_base",
+            "elements": [
+                { 
+                    "way_point":
+                    {
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        
+                        "image_alias": "marker_way_point_icon",
+                        "info_text": "@plc_quicksand_strafer_base",
+                        "image_color": "#E9F0F3",
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_hexagon_icon_wave_npa",
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.0,
+                        "race_icon_track_scale": 0.6,
+                        "offset": 1.5
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_way_point_radar_icon", "snapped": true } }
+            ]
+        },
+        {
+            "name": "du_quicksand_city_gate",
+            "elements": [
+                { 
+                    "usable_icon":
+                    {
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        "image_alias": "marker_way_point_icon",
+                        "image_color": "#FFE400",
+                        "info_text": "@plc_quicksand_city_gate",
+                        "ready_to_use_text": "@hold_to_use_btn",
+                        "using_text": "@using_btn",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_rhombus_icon_mask_npa",
+                        "radial_progress_bg_color": "#E9F0F3",
+                        "radial_progress_color": "#1494D8",
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.0,
+                        "race_icon_track_scale": 0.6,
+                        "offset": 1.5
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_way_point_radar_icon", "icon_color": "#FFE400", "snapped": true } }
+            ]
+        },
+        {
+            "name": "du_quicksand_palace_gate",
+            "elements": [
+                { 
+                    "usable_icon":
+                    {
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        "image_alias": "marker_way_point_icon",
+                        "image_color": "#FFE400",
+                        "info_text": "@plc_quicksand_palace_gate",
+                        "ready_to_use_text": "@hold_to_use_btn",
+                        "using_text": "@using_btn",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_rhombus_icon_mask_npa",
+                        "radial_progress_bg_color": "#E9F0F3",
+                        "radial_progress_color": "#1494D8",
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.0,
+                        "race_icon_track_scale": 0.6,
+                        "offset": 1.5
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_way_point_radar_icon", "icon_color": "#FFE400", "snapped": true } }
+            ]
+        },
+        {
+            "name": "du_quicksand_console",
+            "elements": [
+                { 
+                    "usable_icon":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        "image_alias": "marker_interact_icon",
+                        "image_color": "#FFE400",
+                        "info_text": "@plc_quicksand_console",
+                        "ready_to_use_text": "@hold_to_use_btn",
+                        "using_text": "@using_btn",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_rhombus_icon_mask_npa",
+                        "radial_progress_bg_color": "#E9F0F3",
+                        "radial_progress_color": "#1494D8",
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.0,
+                        "race_icon_track_scale": 0.6,
+                        "offset": 0.1
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_way_point_radar_icon", "player_icon": false, "icon_color": "#FFE400", "snapped": true } }
+            ]
+        },
+        {
+            "name": "du_quicksand_evac",
+            "elements": [
+                { 
+                    "way_point":
+                    {
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        
+                        "image_alias": "marker_way_point_icon",
+                        "info_text": "@plc_quicksand_evac",
+                        "image_color": "#E9F0F3",
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_hexagon_icon_wave_npa",
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.0,
+                        "race_icon_track_scale": 0.6,
+                        "offset": 1.5
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_way_point_radar_icon", "snapped": true } }
+            ]
+        }
+    ]
+}

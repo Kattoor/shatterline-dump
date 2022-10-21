@@ -1,0 +1,332 @@
+{
+    "name": "Queen/DistanceAttack",
+    "root": "ae2f3770-032e-4bd2-a0c3-c44020039d38",
+    "nodes": {
+        "1ee076d6-13d6-4b24-a5e2-f60dfe18108d": {
+            "name": "SetMovementPace",
+            "pos": {
+                "x": -770,
+                "y": 392
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "PaceType",
+                    "type": "StringHash",
+                    "value": "Regular"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "c115113d-8f63-4b78-b9a8-a58f5573ae16": {
+            "name": "SetAnimState",
+            "pos": {
+                "x": -280,
+                "y": 395
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "AGInput",
+                    "type": "StringHash",
+                    "value": "None"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "6cbc97ea-6021-4fc6-97c4-c100ee10efd4": {
+            "name": "SetInvulnerability",
+            "pos": {
+                "x": 215,
+                "y": 396
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "e1c55f7c-0911-4cb2-b2f7-6654ae586cdf": {
+            "name": "TargetInHorizontalRange",
+            "pos": {
+                "x": -35,
+                "y": 396
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Source",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Min",
+                    "type": "Float",
+                    "value": "0"
+                },
+                {
+                    "name": "Max",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "range_for_distance_attack"
+                    ]
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "9450682a-a554-4525-b88b-0213b22f7e09"
+        },
+        "be60a9d6-5db0-49da-91c1-23192fa3ac3d": {
+            "name": "StartFireAndStopOnExit",
+            "pos": {
+                "x": 580,
+                "y": 396
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "8889a7aa-b9e6-4722-9af7-ea0103365176"
+        },
+        "2587c628-079e-4bc4-8b4f-86128ccbce22": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 263
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "1ee076d6-13d6-4b24-a5e2-f60dfe18108d",
+                "2151a603-be9a-4091-8c86-effdf6f273b3",
+                "c115113d-8f63-4b78-b9a8-a58f5573ae16",
+                "e1c55f7c-0911-4cb2-b2f7-6654ae586cdf",
+                "6cbc97ea-6021-4fc6-97c4-c100ee10efd4",
+                "a0da1a7c-182e-4144-a2eb-522727eb9787",
+                "be60a9d6-5db0-49da-91c1-23192fa3ac3d"
+            ]
+        },
+        "9450682a-a554-4525-b88b-0213b22f7e09": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": -35,
+                "y": 586
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ApproachToDistanceAttack"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "af6b0c5d-323e-4fa8-bd6e-f1f8a288d147"
+        },
+        "8889a7aa-b9e6-4722-9af7-ea0103365176": {
+            "name": "Wait",
+            "pos": {
+                "x": 580,
+                "y": 523
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "range_attack_firing_time"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "af6b0c5d-323e-4fa8-bd6e-f1f8a288d147": {
+            "name": "ApproachToKeepDistance",
+            "pos": {
+                "x": -35,
+                "y": 726
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "Distance",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Inventory",
+                        "CurrentItem",
+                        "effective_distance"
+                    ]
+                },
+                {
+                    "name": "DistanceDeviationMin",
+                    "type": "Float",
+                    "value": "-1"
+                },
+                {
+                    "name": "DistanceDeviationMax",
+                    "type": "Float",
+                    "value": "-2"
+                },
+                {
+                    "name": "MoveBackDirectionRandomization",
+                    "type": "Float",
+                    "value": "0.00"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "ae2f3770-032e-4bd2-a0c3-c44020039d38": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 109
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "DistanceAttack"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "2587c628-079e-4bc4-8b4f-86128ccbce22"
+        },
+        "2151a603-be9a-4091-8c86-effdf6f273b3": {
+            "name": "SetCharacterOffsetZ",
+            "pos": {
+                "x": -515,
+                "y": 393
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "OffsetZ",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "distance_attack_offset_z"
+                    ]
+                },
+                {
+                    "name": "VelocityZ",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "distance_attack_velocity_z"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "a0da1a7c-182e-4144-a2eb-522727eb9787": {
+            "name": "ActivateComponents",
+            "pos": {
+                "x": 390,
+                "y": 396
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Tag",
+                    "type": "StringHash",
+                    "value": "queen_shield"
+                },
+                {
+                    "name": "Enable",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [
+        {
+            "id": "bc8ba5df-3bc8-4e6f-8f1d-852d743f2b57",
+            "pos": {
+                "x": -200,
+                "y": -100
+            },
+            "extent": {
+                "x": 400,
+                "y": 200
+            },
+            "text": "Queen/DistanceAttack: [behavior description]",
+            "color": "rgba(150,250,150, 0.4)",
+            "collapseLevel": null
+        }
+    ],
+    "commentOrder": [
+        "bc8ba5df-3bc8-4e6f-8f1d-852d743f2b57"
+    ]
+}

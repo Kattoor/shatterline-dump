@@ -1,0 +1,33 @@
+{
+  "name": "daily_operative_ability_027",
+  "type": "daily",
+  "tags": [
+    "daily_operative_ability"
+  ],
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "uncommon",
+  "display_name": { "localization_key": "@daily_operative_ability_027_name" },
+  "description": { "localization_key": "@daily_operative_ability_027_description" },
+  "conditions": [
+    {
+      "name": "daily_operative_ability_027",
+      "event_description": { "localization_key": "@daily_operative_ability_027_event_description" },
+      "event": { "event_id": "Script_axe01", "actor_is_me": true},
+      "progress": 3
+    }
+  ],
+  
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 200
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 250
+    }
+  ]
+}

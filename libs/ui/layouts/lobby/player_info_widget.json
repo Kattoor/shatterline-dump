@@ -1,0 +1,60 @@
+{
+    "script": "scripts/ui/lobby/player_info_widget.lua",
+    "view_path": "PlayerInfoWidget.html",
+    "children":
+    [
+        {"name": "hardCurrencyValue", "type": "Label", "view_path": "wrapper.currency.hardCurrency.hardCurrencyValue"},
+        {"name": "hardCurrencyImage", "type": "Image", "view_path": "wrapper.currency.hardCurrency.hardCurrencyImage"},
+
+        {"name": "softCurrencyValue", "type": "Label", "view_path": "wrapper.currency.softCurrency.softCurrencyValue"},
+        {"name": "softCurrencyImage", "type": "Image", "view_path": "wrapper.currency.softCurrency.softCurrencyImage"},
+
+        {"name": "badge", "type": "Button", "view_path": "wrapper.playerBadge.nameplate"},
+        {"name": "playerImage", "type": "Image", "view_path": "wrapper.playerBadge.nameplate.background", "image": "nameplate_background_2"},
+        {"name": "playerAvatar", "type": "Image", "view_path": "wrapper.playerBadge.nameplate.bodyWrapper.icon", "image": "nameplate_icon_2"},
+
+        {"name": "leaderIcon", "type": "Panel", "view_path": "wrapper.playerBadge.nameplate.bodyWrapper.leaderIcon", "visible": false},
+
+        {"name": "playerName", "type": "Label", "view_path": "wrapper.playerBadge.nameplate.bodyWrapper.nameWrapper.name"},
+        {"name": "playerClan", "type": "Label", "view_path": "wrapper.playerBadge.nameplate.bodyWrapper.nameWrapper.clan", "visible": false},
+        {"name": "player_hint", "type": "ActionLabel", "view_path": "wrapper.playerBadge.nameplate.hint", "gamepad_only": true},
+
+        {"name": "social", "type": "Panel", "view_path": "wrapper.playerBadge.socialWrapper"},
+
+        {"name": "party_slot_1", "type": "Button", "view_path": "wrapper.playerBadge.socialWrapper.partySlot1"},
+        {"name": "party_slot_1_image", "type": "Image", "view_path": "wrapper.playerBadge.socialWrapper.partySlot1.image"},
+        {"name": "party_slot_1_empty", "type": "Panel", "view_path": "wrapper.playerBadge.socialWrapper.partySlot1.empty"},
+        {"name": "party_slot_1_leader", "type": "Panel", "view_path": "wrapper.playerBadge.socialWrapper.partySlot1.leaderIcon", "visible": false},
+
+        {"name": "party_slot_2", "type": "Button", "view_path": "wrapper.playerBadge.socialWrapper.partySlot2"},
+        {"name": "party_slot_2_image", "type": "Image", "view_path": "wrapper.playerBadge.socialWrapper.partySlot2.image"},
+        {"name": "party_slot_2_empty", "type": "Panel", "view_path": "wrapper.playerBadge.socialWrapper.partySlot2.empty"},
+        {"name": "party_slot_2_leader", "type": "Panel", "view_path": "wrapper.playerBadge.socialWrapper.partySlot2.leaderIcon", "visible": false},
+
+        {"name": "party_slot_3", "type": "Button", "view_path": "wrapper.playerBadge.socialWrapper.partySlot3"},
+        {"name": "party_slot_3_image", "type": "Image", "view_path": "wrapper.playerBadge.socialWrapper.partySlot3.image"},
+        {"name": "party_slot_3_empty", "type": "Panel", "view_path": "wrapper.playerBadge.socialWrapper.partySlot3.empty"},
+        {"name": "party_slot_3_leader", "type": "Panel", "view_path": "wrapper.playerBadge.socialWrapper.partySlot3.leaderIcon", "visible": false},
+
+        {"name": "party_slot_4", "type": "Button", "view_path": "wrapper.playerBadge.socialWrapper.partySlot4"},
+        {"name": "party_slot_4_image", "type": "Image", "view_path": "wrapper.playerBadge.socialWrapper.partySlot4.image"},
+        {"name": "party_slot_4_empty", "type": "Panel", "view_path": "wrapper.playerBadge.socialWrapper.partySlot4.empty"},
+        {"name": "party_slot_4_leader", "type": "Panel", "view_path": "wrapper.playerBadge.socialWrapper.partySlot4.leaderIcon", "visible": false},
+
+        {"name": "party_slot_5", "type": "Button", "view_path": "wrapper.playerBadge.socialWrapper.partySlot5"},
+        {"name": "party_slot_5_image", "type": "Image", "view_path": "wrapper.playerBadge.socialWrapper.partySlot5.image"},
+        {"name": "party_slot_5_empty", "type": "Panel", "view_path": "wrapper.playerBadge.socialWrapper.partySlot5.empty"},
+        {"name": "party_slot_5_leader", "type": "Panel", "view_path": "wrapper.playerBadge.socialWrapper.partySlot5.leaderIcon", "visible": false},
+
+        {"name": "social_btn", "type": "Button", "view_path": "wrapper.playerBadge.socialWrapper.friendsSlot"},
+        {"name": "friends_count", "type": "Label", "view_path": "wrapper.playerBadge.socialWrapper.friendsSlot.friendsCount"},
+        {"name": "social_hint", "type": "ActionLabel", "view_path": "wrapper.playerBadge.socialWrapper.friendsSlot.hint", "gamepad_only": true},
+
+        {"name": "context_menu", "type": "Component", "view_path": "wrapper.contextMenu", "file": "lobby/social_panel/context_menu/social_context_menu.json", "visible": false},
+
+        {"name": "currency_limit", "type": "Component", "view_path": "wrapper.currency.softCurrency.currencyLimit"},
+        {"name": "currency_limit_text", "type": "Label", "view_path": "wrapper.currency.softCurrency.currencyLimit.wrapper.content.text"},
+        {"name": "currency_current_label", "type": "Label", "view_path": "wrapper.currency.softCurrency.currencyLimit.wrapper.content.currency.current"},
+        {"name": "currency_limit_label", "type": "Label", "view_path": "wrapper.currency.softCurrency.currencyLimit.wrapper.content.currency.limit"}
+    ]
+}

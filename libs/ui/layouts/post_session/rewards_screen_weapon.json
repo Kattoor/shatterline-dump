@@ -1,0 +1,20 @@
+{
+    "script": "",
+    "view_path": "RewardsScreenWeapon.html",
+    "children": [
+        {"name": "weapon_title", "type": "Label", "view_path": "weapon.weaponBody.title"},
+        {"name": "weapon_level", "type": "Label", "view_path": "weapon.weaponBody.levelLabel"},
+        {"name": "weapon_image", "type": "Image", "view_path": "weapon.weaponBody.image"},
+        {"name": "skin_image", "type": "Image", "view_path": "weapon.weaponBody.skinImage"},
+        {"name": "weapon_progress_bar", "type": "ProgressBar", "view_path": "weapon.doubleProgressBarContainer.doubleProgressBar"},
+
+        {"name": "item_old_progress", "type": "ProgressBar", "view_path": "weapon.doubleProgressBarContainer.doubleProgressBar.wrapper.oldProgress"},
+        {"name": "item_new_progress", "type": "ProgressBar", "view_path": "weapon.doubleProgressBarContainer.doubleProgressBar.wrapper.newProgress"},
+
+        {"name": "attachment_image", "type": "Image", "view_path": "attachment.attachmentImage"},
+        {"name": "attachment_title", "type": "Label", "view_path": "attachment.attachmentTitle"},
+
+        {"name": "item_rarity", "type": "Label", "view_path": "weapon.rarity"},
+        {"name": "attachment_item_rarity", "type": "Label", "view_path": "attachment.rarity"}
+    ]
+}

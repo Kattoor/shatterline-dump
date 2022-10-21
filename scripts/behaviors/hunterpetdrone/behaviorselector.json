@@ -1,0 +1,120 @@
+{
+    "name": "HunterPetDrone/BehaviorSelector",
+    "root": "d7dae342-bf08-472e-816c-bb58ab041ca2",
+    "nodes": {
+        "d7dae342-bf08-472e-816c-bb58ab041ca2": {
+            "name": "Repeater",
+            "pos": {
+                "x": 0,
+                "y": 101
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Iterations",
+                    "type": "Integer",
+                    "value": "0"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "259187f8-200d-49ab-a061-daf88784d039"
+        },
+        "9deabf55-5633-4a07-af7a-893068698588": {
+            "name": "IsBehaviorCondition",
+            "pos": {
+                "x": -155,
+                "y": 401
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "HunterHasTarget"
+                },
+                {
+                    "name": "ResetOnExit",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "600af911-6e8b-4758-8214-51470c97a594"
+        },
+        "259187f8-200d-49ab-a061-daf88784d039": {
+            "name": "Selector",
+            "pos": {
+                "x": 0,
+                "y": 250
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "9deabf55-5633-4a07-af7a-893068698588",
+                "7469bad2-4b5d-480f-b4e0-c8560bdb6aa7"
+            ]
+        },
+        "600af911-6e8b-4758-8214-51470c97a594": {
+            "name": "SelectDesiredBehavior",
+            "pos": {
+                "x": -155,
+                "y": 585
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Behavior",
+                    "type": "StringHash",
+                    "value": "HunterHasTarget"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "7469bad2-4b5d-480f-b4e0-c8560bdb6aa7": {
+            "name": "SelectDesiredBehavior",
+            "pos": {
+                "x": 185,
+                "y": 400
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Behavior",
+                    "type": "StringHash",
+                    "value": "HunterFollowOwner"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

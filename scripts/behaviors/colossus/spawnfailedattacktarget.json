@@ -1,0 +1,119 @@
+{
+    "name": "Colossus/SpawnFailedAttackTarget",
+    "root": "cd194857-9c0c-48ed-a7d0-a14a841b9fe9",
+    "nodes": {
+        "36868c1a-4964-4eeb-8c71-5f9cfc12a07f": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 214
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "SpawnFailedAttackTarget"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "a1784dca-8158-4fbe-9111-570c97aa80b3"
+        },
+        "cd194857-9c0c-48ed-a7d0-a14a841b9fe9": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 94
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "SpawnFailedAttackTarget"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "36868c1a-4964-4eeb-8c71-5f9cfc12a07f"
+        },
+        "a1784dca-8158-4fbe-9111-570c97aa80b3": {
+            "name": "IsBBValueExist",
+            "pos": {
+                "x": 0,
+                "y": 350
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ValuePath",
+                    "type": "StringHash",
+                    "value": "Target.ID"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "6a3cfe0a-21d1-4c73-9d30-a2e79e52fa71"
+        },
+        "6a3cfe0a-21d1-4c73-9d30-a2e79e52fa71": {
+            "name": "ApproachTo",
+            "pos": {
+                "x": 0,
+                "y": 522
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "EndDistance",
+                    "type": "Float",
+                    "value": "0.00"
+                },
+                {
+                    "name": "UpdateDestinationPoint",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

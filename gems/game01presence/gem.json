@@ -1,0 +1,43 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "27753aac9f9c4939983be1a499633303",
+    "Name": "Presence",
+    "DisplayName": "Presence",
+    "Version": "0.1.0",
+    "Summary": "Player presence management system",
+    "Tags": ["Untagged"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        }
+    ],
+    "Dependencies":
+    [   
+        {
+            "Uuid": "b8e16ebeec9346f18af81fe09b6844bf",
+            "VersionConstraints": ["~>0.1"],
+            "_comment": "ClientBackend"
+        },
+        {
+            "Uuid": "4d5d71b02d454ca3be846eb7e16b82f3",
+            "VersionConstraints": ["~>0.1"],
+            "_comment": "Notification"
+        },
+        {
+            "Uuid": "c0bf497f08e64a38ad901aecf5ce4f1d",
+            "VersionConstraints": ["~>0.1"],
+            "_comment": "Game01PlayerProfile"
+        },
+        {
+            "Uuid": "bbac7b640c4448fad56e166e54fee0ef",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01Steam"
+        },
+        {
+            "Uuid": "7e24ebb066104127a4abb14e13ec7bed",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "GameSession"
+        }
+    ]
+}

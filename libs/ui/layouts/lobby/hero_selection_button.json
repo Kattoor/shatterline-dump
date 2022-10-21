@@ -1,0 +1,14 @@
+{
+    "script": "",
+    "view_path": "HeroSelectButton.html",
+    "children":
+    [
+        {"name": "image", "type": "Image", "view_path": "wrapper.container.heroAvatar"},
+        {"name": "price_container", "type": "Component", "view_path": "wrapper.container.priceWrapper"},
+        {"name": "currency", "type": "Image", "view_path": "wrapper.container.priceWrapper.icon"},
+        {"name": "currency_count", "type": "Label", "view_path": "wrapper.container.priceWrapper.label"},
+        {"name": "available_label", "type": "Label", "view_path": "wrapper.container.available"},
+        {"name": "locked_label", "type": "Label", "view_path": "wrapper.container.locked", "text": "@prebattle_locked"},
+        {"name": "recent_icon", "type": "Component", "view_path": "wrapper.container.recentIcon", "visible": false}
+    ]
+}

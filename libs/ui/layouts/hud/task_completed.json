@@ -1,0 +1,12 @@
+{
+    "script": "scripts/ui/task_completed.lua",
+    "view_path": "TaskCompleted.html",
+    "hide_cursor": true,
+    "children":
+    [
+        {"name": "Title", "type": "Label", "view_path": "container.title", "text": "@task_completed"},
+        {"name": "TaskTitle", "type": "Label", "view_path": "container.taskContainer.taskContent.taskTitle"},
+        {"name": "TaskIcon", "type": "Image", "view_path": "container.taskContainer.taskContent.taskImage"},
+        {"name": "StatusTitle", "type": "Label", "view_path": "container.taskContainer.taskContent.taskCompleted.taskCompletedLabel", "text": "@task_done"}
+    ]
+}

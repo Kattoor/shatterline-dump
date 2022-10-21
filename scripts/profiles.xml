@@ -1,0 +1,166 @@
+<Profiles id="1"> 
+    <Base id="100" type="bb">
+        <CharacterFeatures type="bb">
+            <GroundNav type="bool">true</GroundNav>
+            <GroundAvoidance type="bool">true</GroundAvoidance>
+            <GroundObstacle type="bool">false</GroundObstacle>
+            <Movement type="bool">true</Movement>
+            <Animation type="bool">false</Animation>
+            <Weapons type="bool">false</Weapons>
+            <Behavior type="bool">true</Behavior>
+            <Perception type="bool">true</Perception>
+            <PerceptionVisual type="bool">true</PerceptionVisual>
+            <PerceptionAudio type="bool">false</PerceptionAudio>
+            <PerceptionTactile type="bool">false</PerceptionTactile>
+            <PerceptionGroup type="bool">false</PerceptionGroup>
+            <BoidNav type="bool">false</BoidNav>
+            <CoverPointUser type="bool">true</CoverPointUser>
+            <Attachments type="bool">false</Attachments>
+            <DamageTracking type="bool">false</DamageTracking>
+        </CharacterFeatures>
+        <Perception type="bb">
+            <MaxObscuredTime type="float">1.0</MaxObscuredTime>
+            <MaxMemoryTime type="float">10.0</MaxMemoryTime>
+            <DecayRate type="float">0.2</DecayRate>
+            <MemoryMultiplier type="float">5.0</MemoryMultiplier>
+            <Visual type="bb">
+                <ObjectTagQuery type="string">Kyt:Character</ObjectTagQuery>
+                <RaycastRate type="float">0.5</RaycastRate>
+                <RaycastRateFriendly type="float">1.0</RaycastRateFriendly>
+                <ObjectQueryRate type="float">0.0</ObjectQueryRate>
+                <MaxDistance type="float">80</MaxDistance>  
+                <PrimaryFOV type="float">180.0</PrimaryFOV>
+                <SecondaryFOV type="float">360.0</SecondaryFOV>
+                <SecondaryFOVWeight type="float">2.0</SecondaryFOVWeight>
+                <BasePerceptionScale type="float">100000.0</BasePerceptionScale>
+            </Visual>
+            <Audio type="bb">
+                <BasePerceptionScale type="float">1.0</BasePerceptionScale>
+            </Audio>
+            <Group type="bb">
+                <SignalRange type="float">100</SignalRange>
+                <AllowPropagation type="bool">false</AllowPropagation>
+                <RegularUpdates type="bool">false</RegularUpdates>
+            </Group>
+        </Perception>
+
+        <!-- Target Selection -->
+        <TargetSelector type="string">AITargetSelector</TargetSelector>
+        
+        <TargetMinSelectionTime type="float">0.3</TargetMinSelectionTime>
+
+        <TargetSelection type="bb">
+            <TargetBias type="float">5.0</TargetBias>
+            <MemoryBias type="float">20.0</MemoryBias>
+        </TargetSelection>
+
+        <!-- Misc -->
+        <SlowdownAtPathEnd type="bool">true</SlowdownAtPathEnd>
+        <SlowdownAtPathEndRatio type="float">0.1</SlowdownAtPathEndRatio>
+        <SlowdownAtPathEndMinSpeed type="float">0.4</SlowdownAtPathEndMinSpeed>
+        
+        <GroundObstacleRadiusModifier type="float">1.0</GroundObstacleRadiusModifier>
+    </Base>
+
+    <Attacker id="103" inheritanceParent="100" type="bb">
+        <DefaultBehavior type="string">AttackBehavior</DefaultBehavior>
+    </Attacker>
+
+    <Defender id="104" inheritanceParent="100" type="bb">
+        <DefaultBehavior type="string">DefendBehavior</DefaultBehavior>
+    </Defender>
+
+    <Wander id="105" inheritanceParent="100" type="bb">
+        <DefaultBehavior type="string">Wander</DefaultBehavior>
+    </Wander>
+
+    <TKGTest id="106" inheritanceParent="100" type="bb">
+        <DefaultBehavior type="string">TKGTestBehavior</DefaultBehavior>
+
+        <CharacterFeatures type="bb">
+            <PerceptionGroup type="bool">true</PerceptionGroup>
+        </CharacterFeatures>
+
+        <Perception type="bb">
+            <MaxObscuredTime type="float">2.5</MaxObscuredTime>
+            <MaxMemoryTime type="float">30.0</MaxMemoryTime>
+            <DecayRate type="float">0.2</DecayRate>
+            <MemoryMultiplier type="float">5.0</MemoryMultiplier>
+            <Visual type="bb">
+                <MaxDistance type="float">50</MaxDistance>  
+                <PrimaryFOV type="float">70.0</PrimaryFOV>
+                <SecondaryFOV type="float">170.0</SecondaryFOV>
+                <SecondaryFOVWeight type="float">50.0</SecondaryFOVWeight>
+                <BasePerceptionScale type="float">10.0</BasePerceptionScale>
+            </Visual>
+            <Group type="bb">
+                <SignalRange type="float">100</SignalRange>
+                <AllowPropagation type="bool">true</AllowPropagation>
+                <RegularUpdates type="bool">true</RegularUpdates>
+            </Group>
+        </Perception>
+    </TKGTest>
+
+    <Player id="107" type="bb" />
+
+    <SampleAI id="108" inheritanceParent="100" type="bb">
+        <DefaultBehavior type="string"></DefaultBehavior>
+        
+        <CharacterFeatures type="bb">
+            <RollRate type="float">1.0</RollRate>
+        </CharacterFeatures>
+        <Perception type="bb">
+            <MaxObscuredTime type="float">1.0</MaxObscuredTime>
+        </Perception>
+    </SampleAI>
+
+    <Stilt id="109" inheritanceParent="108" type="bb">
+        <NavMeshName type="string">Stilt</NavMeshName>
+        <NavMeshType type="string">Stilt</NavMeshType>
+    </Stilt>
+
+    <Queen id="110" inheritanceParent="108" type="bb">
+        <NavMeshName type="string">Queen</NavMeshName>
+        <NavMeshType type="string">Queen</NavMeshType>
+    </Queen>
+
+    <Behemoth id="111" inheritanceParent="108" type="bb">
+        <NavMeshName type="string">Behemoth</NavMeshName>
+        <NavMeshType type="string">Behemoth</NavMeshType>
+    </Behemoth>
+
+    <ResurrectionDrone id="112" inheritanceParent="100" type="bb">
+        <DefaultBehavior type="string"></DefaultBehavior>
+        <TargetSelector type="string">ResurrectionDroneTargetSelector</TargetSelector>
+        <NavMeshName type="string">ResurrectionDrone</NavMeshName>
+        <NavMeshType type="string">ResurrectionDrone</NavMeshType>
+        <Perception type="bb">
+            <Visual type="bb">
+                <MaxDistance type="float">50</MaxDistance>
+            </Visual>
+        </Perception>
+    </ResurrectionDrone>
+
+    <Chaser id="113" inheritanceParent="100" type="bb">
+        <CharacterFeatures type="bb">
+            <GroundAvoidance type="bool">false</GroundAvoidance>
+        </CharacterFeatures>
+    </Chaser>
+
+    <Colossus id="114" inheritanceParent="108" type="bb">
+        <NavMeshName type="string">Colossus</NavMeshName>
+        <NavMeshType type="string">Colossus</NavMeshType>
+    </Colossus>
+
+    <FlyingAI id="115" inheritanceParent="100" type="bb">
+        <CharacterFeatures type="bb">
+            <GroundNav type="bool">false</GroundNav>
+            <GroundAvoidance type="bool">false</GroundAvoidance>
+            <FlightNav type="bool">true</FlightNav>
+            <FlightAvoidance type="bool">true</FlightAvoidance>
+            <FlightMovement type="bool">true</FlightMovement>
+            <Obstacle3D type="bool">true</Obstacle3D>
+        </CharacterFeatures>
+    </FlyingAI>
+
+</Profiles>

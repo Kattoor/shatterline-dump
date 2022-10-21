@@ -1,0 +1,26 @@
+{
+  "name": "test_task9_mode_specific",
+  "type": "daily",
+  "active": true,
+  "image": "test_icon",
+  "rarity": "common",
+  "display_name": { "localization_key": "@test_task9" },
+  "description": { "localization_key": "@test_task_description" },
+  "conditions": [
+    {
+      "name": "test_task9",
+      "event_description": { "localization_key": "@test_task_event_description" },
+      "progress": 10,
+      "event": { "event_id": "Headshot", "actor_team": "Same" }
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 1000
+    }
+  ],
+  "game_type": "pvp",
+  "ui_tags": ["mode_specific", "tdm_hardcore"]
+}

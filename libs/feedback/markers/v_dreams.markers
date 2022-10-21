@@ -1,0 +1,248 @@
+{
+    "markers": [
+        {
+            "name": "hand_icon",
+            "elements": [
+                {
+                    "usable_icon_static":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "image_alias": "marker_interact_icon",
+                        "image_color": "#FFE400",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_rhombus_icon_mask_npa",
+
+                        "race_icon_min_dist_visibility": 20,
+                        "visibility_mode": "Always",
+                        "race_icon_max_dist": 20,
+                        "race_icon_min_scale": 0.4,
+                        "race_icon_max_scale": 0.8
+                    }
+                },
+                { "instant_use_message": { "info_text": "@plc_vdream_touch", "hide_at_use": false }},
+                { "radar_icon": { "icon_alias": "marker_interact_icon", "snapped": true } }
+            ]
+        },
+        {
+            "name": "kioni_icon",
+            "elements": [
+                {
+                    "usable_icon_static":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "image_alias": "marker_interact_icon",
+                        "image_color": "#FFE400",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_rhombus_icon_mask_npa",
+
+                        "race_icon_min_dist_visibility": 20,
+                        "visibility_mode": "Always",
+                        "race_icon_max_dist": 20,
+                        "race_icon_min_scale": 0.4,
+                        "race_icon_max_scale": 0.8
+                    }
+                },
+                { "instant_use_message": { "info_text": "@plc_vdream_kioni", "hide_at_use": false }},
+                { "radar_icon": { "icon_alias": "marker_interact_icon", "snapped": true } }
+            ]
+        },
+        {
+            "name": "brendon_icon",
+            "elements": [
+                {
+                    "usable_icon_static":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "image_alias": "marker_interact_icon",
+                        "image_color": "#FFE400",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_rhombus_icon_mask_npa",
+
+                        "race_icon_min_dist_visibility": 20,
+                        "visibility_mode": "Always",
+                        "race_icon_max_dist": 20,
+                        "race_icon_min_scale": 0.4,
+                        "race_icon_max_scale": 0.8
+                    }
+                },
+                { "instant_use_message": { "info_text": "@plc_vdream_brandon", "hide_at_use": false }},
+                { "radar_icon": { "icon_alias": "marker_interact_icon", "snapped": true } }
+            ]
+        },
+        {
+            "name": "kioni_portal_icon",
+            "elements": [
+                { 
+                    "way_point":
+                    {
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        
+                        "image_alias": "marker_way_point_icon",
+                        "info_text": "@plc_vdream_kioni",
+                        "image_color": "#E9F0F3",
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_hexagon_icon_wave_npa",
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.0,
+                        "race_icon_track_scale": 0.6,
+                        "offset": 1.5
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_way_point_radar_icon", "snapped": true } }
+            ]
+        },
+        {
+            "name": "gate_car_marker",
+            "elements": [
+                { 
+                    "way_point":
+                    {
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        
+                        "image_alias": "marker_way_point_icon",
+                        "info_text": "@obj_vdream_brandon_boss",
+                        "image_color": "#E9F0F3",
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_hexagon_icon_wave_npa",
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.0,
+                        "race_icon_track_scale": 0.6,
+                        "offset": 1.5
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_way_point_radar_icon", "snapped": true } }
+            ]
+        },
+        {
+            "name": "brendon_team_icon",
+            "elements": [
+                {
+                    "usable_icon_static":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "image_alias": "marker_interact_icon",
+                        "image_color": "#FFE400",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_rhombus_icon_mask_npa",
+
+                        "race_icon_min_dist_visibility": 20,
+                        "race_icon_max_dist": 20,
+                        "race_icon_min_scale": 0.4,
+                        "race_icon_max_scale": 0.8,
+                        "visibility_mode": "Always"
+                    }
+                },
+                { "instant_use_message": { "info_text":"@plc_vdream_brandon_squad", "hide_at_use": false }},
+                { "radar_icon": { "icon_alias": "race_icon_way_point", "player_icon": false, "snapped": true } }
+            ]
+        },
+        {
+         "name": "brandon_capture_icon",
+            "elements": [
+                {
+                    "capture_icon":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "image_alias": "marker_way_point_icon",
+                        "image_color": "#FFE400",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_rhombus_icon_mask_npa",
+                        "radial_progress_bg_color": "#E9F0F3",
+                        "radial_progress_color": "#1494D8",
+
+                        "race_icon_min_dist_visibility": 20,
+                        "race_icon_min_dist": 1,
+                        "race_icon_max_dist": 30,
+                        "race_icon_track_scale": 0.5,
+                        "race_icon_min_scale": 0.5,
+                        "race_icon_max_scale": 1,
+
+                        "capturing_text": "@capturing",
+                        "decapturing_text": "@decapturing",
+                        "contesting_text": "@contesting",
+                        "contested_text": "@contested"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "teleport_icon",
+            "elements": [
+                {
+                    "usable_icon_static":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "image_alias": "marker_interact_icon",
+                        "image_color": "#FFE400",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_rhombus_icon_mask_npa",
+
+                        "race_icon_min_dist_visibility": 20,
+                        "race_icon_max_dist": 20,
+                        "race_icon_min_scale": 0.4,
+                        "race_icon_max_scale": 0.8,
+                        "visibility_mode": "Always"
+                    }
+                },
+                { "instant_use_message": { "info_text":"@plc_vdream_trial_teleport", "hide_at_use": false }},
+                { "radar_icon": { "icon_alias": "marker_interact_icon", "snapped": true } }
+            ]
+        },
+        {
+            "name": "kioni_pulse_icon",
+            "elements": [
+                {
+                    "usable_icon_static":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "image_alias": "marker_interact_icon",
+                        "image_color": "#FFE400",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_rhombus_icon_mask_npa",
+
+                        "race_icon_min_dist_visibility": 20,
+                        "race_icon_max_dist": 20,
+                        "race_icon_min_scale": 0.4,
+                        "race_icon_max_scale": 0.8,
+                        "visibility_mode": "Always"
+                    }
+                },
+                { "instant_use_message": { "info_text":"@plc_vdream_kioni_button", "hide_at_use": false }},
+                { "radar_icon": { "icon_alias": "marker_interact_icon", "snapped": true } }
+            ]
+        },
+        {
+            "name": "plant_bridge_icon",
+            "elements": [
+                {
+                    "usable_icon_static":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "image_alias": "marker_interact_icon",
+                        "image_color": "#FFE400",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_rhombus_icon_mask_npa",
+
+                        "race_icon_min_dist_visibility": 20,
+                        "race_icon_max_dist": 20,
+                        "race_icon_min_scale": 0.4,
+                        "race_icon_max_scale": 0.8,
+                        "visibility_mode": "Always"
+                    }
+                },
+                { "instant_use_message": { "info_text":"@plc_vdream_brandon_c4", "hide_at_use": false }},
+                { "radar_icon": { "icon_alias": "marker_interact_icon", "snapped": true } }
+            ]
+        }
+    ]
+}

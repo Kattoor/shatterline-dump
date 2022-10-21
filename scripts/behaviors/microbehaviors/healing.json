@@ -1,0 +1,93 @@
+{
+    "name": "Microbehaviors/Healing",
+    "root": "5538b29c-af93-406e-889a-bb79c5174485",
+    "nodes": {
+        "5538b29c-af93-406e-889a-bb79c5174485": {
+            "name": "ResetCurrentMicrobehaviorOnExit",
+            "pos": {
+                "x": 0,
+                "y": 99
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "02bfe448-d0ee-417c-8618-2fd700fe996c"
+        },
+        "02bfe448-d0ee-417c-8618-2fd700fe996c": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 208
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Healing"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "2039e259-eaab-42d1-bcab-c4880ab3c9f2"
+        },
+        "2039e259-eaab-42d1-bcab-c4880ab3c9f2": {
+            "name": "Heal",
+            "pos": {
+                "x": 0,
+                "y": 337
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "HP",
+                    "type": "Float",
+                    "value": "0.00"
+                },
+                {
+                    "name": "Rate",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Microbehaviors",
+                        "Params",
+                        "heal_rate"
+                    ]
+                },
+                {
+                    "name": "Timeout",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Microbehaviors",
+                        "Params",
+                        "heal_delay"
+                    ]
+                },
+                {
+                    "name": "InvulnerabilityDuration",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Microbehaviors",
+                        "Params",
+                        "invul_delay"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

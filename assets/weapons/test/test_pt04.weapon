@@ -1,0 +1,104 @@
+{
+    "shooting": {
+        "rpm": 300.0,
+        "clip_capacity": 14,
+        "backpack_capacity": 120,
+        "chamber_capacity": 1,
+        "chambers_fired_per_shot": 1,
+        "auto_reload_mode": "Chamber",
+        "hit_feedback": "server",
+        "bullet_type": "Pistol",
+        "base_damage_distribution": {
+            "points": [
+                {
+                    "distance": 7.0,
+                    "damage": 52.0
+                },
+                {
+                    "distance": 8.0,
+                    "damage": 26.0
+                }
+            ]
+        },
+        "head_damage_distribution": {
+            "points": [
+                {
+                    "distance": 6.0,
+                    "damage": 100.0
+                },
+                {
+                    "distance": 6.5,
+                    "damage": 78.0
+                },
+                {
+                    "distance": 20.0,
+                    "damage": 78.0
+                },
+                {
+                    "distance": 21.0,
+                    "damage": 39.0
+                }
+            ]
+        },
+        "reload": {
+            "reload_time": 2.02,
+            "reload_out_complete_threshold": 0.7,
+            "reload_in_complete_threshold": 0.7
+        }
+    },
+    "recoil": {
+        "max_vertical_angle": 0.0,
+        "kick_time": 0.0,
+        "decay_time": 0.0,
+        "decay_delay": 0.0,
+        "recoil_points": []
+    },
+    "spread": {
+        "min_hip_spread": 0.1,
+        "max_hip_spread": 0.2,
+        "hip_step": 1.0,
+        "decay_time": 1.0,
+        "decay_delay": 1.0,
+        "stand_multiplier": 1.0,
+        "walk_multiplier": 1.0,
+        "zoom_multiplier": 1.0,
+        "jump_multiplier": 1.0,
+        "crouch_multiplier": 1.0,
+        "crouch_idle_multiplier": 1.0,
+        "slide_multiplier": 1.0
+    },
+    "zoom": {
+        "zoom_fov": 40.0,
+        "weapon_fov": 65.0,
+        "zoom_in_time": 0.26,
+        "zoom_out_time": 0.26,
+        "delay_after_jump": 0.3,
+        "in_air": true,
+        "hide_crosshair": true
+    },
+    "selection": {
+        "selection_duration": 0.2,
+        "deselection_duration": 0.2
+    },
+    "sounds": {
+        "tag": "default",
+        "sets": [
+            {
+                "tag": "default",
+                "triggers": {
+                    "fire_start": "pt01_fire"
+                }
+            },
+            {
+                "tag": "silenced",
+                "triggers": {
+                    "fire_start": "pt01_fire_silencer"
+                }
+            }
+        ]
+    },
+    "common": {
+        "item_tag": "PT"
+    },
+    "muzzle_sight_distance": 1.0
+}

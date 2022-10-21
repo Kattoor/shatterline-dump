@@ -1,0 +1,33 @@
+{
+  "name": "daily_coop_009",
+  "type": "daily",
+  "tags": [
+    "daily_coop"
+  ],
+  "image": "weekly_temp_icon",
+  "rarity": "uncommon",
+  "display_name": { "localization_key": "@daily_coop_009_name" },
+  "description": { "localization_key": "@daily_coop_009_description" },
+  "conditions": [
+    {
+      "name": "daily_coop_009",
+      "event_description": { "localization_key": "@daily_coop_009_event_description" },
+      "event": { "event_id": "Kill", "actor_is_me": true, "target_ai_archetype_is": ["StraferAR", "StraferAR_grade2", "StraferAR_grade2_firegrenade", "StraferAR_grade3", "StraferSMG", "StraferSMG_grade2", "StraferSMG_grade3",
+                           "StraferSHG", "StraferSHG_grade2", "StraferSHG_grade3", "StraferSR", "StraferSR_grade2", "StraferRL", "StraferRL_grade2", "StraferGL", 
+                           "StraferFlamethrower", "Minotaur",  "Minotaur_napalm", "StraferBombDrone", "Colossus", "Stilt_Strafer"]},
+      "progress": 40
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 250
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 200
+    }
+  ]
+}

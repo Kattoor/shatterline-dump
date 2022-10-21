@@ -1,0 +1,148 @@
+{
+    "name": "Minotaur/TestActionMelee",
+    "root": "56c370e3-1863-4810-b044-cf5926a42ee8",
+    "nodes": {
+        "59f5aeae-244d-4176-89fa-848255ea75f9": {
+            "name": "Fullbody Animation",
+            "pos": {
+                "x": -185,
+                "y": 515
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Apply",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "52ea2da9-823f-4792-8346-e93f7aca1c76": {
+            "name": "MeleeAttack",
+            "pos": {
+                "x": 0,
+                "y": 517
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "AttackIndex",
+                    "type": "Integer",
+                    "value": "-1"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "d79e7889-fad2-4c46-be52-e70a9d32baaa": {
+            "name": "Fullbody Animation",
+            "pos": {
+                "x": 180,
+                "y": 517
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Apply",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "7286eabc-335b-44b2-9cb0-14c032ea5d47": {
+            "name": "LogGate",
+            "pos": {
+                "x": 0,
+                "y": 230
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CVar",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "OnEnter",
+                    "type": "StringHash",
+                    "value": "ActionTest: Melee started"
+                },
+                {
+                    "name": "OnExit",
+                    "type": "StringHash",
+                    "value": "ActionTest: Melee finished"
+                },
+                {
+                    "name": "Attribute1",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                },
+                {
+                    "name": "Attribute2",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "28a3705b-6da3-4c98-9335-55f41053b637"
+        },
+        "56c370e3-1863-4810-b044-cf5926a42ee8": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 83
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ActionTest"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "7286eabc-335b-44b2-9cb0-14c032ea5d47"
+        },
+        "28a3705b-6da3-4c98-9335-55f41053b637": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 416
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "59f5aeae-244d-4176-89fa-848255ea75f9",
+                "52ea2da9-823f-4792-8346-e93f7aca1c76",
+                "d79e7889-fad2-4c46-be52-e70a9d32baaa"
+            ]
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

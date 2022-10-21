@@ -1,0 +1,194 @@
+{
+    "name": "Stilt2/Approach",
+    "root": "4af9de35-2739-4729-8f15-22d1b1fe1b9e",
+    "nodes": {
+        "49a3f12f-473c-4376-a494-ff60d7c75a79": {
+            "name": "ApproachTo",
+            "pos": {
+                "x": -155,
+                "y": 326
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "Pos"
+                    ]
+                },
+                {
+                    "name": "EndDistance",
+                    "type": "Float",
+                    "value": "2"
+                },
+                {
+                    "name": "UpdateDestinationPoint",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "cb8d83c6-8cf2-472e-89d5-e63be4331899": {
+            "name": "Succeeder",
+            "pos": {
+                "x": -155,
+                "y": 211
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "49a3f12f-473c-4376-a494-ff60d7c75a79"
+        },
+        "726faf78-1de6-4eae-b055-43cca7a88ac1": {
+            "name": "SetStrafeAllowed",
+            "pos": {
+                "x": -315,
+                "y": 198
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Allow",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "4af9de35-2739-4729-8f15-22d1b1fe1b9e": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 89
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "726faf78-1de6-4eae-b055-43cca7a88ac1",
+                "cb8d83c6-8cf2-472e-89d5-e63be4331899",
+                "8f2c4060-ca12-4d86-ba8b-a58d58ec7985",
+                "3656726e-f44a-4db2-90e6-cefbfa1a8712",
+                "e722585b-eb88-49b9-9612-0e13ba66c1fa"
+            ]
+        },
+        "8f2c4060-ca12-4d86-ba8b-a58d58ec7985": {
+            "name": "SetStrafeAllowed",
+            "pos": {
+                "x": 0,
+                "y": 203
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Allow",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "3656726e-f44a-4db2-90e6-cefbfa1a8712": {
+            "name": "StartTimer",
+            "pos": {
+                "x": 210,
+                "y": 204
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "TimerName",
+                    "type": "StringHash",
+                    "value": "WaitForNextApproach"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "e722585b-eb88-49b9-9612-0e13ba66c1fa": {
+            "name": "TimeIsOut",
+            "pos": {
+                "x": 500,
+                "y": 199
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "TimerName",
+                    "type": "StringHash",
+                    "value": "WaitForNextApproach"
+                },
+                {
+                    "name": "Seconds",
+                    "type": "Float",
+                    "value": "1"
+                },
+                {
+                    "name": "StartIfAbsent",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "SucceedOnTimerAbsent",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "ForgetOnSucceed",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "d49d0d57-92a2-4b4e-9894-4de52505038b"
+        },
+        "d49d0d57-92a2-4b4e-9894-4de52505038b": {
+            "name": "Success",
+            "pos": {
+                "x": 500,
+                "y": 428
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

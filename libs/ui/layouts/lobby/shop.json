@@ -1,0 +1,11 @@
+{
+    "script": "scripts/ui/lobby/shop.lua",
+    "view_path": "Shop.html",
+    "children":
+    [
+        {"name": "subtab_menu", "type": "Component", "file": "lobby/subtab_menu.json"},
+        
+        {"name": "storefronts_grid", "type": "Component", "view_path": "storefrontsContainer.grid"},
+        {"name": "storefronts_container", "type": "Component", "view_path": "storefrontsContainer.grid.container.content"}
+    ]
+}

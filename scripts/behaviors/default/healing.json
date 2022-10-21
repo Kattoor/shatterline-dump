@@ -1,0 +1,46 @@
+{
+    "name": "Default/Healing",
+    "root": "181bdf6d-6443-4512-b6ec-0b13dc53e888",
+    "nodes": {
+        "ee7ed8bb-cbad-480a-9aca-9601edc91731": {
+            "name": "Noop",
+            "pos": {
+                "x": 0,
+                "y": 236
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "181bdf6d-6443-4512-b6ec-0b13dc53e888": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 93
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Healing"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "ee7ed8bb-cbad-480a-9aca-9601edc91731"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

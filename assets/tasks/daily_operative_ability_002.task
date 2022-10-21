@@ -1,0 +1,38 @@
+{
+  "name": "daily_operative_ability_002",
+  "type": "daily",
+  "tags": [
+    "daily_operative_ability"
+  ],
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "epic",
+  "display_name": { "localization_key": "@daily_operative_ability_002_name" },
+  "description": { "localization_key": "@daily_operative_ability_002_description" },
+  "conditions": [
+    {
+      "name": "daily_operative_ability_002",
+      "event_description": { "localization_key": "@daily_operative_ability_002_event_description" },
+      "event": { "event_id": "ResurrectInvis", "actor_is_me": true},
+      "progress": 2
+    }
+  ],
+  
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 350
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 250
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 10
+    }
+  ]
+}

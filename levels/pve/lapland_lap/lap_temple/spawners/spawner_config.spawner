@@ -1,0 +1,494 @@
+{
+    "waves": [
+        {
+            "name": "gh_start",
+            "totalLimit": 50,
+            "count": 10,
+            "groupCount": 2,
+            "spawnDelay": 1.0,
+            "filterTag": "",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(2) Glasshead: Basic" ],
+                    "probability": 100,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                }
+            ]
+        },
+        {
+            "name": "forest_strafers",
+            "totalLimit": 200,
+            "count": 0,
+            "groupCount": 1,
+            "spawnDelay": 0.0,
+            "filterTag": "forest_strafers",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(1) Strafer: AR" ],
+                    "probability": 40,
+                    "count": 3,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                },
+                {
+                    "tags": [ "(1) Strafer: SHG" ],
+                    "probability": 30,
+                    "count": 3,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                },
+                {
+                    "tags": [ "(1) Strafer: SMG" ],
+                    "probability": 30,
+                    "count": 3,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                },
+                {
+                    "tags": [ "(1) Strafer: SR" ],
+                    "probability": 100,
+                    "count": 1,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                }
+            ]
+        },
+        {
+            "name": "gh_forest",
+            "totalLimit": 100,
+            "count": 8,
+            "groupCount": 1,
+            "spawnDelay": 0.0,
+            "filterTag": "gh_forest",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(2) Glasshead: Basic melee" ],
+                    "probability": 90,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                }
+            ]
+        },
+        {
+            "name": "strafers_minefield",
+            "totalLimit": 10,
+            "count": 1,
+            "groupCount": 1,
+            "spawnDelay": 0.0,
+            "filterTag": "",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(1) Strafer: Bomb Drone" ],
+                    "probability": 100,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                }
+            ]
+        },
+        {
+            "name": "outpost_strafers",
+            "totalLimit": 63,
+            "count": 0,
+            "groupCount": 1,
+            "spawnDelay": 0.0,
+            "filterTag": "",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(1) Strafer: AR" ],
+                    "probability": 100,
+                    "count": 5,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                },
+                {
+                    "tags": [ "(1) Strafer: SR" ],
+                    "probability": 100,
+                    "count": 2,
+                    "groupCount": 1,
+                    "spawnDelay": 10.0
+                },
+                {
+                    "tags": [ "(1) Strafer: SHG" ],
+                    "probability": 100,
+                    "count": 2,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                }
+            ]
+        },
+        {
+            "name": "ice_strafers_low",
+            "totalLimit": 200,
+            "count": 4,
+            "groupCount": 3,
+            "spawnDelay": 4.0,
+            "filterTag": "ice_strafers_low",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(1) Strafer: SHG" ],
+                    "probability": 30,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                },
+                {
+                    "tags": [ "(1) Strafer: GL" ],
+                    "probability": 10,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                },
+                {
+                    "tags": [ "(1) Strafer: SMG" ],
+                    "probability": 30,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                },
+                {
+                    "tags": [ "(1) Strafer: AR" ],
+                    "probability": 30,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                }
+            ]
+        },
+        {
+            "name": "minotaur",
+            "totalLimit": 10,
+            "count": 1,
+            "groupCount": 1,
+            "spawnDelay": 0.0,
+            "filterTag": "",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(1) Strafer: Minotaur" ],
+                    "probability": 100,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                }
+            ]
+        },
+        {
+            "name": "turret_spawner",
+            "totalLimit": 10,
+            "count": 1,
+            "groupCount": 1,
+            "spawnDelay": 0.0,
+            "filterTag": "turret_spawn",
+            "competitor": "Strafer",
+            "agents": [
+                {
+                    "tags": [ "Chosen Turret" ],
+                    "probability": 100,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                }
+            ]
+        },
+        {
+            "name": "bomb_drone_prooving",
+            "totalLimit": 30,
+            "count": 5,
+            "groupCount": 1,
+            "spawnDelay": 0.0,
+            "filterTag": "bomb_drone_prooving",
+            "competitor": "Players",
+            "agents": [
+                {
+                    "tags": [ "(1) Strafer: Bomb Drone" ],
+                    "probability": 100,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                }
+            ]
+        },
+        {
+            "name": "gh_prooving_ground_1",
+            "totalLimit": 500,
+            "count": 0,
+            "groupCount": 5,
+            "spawnDelay": 0.0,
+            "filterTag": "gh_prooving_ground_1",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(2) Glasshead: Basic melee" ],
+                    "probability": 100,
+                    "count": 7,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                },
+                {
+                    "tags": [ "(2) Glasshead: Adamant" ],
+                    "probability": 5,
+                    "count": 3,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                }
+            ]
+        },
+        {
+            "name": "gh_start_bridge",
+            "totalLimit": 50,
+            "count": 8,
+            "groupCount": 1,
+            "spawnDelay": 0.0,
+            "filterTag": "",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(2) Glasshead: Basic" ],
+                    "probability": 100,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                }
+            ]
+        },
+        {
+            "name": "gh_mine_demo",
+            "totalLimit": 2,
+            "count": 2,
+            "groupCount": 1,
+            "spawnDelay": 0.0,
+            "filterTag": "",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(2) Glasshead: Basic melee" ],
+                    "probability": 100,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                }
+            ]
+        },
+        {
+            "name": "outpost_strafers_minotaur",
+            "totalLimit": 1,
+            "count": 1,
+            "groupCount": 1,
+            "spawnDelay": 0.0,
+            "filterTag": "",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(1) Strafer: Minotaur" ],
+                    "probability": 100,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                }
+            ]
+        },
+        {
+            "name": "strafers_platform",
+            "totalLimit": 50,
+            "count": 0,
+            "groupCount": 1,
+            "spawnDelay": 0.0,
+            "filterTag": "",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(1) Strafer: AR" ],
+                    "probability": 100,
+                    "count": 8,
+                    "groupCount": 2,
+                    "spawnDelay": 0.0
+                },
+                {
+                    "tags": [ "(1) Strafer: SR" ],
+                    "probability": 100,
+                    "count": 2,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                }
+            ]
+        },
+        {
+            "name": "cliff_snipers",
+            "totalLimit": 50,
+            "count": 3,
+            "groupCount": 1,
+            "spawnDelay": 0.0,
+            "filterTag": "",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(1) Strafer: SR" ],
+                    "probability": 100,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                }
+            ]
+        },
+        {
+            "name": "strafers_forest_patrol",
+            "totalLimit": 5,
+            "count": 0,
+            "groupCount": 5,
+            "spawnDelay": 0.0,
+            "filterTag": "strafers_forest_patrol",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(1) Strafer: SHG" ],
+                    "probability": 100,
+                    "count": 3,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                },
+                {
+                    "tags": [ "(1) Strafer: SMG" ],
+                    "probability": 100,
+                    "count": 2,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                }
+            ]
+        },
+        {
+            "name": "ice_strafers_high",
+            "totalLimit": 50,
+            "count": 2,
+            "groupCount": 1,
+            "spawnDelay": 15.0,
+            "filterTag": "ice_strafers_high",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(1) Strafer: RL" ],
+                    "probability": 100,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                },
+                {
+                    "tags": [ "(1) Strafer: SR" ],
+                    "probability": 100,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                }
+            ]
+        },
+        {
+            "name": "gh_prooving_ground_cave",
+            "totalLimit": 300,
+            "count": 0,
+            "groupCount": 1,
+            "spawnDelay": 0.0,
+            "filterTag": "",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(2) Glasshead: Adamant" ],
+                    "probability": 100,
+                    "count": 1,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                },
+                {
+                    "tags": [ "(2) Glasshead: Shardskin" ],
+                    "probability": 100,
+                    "count": 4,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                },
+                {
+                    "tags": [ "(2) Glasshead: Basic" ],
+                    "probability": 100,
+                    "count": 5,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                }
+            ]
+        },
+        {
+            "name": "gh_prooving_ground_1_range",
+            "totalLimit": 300,
+            "count": 3,
+            "groupCount": 2,
+            "spawnDelay": 10.0,
+            "filterTag": "gh_prooving_ground_1_range",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(2) Glasshead: Shardskin" ],
+                    "probability": 100,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 3.0
+                }
+            ]
+        },
+        {
+            "name": "gh_prooving_ground_3",
+            "totalLimit": 500,
+            "count": 0,
+            "groupCount": 1,
+            "spawnDelay": 0.0,
+            "filterTag": "glasshead_spawn",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(2) Glasshead: Basic" ],
+                    "probability": 100,
+                    "count": 4,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                },
+                {
+                    "tags": [ "(2) Glasshead: Adamant" ],
+                    "probability": 100,
+                    "count": 1,
+                    "groupCount": 1,
+                    "spawnDelay": 5.0
+                },
+                {
+                    "tags": [ "(2) Glasshead: Shardskin" ],
+                    "probability": 100,
+                    "count": 2,
+                    "groupCount": 1,
+                    "spawnDelay": 5.0
+                }
+            ]
+        },
+        {
+            "name": "forest_bunker_1",
+            "totalLimit": 20,
+            "count": 8,
+            "groupCount": 1,
+            "spawnDelay": 0.0,
+            "filterTag": "",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(2) Glasshead: Basic melee" ],
+                    "probability": 100,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                }
+            ]
+        }
+    ]
+}

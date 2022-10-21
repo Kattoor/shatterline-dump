@@ -1,0 +1,102 @@
+{
+    "shooting": {
+        "rpm": 600.0,
+        "clip_capacity": 30,
+        "backpack_capacity": 600,
+        "chamber_capacity": 1,
+        "chambers_fired_per_shot": 1,
+        "auto_reload_mode": "Chamber",
+        "base_damage_distribution": 
+        {
+            "points": [
+                {
+                    "distance": 450.0,
+                    "damage": 30.0
+                }
+            ]
+        },
+        "head_damage_distribution": 
+        {
+            "points": [
+                {
+                    "distance": 120.0,
+                    "damage": 200.0
+                }
+            ]
+        },
+        "pierceability": {
+        "type": "none",
+        "pierceability_level": 2
+        },
+        "reload": {
+            "reload_time": 2.6,
+            "reload_out_complete_threshold": 0.7,
+            "reload_in_complete_threshold": 0.7
+        }
+    },
+    "recoil": {
+        "max_vertical_angle": 0.0,
+        "kick_time": 0.0,
+        "decay_time": 0.0,
+        "decay_delay": 0.0,
+        "recoil_points": []
+    },
+    "spread": {
+        "min_hip_spread": 0.0,
+        "max_hip_spread": 0.0,
+        "hip_step": 0.0,
+        "decay_time": 0.0,
+        "decay_delay": 0.0,
+        "stand_multiplier": 0.0,
+        "walk_multiplier": 0.0,
+        "zoom_multiplier": 0.0,
+        "jump_multiplier": 0.0,
+        "crouch_multiplier": 0.0,
+        "crouch_idle_multiplier": 0.0,
+        "slide_multiplier": 0.0
+    },
+    "zoom": {
+        "zoom_fov": 40.0,
+        "weapon_fov": 25.0,
+        "zoom_in_time": 0.15,
+        "zoom_out_time": 0.15,
+        "delay_after_jump": 0.3,
+        "in_air": false,
+        "hide_crosshair": true,
+        "sniper_scope": false,
+        "scope_aiming_offset_forward": 0.0,
+        "scope_aiming_treshold": 0.5,
+        "blur_amount": 0.0
+    },
+    "selection": {
+        "selection_duration": 0.4,
+        "deselection_duration": 0.33
+    },
+    "common": {
+        "item_tag": "AR"
+    },
+    "sounds": {
+        "tag": "default",
+        "sets": [
+            {
+                "tag": "default",
+                "triggers": {
+                    "fire_start": "test_ar01_fire_start",
+                    "fire_stop": "test_ar01_fire_stop"
+                }
+            },
+            {
+                "tag": "silenced",
+                "triggers": {
+                    "fire_start": "ar01_fire_silencer_start",
+                    "fire_stop": "ar01_fire_silencer_stop"
+                }
+            }
+        ]
+    },
+    "tick_event": {
+        "interval": 1.0,
+        "tick_only_when_selected": true
+    },
+    "muzzle_sight_distance": 1.0
+}

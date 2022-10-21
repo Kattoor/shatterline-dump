@@ -1,0 +1,48 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "cf9e611ff8d24ec4a008ef741894c143",
+    "Name": "Game01CombinedRenderNode",
+    "DisplayName": "Game01CombinedRenderNode",
+    "Version": "0.1.0",
+    "Summary": "",
+    "Tags": ["CombinedRenderNode"],
+    "LinkType": "Dynamic",
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        }
+    ],
+    "Dependencies": [
+        {
+            "Uuid": "ff06785f7145416b9d46fde39098cb0c",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "LmbrCentral"
+        },
+        {
+            "Uuid": "2ebd4481cbf142b89286f28b4c29ace3",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01Interfaces"
+        },
+        {
+            "Uuid": "044a63ea67d04479aa5daf62ded9d9ca",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "EmotionFX"
+        },
+        {
+            "Uuid": "46f33e3a60c14b35b5bf843399f2a991",
+            "VersionConstraints": ["~>0.1"],
+            "_comment": "AssetCache"
+        },
+        {
+            "Uuid": "7cedf2bfc6684bb8a046350371ca261c",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Marshalers"
+        },
+        {
+            "Uuid": "00f05751e45c4c61ae7da3e551d06909",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "GameComponents"
+        }
+    ]
+}

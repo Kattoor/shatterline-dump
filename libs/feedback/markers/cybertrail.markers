@@ -1,0 +1,122 @@
+{
+    "markers": [
+        {
+            "name": "cybertrail_ball_anomaly",
+            "elements": [
+                {
+                    "way_point":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.4,
+                            "alpha_upper_bound": 0.5,
+                            "alpha_lower_bound": 1.0
+                        },
+                        "opacity": 0.5,
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",                        
+                        "image_alias": "marker_way_point_icon",
+                        "info_text": "@plc_cybertrail_dimension_veil",
+                        "image_color": "#FFE400",
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_hexagon_icon_wave_npa",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_hexagon_icon_mask_npa",
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.0,
+                        "race_icon_track_scale": 0.6,
+                        "offset": 1.5
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_way_point_radar_icon", "snapped": true } }
+            ]
+        },
+        {
+            "name": "du_cybertrail_activate",
+            "elements": [
+                { 
+                    "usable_icon":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        "image_alias": "marker_interact_icon",
+                        "image_color": "#FFE400",
+                        "info_text": "@plc_escape_forklift",
+                        "ready_to_use_text": "@hold_to_use_btn",
+                        "using_text": "@using_btn",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_rhombus_icon_mask_npa",
+                        "radial_progress_bg_color": "#E9F0F3",
+                        "radial_progress_color": "#1494D8",
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.0,
+                        "race_icon_track_scale": 0.6,
+                        "offset": 0.1
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_way_point_radar_icon", "player_icon": false, "icon_color": "#FFE400", "snapped": true } }
+            ]
+        },
+        {
+            "name": "du_cybertrail_protect",
+            "elements": [
+                {
+                    "way_point":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.4,
+                            "alpha_upper_bound": 0.5,
+                            "alpha_lower_bound": 1.0
+                        },
+                        "opacity": 0.5,
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",                        
+                        "image_alias": "marker_way_point_icon",
+                        "info_text": "@plc_cybertrail_protect",
+                        "image_color": "#FFE400",
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_hexagon_icon_wave_npa",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_hexagon_icon_mask_npa",
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.0,
+                        "race_icon_track_scale": 0.6
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_way_point_radar_icon", "snapped": true } }
+            ]
+        },
+        {
+            "name": "cybertrail_strafer_hideout",
+            "elements": [
+                {
+                    "way_point":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.4,
+                            "alpha_upper_bound": 0.5,
+                            "alpha_lower_bound": 1.0
+                        },
+                        "opacity": 0.5,
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",                        
+                        "image_alias": "marker_way_point_icon",
+                        "info_text": "@plc_cybertrail_strafer_hideout",
+                        "image_color": "#FFE400",
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_hexagon_icon_wave_npa",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_hexagon_icon_mask_npa",
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.0,
+                        "race_icon_track_scale": 0.6,
+                        "offset": 1.5
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_way_point_radar_icon", "snapped": true } }
+            ]
+        }
+
+    ]
+}

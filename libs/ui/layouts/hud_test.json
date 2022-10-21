@@ -1,0 +1,16 @@
+{
+    "script": "",
+    "view_path": "Component.html",
+    "hide_cursor": true,
+    "send_stats": true,
+    "children":
+    [
+        {"name": "ObjectiveMessage", "type": "Narrator", "file": "hud/objective_message.json"},
+
+        {"name": "BlindIcon", "type": "Panel", "view_path": "BlindIcon.html"},
+        {"name": "StrategicView", "type": "Component",  "view_path": "StrategicView.html"},
+        {"name": "HudRevive", "type": "Component", "file": "hud/hud_revive.json"},
+        {"name": "KillerInfo", "type": "Component", "file": "hud/killer_info.json"},
+        {"name": "SpectatorInfo", "type": "Component", "file": "hud/spectator_info.json"}
+    ]
+}

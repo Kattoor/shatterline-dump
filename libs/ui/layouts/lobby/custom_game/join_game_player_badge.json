@@ -1,0 +1,14 @@
+{
+    "script": "",
+    "view_path": "JoinGamePlayerBadge.html",
+    "send_stats": true,
+    "children":
+    [
+        {"name": "image", "type": "Image", "view_path": "wrapper.nameplate.background"},
+        {"name": "avatar", "type": "Image", "view_path": "wrapper.nameplate.bodyWrapper.icon"},
+        {"name": "empty_icon", "type": "Component", "view_path": "wrapper.nameplate.bodyWrapper.empty", "visible": false},
+
+        {"name": "name", "type": "Label", "view_path": "wrapper.nameplate.bodyWrapper.nameWrapper.name"},
+        {"name": "clan", "type": "Label", "view_path": "wrapper.nameplate.bodyWrapper.nameWrapper.clan", "visible": false}
+    ]
+}

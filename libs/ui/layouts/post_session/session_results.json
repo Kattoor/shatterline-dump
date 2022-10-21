@@ -1,0 +1,19 @@
+{
+    "script": "scripts/ui/post_session/session_results.lua",
+    "view_path": "SessionResults.html",
+    "send_stats": true,
+    "hide_cursor": true,
+    "children":
+    [
+        {"name": "message", "type": "Label", "view_path": "messageWrapper.message", "visible": false},
+        {"name": "message_outline", "type": "Label", "view_path": "messageWrapper.messageOutline", "visible": false},
+
+        {"name": "description", "type": "Label", "view_path": "description",  "visible": false},
+
+        {"name": "reason", "type": "Label", "view_path": "reason", "visible": false},
+
+        {"name": "scores", "type": "Control", "view_path": "scores", "visible": false},
+        {"name": "score_left", "type": "Label", "view_path": "scores.left"},
+        {"name": "score_right", "type": "Label", "view_path": "scores.right"}
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "name": "headshots_only_damage_filter",
+    "duration": 0,
+    "effects": [
+        {
+            "damage_filter": {
+                "damage_modifiers": [
+                    {
+                        "filter_type": "hit",
+                        "hit_type": "Shot",
+                        "modifier": 0.0,
+                        "hit_part":
+                        [
+                            "Torso",
+                            "Arm",
+                            "Leg",
+                            "TorsoLowDamage",
+                            "LegLowDamage"
+                        ],
+                        "hit_effect": "Shield"
+                    },
+                    {
+                        "filter_type": "hit",
+                        "hit_type": "Melee",
+                        "modifier": 0.5
+                    },
+                    {
+                        "filter_type": "hit",
+                        "hit_type": "Shot",
+                        "modifier": 1.0,
+                        "hit_part":
+                        [
+                            "Head"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,114 @@
+{
+    "name": "Default/Roll",
+    "root": "09db9ceb-5b92-46a6-b656-d37a6367144e",
+    "nodes": {
+        "494030a9-d7c9-45e8-b61f-b7525fe834d6": {
+            "name": "RandomChance",
+            "pos": {
+                "x": -95,
+                "y": 305
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Probability",
+                    "type": "Float",
+                    "value": "0.5"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "29c42a78-b371-446c-b946-9e5831c61aa0"
+        },
+        "29fe2570-ae3a-4ba4-b119-5c83b6536ee0": {
+            "name": "Selector",
+            "pos": {
+                "x": 0,
+                "y": 199
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "494030a9-d7c9-45e8-b61f-b7525fe834d6",
+                "81421236-6871-42ff-ba4d-e19692b9cb23"
+            ]
+        },
+        "29c42a78-b371-446c-b946-9e5831c61aa0": {
+            "name": "Roll",
+            "pos": {
+                "x": -95,
+                "y": 471
+            },
+            "inputs": [
+                {
+                    "name": "Left",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "81421236-6871-42ff-ba4d-e19692b9cb23": {
+            "name": "Roll",
+            "pos": {
+                "x": 65,
+                "y": 308
+            },
+            "inputs": [
+                {
+                    "name": "Left",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "09db9ceb-5b92-46a6-b656-d37a6367144e": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 78
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Roll"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "29fe2570-ae3a-4ba4-b119-5c83b6536ee0"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

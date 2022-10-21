@@ -1,0 +1,47 @@
+{   
+    "can_cook": false,
+    "duration_prepare": 0.04,
+    "duration_throw": 0.04,  
+    "time_to_throw": 0.02,
+    "time_to_action": 0,
+    "time_to_destroy": -1.0,
+    "count": 1,
+    "act_reason": "sleep",
+    "icon_activation_distance": 8.0,
+
+    "selection":
+    {
+        "quick_selection_duration": 0.0,
+        "quick_deselection_duration": 0.0,
+        "selection_duration": 0,
+        "deselection_duration": 0
+    },
+
+    
+    "common":
+    {
+        "item_tag": "AI"
+    },
+    
+    "projectile":
+    {
+        "config_name": "bcn01_invasion_proto",
+        "slice_name": "slices/projectiles/bcn01_invasion_proto.dynamicslice",
+        "speed": 10.0,
+        "angle": -20.0,
+        "velocity_character_multiplier": 0.5,
+        "offset": 
+        {
+            "x": 0,
+            "y": 0.35,
+            "z": 0
+        },
+        "multi_projectile":
+        {
+            "projectile_count": 1,
+            "angle": 15.0,
+            "max_distance": 10.0,
+            "max_angle": 48.0
+        }
+    }
+}

@@ -1,0 +1,479 @@
+
+{
+    "ai_archetypes":
+    [
+        {
+            "name": "chaserModifier",
+            "display_name": "@glasshead_chaser",
+            "parent": "chaser",
+            "tags": ["(4)Modifier: Chaser"],
+            "count_as_ai":false,
+            "health": 300,
+            "behavior":
+            {
+                "behavior_tree": "BehaviorSelector",
+                "profile": "Chaser",
+                "params":
+                {
+                    "distance_to_player_min": "16.0",
+                    "distance_to_player_max": "22.0",
+                    "update_path_rate": "2.0",
+                    "attack_cooldown_min": "1.0",
+                    "attack_cooldown_max": "2.0",
+                    "ghost_target_following_duration_min": "2.0",
+                    "ghost_target_following_duration_max": "4.0",
+                    "check_view_cone_duration": "10.0",
+                    "allowed_target_view_cone_angle": "25",
+                    "attack_approaching_max_time": "10.0",
+                    "close_to_attack_range": "5.0",
+                    "ignore_collision_before_attack_range": "3.0",
+                    "attack_in_range": "1.0",
+                    "attacking_duration": "8.0",
+                    "attacking_damage": "9.0",
+                    "attacking_damage_period": "0.5",
+                    "dps_threshold": "150.0",
+                    "dps_decay": "150.0",
+                    "dps_regen_start_delay": "0.0",
+                    "capture_target": "true",
+                    "camera_limits_hor": "5",
+                    "camera_limits_vert": "0",
+                    "camera_yaw": "0",
+                    "camera_pitch": "40"
+                }
+            }
+        },
+
+        {
+            "name": "HordeStiltMelee",
+            "add_tags":["GlassheadAI", "BossAI", "NonconvertableAI", "RamDashHitArticulated"],
+            "parent":"Stilt",
+            "display_name": "@boss_stilt",
+            "tags": ["(5) Boss: Stilt Melee"],
+            "health": 9500,
+            "behavior":
+            {
+                "behavior_tree": "Root",
+                "profile": "Stilt2",
+                "params":
+                    {
+                       "close_melee_range": "4",
+                       "projectile_attack_probability":"0.0",
+                       "projectile_attack_unreachable_probability":"0.0"
+                    }
+            },
+            "speed":
+                {
+                    "run": 6.4,
+                    "strafe": 6.4,
+                    "back": 6.4,
+                    "crouch": 6.4,
+                    "fire": 6.4
+                },
+            "target_selection":
+            {
+                "tag_distance":
+                    {
+                        "Player":
+                        {
+                            "weight":30,
+                            "distance":150
+                        },
+                        "Character":
+                        {
+                            "weight":20,
+                            "distance":20
+                        }
+                    },
+                "tag_weights":
+                    {
+                       "Breakable": -100,
+                       "Drone": -100
+                    },
+                "thresholds":
+                    {
+                       "critical_range": 10
+                    }
+            }
+        },
+        
+        {
+            "name": "horde_fairfly_turret_boss",
+            "display_name": "@obj_defeat_creature",
+            "parent": "glasshead_fairfly_turret",
+            "tags": ["(5) Glasshead: Firefly Turret Boss"],
+            "add_tags":["NonconvertableAI", "GlassheadAI", "SpecialAI", "GlassheadTurretAI", "RamDashHitArticulated"],
+            "vo_profile":"FairflyTurret",
+            "slice": "slices/ai/fairfly_turret.dynamicslice",
+            "tp_slice": "slices/ai/horde/horde_fairfly_turret_tp.dynamicslice",
+            "competitor": "Glasshead",
+            "enemy_type": "boss",
+            "health": 8000,
+            "hud_marker": "boss_hp_marker",
+            "equip":
+            [
+                {
+                    "item": "wpn01_fairfly_turret",
+                    "shooting_pattern": ["2-3; 7-8"],
+                    "check_visible": false,
+                    "damage_multiplier": 0.8
+                }
+            ],
+            "microbehaviors":
+            [
+                {
+                    "name": "SideDash",
+                    "params":
+                    {
+                        "damage": "10",
+                        "damage_time": "1",
+                        "prob": "1.0",
+                        "counter": "1",
+                        "reset_time": "2",
+                        "delay_min": "1",
+                        "delay_max": "1",
+                        "min_distance": "5.0",
+                        "max_distance": "8.0",
+                        "random_angle": "15"
+                    }
+                }
+            ]
+        },
+        
+        {
+            "name": "horde_parasite_turret",
+            "display_name": "@obj_defeat_creature",
+            "tags": ["(5)Glasshead: Parasite Turret"],
+            "add_tags":["NonconvertableAI", "GlassheadAI", "SpecialAI", "GlassheadTurretAI"],
+            "slice": "slices/ai/horde/parasite_turret.dynamicslice",
+            "tp_slice": "slices/ai/horde/parasite_turret_tp.dynamicslice",
+            "wounds":
+            {
+                "damage":
+                {
+                    "profile": "",
+                    "value": 50000,
+                    "time": 0.1,
+                    "prob": 0.0
+                }
+            },
+            "competitor": "Glasshead",
+            "enemy_type": "boss",
+            "health": 10000,
+            "behavior":
+            {
+                "behavior_tree": "BehaviorSelector",
+                "profile": "BasicRange",
+                "params":
+                {
+                    "dash_fade_out_slice": "ai/bosses/adamant/adamant_dash_fade_out",
+                    "dash_hide_after_fade_out_delay": "0.0",
+                    "dash_move_time": "0.1",
+                    "dash_fade_in_slice": "ai/bosses/adamant/adamant_dash_fade_in",
+                    "dash_show_after_fade_in_delay": "0.1"
+                }
+            },
+            "speed":
+            {
+                "run": 3,
+                "strafe": 3,
+                "back": 3,
+                "crouch": 3,
+                "fire": 0
+            },
+            "death":
+            {
+                "lifetime": 0.5
+            },
+            "body_turn_limit": 360,
+            "eye_offset_z": 1
+        },
+        
+        {
+            "name": "horde_glasshead_runner",
+            "vo_profile": "GlassheadRunner",
+            "add_tags":["RunnerAI", "NonconvertableAI"],
+            "parent": "glasshead",
+            "tags": ["(5) Glasshead: Runner"],
+            "tp_slice": "slices/ai/glasshead_skins/glasshead_runner_tp.dynamicslice",
+            "health": 160,
+            "leave_dead_body": false,
+            "speed":
+            {
+                "run": 8,
+                "strafe": 6,
+                "back": 3,
+                "crouch": 4,
+                "fire": 4.9
+            },
+            "wounds":
+            {
+                "damage":
+                {
+                    "profile": "Glasshead",
+                    "value": 20,
+                    "time": 0.2,
+                    "prob": 0.0,
+                    "cooldown_min": 4.0,
+                    "cooldown_max": 6.0
+                }
+            }
+        },
+        
+        {
+            "name": "horde_carrier_dog",
+            "tags": ["(5) Glasshead: Carrier Dog"],
+            "add_tags":["NonconvertableAI", "GlassheadAI", "SpecialAI", "BombDogAI"],
+            "parent": "GlassheadBombDog",
+            "slice": "slices/ai/glasshead_kamikadze_dog.dynamicslice",
+            "tp_slice": "slices/ai/glasshead_bomb_dog_carrier_tp.dynamicslice",
+            "vo_profile": "",
+            "competitor": "Glasshead",
+            "enemy_type": "regular_02",
+            "health": 65,
+            "leave_dead_body": false,
+            "equip":
+            [
+            ],
+            "microbehaviors":
+            [
+                {
+                    "name": "RageAnim",
+                    "params":
+                    {
+                        "probability": "0.0"
+                    }
+                }
+                
+            ],
+            "speed":
+            {
+                "run": 6,
+                "strafe": 2.5,
+                "back": 2.5,
+                "crouch": 2,
+                "fire": 2
+            }
+        },
+        
+        {
+            "name": "horde_strafer_stealer",
+            "tags": ["(5) Strafer: Stealer"],
+            "display_name": "@strafer_flamethrower",
+            "parent": "StraferFlamethrower",
+            "slice": "ai_strafer_flamethrower",
+            "tp_slice": "ai_strafer_flamethrower_tp",
+            "health": 1600,
+            "leave_dead_body": false,
+            "equip":
+            [
+                {
+                    "item": "wpn05_flamethrower_ai",
+                    "shooting_pattern": ["5-12; 0.4-0.9"],
+                    "max_shooting_range": 8.5,
+                    "check_visible": true
+                }
+            ],
+            "hit_reactions":
+            {
+                "animation": "Gunman",
+                "damage": 30,
+                "probability": 0.65
+            }
+        },
+        
+        {
+            "name": "chaserMaze",
+            "display_name": "@glasshead_chaser",
+            "parent": "chaser",
+            "tags": ["(5) Glasshead: MazeChaser"],
+            "count_as_ai":false,
+            "health": 300,
+            "behavior":
+            {
+                "behavior_tree": "BehaviorSelector",
+                "profile": "Chaser",
+                "params":
+                {
+                    "distance_to_player_min": "1.0",
+                    "distance_to_player_max": "22.0",
+                    "update_path_rate": "2.0",
+                    "attack_cooldown_min": "0.2",
+                    "attack_cooldown_max": "0.5",
+                    "ghost_target_following_duration_min": "0.1",
+                    "ghost_target_following_duration_max": "0.2",
+                    "check_view_cone_duration": "10.0",
+                    "allowed_target_view_cone_angle": "360",
+                    "attack_approaching_max_time": "5",
+                    "close_to_attack_range": "10.0",
+                    "ignore_collision_before_attack_range": "3.0",
+                    "attack_in_range": "1.0",
+                    "attacking_duration": "8.0",
+                    "attacking_damage": "9.0",
+                    "attacking_damage_period": "0.1",
+                    "dps_threshold": "150.0",
+                    "dps_decay": "150.0",
+                    "dps_regen_start_delay": "0.0",
+                    "capture_target": "true",
+                    "camera_limits_hor": "5",
+                    "camera_limits_vert": "0",
+                    "camera_yaw": "0",
+                    "camera_pitch": "40"
+                }
+            }
+        },
+        {
+            "name": "glasshead_fairfly_turret_no_jump",
+            "parent": "glasshead_fairfly_turret",
+            "tags": ["(2)Glasshead: Range", "(5)Glasshead: STATIC Fairfly Turret"],
+            "microbehaviors":
+            [
+                {
+                    "name": "SideDash",
+                    "params":
+                    {
+                        "damage": "10",
+                        "damage_time": "1",
+                        "prob": "0.0",
+                        "counter": "1",
+                        "reset_time": "2",
+                        "delay_min": "1",
+                        "delay_max": "1",
+                        "min_distance": "5.0",
+                        "max_distance": "8.0",
+                        "random_angle": "15"
+                    }
+                }
+            ],
+            "equip":
+            [
+                {
+                    "item": "wpn01_fairfly_turret",
+                    "shooting_pattern": ["2-3; 2-3"],
+                    "check_visible": false,
+                    "damage_multiplier": 1.0
+                }
+            ],
+            "speed":
+            {
+                "run": 3,
+                "strafe": 3,
+                "back": 3,
+                "crouch": 3,
+                "fire": 0
+            },
+            "body_turn_limit": 360,
+            "eye_offset_z": 1
+        },
+        
+        {
+            "name": "horde_phantomcore_boss",
+            "display_name": "@glasshead_turret",
+            "parent": "glasshead_turret",
+            "enemy_type": "miniboss",
+            "add_tags":["GlassheadAI", "SpecialAI", "GlassheadTurretAI", "RamDashHitArticulated", "NonconvertableAI"],
+            "tags": ["(5)Glasshead: Phantomcore Turret"],
+            "equip":
+            [
+                {
+                    "item": "wpn01_invader_turret",
+                    "shooting_pattern": ["1-2; 0.01-0.05", "1; 0.01", "1; 0.01", "1; 0.1", "1-2; 0.01-0.05", "1; 0.01", "1; 0.01", "1; 1.1-2.2"],
+                    "check_visible": false,
+                    "damage_multiplier": 1.0,
+                    "params":
+                    {
+                        "low_ammo": "0"
+                    }
+                }
+            ],
+            "microbehaviors":
+            [
+                {
+                    "name": "SideDash",
+                    "params":
+                    {
+                        "damage": "50",
+                        "damage_time": "1",
+                        "prob": "0",
+                        "counter": "1",
+                        "reset_time": "10",
+                        "delay_min": "3",
+                        "delay_max": "7",
+                        "min_distance": "2.0",
+                        "max_distance": "4.0",
+                        "random_angle": "15"
+                    }
+                }
+            ]
+        },
+        
+        {
+            "name":"glasshead_treasure_mob",
+            "add_tags":["GlassheadAI", "SpecialAI", "TreasureMob", "NonconvertableAI"],
+            "tags":["(5)Glasshead: Treasure Mob"],
+            "display_name": "@glasshead_nest_supporter",
+            "slice": "slices/ai/supporter_ai.dynamicslice",
+            "tp_slice": "slices/ai/supporter_treasure_mob_tp.dynamicslice",
+            "competitor": "Glasshead",
+            "hud_marker": "generic_hp_marker_head",
+            "enemy_type": "miniboss",
+            "health":1600,
+            "aabb_box":
+            {
+                "width": 1.5,
+                "length": 1.5,
+                "height": 2.7
+            },
+            "behavior":
+            {
+                "behavior_tree": "BehaviorSelector",
+                "profile": "ScriptControlled",
+                "params":
+                {
+                    "query_name":"RangedNoCover",
+                    "effective_distance_min": "15",
+                    "effective_distance_max": "50",
+                    
+                    "distance_to_target_mul": "0",
+                    "distance_to_target_weight_min": "0",
+                    "distance_to_target_weight_max": "0",
+                    "distance_to_self_mul": "-1",
+                    "distance_to_self_weight_min": "0",
+                    "distance_to_self_weight_max": "-40",
+                    
+                    "change_position_target_far_cooldown": "5", 
+                    "change_position_target_close_cooldown": "7",
+                    "close_to_my_holding_pos_radius": "5",
+                    "close_to_my_holding_pos_weight": "-10",
+
+                    
+                    "cancel_attack_radius": "6",
+                    "front_of_target_angle":"60",
+                    "min_group_size":"2",
+                    "group_area_radius":"10",
+                    "attack_duration":"5",
+                    "shots_count_min":"2",
+                    "shots_count_max":"4",
+                    "shots_delay_min":"3",
+                    "shots_delay_max":"5",
+                    "attack_radius":"15",
+                    "attack_radius_offset":"4",
+                    "first_shot_delay":"0.1",
+                    "attack_slice_block_place_time":"15",
+                    "attack_slice_block_place_radius":"2",
+                    "attack_slice_name": "slices/ai/glasshead_supporter/spawn_nest_trap.dynamicslice",
+                    "move_out_slice_name": "slices/ai/glasshead_supporter/close_melee.dynamicslice",
+                    "target_offset":"5"
+                }
+            },
+            "perception":
+            {
+                "sight_range": 1.0,
+                "sound_stimulus_scale": 1.0,
+                "weight_inc_step": 50,
+                "weight_inc_time": 0.3,
+                "weight_dec_step": 50,
+                "weight_dec_time": 0.7
+            }
+        }
+    ]
+}

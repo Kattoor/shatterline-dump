@@ -1,0 +1,10 @@
+{
+    "script": "scripts/ui/modal_window/blocking_operation.lua",
+    "view_path": "BlockingOperation.html",
+    "defined_actions": ["hide_gamepad_cursor"],
+    "action_filter": "message_box",
+    "children":
+    [
+        {"name": "message", "type": "Label", "view_path": "window.labelWrapper.label"}
+    ]
+}

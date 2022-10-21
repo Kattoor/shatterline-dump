@@ -1,0 +1,25 @@
+
+{
+   "microbehaviors":
+   [
+      {
+         "name": "GoVisibleIfAttack",
+         "conditions":
+         [
+            {
+               "template": "AttackInProgress"
+            }
+         ],
+         "actions":
+         [
+            {
+               "template": "SendScriptEvent",
+               "params":
+               {
+                  "name": "TurnOffInvisibility"
+               }
+            }
+         ]
+      }
+   ]
+}

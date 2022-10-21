@@ -1,0 +1,149 @@
+<LensFlareLibrary Name="sqb">
+ <FlareItem Name="cqb.lamp_flare" Type="Root" Enable="1" Id="{81124D0C-29CE-4C15-B125-9967B7A8A3CD}" Library="sqb">
+  <Params>
+   <Common Size="1" Perspectivefactor="1" DistanceFadingfactor="0.4" Brightness="1" Position="1,1" Tint="1,1,1" Tint.alpha="51" Orbitangle="0" OcclusionInteraction="0" AutoRotation="1" CorrectAspectRatio="1"/>
+   <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+   <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+   <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+   <GlobalSettings EnableOcclusion="1" OcclusionSize="0.02,0.02" Flarefadetime="0.2" Shaftfadetime="1" Affectedbylightcolor="0" Affectedbylightradius="0" AffectedbylightFOV="1" MultiplyColor="1"/>
+   <Sensor CustomSensorVariationMap="0" EffectiveSensorSize="0.8"/>
+  </Params>
+  <FlareItem Name="lamp_flare.glow_bright" Type="Glow" Enable="1">
+   <Params>
+    <Common Size="0.1" Perspectivefactor="0" DistanceFadingfactor="1" Brightness="1" Position="1,1" Tint="1,0.854993,0.597202" Tint.alpha="200" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,0.3" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Glow Polygonfactor="32" Focusfactor="0" Gamma="1"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="lamp_flare.iris shafts_lamp" Type="IrisShafts" Enable="1">
+   <Params>
+    <Common Size="0.1" Perspectivefactor="0" DistanceFadingfactor="1" Brightness="0.4" Position="1,1" Tint="1,1,1" Tint.alpha="100" Orbitangle="0" OcclusionInteraction="0" AutoRotation="1" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <IrisShafts Enablegradienttex="0" BaseTex="textures/lights/lens_flares/iris_shaft_b.dds" GradientTex="" Noiseseed="-99" Complexity="32" Smoothness="2" Thickness="0.1" Thicknessnoise="0" Spread="0.2" Spreadnoise="0" Sizenoise="0.8" Spacingnoise="0.2"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="lamp_flare.streaks_hor" Type="Streaks" Enable="1">
+   <Params>
+    <Common Size="0.4" Perspectivefactor="0" DistanceFadingfactor="1" Brightness="0.05" Position="1,1" Tint="0.445201,0.584079,1" Tint.alpha="255" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Streaks Enablegradienttex="0" GradientTex="" Noiseseed="81" Streakcount="1" Thickness="0.05" Thicknessnoise="0" Sizenoise="0" Spacingnoise="0"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="lamp_flare.glow" Type="Glow" Enable="1">
+   <Params>
+    <Common Size="0.2" Perspectivefactor="0" DistanceFadingfactor="1" Brightness="0.6" Position="1,1" Tint="1,1,1" Tint.alpha="160" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Glow Polygonfactor="32" Focusfactor="0" Gamma="1"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="lamp_flare.glow_large" Type="Glow" Enable="1">
+   <Params>
+    <Common Size="0.3" Perspectivefactor="0" DistanceFadingfactor="1" Brightness="0.25" Position="1,1" Tint="1,1,1" Tint.alpha="150" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Glow Polygonfactor="32" Focusfactor="0" Gamma="1"/>
+   </Params>
+  </FlareItem>
+ </FlareItem>
+ <FlareItem Name="cqb.large_flare" Type="Root" Enable="1" Id="{6362D201-773D-4443-82CE-3F01FC22CCC2}" Library="sqb">
+  <Params>
+   <Common Size="1" Perspectivefactor="1" DistanceFadingfactor="0.3" Brightness="1" Position="1,1" Tint="1,1,1" Tint.alpha="51" Orbitangle="0" OcclusionInteraction="0" AutoRotation="1" CorrectAspectRatio="1"/>
+   <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+   <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+   <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+   <GlobalSettings EnableOcclusion="1" OcclusionSize="0.02,0.02" Flarefadetime="0.2" Shaftfadetime="1" Affectedbylightcolor="0" Affectedbylightradius="0" AffectedbylightFOV="1" MultiplyColor="1"/>
+   <Sensor CustomSensorVariationMap="0" EffectiveSensorSize="0.8"/>
+  </Params>
+  <FlareItem Name="large_flare.ghost" Type="Ghost" Enable="1">
+   <Params>
+    <Common Size="0.2" Perspectivefactor="0" DistanceFadingfactor="1" Brightness="0.5" Position="1,1" Tint="0.610496,0.799103,1" Tint.alpha="25" Orbitangle="0.02" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <LensGhost Texture="textures/lights/lens_flares/flare_h.dds"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="large_flare.streaks" Type="Streaks" Enable="1">
+   <Params>
+    <Common Size="0.3" Perspectivefactor="0" DistanceFadingfactor="1" Brightness="0.1" Position="1,1" Tint="0.584079,0.701102,1" Tint.alpha="255" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Streaks Enablegradienttex="0" GradientTex="" Noiseseed="81" Streakcount="1" Thickness="0.07" Thicknessnoise="0.18" Sizenoise="0" Spacingnoise="0"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="large_flare.glow_strip" Type="Glow" Enable="1">
+   <Params>
+    <Common Size="0.2" Perspectivefactor="0" DistanceFadingfactor="1" Brightness="1" Position="1,1" Tint="1,1,1" Tint.alpha="150" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,0.2" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Glow Polygonfactor="16" Focusfactor="0" Gamma="1"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="large_flare.glow" Type="Glow" Enable="1">
+   <Params>
+    <Common Size="0.2" Perspectivefactor="0" DistanceFadingfactor="1" Brightness="1" Position="1,1" Tint="1,0.921582,0.745404" Tint.alpha="150" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1.5,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Glow Polygonfactor="32" Focusfactor="0" Gamma="1"/>
+   </Params>
+  </FlareItem>
+ </FlareItem>
+ <FlareItem Name="cqb.tower_flare" Type="Root" Enable="1" Id="{7B803DCB-026F-42D0-A101-6908BAA5BDCD}" Library="sqb">
+  <Params>
+   <Common Size="1" Perspectivefactor="1" DistanceFadingfactor="0.1" Brightness="1" Position="1,1" Tint="1,1,1" Tint.alpha="51" Orbitangle="0" OcclusionInteraction="0" AutoRotation="1" CorrectAspectRatio="1"/>
+   <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+   <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+   <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+   <GlobalSettings EnableOcclusion="1" OcclusionSize="0.02,0.02" Flarefadetime="0.2" Shaftfadetime="1" Affectedbylightcolor="0" Affectedbylightradius="0" AffectedbylightFOV="1" MultiplyColor="1"/>
+   <Sensor CustomSensorVariationMap="0" EffectiveSensorSize="0.8"/>
+  </Params>
+  <FlareItem Name="tower_flare.streaks" Type="Streaks" Enable="1">
+   <Params>
+    <Common Size="0.04" Perspectivefactor="0" DistanceFadingfactor="0.1" Brightness="0.2" Position="1,1" Tint="0.450786,1,0.107023" Tint.alpha="255" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Streaks Enablegradienttex="0" GradientTex="" Noiseseed="-24" Streakcount="16" Thickness="0.15" Thicknessnoise="0.57" Sizenoise="0.8" Spacingnoise="0.2"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="tower_flare.glow_small" Type="Glow" Enable="1">
+   <Params>
+    <Common Size="0.02" Perspectivefactor="0" DistanceFadingfactor="1" Brightness="2" Position="1,1" Tint="0.147027,1,0.0251869" Tint.alpha="255" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Glow Polygonfactor="32" Focusfactor="0" Gamma="0.5"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="tower_flare.glow" Type="Glow" Enable="1">
+   <Params>
+    <Common Size="0.07" Perspectivefactor="0" DistanceFadingfactor="1" Brightness="1" Position="1,1" Tint="0.412543,1,0.174647" Tint.alpha="255" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Glow Polygonfactor="32" Focusfactor="0" Gamma="0.77"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="tower_flare.glow_large" Type="Glow" Enable="1">
+   <Params>
+    <Common Size="0.2" Perspectivefactor="0" DistanceFadingfactor="1" Brightness="1" Position="1,1" Tint="0.665387,1,0.53948" Tint.alpha="255" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Glow Polygonfactor="32" Focusfactor="0" Gamma="1"/>
+   </Params>
+  </FlareItem>
+ </FlareItem>
+</LensFlareLibrary>

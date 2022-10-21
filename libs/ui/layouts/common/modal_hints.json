@@ -1,0 +1,29 @@
+{
+    "script": "scripts/ui/common/modal_hints.lua",
+    "view_path": "ModalHints.html",
+    "hide_cursor": true,
+    "children": 
+    [
+        {"name": "container", "type": "Control", "view_path": "wrapper"},
+
+        {"name": "hint_1", "type": "Button", "view_path": "wrapper.hint1", "visible": false},
+        {"name": "hint_1_key", "type": "ActionLabel", "view_path": "wrapper.hint1.wrapper.key", "gamepad_only": true},
+        {"name": "hint_1_icon", "type": "Image", "view_path": "wrapper.hint1.wrapper.icon"},
+
+        {"name": "hint_2", "type": "Button", "view_path": "wrapper.hint2", "visible": false},
+        {"name": "hint_2_key", "type": "ActionLabel", "view_path": "wrapper.hint2.wrapper.key", "gamepad_only": true},
+        {"name": "hint_2_icon", "type": "Image", "view_path": "wrapper.hint2.wrapper.icon"},
+
+        {"name": "hint_3", "type": "Button", "view_path": "wrapper.hint3", "visible": false},
+        {"name": "hint_3_key", "type": "ActionLabel", "view_path": "wrapper.hint3.wrapper.key", "gamepad_only": true},
+        {"name": "hint_3_icon", "type": "Image", "view_path": "wrapper.hint3.wrapper.icon"},
+
+        {"name": "hint_4", "type": "Button", "view_path": "wrapper.hint4", "visible": false},
+        {"name": "hint_4_key", "type": "ActionLabel", "view_path": "wrapper.hint4.wrapper.key", "gamepad_only": true},
+        {"name": "hint_4_icon", "type": "Image", "view_path": "wrapper.hint4.wrapper.icon"},
+
+        {"name": "hint_5", "type": "Button", "view_path": "wrapper.hint5", "visible": false},
+        {"name": "hint_5_key", "type": "ActionLabel", "view_path": "wrapper.hint5.wrapper.key", "gamepad_only": true},
+        {"name": "hint_5_icon", "type": "Image", "view_path": "wrapper.hint5.wrapper.icon"}
+    ]
+}

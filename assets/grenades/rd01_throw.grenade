@@ -1,0 +1,71 @@
+{
+       "destroy_on_act": true,
+       "time_to_action": 10000.0,
+       "selection":
+       {
+          "quick_selection_duration": 0.0,
+          "quick_deselection_duration": 0.0,
+          "quick_deselect": true,
+          "deselection_duration": 0.0,
+          "selection_duration": 0.0
+       },
+       "time_to_throw": 0.12,
+       "act_reason": "time",
+       "projectile":
+       {
+          "speed": 10.0,
+          "offset":
+          {
+             "z": -0.1,
+             "x": 0.0,
+             "y": 0.3
+          },
+          "rotation_lock": false,
+          "config_name": "rd01_throw",
+          "slice_name": "slices/projectiles/throwables/rd01_throw.dynamicslice",
+          "velocity_character_multiplier": 0.2,
+          "offset_from_wall": 0.15,
+          "angle": 15.0
+       },
+       "count": 1,
+       "pierceability_level" : 2,
+       "explosion_damage":
+       {
+          "points":
+          [
+             {
+                "distance": 0.0,
+                "damage": 1500.0
+             },
+             {
+                "distance": 1.0,
+                "damage": 800.0
+             },
+             {
+                "distance": 2.0,
+                "damage": 500.0
+             },
+             {
+                "distance": 5.0,
+                "damage": 160.0
+             },
+             {
+                "distance": 6.0,
+                "damage": 35.0
+             },
+             {
+                "distance": 8.0,
+                "damage": 0.0
+             }
+          ]
+       },
+       "common":
+       {
+          "item_tag": "RD"
+       },
+       "duration_throw": 0.4,
+       "duration_prepare": 0.05,
+       "can_be_dropped": false,
+       "can_cook": true,
+       "can_cook_indefinitely": true
+    }

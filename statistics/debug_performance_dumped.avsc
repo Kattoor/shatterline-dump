@@ -1,0 +1,217 @@
+{
+    "name": "debug_performance_dumped",
+    "doc": "Origin: performance. Emitter: client. Client event. This is a debug event for automation of performance collection as a part of QA pipeline",
+    "type": "record",
+    "fields": [
+        {
+            "name": "a",
+            "type": "int",
+            "default": -1,
+            "doc": "world XY-plain angle of player's camera 0 to 360 clockwise direction (0.0 - straight along Y-axis, 90.0 - straight along X-axis)"
+        },
+        {
+            "name": "b",
+            "type": "int",
+            "default": -1,
+            "doc": "world YZ-plain angle of player's camera, 0 straight, 90 top, -90 bottom"
+        },
+        {
+            "name": "name",
+            "type": "string",
+            "default": "-1",
+            "doc": "unique name of the event"
+        },
+        {
+            "name": "pid",
+            "type": "long",
+            "default": -1,
+            "doc": "namespace-unique identifier of a player"
+        },
+        {
+            "name": "ts",
+            "type": "string",
+            "default": "-1",
+            "doc": "ISO8601 UTC timestamp of the event invocation"
+        },
+        {
+            "name": "gid",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace-unique identifier of the match"
+        },
+        {
+            "name": "sid",
+            "type": "string",
+            "default": "-1",
+            "doc": "global-unique identifier of the player's login session (time between login and logout)"
+        },
+        {
+            "name": "ns",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace of the server's deployment (realm)"
+        },
+        {
+            "name": "y",
+            "type": "double",
+            "default": -1,
+            "doc": "Y-axis coordinate of an object with decimal accuracy 1e-13"
+        },
+        {
+            "name": "x",
+            "type": "double",
+            "default": -1,
+            "doc": "X-axis coordinate of an object with decimal accuracy 1e-13"
+        },
+        {
+            "name": "z",
+            "type": "double",
+            "default": -1,
+            "doc": "Z-axis coordinate of an object with decimal accuracy 1e-13"
+        },
+        {
+            "name": "custom_tag",
+            "type": "string",
+            "default": "-1",
+            "doc": "custom text given by an automation script"
+        },
+        {
+            "name": "shadow_dc",
+            "type": "int",
+            "default": -1,
+            "doc": "GPU profiler amount of shadow DCs"
+        },
+        {
+            "name": "shadow_polys",
+            "type": "float",
+            "default": -1,
+            "doc": "GPU profiler millions of shadow polys"
+        },
+        {
+            "name": "total_dc",
+            "type": "int",
+            "default": -1,
+            "doc": "GPU profiler total amount of DCs"
+        },
+        {
+            "name": "total_polys",
+            "type": "float",
+            "default": -1,
+            "doc": "GPU profiler total amount of polys"
+        },
+        {
+            "name": "frame_ms",
+            "type": "float",
+            "default": -1,
+            "doc": "GPU profiler frame time, ms"
+        },
+        {
+            "name": "geometry_ms",
+            "type": "float",
+            "default": -1,
+            "doc": "GPU profiler geometry time, ms"
+        },
+        {
+            "name": "shadows_ms",
+            "type": "float",
+            "default": -1,
+            "doc": "GPU profiler shadows time, ms"
+        },
+        {
+            "name": "lighting_ms",
+            "type": "float",
+            "default": -1,
+            "doc": "GPU profiler lighting time, ms"
+        },
+        {
+            "name": "transparent_ms",
+            "type": "float",
+            "default": -1,
+            "doc": "GPU profiler transparent time, ms"
+        },
+        {
+            "name": "postprocess_ms",
+            "type": "float",
+            "default": -1,
+            "doc": "GPU profiler postprocess time, ms"
+        },
+        {
+            "name": "misc_ms",
+            "type": "float",
+            "default": -1,
+            "doc": "GPU profiler misc time, ms"
+        },
+        {
+            "name": "total_memory_usage",
+            "type": "int",
+            "default": -1,
+            "doc": "Total process memory usage in MB, including reserverd memory"
+        },
+        {
+            "name": "frame_time",
+            "type": "float",
+            "default": -1,
+            "doc": "CPU profiler frame time, ms"
+        },
+        {
+            "name": "top1_func_time",
+            "type": "float",
+            "default": -1,
+            "doc": "CPU profiler 1st function time, ms"
+        },
+        {
+            "name": "top1_func_name",
+            "type": "string",
+            "default": "-1",
+            "doc": "CPU profiler 1st function name"
+        },
+        {
+            "name": "top2_func_time",
+            "type": "float",
+            "default": -1,
+            "doc": "CPU profiler 2nd function time, ms"
+        },
+        {
+            "name": "top2_func_name",
+            "type": "string",
+            "default": "-1",
+            "doc": "CPU profiler 2nd function name"
+        },
+        {
+            "name": "top3_func_time",
+            "type": "float",
+            "default": -1,
+            "doc": "CPU profiler 3rd function time, ms"
+        },
+        {
+            "name": "top3_func_name",
+            "type": "string",
+            "default": "-1",
+            "doc": "CPU profiler 3rd function name"
+        },
+        {
+            "name": "top4_func_time",
+            "type": "float",
+            "default": -1,
+            "doc": "CPU profiler 4th function time, ms"
+        },
+        {
+            "name": "top4_func_name",
+            "type": "string",
+            "default": "-1",
+            "doc": "CPU profiler 4th function name"
+        },
+        {
+            "name": "top5_func_time",
+            "type": "float",
+            "default": -1,
+            "doc": "CPU profiler 5th function time, ms"
+        },
+        {
+            "name": "top5_func_name",
+            "type": "string",
+            "default": "-1",
+            "doc": "CPU profiler 5th function name"
+        }
+    ]
+}

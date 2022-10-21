@@ -1,0 +1,547 @@
+{
+    "name": "Adamant/DashCooldown",
+    "root": "262d2467-339e-4632-94f8-ddd4465ef575",
+    "nodes": {
+        "5b172dba-bffa-4ffe-ba7c-cfb0ad01f61a": {
+            "name": "TimeIsOut",
+            "pos": {
+                "x": 215,
+                "y": 531
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "TimerName",
+                    "type": "StringHash",
+                    "value": "Dash"
+                },
+                {
+                    "name": "Seconds",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Adamant",
+                        "DashCooldown"
+                    ]
+                },
+                {
+                    "name": "StartIfAbsent",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "SucceedOnTimerAbsent",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "ForgetOnSucceed",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "3433f832-9a3f-4861-904e-674a899ee013"
+        },
+        "ae915712-359d-45f2-8619-6c03e435c9e6": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -695,
+                "y": 735
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "SelectedDashCooldown"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Float"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "d575d328-5f01-4e4c-a7d4-87e861c1c3e0": {
+            "name": "SetBehaviorCondition",
+            "pos": {
+                "x": 700,
+                "y": 725
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "CanDash"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "d39a4f36-3425-475f-aade-3720e8c40d4c": {
+            "name": "SetBBValueByPath",
+            "pos": {
+                "x": -1095,
+                "y": 630
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "BB Path",
+                    "type": "StringHash",
+                    "value": "Gai.Adamant.DashesLeft"
+                },
+                {
+                    "name": "Value",
+                    "type": "Float",
+                    "value": "0"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "c0de28bb-5ece-4f91-85d8-d54c01f0cc43": {
+            "name": "IsBBValueExist",
+            "pos": {
+                "x": -305,
+                "y": 313
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ValuePath",
+                    "type": "StringHash",
+                    "value": "Gai.Adamant.DashCooldown"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "f4dd181a-6a4b-4008-bc05-1f1eca5cc991"
+        },
+        "52c44705-5647-4d58-8ae9-12949e65790e": {
+            "name": "SetBehaviorCondition",
+            "pos": {
+                "x": 955,
+                "y": 506
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "CanDash"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "e7fd5ddb-0294-4316-9e96-73c7124c9dde": {
+            "name": "LessThan",
+            "pos": {
+                "x": 215,
+                "y": 297
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Lhs",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Adamant",
+                        "DashesLeft"
+                    ]
+                },
+                {
+                    "name": "Rhs",
+                    "type": "Float",
+                    "value": "0.5"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "5b172dba-bffa-4ffe-ba7c-cfb0ad01f61a"
+        },
+        "fbc085cf-9dc7-4373-9f7b-e1f272392029": {
+            "name": "Selector",
+            "pos": {
+                "x": 720,
+                "y": 367
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "b2d0ff53-62da-4ee2-817b-a4c019436025",
+                "52c44705-5647-4d58-8ae9-12949e65790e"
+            ]
+        },
+        "daf061cc-a4f2-498f-8461-42f6daffd8f5": {
+            "name": "StartTimer",
+            "pos": {
+                "x": -870,
+                "y": 635
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "TimerName",
+                    "type": "StringHash",
+                    "value": "Dash"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "f4dd181a-6a4b-4008-bc05-1f1eca5cc991": {
+            "name": "Sequence",
+            "pos": {
+                "x": -305,
+                "y": 519
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "ae915712-359d-45f2-8619-6c03e435c9e6",
+                "6f7f79f1-0a21-4974-a2ed-d0f634a924e8",
+                "22398fc2-4b1a-4215-9a38-faa1057bdc84"
+            ]
+        },
+        "22398fc2-4b1a-4215-9a38-faa1057bdc84": {
+            "name": "SetBBValueByPath",
+            "pos": {
+                "x": -135,
+                "y": 737
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "BB Path",
+                    "type": "StringHash",
+                    "value": "Gai.Adamant.DashCooldown"
+                },
+                {
+                    "name": "Value",
+                    "type": "Variable",
+                    "value": [
+                        "SelectedDashCooldown"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "262d2467-339e-4632-94f8-ddd4465ef575": {
+            "name": "Sequence",
+            "pos": {
+                "x": -5,
+                "y": 113
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "8f94ce8a-6f9b-42e0-a9df-752975843d58",
+                "c0de28bb-5ece-4f91-85d8-d54c01f0cc43",
+                "e7fd5ddb-0294-4316-9e96-73c7124c9dde",
+                "89ed6564-0a72-4d1c-a761-2173a715805c"
+            ]
+        },
+        "9243d9aa-5168-4e20-8453-ab48a7774f45": {
+            "name": "SetBBValueByPath",
+            "pos": {
+                "x": 140,
+                "y": 957
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "BB Path",
+                    "type": "StringHash",
+                    "value": "Gai.Adamant.DashesLeft"
+                },
+                {
+                    "name": "Value",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "dash_count_in_serie"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "f02c49c9-a162-4e19-8391-f8db07e12b4e": {
+            "name": "Sequence",
+            "pos": {
+                "x": -955,
+                "y": 474
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "d39a4f36-3425-475f-aade-3720e8c40d4c",
+                "daf061cc-a4f2-498f-8461-42f6daffd8f5"
+            ]
+        },
+        "3433f832-9a3f-4861-904e-674a899ee013": {
+            "name": "Sequence",
+            "pos": {
+                "x": 215,
+                "y": 784
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "9243d9aa-5168-4e20-8453-ab48a7774f45",
+                "6aeb34a0-aef9-4914-9de8-b99e0602cebb"
+            ]
+        },
+        "6f7f79f1-0a21-4974-a2ed-d0f634a924e8": {
+            "name": "GenerateRandomFloat",
+            "pos": {
+                "x": -420,
+                "y": 735
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Min",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "dash_cooldown_min"
+                    ]
+                },
+                {
+                    "name": "Max",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "dash_cooldown_max"
+                    ]
+                },
+                {
+                    "name": "Scale",
+                    "type": "Float",
+                    "value": "1.00"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Result",
+                    "type": "Variable",
+                    "value": [
+                        "SelectedDashCooldown"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "6aeb34a0-aef9-4914-9de8-b99e0602cebb": {
+            "name": "EraseBBValueByPath",
+            "pos": {
+                "x": 440,
+                "y": 956
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "BB Path",
+                    "type": "StringHash",
+                    "value": "Gai.Adamant.DashCooldown"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "89ed6564-0a72-4d1c-a761-2173a715805c": {
+            "name": "Succeeder",
+            "pos": {
+                "x": 605,
+                "y": 249
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "fbc085cf-9dc7-4373-9f7b-e1f272392029"
+        },
+        "8f94ce8a-6f9b-42e0-a9df-752975843d58": {
+            "name": "IsBBValueExist",
+            "pos": {
+                "x": -955,
+                "y": 310
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ValuePath",
+                    "type": "StringHash",
+                    "value": "Gai.Adamant.DashesLeft"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "f02c49c9-a162-4e19-8391-f8db07e12b4e"
+        },
+        "b2d0ff53-62da-4ee2-817b-a4c019436025": {
+            "name": "GreaterThan",
+            "pos": {
+                "x": 700,
+                "y": 507
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Lhs",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Adamant",
+                        "DashesLeft"
+                    ]
+                },
+                {
+                    "name": "Rhs",
+                    "type": "Float",
+                    "value": "0.5"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "d575d328-5f01-4e4c-a7d4-87e861c1c3e0"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": []
+}

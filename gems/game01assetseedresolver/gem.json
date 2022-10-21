@@ -1,0 +1,18 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "529e327627874adfa64709c26216020b",
+    "Name": "AssetSeedResolver",
+    "DisplayName": "Asset Seed Resolver",
+    "Version": "0.1.0",
+    "Summary": "Resolves seeds for the assets missing in bundled paks",
+    "Tags": ["Assets", "AssetBundler", "AssetValidation"],
+    "IconPath": "preview.png",
+    "Modules": [{ "Type": "GameModule" }],
+    "Dependencies" : [
+        {
+            "Uuid": "5a5c3c10b91d4b4ea8baef474c5b5d49",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "AssetValidation"
+        }
+    ]
+}

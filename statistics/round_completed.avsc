@@ -1,0 +1,73 @@
+{
+    "name": "round_completed",
+    "doc": "Origin: game session. Emitter: dedicated server. Indicates when a round was ended",
+    "type": "record",
+    "fields": [
+        {
+            "name": "cid_winner",
+            "type": "int",
+            "default": -1,
+            "doc": "cid of a winning team"
+        },
+        {
+            "name": "team_winner",
+            "type": "string",
+            "default": "-1",
+            "doc": "categorical definition of the team which player belongs to"
+        },
+        {
+            "name": "name",
+            "type": "string",
+            "default": "-1",
+            "doc": "unique name of the event"
+        },
+        {
+            "name": "round_id",
+            "type": "int",
+            "default": -1,
+            "doc": "match-unique incremental counter of a round within a period in round-base modes"
+        },
+        {
+            "name": "ts",
+            "type": "string",
+            "default": "-1",
+            "doc": "ISO8601 UTC timestamp of the event invocation"
+        },
+        {
+            "name": "gid",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace-unique identifier of the match"
+        },
+        {
+            "name": "period_id",
+            "type": "int",
+            "default": -1,
+            "doc": "match-unique incremental counter of a period of rounds within a set in round-base modes"
+        },
+        {
+            "name": "dur",
+            "type": "int",
+            "default": -1,
+            "doc": "duration time in milliseconds passed since the action/feature/event start"
+        },
+        {
+            "name": "ns",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace of the server's deployment (realm)"
+        },
+        {
+            "name": "round_er",
+            "type": "string",
+            "default": "-1",
+            "doc": "explicit name of the round end reason"
+        },
+        {
+            "name": "set_id",
+            "type": "int",
+            "default": -1,
+            "doc": "match-unique incremental counter of a set in round-base modes"
+        }
+    ]
+}

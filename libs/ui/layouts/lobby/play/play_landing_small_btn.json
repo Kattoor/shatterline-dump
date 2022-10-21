@@ -1,0 +1,10 @@
+{
+    "script": "scripts/ui/lobby/play/play_landing_btn.lua",
+    "view_path": "PlayModeItemSmall.html",
+    "children":
+    [
+        {"name": "title", "type": "Label", "view_path": "wrapper.titleWrapper.title"},
+        {"name": "action_hint", "type": "ActionLabel", "view_path": "wrapper.titleWrapper.key", "gamepad_only": true},
+        {"name": "completed_icon", "type": "Component", "view_path": "wrapper.titleWrapper.completedIcon", "visible": false}
+    ]
+}

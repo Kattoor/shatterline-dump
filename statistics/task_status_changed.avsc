@@ -1,0 +1,55 @@
+{
+    "name": "task_status_changed",
+    "doc": "Origin: game session. Emitter: backend/dedicated server. Emitted when player's task appears or changes its state",
+    "type": "record",
+    "fields": [
+        {
+            "name": "name",
+            "type": "string",
+            "default": "-1",
+            "doc": "unique name of the event"
+        },
+        {
+            "name": "pid",
+            "type": "long",
+            "default": -1,
+            "doc": "namespace-unique identifier of a player"
+        },
+        {
+            "name": "ts",
+            "type": "string",
+            "default": "-1",
+            "doc": "ISO8601 UTC timestamp of the event invocation"
+        },
+        {
+            "name": "sid",
+            "type": "string",
+            "default": "-1",
+            "doc": "global-unique identifier of the player's login session (time between login and logout)"
+        },
+        {
+            "name": "ns",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace of the server's deployment (realm)"
+        },
+        {
+            "name": "task_id",
+            "type": "string",
+            "default": "-1",
+            "doc": "unique identifier of the task (actual system name of task configuration)"
+        },
+        {
+            "name": "task_status",
+            "type": "string",
+            "default": "-1",
+            "doc": "categorial identifier of the newly assigned task status: received - task appeared for player; expired - task expired due to timeout; completed - all requirements were fulfilled; cancelled - player cancelled a task; reset - the progress was reset due to the game logic; claimed - player got reward claimed."
+        },
+        {
+            "name": "reward_id",
+            "type": "string",
+            "default": "-1",
+            "doc": "globally-unique identifier of the gained reward"
+        }
+    ]
+}

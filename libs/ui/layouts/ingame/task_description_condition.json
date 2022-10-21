@@ -1,0 +1,10 @@
+{
+    "script": "scripts/ui/ingame/task_description_condition.lua",
+    "view_path": "TaskCondition.html",
+    "children": 
+    [
+        {"name": "title", "type": "Label", "view_path": "title"},
+
+        {"name": "tinted_progress_bar", "type": "Component", "view_path": "tintedProgressBar", "file": "common/tinted_progress_bar.json", "visible": false}
+    ]
+}

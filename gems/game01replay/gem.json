@@ -1,0 +1,28 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "1edb80a54cc2431a91c02db7165f3e5c",
+    "Name": "Game01Replay",
+    "DisplayName": "Game01Replay",
+    "Version": "0.1.0",
+    "Summary": "Capture and replay multiplayer session",
+    "Tags": ["Untagged"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        }
+    ],
+    "Dependencies":
+    [
+        {
+            "Uuid": "d3ed407a19bb4c0d92b7c4872313d600",
+            "VersionConstraints": ["~>1.0"],
+            "_comment": "Multiplayer"
+        },
+        {
+            "Uuid": "2ebd4481cbf142b89286f28b4c29ace3",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01Interfaces"
+        }
+    ]
+}

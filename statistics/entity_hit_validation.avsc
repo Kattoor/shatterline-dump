@@ -1,0 +1,91 @@
+{
+    "name": "entity_hit_validation",
+    "doc": "Origin: game session. Emitter: client. Emitted when player hits an entity while shooting (performing raycast). Hit validation info included.",
+    "type": "record",
+    "fields": [
+        {
+            "name": "is_player",
+            "type": "boolean",
+            "default": false,
+            "doc": "boolean flag to distinguish non-player objects. true - object is a player, false - otherwise"
+        },
+        {
+            "name": "pid",
+            "type": "long",
+            "default": -1,
+            "doc": "namespace-unique identifier of a player"
+        },
+        {
+            "name": "ts",
+            "type": "string",
+            "default": "-1",
+            "doc": "ISO8601 UTC timestamp of the event invocation"
+        },
+        {
+            "name": "gid",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace-unique identifier of the match"
+        },
+        {
+            "name": "pid_shooter",
+            "type": "long",
+            "default": -1,
+            "doc": "pid of a shooter"
+        },
+        {
+            "name": "ns",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace of the server's deployment (realm)"
+        },
+        {
+            "name": "name",
+            "type": "string",
+            "default": "-1",
+            "doc": "unique name of the event"
+        },
+        {
+            "name": "cid",
+            "type": "int",
+            "default": -1,
+            "doc": "team unique identifier. -6 pve players, -5 AI, -4 team B, -3 team A or pid in FFA modes"
+        },
+        {
+            "name": "team",
+            "type": "string",
+            "default": "-1",
+            "doc": "categorical definition of the team which player belongs to"
+        },
+        {
+            "name": "wid",
+            "type": "string",
+            "default": "-1",
+            "doc": "game-unique name of the weapon"
+        },
+        {
+            "name": "tick_id",
+            "type": "long",
+            "default": -1,
+            "doc": "tick id"
+        },
+        {    
+            "name": "pellet_id", 
+            "type": "long",
+            "default": -1,
+            "doc": "shot-unique pellet number"
+        },
+        {
+            "name": "hit_category",
+            "type": "int",
+            "default": -1,
+            "doc": "define if client and server hits matched (1), only client hit (2), only server hit (3), different targets (4)"
+        },
+        {
+            "name": "validation_filter",
+            "type": "int",
+            "default": -1,
+            "doc": "define if a validation filter for certain cases applied: shooter is dead (1), target is dead (2)"
+        }
+    ]
+}

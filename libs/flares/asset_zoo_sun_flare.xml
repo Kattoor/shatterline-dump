@@ -1,0 +1,123 @@
+<LensFlareLibrary Name="asset_zoo_sun_flare">
+ <FlareItem Name="Sun.sun_dawn" Type="Root" Enable="1" Id="{A4979038-971D-4312-8465-B33E894D7A9C}" Library="asset_zoo_sun_flare">
+  <Params>
+   <Common Size="1" Perspectivefactor="1" DistanceFadingfactor="1" Brightness="1" Position="1,1" Tint="1,1,1" Tint.alpha="51" Orbitangle="0" OcclusionInteraction="0" AutoRotation="1" CorrectAspectRatio="1"/>
+   <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+   <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+   <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+   <GlobalSettings EnableOcclusion="1" OcclusionSize="0.02,0.02" Flarefadetime="0.2" Shaftfadetime="1" Affectedbylightcolor="0" Affectedbylightradius="0" AffectedbylightFOV="1" MultiplyColor="1"/>
+   <Sensor CustomSensorVariationMap="0" EffectiveSensorSize="0.8"/>
+  </Params>
+  <FlareItem Name="sun_dawn.chromatic ring" Type="ChromaticRing" Enable="1">
+   <Params>
+    <Common Size="1" Perspectivefactor="0" DistanceFadingfactor="1" Brightness="2.5" Position="1,1" Tint="1,0.3564,0.0886556" Tint.alpha="51" Orbitangle="0" OcclusionInteraction="0" AutoRotation="1" CorrectAspectRatio="0"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <ChromaticRing Locktolight="1" Thickness="1" Polygoncomplexity="160" GradientTexture="engineassets/textures/flares/spectrum_quater.dds" EnableGradientTexture="0" Noiseseed="-73" Noisestrength="0" Completionfading="50" Completionspanangle="180" Completionrotation="180"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="sun_dawn.streaks2" Type="Streaks" Enable="1">
+   <Params>
+    <Common Size="1" Perspectivefactor="0" DistanceFadingfactor="1" Brightness="1" Position="1,1" Tint="1,0.381326,0.0953075" Tint.alpha="255" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1.25,0.25" Translation="0,0" Rotation="0.99"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Streaks Enablegradienttex="0" GradientTex="" Noiseseed="81" Streakcount="1" Thickness="0.3" Thicknessnoise="0.6" Sizenoise="0.8" Spacingnoise="0.2"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="sun_dawn.iris shafts" Type="IrisShafts" Enable="1">
+   <Params>
+    <Common Size="0.5" Perspectivefactor="0" DistanceFadingfactor="1" Brightness="1" Position="1,1" Tint="1,0.270498,0.0116122" Tint.alpha="255" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <IrisShafts Enablegradienttex="0" BaseTex="EngineAssets/Textures/flares/iris_shaft.dds" GradientTex="" Noiseseed="4" Complexity="8" Smoothness="2" Thickness="1" Thicknessnoise="0" Spread="1" Spreadnoise="0" Sizenoise="1" Spacingnoise="0.1"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="sun_dawn.multi ghost" Type="Multi Ghost" Enable="1">
+   <Params>
+    <Common Size="0.04" Perspectivefactor="0" DistanceFadingfactor="1" Brightness="0.3" Position="1,1" Tint="1,0.887923,0.590619" Tint.alpha="51" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <MultiGhost Texture="engineassets/textures/flares/orb_02.dds" Count="4" RandomSeed="0" Scatteringrange="0.1,0.7" positionfactor="1,1" positionoffset="0,0" X-axisnoise="0" Y-axisnoise="0" SizeVariation="0.4" BrightnessVariation="0.5" ColorVariation="0.84"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="sun_dawn.streaks3" Type="Streaks" Enable="1">
+   <Params>
+    <Common Size="0.25" Perspectivefactor="0" DistanceFadingfactor="1" Brightness="1" Position="1,1" Tint="1,1,1" Tint.alpha="255" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,0.3" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Streaks Enablegradienttex="0" GradientTex="" Noiseseed="81" Streakcount="32" Thickness="0.16" Thicknessnoise="0.6" Sizenoise="0.8" Spacingnoise="0.2"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="sun_dawn.streaks0" Type="Streaks" Enable="0">
+   <Params>
+    <Common Size="0.75" Perspectivefactor="0" DistanceFadingfactor="1" Brightness="0.2" Position="1,1" Tint="1,0.533276,0.191202" Tint.alpha="255" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,0.3" Translation="0,0" Rotation="0.07"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Streaks Enablegradienttex="0" GradientTex="" Noiseseed="-208" Streakcount="5" Thickness="0.04" Thicknessnoise="0.6" Sizenoise="0.8" Spacingnoise="0.2"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="sun_dawn.orbs" Type="CameraOrbs" Enable="1">
+   <Params>
+    <Common Size="0.19" Perspectivefactor="0" DistanceFadingfactor="1" Brightness="1" Position="1,1" Tint="1,0.693872,0.401978" Tint.alpha="255" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="2,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <CameraOrbs Illumrange="1" OrbTexture="EngineAssets/Textures/flares/orb_01.dds" LensTexture="engineassets/textures/flares/visor_scratch.dds" Enablelenstexture="1" Enablelensdetailshading="0" Lenstexturestrength="1" Lensdetailshadingstrength="0" Lensdetailbumpiness="0" Enableorbdetailshading="0"/>
+    <Generator Numberoforbs="5" Noiseseed="0" Colorvariation="0.5" Sizevariation="0.8" Rotationvariation="0.8"/>
+    <AdvancedShading Enableadvshading="0" AmbientDiffuse="0,0,0" AmbientDiffuse.alpha="0" Absorptance="4" Transparency="0.37" Scattering="1"/>
+   </Params>
+  </FlareItem>
+ </FlareItem>
+ <FlareItem Name="Sun.sun_afternoon" Type="Root" Enable="1" Id="{081BEBC6-B7F2-436C-AFFD-DCBE1D7E3B04}" Library="asset_zoo_sun_flare">
+  <Params>
+   <Common Size="1" Perspectivefactor="1" DistanceFadingfactor="1" Brightness="1" Position="1,1" Tint="1,1,1" Tint.alpha="51" Orbitangle="0" OcclusionInteraction="0" AutoRotation="1" CorrectAspectRatio="1"/>
+   <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+   <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+   <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+   <GlobalSettings EnableOcclusion="1" OcclusionSize="0.02,0.02" Flarefadetime="0.2" Shaftfadetime="1" Affectedbylightcolor="0" Affectedbylightradius="0" AffectedbylightFOV="1" MultiplyColor="1"/>
+   <Sensor CustomSensorVariationMap="0" EffectiveSensorSize="0.8"/>
+  </Params>
+  <FlareItem Name="sun_afternoon.multi ghost" Type="Multi Ghost" Enable="1">
+   <Params>
+    <Common Size="0.04" Perspectivefactor="0" DistanceFadingfactor="1" Brightness="2" Position="1,1" Tint="1,0.887923,0.590619" Tint.alpha="51" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <MultiGhost Texture="engineassets/textures/flares/orb_02.dds" Count="4" RandomSeed="0" Scatteringrange="0.1,0.7" positionfactor="1,1" positionoffset="0,0" X-axisnoise="0" Y-axisnoise="0" SizeVariation="0.4" BrightnessVariation="0.5" ColorVariation="0.84"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="sun_afternoon.iris shafts" Type="IrisShafts" Enable="1">
+   <Params>
+    <Common Size="0.5" Perspectivefactor="0" DistanceFadingfactor="1" Brightness="2" Position="1,1" Tint="1,0.871367,0.571125" Tint.alpha="255" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <IrisShafts Enablegradienttex="0" BaseTex="EngineAssets/Textures/flares/iris_shaft.dds" GradientTex="" Noiseseed="4" Complexity="16" Smoothness="2" Thickness="1" Thicknessnoise="0" Spread="1" Spreadnoise="0" Sizenoise="1" Spacingnoise="0.1"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="sun_afternoon.streaks" Type="Streaks" Enable="1">
+   <Params>
+    <Common Size="0.25" Perspectivefactor="0" DistanceFadingfactor="1" Brightness="1" Position="1,1" Tint="1,1,1" Tint.alpha="255" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,0.3" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Streaks Enablegradienttex="0" GradientTex="" Noiseseed="81" Streakcount="32" Thickness="0.16" Thicknessnoise="0.6" Sizenoise="0.8" Spacingnoise="0.2"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="sun_afternoon.chromatic ring" Type="ChromaticRing" Enable="1">
+   <Params>
+    <Common Size="0.9" Perspectivefactor="0" DistanceFadingfactor="1" Brightness="1" Position="1,1" Tint="1,1,1" Tint.alpha="51" Orbitangle="0" OcclusionInteraction="0" AutoRotation="1" CorrectAspectRatio="0"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <ChromaticRing Locktolight="1" Thickness="1" Polygoncomplexity="160" GradientTexture="EngineAssets/Textures/flares/spectrum_full.tif" EnableGradientTexture="0" Noiseseed="-73" Noisestrength="0" Completionfading="50" Completionspanangle="180" Completionrotation="180"/>
+   </Params>
+  </FlareItem>
+ </FlareItem>
+</LensFlareLibrary>

@@ -1,0 +1,44 @@
+{   
+    "can_cook": false,
+    "duration_prepare": 0.3,
+    "duration_throw": 0.23,
+    "time_to_throw": 0.09,
+    "time_to_action": 60,
+    "count": 1,
+    "act_reason": "time",
+
+    "medkit":
+    {
+        "pickup_duration": 0,
+        "heal_duration": 10,
+        "health_to_restore": 150
+    },
+    
+    "projectile":
+    {
+        "config_name": "test_mk02",
+        "slice_name": "slices/projectiles/mk01.dynamicslice",
+        "speed": 14.0,
+        "angle": 0.0,
+        "velocity_character_multiplier": 0.5,
+        "offset": 
+        {
+            "x": 0,
+            "y": 0,
+            "z": -0.19
+        }
+    },
+
+    "selection":
+    {
+        "quick_selection_duration": 0.0,
+        "quick_deselection_duration": 0.0,
+        "selection_duration": 0,
+        "deselection_duration": 0
+    },
+
+    "common":
+    {
+        "item_tag": "MK"
+    }
+}

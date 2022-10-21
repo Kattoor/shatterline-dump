@@ -1,0 +1,105 @@
+{
+  "metagame_info": {
+    "name_token": "@ffa_label",
+    "mission": "t_max_count_ffa_highpick",
+    "game_type": "pvp",
+    "voice_chat_mode": "party_only",
+    "min_players_count": 12,
+    "time_to_join_sec": 900
+  },
+  "session_info": {
+    "level": "test_levels/t_empty",
+    "level_params": [
+      "ffa_active"
+    ],
+    "game_mode": "test_max_count_ffa"
+  },
+  "reward_info": {
+    "reward_calculators": [
+      {
+        "name": "session_outcome",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "win": 5,
+              "draw": 3,
+              "loss": 2
+            }
+          },
+          {
+            "type": "xp",
+            "values": {
+              "win": 800,
+              "draw": 700,
+              "loss": 600
+            }
+          },
+          {
+            "type": "skill",
+            "values": {
+              "win": 1,
+              "draw": 0,
+              "loss": -1
+            }
+          }
+        ]
+      },
+      {
+        "name": "session_play_time",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "reward": 0,
+              "max_reward": 100
+            }
+          },
+          {
+            "type": "xp",
+            "values": {
+              "reward": 1,
+              "max_reward": 200
+            }
+          }
+        ]
+      },
+      {
+        "name": "session_kill",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "reward": 0,
+              "max_reward": 100
+            }
+          },
+          {
+            "type": "xp",
+            "values": {
+              "reward": 10,
+              "max_reward": 1000
+            }
+          }
+        ]
+      }
+    ],
+    "weapon_score": [
+      {
+        "event": {
+          "event_id": "kill"
+        },
+        "score": 200
+      },
+      {
+        "event": {
+          "event_id": "headshot"
+        },
+        "score": 100
+      }
+    ]
+  }
+}

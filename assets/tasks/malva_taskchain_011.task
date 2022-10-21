@@ -1,0 +1,29 @@
+{
+  "name": "malva_taskchain_011",
+  "type": "challenge",
+  "active": false,
+  "image": "hero_malva_large",
+  "rarity": "rare",
+  "display_name": { "localization_key": "@malva_taskchain_011_name" },
+  "description": { "localization_key": "@malva_taskchain_011_description" },
+  "conditions": [
+   {
+      "name": "malva_taskchain_011",
+      "event_description": { "localization_key": "@malva_taskchain_011_event_description" },
+      "event": { "event_id": "MalvaPlay", "actor_is_me": true },
+      "progress": 2
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "item",
+      "name": "malva_item_box",
+      "amount": 1
+    },
+    {
+      "reward_type": "task",
+      "name": "malva_taskchain_012",
+      "amount": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+    "name": "invader_ultimate",
+    "duration": 15.0,
+    "effects": [
+        { "max_speed": { "speed_cap": 6.0 }},
+        { "health_change": { "hit_points": 300.0 }},
+        { "damage_filter": {"damage_modifiers": [
+            { "filter_type": "hit", "hit_type": "Shot", "modifier": 1 },
+            { "filter_type": "hit", "hit_type": "AOE", "modifier": 1 },
+            { "filter_type": "hit", "hit_type": "DOT", "modifier": 1 },
+            { "filter_type": "hit", "hit_type": "Melee", "modifier": 1 }
+        ]}},
+        {
+            "actor_morph": {
+                "start_amount": -0.2,
+                "dest_amount": -0.01,
+                "show_duration": 0.25,
+                "hide_duration": 0.5
+            }
+        }
+    ]
+}

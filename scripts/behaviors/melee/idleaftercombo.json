@@ -1,0 +1,76 @@
+{
+    "name": "Melee/IdleAfterCombo",
+    "root": "0e8a2ff6-fa84-445a-8f8c-e4cc1ea9e2e8",
+    "nodes": {
+        "0e8a2ff6-fa84-445a-8f8c-e4cc1ea9e2e8": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 76
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "IdleAfterCombo"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "d18359ae-d7a4-4282-9541-8917e745f972"
+        },
+        "ff93a109-8f9b-4a21-baa6-33a80654247a": {
+            "name": "PlayAnimState",
+            "pos": {
+                "x": 0,
+                "y": 345
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "AGInput",
+                    "type": "StringHash",
+                    "value": "Rage"
+                },
+                {
+                    "name": "AGNode",
+                    "type": "StringHash",
+                    "value": "Rage_StateMachine_CODE"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "d18359ae-d7a4-4282-9541-8917e745f972": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 198
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "IdleAfterCombo"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "ff93a109-8f9b-4a21-baa6-33a80654247a"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

@@ -1,0 +1,364 @@
+
+{
+    "ai_archetypes":
+    [
+        {
+            "name": "glasshead_hideout_dummy",
+            "parent": "glasshead",
+            "tags": ["(6) Dummies: Glasshead"],
+            "tp_slice": "slices/ai/glasshead_hideout_tp.dynamicslice"
+        },
+        
+        {
+            "name": "NPC_Kioni",
+            "add_tags":["NpcAI"],
+            "slice": "slices/ai/npc_kioni.dynamicslice",
+            "tp_slice": "slices/ai/npc_kioni_tp.dynamicslice",
+            "tags": ["NPC_Kioni"],
+            "parent": "StraferMainArchetype",
+            "vo_profile": "",
+            "health": 10000,
+            "competitor": "Players",
+            "count_as_ai": false,
+            "equip":
+            [
+            ],
+            "wounds":
+            {
+                "impulse":
+                {
+                    "profile": "Gunman",
+                    "value": 65535.0,
+                    "ignore_impulse": true,
+                    "prob": 0.0,
+                    "cooldown_min": 0.0,
+                    "cooldown_max": 0.0
+                },
+                "aoe":
+                {
+                    "profile": "Gunman",
+                    "value": 65535.0,
+                    "time": 0.02,
+                    "prob": 0.0,
+                    "cooldown_min": 3.0,
+                    "cooldown_max": 5.0
+                },
+                "damage":
+                {
+                    "profile": "Gunman",
+                    "value": 65535,
+                    "time": 0.1,
+                    "prob": 0.0
+                }
+            },
+            "speed":
+            {
+                "run":6,
+                "strafe":3,
+                "back":2.5,
+                "crouch":2,
+                "fire":3
+            } 
+        },
+
+        {
+            "name": "NPC_Sullivan",
+            "add_tags":["NpcAI"],
+            "slice": "slices/ai/npc_kioni.dynamicslice",
+            "tp_slice": "slices/ai/npc_sulivan_tp.dynamicslice",
+            "tags": ["NPC_Sullivan"],
+            "parent": "StraferMainArchetype",
+            "vo_profile": "",
+            "health": 10000,
+            "competitor": "Players",
+            "count_as_ai": false,
+            "equip":
+            [               
+            ],
+            "wounds":
+            {
+                "impulse":
+                {
+                    "profile": "Gunman",
+                    "value": 65535.0,
+                    "ignore_impulse": true,
+                    "prob": 0.0,
+                    "cooldown_min": 0.0,
+                    "cooldown_max": 0.0
+                },
+                "aoe":
+                {
+                    "profile": "Gunman",
+                    "value": 65535.0,
+                    "time": 0.02,
+                    "prob": 0.0,
+                    "cooldown_min": 3.0,
+                    "cooldown_max": 5.0
+                },
+                "damage":
+                {
+                    "profile": "Gunman",
+                    "value": 65535,
+                    "time": 0.1,
+                    "prob": 0.0
+                }
+            },
+            "hit_reactions":
+            {
+                "animation": "Gunman",
+                "damage": 1,
+                "probability": 0.9
+            },
+            "speed":
+            {
+                "run":4,
+                "strafe":2.5,
+                "back":2.5,
+                "crouch":2,
+                "fire":3,
+                "speed_change_duration": 1.0,
+                "rotation_max_speed": 4.0,
+                "non_strafe_max_angle": 5.0,
+                "strafe_restart_if_angle": 45.0
+            }
+        },
+
+        {
+            "name": "NPC_Template",
+            "add_tags":["NpcAI"],
+            "slice": "slices/ai/npc/npc_root.dynamicslice",
+            "tp_slice": "slices/ai/strafer_gunman_tp.dynamicslice",
+            "parent": "StraferMainArchetype",
+            "health": 9900,
+            "body_turn_limit": 180,
+            "competitor": "Players",
+            "count_as_ai": false,
+            "vo_profile": "",
+            "behavior":
+            {
+                "params":
+                {
+                    "can_throw_medkit_to_player": "false",
+                    "ally_points": "1000",
+                    "ally_distance": "8"
+                }
+            },
+            "equip":
+            [
+                {
+                    "item": "smg01"
+                },
+                {
+                    "item": "gr_frag02_ai"
+                }
+            ],
+            "hit_reactions":
+            {
+                "animation": "Gunman",
+                "damage": 5,
+                "probability": 0.0
+            },
+            "microbehaviors": [
+                {
+                    "name": "ThrowGrenade",
+                    "params":
+                    {
+                        "idle_time": "1.0",
+                        "global_counter": "2",
+                        "global_reset_time": "20"
+                    }
+                }
+            ],
+            "perception":
+            {
+                "sight_range": 100.0,
+                "max_memory_time": 1.0,
+                "sound_stimulus_scale": 0.0,
+                "weight_inc_step": 150,
+                "weight_inc_time": 0.5,
+                "weight_dec_step": 200,
+                "weight_dec_time": 1
+            },
+            "target_selection":
+            {
+                "tag_distance":
+                {
+                    "Character":
+                    {
+                        "weights":
+                        [
+                            {
+                                "weight":150,
+                                "distance":15
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+
+        {
+            "name": "NPC_Dummy_Template",
+            "parent": "NPC_Template",
+            "behavior":
+            {
+                "params":
+                {
+                    "idle_query_name": "Noop",
+                    "battle_query_name": "Noop",
+                    "side_strafe_length_min": "0",
+                    "side_strafe_length_max": "0",
+                    "wait_after_strafe_min": "10",
+                    "wait_after_strafe_max": "10"
+                }
+            },
+            "target_selection":
+            {
+                "dummy_selector": true
+            }
+        },
+        
+        {
+            "name": "NPC_Mongoose_Dummy",
+            "tp_slice": "slices/ai/npc/npc_mongoose_tp.dynamicslice",
+            "tags": ["NPC_Mongoose_Dummy"],
+            "parent": "NPC_Dummy_Template",
+            "equip":
+            [
+                {
+                    "item": "smg01_npc_ai",
+                    "damage_multiplier": 1.0,
+                    "shooting_pattern": ["1-5; 0.0", "1; 0.1"],
+                    "max_shooting_range": 60
+                },
+                {
+                    "item": "gr_frag02_ai"
+                }
+            ]
+        },
+        {
+            "name": "NPC_Strix",
+            "tp_slice": "slices/ai/npc/npc_strix_tp.dynamicslice",
+            "tags": ["NPC_Strix"],
+            "parent": "NPC_Template",
+            "equip":
+            [
+                {
+                    "item": "smg01_npc_ai",
+                    "damage_multiplier": 1.0,
+                    "shooting_pattern": ["1-5; 0.0", "1; 0.1"],
+                    "max_shooting_range": 60
+                },
+                {
+                    "item": "gr_frag02_ai"
+                }
+            ]
+        },
+        {
+            "name": "NPC_Ram",
+            "tp_slice": "slices/ai/npc/npc_ram_tp.dynamicslice",
+            "tags": ["NPC_Ram"],
+            "parent": "NPC_Template",
+            "equip":
+            [
+                {
+                    "item": "ar02_npc_ai",
+                    "damage_multiplier": 1.0,
+                    "shooting_pattern": ["1-5; 0.0", "1; 0.1"],
+                    "max_shooting_range": 60
+                },
+                {
+                    "item": "gr_frag02_ai"
+                }
+            ]
+        },
+        {
+            "name": "NPC_Pill",
+            "tp_slice": "slices/ai/npc/npc_pill_tp.dynamicslice",
+            "tags": ["NPC_Pill"],
+            "parent": "NPC_Template",
+            "behavior":
+            {
+                "params":
+                {
+                    "can_throw_medkit_to_player": "true"
+                }
+            },
+            "target_selection":
+            {
+                "dummy_selector": true
+            },
+            "microbehaviors": [
+                {
+                    "name": "NPCThrowMedkitToPlayer"
+                }
+            ],
+            "equip":
+            [
+                {
+                    "item": "ar02_ai",
+                    "damage_multiplier": 1.5,
+                    "shooting_pattern": ["1-5; 0.0", "1; 0.8"],
+                    "max_shooting_range": 60
+                },
+                {
+                    "item": "gr_frag02_ai"
+                }
+            ]
+        },
+        {
+            "name": "NPC_Malva",
+            "tp_slice": "slices/ai/npc/npc_malva_tp.dynamicslice",
+            "tags": ["NPC_Malva"],
+            "parent": "NPC_Template",
+            "equip":
+            [
+                {
+                    "item": "smg01_npc_ai",
+                    "damage_multiplier": 1.0,
+                    "shooting_pattern": ["1-5; 0.0", "1; 0.1"],
+                    "max_shooting_range": 60
+                },
+                {
+                    "item": "gr_frag02_ai"
+                }
+            ]
+        },
+        {
+            "name": "NPC_Brisa_Dummy",
+            "tp_slice": "slices/ai/npc/npc_brisa_tp.dynamicslice",
+            "tags": ["NPC_Brisa_Dummy"],
+            "parent": "NPC_Dummy_Template",
+            "equip":
+            [
+                {
+                    "item": "ar02_npc_ai",
+                    "damage_multiplier": 1.0,
+                    "shooting_pattern": ["1-5; 0.0", "1; 0.1"],
+                    "max_shooting_range": 60
+                },
+                {
+                    "item": "gr_frag02_ai"
+                }
+            ]
+        },
+        {
+            "name": "NPC_Kite",
+            "tp_slice": "slices/ai/npc/npc_kite_tp.dynamicslice",
+            "tags": ["NPC_Kite"],
+            "parent": "NPC_Template",
+            "equip":
+            [
+                {
+                    "item": "ar02_npc_ai",
+                    "damage_multiplier": 1.0,
+                    "shooting_pattern": ["1-5; 0.0", "1; 0.1"],
+                    "max_shooting_range": 60
+                },
+                {
+                    "item": "gr_frag02_ai"
+                }
+            ]
+        }
+    ]
+}

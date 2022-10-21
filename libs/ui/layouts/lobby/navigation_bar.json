@@ -1,0 +1,33 @@
+{
+    "script": "scripts/ui/lobby/navigation_bar.lua",
+    "view_path": "NavigationBar.html",
+    "children":
+    [
+        {"name": "select_panel", "type": "Component", "view_path": "wrapper.container.selectPanel"},
+    
+        {"name": "hint_left", "type": "ActionLabel", "view_path": "wrapper.hintLeft", "gamepad_only": true},
+
+        {"name": "tabSeason", "type": "ListItem", "view_path": "wrapper.container.seasonBtn", "text": "@season_btn"},
+        {"name": "tabSeason_recentIcon", "type": "Component", "view_path": "wrapper.container.seasonBtn.recentIcon", "visible": false},
+
+        {"name": "tabPlay", "type": "ListItem", "view_path": "wrapper.container.btn1", "text": "@play_btn"},
+        {"name": "tabPlay_recentIcon", "type": "Component", "view_path": "wrapper.container.btn1.recentIcon", "visible": false},
+
+        {"name": "tabHeroSelection", "type": "ListItem", "view_path": "wrapper.container.btn2", "text": "@hero_btn"},
+        {"name": "tabHeroSelection_recentIcon", "type": "Component", "view_path": "wrapper.container.btn2.recentIcon", "visible": false},
+
+        {"name": "tabArmory", "type": "ListItem", "view_path": "wrapper.container.btn3", "text": "@armory_btn"},
+        {"name": "tabArmory_recentIcon", "type": "Component", "view_path": "wrapper.container.btn3.recentIcon", "visible": false},
+
+        {"name": "tabModifications", "type": "ListItem", "view_path": "wrapper.container.btn4", "text": "@modifications_btn"},
+        {"name": "tabModifications_recentIcon", "type": "Component", "view_path": "wrapper.container.btn4.recentIcon", "visible": false},
+
+        {"name": "tabShop", "type": "ListItem", "view_path": "wrapper.container.btn5", "text": "@shop_btn"},
+        {"name": "tabShop_recentIcon", "type": "Component", "view_path": "wrapper.container.btn5.recentIcon", "visible": false},
+
+        {"name": "tabInbox", "type": "ListItem", "view_path": "wrapper.container.btn6", "text": "@inbox_btn"},
+        {"name": "tabInbox_recentIcon", "type": "Component", "view_path": "wrapper.container.btn6.recentIcon", "visible": false},
+
+        {"name": "hint_right", "type": "ActionLabel", "view_path": "wrapper.hintRight", "gamepad_only": true}
+    ]
+}

@@ -1,0 +1,60 @@
+{
+    "microbehaviors":
+    [
+        {
+            "name": "SideDash",
+            "conditions":
+            [
+                {
+                    "template": "GotDamage",
+                    "params":
+                    {
+                        "damage": "#damage",
+                        "time": "#damage_time",
+                        "prob": "#prob"
+                    }
+                },
+                {
+                    "template":"FrequencyLimit",
+                    "origin":"source",
+                    "params":
+                    {
+                        "name":"SideDash",
+                        "count":"#counter",
+                        "time":"#reset_time",
+                        "delay_min":"#delay_min",
+                        "delay_max":"#delay_max"
+                    }
+                }
+            ],
+            "actions":
+            [
+                {
+                    "template": "RunMicrobehavior",
+                    "origin":"source",
+                    "params":
+                    {
+                        "name":"SideDash",
+                        "min_distance":"#min_distance",
+                        "max_distance":"#max_distance",
+                        "random_angle":"#random_angle",
+                        "use_under_fire_radius":"false"
+                    }
+                }
+            ],
+            "default_params":
+            {
+                "damage": "0",
+                "damage_time": "0",
+                "prob": "1.0",
+                "counter":"1",
+                "reset_time":"8",
+                "delay_min":"5",
+                "delay_max":"12",
+                "min_distance":"15.0",
+                "max_distance":"18.0",
+                "random_angle":"15"
+            }
+        }
+    ]
+}

@@ -1,0 +1,95 @@
+{
+    "name": "Default/TestActionMelee",
+    "root": "4a81ebc5-dae4-4254-9524-b90d8777124a",
+    "nodes": {
+        "9a6395ea-a08a-4625-93fb-3f76193d287b": {
+            "name": "LogGate",
+            "pos": {
+                "x": 0,
+                "y": 251
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CVar",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "OnEnter",
+                    "type": "StringHash",
+                    "value": "ActionTest: Melee started"
+                },
+                {
+                    "name": "OnExit",
+                    "type": "StringHash",
+                    "value": "ActionTest: Melee finished"
+                },
+                {
+                    "name": "Attribute1",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                },
+                {
+                    "name": "Attribute2",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "e031ee1b-04ab-42ac-ae63-8908e7b723f8"
+        },
+        "4a81ebc5-dae4-4254-9524-b90d8777124a": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 104
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ActionTest"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "9a6395ea-a08a-4625-93fb-3f76193d287b"
+        },
+        "e031ee1b-04ab-42ac-ae63-8908e7b723f8": {
+            "name": "MeleeAttack",
+            "pos": {
+                "x": 0,
+                "y": 453
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "AttackIndex",
+                    "type": "Integer",
+                    "value": "-1"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

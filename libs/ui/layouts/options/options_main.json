@@ -1,0 +1,15 @@
+{
+    "script": "scripts/ui/options/options_main.lua",
+    "view_path": "OptionsScreen.html",
+    "children": [
+        {"name": "navigation_bar", "type": "Component", "file": "lobby/navigation_bar_tiny.json", "visible": false},
+
+        {"name": "keybind_options", "type": "Component", "file": "options/options_keyboard_mouse.json", "visible": false},
+        {"name": "graphics_options", "type": "Component", "file": "options/options_graphics.json", "visible": false},
+        {"name": "audio_options", "type": "Component", "file": "options/options_audio.json", "visible": false},
+        {"name": "gamepad_options", "type": "Component", "file": "options/options_gamepad.json", "visible": false},
+        {"name": "general_options", "type": "Component", "file": "options/options_general.json", "visible": false},
+
+        {"name": "options_lock_window", "type": "Component", "file": "modal_window/options_lock_window.json", "visible": false}
+    ]
+}

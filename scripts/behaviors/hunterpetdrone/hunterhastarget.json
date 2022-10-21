@@ -1,0 +1,217 @@
+{
+    "name": "HunterPetDrone/HunterHasTarget",
+    "root": "e42885d8-9b13-4338-8611-39d09003e5e0",
+    "nodes": {
+        "51b21117-b9d9-44f6-a779-783cb45d357e": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 637
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "3a3f8426-a826-496b-b5ca-f4f7a0957326",
+                "1788f124-37c6-425e-99f9-c8bb8b217f48",
+                "25c2ee12-d97f-43e3-b58c-809031073f1e"
+            ]
+        },
+        "989957e9-dfd4-46fe-9d2d-155bfd4bab00": {
+            "name": "SetStrafeAllowedAndRestoreOnExit",
+            "pos": {
+                "x": 0,
+                "y": 404
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Allow",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "fbdc2d33-70ec-4249-aaa9-51948fec7e95"
+        },
+        "e42885d8-9b13-4338-8611-39d09003e5e0": {
+            "name": "IsBBValueExist",
+            "pos": {
+                "x": 0,
+                "y": 108
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ValuePath",
+                    "type": "StringHash",
+                    "value": "Gai.HunterPetDrone.TargetId"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "b9d48613-6865-4b45-9ef8-2b56d0dbcb64"
+        },
+        "1788f124-37c6-425e-99f9-c8bb8b217f48": {
+            "name": "Wait",
+            "pos": {
+                "x": 0,
+                "y": 773
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Float",
+                    "value": "0.3"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "fbdc2d33-70ec-4249-aaa9-51948fec7e95": {
+            "name": "RepeatUntilFails",
+            "pos": {
+                "x": 0,
+                "y": 523
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Iterations",
+                    "type": "Integer",
+                    "value": "0"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "51b21117-b9d9-44f6-a779-783cb45d357e"
+        },
+        "b9d48613-6865-4b45-9ef8-2b56d0dbcb64": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 284
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ApproachToTarget"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "989957e9-dfd4-46fe-9d2d-155bfd4bab00"
+        },
+        "3a3f8426-a826-496b-b5ca-f4f7a0957326": {
+            "name": "ApproachTo",
+            "pos": {
+                "x": -265,
+                "y": 773
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "HunterPetDrone",
+                        "TargetId"
+                    ]
+                },
+                {
+                    "name": "EndDistance",
+                    "type": "Float",
+                    "value": "1.5"
+                },
+                {
+                    "name": "UpdateDestinationPoint",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "25c2ee12-d97f-43e3-b58c-809031073f1e": {
+            "name": "ApproachToKeepDistance",
+            "pos": {
+                "x": 295,
+                "y": 773
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "HunterPetDrone",
+                        "TargetId"
+                    ]
+                },
+                {
+                    "name": "Distance",
+                    "type": "Float",
+                    "value": "3"
+                },
+                {
+                    "name": "MaxVerticalDiff",
+                    "type": "Float",
+                    "value": "0.00"
+                },
+                {
+                    "name": "DistanceDeviationMin",
+                    "type": "Float",
+                    "value": "0.00"
+                },
+                {
+                    "name": "DistanceDeviationMax",
+                    "type": "Float",
+                    "value": "0.00"
+                },
+                {
+                    "name": "MoveBackDirectionRandomization",
+                    "type": "Float",
+                    "value": "0.00"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

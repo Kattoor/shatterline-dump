@@ -1,0 +1,30 @@
+{
+    "lobby_config": {
+        "game_type": "pvp",
+        "name_token": "@invasion_label",
+        "type_token": "@invasion_mode",
+        "info_token": "@invasion_briefing",
+        "time_token": "@isl_invasion_time",
+        "video_path": "videos/pve/invasion.bk2",
+        "small_image": "invasion_small",
+        "location_token": "@redlake_location",
+        "background": "bg_playlist_invasion"
+    },
+    "min_profile_level": 0,
+    "play_again_allowed": true,
+    "missions": [
+        "isl_invasion"
+    ],
+    "loading_backgrounds": [
+        "bg_play_screen_02",
+        "loading_pve"
+    ],
+    "rewards": [
+        {
+            "type_token": "@pve_completion_rewards_title",
+            "items": [
+                {"image": "soft", "value": 300}
+            ]
+        }
+    ]
+}

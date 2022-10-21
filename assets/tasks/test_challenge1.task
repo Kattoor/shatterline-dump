@@ -1,0 +1,28 @@
+{
+  "name": "test_challenge1",
+  "type": "challenge",
+  "active": true,
+  "image": "test_icon",
+  "rarity": "common",
+  "display_name": { "localization_key": "@test_task_challenge1" },
+  "description": { "localization_key": "@test_task_description" },
+  "conditions": [
+    {
+      "name": "condition_1",
+      "event_description": { "localization_key": "@test_task_event_description" },
+      "event": { "event_id": "Headshot", "actor_is_me": true },
+      "progress": 100
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 6000
+    }
+  ],
+  "price": {
+      "currency": "soft",
+      "amount": 2000
+  }
+}

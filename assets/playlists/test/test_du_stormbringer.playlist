@@ -1,0 +1,37 @@
+{
+    "lobby_config": {
+        "game_type": "pve",
+        "name_token": "@stormbringer_label",
+        "type_token": "@long_story",
+        "info_token": "@pve_briefing",
+        "time_token": "@stormbringer_time",
+        "location_token": "@stormbringer_location",
+        "video_path": "videos/pve/stormbringer.bk2",
+        "custom_audio": "pve_stormb_hughes_00",
+        "small_image": "",
+        "background": "bg_play_screen_02"
+    },
+    "min_profile_level": 0,
+    "play_again_allowed": false,
+    "missions": [
+        "du_stormbringer"
+    ],
+    "modifiers": ["health_cap_100", "test_modifier_ui_1"],
+    "rewards": [
+        {
+            "type_token": "@pve_completion_rewards_title",
+            "items": [
+                {"image": "soft", "value": 100},
+                {"image": "hard", "value": 150},
+                {"image": "test_icon", "value": 800}
+            ]
+        },
+        {
+            "type_token": "@pve_completion_rewards_title",
+            "items": [
+                {"image": "blueprint", "value": 100},
+                {"image": "hard", "value": 10}
+            ]
+        }
+    ]
+}

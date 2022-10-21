@@ -1,0 +1,14 @@
+{
+    "name": "reduce_shot",
+    "duration": 0,
+    "remove_on_death": false,
+    "remove_on_round": false,
+    "effects": [
+        { "damage_filter": {"damage_modifiers": [
+            { "filter_type": "hit", "hit_type": "Shot", "modifier": 0.75 },
+            { "filter_type": "hit", "hit_type": "AOE", "modifier": 1 },
+            { "filter_type": "hit", "hit_type": "DOT", "modifier": 1 },
+            { "filter_type": "hit", "hit_type": "Melee", "modifier": 1 }
+        ]}}
+    ]
+}

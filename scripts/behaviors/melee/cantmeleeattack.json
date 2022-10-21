@@ -1,0 +1,403 @@
+{
+    "name": "Melee/CantMeleeAttack",
+    "root": "9ea7e254-6767-48fd-8f37-713fc714bcd8",
+    "nodes": {
+        "6b872f5d-74bc-486b-a0bc-7dcac69df7c9": {
+            "name": "SetStrafeAllowedAndRestoreOnExit",
+            "pos": {
+                "x": 670,
+                "y": 427
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Allow",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "569107b4-4fef-419f-b67d-daac9292df7c"
+        },
+        "f5483113-ba12-4854-b709-6d5b3548b5a5": {
+            "name": "SpatialQuerySimple",
+            "pos": {
+                "x": -155,
+                "y": 427
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Query",
+                    "type": "StringHash",
+                    "value": "MeleeCantAttackTarget"
+                },
+                {
+                    "name": "Origin",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Reference",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "SQSPoint",
+                    "type": "Variable",
+                    "value": [
+                        "CantMeleeAttackPos"
+                    ]
+                },
+                {
+                    "name": "SQSPointId",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                },
+                {
+                    "name": "SQSResult",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "8b04830b-53ec-48cd-813f-aaa69aa33be3": {
+            "name": "SetDestinationPoint",
+            "pos": {
+                "x": 795,
+                "y": 764
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "CantMeleeAttackPos"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "569107b4-4fef-419f-b67d-daac9292df7c": {
+            "name": "Repeater",
+            "pos": {
+                "x": 670,
+                "y": 545
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Iterations",
+                    "type": "Integer",
+                    "value": "0"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "192a8139-1cc0-40c5-955a-853e97135a93"
+        },
+        "563801cb-0899-405a-9800-6b8f9072b217": {
+            "name": "ApproachTo",
+            "pos": {
+                "x": 365,
+                "y": 542
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "CantMeleeAttackPos"
+                    ]
+                },
+                {
+                    "name": "EndDistance",
+                    "type": "Float",
+                    "value": "0"
+                },
+                {
+                    "name": "UpdateDestinationPoint",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "409f238a-5d83-47e0-97e6-5a760b76c7e7": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 180
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "CantMeleeAttack"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "527c72cd-c4d7-47ba-976e-a634330b5a6c"
+        },
+        "8d585105-8fd3-4f46-aced-39794b099917": {
+            "name": "WaitRandom",
+            "pos": {
+                "x": 300,
+                "y": 763
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "MinWaitTime",
+                    "type": "Float",
+                    "value": "3"
+                },
+                {
+                    "name": "MaxWaitTime",
+                    "type": "Float",
+                    "value": "7"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "cb10dc41-1a97-4aab-a261-35e6cf36c70e": {
+            "name": "SpatialQuerySimple",
+            "pos": {
+                "x": 545,
+                "y": 764
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Query",
+                    "type": "StringHash",
+                    "value": "MeleeCantAttackTarget"
+                },
+                {
+                    "name": "Origin",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Reference",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "SQSPoint",
+                    "type": "Variable",
+                    "value": [
+                        "CantMeleeAttackPos"
+                    ]
+                },
+                {
+                    "name": "SQSPointId",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                },
+                {
+                    "name": "SQSResult",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "192a8139-1cc0-40c5-955a-853e97135a93": {
+            "name": "Sequence",
+            "pos": {
+                "x": 670,
+                "y": 652
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "8d585105-8fd3-4f46-aced-39794b099917",
+                "cb10dc41-1a97-4aab-a261-35e6cf36c70e",
+                "8b04830b-53ec-48cd-813f-aaa69aa33be3",
+                "5f16db54-77bb-4258-b2db-36f8e613cad3"
+            ]
+        },
+        "9ea7e254-6767-48fd-8f37-713fc714bcd8": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 80
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "CantMeleeAttack"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "409f238a-5d83-47e0-97e6-5a760b76c7e7"
+        },
+        "527c72cd-c4d7-47ba-976e-a634330b5a6c": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 306
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "814b6988-a59c-42bd-be84-9ae83509922c",
+                "f5483113-ba12-4854-b709-6d5b3548b5a5",
+                "637295b0-1d4a-49dc-8390-7878d9b482ab",
+                "dc0da627-fb7a-4c16-a093-342c2834af4b",
+                "6b872f5d-74bc-486b-a0bc-7dcac69df7c9"
+            ]
+        },
+        "637295b0-1d4a-49dc-8390-7878d9b482ab": {
+            "name": "SetDestinationPoint",
+            "pos": {
+                "x": 95,
+                "y": 427
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "CantMeleeAttackPos"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "5f16db54-77bb-4258-b2db-36f8e613cad3": {
+            "name": "ApproachTo",
+            "pos": {
+                "x": 1070,
+                "y": 764
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "CantMeleeAttackPos"
+                    ]
+                },
+                {
+                    "name": "EndDistance",
+                    "type": "Float",
+                    "value": "0"
+                },
+                {
+                    "name": "UpdateDestinationPoint",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "814b6988-a59c-42bd-be84-9ae83509922c": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -390,
+                "y": 424
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "CantMeleeAttackPos"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Position"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "dc0da627-fb7a-4c16-a093-342c2834af4b": {
+            "name": "SetStrafeAllowedAndRestoreOnExit",
+            "pos": {
+                "x": 365,
+                "y": 427
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Allow",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "563801cb-0899-405a-9800-6b8f9072b217"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

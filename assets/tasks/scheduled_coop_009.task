@@ -1,0 +1,38 @@
+{
+  "name": "scheduled_coop_009",
+  "type": "scheduled",
+  "tags": [
+    "gun"
+  ],
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "common",
+  "display_name": { "localization_key": "@scheduled_coop_009_name" },
+  "description": { "localization_key": "@scheduled_coop_009_description" },
+  "conditions": [
+    {
+      "name": "scheduled_coop_009",
+      "event_description": { "localization_key": "@scheduled_coop_009_event_description" },
+      "event": { "event_id": "HordeAbilityAcquired", "actor_is_me": true},
+      "progress": 5
+    }
+  ],
+  
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 2000
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 1000
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 15
+    }
+  ]
+}

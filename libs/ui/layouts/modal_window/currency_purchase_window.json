@@ -1,0 +1,19 @@
+{
+    "script": "scripts/ui/modal_window/currency_purchase_window.lua",
+    "view_path": "CurrencyPurchaseWindow.html",
+    "children": [
+
+        { "name": "title", "type": "Label", "view_path": "container.title", "text": "@currency_purchase_window_title"},
+
+        { "name": "currency_icon", "type": "Image", "view_path": "container.currencyInfoWrapper.currencyIcon" },
+        { "name": "currency_current", "type": "Label", "view_path": "container.currencyInfoWrapper.currentAmount" },
+        { "name": "currency_required", "type": "Label", "view_path": "container.currencyInfoWrapper.requiredAmount" },
+        
+        {"name": "text", "type": "Label", "view_path": "container.content.text", "text": "@currency_purchase_window_text"},
+
+        {"name": "currency_purchase_window_container", "type": "Component", "view_path": "container"},
+
+        {"name": "currency_purchase_list", "type": "CurrencyPurchaseItemsGrid", "view_path": "container.content.currencyPurchaseList"},
+        {"name": "currency_purchase_window", "type": "Component", "view_path": "container.content.currencyPurchaseList.container"}
+    ]
+}

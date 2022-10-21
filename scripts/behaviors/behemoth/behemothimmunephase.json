@@ -1,0 +1,89 @@
+{
+    "name": "Behemoth/BehemothImmunePhase",
+    "root": "be6a0290-8f61-4c90-9dc7-cc2e7f955e18",
+    "nodes": {
+        "be6a0290-8f61-4c90-9dc7-cc2e7f955e18": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 89
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ImmunePhase"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "5bc4923a-de52-4a7e-8cbb-4df56dd5f746"
+        },
+        "5bc4923a-de52-4a7e-8cbb-4df56dd5f746": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 223
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ImmunePhase"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "c9a0ba57-51ca-4d2d-8def-aeab92bf47a4"
+        },
+        "c9a0ba57-51ca-4d2d-8def-aeab92bf47a4": {
+            "name": "ScriptEventGate",
+            "pos": {
+                "x": 0,
+                "y": 364
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EnterEvent",
+                    "type": "StringHash",
+                    "value": "WantImmunePhase"
+                },
+                {
+                    "name": "ExitEvent",
+                    "type": "StringHash",
+                    "value": "ExitImmunePhase"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "b268a0a6-59ce-4302-ac23-62d637b21c20"
+        },
+        "b268a0a6-59ce-4302-ac23-62d637b21c20": {
+            "name": "Noop",
+            "pos": {
+                "x": 0,
+                "y": 515
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

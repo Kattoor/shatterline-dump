@@ -1,0 +1,60 @@
+{
+    "weapon_assets":
+    [
+        "parasite_gun"
+    ],
+    "motion_sets":
+    [
+        "parasite_gun_1p",
+        "parasite_gun_wpn",
+        "parasite_gun_3p"
+
+    ],
+    "binding_motions_to_parameters":
+    [
+        {
+            "motion": "select",
+            "weapon_parameter" : "item_selection_duration",
+            "scale" : 0.99
+        },
+        {
+            "motion": "deselect",
+            "weapon_parameter" : "item_deselection_duration",
+            "scale" : 0.99
+        },
+        {
+            "motion": "quick_deselect",
+            "weapon_parameter" : "item_quick_deselection_duration"
+        },
+        {
+            "motion": "ironsight_in",
+            "weapon_parameter" : "zoom_in_time",
+            "scale" : 0.99
+        },
+        {
+            "motion": "ironsight_out",
+            "weapon_parameter" : "zoom_out_time",
+            "scale" : 0.99
+        },
+        {
+            "motion": "fireloop",
+            "weapon_parameter" : "rpm",
+            "scale" : 1.0
+        },
+        {
+            "motion": "ironsight_fireloop",
+            "weapon_parameter" : "rpm",
+            "scale" : 1.0
+        },
+        {
+            "motion": "stand_select_rifle_3p_01",
+            "weapon_parameter" : "item_selection_duration",
+            "scale" : 0.99
+        },
+        {
+            "motion": "fire_add_3p_01",
+            "weapon_parameter" : "rpm",
+            "scale" : 0.95
+        }
+    ]
+}

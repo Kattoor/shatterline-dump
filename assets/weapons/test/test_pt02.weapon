@@ -1,0 +1,70 @@
+{
+    "shooting": {
+        "rpm": 200.0,
+        "clip_capacity": 0,
+        "backpack_capacity": 30,
+        "chamber_capacity": 6,
+        "chambers_fired_per_shot": 1,
+        "auto_reload_mode": "Chamber",
+        "bullet_type": "Pistol",
+        "base_damage_distribution": {
+            "points": [
+                {
+                    "distance": 0.0,
+                    "damage": 25.0
+                }
+            ]
+        },
+        "head_damage_distribution": {
+            "points": [
+                {
+                    "distance": 0.0,
+                    "damage": 75.0
+                }
+            ]
+        },
+        "reload": {
+            "reload_time": 3.0,
+            "reload_out_complete_threshold": 0.7,
+            "reload_in_complete_threshold": 0.7
+        }
+    },
+    "recoil": {
+        "max_vertical_angle": 0.0,
+        "kick_time": 0.0,
+        "decay_time": 0.0,
+        "decay_delay": 0.0,
+        "recoil_points": []
+    },
+    "spread": {
+        "min_hip_spread": 0.0,
+        "max_hip_spread": 0.0,
+        "hip_step": 0.0,
+        "decay_time": 0.0,
+        "decay_delay": 0.0,
+        "stand_multiplier": 0.0,
+        "walk_multiplier": 0.0,
+        "zoom_multiplier": 0.0,
+        "jump_multiplier": 0.0,
+        "crouch_multiplier": 0.0,
+        "crouch_idle_multiplier": 0.0,
+        "slide_multiplier": 0.0
+    },
+    "zoom": {
+        "zoom_fov": 0.0,
+        "weapon_fov": 0.0,
+        "zoom_in_time": 0.15,
+        "zoom_out_time": 0.15,
+        "delay_after_jump": 0.0,
+        "in_air": false,
+        "hide_crosshair": false
+    },
+    "selection": {
+        "selection_duration": 0.75,
+        "deselection_duration": 0.25
+    },
+    "common": {
+        "item_tag": "pt"
+    },
+    "muzzle_sight_distance": 1.0
+}

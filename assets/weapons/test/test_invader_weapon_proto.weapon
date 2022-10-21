@@ -1,0 +1,129 @@
+{
+    "shooting": {
+        "rpm": 80.0,
+        "clip_capacity": 0,
+        "backpack_capacity": 99,
+        "chamber_capacity": 6,
+        "chambers_fired_per_shot": 1,
+        "auto_reload_mode": "Chamber",
+        "hit_feedback": "server",
+        "bullet_type": "Crystallinepistol",
+        "shoot_projectile_type": "both",
+        "pierceability": {
+            "type": "survivor"
+        },
+        "base_damage_distribution": {
+            "points": [
+                {
+                    "distance": 0.0,
+                    "damage": 300.0
+                }
+            ]
+        },
+        "reload": {
+            "reload_time": 2.02,
+            "reload_out_complete_threshold": 0.7,
+            "reload_in_complete_threshold": 0.7
+        }
+    },
+    "recoil": {
+        "max_vertical_angle": 20.0,
+        "kick_time": 0.1,
+        "decay_time": 0.4,
+        "decay_delay": 0.0,
+        "recoil_points": [
+            {
+                "num": 1,
+                "angle": {
+                    "min": -20.0,
+                    "max": 20.0
+                },
+                "force": {
+                    "min": 1.05,
+                    "max": 1.22
+                }
+            }
+        ]
+    },
+    "spread": {
+        "min_hip_spread": 1.0,
+        "max_hip_spread": 5.0,
+        "hip_step": 0.15,
+        "decay_time": 0.4,
+        "decay_delay": 0.1,
+        "stand_multiplier": 0.3,
+        "walk_multiplier": 0.5,
+        "zoom_multiplier": 0.15,
+        "jump_multiplier": 2.0,
+        "crouch_multiplier": 0.4,
+        "crouch_idle_multiplier": 0.4,
+        "slide_multiplier": 0.5
+    },
+    "zoom": {
+        "zoom_fov": 40.0,
+        "weapon_fov": 65.0,
+        "zoom_in_time": 0.11,
+        "zoom_out_time": 0.11,
+        "delay_after_jump": 0.3,
+        "in_air": true,
+        "hide_crosshair": true,
+        "weapon_offset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+        },
+        "nearest_camera_rotation": {
+            "yaw": 0.0,
+            "pitch": 0.0,
+            "roll": 0.0
+        }
+    },
+    "selection": {
+        "selection_duration": 3.0,
+        "deselection_duration": 0.2,
+        "nearest_view_fov": 45.0,
+        "nearest_camera_offset": {
+            "x": 0.04,
+            "y": 0.03,
+            "z": -0.02
+        },
+        "nearest_camera_rotation": {
+            "yaw": 3.0,
+            "pitch": 1.0,
+            "roll": 0.0
+        }
+    },
+    "sounds": {
+        "tag": "default",
+        "sets": [
+            {
+                "tag": "default",
+                "triggers": {
+                    "fire_start": "pt01_fire"
+                }
+            },
+            {
+                "tag": "silenced",
+                "triggers": {
+                    "fire_start": "pt01_fire_silencer"
+                }
+            }
+        ]
+    },
+    "common": {
+        "item_tag": "PT"
+    },
+    "projectile": {
+        "slice_name": "slices/projectiles/ft_pt03_bullet.dynamicslice",
+        "act_reason": "distance",
+        "time_to_action": 0,
+        "time_to_destroy": -1,
+        "speed": 150,
+        "offset": {
+            "x": 0.0,
+            "y": 2.0,
+            "z": 0.0
+        }
+    },
+    "muzzle_sight_distance": 1.0
+}

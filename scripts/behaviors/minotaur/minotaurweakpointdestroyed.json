@@ -1,0 +1,361 @@
+{
+    "name": "Minotaur/MinotaurWeakpointDestroyed",
+    "root": "2fd1313d-d203-4631-a7f9-71c65add3d56",
+    "nodes": {
+        "2fd1313d-d203-4631-a7f9-71c65add3d56": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 75
+            },
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "MinotaurWeakpointDestroyed"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "e7e6e7f5-a8f6-49b2-8dce-4fd6acef2d18"
+        },
+        "e7e6e7f5-a8f6-49b2-8dce-4fd6acef2d18": {
+            "name": "EraseBBValueByPathOnExit",
+            "pos": {
+                "x": 0,
+                "y": 272
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "BB Path",
+                    "type": "StringHash",
+                    "value": "Gai.ConditionVariables.MinotaurWeakpointDestroyed"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "c31fb2f3-df1e-4bab-9d15-23af9fb207b8"
+        },
+        "0ba53105-4957-4cb9-91ea-030a7608a849": {
+            "name": "EnterWoundState",
+            "pos": {
+                "x": 245,
+                "y": 754
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "AnimationName",
+                    "type": "Variable",
+                    "value": [
+                        "WoundName"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "035ee84b-99b4-4d20-a4d3-149a72a3d181": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -175,
+                "y": 736
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "WoundName"
+                },
+                {
+                    "name": "Value",
+                    "type": "StringHash",
+                    "value": "MinotaurUnknownWeakpoint"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "c31fb2f3-df1e-4bab-9d15-23af9fb207b8": {
+            "name": "StopFireAndRestoreOnExit",
+            "pos": {
+                "x": 0,
+                "y": 456
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "6d8d6171-99b6-4785-8328-d64389ec9d59"
+        },
+        "b123883f-e0b3-413d-add8-8acb878f5b5d": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -420,
+                "y": 1154
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "WoundName"
+                },
+                {
+                    "name": "Value",
+                    "type": "StringHash",
+                    "value": "wounded1"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "e56dccd6-a8b3-4b62-a113-d8ce502f0b41": {
+            "name": "Equals",
+            "pos": {
+                "x": -420,
+                "y": 959
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Lhs",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "ConditionVariables",
+                        "MinotaurWeakpointDestroyed"
+                    ]
+                },
+                {
+                    "name": "Rhs",
+                    "type": "StringHash",
+                    "value": "head"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "b123883f-e0b3-413d-add8-8acb878f5b5d"
+        },
+        "d45b5202-a716-454e-bfe9-d0520400711c": {
+            "name": "SetVariable",
+            "pos": {
+                "x": 10,
+                "y": 1145
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "WoundName"
+                },
+                {
+                    "name": "Value",
+                    "type": "StringHash",
+                    "value": "wounded1"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "787e9f2a-bce2-4090-bf62-e4fa2837323e": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -385,
+                "y": 737
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "WoundName"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "StringHash"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "7f2927e5-b120-44d0-8b48-0dacb53df9c1": {
+            "name": "SetVariable",
+            "pos": {
+                "x": 435,
+                "y": 1142
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "WoundName"
+                },
+                {
+                    "name": "Value",
+                    "type": "StringHash",
+                    "value": "wounded2"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "c618286f-aa52-4c6f-82f0-577b69765ef1": {
+            "name": "Equals",
+            "pos": {
+                "x": 10,
+                "y": 959
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Lhs",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "ConditionVariables",
+                        "MinotaurWeakpointDestroyed"
+                    ]
+                },
+                {
+                    "name": "Rhs",
+                    "type": "StringHash",
+                    "value": "body_up"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "d45b5202-a716-454e-bfe9-d0520400711c"
+        },
+        "6d8d6171-99b6-4785-8328-d64389ec9d59": {
+            "name": "Sequence",
+            "pos": {
+                "x": -10,
+                "y": 584
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "787e9f2a-bce2-4090-bf62-e4fa2837323e",
+                "035ee84b-99b4-4d20-a4d3-149a72a3d181",
+                "1686bd9b-e560-4560-a06a-ec7765149064",
+                "0ba53105-4957-4cb9-91ea-030a7608a849"
+            ]
+        },
+        "1686bd9b-e560-4560-a06a-ec7765149064": {
+            "name": "Selector",
+            "pos": {
+                "x": 15,
+                "y": 737
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "e56dccd6-a8b3-4b62-a113-d8ce502f0b41",
+                "c618286f-aa52-4c6f-82f0-577b69765ef1",
+                "40ab147f-df7d-4fd6-ad01-d08bf0dc3dc2"
+            ]
+        },
+        "40ab147f-df7d-4fd6-ad01-d08bf0dc3dc2": {
+            "name": "Equals",
+            "pos": {
+                "x": 435,
+                "y": 961
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Lhs",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "ConditionVariables",
+                        "MinotaurWeakpointDestroyed"
+                    ]
+                },
+                {
+                    "name": "Rhs",
+                    "type": "StringHash",
+                    "value": "body_bot"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "7f2927e5-b120-44d0-8b48-0dacb53df9c1"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

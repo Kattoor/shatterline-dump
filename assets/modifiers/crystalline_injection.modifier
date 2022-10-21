@@ -1,0 +1,36 @@
+{
+    "name": "crystalline_injection",
+    "duration": 10.0,
+    "effects": [
+        { "max_speed": { "speed_cap": 5.0 }},
+        { "ag_input": { "input_name": "ult_active", "value_bool": true }},
+        { "health_change": { "hit_points": 150.0 }},
+        { "damage_filter": {"damage_modifiers": [
+            { "filter_type": "hit", "hit_type": "Shot", "modifier": 0.3 },
+            { "filter_type": "hit", "hit_type": "AOE", "modifier": 0.5 },
+            { "filter_type": "hit", "hit_type": "DOT", "modifier": 0.5 },
+            { "filter_type": "hit", "hit_type": "Melee", "modifier": 0.5 },
+            { "filter_type": "hit", "hit_type": "GeometryCollision", "modifier": 0.0 }
+        ]}},
+        {
+            "actor_morph": {
+                "start_amount": -0.2,
+                "dest_amount": -0.01,
+                "show_duration": 0.25,
+                "hide_duration": 0.5
+            }
+        },
+        {
+            "screen_texture":
+            {
+                "fade_in": 0.25,
+                "fade_out": 0.2,
+                "color_r": 1,
+                "color_g": 1,
+                "color_b": 1,
+                "effect_texture": "textures/decals/crystalline/screen_crystal_injection.tif",
+                "effect_diffuse_texture": "textures/decals/crystalline/screen_crystal_diffuse_injection.tif"
+            }
+        }
+    ]
+}

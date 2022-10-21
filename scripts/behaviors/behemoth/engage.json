@@ -1,0 +1,159 @@
+{
+    "name": "Behemoth/Engage",
+    "root": "6723d67c-c65c-419e-92bb-7e97f155b606",
+    "nodes": {
+        "6723d67c-c65c-419e-92bb-7e97f155b606": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 98
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Engage"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "f13878f0-9099-494f-998d-e33547d94c34"
+        },
+        "f346aa37-bb89-47be-8be6-82d7fcaa8287": {
+            "name": "Succeeder",
+            "pos": {
+                "x": -145,
+                "y": 531
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "6893ca16-2a0a-4931-96ba-a43e20d1bcca"
+        },
+        "f13878f0-9099-494f-998d-e33547d94c34": {
+            "name": "Selector",
+            "pos": {
+                "x": 0,
+                "y": 227
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "dac62d4d-afab-4500-b846-9b5d691796ac",
+                "cacdffd1-db2d-45ca-8389-3ff2cbf663d6"
+            ]
+        },
+        "327971d3-92ea-4abf-aa2b-137fe712cbb4": {
+            "name": "Success",
+            "pos": {
+                "x": 155,
+                "y": 473
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "dac62d4d-afab-4500-b846-9b5d691796ac": {
+            "name": "Probability",
+            "pos": {
+                "x": -145,
+                "y": 348
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Probability",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "shockwave_prob"
+                    ]
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "f346aa37-bb89-47be-8be6-82d7fcaa8287"
+        },
+        "6893ca16-2a0a-4931-96ba-a43e20d1bcca": {
+            "name": "CallSubtree",
+            "pos": {
+                "x": -145,
+                "y": 655
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Label",
+                    "type": "StringHash",
+                    "value": "ShockwaveAttack"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "cb046463-4af3-444a-af74-2398bad6ec97"
+        },
+        "cb046463-4af3-444a-af74-2398bad6ec97": {
+            "name": "Success",
+            "pos": {
+                "x": -145,
+                "y": 779
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "cacdffd1-db2d-45ca-8389-3ff2cbf663d6": {
+            "name": "CallSubtree",
+            "pos": {
+                "x": 155,
+                "y": 349
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Label",
+                    "type": "StringHash",
+                    "value": "RangedAttack"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "327971d3-92ea-4abf-aa2b-137fe712cbb4"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

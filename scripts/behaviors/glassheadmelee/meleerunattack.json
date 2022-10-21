@@ -1,0 +1,573 @@
+{
+    "name": "GlassheadMelee/MeleeRunAttack",
+    "root": "dd55a5ed-9994-449d-8ad3-d209e2602a87",
+    "nodes": {
+        "1f1c4f70-ddc4-4f4f-b6dd-c18a7bad2fb9": {
+            "name": "TargetInHorizontalRange",
+            "pos": {
+                "x": -180,
+                "y": 902
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Source",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Min",
+                    "type": "Float",
+                    "value": "0"
+                },
+                {
+                    "name": "Max",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Inventory",
+                        "CurrentItem",
+                        "attack_distance"
+                    ]
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "95751170-5146-4850-9859-ff7203f048da"
+        },
+        "aeebb7d3-ce15-4a18-85d6-3d2211f1f72d": {
+            "name": "AddTargetVelocity",
+            "pos": {
+                "x": 1045,
+                "y": 1307
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ForwardOnly",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "Horizontal",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "DurationLimit",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "run_attack_target_velocity_duration"
+                    ]
+                },
+                {
+                    "name": "VelocityLimit",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "run_attack_velocity"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "377a79bf-0807-4cb5-bbeb-5e32444cd3f6"
+        },
+        "bbb3b8ce-00a7-4613-a4c0-074447a9127a": {
+            "name": "SetBehaviorConditionAndResetOnExit",
+            "pos": {
+                "x": 400,
+                "y": 901
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "RunAttackInprogress"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "9dba99c0-925a-4b35-b054-a0d50a0d71c6"
+        },
+        "a9201076-360b-4d77-bcd7-9bfd4039c88e": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": 180,
+                "y": 1154
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Dir"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Vector"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "39fba777-b702-4d93-8b07-bb4d39df00b6": {
+            "name": "MeleeAttack",
+            "pos": {
+                "x": 1045,
+                "y": 1558
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "AttackIndex",
+                    "type": "Integer",
+                    "value": "-1"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "377a79bf-0807-4cb5-bbeb-5e32444cd3f6": {
+            "name": "DisableBodyRotationAndEnableOnExit",
+            "pos": {
+                "x": 1045,
+                "y": 1463
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "39fba777-b702-4d93-8b07-bb4d39df00b6"
+        },
+        "9dba99c0-925a-4b35-b054-a0d50a0d71c6": {
+            "name": "Sequence",
+            "pos": {
+                "x": 350,
+                "y": 1047
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "a9201076-360b-4d77-bcd7-9bfd4039c88e",
+                "e90cec52-c291-46d9-bd2d-da8e28b9ad2c",
+                "166a8e3a-0b09-4a6b-90b3-95f84bdc38db",
+                "d6e28563-2adc-4abb-8a47-9458a5cb0e6b"
+            ]
+        },
+        "50c62b69-758d-427a-b2fc-76fb4c39128b": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 212
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "CanMeleeRunAttack"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "0606db92-af07-41ee-ad4b-43361ed9685d"
+        },
+        "2df11a16-fb51-4e01-844d-6824ebe5feed": {
+            "name": "ExactBodyRotateTo",
+            "pos": {
+                "x": 520,
+                "y": 1306
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Target",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "DegreesPerSecond",
+                    "type": "Float",
+                    "value": "720"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "91076d3f-1a6c-45c1-88ea-f61863e6382a": {
+            "name": "ClaimMeleeAttack",
+            "pos": {
+                "x": 140,
+                "y": 902
+            },
+            "inputs": [
+                {
+                    "name": "Target",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "MeleeGroup",
+                    "type": "StringHash",
+                    "value": ""
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "6333b223-7121-42d7-9c20-8700b1af03fd": {
+            "name": "SelectItem",
+            "pos": {
+                "x": -375,
+                "y": 533
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "TagName",
+                    "type": "StringHash",
+                    "value": "RunAttack"
+                },
+                {
+                    "name": "Immediate",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "b59bb342-faf4-4834-a457-9b5b3e6cccc1": {
+            "name": "Wait",
+            "pos": {
+                "x": 725,
+                "y": 1307
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Float",
+                    "value": "0.5"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "dd55a5ed-9994-449d-8ad3-d209e2602a87": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 102
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "MeleeRunAttack"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "50c62b69-758d-427a-b2fc-76fb4c39128b"
+        },
+        "af8ac76b-dd37-4fb9-886f-db2b80ed3e52": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 773
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "8cd9580c-4a2c-4204-8cde-2c8bf2ae3ee3",
+                "1f1c4f70-ddc4-4f4f-b6dd-c18a7bad2fb9",
+                "91076d3f-1a6c-45c1-88ea-f61863e6382a",
+                "bbb3b8ce-00a7-4613-a4c0-074447a9127a"
+            ]
+        },
+        "a898b8ae-c3d5-47f2-9367-7f1724803845": {
+            "name": "ReleaseClaimedMeleeAttackOnExit",
+            "pos": {
+                "x": 0,
+                "y": 646
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "MeleeGroup",
+                    "type": "StringHash",
+                    "value": ""
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "af8ac76b-dd37-4fb9-886f-db2b80ed3e52"
+        },
+        "8cd9580c-4a2c-4204-8cde-2c8bf2ae3ee3": {
+            "name": "SetStrafeAllowed",
+            "pos": {
+                "x": -435,
+                "y": 901
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Allow",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "e90cec52-c291-46d9-bd2d-da8e28b9ad2c": {
+            "name": "GetEntityDirection",
+            "pos": {
+                "x": 350,
+                "y": 1154
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EntityId",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Direction",
+                    "type": "StringHash",
+                    "value": "Forward"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "WorldDirection",
+                    "type": "Variable",
+                    "value": [
+                        "Dir"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "b61a07cc-bc3e-4455-aa3e-e919731fb9a1": {
+            "name": "SelectPreviousItemOnExit",
+            "pos": {
+                "x": 0,
+                "y": 532
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Immediate",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "a898b8ae-c3d5-47f2-9367-7f1724803845"
+        },
+        "95751170-5146-4850-9859-ff7203f048da": {
+            "name": "ApproachToKeepDistance",
+            "pos": {
+                "x": -180,
+                "y": 1153
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "Distance",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Inventory",
+                        "CurrentItem",
+                        "attack_distance"
+                    ]
+                },
+                {
+                    "name": "MaxVerticalDiff",
+                    "type": "Float",
+                    "value": "0.00"
+                },
+                {
+                    "name": "DistanceDeviationMin",
+                    "type": "Float",
+                    "value": "0.00"
+                },
+                {
+                    "name": "DistanceDeviationMax",
+                    "type": "Float",
+                    "value": "0.00"
+                },
+                {
+                    "name": "MoveBackDirectionRandomization",
+                    "type": "Float",
+                    "value": "0.00"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "d6e28563-2adc-4abb-8a47-9458a5cb0e6b": {
+            "name": "AddCharacterVelocity",
+            "pos": {
+                "x": 1045,
+                "y": 1154
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Direction",
+                    "type": "Variable",
+                    "value": [
+                        "Dir"
+                    ]
+                },
+                {
+                    "name": "Speed",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "run_attack_velocity"
+                    ]
+                },
+                {
+                    "name": "DurationLimit",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "run_attack_velocity_duration"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "aeebb7d3-ce15-4a18-85d6-3d2211f1f72d"
+        },
+        "166a8e3a-0b09-4a6b-90b3-95f84bdc38db": {
+            "name": "ParallelUntilAnyComplete",
+            "pos": {
+                "x": 615,
+                "y": 1154
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "2df11a16-fb51-4e01-844d-6824ebe5feed",
+                "b59bb342-faf4-4834-a457-9b5b3e6cccc1"
+            ]
+        },
+        "0606db92-af07-41ee-ad4b-43361ed9685d": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 372
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "6333b223-7121-42d7-9c20-8700b1af03fd",
+                "b61a07cc-bc3e-4455-aa3e-e919731fb9a1"
+            ]
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

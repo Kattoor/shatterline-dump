@@ -1,0 +1,97 @@
+{
+  "metagame_info": {
+    "name_token": "@redlake_label",
+    "mission": "t_colossus",
+    "game_type": "pve",
+    "voice_chat_mode": "team_and_party",
+    "min_players_count": 3,
+    "time_to_join_sec": 24000
+  },
+  "session_info": {
+    "level": "/test_levels/ai/t_colossus",
+    "mission_modifiers": [
+      "ai_director",
+      "normal_ai_spawn_modifier",
+      "restore_checkpoint"
+    ],
+    "game_mode": "pve"
+  },
+  "ui_info": {
+    "background_image": "level_loading"
+  },
+  "reward_info": {
+    "reward_calculators": [
+      {
+        "name": "pve_session_outcome",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "win": 5,
+              "draw": 3,
+              "loss": 2
+            }
+          },
+          {
+            "type": "xp",
+            "values": {
+              "win": 800,
+              "draw": 700,
+              "loss": 600
+            }
+          },
+          {
+            "type": "skill",
+            "values": {
+              "win": 1,
+              "draw": 0,
+              "loss": -1
+            }
+          }
+        ]
+      },
+      {
+        "name": "session_score",
+        "score": "Kill",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "reward": 0,
+              "max_reward": 100
+            }
+          },
+          {
+            "type": "xp",
+            "values": {
+              "reward": 10,
+              "max_reward": 1000
+            }
+          }
+        ]
+      }
+    ],
+    "weapon_score": [
+      {
+        "event": {
+          "event_id": "Kill"
+        },
+        "score": 50
+      },
+      {
+        "event": {
+          "event_id": "Headshot"
+        },
+        "score": 75
+      },
+      {
+        "event": {
+          "event_id": "Assist"
+        },
+        "score": 12
+      }
+    ]
+  }
+}

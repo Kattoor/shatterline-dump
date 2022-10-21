@@ -1,0 +1,13 @@
+{
+    "script": "scripts/ui/test_wipe_count.lua",
+    "view_path": "",
+    "children":
+    [
+        {"name": "wipe_component", "type": "WipeCounter", "file": "hud/wipe_count.json"},
+
+        {"name": "add_lives", "type": "Button", "x": 200, "y": 200, "text": "add lives"},
+        {"name": "remove_lives", "type": "Button", "x": 200, "y": 300, "text": "remove lives"},
+        {"name": "add_max", "type": "Button", "x": 200, "y": 400, "text": "add max"},
+        {"name": "remove_max", "type": "Button", "x": 200, "y": 500, "text": "remove max"}
+    ]
+}

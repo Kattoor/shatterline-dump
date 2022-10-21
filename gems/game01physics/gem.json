@@ -1,0 +1,44 @@
+{
+    "Dependencies": [
+        {
+            "Uuid": "4e08125824434932a0fe3717259caa47",
+            "VersionConstraints": [
+                "~>0.1"
+            ],
+            "_comment": "PhysX"
+        },
+        {
+            "Uuid": "ff06785f7145416b9d46fde39098cb0c",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "LmbrCentral"
+        },
+        {
+            "Uuid": "2ebd4481cbf142b89286f28b4c29ace3",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01Interfaces"
+        },
+        {
+            "Uuid": "bab8807a1bc646b3909f3cc200ffeedf",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "ImGui"
+        }
+    ],
+    "GemFormatVersion": 4,
+    "Uuid": "7452d0edae814358afd8902dc6b49561",
+    "Name": "Game01Physics",
+    "DisplayName": "Game01Physics",
+    "Version": "0.1.0",
+    "Summary": "Physics related component and utilities",
+    "Tags": ["Physics"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        },
+        {
+            "Type": "EditorModule",
+            "Name": "Editor",
+            "Extends": "GameModule"
+        }
+    ]
+}

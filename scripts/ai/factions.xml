@@ -1,0 +1,23 @@
+<Factions>
+    <Faction name="Players">
+        <Reaction faction="AI" reaction="hostile" />
+        <Reaction faction="Glassheads" reaction="hostile" />
+        <Reaction faction="Civilians" reaction="friendly" />
+    </Faction>
+    <Faction name="Shellguard" default="hostile">
+        <Reaction faction="Players" reaction="friendly" />
+    </Faction>
+    <Faction name="AI" default="neutral">
+        <Reaction faction="Players" reaction="hostile" />
+        <Reaction faction="Shellguard" reaction="hostile" />
+        <Reaction faction="Glassheads" reaction="hostile" />
+        <Reaction faction="Civilians" reaction="hostile" />
+    </Faction>
+    <Faction name="Glassheads" default="neutral">
+        <Reaction faction="Players" reaction="hostile" />
+        <Reaction faction="Shellguard" reaction="hostile" />
+        <Reaction faction="AI" reaction="hostile" />
+        <Reaction faction="Civilians" reaction="friendly" />
+    </Faction>
+    <Faction name="Civilians" default="neutral" />
+</Factions> 

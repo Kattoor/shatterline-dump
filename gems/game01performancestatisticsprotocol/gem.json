@@ -1,0 +1,23 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "e41015ed6a144133bef885062f4b4a54",
+    "Name": "PerformanceStatisticsProtocol",
+    "DisplayName": "PerformanceStatisticsProtocol",
+    "Version": "0.1.0",
+    "Summary": "Performance statistics protocol",
+    "Tags": ["Untagged"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        }
+    ],
+    "Dependencies":
+    [
+        {
+            "Uuid": "94748877847b4749a583914e5b2c17ed",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "StatisticsProtocol"
+        }
+    ]
+}

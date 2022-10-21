@@ -1,0 +1,59 @@
+
+{
+   "microbehaviors":
+   [
+      {
+         "name": "MoveToEntitySentFromLua",
+         "conditions":
+         [
+            {
+                "template":"IsBehaviorCondition",
+                "origin":"source",
+                "params":
+                {
+                    "name":"MoveToEntitySentFromLua"
+                }
+            }
+         ],
+         "interrupt_conditions":
+            [
+                {
+                    "template":"IsBehaviorCondition",
+                    "origin":"source",
+                    "params":
+                    {
+                        "name":"InterruptMoveToEntitySentFromLua"
+                    }
+                }
+            ],
+         "actions":
+         [
+            {
+                "template":"SendScriptEvent",
+                "params":
+                {
+                    "name":"SwitchToDefenseMode"
+                }
+            },
+            {
+               "template": "SetBehaviorCondition",
+               "params":
+               {
+                  "name": "MoveToEntitySentFromLua",
+                  "value": "false"
+               }
+            },
+            {
+               "template": "RunMicrobehavior",
+               "params":
+               {
+                  "name": "MoveToEntitySentFromLua"
+               }
+            }
+         ],
+         "default_params":
+         {  
+         }
+      }
+   ]
+}

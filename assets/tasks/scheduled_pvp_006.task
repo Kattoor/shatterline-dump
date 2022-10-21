@@ -1,0 +1,46 @@
+{
+  "name": "scheduled_pvp_006",
+  "type": "scheduled",
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "rare",
+  "display_name": { "localization_key": "@scheduled_pvp_006_name" },
+  "description": { "localization_key": "@scheduled_pvp_006_description" },
+  "conditions": [
+    {
+      "name": "scheduled_pvp_006_1",
+      "event_description": { "localization_key": "@scheduled_pvp_006_1_event_description" },
+      "event": { "event_id": "PlayerTeamResult", "actor_is_me": true, "actor_status_is": ["Won"], "game_mode_is": ["conq"]},
+      "progress": 3
+    },
+    {
+      "name": "scheduled_pvp_006_2",
+      "event_description": { "localization_key": "@scheduled_pvp_006_2_event_description" },
+      "event": { "event_id": "PlayerTeamResult", "actor_is_me": true, "actor_party_size_is_greater_than": [1], "game_mode_is": ["conq"]},
+      "progress": 3
+    },
+    {
+      "name": "scheduled_pvp_006_3",
+      "event_description": { "localization_key": "@scheduled_pvp_006_3_event_description" },
+      "event": { "event_id": "MedalAchieved", "actor_is_me": true, "game_mode_is": ["conq"]},
+      "progress": 75
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 3000
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 2000
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 25
+    }
+  ]
+}

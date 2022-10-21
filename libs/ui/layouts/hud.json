@@ -1,0 +1,46 @@
+{
+    "script": "",
+    "view_path": "Screen.html",
+    "hide_cursor": true,
+    "children":
+    [
+        {"name": "Radar", "type": "Radar", "file": "hud/radar.json"},
+        {"name": "TacticalView", "type": "TacticalView", "file": "hud/strategic_view.json"},
+        {"name": "RoundInfo", "type": "RoundInfo", "file": "hud/round_info.json"},
+        {"name": "TimerPanel", "type": "TimerPanel", "file": "hud/timer_panel.json"},
+        {"name": "ContaminationPanel", "type": "ContaminationBar", "file":"hud/contamination_panel.json", "visible": false},
+        {"name": "ItemPanel", "type": "ItemPanel", "file": "hud/item_panel.json"},
+        {"name": "HeroPanel", "type": "HeroPanel", "view_path": "HeroPanel.html"},
+        {"name": "KillLog", "type": "KillLog",  "view_path": "KillLog.html"},
+        {"name": "EventContainer", "type": "HUDEventContainer", "file": "hud/event_container.json"},
+        {"name": "PerkCrosshair", "type": "Image", "view_path": "UsedPerk.html"},
+        {"name": "PerkNotifications", "type": "PerkNotification", "file": "hud/perk_notifications.json"},
+        {"name": "PersonalScore", "type": "PersonalScore", "file": "hud/personal_score.json"},
+        {"name": "CaptureProgressPanel", "type": "CaptureProgressPanel", "file": "hud/capture_progress_panel.json", "visible": false},
+        {"name": "AiBossHpBar", "type": "AiBossHpBar", "file": "empty.json", "visible": false},
+        {"name": "AbilitiesPanel", "type": "AbilitiesPanel", "file": "hud/abilities/abilities_panel.json"},
+        {"name": "EscortProgressPanel", "type": "EscortProgressPanel", "file": "hud/escort_panel.json"},
+        {"name": "WipeCount", "type": "WipeCounter", "file": "hud/wipe_count.json"},
+        {"name": "StaminaIndicator", "type": "StaminaIndicator", "file": "hud/stamina_indicator.json"},
+        {"name": "TeammatesPanel", "type": "TeammatesPanel", "file": "hud/teammates_panel.json"},
+        {"name": "TeamsPanel", "type": "TeamsPanel", "file": "hud/teams_panel.json"},
+        {"name": "InstantReward", "type": "InstantRewardHTML", "file": "hud/instant_rewards.json"},
+        {"name": "Subtitles", "type": "SubtitlesPanel", "file": "hud/subtitles.json"},
+
+        {"name": "CrosshairComponent", "type": "Panel", "view_path": "CrosshairComponent.html"},
+        {"name": "Crosshair", "type": "Crosshair", "view_path": "CrosshairComponent.crosshair"},
+        {"name": "Invulnerable", "type": "Label", "view_path": "CrosshairComponent.hitFeedback.invulnerableTemplate.invulnerableHitTemplate", "text": "@invulnerable"},
+        {"name": "HitFeedback", "type": "HitFeedback", "view_path": "CrosshairComponent.hitFeedback"},
+        {"name": "Reloading", "type": "CircleProgress", "view_path": "CrosshairComponent.reloading"},
+        {"name": "DamageFeedback", "type": "DamageFeedback", "view_path": "DamageFeedback.html"},
+
+        {"name": "BlindIcon", "type": "Panel", "view_path": "BlindIcon.html"},
+
+        {"name": "ProgressPanel", "type": "HUDComponentDynamic", "view_path": "ProgressPanel.html"},
+        {"name": "ProgressBar", "type": "ProgressBar", "view_path": "ProgressPanel.wrapper.progressbar"},
+        {"name": "ProgressDescription", "type": "Label", "view_path": "ProgressPanel.wrapper.description"},
+
+        {"name": "SpawnCounter", "type": "Label", "view_path": "SpawnCounter.html"},
+        {"name": "InvasionScoreInfo", "type": "Label", "view_path": "InvasionScore.html"}
+    ]
+}

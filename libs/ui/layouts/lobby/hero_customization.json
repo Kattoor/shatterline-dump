@@ -1,0 +1,48 @@
+{
+    "script": "scripts/ui/lobby/hero_customization.lua",
+    "view_path": "HeroCustomization.html",
+    "send_stats": true,
+    "children":
+    [
+        { "name": "content", "type": "Component", "view_path": "content" },
+        { "name": "outfit_grid", "type": "Component", "view_path": "content.grid"},
+        { "name": "outfit_grid_top", "type": "Component", "view_path": "content.grid.top" },
+        { "name": "outfit_grid_center", "type": "Component", "view_path": "content.grid.center" },
+        { "name": "outfit_grid_center_right", "type": "Component", "view_path": "content.grid.center.right" },
+        { "name": "outfit_grid_bottom", "type": "Component", "view_path": "content.grid.bottom" },
+
+        { "name": "outfit_head_gear", "type": "Component", "file": "lobby/outfit_slot.json", "view_path": "content.grid.top.helmetSlot" },
+
+        { "name": "outfit", "type": "Component", "file": "lobby/outfit_slot.json", "view_path": "content.grid.center.torsoSlot" },
+
+        { "name": "outfit_gloves", "type": "Component", "file": "lobby/outfit_slot.json", "view_path": "content.grid.bottom.glovesSlot" },
+
+        { "name": "outfit_face_style", "type": "Component", "file": "lobby/outfit_slot.json", "view_path": "content.grid.top.headGearSlot" },
+
+        { "name": "outfit_face_accessory", "type": "Component", "file": "lobby/outfit_slot.json", "view_path": "content.grid.top.faceAccesorySlot" },
+
+        { "name": "outfit_face_paint", "type": "Component", "file": "lobby/outfit_slot.json", "view_path": "content.grid.center.right.facePaintSlot" },
+
+        { "name": "body_paint", "type": "Component", "file": "lobby/outfit_slot.json", "view_path": "content.grid.center.right.bodyPaintSlot" },
+
+        { "name": "legs_paint", "type": "Component", "file": "lobby/outfit_slot.json", "view_path": "content.grid.center.right.legPaintSlot" },
+
+        { "name": "taunt", "type": "Component", "file": "lobby/outfit_slot.json", "view_path": "content.grid.bottom.tauntSlot" },
+
+        { "name": "win_pose", "type": "Component", "file": "lobby/outfit_slot.json", "view_path": "content.grid.bottom.winPoseSlot" },
+
+        { "name": "items_panel", "type": "Component", "view_path": "content.outfit", "visible": false  },
+
+        { "name": "hero_outfit", "type": "Component", "file": "lobby/hero_outfit.json", "view_path": "content.outfit.grid.container" },
+
+        { "name": "outfit_description", "type": "Label", "view_path": "content.description" },
+
+        { "name": "arrow1", "type": "Component", "view_path": "content.arrows.arrow1", "visible": false },
+        { "name": "arrow2", "type": "Component", "view_path": "content.arrows.arrow2", "visible": false },
+        { "name": "arrow3", "type": "Component", "view_path": "content.arrows.arrow3", "visible": false },
+        { "name": "arrow4", "type": "Component", "view_path": "content.arrows.arrow4", "visible": false },
+        { "name": "arrow5", "type": "Component", "view_path": "content.arrows.arrow5", "visible": false },
+
+        { "name": "rotation_area", "type": "Panel", "view_path": "content.rotationArea" }
+    ]
+}

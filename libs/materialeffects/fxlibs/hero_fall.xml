@@ -1,0 +1,144 @@
+<FXLib>
+	<Effect name="default">
+		<Audio trigger="jump">
+			<Switch name="surface_type" state="concrete" />
+		</Audio>
+		<PopcornParticle>
+			<Name forwardaxisZ="true" minscale="1" maxscale="1" maxscaledist="100">libs/particles/heroes_effects/mfx_hero_landing_default.pkfx</Name>
+		</PopcornParticle>
+		<Decal minscale="1" maxscale="1" lifetime="60.0">
+			<Material>materials/decals/landing_decal/landing_decal_f_mat</Material>
+		</Decal>
+	</Effect>
+	
+	<Effect name="asphalt">
+		<Audio trigger="jump">
+			<Switch name="surface_type" state="concrete" />
+		</Audio>
+		<PopcornParticle>
+			<Name forwardaxisZ="true" minscale="1" maxscale="1" maxscaledist="100">libs/particles/heroes_effects/mfx_hero_landing_asphalt.pkfx</Name>
+		</PopcornParticle>
+		<Decal minscale="1" maxscale="1" lifetime="60.0">
+			<Material>materials/decals/landing_decal/landing_decal_asphalt_mat</Material>
+		</Decal>
+	</Effect>
+	
+	<Effect name="grass_yellow">
+		<Audio trigger="jump">
+			<Switch name="surface_type" state="grass" />
+		</Audio>
+		<PopcornParticle>
+			<Name forwardaxisZ="true" minscale="1" maxscale="1" maxscaledist="100">libs/particles/heroes_effects/mfx_hero_landing_grass_green.pkfx</Name>
+		</PopcornParticle>
+		<Decal minscale="1" maxscale="1" lifetime="60.0">
+			<Material>materials/decals/landing_decal/landing_decal_grass_yellow_mat</Material>
+		</Decal>
+	</Effect>
+	
+	<Effect name="mud">
+		<Audio trigger="jump">
+			<Switch name="surface_type" state="mud" />
+		</Audio>
+		<PopcornParticle>
+			<Name forwardaxisZ="true" minscale="1" maxscale="1" maxscaledist="100">libs/particles/heroes_effects/mfx_hero_landing_sand.pkfx</Name>
+		</PopcornParticle>
+		<Decal minscale="1" maxscale="1" lifetime="60.0">
+			<Material>materials/decals/landing_decal/landing_decal_mud_mat</Material>
+		</Decal>
+	</Effect>
+	
+	<Effect name="sand">
+		<Audio trigger="jump">
+			<Switch name="surface_type" state="sand" />
+		</Audio>
+		<PopcornParticle>
+			<Name forwardaxisZ="true" minscale="1" maxscale="1" maxscaledist="100">libs/particles/heroes_effects/mfx_hero_landing_sand.pkfx</Name>
+		</PopcornParticle>
+		<Decal minscale="1" maxscale="1" lifetime="60.0">
+			<Material>materials/decals/landing_decal/landing_decal_sand_mat</Material>
+		</Decal>
+	</Effect>
+	
+
+	<Effect name="sand_wet">
+		<Audio trigger="jump">
+			<Switch name="surface_type" state="dirt" />
+		</Audio>
+		<PopcornParticle>
+			<Name forwardaxisZ="true" minscale="1" maxscale="1" maxscaledist="100">libs/particles/heroes_effects/mfx_hero_landing_sand_wet.pkfx</Name>
+		</PopcornParticle>
+		<Decal minscale="1" maxscale="1" lifetime="60.0">
+			<Material>materials/decals/landing_decal/landing_decal_sand_wet_mat</Material>
+		</Decal>
+	</Effect>
+	
+	<Effect name="snow">
+		<Audio trigger="jump">
+			<Switch name="surface_type" state="snow" />
+		</Audio>
+		<PopcornParticle>
+			<Name forwardaxisZ="true" minscale="1" maxscale="1" maxscaledist="100">libs/particles/heroes_effects/mfx_hero_landing_snow.pkfx</Name>
+		</PopcornParticle>
+		<Decal minscale="1" maxscale="1" lifetime="60.0">
+			<Material>materials/decals/landing_decal/landing_decal_snow_mat</Material>
+		</Decal>
+	</Effect>
+	
+	<Effect name="ice">
+		<Audio trigger="jump">
+			<Switch name="surface_type" state="ice" />
+		</Audio>
+		<PopcornParticle>
+			<Name forwardaxisZ="true" minscale="1" maxscale="1" maxscaledist="100">libs/particles/heroes_effects/mfx_hero_landing_snow.pkfx</Name>
+		</PopcornParticle>
+		<Decal minscale="1" maxscale="1" lifetime="60.0">
+			<Material>materials/decals/landing_decal/landing_decal_snow_mat</Material>
+		</Decal>
+	</Effect>
+	
+	<Effect name="soil">
+		<Audio trigger="jump">
+			<Switch name="surface_type" state="dirt" />
+		</Audio>
+		<PopcornParticle>
+			<Name forwardaxisZ="true" minscale="1" maxscale="1" maxscaledist="100">libs/particles/heroes_effects/mfx_hero_landing_solid.pkfx</Name>
+		</PopcornParticle>
+		<Decal minscale="1" maxscale="1" lifetime="60.0">
+			<Material>materials/decals/landing_decal/landing_decal_soil_mat</Material>
+		</Decal>
+	</Effect>
+	
+	<Effect name="push_back_air_hit_default">
+		<Audio trigger="foley_landing_damage">
+		</Audio>
+		<Particle>
+			<Name minscale="0.7" maxscale="0.7" maxscaledist="100">heroes_effects.hero_push_back</Name>
+		</Particle>
+		<Decal minscale="1" maxscale="1" lifetime="20.0">
+			<Material>materials/decals/landing_decal/landing_decal_f_mat</Material>
+		</Decal>
+	</Effect>
+	
+	<Effect name="water_deep">
+		<Audio trigger="jump">
+			<Switch name="surface_type" state="water_deep" />
+		</Audio>
+		<Particle>
+			<Name minscale="1" maxscale="1" maxscaledist="100">heroes_effects.hero_landing</Name>
+		</Particle>
+		<Decal minscale="1" maxscale="1" lifetime="60.0">
+			<Material>materials/decals/landing_decal/landing_decal_f_mat</Material>
+		</Decal>
+	</Effect>
+	
+	<Effect name="push_back_ground_hit_default">
+		<Audio trigger="foley_landing_damage">
+		</Audio>
+		<Particle>
+			<Name minscale="0.4" maxscale="0.4" maxscaledist="100">heroes_effects.hero_push_back</Name>
+		</Particle>
+		<Decal minscale="0.6" maxscale="0.6" lifetime="20.0">
+			<Material>materials/decals/landing_decal/landing_decal_f_mat</Material>
+		</Decal>
+	</Effect>
+</FXLib>

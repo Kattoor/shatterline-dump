@@ -1,0 +1,29 @@
+{
+  "name": "initial_011",
+  "type": "initial",
+  "active": true,
+  "image": "test_icon",
+  "rarity": "common",
+  "display_name": { "localization_key": "@initial_011_name_proto" },
+  "description": { "localization_key": "@initial_011_description_proto" },
+  "conditions": [
+    {
+      "name": "initial_003",
+      "event_description": { "localization_key": "@initial_003_event_description" },
+      "event": { "event_id": "Kill"},
+      "progress": 1
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 5000
+    },
+    {
+      "reward_type": "task",
+      "name": "season_score_task_chain",
+      "amount": 1
+    }
+  ]
+}

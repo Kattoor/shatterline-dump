@@ -1,0 +1,220 @@
+{
+    "events": [
+        {
+            "name": "pve_tutorial_shooting_hint",
+            "actions" : [
+                {"message_announcer": {"message": "@pve_tutorial_shooting_hint", "timeout": 4}}
+            ]
+        },
+        {
+            "name": "pve_tutorial_jumping_hint",
+            "actions" : [
+                {"message_announcer": {"message": "@pve_tutorial_jumping_hint", "timeout": 4}}
+            ]
+        },
+        {
+            "name": "pve_tutorial_team_banter_1",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_tutorial_brisa_01"}}
+            ]
+        },
+        {
+            "name": "pve_tutorial_team_banter_2",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_tutorial_mongoose_02"}},
+                {"narration_objective": {"trigger_name": "pve_tutorial_brisa_02"}}
+            ]
+        },
+        {
+            "name": "pve_tutorial_team_banter_3",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_tutorial_mongoose_03"}},
+                {"narration_objective": {"trigger_name": "pve_tutorial_brisa_03"}}
+            ]
+        },
+        {
+            "name": "pve_tutorial_echo_00",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_tutorial_echo_043", "img": "immune_echo", "narrator": "@narrator_echo"}},
+                {"message_objective": {"message": "@obj_tutorial_follow_echo"}}
+            ]
+        },
+        {
+            "name": "pve_tutorial_echo_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_tutorial_echo_01", "img": "immune_echo", "narrator": "@narrator_echo"}},
+                {"message_objective": {"message": "@obj_tutorial_enter_portal"}}
+            ]
+        },
+        {
+            "name": "pve_tutorial_echo_02",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_tutorial_echo_02", "img": "immune_echo", "narrator": "@narrator_echo"}},
+                {"message_objective": {"message": "@obj_tutorial_enter_portal"}}
+            ]
+        },
+        {
+            "name": "pve_tutorial_follow_echo",
+            "actions" : [
+                {"message_objective": {"message": "@obj_tutorial_follow_echo"}}
+            ]
+        },
+        {
+            "name": "pve_tutorial_echo_03",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_tutorial_echo_03", "img": "immune_echo", "narrator": "@narrator_echo"}},
+                {"message_objective": {"message": "@obj_tutorial_follow_echo"}}
+            ]
+        },
+        {
+            "name": "pve_tutorial_echo_04",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_tutorial_echo_04", "img": "immune_echo", "narrator": "@narrator_echo"}},
+                {"message_objective": {"message": "@obj_tutorial_follow_echo"}}
+            ]
+        },
+        {
+            "name": "pve_tutorial_echo_041",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_tutorial_echo_041", "img": "immune_echo", "narrator": "@narrator_echo"}}
+            ]
+        },
+        {
+            "name": "pve_tutorial_echo_042",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_tutorial_echo_042", "img": "immune_echo", "narrator": "@narrator_echo"}},
+                {"message_objective": {"message": "@obj_tutorial_defend_point"}}
+            ]
+        },
+        {
+            "name": "pve_tutorial_voice_01",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_tutorial_voice_01"}},
+                {"message_objective": {"message": "@obj_tutorial_fall_down"}}
+            ]
+        },
+        {
+            "name": "pve_tutorial_echo_05",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_tutorial_echo_05", "img": "immune_echo", "narrator": "@narrator_echo"}},
+                {"message_objective": {"message": "@obj_tutorial_fall_down"}}
+            ]
+        },
+        {
+            "name": "pve_tutorial_revive_teammate",
+            "actions" : [
+                {"message_announcer": {"message": "@pve_tutorial_revive_hint", "timeout": 4}},
+                {"message_objective": {"message": "@obj_tutorial_revive_teammate"}}
+            ]
+        },
+        {
+            "name": "pve_tutorial_attack_outpost",
+            "actions" : [
+                {"message_objective": {"message": "@obj_tutorial_defend_point"}}
+            ]
+        },
+        {
+            "name": "pve_tutorial_echo_06",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_tutorial_echo_06", "img": "immune_echo", "narrator": "@narrator_echo"}},
+                {"message_objective": {"message": "@obj_tutorial_fall_down"}}
+            ]
+        },
+        {
+            "name": "pve_tutorial_grenades_hint",
+            "actions" : [
+                {"message_announcer": {"message": "@pve_tutorial_grenades_hint", "timeout": 10}}
+            ]
+        },
+        {
+            "name": "pve_tutorial_voice_02",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_tutorial_voice_02"}},
+                {"message_objective": {"message": "@obj_tutorial_face_nemesis"}}
+            ]
+        },
+        {
+            "name": "pve_tutorial_echo_07",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_tutorial_echo_07", "img": "immune_echo", "narrator": "@narrator_echo"}},
+                {"message_objective": {"message": "@obj_tutorial_face_nemesis"}}
+            ]
+        },
+        {
+            "name": "pve_tutorial_face_nemesis",
+            "actions" : [
+                {"message_objective": {"message": "@obj_tutorial_face_nemesis"}}
+            ]
+        },
+        {
+            "name": "pve_tutorial_reach_voice",
+            "actions" : [
+                {"message_objective": {"message": "@obj_tutorial_reach_voice"}},
+                {"message_announcer": {"message": "@pve_tutorial_reach_voice_hint", "timeout": 4}}
+            ]
+        },
+        {
+            "name": "pve_tutorial_ultimate_hint",
+            "actions" : [
+                {"message_announcer": {"message": "@pve_tutorial_ultimate_hint", "timeout": 4}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "pve_tutorial_outro",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_tutorial_strix_01"}}
+            ]
+        },
+        {
+            "name": "ultimate_ready",
+            "actions" : [
+                {"message_announcer": {"message": "@pve_tutorial_ultimate_hint", "timeout": 15}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "intro_zipline_hint",
+            "actions" : [
+                {"message_announcer": {"message": "@pve_tutorial_zipline_hint", "timeout": 10}},
+                {"message_objective": {"message": "@obj_tutorial_revive_teammate"}}
+            ]
+        },
+        {
+            "name": "intro_smoke_hint",
+            "actions" : [
+                {"message_announcer": {"message": "@pve_tutorial_smoke_hint", "timeout": 100}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "pve_tutorial_revive_objective",
+            "actions" : [
+                {"message_announcer": {"message": "@obj_tutorial_revive_teammate", "timeout": 10}},
+                {"message_objective": {"message": "@obj_tutorial_revive_teammate"}}
+            ]
+        },
+        {
+            "name": "intro_cover_hint",
+            "actions" : [
+                {"message_announcer": {"message": "@pve_tutorial_cover_hint", "timeout": 100}},
+                {"sound_trigger": {"trigger_name": "hit_player_fb"}}
+            ]
+        },
+        {
+            "name": "press_to_reequip",
+            "actions" : [
+                {"message_announcer": {"message": "@pve_tutorial_reequip", "timeout": 500}},
+                {"fader": {"pre_fade_out_duration": 500, "pre_fade_out_intensity": 0.17}}
+            ]
+        },
+        {
+            "name": "return_to_safe_area",
+            "actions" : [
+                {"message_announcer": {"message": "@pve_tutorial_return_to_safe_area", "timeout": 3}},
+                {"message_objective": {"message": "@obj_tutorial_return_to_safe_area"}}
+            ]
+        }
+    ]
+    
+}

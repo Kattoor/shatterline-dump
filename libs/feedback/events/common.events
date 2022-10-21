@@ -1,0 +1,476 @@
+{
+    "events": [
+        {
+            "name": "session_win_message",
+            "actions" : [
+                {"session_result_message": {"ui_component_file": "hud/session_win_message.json"}},
+                {"narration_objective": {"trigger_name": "tdm_hughes_victory_kill_cap"}}
+            ]
+        },
+        {
+            "name": "session_lose_message",
+            "actions" : [
+                {"session_result_message": {"ui_component_file": "hud/session_lose_message.json"}},
+                {"narration_objective": {"trigger_name": "tdm_hughes_defeat_time"}}
+            ]
+        },
+        {
+            "name": "session_draw_message",
+            "actions" : [
+                {"session_result_message": {"ui_component_file": "hud/session_draw_message.json"}},
+                {"narration_objective": {"trigger_name": "tdm_hughes_draw"}}
+            ]
+        },
+        {
+            "name": "PlantTheBomb",
+            "actions" : [
+                {"message_objective": {"message": "@ptb_plant_bomb_objective"}},
+                {"narration_objective": {"trigger_name": "ptb_phillips_brief_bomb_plant"}},
+                {"message_announcer": {"message": "@ptb_plant_bomb_objective", "timeout": 5}}
+            ]
+        },
+        {
+            "name": "side_switched",
+            "actions" : [
+                {"message_announcer": {"message": "@sides_switched", "timeout": 3}}
+            ]
+        },
+        {
+            "name": "hero_changed",
+            "actions" : [
+                {"message_announcer": {"message": "@hero_available_hint", "timeout": 3}}
+            ]
+        },
+        {
+            "name": "defend_bomb_objective_message",
+            "actions" : [
+                {"message_announcer": {"message": "@ptb_planted_label", "timeout": 3}},
+                {"narration_objective": {"trigger_name": "ptb_phillips_brief_bomb_defend"}},
+                {"message_objective": {"message": "@ptb_defend_bomb_objective"}}
+
+            ]
+        },
+        {
+            "name": "DefendPlants",
+            "actions" : [
+                {"message_announcer": {"message": "@ptb_defend_plant_objective", "timeout": 5}},
+                {"message_objective": {"message": "@ptb_defend_plant_objective"}},
+                {"narration_objective": {"trigger_name": "ptb_phillips_brief_plant_sites_defend"}}
+            ]
+        },
+        {
+            "name": "defuse_bomb_objective_message",
+            "actions" : [
+                {"message_announcer": {"message": "@ptb_planted_label", "timeout": 3}},
+                {"narration_objective": {"trigger_name": "ptb_phillips_brief_bomb_defuse"}},
+                {"message_objective": {"message": "@ptb_defuse_bomb_objective"}}
+            ]
+        },
+        {
+            "name": "bomb_is_spotted",
+            "actions" : [
+                {"message_announcer": {"message": "@ptb_bomb_is_spotted", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "bomb_spot"}}
+            ]
+        },
+        {
+            "name": "team_eliminated_win",
+            "actions" : [
+                {"message_announcer": {"message": "@team_eliminated_win", "timeout": 3}},
+                {"narration_objective": {"trigger_name": "ptb_phillips_victory_enemy_eliminated"}}
+            ]
+        },
+        {
+            "name": "team_eliminated_lose",
+            "actions" : [
+                {"message_announcer": {"message": "@team_eliminated_lose", "timeout": 3}},
+                {"narration_objective": {"trigger_name": "ptb_phillips_defeat_team_eliminated"}}
+            ]
+        },
+        {
+            "name": "bomb_exploded_win",
+            "actions" : [
+                {"message_announcer": {"message": "@bomb_exploded_win", "timeout": 3}},
+                {"narration_objective": {"trigger_name": "ptb_phillips_victory_bomb_detonated"}}
+            ]
+        },
+        {
+            "name": "bomb_exploded_lose",
+            "actions" : [
+                {"message_announcer": {"message": "@bomb_exploded_lose", "timeout": 3}},
+                {"narration_objective": {"trigger_name": "ptb_phillips_defeat_bomb_detonated"}}
+            ]
+        },
+        {
+            "name": "round_time_is_up_win",
+            "actions" : [
+                {"message_announcer": {"message": "@round_time_is_up_win", "timeout": 3}},
+                {"narration_objective": {"trigger_name": "ptb_phillips_victory_time"}}
+            ]
+        },
+        {
+            "name": "round_time_is_up_lose",
+            "actions" : [
+                {"message_announcer": {"message": "@round_time_is_up_lose", "timeout": 3}},
+                {"narration_objective": {"trigger_name": "ptb_phillips_defeat_time"}}
+            ]
+        },
+        {
+            "name": "bomb_disarmed_win",
+            "actions" : [
+                {"message_announcer": {"message": "@bomb_disarmed_win", "timeout": 3}},
+                {"narration_objective": {"trigger_name": "ptb_phillips_victory_bomb_defused"}}
+            ]
+        },
+        {
+            "name": "bomb_disarmed_lose",
+            "actions" : [
+                {"message_announcer": {"message": "@bomb_disarmed_lose", "timeout": 3}},
+                {"narration_objective": {"trigger_name": "ptb_phillips_defeat_bomb_defused"}}
+            ]
+        },
+        {
+            "name": "PlayerHitHeadshot",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "headshot_player_fb"}}
+            ]
+        },
+        {
+            "name": "NotWeakPointHitFeedback",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "hit_not_weak_point_fb"}}
+            ]
+        },
+        {
+            "name": "InvulnerableHitFeedback",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "hit_invulnerable_fb"}}
+            ]
+        },
+        {
+            "name": "ShieldHitFeedback",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "hit_shield_fb"}}
+            ]
+        },
+        {
+            "name": "ShieldMeleeHitFeedback",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "hit_shield_fb"}}
+            ]
+        },
+        {
+            "name": "ShieldBrokenHitFeedback",
+            "actions" : [
+                { "sound_trigger": {"trigger_name": "hit_shield_broken_fb"}}
+            ]
+        },
+        {
+            "name": "HeadshotFeedback",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "headshot_feedback"}}
+            ]
+        },
+        {
+            "name": "HitFeedback",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "hit_feedback"}}
+            ]
+        },
+        {
+            "name": "MeleeHitFeedback",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "hit_feedback"}}
+            ]
+        },
+        {
+            "name": "KillFeedback",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "kill_feedback"}}
+            ]
+        },
+        {
+            "name": "PlayerKilledHeadShot",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "headshot_fatal_player_fb"}}
+            ]
+        },
+        {
+            "name": "team_spawn_used",
+            "actions" : [
+                {"message_announcer": {"message": "@team_spawn_used", "timeout": 3}}
+            ]
+        },
+        {
+            "name": "time_is_up_win",
+            "actions" : [
+                {"message_announcer": {"message": "@time_is_up_win", "timeout": 3}},
+                {"narration_objective": {"trigger_name": "tdm_hughes_victory_time"}}
+            ]
+        },
+        {
+            "name": "time_is_up_defeat",
+            "actions" : [
+                {"message_announcer": {"message": "@time_is_up_lose", "timeout": 3}},
+                {"narration_objective": {"trigger_name": "tdm_hughes_defeat_time"}}
+            ]
+        },
+        {
+            "name": "time_is_up_draw",
+            "actions" : [
+                {"message_announcer": {"message": "@time_is_up_draw", "timeout": 3}},
+                {"narration_objective": {"trigger_name": "tdm_hughes_draw"}}
+            ]
+        },
+        {
+            "name": "score_reached_win",
+            "actions" : [
+                {"message_announcer": {"message": "@score_reached_win", "timeout": 3}},
+                {"narration_objective": {"trigger_name": "tdm_hughes_victory_kill_cap"}}
+            ]
+        },
+        {
+            "name": "score_reached_defeat",
+            "actions" : [
+                {"message_announcer": {"message": "@score_reached_defeat", "timeout": 3}},
+                {"narration_objective": {"trigger_name": "tdm_hughes_defeat_time"}}
+            ]
+        },
+        {
+            "name": "EliminateEnemyTDM",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "tdm_hughes_brief"}},
+                {"message_objective": {"message": "@eliminate_team"}}
+            ]
+        },
+        {
+            "name": "EliminateEnemyTeam",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "tdm_hughes_brief"}},
+                {"message_objective": {"message": "@kill_them_all"}}
+            ]
+        },
+        {
+            "name": "kill_zone_triggered",
+            "actions" : [
+                {"warning_message": {"message": "@restricted_area"}}
+            ]
+        },
+        {
+            "name": "restricted_spawn_area_entered",
+            "actions" : [
+                {"warning_message": {"message": "@leave_spawn_area"}}
+            ]
+        },
+        {
+            "name": "medkit_used_by_friend",
+            "actions" : [
+                {"message_announcer": {"message": "@medkit_used_by_friend", "timeout": 3}}
+            ]
+        },
+        {
+            "name": "medkit_used_by_enemy",
+            "actions" : [
+                {"message_announcer": {"message": "@medkit_used_by_enemy", "timeout": 3}}
+            ]
+        },
+        {
+            "name": "enemy_ult",
+            "actions" : [
+                {"message_announcer": {"message": "@enemy_ult", "timeout": 3}}
+            ]
+        },
+        {
+            "name": "too_close_to_enemies",
+            "actions" : [
+                {"message_announcer": {"message": "@too_close_to_enemies", "timeout": 2}}
+            ]
+        },
+        {
+            "name": "ammo_refilled",
+            "actions" : [
+                {"message_announcer": {"message": "@ammo_refilled", "timeout": 2}}
+            ]
+        },
+        {
+            "name": "glitch_triggered",
+            "actions" : [
+                {"input_control_event": {"ui_component_file": "hud/mouse_shake.json", "hide_crosshair": true}}
+            ]
+        },
+        {
+            "name": "мastery_increased",
+            "actions" : [
+                {"message_announcer": {"message": "@mastery_increased", "timeout": 5}}
+            ]
+        },
+        {
+            "name": "мastery_decresed",
+            "actions" : [
+                {"message_announcer": {"message": "@mastery_decreased", "timeout": 5}}
+            ]
+        },
+        {
+            "name": "RegroupCountdown",
+            "actions" : [
+                {"countdown_message": {"message": "@regroup_countdown", "timeout": 5}},
+                {"fader": {"pre_fade_out_duration": 5, "pre_fade_out_intensity": 0.4}}
+            ]
+        },
+        {
+            "name": "RegroupImminent",
+            "actions" : [
+                {"message_announcer": {"message": "@regroup_imminent", "timeout": 5}},
+                {"fader": {"pre_fade_out_duration": 5, "pre_fade_out_intensity": 0.4}}
+            ]
+        },
+        {
+            "name": "RegroupFade",
+            "actions" : [
+                {"fader": {"fade_out": 1, "fade_in": 1}}
+            ]
+        },
+        {
+            "name": "LastManStanding",
+            "actions" : [
+                {"message_announcer": {"message": "@last_man_standing", "timeout": 300}}
+            ]
+        },
+        {
+            "name": "FadeIn",
+            "actions" : [
+                {"fader": {"fade_out": 0, "fade_in": 2}}
+            ]
+        },
+        {
+            "name": "FadeOut",
+            "actions" : [
+                {"fader": {"fade_out": 2, "fade_in": 0}}
+            ]
+        },
+        {
+            "name": "FadeIn_short",
+            "actions" : [
+                {"fader": {"fade_out": 0, "fade_in": 0.5}}
+            ]
+        },
+        {
+            "name": "FadeOut_short",
+            "actions" : [
+                {"fader": {"fade_out": 0.5, "fade_in": 0}}
+            ]
+        },
+        {
+            "name": "2_retries_left",
+            "actions" : [
+                {"message_announcer": {"message": "@2_retries_left", "timeout": 4}}
+            ]
+        },
+        {
+            "name": "1_retry_left",
+            "actions" : [
+                {"message_announcer": {"message": "@1_retry_left", "timeout": 4}}
+            ]
+        },
+        {
+            "name": "0_retries_left",
+            "actions" : [
+                {"message_announcer": {"message": "@0_retries_left", "timeout": 4}}
+            ]
+        },
+        {
+            "name": "retries_restored",
+            "actions" : [
+                {"message_announcer": {"message": "@retries_restored", "timeout": 4}}
+            ]
+        },
+        {
+            "name": "StopAllMusic",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "stop_all_music"}}
+            ]
+        },
+        {
+            "name": "PreroundCountdown",
+            "actions" : [
+                {"countdown_message": {"message": "@preround_countdown", "timeout": 3}}
+            ]
+        },
+        {
+            "name": "5SecondsCountdown",
+            "actions" : [
+                {"countdown_message": {"message": "@number", "timeout": 5}}
+            ]
+        },
+        {
+            "name": "MidroundUs",
+            "actions" : [
+                {"message_announcer": {"message": "@midround_winning", "timeout": 3}},
+                {"narration_objective": {"trigger_name": "tdm_hughes_midround_us"}}
+            ]
+        },
+        {
+            "name": "MidroundThem",
+            "actions" : [
+                {"message_announcer": {"message": "@midround_losing", "timeout": 3}},
+                {"narration_objective": {"trigger_name": "tdm_hughes_midround_them"}}
+            ]
+        },
+        {
+            "name": "AlmostOverUs",
+            "actions" : [
+                {"message_announcer": {"message": "@almost_over_winning", "timeout": 3}},
+                {"narration_objective": {"trigger_name": "tdm_hughes_almost_over_us"}}
+            ]
+        },
+        {
+            "name": "AlmostOverThem",
+            "actions" : [
+                {"message_announcer": {"message": "@almost_over_losing", "timeout": 3}},
+                {"narration_objective": {"trigger_name": "tdm_hughes_almost_over_them"}}
+            ]
+        },
+        {
+            "name": "friendly_ult_sound",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "ult_activation_friendly"}}
+            ]
+        },
+        {
+            "name": "enemy_ult_sound",
+            "actions" : [
+                {"sound_trigger": {"trigger_name": "ult_activation_friendly"}}
+            ]
+        },
+        {
+            "name": "PingSuceess",
+            "actions" : [
+                { "sound_trigger": { "trigger_name": "ping_owner" } }
+            ]
+        },
+        {
+            "name": "PingNothing",
+            "actions" : [
+                { "sound_trigger": { "trigger_name": "item_restricted" } }
+            ]
+        },
+        {
+            "name": "PingAntispamBlock",
+            "actions" : [
+                { "sound_trigger": { "trigger_name": "item_restricted" } }
+            ]
+        },
+        {
+            "name": "SpotCancelled",
+            "actions" : [
+                { "sound_trigger": { "trigger_name": "ping_cancel" } }
+            ]
+        },
+        {
+            "name": "PingEnemy",
+            "actions" : [
+                { "sound_trigger": { "trigger_name": "ping_enemy" } }
+            ]
+        }
+    ]
+}

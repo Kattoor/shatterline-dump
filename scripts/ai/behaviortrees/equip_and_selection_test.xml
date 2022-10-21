@@ -1,0 +1,37 @@
+<BehaviorTree>
+<Root>
+<StateMachine>
+    <State name="Idle">
+        <Transitions>
+            <Transition onEvent="OnEnemySeen" to="Attack" />
+        </Transitions>
+        <BehaviorTree>
+            <Loop>
+                <Sequence>
+                    <SelectItem itemTag="medkit" />
+                </Sequence>
+            </Loop>
+        </BehaviorTree>
+    </State>
+    <State name="Attack">
+        <Transitions>
+            <Transition onEvent="OnLostSightOfTarget" to="Idle" />
+            <Transition onEvent="OnTargetDead" to="Idle" />
+        </Transitions>
+        <BehaviorTree>
+            <Sequence>
+                <SelectItem itemTag="AR" />
+                <Loop>
+                    <SuppressFailure>
+                        <Sequence>
+                            <QueryTPS name="MidRangeToAttentionTarget" register="RefPoint" />
+                            <Approach to="RefPoint" />
+                        </Sequence>
+                    </SuppressFailure>
+                </Loop>
+            </Sequence>
+        </BehaviorTree>
+    </State>
+</StateMachine>
+</Root>
+</BehaviorTree>

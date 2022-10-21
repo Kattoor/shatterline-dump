@@ -1,0 +1,51 @@
+{
+  "name": "scheduled_operatives_021",
+  "type": "scheduled",
+  "tags": [
+    "pve",
+    "gun"
+  ],
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "legendary",
+  "display_name": { "localization_key": "@scheduled_operatives_021_name" },
+  "description": { "localization_key": "@scheduled_operatives_021_description" },
+  "conditions": [
+    {
+      "name": "scheduled_operatives_021_1",
+      "event_description": { "localization_key": "@scheduled_operatives_021_1_event_description" },
+      "event": { "event_id": "Ultimate", "actor_player_preset_is":["h_strix"], "actor_is_me": true},
+      "progress": 50
+    },
+    {
+      "name": "scheduled_operatives_021_2",
+      "event_description": { "localization_key": "@scheduled_operatives_021_2_event_description" },
+      "event": { "event_id": "Ultimate", "actor_player_preset_is":["s_brisa"], "actor_is_me": true},
+      "progress": 50
+    },
+     {
+      "name": "scheduled_operatives_021_3",
+      "event_description": { "localization_key": "@scheduled_operatives_021_3_event_description" },
+      "event": { "event_id": "Ultimate", "actor_player_preset_is":["m_malva"], "actor_is_me": true},
+      "progress": 50
+    }
+  ],
+  
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 5000
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 3000
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 35
+    }
+  ]
+}

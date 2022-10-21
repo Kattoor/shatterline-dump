@@ -1,0 +1,16 @@
+{
+    "script": "scripts/ui/ingame/task_description_card.lua",
+    "view_path": "TaskDescriptionCard.html",
+    "children": 
+    [
+        {"name": "title", "type": "Label", "view_path": "wrapper.main.taskName"},
+
+        {"name": "task_condition_container", "type": "Component", "view_path": "wrapper.main.taskConditionsContainer"},
+
+        {"name": "task_rewards_title", "type":"Label", "view_path": "wrapper.taskRewards.title", "text": "@escape_task_rewards_title"},
+
+        {"name": "soft_currency_reward", "type": "Component", "view_path": "wrapper.taskRewards.rewardsContainer.softCurrency", "file": "ingame/task_description_reward.json"},
+        {"name": "hard_currency_reward", "type": "Component", "view_path": "wrapper.taskRewards.rewardsContainer.hardCurrency", "file": "ingame/task_description_reward.json"},
+        {"name": "blueprint_currency_reward", "type": "Component", "view_path": "wrapper.taskRewards.rewardsContainer.bluePrint", "file": "ingame/task_description_reward.json"}
+    ]
+}

@@ -1,0 +1,107 @@
+{
+    "selection": {
+        "nearest_camera_offset": {
+            "z": 0.0,
+            "x": 0.0,
+            "y": 0.0
+        },
+        "deselection_duration": 0.33,
+        "selection_duration": 0.4
+    },
+    "spread": {
+        "max_hip_spread": 6.0,
+        "decay_time": 0.4,
+        "slide_multiplier": 0.6,
+        "zoom_multiplier": 0.0,
+        "crouch_multiplier": 0.4,
+        "crouch_idle_multiplier": 0.4,
+        "hip_step": 0.2,
+        "min_hip_spread": 4.0,
+        "decay_delay": 0.1,
+        "stand_multiplier": 0.4,
+        "walk_multiplier": 0.6,
+        "jump_multiplier": 2.0
+    },
+    "zoom": {
+        "weapon_offset": {
+            "z": 0.0,
+            "x": 0.0,
+            "y": 0.0
+        },
+        "delay_after_jump": 0.3,
+        "weapon_fov": 25.0,
+        "scope_aiming_treshold": 0.5,
+        "zoom_out_time": 0.18,
+        "hide_crosshair": true,
+        "zoom_fov": 40.0,
+        "zoom_in_time": 0.18,
+        "blur_amount": 0.0,
+        "scope_aiming_offset_forward": 0.3,
+        "sniper_scope": false,
+        "in_air": false
+    },
+    "common": {
+        "item_tag": "AR"
+    },
+    "muzzle_sight_distance": 1.0,
+    "shooting": {
+        "base_damage_distribution": {
+            "points": [
+                {
+                    "distance": 50.0,
+                    "damage": 50.0
+                }
+            ]
+        },
+        "backpack_capacity": 160,
+        "chamber_capacity": 1,
+        "head_damage_distribution": {
+            "points": [
+                {
+                    "distance": 70.0,
+                    "damage": 150.0
+                }
+            ]
+        },
+        "chambers_fired_per_shot": 1,
+        "hit_feedback": "server",
+        "rpm": 300.0,
+        "auto_reload_mode": "Chamber",
+        "clip_capacity": 10,
+        "reload": {
+            "reload_time": 2.6,
+            "reload_out_complete_threshold": 0.7,
+            "reload_in_complete_threshold": 0.7
+        }
+    },
+    "recoil": {
+        "kick_time": 0.2,
+        "decay_time": 0.4,
+        "max_vertical_angle": 30.0,
+        "decay_delay": 0.05,
+        "recoil_points": [
+            {
+                "num": 1,
+                "force": {
+                    "min": 0.35,
+                    "max": 0.52
+                },
+                "angle": {
+                    "min": -30.0,
+                    "max": 30.0
+                }
+            },
+            {
+                "num": 2,
+                "force": {
+                    "min": 0.52,
+                    "max": 0.87
+                },
+                "angle": {
+                    "min": -50.0,
+                    "max": 60.0
+                }
+            }
+        ]
+    }
+}

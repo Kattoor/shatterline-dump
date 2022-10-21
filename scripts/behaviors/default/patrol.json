@@ -1,0 +1,2014 @@
+{
+    "name": "Default/Patrol",
+    "root": "94ef109b-dc2a-4a0c-b040-43d31befd0d4",
+    "nodes": {
+        "bb49d9ca-8561-4f52-98ab-eaad8f90d761": {
+            "name": "IsBBValueExist",
+            "pos": {
+                "x": 1555,
+                "y": 2167
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ValuePath",
+                    "type": "StringHash",
+                    "value": "Gai.PatrolInit.PatrolInterruption"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "8c8845af-4d98-4db7-9791-d6747be74eca"
+        },
+        "f77bc78d-cffa-43c2-9aef-63967c5c91b4": {
+            "name": "Finish Patrol on Exit",
+            "pos": {
+                "x": 455,
+                "y": 966
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "76bd5e44-8a87-4cf0-acbd-13c4207a3a74"
+        },
+        "64a73a65-5a2a-46bf-a825-2f144de7eb60": {
+            "name": "SetStrafeAllowedAndRestoreOnExit",
+            "pos": {
+                "x": 0,
+                "y": 539
+            },
+            "inputs": [
+                {
+                    "name": "Allow",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "09040f29-8d2d-4731-b1a9-6f619a8788af"
+        },
+        "fd0af8de-5a35-4324-81b2-ffef460201c3": {
+            "name": "Succeeder",
+            "pos": {
+                "x": -165,
+                "y": 3174
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "8914721d-339e-4ca1-9a8b-4f6ca5112569"
+        },
+        "dc0a8349-9e6e-480f-b82c-3239a5dc0c1a": {
+            "name": "Success",
+            "pos": {
+                "x": -225,
+                "y": 1912
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "46da3121-abd2-4bb3-a519-9f1e06a9584e": {
+            "name": "SetTracePosAndRestoreOnExit",
+            "pos": {
+                "x": -1185,
+                "y": 2212
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Position",
+                    "type": "Variable",
+                    "value": [
+                        "aimingPos"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "105d222d-9cba-4db9-8d67-679d78be8ce7"
+        },
+        "8797c4b1-0c11-471a-8550-890c8658789b": {
+            "name": "IsBehaviorCondition",
+            "pos": {
+                "x": -695,
+                "y": 730
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "PatrolInterrupted"
+                },
+                {
+                    "name": "ResetOnExit",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "6c47b2ff-8fb2-4211-8e4e-c6e963a6ad95"
+        },
+        "76bd5e44-8a87-4cf0-acbd-13c4207a3a74": {
+            "name": "UnbreakableBehavior",
+            "pos": {
+                "x": 457.2328043473556,
+                "y": 1163.820478541067
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "ba2fa986-e4cc-47e2-86bc-cb82cf34c655"
+        },
+        "e5b3fa4e-deb8-4c41-a5bb-e7cb1061a80d": {
+            "name": "RepeatUntilFails",
+            "pos": {
+                "x": -165,
+                "y": 2870
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Iterations",
+                    "type": "Integer",
+                    "value": "0"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "643885d1-96d8-46f5-bfde-709be63a5beb"
+        },
+        "b2bb555a-e9d2-46d5-9d2a-12798db8f673": {
+            "name": "SetBehaviorCondition",
+            "pos": {
+                "x": 1835.166666666667,
+                "y": 1868.608187134503
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "UnbreakableBehavior"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "a6c2abdd-8b5a-4b4e-b2f9-f69993f97ab5": {
+            "name": "Selector",
+            "pos": {
+                "x": 0,
+                "y": 755
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "6ac94994-bb0a-44e8-81fa-3afa150ad764",
+                "f15a8da9-4261-4426-936e-6544c9088b56"
+            ]
+        },
+        "f15a8da9-4261-4426-936e-6544c9088b56": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 894
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "db05abe0-9276-49fe-ab67-08d9e7dd384a",
+                "6d34a4aa-fd4d-4cb5-b297-c67d39f7095b"
+            ]
+        },
+        "84751d3c-cb49-4b2d-aa21-ebf0d51091fc": {
+            "name": "IsBehaviorCondition",
+            "pos": {
+                "x": 885,
+                "y": 2096
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Wounded"
+                },
+                {
+                    "name": "ResetOnExit",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "81f6973f-1dd7-4ae4-900e-b71d4d9336ea"
+        },
+        "7099674f-87bb-47ce-b204-c6e48fd227af": {
+            "name": "RepeatUntilSucceeds",
+            "pos": {
+                "x": -1105,
+                "y": 2541
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Iterations",
+                    "type": "Integer",
+                    "value": "0"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "77f837bc-c2ea-402a-9c9e-7f7ecd1e8b1a"
+        },
+        "0ee76704-b716-4a41-833a-3b51d04067cb": {
+            "name": "Sequence",
+            "pos": {
+                "x": -1310,
+                "y": 2086
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "8d3e71c2-f7fb-45ec-a7dc-57dfa52ed56e",
+                "46da3121-abd2-4bb3-a519-9f1e06a9584e"
+            ]
+        },
+        "52c4e79c-7fff-4dfe-8ccf-b86a8c204301": {
+            "name": "WaypointHoldOn",
+            "pos": {
+                "x": -25,
+                "y": 2208
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaypointId",
+                    "type": "Variable",
+                    "value": [
+                        "CurrentWaypoint"
+                    ]
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "8cd16326-6c3a-4c41-b60c-26efe5275ec0"
+        },
+        "caa4e383-fe02-411d-bf57-4e1c4b58b540": {
+            "name": "Wait",
+            "pos": {
+                "x": -895,
+                "y": 2390
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "PatrolInit",
+                        "PreDelay"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "a9c05990-22cb-4d7d-a91b-34ce2b866998": {
+            "name": "SetBehaviorCondition",
+            "pos": {
+                "x": 1555,
+                "y": 2888
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "PatrolInterrupted"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "078e8099-9d37-4eb7-9a6e-e9e6745a624f": {
+            "name": "ResetTracePos",
+            "pos": {
+                "x": -1275,
+                "y": 2593
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "09e3e9aa-fd5d-41f6-b024-0ec7f27678a9": {
+            "name": "IsBehaviorCondition",
+            "pos": {
+                "x": 0,
+                "y": 188
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Patrol"
+                },
+                {
+                    "name": "ResetOnExit",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "6632f790-9556-4a02-843d-f8aae2b76003"
+        },
+        "94ef109b-dc2a-4a0c-b040-43d31befd0d4": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 89
+            },
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Patrol"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "09e3e9aa-fd5d-41f6-b024-0ec7f27678a9"
+        },
+        "a6967ce1-0973-409a-abd1-670f210e1e3b": {
+            "name": "RunBehaviorForContainer",
+            "pos": {
+                "x": 535,
+                "y": 2444
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ContainerId",
+                    "type": "Variable",
+                    "value": [
+                        "CurrentWaypoint"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "57e23a0e-a35c-42a2-80e8-7b9e92c72acc": {
+            "name": "SetBehaviorCondition",
+            "pos": {
+                "x": -695,
+                "y": 1098
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "PatrolInterrupted"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "b6428907-54bb-4595-af86-f258a37cf9a6": {
+            "name": "LogGate",
+            "pos": {
+                "x": 1555,
+                "y": 2672
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CVar",
+                    "type": "StringHash",
+                    "value": "gai_patrol_debug"
+                },
+                {
+                    "name": "OnEnter",
+                    "type": "StringHash",
+                    "value": "Patrol: Agent '%s' interrupts patrol going to waypoint '%s'"
+                },
+                {
+                    "name": "OnExit",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "Attribute1",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Attribute2",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "PatrolInit",
+                        "LastWaypoint"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "a9c05990-22cb-4d7d-a91b-34ce2b866998"
+        },
+        "028bf894-8470-415a-9cbd-d5afb53a59d2": {
+            "name": "SetBehaviorConditionAndResetOnExit",
+            "pos": {
+                "x": -25,
+                "y": 2487
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "PatrolHoldOn"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "19cfd004-ba23-4c6a-aef6-c7bf6834a4bc"
+        },
+        "7ac5488e-072e-4dbf-942b-405d1b818cf4": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -235,
+                "y": 736
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "CurrentWaypoint"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "EntityId"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "f833d62e-ca94-472a-9f48-e68d682fea30": {
+            "name": "Selector",
+            "pos": {
+                "x": 420,
+                "y": 2030
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "3d718458-7826-4324-8711-b525711c7c39",
+                "8fc1dd2a-4020-4ec1-bb18-438a732bdf00"
+            ]
+        },
+        "a9dbb14c-7ed2-4926-8295-f853fe11fff7": {
+            "name": "SetBehaviorCondition",
+            "pos": {
+                "x": 760,
+                "y": 1004
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Patrol"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "c7f7e80b-9e54-473b-93d7-552309115f9f": {
+            "name": "SetVariable",
+            "pos": {
+                "x": 885,
+                "y": 2487
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "NeedInterruptPatrol"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "6e0a9ae5-6099-411e-a031-4c879d0675d1": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 535,
+                "y": 2312
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "PatrolInterrupted"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "a6967ce1-0973-409a-abd1-670f210e1e3b"
+        },
+        "8914721d-339e-4ca1-9a8b-4f6ca5112569": {
+            "name": "CallSubtree",
+            "pos": {
+                "x": -165,
+                "y": 3285
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Label",
+                    "type": "StringHash",
+                    "value": "PatrolWaypointHoldOnAttack"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "4d4b2460-6b0a-41a1-9505-103d459c5163"
+        },
+        "e7ace0e1-3f74-4544-b6b3-7587892ce61f": {
+            "name": "Noop",
+            "pos": {
+                "x": 2025,
+                "y": 1869
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "8c8845af-4d98-4db7-9791-d6747be74eca": {
+            "name": "Equals",
+            "pos": {
+                "x": 1555,
+                "y": 2330
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Lhs",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "PatrolInit",
+                        "PatrolInterruption"
+                    ]
+                },
+                {
+                    "name": "Rhs",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "6408cc63-f688-4e53-b8c0-43a9381129b7"
+        },
+        "177873d8-4709-4b2b-8311-545e683e17a7": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -350,
+                "y": 1047
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "CurrentWaypoint"
+                },
+                {
+                    "name": "Value",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "PatrolInit",
+                        "firstWaypoint"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "e6f26a59-697a-419d-b791-d40f79f1dccd": {
+            "name": "Succeeder",
+            "pos": {
+                "x": 1555,
+                "y": 1870
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "ec625d26-3805-4e16-aa5e-fa71f0fc6a49"
+        },
+        "77f837bc-c2ea-402a-9c9e-7f7ecd1e8b1a": {
+            "name": "ApproachTo",
+            "pos": {
+                "x": -1105,
+                "y": 2675
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "PatrolInit",
+                        "WaypointPosition"
+                    ]
+                },
+                {
+                    "name": "EndDistance",
+                    "type": "Float",
+                    "value": "1"
+                },
+                {
+                    "name": "UpdateDestinationPoint",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "e87ce268-576a-4dca-a767-ed736393eb07": {
+            "name": "CallSubtree",
+            "pos": {
+                "x": -225,
+                "y": 1797
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Label",
+                    "type": "StringHash",
+                    "value": "PrepareToPatrol"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "dc0a8349-9e6e-480f-b82c-3239a5dc0c1a"
+        },
+        "605dbb29-ed70-42de-9ca2-a879d8da969d": {
+            "name": "Wait",
+            "pos": {
+                "x": -275,
+                "y": 2373
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "PatrolInit",
+                        "PostDelay"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "dc17fc88-e169-4d3c-9294-ee88945a74f1": {
+            "name": "Succeeder",
+            "pos": {
+                "x": -165,
+                "y": 2762
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "e5b3fa4e-deb8-4c41-a5bb-e7cb1061a80d"
+        },
+        "8ab99fbf-c5bb-439f-b0e6-84bc511fdfe7": {
+            "name": "Sequence",
+            "pos": {
+                "x": 1170,
+                "y": 1740
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "dff1fb1c-575f-4ffe-96b5-9fc53180cff4",
+                "07aaf2d9-4c71-42fe-90dd-48576905fbf6",
+                "e6f26a59-697a-419d-b791-d40f79f1dccd",
+                "b2bb555a-e9d2-46d5-9d2a-12798db8f673",
+                "e7ace0e1-3f74-4544-b6b3-7587892ce61f"
+            ]
+        },
+        "8d3e71c2-f7fb-45ec-a7dc-57dfa52ed56e": {
+            "name": "Add",
+            "pos": {
+                "x": -1475,
+                "y": 2211
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "InputA",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "PatrolInit",
+                        "WaypointPosition"
+                    ]
+                },
+                {
+                    "name": "InputB",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "CharacterProperties",
+                        "LocalEyePosition"
+                    ]
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Result",
+                    "type": "Variable",
+                    "value": [
+                        "aimingPos"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "dff1fb1c-575f-4ffe-96b5-9fc53180cff4": {
+            "name": "SetVariable",
+            "pos": {
+                "x": 900.2004445502903,
+                "y": 1878.737522281638
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "NeedInterruptPatrol"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "1fb9dfa3-8291-4b68-b33c-6e2d51c8b5f4": {
+            "name": "IsFireAllowed",
+            "pos": {
+                "x": -1275,
+                "y": 2428
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "078e8099-9d37-4eb7-9a6e-e9e6745a624f"
+        },
+        "5041e042-5254-4d76-8d99-1a862a4f9a0a": {
+            "name": "IsBehaviorCondition",
+            "pos": {
+                "x": 1200,
+                "y": 2098
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Blinded"
+                },
+                {
+                    "name": "ResetOnExit",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "5b05233d-fa5f-42a6-8756-6b361b9d0340"
+        },
+        "b35c3707-d78e-48ef-81a4-433a2c39bb8a": {
+            "name": "GreaterThan",
+            "pos": {
+                "x": -275,
+                "y": 2208
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Lhs",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "PatrolInit",
+                        "PostDelay"
+                    ]
+                },
+                {
+                    "name": "Rhs",
+                    "type": "Float",
+                    "value": "0.0"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "605dbb29-ed70-42de-9ca2-a879d8da969d"
+        },
+        "19cfd004-ba23-4c6a-aef6-c7bf6834a4bc": {
+            "name": "ParallelUntilAllComplete",
+            "pos": {
+                "x": -25,
+                "y": 2637
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "dc17fc88-e169-4d3c-9294-ee88945a74f1",
+                "62d60832-21c8-437d-8edb-75a5376c1cdd"
+            ]
+        },
+        "208f594f-71ba-4303-ba94-a63e58bed216": {
+            "name": "Sequence",
+            "pos": {
+                "x": -275,
+                "y": 2087
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "65d9a181-57ea-4c8b-af3e-fc81bdf4df5b",
+                "a9a932e4-b879-4806-90ae-aa80233e8b1f",
+                "b35c3707-d78e-48ef-81a4-433a2c39bb8a",
+                "52c4e79c-7fff-4dfe-8ccf-b86a8c204301"
+            ]
+        },
+        "3e6ede65-9ff5-4a2b-9451-6a9a3ef579b2": {
+            "name": "Succeeder",
+            "pos": {
+                "x": 455,
+                "y": 873
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "f77bc78d-cffa-43c2-9aef-63967c5c91b4"
+        },
+        "1c3c50ef-79cb-45e0-a5f2-2a7726c9a3b0": {
+            "name": "Sequence",
+            "pos": {
+                "x": 120,
+                "y": 1554
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "8a56c0dc-72c5-4014-b558-5f2258ebe137",
+                "891669fa-4db8-45cb-a5e4-327a4964795d",
+                "de653b3d-1dc3-4227-aa6b-8d3ab81bb6e9"
+            ]
+        },
+        "aa13ac45-7909-4f29-8dc7-16de51961f9d": {
+            "name": "Play Animation",
+            "pos": {
+                "x": -595,
+                "y": 2310
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "AnimationName",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "PatrolInit",
+                        "Animation"
+                    ]
+                },
+                {
+                    "name": "IsLooped",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "PatrolInit",
+                        "IsAnimationLooped"
+                    ]
+                },
+                {
+                    "name": "Duration",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "PatrolInit",
+                        "AnimationDuration"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "8a56c0dc-72c5-4014-b558-5f2258ebe137": {
+            "name": "Apply Patrol Waypoint Params",
+            "pos": {
+                "x": -435,
+                "y": 1697
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaypointId",
+                    "type": "Variable",
+                    "value": [
+                        "CurrentWaypoint"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "643885d1-96d8-46f5-bfde-709be63a5beb": {
+            "name": "WaypointHoldOn",
+            "pos": {
+                "x": -165,
+                "y": 2996
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaypointId",
+                    "type": "Variable",
+                    "value": [
+                        "CurrentWaypoint"
+                    ]
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "fd0af8de-5a35-4324-81b2-ffef460201c3"
+        },
+        "efad33d9-b348-4478-b1d2-ee1c145b536b": {
+            "name": "Selector",
+            "pos": {
+                "x": 1170,
+                "y": 1975
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "84751d3c-cb49-4b2d-aa21-ebf0d51091fc",
+                "5041e042-5254-4d76-8d99-1a862a4f9a0a"
+            ]
+        },
+        "7f07f9f8-e4ea-4073-8d10-263a451270f0": {
+            "name": "Sequence",
+            "pos": {
+                "x": 545,
+                "y": 752
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "3e6ede65-9ff5-4a2b-9451-6a9a3ef579b2",
+                "7a6484a8-af72-4630-a0aa-b66f72a14b8e"
+            ]
+        },
+        "6d34a4aa-fd4d-4cb5-b297-c67d39f7095b": {
+            "name": "Find Nearest Waypoint For Patrol",
+            "pos": {
+                "x": 180,
+                "y": 1047
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "LastWaypointId",
+                    "type": "Variable",
+                    "value": [
+                        "CurrentWaypoint"
+                    ]
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "NearestWaypointId",
+                    "type": "Variable",
+                    "value": [
+                        "CurrentWaypoint"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "ec625d26-3805-4e16-aa5e-fa71f0fc6a49": {
+            "name": "Equals",
+            "pos": {
+                "x": 1555,
+                "y": 1974
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Lhs",
+                    "type": "Variable",
+                    "value": [
+                        "NeedInterruptPatrol"
+                    ]
+                },
+                {
+                    "name": "Rhs",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "bb49d9ca-8561-4f52-98ab-eaad8f90d761"
+        },
+        "81f6973f-1dd7-4ae4-900e-b71d4d9336ea": {
+            "name": "LogGate",
+            "pos": {
+                "x": 885,
+                "y": 2282
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CVar",
+                    "type": "StringHash",
+                    "value": "gai_patrol_debug"
+                },
+                {
+                    "name": "OnEnter",
+                    "type": "StringHash",
+                    "value": "'%s': InterruptPatrol - wounded"
+                },
+                {
+                    "name": "OnExit",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "Attribute1",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Attribute2",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "c7f7e80b-9e54-473b-93d7-552309115f9f"
+        },
+        "7a6484a8-af72-4630-a0aa-b66f72a14b8e": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 720,
+                "y": 856
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "PatrolInterrupted"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "a9dbb14c-7ed2-4926-8295-f853fe11fff7"
+        },
+        "5b05233d-fa5f-42a6-8756-6b361b9d0340": {
+            "name": "LogGate",
+            "pos": {
+                "x": 1200,
+                "y": 2284
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CVar",
+                    "type": "StringHash",
+                    "value": "gai_patrol_debug"
+                },
+                {
+                    "name": "OnEnter",
+                    "type": "StringHash",
+                    "value": "'%s': InterruptPatrol - blinded"
+                },
+                {
+                    "name": "OnExit",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "Attribute1",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Attribute2",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "3c389b3c-60b0-48f8-be18-741890a29901"
+        },
+        "65d9a181-57ea-4c8b-af3e-fc81bdf4df5b": {
+            "name": "GreaterThan",
+            "pos": {
+                "x": -895,
+                "y": 2225
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Lhs",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "PatrolInit",
+                        "PreDelay"
+                    ]
+                },
+                {
+                    "name": "Rhs",
+                    "type": "Float",
+                    "value": "0.0"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "caa4e383-fe02-411d-bf57-4e1c4b58b540"
+        },
+        "6408cc63-f688-4e53-b8c0-43a9381129b7": {
+            "name": "InterruptPatrolInRange",
+            "pos": {
+                "x": 1555,
+                "y": 2518
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Center",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Pos"
+                    ]
+                },
+                {
+                    "name": "Radius",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "PatrolInit",
+                        "PatrolInterruptSignalRadius"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "b6428907-54bb-4595-af86-f258a37cf9a6"
+        },
+        "62d60832-21c8-437d-8edb-75a5376c1cdd": {
+            "name": "WaypointHoldOn",
+            "pos": {
+                "x": 85,
+                "y": 2762
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaypointId",
+                    "type": "Variable",
+                    "value": [
+                        "CurrentWaypoint"
+                    ]
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "51172fdb-b03e-40b2-9b1f-81f89ff830f9"
+        },
+        "891669fa-4db8-45cb-a5e4-327a4964795d": {
+            "name": "Succeeder",
+            "pos": {
+                "x": -225,
+                "y": 1697
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "e87ce268-576a-4dca-a767-ed736393eb07"
+        },
+        "db05abe0-9276-49fe-ab67-08d9e7dd384a": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -75,
+                "y": 1049
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "CurrentWaypoint"
+                },
+                {
+                    "name": "Value",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "PatrolInit",
+                        "LastWaypoint"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "8cd16326-6c3a-4c41-b60c-26efe5275ec0": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": -25,
+                "y": 2375
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "WaypointHoldOn"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "028bf894-8470-415a-9cbd-d5afb53a59d2"
+        },
+        "6c47b2ff-8fb2-4211-8e4e-c6e963a6ad95": {
+            "name": "LogGate",
+            "pos": {
+                "x": -695,
+                "y": 914
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CVar",
+                    "type": "StringHash",
+                    "value": "gai_patrol_debug"
+                },
+                {
+                    "name": "OnEnter",
+                    "type": "StringHash",
+                    "value": "Patrol: Agent '%s' resumes patrol"
+                },
+                {
+                    "name": "OnExit",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "Attribute1",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Attribute2",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "57e23a0e-a35c-42a2-80e8-7b9e92c72acc"
+        },
+        "ba2fa986-e4cc-47e2-86bc-cb82cf34c655": {
+            "name": "ParallelUntilAnyComplete",
+            "pos": {
+                "x": 455,
+                "y": 1273
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "7511e65c-2b66-477a-9d46-774938c6640f",
+                "985ed12c-1e5e-4ebb-ace3-1782682068d5"
+            ]
+        },
+        "3d718458-7826-4324-8711-b525711c7c39": {
+            "name": "Get Next Waypoint For Patrol",
+            "pos": {
+                "x": 280,
+                "y": 2189
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaypointId",
+                    "type": "Variable",
+                    "value": [
+                        "CurrentWaypoint"
+                    ]
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "NextWaypointId",
+                    "type": "Variable",
+                    "value": [
+                        "CurrentWaypoint"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "51172fdb-b03e-40b2-9b1f-81f89ff830f9": {
+            "name": "Success",
+            "pos": {
+                "x": 85,
+                "y": 2936
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "de653b3d-1dc3-4227-aa6b-8d3ab81bb6e9": {
+            "name": "Sequence",
+            "pos": {
+                "x": 130,
+                "y": 1912
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "0ee76704-b716-4a41-833a-3b51d04067cb",
+                "208f594f-71ba-4303-ba94-a63e58bed216",
+                "f833d62e-ca94-472a-9f48-e68d682fea30"
+            ]
+        },
+        "6632f790-9556-4a02-843d-f8aae2b76003": {
+            "name": "SetBehaviorConditionOnExitWithCondition",
+            "pos": {
+                "x": 0,
+                "y": 363
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CheckConditionName",
+                    "type": "StringHash",
+                    "value": "Wounded"
+                },
+                {
+                    "name": "CheckConditionValue",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "SetConditionName",
+                    "type": "StringHash",
+                    "value": "PatrolInterrupted"
+                },
+                {
+                    "name": "SetConditionValue",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "64a73a65-5a2a-46bf-a825-2f144de7eb60"
+        },
+        "985ed12c-1e5e-4ebb-ace3-1782682068d5": {
+            "name": "IsBehaviorCondition",
+            "pos": {
+                "x": 1170,
+                "y": 1520
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "WantBreakBehavior"
+                },
+                {
+                    "name": "ResetOnExit",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "8ab99fbf-c5bb-439f-b0e6-84bc511fdfe7"
+        },
+        "4d4b2460-6b0a-41a1-9505-103d459c5163": {
+            "name": "Success",
+            "pos": {
+                "x": -165,
+                "y": 3404
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "09040f29-8d2d-4731-b1a9-6f619a8788af": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 650
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "8797c4b1-0c11-471a-8550-890c8658789b",
+                "7ac5488e-072e-4dbf-942b-405d1b818cf4",
+                "a6c2abdd-8b5a-4b4e-b2f9-f69993f97ab5",
+                "7f07f9f8-e4ea-4073-8d10-263a451270f0"
+            ]
+        },
+        "6ac94994-bb0a-44e8-81fa-3afa150ad764": {
+            "name": "IsBBValueExist",
+            "pos": {
+                "x": -350,
+                "y": 891
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ValuePath",
+                    "type": "StringHash",
+                    "value": "Gai.PatrolInit.LastWaypoint"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "177873d8-4709-4b2b-8311-545e683e17a7"
+        },
+        "105d222d-9cba-4db9-8d67-679d78be8ce7": {
+            "name": "Sequence",
+            "pos": {
+                "x": -1185,
+                "y": 2323
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "1fb9dfa3-8291-4b68-b33c-6e2d51c8b5f4",
+                "63b0b0cd-744a-4086-a493-532b972f6d0d"
+            ]
+        },
+        "7511e65c-2b66-477a-9d46-774938c6640f": {
+            "name": "RepeatUntilFails",
+            "pos": {
+                "x": 120,
+                "y": 1445
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Iterations",
+                    "type": "Integer",
+                    "value": "0"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "1c3c50ef-79cb-45e0-a5f2-2a7726c9a3b0"
+        },
+        "a9a932e4-b879-4806-90ae-aa80233e8b1f": {
+            "name": "Succeeder",
+            "pos": {
+                "x": -595,
+                "y": 2222
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "aa13ac45-7909-4f29-8dc7-16de51961f9d"
+        },
+        "8fc1dd2a-4020-4ec1-bb18-438a732bdf00": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 535,
+                "y": 2188
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Patrol"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "6e0a9ae5-6099-411e-a031-4c879d0675d1"
+        },
+        "07aaf2d9-4c71-42fe-90dd-48576905fbf6": {
+            "name": "Succeeder",
+            "pos": {
+                "x": 1170,
+                "y": 1879
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "efad33d9-b348-4478-b1d2-ee1c145b536b"
+        },
+        "3c389b3c-60b0-48f8-be18-741890a29901": {
+            "name": "SetVariable",
+            "pos": {
+                "x": 1200,
+                "y": 2486
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "NeedInterruptPatrol"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "63b0b0cd-744a-4086-a493-532b972f6d0d": {
+            "name": "Succeeder",
+            "pos": {
+                "x": -1105,
+                "y": 2428
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "7099674f-87bb-47ce-b204-c6e48fd227af"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

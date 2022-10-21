@@ -1,0 +1,66 @@
+{
+    "name": "landing_hard",
+    "duration": 1.1,
+    "effects": [
+        { "max_speed": { "speed_cap": 0.0 }},
+        { "ag_input": { "input_name": "hard_land", "value_bool": true }},
+        { "input_disable": { }},
+        { "elliptic_camera": {
+            "camera_offset": 1.7,
+            "initial_yaw": 0,
+            "initial_pitch": 15.0,
+            "left_yaw_limit": 10,
+            "right_yaw_limit": 10,
+            "up_pitch_limit": 10,
+            "down_pitch_limit": 10,
+            "vertical_offset": 1,
+            "lerp_enabled": true,
+            "lerp_speed": 5,
+            "to_transition_time": 0.1,
+            "from_transition_time": 1
+        }},
+        {   "camera_shake": {
+                "sinusoids":
+                [
+                    {
+                        "name": "A",
+                        "frequency": 6.0,
+                        "random_phase": true
+                    },
+                    {
+                        "name": "B",
+                        "frequency": 5.0,
+                        "phase": 45.0,
+                        "random_phase": false
+                    },
+                    {
+                        "name": "C",
+                        "frequency": 4.0,
+                        "phase": 180.0,
+                        "random_phase": false
+                    }
+                ],
+                
+                "yaw_sinusoid": "A",
+                "pitch_sinusoid": "B",
+                "roll_sinusoid": "C",
+                "shift_x_sinusoid": "none",
+                "shift_y_sinusoid": "A",
+                "shift_z_sinusoid": "none",
+                
+                "yaw_amplitude": 1.1,
+                "pitch_amplitude": 1.2,
+                "roll_amplitude": 1.3,
+                "shift_y_amplitude": 0.013,
+                
+                "attack_duration": 0.01,
+                "sustain_duration": 0.01,
+                "decay_duration": 0.6,
+                
+                "channel": "queen_camera_shake",
+                "shift_coord_system": "Camera",
+                "rotation_coord_system": "Global"
+            }
+        }
+    ]
+}

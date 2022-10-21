@@ -1,0 +1,14 @@
+{
+    "script": "scripts/ui/post_session/session_progression.lua",
+    "view_path": "SessionProgression.html",
+    "children": 
+    [
+        {"name": "header_title", "type": "Label", "view_path": "wrapper.headerWrapper.titleWrapper.title", "text": "@progression"},
+        {"name": "hero_progression_list", "type": "SessionProgressionHeroesList", "view_path": "wrapper.heroUnlocksList"},
+        {"name": "weapon_progression_list", "type": "SessionProgressionWeaponsList", "view_path": "wrapper.weaponUnlocksList"},
+        {"name": "tier_progression", "type": "SessionProgressionArmoryTier", "view_path": "tierProgression"},
+        {"name": "unlocked_tier_weapons", "type": "SessionProgressionUnlockedTierWeapons", "view_path": "unlockedTierWeapons"},
+        {"name": "background", "type": "Component", "file": "lobby/lobby_background.json"},
+        {"name": "skip_button", "type": "Button", "view_path": "wrapper.skipButton", "text": "@skip"}
+    ]
+}

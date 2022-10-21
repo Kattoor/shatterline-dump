@@ -1,0 +1,27 @@
+{
+  "name": "first_win_event_barricade_rtdm_001",
+  "type": "daily",
+  "tags": [
+    "first_win_event_barricade_rtdm_001"
+  ],
+  "ui_tags": ["mode_specific", "event_barricade", "event_barricade_fast_ult"],
+  "image": "weekly_temp_icon",
+  "rarity": "uncommon",
+  "display_name": { "localization_key": "@first_win_event_barricade_rtdm_001_name" },
+  "description": { "localization_key": "@first_win_event_barricade_rtdm_001_description" },
+  "conditions": [
+    {
+      "name": "first_win_event_barricade_rtdm_001",
+      "event_description": { "localization_key": "@first_win_event_barricade_rtdm_001_event_description" },
+      "event": { "event_id": "PlayerTeamResult", "actor_is_me": true, "actor_status_is": ["Won"], "actor_playlist_name_is": ["event_barricade", "event_barricade_fast_ult"]},
+      "progress": 1
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 5
+    }
+  ]
+}

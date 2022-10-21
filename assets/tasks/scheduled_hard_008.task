@@ -1,0 +1,44 @@
+{
+  "name": "scheduled_hard_008",
+  "type": "scheduled",
+  "tags": [
+    "gun"
+  ],
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "epic",
+  "display_name": { "localization_key": "@scheduled_hard_008_name" },
+  "description": { "localization_key": "@scheduled_hard_008_description" },
+  "conditions": [
+    {
+      "name": "scheduled_hard_008_1",
+      "event_description": { "localization_key": "@scheduled_hard_008_1_event_description" },
+      "event": { "event_id": "Kill", "actor_is_me": true, "actor_item_tag_is": ["movable"]},
+      "progress": 5
+    },
+    {
+      "name": "scheduled_hard_008_2",
+      "event_description": { "localization_key": "@scheduled_hard_008_2_event_description" },
+      "event": { "event_id": "Kill", "actor_is_me": true, "actor_item_tag_is": ["explosive"]},
+      "progress": 5
+    }
+  ],
+  
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 4000
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 2500
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 30
+    }
+  ]
+}

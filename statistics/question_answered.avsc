@@ -1,0 +1,55 @@
+{
+    "name": "question_answered",
+    "doc": "Origin: ui. Emitter: client. User's feedback",
+    "type": "record",
+    "fields": [
+        {
+            "name": "question",
+            "type": "string",
+            "default": "-1",
+            "doc": "question text"
+        },
+        {
+            "name": "answer",
+            "type": "int",
+            "default": -1,
+            "doc": "question answer value"
+        },
+        {
+            "name": "name",
+            "type": "string",
+            "default": "-1",
+            "doc": "unique name of the event"
+        },
+        {
+            "name": "pid",
+            "type": "long",
+            "default": -1,
+            "doc": "namespace-unique identifier of a player"
+        },
+        {
+            "name": "ts",
+            "type": "string",
+            "default": "-1",
+            "doc": "ISO8601 UTC timestamp of the event invocation"
+        },
+        {
+            "name": "gid",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace-unique identifier of the match"
+        },
+        {
+            "name": "sid",
+            "type": "string",
+            "default": "-1",
+            "doc": "global-unique identifier of the player's login session (time between login and logout)"
+        },
+        {
+            "name": "ns",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace of the server's deployment (realm)"
+        }
+    ]
+}

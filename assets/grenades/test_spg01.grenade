@@ -1,0 +1,39 @@
+{   
+    "can_cook": true,
+    "duration_prepare": 0.7,
+    "duration_throw": 0.23,
+    "time_to_throw": 0.09,
+    "time_to_action": 0,
+    "time_to_destroy": 60,
+    "destroy_on_act": true,
+    "count": 1,
+    "act_reason": "collision",
+
+    "selection":
+    {
+        "quick_selection_duration": 0.0,
+        "quick_deselection_duration": 0.0,
+        "selection_duration": 0,
+        "deselection_duration": 0
+    },
+
+    "common":
+    {
+        "item_tag": "CG"
+    },
+    
+    "projectile":
+    {
+        "config_name": "test_spg01",
+        "slice_name": "slices/projectiles/test_spg01.dynamicslice",
+        "speed": 35.0,
+        "angle": 2.0,
+        "velocity_character_multiplier": 0.5,
+        "offset": 
+        {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        }
+    }
+}

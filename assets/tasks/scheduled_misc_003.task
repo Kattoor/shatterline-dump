@@ -1,0 +1,40 @@
+{
+  "name": "scheduled_misc_003",
+  "type": "scheduled",
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "uncommon",
+  "display_name": { "localization_key": "@scheduled_misc_003_name" },
+  "description": { "localization_key": "@scheduled_misc_003_description" },
+  "conditions": [
+    {
+      "name": "scheduled_misc_003_1",
+      "event_description": { "localization_key": "@scheduled_misc_003_1_event_description" },
+      "event": { "event_id": "AbilityKill", "actor_is_me": true, "target_player_preset_is_not": [] },
+      "progress": 20
+    },
+    {
+      "name": "scheduled_misc_003_2",
+      "event_description": { "localization_key": "@scheduled_misc_003_2_event_description" },
+      "event": { "event_id": "AbilityKill", "actor_is_me": true, "game_type_is": ["pve"] },
+      "progress": 50
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 2500
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 1500
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 20
+    }
+  ]
+}

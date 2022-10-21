@@ -1,0 +1,24 @@
+{
+  "name": "test_initial_task_clan",
+  "type": "initial",
+  "active": true,
+  "image": "test_icon",
+  "rarity": "common",
+  "display_name": { "localization_key": "@test_initial_task_clan" },
+  "description": { "localization_key": "@test_task_description" },
+  "conditions": [
+    {
+      "name": "test_initial_task_clan",
+      "event_description": { "localization_key": "@test_task_event_description" },
+      "progress": 1,
+      "event": { "event_id": "kill", "actor_is_me": true, "actor_party_size_is": [2], "actor_party_clanmates_count_is": [1] }
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 1000
+    }
+  ]
+}

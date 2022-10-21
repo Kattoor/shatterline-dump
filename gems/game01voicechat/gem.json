@@ -1,0 +1,38 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "caceb0914e4f4f8abb835d4aab1de06d",
+    "Name": "Game01VoiceChat",
+    "DisplayName": "Game01VoiceChat",
+    "Version": "0.1.0",
+    "Summary": "Voice chat",
+    "Tags": ["Untagged"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        }
+    ],
+    "Dependencies":
+    [
+        {
+            "Uuid": "7e24ebb066104127a4abb14e13ec7bed",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "GameSession"
+        },
+        {
+            "Uuid": "b8e16ebeec9346f18af81fe09b6844bf",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "ClientBackend"
+        },
+        {
+            "Uuid": "c0bf497f08e64a38ad901aecf5ce4f1d",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01PlayerProfile"
+        },
+        {
+            "Uuid": "2ebd4481cbf142b89286f28b4c29ace3",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01Interfaces"
+        }
+    ]
+}

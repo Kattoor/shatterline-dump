@@ -1,0 +1,380 @@
+{
+    "name": "QueenNew/PersonalGlitch",
+    "root": "5d1bf2b9-8269-4fbc-94ce-365e8ca855d6",
+    "nodes": {
+        "3077b5cb-d4e8-4d01-bb6c-9992fd42fc00": {
+            "name": "GlitchCharacter",
+            "pos": {
+                "x": 360,
+                "y": 940
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Enable",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "Target",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "GlitchType",
+                    "type": "StringHash",
+                    "value": "Shift"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "93b17496-fe6a-41a3-bc06-19859120838d": {
+            "name": "ActivateComponents",
+            "pos": {
+                "x": 665,
+                "y": 943
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Tag",
+                    "type": "StringHash",
+                    "value": "glitch_cast"
+                },
+                {
+                    "name": "Enable",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "5d1bf2b9-8269-4fbc-94ce-365e8ca855d6": {
+            "name": "SetBehaviorConditionAndResetOnExit",
+            "pos": {
+                "x": 0,
+                "y": 92
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Attack"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "60fb7749-c7a3-4970-9337-258541b02e31"
+        },
+        "b304f203-b668-4c9b-92bc-d6ad2b306040": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 379
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "PersonalGlitch"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "a4183515-ed8b-462d-9842-ed5fb0c58028"
+        },
+        "6ad9c430-2492-4d95-a607-fda09db105b9": {
+            "name": "Play Animation",
+            "pos": {
+                "x": -215,
+                "y": 765
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "AnimationName",
+                    "type": "StringHash",
+                    "value": "attack"
+                },
+                {
+                    "name": "IsLooped",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Duration",
+                    "type": "Float",
+                    "value": "0.00"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "bfbe2d4a-3a42-4a4f-a30a-8b4bc5076336": {
+            "name": "CameraShake",
+            "pos": {
+                "x": 525,
+                "y": 940
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "f3d386b9-dc2d-4053-8df2-655ffb0086da": {
+            "name": "Wait",
+            "pos": {
+                "x": 175,
+                "y": 940
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Float",
+                    "value": "0.5"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "e7ab8bf9-6e32-4c7e-bdaf-0136823522e9": {
+            "name": "StopTimer",
+            "pos": {
+                "x": -670,
+                "y": 640
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "TimerName",
+                    "type": "StringHash",
+                    "value": "FlightTime"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "bd91ea69-f8db-4ee2-b813-ff5c76db495c": {
+            "name": "ExactBodyRotateTo",
+            "pos": {
+                "x": -455,
+                "y": 640
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Target",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "DegreesPerSecond",
+                    "type": "Float",
+                    "value": "360"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "60fb7749-c7a3-4970-9337-258541b02e31": {
+            "name": "IsTargetPerceivedAndVisible",
+            "pos": {
+                "x": 0,
+                "y": 221
+            },
+            "inputs": [
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "b304f203-b668-4c9b-92bc-d6ad2b306040"
+        },
+        "3f4ed901-d727-48f9-a60d-b01ad63b2ba7": {
+            "name": "ActivateComponents",
+            "pos": {
+                "x": 0,
+                "y": 940
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Tag",
+                    "type": "StringHash",
+                    "value": "glitch_cast"
+                },
+                {
+                    "name": "Enable",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "795ecb9f-0584-4e7a-aca3-7f74a4b03ba6": {
+            "name": "Wait",
+            "pos": {
+                "x": 175,
+                "y": 626
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "personal_glitch_duration"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "842a4bb2-9874-4042-b731-f16f111cd911": {
+            "name": "Sequence",
+            "pos": {
+                "x": -40,
+                "y": 766
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "f2ebaa6c-fb28-48f5-a915-31dc288b8c92",
+                "3f4ed901-d727-48f9-a60d-b01ad63b2ba7",
+                "f3d386b9-dc2d-4053-8df2-655ffb0086da",
+                "3077b5cb-d4e8-4d01-bb6c-9992fd42fc00",
+                "bfbe2d4a-3a42-4a4f-a30a-8b4bc5076336",
+                "93b17496-fe6a-41a3-bc06-19859120838d"
+            ]
+        },
+        "9e025878-fcc0-4bfc-aec6-8b9155a4c72d": {
+            "name": "ParallelUntilAllComplete",
+            "pos": {
+                "x": -160,
+                "y": 640
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "6ad9c430-2492-4d95-a607-fda09db105b9",
+                "842a4bb2-9874-4042-b731-f16f111cd911"
+            ]
+        },
+        "f2ebaa6c-fb28-48f5-a915-31dc288b8c92": {
+            "name": "Wait",
+            "pos": {
+                "x": -160,
+                "y": 940
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Float",
+                    "value": "0.8"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "a4183515-ed8b-462d-9842-ed5fb0c58028": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 486
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "e7ab8bf9-6e32-4c7e-bdaf-0136823522e9",
+                "bd91ea69-f8db-4ee2-b813-ff5c76db495c",
+                "9e025878-fcc0-4bfc-aec6-8b9155a4c72d",
+                "795ecb9f-0584-4e7a-aca3-7f74a4b03ba6",
+                "0c2f92a4-741b-4368-be59-8dc58451c0ea"
+            ]
+        },
+        "0c2f92a4-741b-4368-be59-8dc58451c0ea": {
+            "name": "ActivateComponents",
+            "pos": {
+                "x": 425,
+                "y": 625
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Tag",
+                    "type": "StringHash",
+                    "value": "glitch_cast"
+                },
+                {
+                    "name": "Enable",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

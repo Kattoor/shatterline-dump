@@ -1,0 +1,96 @@
+{
+    "name": "Chaser/IdleFollowMove",
+    "root": "3bdcba40-4149-42a2-9a68-17a061702613",
+    "nodes": {
+        "3bdcba40-4149-42a2-9a68-17a061702613": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 85
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "IdleFollowMove"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "3658b4e1-4cc0-4e72-bd67-34e67ded37ac"
+        },
+        "3658b4e1-4cc0-4e72-bd67-34e67ded37ac": {
+            "name": "IsBBValueExist",
+            "pos": {
+                "x": 0,
+                "y": 215
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ValuePath",
+                    "type": "StringHash",
+                    "value": "Gai.Chaser.MoveTargetPos"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "45244072-4f0c-4051-8347-54ebe7b4b5a1"
+        },
+        "45244072-4f0c-4051-8347-54ebe7b4b5a1": {
+            "name": "ApproachTo",
+            "pos": {
+                "x": 0,
+                "y": 512
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Chaser",
+                        "MoveTargetPos"
+                    ]
+                },
+                {
+                    "name": "EndDistance",
+                    "type": "Float",
+                    "value": "0.00"
+                },
+                {
+                    "name": "UpdateDestinationPoint",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

@@ -1,0 +1,46 @@
+{
+  "name": "scheduled_hard_006",
+  "type": "scheduled",
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "epic",
+  "display_name": { "localization_key": "@scheduled_hard_006_name" },
+  "description": { "localization_key": "@scheduled_hard_006_description" },
+  "conditions": [
+    {
+      "name": "scheduled_hard_006_1",
+      "event_description": { "localization_key": "@scheduled_hard_006_1_event_description" },
+      "event": { "event_id": "KillWhileEscorting", "actor_is_me": true, "game_mode_is": ["esc"]},
+      "progress": 20
+    },
+    {
+      "name": "scheduled_hard_006_2",
+      "event_description": { "localization_key": "@scheduled_hard_006_2_event_description" },
+      "event": { "event_id": "DoubleKill", "actor_is_me": true, "game_mode_is": ["esc"]},
+      "progress": 7
+    },
+    {
+      "name": "scheduled_hard_006_3",
+      "event_description": { "localization_key": "@scheduled_hard_006_3_event_description" },
+      "event": { "event_id": "Rampage", "actor_is_me": true, "game_type_is": ["pvp"]},
+      "progress": 1
+    }
+  ],
+ "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 4000
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 2500
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 30
+    }
+  ]
+}

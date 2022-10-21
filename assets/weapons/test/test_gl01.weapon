@@ -1,0 +1,101 @@
+{
+    "sounds": {
+        "sets": [
+            {
+                "tag": "default",
+                "triggers": {
+                    "fire_start": "gl01_fire",
+                    "fire_stop": ""
+                }
+            },
+            {
+                "tag": "silenced",
+                "triggers": {
+                    "fire_start": "",
+                    "fire_stop": ""
+                }
+            }
+        ],
+        "tag": "default"
+    },
+    "shooting": {
+        "rpm": 300.0,
+        "clip_capacity": 0,
+        "backpack_capacity": 120,
+        "chamber_capacity": 6,
+        "chamber_capacity_base": 6,
+        "chambers_fired_per_shot": 1,
+        "auto_reload_mode": "Chamber",
+        "shoot_projectile_type": "projectile",
+        "spin_rpm": 50.0,
+        "spin_out_time": 0.0,
+        "spin_in_time": 0.0,
+        "spin_on_zoom": false,
+        "hit_feedback": "server",
+        "reload": {
+            "reload_time": 2.02,
+            "reload_out_complete_threshold": 0.7,
+            "reload_in_complete_threshold": 0.7
+        }
+    },
+    "recoil": {
+        "max_vertical_angle": 20.0,
+        "kick_time": 0.1,
+        "decay_time": 0.4,
+        "decay_delay": 0.0,
+        "recoil_points": [
+            {
+                "num": 1,
+                "angle": {
+                    "min": -20.0,
+                    "max": 20.0
+                },
+                "force": {
+                    "min": 1.05,
+                    "max": 1.22
+                }
+            }
+        ]
+    },
+    "spread": {
+        "min_hip_spread": 1.0,
+        "max_hip_spread": 5.0,
+        "hip_step": 0.35,
+        "decay_time": 0.4,
+        "decay_delay": 0.1,
+        "stand_multiplier": 0.3,
+        "walk_multiplier": 0.5,
+        "zoom_multiplier": 0.15,
+        "jump_multiplier": 2.0,
+        "crouch_multiplier": 0.4,
+        "crouch_idle_multiplier": 0.4,
+        "slide_multiplier": 0.5
+    },
+    "zoom": {
+        "zoom_fov": 40.0,
+        "weapon_fov": 65.0,
+        "zoom_in_time": 0.26,
+        "zoom_out_time": 0.26,
+        "delay_after_jump": 0.3,
+        "in_air": true,
+        "hide_crosshair": true
+    },
+    "projectile": {
+        "config_name": "fg01_collision",
+        "slice_name": "slices/projectiles/throwables/fg01.dynamicslice",
+        "speed": 35.0,
+        "offset": {
+            "x": 0,
+            "y": 1.5,
+            "z": 0
+        }
+    },
+    "selection": {
+        "selection_duration": 0.2,
+        "deselection_duration": 0.2
+    },
+    "common": {
+        "item_tag": "GL"
+    },
+    "muzzle_sight_distance": 1.0
+}

@@ -1,0 +1,38 @@
+{
+  "name": "test_founder_pack_01",
+  "icon": "test_icon",
+  "display_name": "@offer_founder_pack_01_name",
+  "text_description": "@offer_founder_pack_01_description",
+  "icon_size": "1x2",
+  "prerequisites": {
+    "unavailable_if_purchased_any": ["test_founder_pack_01", "test_founder_pack_02", "test_founder_pack_03"]
+  },
+  "price": [
+    {
+      "currency": "hard",
+      "amount": 1000
+    }
+  ],
+  "items": [
+    {
+      "item_name": "a_mongoose_outfit04",
+      "amount": 1
+    },
+    {
+      "item_name": "m_malva_outfit04",
+      "amount": 1
+    },
+    {
+      "item_name": "h_ram_outfit05",
+      "amount": 1
+    },
+    {
+      "item_name": "s_kite_outfit07",
+      "amount": 1
+    }
+  ],
+  "badges": [
+      "background_founders_01"
+  ],
+  "storefront": "founders"
+}

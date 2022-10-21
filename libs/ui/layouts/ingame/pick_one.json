@@ -1,0 +1,14 @@
+{
+    "script": "scripts/ui/ingame/pick_one.lua",
+    "view_path": "PickOne.html",
+    "action_filter": "ingame_menu",
+    "children":
+    [
+        {"name": "container", "type": "Component", "view_path": "window.container"},
+        {"name": "title", "type": "Label", "view_path": "window.title", "text": "@pick_one_title"},
+        {"name": "hint_back", "type": "ActionLabel", "view_path": "window.hints.backHint.key"},
+        {"name": "hint_back_title", "type": "Label", "view_path": "window.hints.backHint.title", "text": "@escape_cancel_btn"},
+        {"name": "hint_select", "type": "ActionLabel", "view_path": "window.hints.selectHint.key"},
+        {"name": "hint_select_title", "type": "Label", "view_path": "window.hints.selectHint.title", "text": "@select"}
+    ]
+}

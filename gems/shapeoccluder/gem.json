@@ -1,0 +1,28 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "b38d719a87c9458096ebe6b113e3b223",
+    "Name": "ShapeOccluder",
+    "DisplayName": "ShapeOccluder",
+    "Version": "0.1.0",
+    "Summary": "A short description of my Gem.",
+    "Tags": ["Untagged"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        },
+        {
+            "Name": "Editor",
+            "Type": "EditorModule",
+            "Extends": "GameModule"
+        }
+    ],
+    "Dependencies":
+    [ 
+        {
+            "Uuid": "c5833dbda2e045d3a5f16b7414280c27",
+            "VersionConstraints": ["~>0.1"],
+            "_comment": "WhiteBox"
+        }
+    ]
+}

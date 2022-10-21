@@ -1,0 +1,37 @@
+{
+       "destroy_on_act": false,
+       "time_to_action": 20.0,
+       "selection":
+       {
+          "quick_selection_duration": 0.0,
+          "quick_deselection_duration": 0.0,
+          "deselection_duration": 0.0,
+          "selection_duration": 0.0,
+          "quick_deselect": true
+       },
+       "time_to_throw": 0.08,
+       "act_reason": "time",
+       "projectile":
+       {
+          "speed": 2.0,
+          "offset":
+          {
+             "z": 0.0,
+             "x": 0.2,
+             "y": 0.4
+          },
+          "velocity_character_multiplier": 1.0,
+          "slice_name": "slices/projectiles/lightning_zone.dynamicslice",
+          "angle": 0.0
+       },
+       "time_to_destroy": 20.0,
+       "count": 1,
+       "common":
+       {
+          "item_tag": "CG"
+       },
+       "duration_throw": 0.4,
+       "duration_prepare": 0.02,
+       "can_cook": true,
+       "can_cook_indefinitely": true
+    }

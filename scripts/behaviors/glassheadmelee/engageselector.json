@@ -1,0 +1,674 @@
+{
+    "name": "GlassheadMelee/EngageSelector",
+    "root": "7a9848b0-a4df-4c01-abef-206dccb26b71",
+    "nodes": {
+        "43ec145c-bdcf-4784-b66c-db0429164e82": {
+            "name": "IsBehaviorCondition",
+            "pos": {
+                "x": 695,
+                "y": 307
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "CanMeleeRunAttack"
+                },
+                {
+                    "name": "ResetOnExit",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "3ad0b002-d247-4bb5-89e0-e979784cb4f2"
+        },
+        "6b4183e7-7c11-41c4-b17b-effa988d8861": {
+            "name": "IsBBValueExist",
+            "pos": {
+                "x": 75,
+                "y": 713
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ValuePath",
+                    "type": "StringHash",
+                    "value": "Target.ID"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "f12c2a08-4aa0-4acd-a975-40d37cce5cf7"
+        },
+        "cf7cc518-1c33-4253-abd0-3d1c54bcda40": {
+            "name": "Selector",
+            "pos": {
+                "x": 350,
+                "y": 198
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "24cd3bd6-47ca-4690-800a-a79a4cae0361",
+                "bc526c7c-323d-4d82-9596-9ded8b3f9a61",
+                "43ec145c-bdcf-4784-b66c-db0429164e82",
+                "0de39441-ba3a-4d98-8499-63e4e623c21e"
+            ]
+        },
+        "0de39441-ba3a-4d98-8499-63e4e623c21e": {
+            "name": "SelectDesiredBehavior",
+            "pos": {
+                "x": 915,
+                "y": 308
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Behavior",
+                    "type": "StringHash",
+                    "value": "Engage"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "e0536916-72d1-418a-8354-967bb8cc0b40": {
+            "name": "Sequence",
+            "pos": {
+                "x": 265,
+                "y": 902
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "3a133441-171a-4613-838a-cfad9f882e42",
+                "a88b669e-3a7e-470a-b04a-212ab636db0f",
+                "80931c06-d811-400c-b214-bca8a3c919b1"
+            ]
+        },
+        "24cd3bd6-47ca-4690-800a-a79a4cae0361": {
+            "name": "IsBehaviorCondition",
+            "pos": {
+                "x": 240,
+                "y": 304
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Rage"
+                },
+                {
+                    "name": "ResetOnExit",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "6e1b8be5-3811-4e96-9470-5f19df671ef7"
+        },
+        "bc526c7c-323d-4d82-9596-9ded8b3f9a61": {
+            "name": "Equals",
+            "pos": {
+                "x": 480,
+                "y": 305
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Lhs",
+                    "type": "Variable",
+                    "value": [
+                        "TargetChanged"
+                    ]
+                },
+                {
+                    "name": "Rhs",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "751a044f-992b-4cae-a394-9104eea32087"
+        },
+        "a88b669e-3a7e-470a-b04a-212ab636db0f": {
+            "name": "SetVariable",
+            "pos": {
+                "x": 155,
+                "y": 1048
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "TargetChanged"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "751a044f-992b-4cae-a394-9104eea32087": {
+            "name": "SetBehaviorCondition",
+            "pos": {
+                "x": 480,
+                "y": 507
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "RestartBehavior"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "97a5ec97-3b13-4b7e-8adc-7d920c134074": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -190,
+                "y": 869
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "OldTarget"
+                },
+                {
+                    "name": "Value",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "ConditionVariables",
+                        "EngageTarget"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "f12c2a08-4aa0-4acd-a975-40d37cce5cf7": {
+            "name": "SetVariable",
+            "pos": {
+                "x": 75,
+                "y": 884
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "CurTarget"
+                },
+                {
+                    "name": "Value",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "faa34e15-f124-4f7b-af25-326fc0ae3b3b": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -445,
+                "y": 715
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "CurTarget"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "EntityId"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "94e55019-8bb2-4625-85ff-3eaa5c98789f": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -305,
+                "y": 181
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "TargetChanged"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Boolean"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "80931c06-d811-400c-b214-bca8a3c919b1": {
+            "name": "RandomChance",
+            "pos": {
+                "x": 405,
+                "y": 1051
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Probability",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "rage_prob"
+                    ]
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "933905e5-328e-4c11-badd-e71b8864e88e"
+        },
+        "30f483ff-8476-46f2-9705-fcd2bf7be917": {
+            "name": "Succeeder",
+            "pos": {
+                "x": 0,
+                "y": 193
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "fd705e15-1a66-4051-9d22-218d6e3654fa"
+        },
+        "2803c223-7cf9-4323-b9f0-695d1c593c20": {
+            "name": "IsBBValueExist",
+            "pos": {
+                "x": -190,
+                "y": 711
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ValuePath",
+                    "type": "StringHash",
+                    "value": "Gai.ConditionVariables.EngageTarget"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "97a5ec97-3b13-4b7e-8adc-7d920c134074"
+        },
+        "6e1b8be5-3811-4e96-9470-5f19df671ef7": {
+            "name": "SelectDesiredBehavior",
+            "pos": {
+                "x": 240,
+                "y": 517
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Behavior",
+                    "type": "StringHash",
+                    "value": "Rage"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "3ad0b002-d247-4bb5-89e0-e979784cb4f2": {
+            "name": "SelectDesiredBehavior",
+            "pos": {
+                "x": 695,
+                "y": 507
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Behavior",
+                    "type": "StringHash",
+                    "value": "MeleeRunAttack"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "1b167614-0998-4466-9945-09bf288e1fb1": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 499
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "b2488ae0-d094-4264-8081-9d3b4f41df31",
+                "faa34e15-f124-4f7b-af25-326fc0ae3b3b",
+                "2803c223-7cf9-4323-b9f0-695d1c593c20",
+                "6b4183e7-7c11-41c4-b17b-effa988d8861",
+                "258563b3-f3eb-48f0-b798-4fdf8f6448c8"
+            ]
+        },
+        "b2488ae0-d094-4264-8081-9d3b4f41df31": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -600,
+                "y": 717
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "OldTarget"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "EntityId"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "7a9848b0-a4df-4c01-abef-206dccb26b71": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 93
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "94e55019-8bb2-4625-85ff-3eaa5c98789f",
+                "30f483ff-8476-46f2-9705-fcd2bf7be917",
+                "cf7cc518-1c33-4253-abd0-3d1c54bcda40"
+            ]
+        },
+        "258563b3-f3eb-48f0-b798-4fdf8f6448c8": {
+            "name": "Equals",
+            "pos": {
+                "x": 265,
+                "y": 718
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Lhs",
+                    "type": "Variable",
+                    "value": [
+                        "OldTarget"
+                    ]
+                },
+                {
+                    "name": "Rhs",
+                    "type": "Variable",
+                    "value": [
+                        "CurTarget"
+                    ]
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "e0536916-72d1-418a-8354-967bb8cc0b40"
+        },
+        "933905e5-328e-4c11-badd-e71b8864e88e": {
+            "name": "SetBehaviorCondition",
+            "pos": {
+                "x": 405,
+                "y": 1219
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Rage"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "3a133441-171a-4613-838a-cfad9f882e42": {
+            "name": "SetBBValueByPath",
+            "pos": {
+                "x": -105,
+                "y": 1050
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "BB Path",
+                    "type": "StringHash",
+                    "value": "Gai.ConditionVariables.EngageTarget"
+                },
+                {
+                    "name": "Value",
+                    "type": "Variable",
+                    "value": [
+                        "CurTarget"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "fd705e15-1a66-4051-9d22-218d6e3654fa": {
+            "name": "IsBehaviorCondition",
+            "pos": {
+                "x": 0,
+                "y": 292
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Rage"
+                },
+                {
+                    "name": "ResetOnExit",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "1b167614-0998-4466-9945-09bf288e1fb1"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

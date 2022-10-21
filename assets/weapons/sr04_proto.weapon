@@ -1,0 +1,105 @@
+{
+    "selection": {
+        "nearest_camera_offset": {
+            "z": 0.0,
+            "x": 0.0,
+            "y": 0.0
+        },
+        "deselection_duration": 0.28,
+        "selection_duration": 0.6
+    },
+    "spread": {
+        "max_hip_spread": 16.0,
+        "decay_time": 0.4,
+        "slide_multiplier": 0.6,
+        "zoom_multiplier": 0.0,
+        "crouch_multiplier": 0.25,
+        "crouch_idle_multiplier": 0.2,
+        "hip_step": 3.0,
+        "min_hip_spread": 8.0,
+        "decay_delay": 0.1,
+        "stand_multiplier": 0.3,
+        "walk_multiplier": 0.6,
+        "jump_multiplier": 2.0
+    },
+    "zoom": {
+        "weapon_offset": {
+            "z": 0.0,
+            "x": 0.0,
+            "y": 0.0
+        },
+        "delay_after_jump": 0.3,
+        "weapon_fov": 25.0,
+        "scope_aiming_treshold": 0.5,
+        "zoom_out_time": 0.2,
+        "hide_crosshair": true,
+        "zoom_fov": 40.0,
+        "zoom_in_time": 0.2,
+        "blur_amount": 0.0,
+        "scope_aiming_offset_forward": 0.3,
+        "sniper_scope": false,
+        "in_air": false
+    },
+    "common": {
+        "item_tag": "AR"
+    },
+    "muzzle_sight_distance": 1.0,
+    "shooting": {
+        "base_damage_distribution": {
+            "points": [
+                {
+                    "distance": 50.0,
+                    "damage": 110.0
+                },
+                {
+                    "distance": 50.0,
+                    "damage": 80.0
+                }
+            ]
+        },
+        "backpack_capacity": 80,
+        "chamber_capacity": 1,
+        "head_damage_distribution": {
+            "points": [
+                {
+                    "distance": 50.0,
+                    "damage": 160.0
+                },
+                {
+                    "distance": 50.0,
+                    "damage": 150.0
+                }
+            ]
+        },
+        "chambers_fired_per_shot": 1,
+        "hit_feedback": "server",
+        "rpm": 140.0,
+        "auto_reload_mode": "Chamber",
+        "bullet_type": "Sniper",
+        "clip_capacity": 7,
+        "reload": {
+            "reload_time": 2.5,
+            "reload_out_complete_threshold": 0.7,
+            "reload_in_complete_threshold": 0.7
+        }
+    },
+    "recoil": {
+        "kick_time": 0.1,
+        "decay_time": 0.42,
+        "max_vertical_angle": 30.0,
+        "decay_delay": 0.01,
+        "recoil_points": [
+            {
+                "num": 1,
+                "force": {
+                    "min": 1.75,
+                    "max": 2.27
+                },
+                "angle": {
+                    "min": 15.0,
+                    "max": 15.0
+                }
+            }
+        ]
+    }
+}

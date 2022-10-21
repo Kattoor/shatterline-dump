@@ -1,0 +1,46 @@
+{
+    "script": "scripts/ui/ingame/pre_battle.lua",
+    "view_path": "PreBattle.html", 
+    "children": [
+
+        {"name": "timer_wrapper_label", "type": "Label", "view_path": "timerWrapper.label", "text": "@prebattle_choose_operative"},
+        {"name": "timer_wrapper_timer", "type": "Label", "view_path": "timerWrapper.timer"},
+
+        {"name": "hero_info_container", "type": "Component", "view_path": "topBlock.heroInfoContainer"},
+
+        {"name": "hero_info_level", "type": "Label", "view_path": "topBlock.heroInfoContainer.heroInfo.hexagon.wrapper.content.level"},
+        {"name": "hero_info_progress", "type": "ProgressBar", "view_path": "topBlock.heroInfoContainer.heroInfo.hexagon.wrapper.progress"},
+        {"name": "hero_info_title", "type": "Label", "view_path": "topBlock.heroInfoContainer.heroInfo.labelWrapper.title"},
+        {"name": "hero_info_description", "type": "Label", "view_path": "topBlock.heroInfoContainer.heroInfo.labelWrapper.description"},
+
+        {"name": "hero_abilities", "type": "Component", "view_path": "topBlock.heroInfoContainer.heroAbilitiesList"},
+        {"name": "hero_abilities_title", "type": "Label", "view_path": "topBlock.heroInfoContainer.heroAbilitiesList.title", "text": "@prebattle_special_equipment"},
+        {"name": "hero_abilities_container", "type": "Component", "view_path": "topBlock.heroInfoContainer.heroAbilitiesList.container"},
+
+        {"name": "hero_equipment_wrapper", "type": "Component", "view_path": "topBlock.heroEquipmentWrapper", "visible": false},
+        {"name": "hero_equipment_container", "type": "Component", "view_path": "topBlock.heroEquipmentWrapper.heroEquipmentContainer"},
+        {"name": "static_hint", "type": "Component", "view_path": "topBlock.heroEquipmentWrapper.staticHintWrapper.staticHint", "file": "common/static_hint.json", "visible": false},
+
+        {"name": "map_name", "type": "Label", "view_path": "topBlock.matchInfo.mapInfo.mapName"},
+        {"name": "mode", "type": "Label", "view_path": "topBlock.matchInfo.mapInfo.mode"},
+
+        {"name": "team_list_title", "type": "Label", "view_path": "topBlock.matchInfo.teamList.titleContainer.title", "text": "@prebattle_your_team"},
+        {"name": "current_players_count", "type": "Label", "view_path": "topBlock.matchInfo.teamList.titleContainer.currentPlayersCount"},
+        {"name": "max_players_count", "type": "Label", "view_path": "topBlock.matchInfo.teamList.titleContainer.maxPlayerCount"},
+        {"name": "team_list_container", "type": "Component", "view_path": "topBlock.matchInfo.teamList.container"},
+
+        {"name": "hero_select_title", "type": "Component", "view_path": "heroPanel.titleWrapper"},
+        {"name": "hero_buttons_panel_hint_left", "type": "ActionLabel", "view_path": "heroPanel.titleWrapper.leftHintKey", "gamepad_only": true},
+        {"name": "hero_select_title_text", "type": "Label", "view_path": "heroPanel.titleWrapper.title", "text": "@escape_menu_select_hero_title"},
+        {"name": "hero_buttons_panel_hint_right", "type": "ActionLabel", "view_path": "heroPanel.titleWrapper.rightHintKey", "gamepad_only": true},
+
+        {"name": "hero_buttons_panel_hint_select", "type": "ActionLabel", "view_path": "heroPanel.titleWrapper.selectHint.key", "gamepad_only": true},
+        {"name": "hint_select_title", "type": "ActionLabel", "view_path": "heroPanel.titleWrapper.selectHint.title", "text": "@select", "gamepad_only": true},
+
+        {"name": "hero_buttons_panel", "type": "Component", "view_path": "heroPanel.heroButtonsPanel", "file": "lobby/hero_selection_buttons.json"},
+
+        {"name": "ready_btn", "type": "Button", "view_path": "heroPanel.readyBtn"},
+        {"name": "ready_btn_hint", "type": "ActionLabel", "view_path": "heroPanel.readyBtn.wrapper.key", "gamepad_only": true}
+
+    ]
+}

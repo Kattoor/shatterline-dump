@@ -1,0 +1,102 @@
+{
+    "sounds": {
+        "sets": [
+            {
+                "tag": "default",
+                "triggers": {
+                    "fire_start": "spg01_explosion"
+                }
+            }
+        ],
+        "tag": "default"
+    },
+    "selection": {
+        "nearest_camera_offset": {
+            "z": 0.0,
+            "x": 0.0,
+            "y": 0.0
+        },
+        "deselection_duration": 0.33,
+        "selection_duration": 0.4
+    },
+    "spread": {
+        "max_hip_spread": 0.01,
+        "decay_time": 0.4,
+        "slide_multiplier": 0.6,
+        "zoom_multiplier": 0.0,
+        "crouch_multiplier": 0.4,
+        "hip_step": 0.2,
+        "crouch_idle_multiplier": 0.4,
+        "min_hip_spread": 0.0,
+        "decay_delay": 0.1,
+        "stand_multiplier": 0.3,
+        "walk_multiplier": 0.6,
+        "jump_multiplier": 2.0
+    },
+    "zoom": {
+        "weapon_offset": {
+            "z": 0.0,
+            "x": 0.0,
+            "y": 0.0
+        },
+        "delay_after_jump": 0.3,
+        "weapon_fov": 25.0,
+        "zoom_out_time": 0.15,
+        "hide_crosshair": true,
+        "zoom_fov": 40.0,
+        "zoom_in_time": 0.15,
+        "in_air": false
+    },
+    "projectile": {
+        "speed": 30.0,
+        "slice_name": "slices/projectiles/wpn04_ai_projectile.dynamicslice",
+        "offset": {
+            "z": -0.5,
+            "x": 0.5,
+            "y": 1.0
+        },
+        "act_reason": "collision",
+        "time_to_destroy": 20.0
+    },
+    "common": {
+        "item_tag": "SR"
+    },
+    "muzzle_sight_distance": 1.0,
+    "shooting": {
+        "base_damage_distribution": {
+            "points": [
+                {
+                    "distance": 0.0,
+                    "damage": 150.0
+                }
+            ]
+        },
+        "backpack_capacity": 65535,
+        "chamber_capacity": 1,
+        "shoot_projectile_type": "projectile",
+        "chambers_fired_per_shot": 1,
+        "rpm": 400.0,
+        "auto_reload_mode": "Chamber",
+        "bullet_type": "Sniper",
+        "clip_capacity": 10
+    },
+    "recoil": {
+        "kick_time": 0.1,
+        "decay_time": 0.16,
+        "max_vertical_angle": 10.0,
+        "decay_delay": 0.03,
+        "recoil_points": [
+            {
+                "num": 1,
+                "force": {
+                    "min": 0.17,
+                    "max": 0.35
+                },
+                "angle": {
+                    "min": 1.0,
+                    "max": 2.0
+                }
+            }
+        ]
+    }
+}

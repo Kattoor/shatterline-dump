@@ -1,0 +1,68 @@
+{
+  "events": [
+    {
+      "event_icon": "falldown",
+      "event": [
+        {
+          "event_id": "Suicide",
+          "hit_type_is": ["Fall"]
+        }
+      ]
+    },
+    {
+      "event_icon": "explosion",
+      "event": [
+        {
+          "event_id": "Suicide",
+          "hit_type_is": ["AOE"]
+        }
+      ]
+    },
+    {
+      "event_icon": "killzone_crystal",
+      "event": [
+        {
+          "event_id": "Suicide",
+          "hit_type_is": ["DOT"],
+          "dot_type_is": ["Crystalline"]
+        }
+      ]
+    },
+    {
+      "event_icon": "killzone_fire",
+      "event": [
+        {
+          "event_id": "Suicide",
+          "hit_type_is": ["DOT"],
+          "dot_type_is": ["Fire"]
+        }
+      ]
+    },
+    {
+      "event_icon": "kill_log_suicide",
+      "event": [
+        {
+          "event_id": "Suicide",
+          "target_ai_archetype_is": []
+        }
+      ]
+    },
+    {
+      "item_icon": "resurrect_drone",
+      "event": [
+        {
+          "event_id": "Resurrect",
+          "actor_item_tag_is": ["drone"]
+        }
+      ]
+    },
+    {
+      "item_icon": "resurrect",
+      "event": [
+        {
+          "event_id": "Resurrect"
+        }
+      ]
+    }
+  ]
+}

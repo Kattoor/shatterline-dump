@@ -1,0 +1,31 @@
+{
+   "name": "test_item_equipped",
+   "type": "daily",
+   "active": true,
+   "image": "test_icon",
+   "rarity": "common",
+  "display_name": { "localization_key": "@test_item_equipped" },
+   "description": { "localization_key": "@test_task_description" },
+    "conditions": [
+        {
+          "name": "test_item_equipped",
+          "event_description": { "localization_key": "@test_task_event_description" },
+          "progress": 10,
+            "metagame_task_info": {
+              "event_name": "item_linked",
+              "event_attrs": {
+                "linked_item": "test_item"
+              },
+              "value_from_key": "",
+              "type": "gauge"
+            }
+        }
+    ],
+   "rewards": [
+      {
+         "reward_type": "currency",
+         "name": "soft",
+         "amount": 1000
+      }
+   ]
+}

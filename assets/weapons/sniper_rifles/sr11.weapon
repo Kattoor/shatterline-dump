@@ -1,0 +1,167 @@
+{
+    "movement": {
+        "sprint_speed_multiplier": 0.92,
+        "zoom_speed_multiplier": 0.3,
+        "walk_speed_multiplier": 0.8,
+        "crouch_speed_multiplier": 1.0
+    },
+    "sounds": {
+        "sets": [
+            {
+                "tag": "default",
+                "triggers": {
+                    "fire_start": "sr11_fire"
+                }
+            }
+        ],
+        "tag": "default"
+    },
+    "hip_crosshair": true,
+    "selection": {
+        "nearest_camera_offset": {
+            "x": 0.0,
+            "y": -0.005,
+            "z": 0.018
+        },
+        "quick_selection_duration": 0.0,
+        "deselection_duration": 0.25,
+        "selection_duration": 0.9,
+        "nearest_camera_rotation": {
+            "pitch": 1.0,
+            "roll": -5.0,
+            "yaw": 0.0
+        },
+        "nearest_view_fov": 55.0
+    },
+    "fp_mass_effect_hip": 2.5,
+    "spread": {
+        "max_hip_spread": 8.0,
+        "decay_time": 1.5,
+        "slide_multiplier": 2.0,
+        "zoom_multiplier": 0.0,
+        "crouch_multiplier": 0.87,
+        "hip_step": 4.35,
+        "crouch_idle_multiplier": 0.72,
+        "min_hip_spread": 4.3,
+        "decay_delay": 0.1,
+        "stand_multiplier": 1.0,
+        "walk_multiplier": 1.8,
+        "jump_multiplier": 2.2
+    },
+    "zoom": {
+        "weapon_offset": {
+            "x": 0.0,
+            "y": -0.045,
+            "z": -0.0135
+        },
+        "delay_after_jump": 0.75,
+        "scope_max_transp": 0.3,
+        "weapon_fov": 19.5,
+        "scope_aiming_treshold": 0.65,
+        "zoom_out_time": 0.25,
+        "scope_fake_shadow_radius": 0.44,
+        "scope_fake_shadow_interpolation_pow": 10.0,
+        "scope_aiming_out_treshold": 0.8,
+        "scope_aiming_out_progress_mult": 3.0,
+        "scope_aiming_progress_mult": 3.0,
+        "scope_grid_shot_max_scale": 1.1,
+        "scope_grid": "objects/weaponry/attachments/ss/ss01/textures/ss01_grid.tif",
+        "scope_reflection_radius": 0.42,
+        "scope_grid_intensity": 1.7,
+        "hide_crosshair": true,
+        "zoom_fov": 8.0,
+        "zoom_in_time": 0.32,
+        "scope_grid_default_scale": 1.0,
+        "blur_amount": 0.0,
+        "scope_reflection_interpolation_pow": 2.0,
+        "scope_grid_scale_lerp_time": 0.3,
+        "scope_aiming_offset_forward": 0.04,
+        "sniper_scope": false,
+        "in_air": false
+    },
+    "common": {
+        "item_tag": "SR"
+    },
+    "muzzle_sight_distance": 0.4,
+    "fp_mass_effect_zoom": 3.0,
+    "shooting": {
+        "sprint_to_shoot_time": 0.19,
+        "base_damage_distribution": {
+            "points": [
+                {
+                    "distance": 50.0,
+                    "damage": 325.0
+                }
+            ]
+        },
+        "low_damage_distribution": {
+            "points": [
+                {
+                    "distance": 10.0,
+                    "damage": 140.0
+                },
+                {
+                    "distance": 20.0,
+                    "damage": 110.0
+                }
+            ]
+        },
+        "backpack_capacity": 48,
+        "chamber_capacity": 1,
+        "pierceability": {
+            "max_objects": 1,
+            "multi_part": false,
+            "pierceability_level": 3,
+            "damage_drop": 0.25,
+            "type": "static"
+        },
+        "head_damage_distribution": {
+            "points": [
+                {
+                    "distance": 50.0,
+                    "damage": 1050.0
+                },
+                {
+                    "distance": 55.0,
+                    "damage": 800.0
+                }
+            ]
+        },
+        "chambers_fired_per_shot": 1,
+        "reload": {
+            "reload_chamber_time": 1.05,
+            "reload_time": 3.0,
+            "reload_out_complete_threshold": 0.5,
+            "reload_in_complete_threshold": 0.5
+        },
+        "hit_feedback": "server",
+        "rpm": 110.0,
+        "auto_reload_mode": "Chamber",
+        "bullet_type": "Sniper",
+        "clip_capacity": 5
+    },
+    "recoil": {
+        "kick_time": 0.4,
+        "decay_time": 0.16,
+        "max_vertical_angle": 45.0,
+        "decay_delay": 0.03,
+        "recoil_points": [
+            {
+                "num": 1,
+                "force": {
+                    "min": 2.5,
+                    "max": 2.5
+                },
+                "angle": {
+                    "min": 10.0,
+                    "max": 50.0
+                }
+            }
+        ]
+    },
+    "crosshair_skin": 12.0,
+    "tick_event": {
+        "interval": 20.0,
+        "tick_only_when_selected": true
+    }
+}

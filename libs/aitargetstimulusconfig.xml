@@ -1,0 +1,20 @@
+<AITargetStimulusConfig version="1">
+    <Config name="Default">
+        <Stimuli>
+            <Stimulus name="VisualPrimary" attack = "0" hostileOnly = "1" peak = "100.0" sustain = "1.0" release = "10">
+                <Modifiers>
+                    <Distance value = "1" limit="100" />
+                </Modifiers>
+                <Pulses>
+                    <Pulse name = "LockTarget" value = "20" duration = "7"/>
+                </Pulses>
+                <ReleaseThreatLevels>
+                    <Aggressive ratio = "1"/>
+                    <Threatening ratio = "0.625"/>
+                    <Interesting ratio = "0.25"/>
+                    <Suspect ratio = "0.1" />
+                </ReleaseThreatLevels>
+            </Stimulus>
+        </Stimuli>
+    </Config>
+</AITargetStimulusConfig>

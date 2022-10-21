@@ -1,0 +1,16 @@
+<ParticleLibrary Name="snow" SandboxVersion="1.14.0.0" ParticleVersion="32">
+ <Particles Name="snow.heavy_snow_sheets">
+  <Params Enabled="false" Count="1000" EmitterSizeDiameter="5" LocalSpawnPosRandomOffset="x=48,y=48,z=48" LocalRandomAngles="y=180" LocalStretch="0.01,Random=0.604" Continuous="true" ParticleLifeTime="5" FocusAngle="90" FocusAzimuth="180" EmitAngle="180,Random=1" Texture="textures/sprites/snow/snow_tiled1.tif" TextureTiling="TilesX=2,TilesY=2,VariantCount=4,AnimCurve=(flags=32;t=1,v=1,flags=4)" Alpha="Random=0.574,ParticleAge=(t=0.64,v=1;t=1)" DiffuseBacklighting="1" EmissiveLighting="1" SizeX="0.1,Random=0.851,ParticleAge=(;t=0.27,v=1)" SizeY="0.1,Random=0.851,ParticleAge=(;t=0.27,v=1)" Stretch="0.01,Random=0.604" Speed="2,Random=1" AirResistance="0.33,Random=1" GravityScale="0.455,Random=0.861" Turbulence3DSpeed="0.88" BindEmitterToCamera="true" SpaceLoop="true" RandomAngles="y=180" CameraMaxDistance="4000" CameraMinDistance="12" VisibleIndoors="If_False" VisibleUnderwater="If_False" FillRateCost="2.46"/>
+  <Childs>
+   <Particles Name="light_sheet">
+    <Params Enabled="false" Count="20" EmitterSizeDiameter="5" LocalSpawnPosRandomOffset="x=87,y=87,z=87" LocalRandomAngles="y=90" LocalStretch="0.04,Random=0.604" Continuous="true" ParticleLifeTime="5" FocusAngle="90" FocusAzimuth="180" EmitAngle="Random=1" Texture="textures/sprites/smoke/smoke_white_tiled2.tif" TextureTiling="TilesX=2,TilesY=2,VariantCount=4,AnimCurve=(flags=32;t=1,v=1,flags=4)" SoftParticle="true" Alpha="0.2,Random=0.228,ParticleAge=(;t=0.506,v=1;t=1)" DiffuseBacklighting="0.2" EmissiveLighting="0.2" SizeX="50,Random=0.473,ParticleAge=(v=0.27;t=1,v=1)" SizeY="50,Random=0.473,ParticleAge=(v=0.27;t=1,v=1)" Stretch="0.04,Random=0.604" Speed="Random=1" AirResistance="200,Random=1" GravityScale="Random=0.861" BindEmitterToCamera="true" SpaceLoop="true" RandomAngles="y=90" CameraMaxDistance="4000" CameraMinDistance="8" VisibleIndoors="If_False" VisibleUnderwater="If_False" FillRateCost="4" ConfigMin="Medium"/>
+   </Particles>
+   <Particles Name="close_blur">
+    <Params Enabled="false" Count="500" EmitterSizeDiameter="5" LocalSpawnPosRandomOffset="x=24,y=24,z=24" LocalRandomAngles="y=180" LocalStretch="0.01,Random=0.604" Continuous="true" ParticleLifeTime="5" FocusAngle="90" FocusAzimuth="180" EmitAngle="180,Random=1" OrientToVelocity="true" Texture="textures/sprites/snow/snow_tiled1_motion.tif" TextureTiling="TilesX=2,TilesY=2,VariantCount=4,AnimCurve=(flags=32;t=1,v=1,flags=4)" Alpha="0.75,Random=0.574,ParticleAge=(t=0.64,v=1;t=1)" DiffuseBacklighting="1" EmissiveLighting="1" SizeX="0.1,Random=0.851,ParticleAge=(;t=0.27,v=1)" SizeY="0.1,Random=0.851,ParticleAge=(;t=0.27,v=1)" Stretch="0.01,Random=0.604" Speed="2,Random=1" AirResistance="2.4,Random=1" GravityScale="0.317,Random=0.861" Turbulence3DSpeed="1.93" BindEmitterToCamera="true" SpaceLoop="true" RandomAngles="y=180" CameraMaxDistance="4000" CameraMinDistance="1" VisibleIndoors="If_False" VisibleUnderwater="If_False" FillRateCost="2.46" ConfigMin="Medium"/>
+   </Particles>
+  </Childs>
+ </Particles>
+ <Folder Name="snow">
+  <Params />
+ </Folder>
+</ParticleLibrary>

@@ -1,0 +1,72 @@
+<FXLib>
+
+  	<Effect name="impact_wooden_piece" delay="0.0" >
+        <Audio trigger="cardboard_box"></Audio>
+		<Particle>
+			<Name minscale="0.9" maxscale="1.2" maxscaledist="40">collisions.footsteps.sand_a</Name>
+		</Particle>
+		<RandEffect>
+			<Decal minscale="0.15" maxscale="0.15" lifetime="1">
+				<Material>materials/decals/footsteps/footstep_sand_c</Material>
+			</Decal>
+		</RandEffect>
+	</Effect>
+ 
+  	<Effect name="impact_metal_heavy" delay="0.0" >
+        <Audio trigger="movable_box_met_impact"></Audio>
+		<Particle>
+			<Name>collisions.small.metal_concrete</Name>
+		</Particle>
+	</Effect>
+ 
+	<Effect name="body_shatter">
+		<!-- <Audio trigger=""> -->
+		<!-- </Audio> -->
+	</Effect>
+
+	<Effect name="glass_shatter">
+		<!-- <Audio trigger=""> -->
+		<!-- </Audio> -->
+	</Effect>
+
+	<Effect name="tree_falling">
+		<!-- <Audio trigger=""> -->
+		<!-- </Audio> -->
+	</Effect>
+
+	<Effect name="vehicle_shatter">
+		<!-- <Audio trigger=""> -->
+		<!-- </Audio> -->
+	</Effect>
+
+	<Effect name="vehicle_window">
+		<!-- <Audio trigger=""> -->
+		<!-- </Audio> -->
+	</Effect>
+
+	<Effect name="wood_shatter">
+		<!-- <Audio trigger=""> -->
+		<!-- </Audio> -->
+	</Effect>
+
+	<Effect name="metal_shatter">
+		<!-- <Audio trigger=""> -->
+		<!-- </Audio> -->
+	</Effect>
+
+	<Effect name="stone_shatter">
+		<!-- <Audio trigger=""> -->
+		<!-- </Audio> -->
+	</Effect>
+
+	<Effect name="ice_shatter">
+		<!-- <Audio trigger=""> -->
+		<!-- </Audio> -->
+	</Effect>
+
+	<Effect name="flesh_shatter">
+		<!-- <Audio trigger=""> -->
+		<!-- </Audio> -->
+	</Effect>
+
+</FXLib>

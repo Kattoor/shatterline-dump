@@ -1,0 +1,606 @@
+{
+    "name": "Minotaur/Engage",
+    "root": "3d17b23d-55b5-47c6-83f9-6de8d66f885b",
+    "nodes": {
+        "6bbcafb3-b700-4350-b55d-bd997b7cbc11": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -1195,
+                "y": 359
+            },
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "NeedThrowGrenade"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Boolean"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "dd48dc23-3d0a-40ab-9b71-bb888b46075f": {
+            "name": "StartFire",
+            "pos": {
+                "x": 75,
+                "y": 889
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "575a8689-51af-4e95-9ab2-d8d692fb39db": {
+            "name": "Selector",
+            "pos": {
+                "x": 430,
+                "y": 335
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "240c8060-2163-436c-b308-dd7480b8692b"
+            ]
+        },
+        "7577d169-a34d-4e79-a93b-4a5e8698d783": {
+            "name": "SetBBValueByPath",
+            "pos": {
+                "x": -1640,
+                "y": 673
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "BB Path",
+                    "type": "StringHash",
+                    "value": "NeedToTraceInit"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "312be6df-7a43-4f76-a0ca-12de594b9e49": {
+            "name": "CallSubtree",
+            "pos": {
+                "x": 250,
+                "y": 889
+            },
+            "inputs": [
+                {
+                    "name": "Label",
+                    "type": "StringHash",
+                    "value": "FireInOpenspace"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "ac393709-dd5b-439f-9c9a-0da780e8d0dd"
+        },
+        "ac393709-dd5b-439f-9c9a-0da780e8d0dd": {
+            "name": "Success",
+            "pos": {
+                "x": 250,
+                "y": 1010
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "d8f6c586-68d5-4b82-9370-34116712822e": {
+            "name": "Add",
+            "pos": {
+                "x": -950,
+                "y": 671
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "InputA",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Pos"
+                    ]
+                },
+                {
+                    "name": "InputB",
+                    "type": "Variable",
+                    "value": [
+                        "lookOffset"
+                    ]
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Result",
+                    "type": "Variable",
+                    "value": [
+                        "targetPt"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "b7c4e638-4fa9-44ce-a913-7d930380675b": {
+            "name": "Sequence",
+            "pos": {
+                "x": -1440,
+                "y": 544
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "7577d169-a34d-4e79-a93b-4a5e8698d783",
+                "1ccb2c66-3bbd-46a3-b51c-bbcc1b111f8a",
+                "9e99a09a-11c5-4023-b4b1-b92ed1067969",
+                "d8f6c586-68d5-4b82-9370-34116712822e",
+                "11f6c9eb-5157-4829-966d-9a655a6a280f"
+            ]
+        },
+        "c83e269b-5b28-4b22-b448-df4bbea1d3ef": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -160,
+                "y": 734
+            },
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "NeedThrowGrenade"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "9e99a09a-11c5-4023-b4b1-b92ed1067969": {
+            "name": "Multiply",
+            "pos": {
+                "x": -1190,
+                "y": 669
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "InputA",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "CharacterProperties",
+                        "BodyDirection"
+                    ]
+                },
+                {
+                    "name": "InputB",
+                    "type": "Integer",
+                    "value": "5"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Result",
+                    "type": "Variable",
+                    "value": [
+                        "lookOffset"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "1ccb2c66-3bbd-46a3-b51c-bbcc1b111f8a": {
+            "name": "SetBBValueByPath",
+            "pos": {
+                "x": -1440,
+                "y": 672
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "BB Path",
+                    "type": "StringHash",
+                    "value": "NeedToTrace"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "9d0451f0-febf-41d8-afdd-e66db189bdab": {
+            "name": "Sequence",
+            "pos": {
+                "x": 155,
+                "y": 776
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "dd48dc23-3d0a-40ab-9b71-bb888b46075f",
+                "312be6df-7a43-4f76-a0ca-12de594b9e49"
+            ]
+        },
+        "73bc38ce-ff2a-454f-a3ac-e41b76919938": {
+            "name": "ThrowGrenade",
+            "pos": {
+                "x": 430,
+                "y": 671
+            },
+            "inputs": [
+                {
+                    "name": "ItemTag",
+                    "type": "StringHash",
+                    "value": "FG"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "6ee3f106-417b-4ed9-9be0-ca2c51ac699b": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -775,
+                "y": 363
+            },
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "NeedLaunch"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Boolean"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "846d24e0-103e-47b4-bc27-95ce6c8cc084": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -430,
+                "y": 364
+            },
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ProjectilePoint"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Position"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "96fe7625-eaa3-40cf-8916-3bfd2397eb36": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -615,
+                "y": 360
+            },
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "NeedLaunch"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "605eeeb0-fc60-4c71-9d82-c009a9194f7b": {
+            "name": "EraseBBValueByPathOnExit",
+            "pos": {
+                "x": 155,
+                "y": 662
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "BB Path",
+                    "type": "StringHash",
+                    "value": "Entity.TracePosition"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "9d0451f0-febf-41d8-afdd-e66db189bdab"
+        },
+        "1804f386-7dc0-46af-aaa0-d96740116fbe": {
+            "name": "StopFireOnExit",
+            "pos": {
+                "x": 155,
+                "y": 569
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "605eeeb0-fc60-4c71-9d82-c009a9194f7b"
+        },
+        "349a5992-3ca2-49de-ac49-49243af325b2": {
+            "name": "Sequence",
+            "pos": {
+                "x": -20,
+                "y": 238
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "2843add7-8c91-495b-b9a6-19bd929346aa",
+                "6bbcafb3-b700-4350-b55d-bd997b7cbc11",
+                "f180c906-5edb-45cf-ae19-d8ba637ae38c",
+                "6ee3f106-417b-4ed9-9be0-ca2c51ac699b",
+                "96fe7625-eaa3-40cf-8916-3bfd2397eb36",
+                "846d24e0-103e-47b4-bc27-95ce6c8cc084",
+                "4e72224c-b5a1-4d3c-91f8-f48451449bed",
+                "d3f1bed3-ead3-463e-9e07-e0a50bcf3549",
+                "575a8689-51af-4e95-9ab2-d8d692fb39db"
+            ]
+        },
+        "7d5f869d-7436-4de9-b033-48fde9e537a5": {
+            "name": "CanThrowExplosiveGrenadeToTarget",
+            "pos": {
+                "x": -160,
+                "y": 577
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "c83e269b-5b28-4b22-b448-df4bbea1d3ef"
+        },
+        "f180c906-5edb-45cf-ae19-d8ba637ae38c": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -975,
+                "y": 361
+            },
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "NeedThrowGrenade"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "240c8060-2163-436c-b308-dd7480b8692b": {
+            "name": "Equals",
+            "pos": {
+                "x": 430,
+                "y": 492
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Lhs",
+                    "type": "Variable",
+                    "value": [
+                        "NeedThrowGrenade"
+                    ]
+                },
+                {
+                    "name": "Rhs",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "73bc38ce-ff2a-454f-a3ac-e41b76919938"
+        },
+        "4e72224c-b5a1-4d3c-91f8-f48451449bed": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -255,
+                "y": 363
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ProjectilePoint"
+                },
+                {
+                    "name": "Value",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Pos"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "3d17b23d-55b5-47c6-83f9-6de8d66f885b": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": -15,
+                "y": 85
+            },
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Engage"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "349a5992-3ca2-49de-ac49-49243af325b2"
+        },
+        "d3f1bed3-ead3-463e-9e07-e0a50bcf3549": {
+            "name": "ParallelUntilAnyComplete",
+            "pos": {
+                "x": 15,
+                "y": 457
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "7d5f869d-7436-4de9-b033-48fde9e537a5",
+                "1804f386-7dc0-46af-aaa0-d96740116fbe"
+            ]
+        },
+        "2843add7-8c91-495b-b9a6-19bd929346aa": {
+            "name": "IsBBValueExist",
+            "pos": {
+                "x": -1440,
+                "y": 345
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ValuePath",
+                    "type": "StringHash",
+                    "value": "NeedToTraceInit"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "b7c4e638-4fa9-44ce-a913-7d930380675b"
+        },
+        "11f6c9eb-5157-4829-966d-9a655a6a280f": {
+            "name": "SetBBValueByPath",
+            "pos": {
+                "x": -775,
+                "y": 671
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "BB Path",
+                    "type": "StringHash",
+                    "value": "Entity.TracePosition"
+                },
+                {
+                    "name": "Value",
+                    "type": "Variable",
+                    "value": [
+                        "targetPt"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [
+        {
+            "id": "40d3e018-2274-4d70-bc87-b8b0ec79bdb0",
+            "pos": {
+                "x": -100,
+                "y": -50
+            },
+            "extent": {
+                "x": 200,
+                "y": 200
+            },
+            "text": "",
+            "color": "rgba(150, 250, 150, 0.4)",
+            "collapseLevel": null
+        }
+    ],
+    "commentOrder": [
+        "40d3e018-2274-4d70-bc87-b8b0ec79bdb0"
+    ]
+}

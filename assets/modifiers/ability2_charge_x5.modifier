@@ -1,0 +1,23 @@
+{
+    "name": "ability2_charge_x5",
+    "duration": 2,
+    "effects": [
+        {
+            "power_item_charge_speed":
+            {
+                "multipliers": [
+                    { "slot": "grenade", "index": 2, "multiplier": 20.0 }
+                ]
+            }
+        },
+        { 
+            "spawn_personal_slice":
+            {
+                "slice_name": "slices/ai/feedback/ability_charge_fp_feedback.dynamicslice",
+                "position": [0, 0, 0],
+                "attach_to_fp": true,
+                "attach_to_tp": false
+            }
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+  "name": "scheduled_pvp_010",
+  "type": "scheduled",
+  "tags": [
+    "pve",
+    "pvp",
+    "operative"
+  ],
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "common",
+  "display_name": { "localization_key": "@scheduled_pvp_010_name" },
+  "description": { "localization_key": "@scheduled_pvp_010_description" },
+  "conditions": [
+    {
+      "name": "scheduled_pvp_010",
+      "event_description": { "localization_key": "@scheduled_pvp_010_event_description" },
+      "event": { "event_id": "MedalAchieved", "actor_is_me": true, "game_type_is": ["pvp"]},
+      "progress": 125
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 1000
+    },
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 2000
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 15
+    }
+  ]
+}

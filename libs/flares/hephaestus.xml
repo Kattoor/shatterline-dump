@@ -1,0 +1,386 @@
+<LensFlareLibrary Name="hephaestus">
+ <FlareItem Name="hephaestus.hephaestus_tower_lamp" Type="Root" Enable="1" Id="{67C16E29-99B1-460C-AE5A-98C53406F84D}" Library="hephaestus">
+  <Params>
+   <Common Size="1" Perspectivefactor="1" DistanceFadingfactor="1" Brightness="1" Position="1,1" Tint="1,1,1" Tint.alpha="51" Orbitangle="0" OcclusionInteraction="0" AutoRotation="1" CorrectAspectRatio="1"/>
+   <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+   <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+   <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+   <GlobalSettings EnableOcclusion="1" OcclusionSize="0.02,0.02" Flarefadetime="0.2" Shaftfadetime="1" Affectedbylightcolor="0" Affectedbylightradius="0" AffectedbylightFOV="1" MultiplyColor="1"/>
+   <Sensor CustomSensorVariationMap="0" EffectiveSensorSize="0.8"/>
+  </Params>
+  <FlareItem Name="hephaestus_tower_lamp.glow" Type="Glow" Enable="1">
+   <Params>
+    <Common Size="0.4" Perspectivefactor="0.3" DistanceFadingfactor="0.15" Brightness="1" Position="1,1" Tint="1,1,1" Tint.alpha="101" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="0"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="0.9,1.2" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Glow Polygonfactor="32" Focusfactor="0" Gamma="1"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="hephaestus_tower_lamp.glow0" Type="Glow" Enable="1">
+   <Params>
+    <Common Size="0.2" Perspectivefactor="0.3" DistanceFadingfactor="0.15" Brightness="1" Position="1,1" Tint="1,1,1" Tint.alpha="100" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="0"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="0.9,1.5" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Glow Polygonfactor="32" Focusfactor="0.34" Gamma="1"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="hephaestus_tower_lamp.iris shafts" Type="IrisShafts" Enable="1">
+   <Params>
+    <Common Size="2" Perspectivefactor="0.9" DistanceFadingfactor="0.1" Brightness="0.1" Position="1,1" Tint="0.571125,0.775822,1" Tint.alpha="255" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <IrisShafts Enablegradienttex="0" BaseTex="textures/lights/lens_flares/iris_shaft_b.dds" GradientTex="" Noiseseed="52" Complexity="32" Smoothness="2" Thickness="0.3" Thicknessnoise="0" Spread="0.2" Spreadnoise="0" Sizenoise="0.8" Spacingnoise="0.2"/>
+   </Params>
+  </FlareItem>
+ </FlareItem>
+ <FlareItem Name="hephaestus.hephaestus_platform_gate" Type="Root" Enable="1" Id="{A63E0C64-1407-4D18-B193-9B6CC80E3D38}" Library="hephaestus">
+  <Params>
+   <Common Size="1" Perspectivefactor="1" DistanceFadingfactor="1" Brightness="1" Position="1,1" Tint="1,1,1" Tint.alpha="51" Orbitangle="0" OcclusionInteraction="0" AutoRotation="1" CorrectAspectRatio="1"/>
+   <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+   <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+   <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+   <GlobalSettings EnableOcclusion="1" OcclusionSize="0.02,0.02" Flarefadetime="0.2" Shaftfadetime="1" Affectedbylightcolor="0" Affectedbylightradius="0" AffectedbylightFOV="1" MultiplyColor="1"/>
+   <Sensor CustomSensorVariationMap="0" EffectiveSensorSize="0.8"/>
+  </Params>
+  <FlareItem Name="hephaestus_platform_gate.streaks" Type="Streaks" Enable="1">
+   <Params>
+    <Common Size="0.8" Perspectivefactor="0" DistanceFadingfactor="0.15" Brightness="0.13" Position="1,1" Tint="0.107023,0.168269,1" Tint.alpha="100" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="5,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="1" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Streaks Enablegradienttex="0" GradientTex="" Noiseseed="2" Streakcount="1" Thickness="0.3" Thicknessnoise="0.6" Sizenoise="0.8" Spacingnoise="0.2"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="hephaestus_platform_gate.streaks1" Type="Streaks" Enable="0">
+   <Params>
+    <Common Size="0.5" Perspectivefactor="0" DistanceFadingfactor="0.15" Brightness="0.02" Position="1,1" Tint="0.610496,0.708376,1" Tint.alpha="100" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="3,1" Translation="0,0" Rotation="0.25"/>
+    <Dynamics Enable="0" TriggerInvert="1" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Streaks Enablegradienttex="0" GradientTex="" Noiseseed="2" Streakcount="1" Thickness="0.3" Thicknessnoise="0.6" Sizenoise="0.8" Spacingnoise="0.2"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="hephaestus_platform_gate.glow" Type="Glow" Enable="1">
+   <Params>
+    <Common Size="0.2" Perspectivefactor="0" DistanceFadingfactor="0.15" Brightness="0.5" Position="1,1" Tint="0.617207,0.775822,1" Tint.alpha="255" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Glow Polygonfactor="16" Focusfactor="0.2" Gamma="1"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="hephaestus_platform_gate.streaks0" Type="Streaks" Enable="1">
+   <Params>
+    <Common Size="0.12" Perspectivefactor="0" DistanceFadingfactor="0.15" Brightness="0.3" Position="1,1" Tint="0.658375,0.83077,1" Tint.alpha="80" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0.24"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Streaks Enablegradienttex="0" GradientTex="" Noiseseed="7" Streakcount="10" Thickness="0.39" Thicknessnoise="0.6" Sizenoise="0.8" Spacingnoise="0.2"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="hephaestus_platform_gate.orbs" Type="CameraOrbs" Enable="1">
+   <Params>
+    <Common Size="0.13" Perspectivefactor="0.5" DistanceFadingfactor="0.3" Brightness="0.7" Position="1,1" Tint="0.610496,0.854993,1" Tint.alpha="255" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="2.05,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <CameraOrbs Illumrange="1" OrbTexture="textures/lights/lens_flares/orb_cell04.dds" LensTexture="EngineAssets/Textures/flares/lens_dirtyglass.dds" Enablelenstexture="0" Enablelensdetailshading="0" Lenstexturestrength="1" Lensdetailshadingstrength="0.157" Lensdetailbumpiness="0.073" Enableorbdetailshading="0"/>
+    <Generator Numberoforbs="10" Noiseseed="0" Colorvariation="0.2" Sizevariation="0.5" Rotationvariation="0.8"/>
+    <AdvancedShading Enableadvshading="0" AmbientDiffuse="0,0,0" AmbientDiffuse.alpha="0" Absorptance="4" Transparency="0.37" Scattering="1"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="hephaestus_platform_gate.orbs0" Type="CameraOrbs" Enable="1">
+   <Params>
+    <Common Size="0.15" Perspectivefactor="0.5" DistanceFadingfactor="0.3" Brightness="0.5" Position="1,1" Tint="0.610496,0.854993,1" Tint.alpha="255" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="2.05,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <CameraOrbs Illumrange="1" OrbTexture="textures/lights/lens_flares/lens_dirtyglass.dds" LensTexture="EngineAssets/Textures/flares/lens_dirtyglass.dds" Enablelenstexture="1" Enablelensdetailshading="0" Lenstexturestrength="1" Lensdetailshadingstrength="0.157" Lensdetailbumpiness="0.073" Enableorbdetailshading="0"/>
+    <Generator Numberoforbs="10" Noiseseed="1" Colorvariation="0.2" Sizevariation="0.5" Rotationvariation="0.8"/>
+    <AdvancedShading Enableadvshading="0" AmbientDiffuse="0,0,0" AmbientDiffuse.alpha="0" Absorptance="4" Transparency="0.37" Scattering="1"/>
+   </Params>
+  </FlareItem>
+ </FlareItem>
+ <FlareItem Name="hephaestus.hephaestus_platform_gate_red" Type="Root" Enable="1" Id="{FE447E3B-F28C-4077-9181-275510074892}" Library="hephaestus">
+  <Params>
+   <Common Size="1" Perspectivefactor="1" DistanceFadingfactor="1" Brightness="1" Position="1,1" Tint="1,1,1" Tint.alpha="51" Orbitangle="0" OcclusionInteraction="0" AutoRotation="1" CorrectAspectRatio="1"/>
+   <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+   <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+   <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+   <GlobalSettings EnableOcclusion="1" OcclusionSize="0.02,0.02" Flarefadetime="0.2" Shaftfadetime="1" Affectedbylightcolor="0" Affectedbylightradius="0" AffectedbylightFOV="1" MultiplyColor="1"/>
+   <Sensor CustomSensorVariationMap="0" EffectiveSensorSize="0.8"/>
+  </Params>
+  <FlareItem Name="hephaestus_platform_gate_red.ghost" Type="Ghost" Enable="1">
+   <Params>
+    <Common Size="0.1" Perspectivefactor="0" DistanceFadingfactor="0.05" Brightness="0.75" Position="1,1" Tint="1,1,1" Tint.alpha="51" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <LensGhost Texture="EngineAssets/Textures/flares/ghost_grey.dds"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="hephaestus_platform_gate_red.iris shaft" Type="IrisShafts" Enable="1">
+   <Params>
+    <Common Size="0.3" Perspectivefactor="0.5" DistanceFadingfactor="0.05" Brightness="0.6" Position="1,1" Tint="1,0.930111,0.679543" Tint.alpha="255" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <IrisShafts Enablegradienttex="0" BaseTex="textures/lights/lens_flares/iris_shaft_b.dds" GradientTex="" Noiseseed="81" Complexity="36" Smoothness="2" Thickness="0.3" Thicknessnoise="0" Spread="0.2" Spreadnoise="0" Sizenoise="0.8" Spacingnoise="0.2"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="hephaestus_platform_gate_red.streaks" Type="Streaks" Enable="1">
+   <Params>
+    <Common Size="0.3" Perspectivefactor="0" DistanceFadingfactor="0.06" Brightness="0.7" Position="1,1" Tint="1,0.791298,0.401978" Tint.alpha="100" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="5,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="1" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Streaks Enablegradienttex="0" GradientTex="" Noiseseed="2" Streakcount="1" Thickness="0.3" Thicknessnoise="0.6" Sizenoise="0.8" Spacingnoise="0.2"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="hephaestus_platform_gate_red.streaks0" Type="Streaks" Enable="1">
+   <Params>
+    <Common Size="0.1" Perspectivefactor="0" DistanceFadingfactor="0.06" Brightness="0.7" Position="1,1" Tint="1,0.791298,0.401978" Tint.alpha="100" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="5,1" Translation="0.05,0.02" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="1" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Streaks Enablegradienttex="0" GradientTex="" Noiseseed="2" Streakcount="1" Thickness="0.3" Thicknessnoise="0.6" Sizenoise="0.8" Spacingnoise="0.2"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="hephaestus_platform_gate_red.streaks_angled" Type="Streaks" Enable="1">
+   <Params>
+    <Common Size="0.2" Perspectivefactor="0" DistanceFadingfactor="0.06" Brightness="0.6" Position="1,1" Tint="1,0.693872,0.191202" Tint.alpha="100" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0.7"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Streaks Enablegradienttex="0" GradientTex="" Noiseseed="255" Streakcount="2" Thickness="0.1" Thicknessnoise="0.24" Sizenoise="0.8" Spacingnoise="0.47"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="hephaestus_platform_gate_red.orbs" Type="CameraOrbs" Enable="1">
+   <Params>
+    <Common Size="0.13" Perspectivefactor="0.5" DistanceFadingfactor="0.05" Brightness="0.7" Position="1,1" Tint="1,0.401978,0" Tint.alpha="255" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="2.05,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <CameraOrbs Illumrange="1" OrbTexture="textures/lights/lens_flares/orb_cell04.dds" LensTexture="EngineAssets/Textures/flares/lens_dirtyglass.dds" Enablelenstexture="0" Enablelensdetailshading="0" Lenstexturestrength="1" Lensdetailshadingstrength="0.157" Lensdetailbumpiness="0.073" Enableorbdetailshading="0"/>
+    <Generator Numberoforbs="10" Noiseseed="0" Colorvariation="0.2" Sizevariation="0.5" Rotationvariation="0.8"/>
+    <AdvancedShading Enableadvshading="0" AmbientDiffuse="0,0,0" AmbientDiffuse.alpha="0" Absorptance="4" Transparency="0.37" Scattering="1"/>
+   </Params>
+  </FlareItem>
+ </FlareItem>
+ <FlareItem Name="hephaestus.hephaestus_red" Type="Root" Enable="1" Id="{AE39F55F-6D71-455B-9C0B-967CC1253AA4}" Library="hephaestus">
+  <Params>
+   <Common Size="1" Perspectivefactor="1" DistanceFadingfactor="1" Brightness="1" Position="1,1" Tint="1,1,1" Tint.alpha="51" Orbitangle="0" OcclusionInteraction="0" AutoRotation="1" CorrectAspectRatio="1"/>
+   <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+   <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+   <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+   <GlobalSettings EnableOcclusion="1" OcclusionSize="0.02,0.02" Flarefadetime="0.2" Shaftfadetime="1" Affectedbylightcolor="0" Affectedbylightradius="0" AffectedbylightFOV="1" MultiplyColor="1"/>
+   <Sensor CustomSensorVariationMap="0" EffectiveSensorSize="0.8"/>
+  </Params>
+  <FlareItem Name="hephaestus_red.ghost" Type="Ghost" Enable="1">
+   <Params>
+    <Common Size="0.1" Perspectivefactor="0" DistanceFadingfactor="0.05" Brightness="0.75" Position="1,1" Tint="1,0.0998987,0" Tint.alpha="51" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <LensGhost Texture="EngineAssets/Textures/flares/ghost_grey.dds"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="hephaestus_red.iris shaft" Type="IrisShafts" Enable="1">
+   <Params>
+    <Common Size="0.3" Perspectivefactor="0.5" DistanceFadingfactor="0.05" Brightness="0.6" Position="1,1" Tint="1,0.0722719,0" Tint.alpha="255" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <IrisShafts Enablegradienttex="0" BaseTex="textures/lights/lens_flares/iris_shaft_b.dds" GradientTex="" Noiseseed="81" Complexity="36" Smoothness="2" Thickness="0.3" Thicknessnoise="0" Spread="0.2" Spreadnoise="0" Sizenoise="0.8" Spacingnoise="0.2"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="hephaestus_red.streaks" Type="Streaks" Enable="1">
+   <Params>
+    <Common Size="0.3" Perspectivefactor="0" DistanceFadingfactor="0.06" Brightness="0.7" Position="1,1" Tint="1,0.0331048,0" Tint.alpha="100" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="5,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="1" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Streaks Enablegradienttex="0" GradientTex="" Noiseseed="2" Streakcount="1" Thickness="0.3" Thicknessnoise="0.6" Sizenoise="0.8" Spacingnoise="0.2"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="hephaestus_red.streaks_angled" Type="Streaks" Enable="1">
+   <Params>
+    <Common Size="0.2" Perspectivefactor="0" DistanceFadingfactor="0.06" Brightness="0.6" Position="1,1" Tint="1,0.219526,0.00604883" Tint.alpha="100" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0.7"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Streaks Enablegradienttex="0" GradientTex="" Noiseseed="255" Streakcount="2" Thickness="0.1" Thicknessnoise="0.24" Sizenoise="0.8" Spacingnoise="0.47"/>
+   </Params>
+  </FlareItem>
+ </FlareItem>
+ <FlareItem Name="hephaestus.hephaestus_vehicle_head" Type="Root" Enable="1" Id="{BA1460A2-874F-439B-80C9-A92AEB529CDD}" Library="hephaestus">
+  <Params>
+   <Common Size="1" Perspectivefactor="1" DistanceFadingfactor="1" Brightness="1" Position="1,1" Tint="1,1,1" Tint.alpha="51" Orbitangle="0" OcclusionInteraction="0" AutoRotation="1" CorrectAspectRatio="1"/>
+   <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+   <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+   <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+   <GlobalSettings EnableOcclusion="1" OcclusionSize="0.02,0.02" Flarefadetime="0.2" Shaftfadetime="1" Affectedbylightcolor="0" Affectedbylightradius="0" AffectedbylightFOV="1" MultiplyColor="1"/>
+   <Sensor CustomSensorVariationMap="0" EffectiveSensorSize="0.8"/>
+  </Params>
+  <FlareItem Name="hephaestus_vehicle_head.ghost" Type="Ghost" Enable="1">
+   <Params>
+    <Common Size="0.1" Perspectivefactor="0" DistanceFadingfactor="0.12" Brightness="0.75" Position="1,1" Tint="1,1,1" Tint.alpha="51" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <LensGhost Texture="EngineAssets/Textures/flares/ghost_grey.dds"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="hephaestus_vehicle_head.iris shaft" Type="IrisShafts" Enable="1">
+   <Params>
+    <Common Size="0.3" Perspectivefactor="0.5" DistanceFadingfactor="0.12" Brightness="0.6" Position="1,1" Tint="1,0.930111,0.679543" Tint.alpha="255" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <IrisShafts Enablegradienttex="0" BaseTex="textures/lights/lens_flares/iris_shaft_b.dds" GradientTex="" Noiseseed="81" Complexity="36" Smoothness="2" Thickness="0.3" Thicknessnoise="0" Spread="0.2" Spreadnoise="0" Sizenoise="0.8" Spacingnoise="0.2"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="hephaestus_vehicle_head.streaks" Type="Streaks" Enable="1">
+   <Params>
+    <Common Size="0.3" Perspectivefactor="0" DistanceFadingfactor="0.15" Brightness="0.7" Position="1,1" Tint="1,0.791298,0.401978" Tint.alpha="100" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="5,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="1" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Streaks Enablegradienttex="0" GradientTex="" Noiseseed="2" Streakcount="1" Thickness="0.3" Thicknessnoise="0.6" Sizenoise="0.8" Spacingnoise="0.2"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="hephaestus_vehicle_head.streaks0" Type="Streaks" Enable="1">
+   <Params>
+    <Common Size="0.1" Perspectivefactor="0" DistanceFadingfactor="0.15" Brightness="0.7" Position="1,1" Tint="1,0.791298,0.401978" Tint.alpha="100" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="5,1" Translation="0.05,0.02" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="1" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Streaks Enablegradienttex="0" GradientTex="" Noiseseed="2" Streakcount="1" Thickness="0.3" Thicknessnoise="0.6" Sizenoise="0.8" Spacingnoise="0.2"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="hephaestus_vehicle_head.streaks_angled" Type="Streaks" Enable="1">
+   <Params>
+    <Common Size="0.2" Perspectivefactor="0" DistanceFadingfactor="0.15" Brightness="0.6" Position="1,1" Tint="1,0.693872,0.191202" Tint.alpha="100" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0.7"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Streaks Enablegradienttex="0" GradientTex="" Noiseseed="255" Streakcount="2" Thickness="0.1" Thicknessnoise="0.24" Sizenoise="0.8" Spacingnoise="0.47"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="hephaestus_vehicle_head.orbs" Type="CameraOrbs" Enable="1">
+   <Params>
+    <Common Size="0.13" Perspectivefactor="0.5" DistanceFadingfactor="0.12" Brightness="0.7" Position="1,1" Tint="1,0.401978,0" Tint.alpha="255" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="2.05,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <CameraOrbs Illumrange="1" OrbTexture="textures/lights/lens_flares/orb_cell04.dds" LensTexture="EngineAssets/Textures/flares/lens_dirtyglass.dds" Enablelenstexture="0" Enablelensdetailshading="0" Lenstexturestrength="1" Lensdetailshadingstrength="0.157" Lensdetailbumpiness="0.073" Enableorbdetailshading="0"/>
+    <Generator Numberoforbs="10" Noiseseed="0" Colorvariation="0.2" Sizevariation="0.5" Rotationvariation="0.8"/>
+    <AdvancedShading Enableadvshading="0" AmbientDiffuse="0,0,0" AmbientDiffuse.alpha="0" Absorptance="4" Transparency="0.37" Scattering="1"/>
+   </Params>
+  </FlareItem>
+ </FlareItem>
+ <FlareItem Name="hephaestus.hephaestus_crane_lamp" Type="Root" Enable="1" Id="{7F582DE8-2D48-4D50-8B0E-57AD081A46CC}" Library="hephaestus">
+  <Params>
+   <Common Size="1" Perspectivefactor="1" DistanceFadingfactor="1" Brightness="1" Position="1,1" Tint="1,1,1" Tint.alpha="51" Orbitangle="0" OcclusionInteraction="0" AutoRotation="1" CorrectAspectRatio="1"/>
+   <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+   <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+   <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+   <GlobalSettings EnableOcclusion="1" OcclusionSize="0.02,0.02" Flarefadetime="0.2" Shaftfadetime="1" Affectedbylightcolor="0" Affectedbylightradius="0" AffectedbylightFOV="1" MultiplyColor="1"/>
+   <Sensor CustomSensorVariationMap="0" EffectiveSensorSize="0.8"/>
+  </Params>
+  <FlareItem Name="hephaestus_crane_lamp.glow_main" Type="Glow" Enable="1">
+   <Params>
+    <Common Size="0.1" Perspectivefactor="0" DistanceFadingfactor="0.1" Brightness="10" Position="1,1" Tint="1,1,1" Tint.alpha="255" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Glow Polygonfactor="32" Focusfactor="0.09" Gamma="1"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="hephaestus_crane_lamp.glow_small" Type="Glow" Enable="1">
+   <Params>
+    <Common Size="0.05" Perspectivefactor="0" DistanceFadingfactor="0.1" Brightness="10" Position="1,1" Tint="1,1,1" Tint.alpha="255" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Glow Polygonfactor="32" Focusfactor="0.09" Gamma="1"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="hephaestus_crane_lamp.ghost" Type="Ghost" Enable="1">
+   <Params>
+    <Common Size="0.3" Perspectivefactor="0" DistanceFadingfactor="0.11" Brightness="1" Position="1,1" Tint="1,1,1" Tint.alpha="10" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="0"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <LensGhost Texture="textures/lights/lens_flares/ghost_multicolor.dds"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="hephaestus_crane_lamp.streak" Type="Streaks" Enable="1">
+   <Params>
+    <Common Size="0.18" Perspectivefactor="0" DistanceFadingfactor="0.1" Brightness="5" Position="1,1" Tint="0.584079,0.715694,1" Tint.alpha="100" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="5,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="1" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Streaks Enablegradienttex="0" GradientTex="" Noiseseed="2" Streakcount="1" Thickness="0.1" Thicknessnoise="0.01" Sizenoise="0.01" Spacingnoise="0.3"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="hephaestus_crane_lamp.iris shafts" Type="IrisShafts" Enable="1">
+   <Params>
+    <Common Size="0.4" Perspectivefactor="0" DistanceFadingfactor="0.1" Brightness="1" Position="1,1" Tint="1,1,1" Tint.alpha="133" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1.3,1" Translation="0,0" Rotation="0.46"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <IrisShafts Enablegradienttex="0" BaseTex="EngineAssets/Textures/flares/iris_shaft.dds" GradientTex="" Noiseseed="-93" Complexity="32" Smoothness="3" Thickness="0.3" Thicknessnoise="0" Spread="0.2" Spreadnoise="0" Sizenoise="0.4" Spacingnoise="0.2"/>
+   </Params>
+  </FlareItem>
+ </FlareItem>
+ <FlareItem Name="hephaestus.small_projector" Type="Root" Enable="1" Id="{934B182C-C8E0-4325-8AD5-63233F2D32F4}" Library="hephaestus">
+  <Params>
+   <Common Size="1" Perspectivefactor="1" DistanceFadingfactor="0.3" Brightness="1" Position="1,1" Tint="1,1,1" Tint.alpha="51" Orbitangle="0" OcclusionInteraction="0" AutoRotation="1" CorrectAspectRatio="1"/>
+   <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+   <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+   <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+   <GlobalSettings EnableOcclusion="1" OcclusionSize="0.02,0.02" Flarefadetime="0.2" Shaftfadetime="1" Affectedbylightcolor="0" Affectedbylightradius="0" AffectedbylightFOV="1" MultiplyColor="1"/>
+   <Sensor CustomSensorVariationMap="0" EffectiveSensorSize="0.8"/>
+  </Params>
+  <FlareItem Name="small_projector.glow0" Type="Glow" Enable="1">
+   <Params>
+    <Common Size="0.2" Perspectivefactor="0.5" DistanceFadingfactor="1" Brightness="1" Position="1,1" Tint="0.775822,0.913099,0.991102" Tint.alpha="147" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Glow Polygonfactor="32" Focusfactor="0" Gamma="1"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="small_projector.streaks" Type="Streaks" Enable="1">
+   <Params>
+    <Common Size="0.2" Perspectivefactor="0.2" DistanceFadingfactor="1" Brightness="1" Position="1,1" Tint="0.723055,0.846873,0.991102" Tint.alpha="10" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Streaks Enablegradienttex="0" GradientTex="" Noiseseed="-145" Streakcount="3" Thickness="0.272727" Thicknessnoise="0" Sizenoise="0" Spacingnoise="0"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="small_projector.ghost" Type="Ghost" Enable="1">
+   <Params>
+    <Common Size="0.15" Perspectivefactor="0" DistanceFadingfactor="1" Brightness="0.05" Position="1,1" Tint="0.351533,0.391573,1" Tint.alpha="17" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <LensGhost Texture="textures/lights/lens_flares/streak01.dds"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="small_projector.glow" Type="Glow" Enable="1">
+   <Params>
+    <Common Size="0.05" Perspectivefactor="0.6" DistanceFadingfactor="1" Brightness="20" Position="1,1" Tint="1,1,1" Tint.alpha="74" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Glow Polygonfactor="18" Focusfactor="0" Gamma="1"/>
+   </Params>
+  </FlareItem>
+ </FlareItem>
+</LensFlareLibrary>

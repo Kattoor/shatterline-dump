@@ -1,0 +1,167 @@
+{
+  "metagame_info": {
+    "name_token": "@horde_title",
+    "mission": "isl_march_maze_horror",
+    "game_type": "pve",
+    "voice_chat_mode": "team_and_party",
+    "min_players_count": 3,
+    "time_to_join_sec": 24000,
+    "weapon_progression_enable": false,
+    "reconnect_enable": true
+  },
+  "session_info": {
+    "level": "pve/iceland_isl/isl_maze_proto",
+    "mission_modifiers": [
+      "ai_director_horde_proto",
+      "horde_ai_spawn_modifier",
+      "contamination_horde",
+      "ammo_pickup_proto",
+      "pve_pushback",
+      "pick_one_horde",
+      "task_custom_event_sender"
+    ],
+    "game_mode": "pve_horde",
+    "ingame_reequip_enable": false,
+    "hero_change_enable": true
+  },
+  "ui_info": {
+    "background_image": "loading_hordemode",
+    "sound_event": "march_loading"
+  },
+  "reward_info": {
+    "reward_calculators": [
+      {
+        "name": "session_outcome",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "win": 0,
+              "draw": 0,
+              "loss": 0
+            }
+          },
+          {
+            "type": "xp",
+            "values": {
+              "win": 800,
+              "draw": 700,
+              "loss": 600
+            }
+          },
+          {
+            "type": "skill",
+            "values": {
+              "win": 1,
+              "draw": 0,
+              "loss": -1
+            }
+          }
+        ]
+      },
+      {
+        "name": "session_score",
+        "score": "StageScore",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "reward": 500,
+              "max_reward": 5000
+            }
+          },
+          {
+            "type": "currency",
+            "name": "blueprint",
+            "values": {
+              "reward": 1,
+              "max_reward": 8
+            }
+          },
+          {
+            "type": "xp",
+            "values": {
+              "reward": 100,
+              "max_reward": 5000
+            }
+          }
+        ]
+      },
+      {
+        "name": "session_play_time",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "reward": 1,
+              "max_reward": 500
+            }
+          },
+          {
+            "type": "xp",
+            "values": {
+              "reward": 1,
+              "max_reward": 2000
+            }
+          }
+        ]
+      }
+    ],
+    "weapon_score": [
+      {
+        "event": {
+          "event_id": "Kill"
+        },
+        "score": 24
+      },
+      {
+       "event": {
+          "event_id": "WeaponTick"
+        },
+        "score": 12
+      },
+      {
+        "event": {
+          "event_id": "Headshot"
+        },
+        "score": 11
+      }
+    ],
+    "hero_score": [
+      {
+        "event": {
+          "event_id": "Kill"
+        },
+        "score": 50
+      },
+      {
+        "event": {
+          "event_id": "Assist"
+        },
+        "score": 25
+      },
+      {
+        "event": {
+          "event_id": "Heal",
+          "target_team": "Same"
+        },
+        "score": 0.5
+      },
+      {
+        "event": {
+          "event_id": "Resurrect"
+      },
+        "score": 100
+      },
+      {
+        "event": {
+          "event_id": "WeaponTick"
+        },
+        "score": 5
+      }
+    ]
+  }
+}

@@ -1,0 +1,86 @@
+{
+    "events": [
+        {
+            "name": "cybtrail_lobby_brief_00",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_cybtrail_hughes_00"}}
+            ]
+        },
+        {
+            "name": "cybtrail_start",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_cybtrail_hughes_01", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"message_objective": {"message": "@obj_cybtrail_start", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "cybtrail_follow_ball",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_cybtrail_hughes_02", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"message_objective": {"message": "@obj_cybtrail_follow_ball", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "cybtrail_ball_weak",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_cybtrail_hughes_03", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"message_objective": {"message": "@obj_cybtrail_follow_ball", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "cybtrail_ball_gone",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_cybtrail_hughes_04", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"message_objective": {"message": "@obj_cybertrail_reach_convoy", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "cybtrail_defeat_strafers",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_cybtrail_hughes_05", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"message_objective": {"message": "@obj_cybertrail_reach_convoy", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "cybtrail_launch_device",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_cybtrail_hughes_06", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"message_objective": {"message": "@obj_cybtrail_launch_device"}}
+            ]
+        },
+        {
+            "name": "cybtrail_protect_device",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_cybtrail_hughes_07", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"message_objective": {"message": "@obj_cybtrail_protect_device"}}
+            ]
+        },
+        {
+            "name": "cybtrail_scan_anomalies",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_cybtrail_hughes_08", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"message_objective": {"message": "@obj_cybtrail_scan_anomalies"}}
+            ]
+        },
+        {
+            "name": "cybtrail_anomaly_scanned",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_cybtrail_hughes_09", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"message_announcer": {"message": "@obj_cybtrail_scan_anomalies", "timeout": 3}}
+            ]
+        },
+        {
+            "name": "cybtrail_ball_destroyed",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_cybtrail_hughes_10", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}}
+            ]
+        },
+        {
+            "name": "cybtrail_mission_completed",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_cybtrail_hughes_11", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"message_objective": {"message": "@obj_cybtrail_ball_destroyed", "show_in_center": false}}
+            ]
+        }
+    ]
+}

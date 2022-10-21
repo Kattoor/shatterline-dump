@@ -1,0 +1,43 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "a238f3086cc44481a46cdac70626c560",
+    "Name": "ServerStatisticsReporting",
+    "DisplayName": "ServerStatisticsReporting",
+    "Version": "0.1.0",
+    "Summary": "Server statistics reporting components",
+    "Tags": ["Untagged"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        }
+    ],
+    "Dependencies":
+    [
+        {
+            "Uuid": "1b84470a5c68417da323becf125ba847",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "GameSessionStatisticsProtocol"
+        },
+        {
+            "Uuid": "2ebd4481cbf142b89286f28b4c29ace3",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01Interfaces"
+        },
+        {
+            "Uuid": "28502d2aff664e6b8ee01a8dc493a42f",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "StatisticsCore"
+        },
+        {
+            "Uuid": "94748877847b4749a583914e5b2c17ed",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "StatisticsProtocol"
+        },
+        {
+            "Uuid": "fdf835172a854155ac2aecd75989dd99",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "StatisticsReporting"
+        }
+    ]
+}

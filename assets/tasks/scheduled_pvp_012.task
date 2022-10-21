@@ -1,0 +1,42 @@
+{
+  "name": "scheduled_pvp_012",
+  "type": "scheduled",
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "epic",
+  "display_name": { "localization_key": "@scheduled_pvp_012_name" },
+  "description": { "localization_key": "@scheduled_pvp_012_description" },
+  "conditions": [
+    {
+      "name": "scheduled_pvp_012_1",
+      "event_description": { "localization_key": "@scheduled_pvp_012_1_event_description" },
+      "event": { "event_id": "MVP", "actor_is_me": true, "game_mode_is": ["tdm_dynamic_spawn_near_players", "tdm_fast_ult"], "actor_status_is": ["@best_score", "@longest_streak", "@best_kill", "@best_killstreaks", "@best_resurrect", "@best_headshot", 
+      "@best_melee", "@most_ult_kills", "@best_pistolero", "@best_support"]},
+      "progress": 5
+    },
+    {
+      "name": "scheduled_pvp_012_2",
+      "event_description": { "localization_key": "@scheduled_pvp_012_2_event_description" },
+      "event": { "event_id": "MVP", "actor_is_me": true, "game_mode_is": ["esc" ], "actor_status_is": ["@best_score", "@zone_captured_mvp", "@longest_streak", "@best_kill", "@best_killstreaks", 
+      "@best_resurrect", "@best_headshot", "@best_melee", "@most_ult_kills", "@best_pistolero", "@best_support", "@most_ability_kills"]},
+      "progress": 5
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 4000
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 2500
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 30
+    }
+  ]
+}

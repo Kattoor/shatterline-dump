@@ -1,0 +1,22 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "71f233c8118b4c8283e3406b447657ab",
+    "Name": "BackendCommon",
+    "DisplayName": "BackendCommon",
+    "Version": "0.1.0",
+    "Summary": "A short description of my Gem.",
+    "Tags": ["Untagged"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        }
+    ],
+    "Dependencies" : [
+        {
+            "Uuid": "2ebd4481cbf142b89286f28b4c29ace3",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01Interfaces"
+        }
+    ]
+}

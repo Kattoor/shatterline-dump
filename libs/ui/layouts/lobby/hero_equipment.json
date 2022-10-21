@@ -1,0 +1,9 @@
+{
+    "script": "scripts/ui/lobby/hero_equipment.lua",
+    "view_path": "HeroEquipment.html",
+    "children": [
+        { "name": "equipment_panel_container", "type": "Component", "view_path": "wrapper.heroEquipmentContainer" },
+        { "name": "static_hint", "type": "Component", "view_path": "wrapper.staticHint", "file": "common/static_hint.json" },
+        { "name": "rotation_area", "type": "Panel", "view_path": "rotationArea" }
+    ]
+}

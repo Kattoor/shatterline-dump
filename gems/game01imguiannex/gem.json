@@ -1,0 +1,50 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "f17db970ff1711e9aaef0800200c9a66",
+    "Name": "Game01ImguiAnnex",
+    "DisplayName": "Game01ImguiAnnex",
+    "Version": "0.1.0",
+    "Summary": "Additional ImGui debug menu for game01 project",
+    "Tags": ["Debug"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        }
+    ],
+    "Dependencies": [
+        {
+            "Uuid": "bab8807a1bc646b3909f3cc200ffeedf",
+            "VersionConstraints": [
+                ">=0.1.0"
+            ],
+            "_comment": "ImGui Gem"
+        },
+        {
+            "Uuid": "2ebd4481cbf142b89286f28b4c29ace3",
+            "VersionConstraints": [
+                ">=0.1.0"
+            ],
+            "_comment": "Game01Interfaces"
+        },
+        {
+            "Uuid": "7cedf2bfc6684bb8a046350371ca261c",
+            "VersionConstraints": [
+                ">=0.1.0"
+            ],
+            "_comment": "Marshalers"
+        },
+        {
+            "Uuid": "f12ac08609c0483486b4ff48ae193ee2",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "BackendAssetsInterfaces"
+        },
+        {
+            "Uuid": "185d46ff567b4905a74e972ccf213803",
+            "VersionConstraints": [
+                ">=0.1.0"
+            ],
+            "_comment": "PopcornFX"
+        }
+    ]
+}

@@ -1,0 +1,90 @@
+{
+    "script": "scripts/ui/lobby/player_info.lua",
+    "view_path": "PlayerInfo.html",
+    "send_stats": true,
+    "children": 
+    [
+        {"name": "screen_header", "type": "Component", "file": "common/screen_header.json"},
+        {"name": "tabs_container", "type": "Component", "file": "common/subtab_menu.json"},
+
+        {"name": "player_info_widget", "type": "Component", "file": "lobby/player_info_widget.json"},
+
+        {"name": "content", "type": "Component", "view_path": "content"},
+
+        {"name": "player_badge", "type": "Component", "view_path": "content.leftPanel.playerBadge.nameplate", "visible": true},
+
+        {"name": "player_image", "type": "Image", "view_path": "content.leftPanel.playerBadge.nameplate.background", "image": "nameplate_background_2"},
+        {"name": "player_avatar", "type": "Image", "view_path": "content.leftPanel.playerBadge.nameplate.bodyWrapper.icon", "image": "nameplate_icon_2"},
+
+        {"name": "player_name", "type": "Label", "view_path": "content.leftPanel.playerBadge.nameplate.bodyWrapper.nameWrapper.name"},
+        {"name": "player_clan", "type": "Label", "view_path": "content.leftPanel.playerBadge.nameplate.bodyWrapper.nameWrapper.clan", "visible": false},
+        {"name": "player_level", "type": "Label", "view_path": "content.leftPanel.playerBadge.nameplate.bodyWrapper.levelWrapper.level"},
+
+        {"name": "heroes_title", "type": "Label", "view_path": "content.leftPanel.operativesInfoList.listTitle.title", "text": "@most_played_heroes"},
+        {"name": "heroes_parameter1_title", "type": "Label", "view_path": "content.leftPanel.operativesInfoList.container.parameter1.title"},
+        {"name": "heroes_parameter1_value", "type": "Label", "view_path": "content.leftPanel.operativesInfoList.container.parameter1.value"},
+        {"name": "heroes_parameter2_title", "type": "Label", "view_path": "content.leftPanel.operativesInfoList.container.parameter2.title"},
+        {"name": "heroes_parameter2_value", "type": "Label", "view_path": "content.leftPanel.operativesInfoList.container.parameter2.value"},
+        {"name": "heroes_parameter3_title", "type": "Label", "view_path": "content.leftPanel.operativesInfoList.container.parameter3.title"},
+        {"name": "heroes_parameter3_value", "type": "Label", "view_path": "content.leftPanel.operativesInfoList.container.parameter3.value"},
+
+        {"name": "weapons_title", "type": "Label", "view_path": "content.leftPanel.weaponsInfoList.listTitle.title", "text": "@most_played_weapons"},
+        {"name": "weapons_parameter1_title", "type": "Label", "view_path": "content.leftPanel.weaponsInfoList.container.parameter1.title"},
+        {"name": "weapons_parameter1_value", "type": "Label", "view_path": "content.leftPanel.weaponsInfoList.container.parameter1.value"},
+        {"name": "weapons_parameter2_title", "type": "Label", "view_path": "content.leftPanel.weaponsInfoList.container.parameter2.title"},
+        {"name": "weapons_parameter2_value", "type": "Label", "view_path": "content.leftPanel.weaponsInfoList.container.parameter2.value"},
+        {"name": "weapons_parameter3_title", "type": "Label", "view_path": "content.leftPanel.weaponsInfoList.container.parameter3.title"},
+        {"name": "weapons_parameter3_value", "type": "Label", "view_path": "content.leftPanel.weaponsInfoList.container.parameter3.value"},
+
+        {"name": "kd_title", "type": "Label", "view_path": "content.leftPanel.kdInfoList.listTitle.title", "text": "@kd_ratio"},
+        {"name": "kd_value", "type": "Label", "view_path": "content.leftPanel.kdInfoList.listTitle.value"},
+        {"name": "kd_hint", "type": "Label", "view_path": "content.leftPanel.kdInfoList.hint", "text": "@kd_ratio_hint"},
+
+
+        {"name": "right_panel", "type": "Component", "view_path": "content.rightPanel"},
+        {"name": "buttons_container", "type": "Component", "view_path": "content.rightPanel.buttonsContainer"},
+
+        {"name": "edit_badge", "type": "Button", "view_path": "content.rightPanel.buttonsContainer.editBadge", "text": "@edit_badge", "visible": true},
+        {"name": "available", "type": "Component", "file": "common/dropdown.json", "view_path": "content.rightPanel.buttonsContainer.available", "visible": true},
+        {"name": "add_to_squad", "type": "Button", "view_path": "content.rightPanel.buttonsContainer.addToSquad", "text": "@add_to_squad", "visible": false},
+        {"name": "add_to_friends", "type": "Button", "view_path": "content.rightPanel.buttonsContainer.addToFriends", "text": "@add_to_friends", "visible": false},
+
+
+        {"name": "invasion_title", "type": "Label", "view_path": "content.rightPanel.invasionInfoList.listTitle.title", "text": "@invasion_title"},
+        {"name": "invasion_parameter_title", "type": "Label", "view_path": "content.rightPanel.invasionInfoList.container.parameter1.title", "text": "@fastest_team_elimination"},
+        {"name": "invasion_parameter_value", "type": "Label", "view_path": "content.rightPanel.invasionInfoList.container.parameter1.value"},
+
+        {"name": "horde_title", "type": "Label", "view_path": "content.rightPanel.hordeInfoList.listTitle.title", "text": "@horde_title"},
+        {"name": "horde_parameter_title", "type": "Label", "view_path": "content.rightPanel.hordeInfoList.container.parameter1.title", "text": "@fastest_boss_kill"},
+        {"name": "horde_parameter_value", "type": "Label", "view_path": "content.rightPanel.hordeInfoList.container.parameter1.value"},
+
+        {"name": "kill_streak_title", "type": "Label", "view_path": "content.rightPanel.killStreakInfoList.listTitle.title", "text": "@longest_kill_streak"},
+        {"name": "kill_streak_parameter1_title", "type": "Label", "view_path": "content.rightPanel.killStreakInfoList.container.parameter1.title", "text": "@pvp_title"},
+        {"name": "kill_streak_parameter1_value", "type": "Label", "view_path": "content.rightPanel.killStreakInfoList.container.parameter1.value"},
+        {"name": "kill_streak_parameter2_title", "type": "Label", "view_path": "content.rightPanel.killStreakInfoList.container.parameter2.title", "text": "@pve_title"},
+        {"name": "kill_streak_parameter2_value", "type": "Label", "view_path": "content.rightPanel.killStreakInfoList.container.parameter2.value"},
+
+        {"name": "playtime_title", "type": "Label", "view_path": "content.rightPanel.playtimeInfoList.listTitle.title", "text": "@playtime"},
+        {"name": "playtime_parameter1_title", "type": "Label", "view_path": "content.rightPanel.playtimeInfoList.container.parameter1.title", "text": "@pvp_title"},
+        {"name": "playtime_parameter1_value", "type": "Label", "view_path": "content.rightPanel.playtimeInfoList.container.parameter1.value"},
+        {"name": "playtime_parameter2_title", "type": "Label", "view_path": "content.rightPanel.playtimeInfoList.container.parameter2.title", "text": "@pve_title"},
+        {"name": "playtime_parameter2_value", "type": "Label", "view_path": "content.rightPanel.playtimeInfoList.container.parameter2.value"},
+        {"name": "playtime_parameter3_title", "type": "Label", "view_path": "content.rightPanel.playtimeInfoList.container.parameter3.title", "text": "@invasion_title"},
+        {"name": "playtime_parameter3_value", "type": "Label", "view_path": "content.rightPanel.playtimeInfoList.container.parameter3.value"},
+        {"name": "playtime_parameter4_title", "type": "Label", "view_path": "content.rightPanel.playtimeInfoList.container.parameter4.title", "text": "@horde_title"},
+        {"name": "playtime_parameter4_value", "type": "Label", "view_path": "content.rightPanel.playtimeInfoList.container.parameter4.value"},
+        {"name": "playtime_total_title", "type": "Label", "view_path": "content.rightPanel.playtimeInfoList.container.total.title", "text": "@total"},
+        {"name": "playtime_total_value", "type": "Label", "view_path": "content.rightPanel.playtimeInfoList.container.total.value"},
+
+
+        {"name": "buttons_container_bottom", "type": "Component", "view_path": "content.rightPanel.bottomButtonsContainer"},
+
+        {"name": "block", "type": "Button", "view_path": "content.rightPanel.bottomButtonsContainer.block", "text": "@block_player", "visible": false},
+        {"name": "report", "type": "Button", "view_path": "content.rightPanel.bottomButtonsContainer.report", "text": "@report_player", "visible": false},
+        {"name": "more_statistics", "type": "Button", "view_path": "content.rightPanel.bottomButtonsContainer.moreStatistics", "text": "@more_statistics", "visible": true},
+
+        {"name": "loading", "type": "Component", "view_path": "loading", "visible": false },
+        {"name": "loading_title", "type": "Label", "view_path": "loading.textWrapper.title", "text": "@please_wait"},
+        {"name": "loading_text", "type": "Label", "view_path": "loading.textWrapper.text", "text": "@loading_screen_loading"}
+    ]
+}

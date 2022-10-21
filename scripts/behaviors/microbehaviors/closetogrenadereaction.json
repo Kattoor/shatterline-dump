@@ -1,0 +1,1057 @@
+{
+    "name": "Microbehaviors/CloseToGrenadeReaction",
+    "root": "17759ed0-2046-4441-82b7-6defe275615b",
+    "nodes": {
+        "418922fb-f462-40f2-832c-dc4342a42557": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -1050,
+                "y": 579
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "SideId"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Integer"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "1ac81b2e-c1d1-44f4-8ba6-9caf112db62c": {
+            "name": "SetVariableOnExit",
+            "pos": {
+                "x": -3000,
+                "y": 1532
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "AnimationsCount"
+                },
+                {
+                    "name": "Value",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Microbehaviors",
+                        "Params",
+                        "animations_count_back"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "eebf73ca-5e45-4762-a73e-4a311891b2e5"
+        },
+        "ef0cb4ea-17b7-4602-8442-b3b7c4b41804": {
+            "name": "Multiply",
+            "pos": {
+                "x": -1280,
+                "y": 933
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "InputA",
+                    "type": "Variable",
+                    "value": [
+                        "BaseIndex"
+                    ]
+                },
+                {
+                    "name": "InputB",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Microbehaviors",
+                        "Params",
+                        "animations_side_index_capacity"
+                    ]
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Result",
+                    "type": "Variable",
+                    "value": [
+                        "BaseIndex"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "38995e70-6a7a-4126-9252-c127b6a84f1c": {
+            "name": "SetVariableOnExit",
+            "pos": {
+                "x": -3415,
+                "y": 1506
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "AnimationsCount"
+                },
+                {
+                    "name": "Value",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Microbehaviors",
+                        "Params",
+                        "animations_count_front"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "ad5916ca-fbe1-46f5-ac12-88e9a5a5c9c2"
+        },
+        "5515fa9a-7c7b-4cb9-a758-4021f07fd405": {
+            "name": "Selector",
+            "pos": {
+                "x": -2775,
+                "y": 932
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "07ccea42-9f3b-4a55-a16b-c9a0177db88d",
+                "06faa83f-0a87-447f-821b-452a54b8f959",
+                "0874fb28-c9c6-4091-8207-93357e568d18",
+                "22c33712-2375-4cba-9d8b-af4646fb3213"
+            ]
+        },
+        "6aaca07e-8148-441d-b4c9-40a85218b416": {
+            "name": "Add",
+            "pos": {
+                "x": -835,
+                "y": 935
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "InputA",
+                    "type": "Variable",
+                    "value": [
+                        "BaseIndex"
+                    ]
+                },
+                {
+                    "name": "InputB",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Microbehaviors",
+                        "Params",
+                        "animations_base_index"
+                    ]
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Result",
+                    "type": "Variable",
+                    "value": [
+                        "BaseIndex"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "27ad2384-27e3-4c56-ac40-71f9ac6ffd49": {
+            "name": "GetDangerGrenadeNear",
+            "pos": {
+                "x": -1270,
+                "y": 581
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "TimeToActionThreshold",
+                    "type": "Float",
+                    "value": "20.00"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "GrenadePosition",
+                    "type": "Variable",
+                    "value": [
+                        "GrenadePosition"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "ef3a6570-93c8-4900-a5c5-a4ad0561e1f7": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -230,
+                "y": 934
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "SideId"
+                },
+                {
+                    "name": "Value",
+                    "type": "Variable",
+                    "value": [
+                        "Index"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "c19196eb-9e21-4b79-8da3-ec3dbde20632": {
+            "name": "Sequence",
+            "pos": {
+                "x": -600,
+                "y": 630
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "c80189ab-0247-455b-b85c-f7d58dd4101d",
+                "c430f204-b22e-4ac5-920e-0d8ff242f41c",
+                "5515fa9a-7c7b-4cb9-a758-4021f07fd405",
+                "44cb9836-cf03-44ce-8c53-37e8131a3c9e",
+                "d94e6a9c-edaf-49c4-9089-5861c67498c9",
+                "5e4d65cf-25db-4932-bac7-eb50042731ac",
+                "125af316-3f9f-413a-a2b9-eecf43707bc1",
+                "c2afc26d-3005-4a9c-a1bb-85902b95a12d",
+                "ef0cb4ea-17b7-4602-8442-b3b7c4b41804",
+                "6aaca07e-8148-441d-b4c9-40a85218b416",
+                "70fb7f42-5cbf-4aa2-a543-6b8f4df9b24c",
+                "7e140416-8e73-4b68-9826-bb1c9c924114",
+                "ef3a6570-93c8-4900-a5c5-a4ad0561e1f7"
+            ]
+        },
+        "493a7a53-843d-4095-b3d2-85c4a47802ef": {
+            "name": "SetAIStateAndRestoreOnExit",
+            "pos": {
+                "x": 10,
+                "y": 843
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Index",
+                    "type": "Variable",
+                    "value": [
+                        "SideId"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "a6ab76cb-476c-4c78-9a38-bdffcc297762"
+        },
+        "17759ed0-2046-4441-82b7-6defe275615b": {
+            "name": "ResetCurrentMicrobehaviorOnExit",
+            "pos": {
+                "x": 0,
+                "y": 89
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "1ec7218a-baf7-435d-96bf-d7365aef9d2e"
+        },
+        "a6ab76cb-476c-4c78-9a38-bdffcc297762": {
+            "name": "WaitForAGNodeState",
+            "pos": {
+                "x": 10,
+                "y": 986
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Entering",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "Entered",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "Exiting",
+                    "type": "StringHash",
+                    "value": "CloseToGrenadeReact_stateMachine_CODE"
+                },
+                {
+                    "name": "Exited",
+                    "type": "StringHash",
+                    "value": ""
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "c80189ab-0247-455b-b85c-f7d58dd4101d": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -3395,
+                "y": 898
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ContextName"
+                },
+                {
+                    "name": "Value",
+                    "type": "StringHash",
+                    "value": "CloseToGrenade"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "1ec7218a-baf7-435d-96bf-d7365aef9d2e": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 189
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "CloseToGrenadeReaction"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "a3eed9d0-2d54-4b62-809a-69f0acd2c229"
+        },
+        "eebf73ca-5e45-4762-a73e-4a311891b2e5": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -3000,
+                "y": 1677
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ContextName"
+                },
+                {
+                    "name": "Value",
+                    "type": "StringHash",
+                    "value": "CloseToGrenadeBack"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "0a63ed1d-0dfa-4794-86e1-9f6c045aed56": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -1525,
+                "y": 576
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "GrenadePosition"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Position"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "0874fb28-c9c6-4091-8207-93357e568d18": {
+            "name": "Equals",
+            "pos": {
+                "x": -2595,
+                "y": 1110
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Lhs",
+                    "type": "Variable",
+                    "value": [
+                        "SideId"
+                    ]
+                },
+                {
+                    "name": "Rhs",
+                    "type": "Integer",
+                    "value": "3"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "38baa3d5-624a-40e9-a390-d778f8858060"
+        },
+        "07ccea42-9f3b-4a55-a16b-c9a0177db88d": {
+            "name": "Equals",
+            "pos": {
+                "x": -3420,
+                "y": 1109
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Lhs",
+                    "type": "Variable",
+                    "value": [
+                        "SideId"
+                    ]
+                },
+                {
+                    "name": "Rhs",
+                    "type": "Integer",
+                    "value": "1"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "38995e70-6a7a-4126-9252-c127b6a84f1c"
+        },
+        "ad5916ca-fbe1-46f5-ac12-88e9a5a5c9c2": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -3415,
+                "y": 1677
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ContextName"
+                },
+                {
+                    "name": "Value",
+                    "type": "StringHash",
+                    "value": "CloseToGrenadeFront"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "bfc0c20b-ca26-4b80-a883-bb36c03cd783": {
+            "name": "SetCustomTargetPosAndRestoreOnExit",
+            "pos": {
+                "x": 0,
+                "y": 699
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Position",
+                    "type": "Variable",
+                    "value": [
+                        "GrenadePosition"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "493a7a53-843d-4095-b3d2-85c4a47802ef"
+        },
+        "2de4e39c-0c90-449e-90d7-633eef66e5bc": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -2180,
+                "y": 1679
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ContextName"
+                },
+                {
+                    "name": "Value",
+                    "type": "StringHash",
+                    "value": "CloseToGrenadeRight"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "5e4d65cf-25db-4932-bac7-eb50042731ac": {
+            "name": "GetShuffledRandomIndex",
+            "pos": {
+                "x": -1970,
+                "y": 930
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ContextName",
+                    "type": "Variable",
+                    "value": [
+                        "ContextName"
+                    ]
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Index",
+                    "type": "Variable",
+                    "value": [
+                        "Index"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "7e140416-8e73-4b68-9826-bb1c9c924114": {
+            "name": "Add",
+            "pos": {
+                "x": -395,
+                "y": 935
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "InputA",
+                    "type": "Variable",
+                    "value": [
+                        "Index"
+                    ]
+                },
+                {
+                    "name": "InputB",
+                    "type": "Integer",
+                    "value": "1"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Result",
+                    "type": "Variable",
+                    "value": [
+                        "Index"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "9db50f25-c3a9-40d3-aed4-601273d4c9b3": {
+            "name": "PlayVO",
+            "pos": {
+                "x": -230,
+                "y": 575
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Character",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "VOEventName",
+                    "type": "StringHash",
+                    "value": "close_to_grenade"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "22c33712-2375-4cba-9d8b-af4646fb3213": {
+            "name": "Equals",
+            "pos": {
+                "x": -2185,
+                "y": 1111
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Lhs",
+                    "type": "Variable",
+                    "value": [
+                        "SideId"
+                    ]
+                },
+                {
+                    "name": "Rhs",
+                    "type": "Integer",
+                    "value": "4"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "d6ffd072-1a0b-4d58-a65b-86afbb986f74"
+        },
+        "125af316-3f9f-413a-a2b9-eecf43707bc1": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -1765,
+                "y": 936
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "BaseIndex"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Integer"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "d6ffd072-1a0b-4d58-a65b-86afbb986f74": {
+            "name": "SetVariableOnExit",
+            "pos": {
+                "x": -2180,
+                "y": 1534
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "AnimationsCount"
+                },
+                {
+                    "name": "Value",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Microbehaviors",
+                        "Params",
+                        "animations_count_right"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "2de4e39c-0c90-449e-90d7-633eef66e5bc"
+        },
+        "70fb7f42-5cbf-4aa2-a543-6b8f4df9b24c": {
+            "name": "Add",
+            "pos": {
+                "x": -550,
+                "y": 936
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "InputA",
+                    "type": "Variable",
+                    "value": [
+                        "BaseIndex"
+                    ]
+                },
+                {
+                    "name": "InputB",
+                    "type": "Variable",
+                    "value": [
+                        "Index"
+                    ]
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Result",
+                    "type": "Variable",
+                    "value": [
+                        "Index"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "c2afc26d-3005-4a9c-a1bb-85902b95a12d": {
+            "name": "Subtract",
+            "pos": {
+                "x": -1600,
+                "y": 937
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "InputA",
+                    "type": "Variable",
+                    "value": [
+                        "SideId"
+                    ]
+                },
+                {
+                    "name": "InputB",
+                    "type": "Integer",
+                    "value": "1"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Result",
+                    "type": "Variable",
+                    "value": [
+                        "BaseIndex"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "d94e6a9c-edaf-49c4-9089-5861c67498c9": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -2150,
+                "y": 932
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Index"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Integer"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "c430f204-b22e-4ac5-920e-0d8ff242f41c": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -3200,
+                "y": 901
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "AnimationsCount"
+                },
+                {
+                    "name": "Value",
+                    "type": "Integer",
+                    "value": "0"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "cac8b18e-c74e-41bb-9e4c-b7271e6d76f8": {
+            "name": "GetCharacterSideDependsOnPoint",
+            "pos": {
+                "x": -835,
+                "y": 579
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CharacterId",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "PointLocation",
+                    "type": "Variable",
+                    "value": [
+                        "GrenadePosition"
+                    ]
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "SideId",
+                    "type": "Variable",
+                    "value": [
+                        "SideId"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "44cb9836-cf03-44ce-8c53-37e8131a3c9e": {
+            "name": "CreateShuffledRandomContextIfAbsent",
+            "pos": {
+                "x": -2435,
+                "y": 931
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ContextName",
+                    "type": "Variable",
+                    "value": [
+                        "ContextName"
+                    ]
+                },
+                {
+                    "name": "Size",
+                    "type": "Variable",
+                    "value": [
+                        "AnimationsCount"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "38baa3d5-624a-40e9-a390-d778f8858060": {
+            "name": "SetVariableOnExit",
+            "pos": {
+                "x": -2590,
+                "y": 1533
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "AnimationsCount"
+                },
+                {
+                    "name": "Value",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Microbehaviors",
+                        "Params",
+                        "animations_count_left"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "7822cb9f-a8b5-4a59-8fb3-dabc5e9366ef"
+        },
+        "06faa83f-0a87-447f-821b-452a54b8f959": {
+            "name": "Equals",
+            "pos": {
+                "x": -3005,
+                "y": 1109
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Lhs",
+                    "type": "Variable",
+                    "value": [
+                        "SideId"
+                    ]
+                },
+                {
+                    "name": "Rhs",
+                    "type": "Integer",
+                    "value": "2"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "1ac81b2e-c1d1-44f4-8ba6-9caf112db62c"
+        },
+        "7822cb9f-a8b5-4a59-8fb3-dabc5e9366ef": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -2590,
+                "y": 1678
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ContextName"
+                },
+                {
+                    "name": "Value",
+                    "type": "StringHash",
+                    "value": "CloseToGrenadeLeft"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "76cb8445-85a1-42fc-a228-7b8745dd98cf": {
+            "name": "StopFireAndRestoreOnExit",
+            "pos": {
+                "x": 0,
+                "y": 575
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "bfc0c20b-ca26-4b80-a883-bb36c03cd783"
+        },
+        "a3eed9d0-2d54-4b62-809a-69f0acd2c229": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 438
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "0a63ed1d-0dfa-4794-86e1-9f6c045aed56",
+                "27ad2384-27e3-4c56-ac40-71f9ac6ffd49",
+                "418922fb-f462-40f2-832c-dc4342a42557",
+                "cac8b18e-c74e-41bb-9e4c-b7271e6d76f8",
+                "c19196eb-9e21-4b79-8da3-ec3dbde20632",
+                "9db50f25-c3a9-40d3-aed4-601273d4c9b3",
+                "76cb8445-85a1-42fc-a228-7b8745dd98cf"
+            ]
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

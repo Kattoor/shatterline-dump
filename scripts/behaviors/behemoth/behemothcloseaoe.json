@@ -1,0 +1,367 @@
+{
+    "name": "Behemoth/BehemothCloseAOE",
+    "root": "eaf6c61e-26f7-4c7e-a539-72d178166ad7",
+    "nodes": {
+        "03a4e80e-2ad1-4642-a76f-a67ad3added6": {
+            "name": "Repeater",
+            "pos": {
+                "x": 370,
+                "y": 922
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Iterations",
+                    "type": "Integer",
+                    "value": "0"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "ed8e34b1-2830-4112-8a05-0d778466d612"
+        },
+        "d9915fc6-1ed8-4a49-9992-cc253b1aed20": {
+            "name": "ParallelUntilAnyComplete",
+            "pos": {
+                "x": 425,
+                "y": 456
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "11ebca54-d7a3-4e01-b40a-dae6998b0a94",
+                "d6172527-eeb8-4ed7-bde7-354d7eebebca"
+            ]
+        },
+        "6def6288-fca5-4a92-bdd3-f9350564293f": {
+            "name": "Wait",
+            "pos": {
+                "x": 670,
+                "y": 924
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "correct_melee_dir_time"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "92c2dd2d-1b3e-442e-9be7-e19c2444da02": {
+            "name": "ParallelUntilAnyComplete",
+            "pos": {
+                "x": 460,
+                "y": 817
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "03a4e80e-2ad1-4642-a76f-a67ad3added6",
+                "6def6288-fca5-4a92-bdd3-f9350564293f"
+            ]
+        },
+        "820bc95d-583a-429d-8905-dc3677eb4fd6": {
+            "name": "MeleeAttack",
+            "pos": {
+                "x": 50,
+                "y": 717
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "AttackIndex",
+                    "type": "Integer",
+                    "value": "-1"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "02a34b55-1631-4973-b7d4-35d909f53385": {
+            "name": "Success",
+            "pos": {
+                "x": -255,
+                "y": 801
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "11ebca54-d7a3-4e01-b40a-dae6998b0a94": {
+            "name": "Sequence",
+            "pos": {
+                "x": 150,
+                "y": 600
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "820bc95d-583a-429d-8905-dc3677eb4fd6",
+                "c5b3805a-47f3-4589-9ffd-1b66354c39fa"
+            ]
+        },
+        "f21bff43-cee9-4655-ade5-2ca30ab302d2": {
+            "name": "SetVariable",
+            "pos": {
+                "x": 0,
+                "y": 464
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "CurTarget"
+                },
+                {
+                    "name": "Value",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "ed8e34b1-2830-4112-8a05-0d778466d612": {
+            "name": "ExactBodyRotateTo",
+            "pos": {
+                "x": 370,
+                "y": 1060
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Target",
+                    "type": "Variable",
+                    "value": [
+                        "CurTarget"
+                    ]
+                },
+                {
+                    "name": "DegreesPerSecond",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "correct_melee_dir_speed"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "eaf6c61e-26f7-4c7e-a539-72d178166ad7": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 96
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "BehemothCloseAOE"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "c436e08c-febc-4ce9-8c4c-6ad60e71ef85"
+        },
+        "4dc8bea3-0ac4-423f-956c-9778caaad984": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": -255,
+                "y": 469
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "WaitForAngleToTarget"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "61963489-0db8-440e-b160-800883ee3b4b"
+        },
+        "c5b3805a-47f3-4589-9ffd-1b66354c39fa": {
+            "name": "Wait",
+            "pos": {
+                "x": 245,
+                "y": 720
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Float",
+                    "value": "0.5"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "d6172527-eeb8-4ed7-bde7-354d7eebebca": {
+            "name": "Sequence",
+            "pos": {
+                "x": 585,
+                "y": 589
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "a7070671-c475-494b-8079-1eb6977f7860",
+                "cf056e0e-713f-4236-9ac7-32a39281955f"
+            ]
+        },
+        "61963489-0db8-440e-b160-800883ee3b4b": {
+            "name": "AngleToTarget",
+            "pos": {
+                "x": -255,
+                "y": 584
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Target",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "MaxAngle",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "attacks_angle_to_target"
+                    ]
+                },
+                {
+                    "name": "UseBodyYaw",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "02a34b55-1631-4973-b7d4-35d909f53385"
+        },
+        "cf056e0e-713f-4236-9ac7-32a39281955f": {
+            "name": "Noop",
+            "pos": {
+                "x": 670,
+                "y": 700
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "a7070671-c475-494b-8079-1eb6977f7860": {
+            "name": "Succeeder",
+            "pos": {
+                "x": 515,
+                "y": 702
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "92c2dd2d-1b3e-442e-9be7-e19c2444da02"
+        },
+        "c436e08c-febc-4ce9-8c4c-6ad60e71ef85": {
+            "name": "UnbreakableBehavior",
+            "pos": {
+                "x": 0,
+                "y": 217
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "0210f084-af15-41eb-a202-0ce537b0a4a3"
+        },
+        "0210f084-af15-41eb-a202-0ce537b0a4a3": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 320
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "4dc8bea3-0ac4-423f-956c-9778caaad984",
+                "f21bff43-cee9-4655-ade5-2ca30ab302d2",
+                "d9915fc6-1ed8-4a49-9992-cc253b1aed20"
+            ]
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

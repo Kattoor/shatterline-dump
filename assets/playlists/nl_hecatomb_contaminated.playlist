@@ -1,0 +1,32 @@
+{
+    "lobby_config": {
+        "game_type": "pve",
+        "name_token": "@hecatomb_contam_label",
+        "type_token": "@modified_long_story",
+        "info_token": "@welcome_briefing",
+        "time_token": "@nl_hecatomb_time",
+        "location_token": "@nl_hecatomb_location",
+        "video_path": "",
+        "small_image": "pve_hecatomb_layer4",
+        "background": "bg_playlist_hecatomb"
+    },
+    "min_profile_level": 0,
+    "play_again_allowed": false,
+    "missions": [
+        "nl_hecatomb_contaminated"
+    ],
+    "modifiers": ["chaser_on_loner_proto", "fireflies", "burn_chance_proto"],
+    "loading_backgrounds": [
+        "bg_playlist_hecatomb"
+    ],
+    "rewards": [
+        {
+            "type_token": "@pve_completion_rewards_title",
+            "items": [
+                {"image": "blueprint", "value": 3},
+                {"image": "season_xp", "value": 50},
+                {"image": "soft", "value": 400}
+            ]
+        }
+    ]
+}

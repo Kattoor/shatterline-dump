@@ -1,0 +1,43 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "c8fb7b7bf81f450b9131c03bbad3ee85",
+    "Name": "Game01FlaresEffects",
+    "DisplayName": "Game01FlaresEffects",
+    "Version": "0.1.0",
+    "Summary": "Flares effects",
+    "Tags": ["FlaresEffects"],
+    "IconPath": "preview.png",
+    "EditorModule": true,
+    "Modules": [
+        {
+            "Type": "GameModule"
+        },
+        {
+            "Type": "EditorModule",
+            "Name": "Editor",
+            "Extends": "GameModule"
+        }
+    ],
+    "Dependencies": [
+        {
+            "Uuid": "ff06785f7145416b9d46fde39098cb0c",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "LmbrCentral"
+        },
+        {
+            "Uuid": "7452d0edae814358afd8902dc6b49561",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01Physics"
+        },
+        {
+            "Uuid": "2ebd4481cbf142b89286f28b4c29ace3",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01Interfaces"
+        },
+        {
+            "Uuid": "4e08125824434932a0fe3717259caa47",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "PhysX"
+        }
+    ]
+}

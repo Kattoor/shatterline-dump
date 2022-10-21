@@ -1,0 +1,35 @@
+{
+  "name": "scheduled_pvp_003",
+  "type": "scheduled",
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "common",
+  "display_name": { "localization_key": "@scheduled_pvp_003_name" },
+  "description": { "localization_key": "@scheduled_pvp_003_description" },
+  "conditions": [
+    {
+      "name": "scheduled_pvp_003",
+      "event_description": { "localization_key": "@scheduled_pvp_003_event_description" },
+      "event": { "event_id": "MVP", "actor_is_me": true, "actor_status_is": ["@best_score", "@longest_streak", "@best_kill", "@best_killstreaks", 
+      "@best_resurrect", "@best_headshot", "@best_melee", "@most_ult_kills", "@best_pistolero", "@best_support", "@zone_captured_mvp"], "game_type_is": ["pvp"] },
+      "progress": 10
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 2000
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 1000
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 15
+    }
+  ]
+}

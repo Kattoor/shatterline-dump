@@ -1,0 +1,86 @@
+
+{
+   "microbehaviors":
+   [
+      {
+         "name": "GoInvisible",
+         "conditions":
+         [
+            {
+               "template": "TargetExistAndVisible"
+            },
+            {
+               "template": "FrequencyLimit",
+               "origin": "global",
+               "params":
+               {
+                  "name": "PlaceDecoy",
+                  "count": "#global_counter",
+                  "time": "#global_reset_time",
+                  "delay_min": "#global_delay_min",
+                  "delay_max": "#global_delay_max"
+               }
+            },
+            {
+               "template": "FrequencyLimit",
+               "origin": "source",
+               "params":
+               {
+                  "name": "PlaceDecoySelf",
+                  "count": "#source_counter",
+                  "time": "#source_reset_time",
+                  "delay_min": "#source_delay_min",
+                  "delay_max": "#source_delay_max"
+               }
+            },
+            {
+               "template": "StayInPlace",
+               "origin": "source",
+               "inverse": true,
+               "params":
+               {
+                  "range": "3.0",
+                  "duration": "3.0"
+               }
+            },
+            {
+               "template": "Range",
+               "origin": "source",
+               "params":
+               {
+                  "to": "target",
+                  "min": "#min_range",
+                  "max": "#max_range"
+               }
+            }
+         ],
+         "actions":
+         [
+            {
+               "template": "RunMicrobehavior",
+               "params":
+               {
+                  "name": "GoInvisible",
+                  "invisibility_slice": "#invisibility_slice",
+                  "lifetime": "#duration"
+               }
+            }
+         ],
+         "default_params":
+         {
+            "invisibility_slice": "slices/ai/invisibility_machine.dynamicslice",
+            "duration": "30",
+            "min_range": "20",
+            "max_range": "35",
+            "global_counter": "3",
+            "global_reset_time": "20",
+            "global_delay_min": "3",
+            "global_delay_max": "4",
+            "source_counter": "1",
+            "source_reset_time": "1",
+            "source_delay_min": "10",
+            "source_delay_max": "12"
+         }
+      }
+   ]
+}

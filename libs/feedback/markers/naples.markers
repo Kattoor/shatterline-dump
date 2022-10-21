@@ -1,0 +1,280 @@
+{
+    "markers": [
+        {
+            "name": "way_point_pve",
+            "elements": [
+                { 
+                    "way_point":
+                    {
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        
+                        "image_alias": "marker_way_point_icon",
+                        "info_text": "@plc_regroup",
+                        "image_color": "#E9F0F3",
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_hexagon_icon_wave_npa",
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.0,
+                        "race_icon_track_scale": 0.6,
+                        "offset": 1.5
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_way_point_radar_icon", "snapped": true } }
+            ]
+        },
+        {
+            "name": "du_sm04_str_outpost_01",
+            "elements": [
+                { 
+                    "way_point":
+                    {
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        
+                        "image_alias": "marker_way_point_icon",
+                        "info_text": "@plc_str_outpost",
+                        "image_color": "#E9F0F3",
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_hexagon_icon_wave_npa",
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.0,
+                        "race_icon_track_scale": 0.6,
+                        "offset": 1.5
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_way_point_radar_icon", "snapped": true } }
+            ]
+        },
+        {
+            "name": "du_sm04_saaha_gate_02",
+            "elements": [
+                { 
+                    "way_point":
+                    {
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        
+                        "image_alias": "marker_way_point_icon",
+                        "info_text": "@plc_saaha_gate",
+                        "image_color": "#E9F0F3",
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_hexagon_icon_wave_npa",
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.3,
+                        "race_icon_track_scale": 0.6,
+                        "offset": 1.5
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_way_point_radar_icon", "snapped": true } }
+            ]
+        },
+        {
+            "name": "du_sm04_saaha_gate_open",
+            "elements": [
+                {
+                    "usable_icon":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "image_alias": "marker_interact_icon",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_rhombus_icon_mask_npa",
+                        "radial_progress_bg_color": "#E9F0F3",
+                        "radial_progress_color": "#1494D8",
+                        "race_icon_min_dist_visibility": 0,
+                        "race_icon_max_dist": 20,
+                        "visibility_mode": "Always",
+                        "using_text": "@plc_saaha_gate"
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_way_point_radar_icon", "snapped": true } }
+            ]
+        },
+        {
+            "name": "du_sm04_saaha_square_03",
+            "elements": [
+                { 
+                    "way_point":
+                    {
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        
+                        "image_alias": "marker_way_point_icon",
+                        "info_text": "@plc_saaha_square",
+                        "image_color": "#E9F0F3",
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_hexagon_icon_wave_npa",
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.0,
+                        "race_icon_track_scale": 0.6,
+                        "offset": 1.5
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_way_point_radar_icon", "snapped": true } }
+            ]
+        },
+        {
+            "name": "du_sm04_royal_resort_04",
+            "elements": [
+                { 
+                    "way_point":
+                    {
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        
+                        "image_alias": "marker_way_point_icon",
+                        "info_text": "@plc_royal_resort",
+                        "image_color": "#E9F0F3",
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_hexagon_icon_wave_npa",
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.0,
+                        "race_icon_track_scale": 0.6,
+                        "offset": 1.5
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_way_point_radar_icon", "snapped": true } }
+            ]
+        },
+
+        {
+            "name": "du_sm04_ammo_refill_05",
+            "elements": [
+                {
+                    "usable_icon":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "image_alias": "marker_interact_icon",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_rhombus_icon_mask_npa",
+                        "radial_progress_bg_color": "#E9F0F3",
+                        "radial_progress_color": "#1494D8",
+                        "race_icon_min_dist_visibility": 0,
+                        "race_icon_max_dist": 20,
+                        "visibility_mode": "Always",
+                        "using_text": "@using_btn"
+                    }
+                },
+                { "way_point": { "ui_component_file": "hud/way_point.json", "race_icon_min_scale": 0.6, "race_icon_max_scale": 1.0, "race_icon_track_scale": 0.6, "offset": 1.5, "info_text":"@plc_ammo_refill"}},
+                { "radar_icon": { "icon_alias": "marker_way_point_radar_icon", "snapped": true } }
+            ]
+        },
+        {
+            "name": "du_sm04_cafe_aperitivo_06",
+            "elements": [
+                { 
+                    "way_point":
+                    {
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        
+                        "image_alias": "marker_way_point_icon",
+                        "info_text": "@plc_cafe_aperitivo",
+                        "image_color": "#E9F0F3",
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_hexagon_icon_wave_npa",
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.0,
+                        "race_icon_track_scale": 0.6,
+                        "offset": 1.5
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_way_point_radar_icon", "snapped": true } }
+            ]
+        },
+        {
+            "name": "du_sm04_waterfall_mall_07",
+            "elements": [
+                { 
+                    "way_point":
+                    {
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        
+                        "image_alias": "marker_way_point_icon",
+                        "info_text": "@plc_waterfall_mall",
+                        "image_color": "#E9F0F3",
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_hexagon_icon_wave_npa",
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.0,
+                        "race_icon_track_scale": 0.6,
+                        "offset": 1.5
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_way_point_radar_icon", "snapped": true } }
+            ]
+        },
+        {
+            "name": "du_sm04_waterfall_gardens_08",
+            "elements": [
+                { 
+                    "way_point":
+                    {
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        
+                        "image_alias": "marker_way_point_icon",
+                        "info_text": "@plc_waterfall_gardens",
+                        "image_color": "#E9F0F3",
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_hexagon_icon_wave_npa",
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.0,
+                        "race_icon_track_scale": 0.6,
+                        "offset": 1.5
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_way_point_radar_icon", "snapped": true } }
+            ]
+        },
+        {
+            "name": "du_sm04_crater_ridge_09",
+            "elements": [
+                { 
+                    "way_point":
+                    {
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        
+                        "image_alias": "marker_way_point_icon",
+                        "info_text": "@plc_crater_ridge",
+                        "image_color": "#E9F0F3",
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_hexagon_icon_wave_npa",
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.0,
+                        "race_icon_track_scale": 0.6,
+                        "offset": 1.5
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_way_point_radar_icon", "snapped": true } }
+            ]
+        },
+        {
+            "name": "ammo_refill_pve",
+            "elements": [
+                { 
+                    "way_point":
+                    {
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        
+                        "image_alias": "marker_way_point_icon",
+                        "info_text": "@plc_ammo_refill",
+                        "image_color": "#E9F0F3",
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_hexagon_icon_wave_npa",
+                        "race_icon_min_scale": 0.6,
+                        "race_icon_max_scale": 1.0,
+                        "race_icon_track_scale": 0.6,
+                        "offset": 1.5
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_way_point_radar_icon", "snapped": true } }
+            ]
+        }
+    ]
+}

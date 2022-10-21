@@ -1,0 +1,21 @@
+<BehaviorTree>
+    <Variables>
+        <Variable name="TargetVisible" />
+    </Variables>
+    <SignalVariables>
+        <Signal name="OnEnemySeen" variable="TargetVisible" value="true" />
+        <Signal name="OnLostSightOfTarget" variable="TargetVisible" value="false" />
+    </SignalVariables>
+    <Root>
+        <Loop>
+        <SuppressFailure>
+            <IfCondition condition="TargetVisible">
+                <Sequence>
+                    <QueryTPS name="HideFromTarget" register="RefPoint" _startLog="HideFromTarget Start" _failureLog="HideFromTarget Fail" _successLog="HideFromTarget Success" />
+                    <Approach to="RefPoint" />
+                </Sequence>
+            </IfCondition>
+        </SuppressFailure>
+        </Loop>
+    </Root>
+</BehaviorTree>

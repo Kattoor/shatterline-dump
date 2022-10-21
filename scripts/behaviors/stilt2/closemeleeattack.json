@@ -1,0 +1,306 @@
+{
+    "name": "Stilt2/CloseMeleeAttack",
+    "root": "5ea79d1f-8bca-4a45-a8c3-2ff81b367937",
+    "nodes": {
+        "f08f3322-6c07-45c3-8aec-cb9344993780": {
+            "name": "AngleToTargetNow",
+            "pos": {
+                "x": -810,
+                "y": 536
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Target",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "MaxAngle",
+                    "type": "Float",
+                    "value": "15"
+                },
+                {
+                    "name": "UseBodyYaw",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "6dc8634b-45ad-45a0-91d7-60365ce56a8f": {
+            "name": "RepeatUntilSucceeds",
+            "pos": {
+                "x": -810,
+                "y": 424
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Iterations",
+                    "type": "Integer",
+                    "value": "0"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "f08f3322-6c07-45c3-8aec-cb9344993780"
+        },
+        "6f0d4561-bc97-44bd-b442-2c3405cde58a": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": -810,
+                "y": 185
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Rotate To Target"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "d31e7e18-8adf-4e9e-adfb-3b5c95e7497b"
+        },
+        "18a132bb-142e-4fce-bde1-9293d3166140": {
+            "name": "ResetCustomTargetPos",
+            "pos": {
+                "x": 520,
+                "y": 192
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "5ea79d1f-8bca-4a45-a8c3-2ff81b367937": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 87
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "6f0d4561-bc97-44bd-b442-2c3405cde58a",
+                "371d1adb-d949-4173-b534-0521c44f57dc",
+                "98e45931-cbbd-4670-bb34-6132e003a78f",
+                "2d79e147-156a-4e87-9110-7df90935f817",
+                "d19bfde6-4f02-4026-97d0-a9e3fc62726e",
+                "0cc6b55c-c766-468d-a6ac-abd5b416e75f",
+                "18a132bb-142e-4fce-bde1-9293d3166140"
+            ]
+        },
+        "d31e7e18-8adf-4e9e-adfb-3b5c95e7497b": {
+            "name": "Timer",
+            "pos": {
+                "x": -810,
+                "y": 295
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "RunTime",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "crystaline_attack_max_rot_time"
+                    ]
+                },
+                {
+                    "name": "FailOnTimeout",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "6dc8634b-45ad-45a0-91d7-60365ce56a8f"
+        },
+        "d19bfde6-4f02-4026-97d0-a9e3fc62726e": {
+            "name": "Succeeder",
+            "pos": {
+                "x": 165,
+                "y": 206
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "3fa812a3-0ba9-4b5c-a775-25336e6611a3"
+        },
+        "2d79e147-156a-4e87-9110-7df90935f817": {
+            "name": "SetCustomTargetPos",
+            "pos": {
+                "x": -20,
+                "y": 197
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Position",
+                    "type": "Variable",
+                    "value": [
+                        "targetPt"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "98e45931-cbbd-4670-bb34-6132e003a78f": {
+            "name": "Add",
+            "pos": {
+                "x": -180,
+                "y": 197
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "InputA",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Pos"
+                    ]
+                },
+                {
+                    "name": "InputB",
+                    "type": "Variable",
+                    "value": [
+                        "lookOffset"
+                    ]
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Result",
+                    "type": "Variable",
+                    "value": [
+                        "targetPt"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "0cc6b55c-c766-468d-a6ac-abd5b416e75f": {
+            "name": "CancelMeleeAttack",
+            "pos": {
+                "x": 350,
+                "y": 194
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "371d1adb-d949-4173-b534-0521c44f57dc": {
+            "name": "Multiply",
+            "pos": {
+                "x": -420,
+                "y": 195
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "InputA",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "CharacterProperties",
+                        "BodyDirection"
+                    ]
+                },
+                {
+                    "name": "InputB",
+                    "type": "Integer",
+                    "value": "5"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Result",
+                    "type": "Variable",
+                    "value": [
+                        "lookOffset"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "3fa812a3-0ba9-4b5c-a775-25336e6611a3": {
+            "name": "AOEMeleeSuperAttack",
+            "pos": {
+                "x": 165,
+                "y": 295
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "PrepareTime",
+                    "type": "Float",
+                    "value": "0.00"
+                },
+                {
+                    "name": "PrepareIndex",
+                    "type": "Integer",
+                    "value": "0"
+                },
+                {
+                    "name": "AttackIndex",
+                    "type": "Integer",
+                    "value": "1"
+                },
+                {
+                    "name": "AOE Attack slice",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "SliceRandomPostfix",
+                    "type": "Float",
+                    "value": "0"
+                },
+                {
+                    "name": "Close melee attack",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

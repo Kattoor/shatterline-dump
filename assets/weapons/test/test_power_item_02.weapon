@@ -1,0 +1,238 @@
+{
+    "shooting": {
+        "rpm": 1000,
+        "clip_capacity": 100,
+        "backpack_capacity": 200,
+        "chamber_capacity": 1,
+        "chambers_fired_per_shot": 1,
+        "auto_reload_mode": "Chamber",
+        "sprint_to_shoot_time": 0.27,
+        "forced_shot_after_transition": true,
+        "base_damage_distribution": {
+            "points": [
+                {
+                    "distance": 0.0,
+                    "damage": 15.0
+                },
+                {
+                    "distance": 7.0,
+                    "damage": 15.0
+                },
+                {
+                    "distance": 8.0,
+                    "damage": 80.0
+                }
+            ]
+        },
+        "reload": {
+            "reload_time": 5.95,
+            "reload_out_complete_threshold": 0.7,
+            "reload_in_complete_threshold": 0.7
+        }
+    },
+    "recoil": {
+        "max_vertical_angle": 45.0,
+        "kick_time": 0.1,
+        "decay_time": 0.3,
+        "decay_delay": 0.001,
+        "recoil_points": [
+            {
+                "num": 1,
+                "angle": {
+                    "min": -50,
+                    "max": 50
+                },
+                "force": {
+                    "min": 1.75,
+                    "max": 1.75
+                }
+            },
+            {
+                "num": 2,
+                "angle": {
+                    "min": -120,
+                    "max": 120
+                },
+                "force": {
+                    "min": 1.4,
+                    "max": 1.4
+                }
+            },
+            {
+                "num": 5,
+                "angle": {
+                    "min": -150.0,
+                    "max": 150
+                },
+                "force": {
+                    "min": 0.87,
+                    "max": 0.87
+                }
+            },
+            {
+                "num": 10,
+                "angle": {
+                    "min": -180.0,
+                    "max": 180
+                },
+                "force": {
+                    "min": 0.52,
+                    "max": 0.52
+                }
+            },
+            {
+                "num": 15,
+                "angle": {
+                    "min": -80.0,
+                    "max": 180
+                },
+                "force": {
+                    "min": 0.35,
+                    "max": 0.35
+                }
+            },
+            {
+                "num": 20,
+                "angle": {
+                    "min": 0.0,
+                    "max": 180
+                },
+                "force": {
+                    "min": 0.26,
+                    "max": 0.35
+                }
+            },
+            {
+                "num": 30,
+                "angle": {
+                    "min": 45.0,
+                    "max": 135
+                },
+                "force": {
+                    "min": 0.09,
+                    "max": 0.17
+                }
+            },
+            {
+                "num": 40,
+                "angle": {
+                    "min": -45.0,
+                    "max": 135
+                },
+                "force": {
+                    "min": 0.09,
+                    "max": 0.17
+                }
+            },
+            {
+                "num": 45,
+                "angle": {
+                    "min": -135.0,
+                    "max": -45
+                },
+                "force": {
+                    "min": 0.09,
+                    "max": 0.17
+                }
+            },
+            {
+                "num": 55,
+                "angle": {
+                    "min": -135.0,
+                    "max": 45
+                },
+                "force": {
+                    "min": 0.09,
+                    "max": 0.17
+                }
+            },
+            {
+                "num": 60,
+                "angle": {
+                    "min": 45.0,
+                    "max": 135
+                },
+                "force": {
+                    "min": 0.09,
+                    "max": 0.17
+                }
+            },
+            {
+                "num": 70,
+                "angle": {
+                    "min": -45.0,
+                    "max": 135
+                },
+                "force": {
+                    "min": 0.07,
+                    "max": 0.14
+                }
+            },
+            {
+                "num": 75,
+                "angle": {
+                    "min": -135.0,
+                    "max": -45
+                },
+                "force": {
+                    "min": 0.05,
+                    "max": 0.1
+                }
+            },
+            {
+                "num": 85,
+                "angle": {
+                    "min": -135.0,
+                    "max": 45
+                },
+                "force": {
+                    "min": 0.03,
+                    "max": 0.07
+                }
+            },
+            {
+                "num": 90,
+                "angle": {
+                    "min": -45,
+                    "max": 135
+                },
+                "force": {
+                    "min": 0.02,
+                    "max": 0.03
+                }
+            }
+        ]
+    },
+    "spread": {
+        "min_hip_spread": 0.2,
+        "max_hip_spread": 0.6,
+        "hip_step": 0.2,
+        "decay_time": 0.01,
+        "decay_delay": 0.0,
+        "stand_multiplier": 1.0,
+        "walk_multiplier": 3,
+        "sprint_multiplier": 30,
+        "zoom_multiplier": 1.0,
+        "jump_multiplier": 50.0,
+        "crouch_multiplier": 0.4,
+        "crouch_idle_multiplier": 0.4,
+        "slide_multiplier": 3
+    },
+    "zoom": {
+        "zoom_fov": 45.0,
+        "weapon_fov": 55.0,
+        "zoom_in_time": 0.15,
+        "zoom_out_time": 0.15,
+        "delay_after_jump": 0.3,
+        "in_air": false,
+        "hide_crosshair": true
+    },
+    "selection": {
+        "selection_duration": 0.77,
+        "deselection_duration": 0.53
+    },
+    "common": {
+        "item_tag": "HMG"
+    },
+    "muzzle_sight_distance": 0.0
+}

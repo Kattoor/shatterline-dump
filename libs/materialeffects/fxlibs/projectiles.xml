@@ -1,0 +1,1972 @@
+<FXLib>
+
+	<!-- START   Rifle impacts (bullet)   START -->
+	<Effect name="bullet_concrete_gray" delay="0.05">
+		<Audio trigger="bullet_impact_mat_concrete">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.4" maxscaledist="80" maxpossiblescalemod="3">bullet.hit_concrete.gray_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.8" maxscale="1.2" maxscaledist="80" maxpossiblescalemod="3">bullet.hit_concrete.gray_b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.6" maxscaledist="80" maxpossiblescalemod="3">bullet.hit_concrete.gray_c</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<Decal minscale="0.03" maxscale="0.05" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_gray_a</Material>
+			</Decal>
+			<Decal minscale="0.03" maxscale="0.05" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_gray_b</Material>
+			</Decal>
+			<Decal minscale="0.03" maxscale="0.05" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_gray_c</Material>
+			</Decal>
+		</RandEffect>
+		<!-- <FlowGraph name="dirt_bullet_hit" maxdist="2"/> -->
+	</Effect>
+		<Effect name="bullet_popcornfx_benchmark" delay="0.05">
+		<Audio trigger="bullet_impact_mat_concrete">
+		</Audio>
+		<RandEffect>
+			<PopcornParticle>
+				<Name forwardaxisZ="true" minscale="0.9" maxscale="1.4" maxscaledist="80" maxdist="6" maxpossiblescalemod="3">libs/particles/mfx_bullet_hit_benchmark.pkfx</Name>
+			</PopcornParticle>
+			<PopcornParticle>
+				<Name forwardaxisZ="true" minscale="0.8" maxscale="1.2" maxscaledist="80" maxdist="6" maxpossiblescalemod="3">libs/particles/mfx_bullet_hit_benchmark.pkfx</Name>
+			</PopcornParticle>
+			<PopcornParticle>
+				<Name forwardaxisZ="true" minscale="0.9" maxscale="1.6" maxscaledist="80" maxdist="6" maxpossiblescalemod="3">libs/particles/mfx_bullet_hit_benchmark.pkfx</Name>
+			</PopcornParticle>
+		</RandEffect>
+		<!--RandEffect>
+			<Decal minscale="0.03" maxscale="0.05" lifetime="15.0" maxdist="6">
+				<Material>materials/decals/bullet_hits/concrete_gray_a</Material>
+			</Decal>
+			<Decal minscale="0.03" maxscale="0.05" lifetime="15.0" maxdist="6">
+				<Material>materials/decals/bullet_hits/concrete_gray_b</Material>
+			</Decal>
+			<Decal minscale="0.03" maxscale="0.05" lifetime="15.0" maxdist="6">
+				<Material>materials/decals/bullet_hits/concrete_gray_c</Material>
+			</Decal>
+		</RandEffect-->
+	</Effect>
+	<Effect name="bullet_concrete_gray_thin" delay="0.05">
+		<Audio trigger="bullet_impact_mat_concrete">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.8" maxscaledist="80" maxpossiblescalemod="3">bullet.hit_concrete.gray_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="1" maxscale="1.4" maxscaledist="80" maxpossiblescalemod="3">bullet.hit_concrete.gray_b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.6" maxscaledist="80" maxpossiblescalemod="3">bullet.hit_concrete.gray_c</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<Decal minscale="0.03" maxscale="0.05" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_gray_thin_a</Material>
+			</Decal>
+			<Decal minscale="0.03" maxscale="0.05" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_gray_thin_b</Material>
+			</Decal>
+			<Decal minscale="0.03" maxscale="0.05" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_gray_thin_c</Material>
+			</Decal>
+		</RandEffect>
+		<!-- <FlowGraph name="dirt_bullet_hit" maxdist="2"/> -->
+	</Effect>
+	<Effect name="bullet_concrete_white" delay="0.05">
+		<Audio trigger="bullet_impact_mat_concrete">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.4" maxscaledist="80" maxpossiblescalemod="3">bullet.hit_concrete.a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.8" maxscale="1.8" maxscaledist="80" maxpossiblescalemod="3">bullet.hit_concrete.b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.6" maxscaledist="80" maxpossiblescalemod="3">bullet.hit_concrete.c</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<Decal minscale="0.03" maxscale="0.05" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_white_a</Material>
+			</Decal>
+			<Decal minscale="0.03" maxscale="0.06" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_white_b</Material>
+			</Decal>
+			<Decal minscale="0.03" maxscale="0.06" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_white_c</Material>
+			</Decal>
+		</RandEffect>
+		<!-- <FlowGraph name="dirt_bullet_hit" maxdist="2"/> -->
+	</Effect>
+	<Effect name="bullet_concrete_white_thin" delay="0.05">
+		<Audio trigger="bullet_impact_mat_concrete">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.7" maxscaledist="80" maxpossiblescalemod="3">bullet.hit_concrete.a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.8" maxscale="1.3" maxscaledist="80" maxpossiblescalemod="3">bullet.hit_concrete.b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.7" maxscaledist="80" maxpossiblescalemod="3">bullet.hit_concrete.c</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<Decal minscale="0.03" maxscale="0.06" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_white_thin_a</Material>
+			</Decal>
+			<Decal minscale="0.03" maxscale="0.05" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_white_thin_b</Material>
+			</Decal>
+			<Decal minscale="0.03" maxscale="0.05" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_white_thin_c</Material>
+			</Decal>
+		</RandEffect>
+		<!-- <FlowGraph name="dirt_bullet_hit" maxdist="2"/> -->
+	</Effect>
+	<Effect name="bullet_concrete_yellow" delay="0.05">
+		<Audio trigger="bullet_impact_mat_concrete">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.7" maxscaledist="80" maxpossiblescalemod="3">bullet.hit_concrete.yellow_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.8" maxscale="1.9" maxscaledist="80" maxpossiblescalemod="3">bullet.hit_concrete.yellow_b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.8" maxscaledist="80" maxpossiblescalemod="3">bullet.hit_concrete.yellow_c</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<Decal minscale="0.03" maxscale="0.06" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_yellow_a</Material>
+			</Decal>
+			<Decal minscale="0.03" maxscale="0.05" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_yellow_b</Material>
+			</Decal>
+			<Decal minscale="0.03" maxscale="0.06" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_yellow_c</Material>
+			</Decal>
+		</RandEffect>
+		<!-- <FlowGraph name="dirt_bullet_hit" maxdist="2"/> -->
+	</Effect>
+	<Effect name="bullet_concrete_yellow_thin" delay="0.05">
+		<Audio trigger="bullet_impact_mat_concrete">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.6" maxscaledist="80" maxpossiblescalemod="3">bullet.hit_concrete.yellow_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.6" maxscaledist="80" maxpossiblescalemod="3">bullet.hit_concrete.yellow_b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.7" maxscaledist="80" maxpossiblescalemod="3">bullet.hit_concrete.yellow_c</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<Decal minscale="0.03" maxscale="0.05" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_yellow_thin_a</Material>
+			</Decal>
+			<Decal minscale="0.03" maxscale="0.06" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_yellow_thin_b</Material>
+			</Decal>
+			<Decal minscale="0.03" maxscale="0.05" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_yellow_thin_c</Material>
+			</Decal>
+		</RandEffect>
+		<!-- <FlowGraph name="dirt_bullet_hit" maxdist="2"/> -->
+	</Effect>
+
+	<Effect name="bullet_asphalt" delay="0.05">
+		<Audio trigger="bullet_impact_mat_concrete">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.6" maxscaledist="80">bullet.hit_concrete.gray_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.8" maxscale="1.4" maxscaledist="80">bullet.hit_concrete.gray_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.6" maxscaledist="80">bullet.hit_concrete.gray_a</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<Decal minscale="0.03" maxscale="0.06" lifetime="10.0">
+				<Material>materials/decals/bullet_hits/asphalt_a</Material>		
+			</Decal>
+			<Decal minscale="0.03" maxscale="0.06" lifetime="10.0">
+				<Material>materials/decals/bullet_hits/asphalt_b</Material>		
+			</Decal>
+			<Decal minscale="0.03" maxscale="0.06" lifetime="10.0">
+				<Material>materials/decals/bullet_hits/asphalt_c</Material>		
+			</Decal>
+		</RandEffect>
+	</Effect>
+	
+	<Effect name="bullet_ceramic" delay="0.05">
+		<Audio trigger="bullet_impact_mat_concrete">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.7" maxscale="1.5" maxscaledist="80">bullet.hit_concrete.a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.6" maxscaledist="80">bullet.hit_concrete.b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.8" maxscale="1.7" maxscaledist="80">bullet.hit_concrete.c</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<Decal minscale="0.07" maxscale="0.3" lifetime="10.0">
+				<Material>materials/decals/bullet_hits/ceramics_a</Material>		
+			</Decal>
+			<Decal minscale="0.06" maxscale="0.2" lifetime="10.0">
+				<Material>materials/decals/bullet_hits/ceramics_b</Material>		
+			</Decal>
+			<Decal minscale="0.06" maxscale="0.3" lifetime="10.0">
+				<Material>materials/decals/bullet_hits/ceramics_c</Material>		
+			</Decal>
+		</RandEffect>
+	</Effect>
+	
+	
+<!-- *******************************   CRYSTALLINE   **********************************-->		
+
+
+	<Effect name="bullet_crystalline_red" delay="0.05">
+		<Audio trigger="bullet_impact_mat_crystalline">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.7" maxscaledist="80">bullet.hit_crystalline.red_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.8" maxscaledist="80">bullet.hit_crystalline.red_b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.6" maxscaledist="80">bullet.hit_crystalline.red_c</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<Decal minscale="0.15" maxscale="0.25" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/crystalline_a</Material>
+			</Decal>
+			<Decal minscale="0.15" maxscale="0.25" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/crystalline_b</Material>
+			</Decal>
+			<Decal minscale="0.15" maxscale="0.25" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/crystalline_c</Material>
+			</Decal>
+		</RandEffect>
+		<!-- <FlowGraph name="dirt_bullet_hit" maxdist="2"/> -->
+	</Effect>
+	
+	<Effect name="bullet_crystalline_black" delay="0.05">
+		<Audio trigger="bullet_impact_mat_crystalline">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.4" maxscaledist="80">bullet.hit_crystalline.black_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.6" maxscaledist="80">bullet.hit_crystalline.black_b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.5" maxscaledist="80">bullet.hit_crystalline.black_c</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<Decal minscale="0.15" maxscale="0.25" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/crystalline_a</Material>
+			</Decal>
+			<Decal minscale="0.15" maxscale="0.25" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/crystalline_b</Material>
+			</Decal>
+			<Decal minscale="0.15" maxscale="0.25" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/crystalline_c</Material>
+			</Decal>
+		</RandEffect>
+		<!-- <FlowGraph name="dirt_bullet_hit" maxdist="2"/> -->
+	</Effect>
+	
+    <Effect name="bullet_crystalline_red_shotgun" delay="0.05">
+		<Audio trigger="bullet_impact_shg_mat_concrete">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.7" maxscale="1.2" maxscaledist="80">bullet.hit_crystalline.shotgun_red_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.8" maxscale="1.3" maxscaledist="80">bullet.hit_crystalline.shotgun_red_b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.7" maxscale="1.2" maxscaledist="80">bullet.hit_crystalline.shotgun_red_c</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<Decal minscale="0.1" maxscale="0.2" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/crystalline_a</Material>
+			</Decal>
+			<Decal minscale="0.1" maxscale="0.2" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/crystalline_b</Material>
+			</Decal>
+			<Decal minscale="0.1" maxscale="0.2" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/crystalline_c</Material>
+			</Decal>
+		</RandEffect>
+	</Effect>
+	<Effect name="bullet_crystalline_black_shotgun" delay="0.05">
+		<Audio trigger="bullet_impact_shg_mat_concrete">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.7" maxscale="1.2" maxscaledist="80">bullet.hit_crystalline.shotgun_black_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.8" maxscale="1.3" maxscaledist="80">bullet.hit_crystalline.shotgun_black_b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.7" maxscale="1.2" maxscaledist="80">bullet.hit_crystalline.shotgun_black_c</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<Decal minscale="0.1" maxscale="0.18" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/crystalline_a</Material>
+			</Decal>
+			<Decal minscale="0.1" maxscale="0.17" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/crystalline_b</Material>
+			</Decal>
+			<Decal minscale="0.1" maxscale="0.18" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/crystalline_c</Material>
+			</Decal>
+		</RandEffect>
+	</Effect>	
+	
+<!-- *******************************   CRYSTALLINE  END  **********************************-->			
+	
+	
+	<Effect name="bullet_gravel" delay="0.05">
+		<Audio trigger="bullet_impact_mat_gravel">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.4" maxscaledist="80">bullet.hit_concrete.gray_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.4" maxscaledist="80">bullet.hit_concrete.gray_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.3" maxscaledist="80">bullet.hit_concrete.gray_a</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<!-- <Decal minscale="0.02" maxscale="0.1"> -->
+				<!-- <Material>materials/decals/concrete/concrete_plain</Material> -->
+			<!-- </Decal> -->
+			<!-- <Decal minscale="0.03" maxscale="0.08"> -->
+				<!-- <Material>materials/decals/rock/rock_sandy</Material> -->
+				<!-- <Material>materials/decals/rock/rock_sandy</Material> -->
+			<!-- </Decal> -->
+		</RandEffect>
+		<RandEffect>
+			<!-- <Decal minscale="0.05" maxscale="0.4"> -->
+				<!-- <Material>materials/decals/concrete/concrete_crack1</Material> -->
+			<!-- </Decal> -->
+			<!-- <Decal minscale="0.04" maxscale="0.1"> -->
+				<!-- <Material>materials/decals/concrete/concrete_crack2</Material> -->
+			<!-- </Decal> -->
+			<!-- <Decal minscale="0.05" maxscale="0.2"> -->
+				<!-- <Material>materials/decals/concrete/concrete_crack3</Material> -->
+			<!-- </Decal> -->
+		</RandEffect>
+		<!-- <FlowGraph name="dirt_bullet_hit" maxdist="2"/> -->
+	</Effect>
+	
+<!-- **********************DEFAULT**************************-->	
+
+	<Effect name="hit_mat_default" delay="0.05">
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+		<Particle>
+			<Name>bullet.hit_default.a</Name>
+		</Particle>
+		<RandEffect>
+			<!-- <Decal minscale="0.04" maxscale="0.06"> -->
+				<!-- <Material>materials/decals/dirt/ground</Material> -->
+			<!-- </Decal> -->
+		</RandEffect>
+	</Effect>
+
+	<Effect name="bullet_fabric" delay="0.05">
+		<Audio trigger="bullet_impact_mat_fabric">
+		</Audio>
+	    <RandEffect>
+			<Particle>
+				<Name minscale="0.65" maxscale="1.1" maxscaledist="70">bullet.hit_fabric.a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.85" maxscale="1.0" maxscaledist="70">bullet.hit_fabric.b</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<!-- <Decal minscale="0.04" maxscale="0.06"> -->
+				<!-- <Material>materials/decals/dirt/ground</Material> -->
+			<!-- </Decal> -->
+		</RandEffect>
+	</Effect>
+	<Effect name="bullet_fabric_shotgun" delay="0.05">
+		<Audio trigger="bullet_impact_shg_mat_fabric">
+		</Audio>
+	    <RandEffect>
+			<Particle>
+				<Name minscale="0.60" maxscale="1.0" maxscaledist="70">bullet.hit_fabric.shotgun_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.75" maxscale="1.0" maxscaledist="70">bullet.hit_fabric.shotgun_b</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<!-- <Decal minscale="0.04" maxscale="0.06"> -->
+				<!-- <Material>materials/decals/dirt/ground</Material> -->
+			<!-- </Decal> -->
+		</RandEffect>
+	</Effect>
+
+	<Effect name="bullet_flesh" delay="0.05" >
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+		<RandEffect>
+			<!-- <Decal minscale="0.05" maxscale="0.1" lifetime="5.0"> -->
+				<!-- <Material>materials/decals/blood/human_body</Material> -->
+			<!-- </Decal> -->
+		</RandEffect>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.85" maxscale="1.1" maxscaledist="70" maxpossiblescalemod="3">bullet.hit_flesh.a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.75" maxscale="1.1" maxscaledist="70" maxpossiblescalemod="3">bullet.hit_flesh.b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.85" maxscale="1.2" maxscaledist="70" maxpossiblescalemod="3">bullet.hit_flesh.c</Name>
+			</Particle>
+		</RandEffect>
+		<!-- <FlowGraph name="blood_bullet_hit" maxdist="2"/> -->
+	</Effect>
+	<Effect name="bullet_flesh_shotgun" delay="0.05" >
+		<Audio trigger="bullet_impact_shg_mat_flesh">
+		</Audio>
+		<RandEffect>
+			<!-- <Decal minscale="0.05" maxscale="0.1" lifetime="5.0"> -->
+				<!-- <Material>materials/decals/blood/human_body</Material> -->
+			<!-- </Decal> -->
+		</RandEffect>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.5" maxscale="0.85" maxscaledist="70" maxpossiblescalemod="2">bullet.hit_flesh.shotgun_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.5" maxscale="0.75" maxscaledist="70" maxpossiblescalemod="2">bullet.hit_flesh.shotgun_b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.5" maxscale="0.85" maxscaledist="70" maxpossiblescalemod="2">bullet.hit_flesh.shotgun_c</Name>
+			</Particle>
+		</RandEffect>
+		<!-- <FlowGraph name="blood_bullet_hit" maxdist="2"/> -->
+	</Effect>
+
+	<Effect name="bullet_glass" delay="0.05">
+		<Audio trigger="bullet_impact_mat_glass">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.8" maxscale="1.2" maxscaledist="80">bullet.hit_glass.a</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<Decal minscale="0.2" maxscale="0.3" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/glass_a</Material>
+			</Decal>
+			<Decal minscale="0.2" maxscale="0.3" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/glass_b</Material>
+			</Decal>
+			<Decal minscale="0.2" maxscale="0.3" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/glass_c</Material>
+			</Decal>
+		</RandEffect>
+	</Effect>
+	<Effect name="bullet_glass_shotgun" delay="0.05">
+		<Audio trigger="bullet_impact_shg_mat_glass">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.7" maxscale="1.0" maxscaledist="80">bullet.hit_glass.shotgun_a</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<Decal minscale="0.1" maxscale="0.2" lifetime="10.0">
+				<Material>materials/decals/bullet_hits/glass_a</Material>
+			</Decal>
+			<Decal minscale="0.1" maxscale="0.2" lifetime="10.0">
+				<Material>materials/decals/bullet_hits/glass_b</Material>
+			</Decal>
+			<Decal minscale="0.1" maxscale="0.2" lifetime="10.0">
+				<Material>materials/decals/bullet_hits/glass_c</Material>
+			</Decal>
+		</RandEffect>
+	</Effect>
+	
+	<Effect name="bullet_glass_unbr" delay="0.05">
+		<Audio trigger="bullet_impact_mat_glass_unbreakable">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.6" maxscale="1.0" maxscaledist="80">bullet.hit_glass.a</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<Decal minscale="0.2" maxscale="0.3" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/glass_a</Material>
+			</Decal>
+			<Decal minscale="0.2" maxscale="0.3" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/glass_b</Material>
+			</Decal>
+			<Decal minscale="0.2" maxscale="0.3" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/glass_c</Material>
+			</Decal>
+		</RandEffect>
+	</Effect>
+	<Effect name="bullet_glass_unbr_shotgun" delay="0.05">
+		<Audio trigger="bullet_impact_shg_mat_glass_unbreakable">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.7" maxscale="1.0" maxscaledist="80">bullet.hit_glass.shotgun_a</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<Decal minscale="0.2" maxscale="0.3" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/glass_a</Material>
+			</Decal>
+			<Decal minscale="0.2" maxscale="0.3" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/glass_b</Material>
+			</Decal>
+			<Decal minscale="0.2" maxscale="0.3" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/glass_c</Material>
+			</Decal>
+		</RandEffect>
+	</Effect>
+
+	<Effect name="bullet_grass" delay="0.05">
+		<Audio trigger="bullet_impact_mat_grass">
+		</Audio>
+		<RandEffect name="particles1">
+			<Particle>
+				<Name minscale="0.3" maxscale="1" maxscaledist="80">bullet.hit_grass.a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.4" maxscale="1.3" maxscaledist="80">bullet.hit_grass.b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.6" maxscale="1.2" maxscaledist="80">bullet.hit_grass.c</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<!-- <Decal minscale="0.04" maxscale="0.06"> -->
+				<!-- <Material>materials/decals/dirt/ground</Material> -->
+			<!-- </Decal> -->
+		</RandEffect>
+		<!-- <FlowGraph name="dirt_bullet_hit" maxdist="2"/> -->
+	</Effect>
+	<Effect name="bullet_grass_green" delay="0.05">
+		<Audio trigger="bullet_impact_mat_grass">
+		</Audio>
+		<RandEffect name="particles1">
+			<Particle>
+				<Name minscale="0.3" maxscale="1" maxscaledist="80">bullet.hit_grass.a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.4" maxscale="1.3" maxscaledist="80">bullet.hit_grass.b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.6" maxscale="1.2" maxscaledist="80">bullet.hit_grass.c</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<!-- <Decal minscale="0.04" maxscale="0.06"> -->
+				<!-- <Material>materials/decals/dirt/ground</Material> -->
+			<!-- </Decal> -->
+		</RandEffect>
+		<!-- <FlowGraph name="dirt_bullet_hit" maxdist="2"/> -->
+	</Effect>
+	<Effect name="bullet_grass_dry" delay="0.05">
+		<Audio trigger="bullet_impact_mat_grass">
+		</Audio>
+		<RandEffect name="particles1">
+			<Particle>
+				<Name minscale="0.3" maxscale="1" maxscaledist="80">bullet.hit_grass.a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.4" maxscale="1.3" maxscaledist="80">bullet.hit_grass.b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.6" maxscale="1.2" maxscaledist="80">bullet.hit_grass.c</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<!-- <Decal minscale="0.04" maxscale="0.06"> -->
+				<!-- <Material>materials/decals/dirt/ground</Material> -->
+			<!-- </Decal> -->
+		</RandEffect>
+		<!-- <FlowGraph name="dirt_bullet_hit" maxdist="2"/> -->
+	</Effect>
+
+	<Effect name="bullet_ice" delay="0.05">
+		<Audio trigger="bullet_impact_mat_ice">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.5" maxscale="1" maxscaledist="200">bullet.hit_ice.a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.6" maxscale="1.2" maxscaledist="200">bullet.hit_ice.b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.7" maxscale="0.8" maxscaledist="200">bullet.hit_ice.c</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<!-- <Decal minscale="0.06" maxscale="0.15"> -->
+				<!-- <Material>materials/decals/ice/ice</Material> -->
+			<!-- </Decal> -->
+		</RandEffect>
+		<!-- <FlowGraph name="dirt_bullet_hit" maxdist="2"/> -->
+	</Effect>
+
+	<Effect name="bullet_metal" delay="0.05" lifetime="15.0">
+		<Audio trigger="bullet_impact_mat_metal">
+		</Audio>
+		<RandEffect>
+			<PopcornParticle>
+				<Name forwardaxisZ="true" minscale="1.2" maxscale="2.0" maxscaledist="60" maxpossiblescalemod="15" particlecountmultiplier ="1.0">libs/particles/bullet/mfx_bullet_hit_metal.pkfx</Name>
+			</PopcornParticle>
+			<PopcornParticle>
+				<Name forwardaxisZ="true" minscale="1.2" maxscale="2.0" maxscaledist="60" maxpossiblescalemod="15" particlecountmultiplier ="0.5">libs/particles/bullet/mfx_bullet_hit_metal.pkfx</Name>
+			</PopcornParticle>
+		</RandEffect>
+		<RandEffect>
+			 <Decal minscale="0.015" maxscale="0.03">
+				<Material>materials/decals/bullet_hits/metal_nonpierceble_a</Material>
+			 </Decal>
+			<Decal minscale="0.015" maxscale="0.03">
+				<Material>materials/decals/bullet_hits/metal_nonpierceble_b</Material>
+			 </Decal>
+			 <Decal minscale="0.015" maxscale="0.03">
+				<Material>materials/decals/bullet_hits/metal_nonpierceble_c</Material>
+			 </Decal>
+		</RandEffect>
+	</Effect>
+	
+	<Effect name="bullet_metal_shotgun" delay="0.05" lifetime="15.0">
+		<Audio trigger="bullet_impact_shg_mat_metal">
+		</Audio>
+		<RandEffect>
+			<PopcornParticle>
+				<Name forwardaxisZ="true" minscale="0.55" maxscale="1.0" maxscaledist="60" maxpossiblescalemod="10" particlecountmultiplier ="0.0">libs/particles/bullet/mfx_bullet_hit_metal.pkfx</Name>
+			</PopcornParticle>
+			<PopcornParticle>
+				<Name forwardaxisZ="true" minscale="0.5" maxscale="0.75" maxscaledist="60" maxpossiblescalemod="10" particlecountmultiplier ="0.1">libs/particles/bullet/mfx_bullet_hit_metal.pkfx</Name>
+			</PopcornParticle>
+		</RandEffect>
+		<RandEffect>
+			 <Decal minscale="0.012" maxscale="0.02">
+				<Material>materials/decals/bullet_hits/metal_a</Material>
+			 </Decal>
+			<Decal minscale="0.011" maxscale="0.02">
+				<Material>materials/decals/bullet_hits/metal_b</Material>
+			 </Decal>
+		</RandEffect>
+	</Effect>
+	
+	<Effect name="bullet_metal_grate" delay="0.05">
+		<Audio trigger="bullet_impact_mat_metal_grate">
+		</Audio>
+		<RandEffect>
+			<PopcornParticle>
+				<Name forwardaxisZ="true" minscale="1.2" maxscale="2.0" maxscaledist="60" maxpossiblescalemod="10" particlecountmultiplier ="0.35">libs/particles/bullet/mfx_bullet_hit_metal.pkfx</Name>
+			</PopcornParticle>
+			<PopcornParticle>
+				<Name forwardaxisZ="true" minscale="1.2" maxscale="2.0" maxscaledist="60" maxpossiblescalemod="10" particlecountmultiplier ="0.15">libs/particles/bullet/mfx_bullet_hit_metal.pkfx</Name>
+			</PopcornParticle>
+		</RandEffect>
+		<RandEffect>
+			<!-- <Decal minscale="0.015" maxscale="0.03"> -->
+				<!-- <Material>materials/decals/metal/metal_tin</Material> -->
+			<!-- </Decal> -->
+		</RandEffect>
+	</Effect>
+    <Effect name="bullet_metal_grate_shotgun" delay="0.05">
+		<Audio trigger="bullet_impact_shg_mat_metal_grate">
+		</Audio>
+		<RandEffect>
+			<PopcornParticle>
+				<Name forwardaxisZ="true" minscale="0.55" maxscale="1.0" maxscaledist="60" maxpossiblescalemod="10" particlecountmultiplier ="0.0">libs/particles/bullet/mfx_bullet_hit_metal.pkfx</Name>
+			</PopcornParticle>
+			<PopcornParticle>
+				<Name forwardaxisZ="true" minscale="0.55" maxscale="1.2" maxscaledist="60" maxpossiblescalemod="10" particlecountmultiplier ="0.0">libs/particles/bullet/mfx_bullet_hit_metal.pkfx</Name>
+			</PopcornParticle>
+			<PopcornParticle>
+				<Name forwardaxisZ="true" minscale="0.5" maxscale="0.75" maxscaledist="60" maxpossiblescalemod="10" particlecountmultiplier ="0.1">libs/particles/bullet/mfx_bullet_hit_metal.pkfx</Name>
+			</PopcornParticle>
+		</RandEffect>
+		<RandEffect>
+			<!-- <Decal minscale="0.015" maxscale="0.03"> -->
+				<!-- <Material>materials/decals/metal/metal_tin</Material> -->
+			<!-- </Decal> -->
+		</RandEffect>
+	</Effect>
+	
+	<Effect name="bullet_metal_sheet" delay="0.05" lifetime="15.0">
+		<Audio trigger="bullet_impact_mat_metal_sheet">
+		</Audio>
+		<RandEffect>
+			<PopcornParticle>
+				<Name forwardaxisZ="true" minscale="1.0" maxscale="2.0" maxscaledist="60" maxpossiblescalemod="15" particlecountmultiplier ="0.5">libs/particles/bullet/mfx_bullet_hit_metal.pkfx</Name>
+			</PopcornParticle>
+			<PopcornParticle>
+				<Name forwardaxisZ="true" minscale="0.75" maxscale="2.0" maxscaledist="60" maxpossiblescalemod="15" particlecountmultiplier ="0.25">libs/particles/bullet/mfx_bullet_hit_metal.pkfx</Name>
+			</PopcornParticle>
+		</RandEffect>
+		<RandEffect>
+			 <Decal minscale="0.015" maxscale="0.03">
+				<Material>materials/decals/bullet_hits/metal_a</Material>
+			 </Decal>
+			<Decal minscale="0.015" maxscale="0.03">
+				<Material>materials/decals/bullet_hits/metal_b</Material>
+			 </Decal>
+		</RandEffect>
+	</Effect>
+    <Effect name="bullet_metal_sheet_shotgun" delay="0.05" lifetime="10.0">
+		<Audio trigger="bullet_impact_shg_mat_metal_sheet">
+		</Audio>
+		<RandEffect>
+			<PopcornParticle>
+				<Name forwardaxisZ="true" minscale="0.5" maxscale="1.0" maxscaledist="60" maxpossiblescalemod="15" particlecountmultiplier ="0.1">libs/particles/bullet/mfx_bullet_hit_metal.pkfx</Name>
+			</PopcornParticle>
+			<PopcornParticle>
+				<Name forwardaxisZ="true" minscale="0.5" maxscale="1.0" maxscaledist="60" maxpossiblescalemod="15" particlecountmultiplier ="0.2">libs/particles/bullet/mfx_bullet_hit_metal.pkfx</Name>
+			</PopcornParticle>
+		</RandEffect>
+		<RandEffect>
+			 <Decal minscale="0.012" maxscale="0.02">
+				<Material>materials/decals/bullet_hits/metal_a</Material>
+			 </Decal>
+			<Decal minscale="0.011" maxscale="0.02">
+				<Material>materials/decals/bullet_hits/metal_b</Material>
+			 </Decal>
+		</RandEffect>
+	</Effect>
+	
+	<Effect name="bullet_metal_sheet_nodecal" delay="0.05">
+		<Audio trigger="bullet_impact_mat_metal_sheet">
+		</Audio>
+		<RandEffect>
+			<PopcornParticle>
+				<Name forwardaxisZ="true" minscale="1.0" maxscale="2.0" maxscaledist="60" maxpossiblescalemod="15" particlecountmultiplier ="0.1">libs/particles/bullet/mfx_bullet_hit_metal.pkfx</Name>
+			</PopcornParticle>
+			<PopcornParticle>
+				<Name forwardaxisZ="true" minscale="0.75" maxscale="2.0" maxscaledist="60" maxpossiblescalemod="15" particlecountmultiplier ="0.5">libs/particles/bullet/mfx_bullet_hit_metal.pkfx</Name>
+			</PopcornParticle>
+		</RandEffect>
+	</Effect>
+    <Effect name="bullet_metal_sheet_nodecal_shotgun" delay="0.05">
+		<Audio trigger="bullet_impact_shg_mat_metal_sheet">
+		</Audio>
+		<RandEffect>
+			<PopcornParticle>
+				<Name forwardaxisZ="true" minscale="1.0" maxscale="2.0" maxscaledist="60" maxpossiblescalemod="15" particlecountmultiplier ="1.1">libs/particles/bullet/mfx_bullet_hit_metal.pkfx</Name>
+			</PopcornParticle>
+			<PopcornParticle>
+				<Name forwardaxisZ="true" minscale="0.75" maxscale="2.0" maxscaledist="60" maxpossiblescalemod="15" particlecountmultiplier ="0.9">libs/particles/bullet/mfx_bullet_hit_metal.pkfx</Name>
+			</PopcornParticle>
+		</RandEffect>
+	</Effect>
+	
+	<Effect name="bullet_metal_barbwire" delay="0.05">
+		<Audio trigger="bullet_impact_mat_metal_sheet">
+		</Audio>
+		<RandEffect>
+			<PopcornParticle>
+				<Name forwardaxisZ="true" minscale="1.0" maxscale="2.0" maxscaledist="60" maxpossiblescalemod="15" particlecountmultiplier ="0.1">libs/particles/bullet/mfx_bullet_hit_metal.pkfx</Name>
+			</PopcornParticle>
+			<PopcornParticle>
+				<Name forwardaxisZ="true" minscale="0.75" maxscale="2.0" maxscaledist="60" maxpossiblescalemod="15" particlecountmultiplier ="0.0">libs/particles/bullet/mfx_bullet_hit_metal.pkfx</Name>
+			</PopcornParticle>
+		</RandEffect>
+		<RandEffect>
+			<!-- <Decal minscale="0.015" maxscale="0.03"> -->
+				<!-- <Material>materials/decals/metal/metal_tin</Material> -->
+			<!-- </Decal> -->
+		</RandEffect>
+	</Effect>
+	<Effect name="bullet_metal_barbwire_shotgun" delay="0.05">
+		<Audio trigger="bullet_impact_shg_mat_metal_sheet">
+		</Audio>
+		<RandEffect>
+			<PopcornParticle>
+				<Name forwardaxisZ="true" minscale="0.5" maxscale="1.0" maxscaledist="60" maxpossiblescalemod="15" particlecountmultiplier ="0.1">libs/particles/bullet/mfx_bullet_hit_metal.pkfx</Name>
+			</PopcornParticle>
+			<PopcornParticle>
+				<Name forwardaxisZ="true" minscale="0.75" maxscale="2.0" maxscaledist="60" maxpossiblescalemod="15" particlecountmultiplier ="0.0">libs/particles/bullet/mfx_bullet_hit_metal.pkfx</Name>
+			</PopcornParticle>
+		</RandEffect>
+		<RandEffect>
+			<!-- <Decal minscale="0.015" maxscale="0.03"> -->
+				<!-- <Material>materials/decals/metal/metal_tin</Material> -->
+			<!-- </Decal> -->
+		</RandEffect>
+	</Effect>
+
+	<Effect name="bullet_mud" delay="0.05">
+		<Audio trigger="bullet_impact_mat_soil">
+		</Audio>
+		<RandEffect>
+			<!-- <Decal minscale="0.03" maxscale="0.07"> -->
+				<!-- <Material>materials/decals/dirt/terrain_soil</Material> -->
+			<!-- </Decal> -->
+		</RandEffect>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.6" maxscale="1.0" maxscaledist="80">bullet.hit_soil.a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.5" maxscale="1.0" maxscaledist="80">bullet.hit_soil.b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.6" maxscale="1.0" maxscaledist="80">bullet.hit_soil.c</Name>
+			</Particle>
+		</RandEffect>
+		<!-- <FlowGraph name="dirt_bullet_hit" maxdist="2"/> -->
+	</Effect>
+	<Effect name="bullet_plastic" delay="0.05">
+		<Audio trigger="bullet_impact_mat_plastic">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name>bullet.hit_rubber.a</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<Decal minscale="0.03" maxscale="0.05" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/plastic_a</Material>
+			</Decal>
+			<Decal minscale="0.03" maxscale="0.05" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/plastic_b</Material>
+			</Decal>
+		</RandEffect>
+	</Effect>
+	<Effect name="bullet_plastic_nodecal" delay="0.05">
+		<Audio trigger="bullet_impact_mat_plastic">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name>bullet.hit_rubber.a</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<!-- <Decal minscale="0.04" maxscale="0.06"> -->
+				<!-- <Material>materials/decals/dirt/ground</Material> -->
+			<!-- </Decal> -->
+		</RandEffect>
+	</Effect>
+	
+	<Effect name="bullet_rock" delay="0.05">
+		<Audio trigger="bullet_impact_mat_rock">
+		</Audio>
+		<RandEffect>
+			<Decal minscale="0.05" maxscale="0.08" lifetime="12.0">
+				<Material>materials/decals/bullet_hits/rock_a</Material>
+			</Decal>
+			<Decal minscale="0.04" maxscale="0.08" lifetime="12.0">
+				<Material>materials/decals/bullet_hits/rock_b</Material>
+			</Decal>
+			<Decal minscale="0.04" maxscale="0.08" lifetime="12.0">
+				<Material>materials/decals/bullet_hits/rock_c</Material>
+			</Decal>
+		</RandEffect>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.6" maxscale="1.3" maxscaledist="80">bullet.hit_rock.a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.6" maxscale="1.3" maxscaledist="80">bullet.hit_rock.b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.6" maxscale="1.3" maxscaledist="80">bullet.hit_rock.c</Name>
+			</Particle>
+		</RandEffect>
+		<!-- <FlowGraph name="dirt_bullet_hit" maxdist="2"/> -->
+	</Effect>
+
+	<Effect name="bullet_rock_dusty" delay="0.05">
+		<Audio trigger="bullet_impact_mat_rock">
+		</Audio>
+		<RandEffect>
+			<!-- <Decal minscale="0.1" maxscale="0.2"> -->
+				<!-- <Material>materials/decals/rock/rock_sandy</Material> -->
+			<!-- </Decal> -->
+		</RandEffect>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.6" maxscale="1.2" maxscaledist="40">bullet.hit_rock.a_dusty</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.6" maxscale="1.2" maxscaledist="40">bullet.hit_rock.b_dusty</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.6" maxscale="1.2" maxscaledist="40">bullet.hit_rock.c_dusty</Name>
+			</Particle>
+		</RandEffect>
+		<!-- <FlowGraph name="dirt_bullet_hit" maxdist="2"/> -->
+	</Effect>
+
+	<Effect name="bullet_rubber" delay="0.05">
+		<Audio trigger="bullet_impact_mat_plastic">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.6" maxscale="1.0" maxscaledist="80">bullet.hit_rubber.a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.8" maxscale="1.2" maxscaledist="80">bullet.hit_rubber.b</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<Decal minscale="0.05" maxscale="0.08" lifetime="10.0">
+				<Material>materials/decals/bullet_hits/rubber_a</Material>
+			</Decal>
+			<Decal minscale="0.04" maxscale="0.08" lifetime="10.0">
+				<Material>materials/decals/bullet_hits/rubber_b</Material>
+			</Decal>
+			<Decal minscale="0.04" maxscale="0.08" lifetime="10.0">
+				<Material>materials/decals/bullet_hits/rubber_c</Material>
+			</Decal>
+		</RandEffect>
+	</Effect>
+
+	<Effect name="bullet_sand" delay="0.05">
+		<Audio trigger="bullet_impact_mat_sand">
+		</Audio>
+		<RandEffect>
+			<!-- <Decal minscale="0.03" maxscale="0.07"> -->
+				<!-- <Material>materials/decals/dirt/terrain_soil</Material> -->
+			<!-- </Decal> -->
+		</RandEffect>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.5" maxscaledist="80" maxpossiblescalemod="2">bullet.hit_sand.a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.6" maxscaledist="80" maxpossiblescalemod="2">bullet.hit_sand.b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.5" maxscaledist="80" maxpossiblescalemod="2">bullet.hit_sand.c</Name>
+			</Particle>
+		</RandEffect>
+		<!-- <FlowGraph name="dirt_bullet_hit" maxdist="2"/> -->
+	</Effect>
+	<Effect name="bullet_sand_shotgun" delay="0.05">
+		<Audio trigger="bullet_impact_shg_mat_sand">
+		</Audio>
+		<RandEffect>
+			<!-- <Decal minscale="0.03" maxscale="0.07"> -->
+				<!-- <Material>materials/decals/dirt/terrain_soil</Material> -->
+			<!-- </Decal> -->
+		</RandEffect>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.2" maxscaledist="80" maxpossiblescalemod="2">bullet.hit_sand.shotgun_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.3" maxscaledist="80" maxpossiblescalemod="2">bullet.hit_sand.shotgun_b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.2" maxscaledist="80" maxpossiblescalemod="2">bullet.hit_sand.shotgun_c</Name>
+			</Particle>
+		</RandEffect>
+		<!-- <FlowGraph name="dirt_bullet_hit" maxdist="2"/> -->
+	</Effect>
+	<Effect name="bullet_sand_wet" delay="0.05">
+		<Audio trigger="bullet_impact_mat_soil">
+		</Audio>
+		<RandEffect>
+			<!-- <Decal minscale="0.03" maxscale="0.07"> -->
+				<!-- <Material>materials/decals/dirt/terrain_soil</Material> -->
+			<!-- </Decal> -->
+		</RandEffect>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.7" maxscaledist="80" maxpossiblescalemod="2">bullet.hit_sand.wet_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.5" maxscaledist="80" maxpossiblescalemod="2">bullet.hit_sand.wet_b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.6" maxscaledist="80" maxpossiblescalemod="2">bullet.hit_sand.wet_c</Name>
+			</Particle>
+		</RandEffect>
+		<!-- <FlowGraph name="dirt_bullet_hit" maxdist="2"/> -->
+	</Effect>
+	<Effect name="bullet_snow" delay="0.05">
+		<Audio trigger="bullet_impact_mat_snow">
+		</Audio>
+		<RandEffect>
+			<!-- <Decal minscale="0.05" maxscale="0.11"> -->
+				<!-- <Material>materials/decals/snow/snow_melt</Material> -->
+			<!-- </Decal> -->
+		</RandEffect>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.5" maxscale="1.2" maxscaledist="200">bullet.hit_snow.a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.5" maxscale="1.2" maxscaledist="200">bullet.hit_snow.b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.5" maxscale="1.2" maxscaledist="200">bullet.hit_snow.c</Name>
+			</Particle>
+		</RandEffect>
+	</Effect>
+
+	<Effect name="bullet_soil" delay="0.05">
+		<Audio trigger="bullet_impact_mat_soil">
+		</Audio>
+		<RandEffect>
+			<!-- <Decal minscale="0.03" maxscale="0.07"> -->
+				<!-- <Material>materials/decals/dirt/terrain_soil</Material> -->
+			<!-- </Decal> -->
+		</RandEffect>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.5" maxscaledist="80" maxpossiblescalemod="2">bullet.hit_soil.a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.6" maxscaledist="80" maxpossiblescalemod="2">bullet.hit_soil.b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.7" maxscaledist="80" maxpossiblescalemod="2">bullet.hit_soil.c</Name>
+			</Particle>
+		</RandEffect>
+		<!-- <FlowGraph name="dirt_bullet_hit" maxdist="2"/> -->
+	</Effect>
+
+	<Effect name="bullet_vegetation_green" delay="0.05">
+		<Audio trigger="bullet_impact_mat_grass">
+		</Audio>
+		<RandEffect>
+			<Particle name="masterpart1" >
+				<Name minscale="0.9" maxscale="1.3" maxscaledist="80">bullet.hit_vegetation.green_a</Name>
+			</Particle>
+			<Particle name="masterpart1" >
+				<Name minscale="0.9" maxscale="1.4" maxscaledist="80">bullet.hit_vegetation.green_b</Name>
+			</Particle>
+		</RandEffect>
+	</Effect>
+	<Effect name="bullet_vegetation_dry" delay="0.05">
+		<Audio trigger="bullet_impact_mat_grass">
+		</Audio>
+		<RandEffect>
+			<Particle name="masterpart1" >
+				<Name minscale="0.9" maxscale="1.4" maxscaledist="80">bullet.hit_vegetation.dry_a</Name>
+			</Particle>
+			<Particle name="masterpart1" >
+				<Name minscale="0.9" maxscale="1.3" maxscaledist="80">bullet.hit_vegetation.dry_b</Name>
+			</Particle>
+		</RandEffect>
+	</Effect>
+
+	<Effect name="bullet_water" delay="0.05">
+		<Audio trigger="bullet_impact_mat_water">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.4" maxscaledist="200">bullet.hit_water.a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.6" maxscaledist="200">bullet.hit_water.b</Name>
+			</Particle>
+		</RandEffect>
+		<!-- <FlowGraph name="water_bullet_hit" maxdist="2"/> -->
+	</Effect>
+	
+	<Effect name="bullet_wet" delay="0.05">
+		<Audio trigger="bullet_impact_mat_water">
+		</Audio>
+	</Effect>
+
+	<Effect name="bullet_wood" delay="0.05">
+		<Audio trigger="bullet_impact_mat_wood">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.8" maxscale="1.4" maxscaledist="70" maxpossiblescalemod="2">bullet.hit_wood.a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.6" maxscaledist="70" maxpossiblescalemod="2">bullet.hit_wood.b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.8" maxscale="1.4" maxscaledist="70" maxpossiblescalemod="2">bullet.hit_wood.c</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<Decal minscale="0.03" maxscale="0.08" lifetime="15.0" rotation="0"> 
+				<Material>materials/decals/bullet_hits/wood_a.mtl</Material>
+			</Decal> 
+			<Decal minscale="0.03" maxscale="0.09" lifetime="15.0" rotation="0"> 
+				<Material>materials/decals/bullet_hits/wood_b.mtl</Material>
+			</Decal> 
+			<Decal minscale="0.03" maxscale="0.08" lifetime="15.0" rotation="0"> 
+				<Material>materials/decals/bullet_hits/wood_c.mtl</Material>
+			</Decal> 
+		</RandEffect>
+	</Effect>
+    <Effect name="bullet_wood_shotgun" delay="0.05">
+		<Audio trigger="bullet_impact_shg_mat_wood">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.8" maxscale="1.2" maxscaledist="70" maxpossiblescalemod="2">bullet.hit_wood.shotgun_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.2" maxscaledist="70" maxpossiblescalemod="2">bullet.hit_wood.shotgun_b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.8" maxscale="1.2" maxscaledist="70" maxpossiblescalemod="2">bullet.hit_wood.shotgun_c</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<Decal minscale="0.03" maxscale="0.05" lifetime="10.0" rotation="0"> 
+				<Material>materials/decals/bullet_hits/wood_a.mtl</Material>
+			</Decal> 
+			<Decal minscale="0.03" maxscale="0.06" lifetime="10.0" rotation="0"> 
+				<Material>materials/decals/bullet_hits/wood_b.mtl</Material>
+			</Decal> 
+			<Decal minscale="0.03" maxscale="0.05" lifetime="10.0" rotation="0"> 
+				<Material>materials/decals/bullet_hits/wood_c.mtl</Material>
+			</Decal> 
+		</RandEffect>
+	</Effect>
+	
+	<Effect name="bullet_wood_hollow" delay="0.05">
+		<Audio trigger="bullet_impact_mat_wood_hollow">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.7" maxscale="1.4" maxscaledist="70" maxpossiblescalemod="2">bullet.hit_wood.b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.8" maxscale="1.2" maxscaledist="70" maxpossiblescalemod="2">bullet.hit_wood.c</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<Decal minscale="0.03" maxscale="0.06" lifetime="15.0" rotation="0"> 
+				<Material>materials/decals/bullet_hits/wood_a.mtl</Material>
+			</Decal> 
+			<Decal minscale="0.03" maxscale="0.07" lifetime="15.0" rotation="0"> 
+				<Material>materials/decals/bullet_hits/wood_b.mtl</Material>
+			</Decal> 
+			<Decal minscale="0.03" maxscale="0.05" lifetime="15.0" rotation="0"> 
+				<Material>materials/decals/bullet_hits/wood_c.mtl</Material>
+			</Decal> 
+		</RandEffect>
+	</Effect>
+    <Effect name="bullet_wood_hollow_shotgun" delay="0.05">
+		<Audio trigger="bullet_impact_shg_mat_wood_hollow">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.8" maxscale="1.2" maxscaledist="70" maxpossiblescalemod="2">bullet.hit_wood.shotgun_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.2" maxscaledist="70" maxpossiblescalemod="2">bullet.hit_wood.shotgun_b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.8" maxscale="1.2" maxscaledist="70" maxpossiblescalemod="2">bullet.hit_wood.shotgun_c</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<Decal minscale="0.03" maxscale="0.05" lifetime="10.0" rotation="0"> 
+				<Material>materials/decals/bullet_hits/wood_a.mtl</Material>
+			</Decal> 
+			<Decal minscale="0.03" maxscale="0.06" lifetime="10.0" rotation="0"> 
+				<Material>materials/decals/bullet_hits/wood_b.mtl</Material>
+			</Decal> 
+			<Decal minscale="0.03" maxscale="0.05" lifetime="10.0" rotation="0"> 
+				<Material>materials/decals/bullet_hits/wood_c.mtl</Material>
+			</Decal> 
+		</RandEffect>
+	</Effect>
+	
+	<Effect name="bullet_wood_breakable" delay="0.05">
+		<Audio trigger="bullet_impact_mat_wood_hollow">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.6" maxscaledist="70" maxpossiblescalemod="2">bullet.hit_wood.a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.5" maxscaledist="70" maxpossiblescalemod="2">bullet.hit_wood.b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.7" maxscaledist="70" maxpossiblescalemod="2">bullet.hit_wood.c</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<!-- <Decal minscale="0.05" maxscale="0.1"> -->
+				<!-- <Material>materials/decals/wood/wood_planks</Material> -->
+			<!-- </Decal> -->
+		</RandEffect>
+	</Effect>
+   <Effect name="bullet_wood_breakable_shotgun" delay="0.05">
+		<Audio trigger="bullet_impact_shg_mat_wood">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.8" maxscale="1.2" maxscaledist="70" maxpossiblescalemod="2">bullet.hit_wood.shotgun_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.2" maxscaledist="70" maxpossiblescalemod="2">bullet.hit_wood.shotgun_b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.8" maxscale="1.2" maxscaledist="70" maxpossiblescalemod="2">bullet.hit_wood.shotgun_c</Name>
+			</Particle>
+		</RandEffect>
+	</Effect>	
+	<!-- END   Rifle impacts (bullet)   END -->
+
+	<!-- *******************************************************   ShotGun Concrete ********************************************************************* -->
+	
+	<Effect name="bullet_concrete_white_shotgun" delay="0.05">
+		<Audio trigger="bullet_impact_shg_mat_concrete">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.5" maxscaledist="80">bullet.hit_concrete.shotgun_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="1.0" maxscale="1.5" maxscaledist="80">bullet.hit_concrete.shotgun_b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.5" maxscaledist="80">bullet.hit_concrete.shotgun_c</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<Decal minscale="0.02" maxscale="0.03" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_gray_a</Material>
+			</Decal>
+			<Decal minscale="0.02" maxscale="0.04" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_gray_b</Material>
+			</Decal>
+			<Decal minscale="0.02" maxscale="0.03" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_gray_c</Material>
+			</Decal>
+		</RandEffect>
+	</Effect>
+	<Effect name="bullet_concrete_white_shotgun_thin" delay="0.05">
+		<Audio trigger="bullet_impact_shg_mat_concrete">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.5" maxscaledist="80">bullet.hit_concrete.shotgun_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.5" maxscaledist="80">bullet.hit_concrete.shotgun_b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.5" maxscaledist="80">bullet.hit_concrete.shotgun_c</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<Decal minscale="0.02" maxscale="0.03" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_gray_a</Material>
+			</Decal>
+			<Decal minscale="0.02" maxscale="0.04" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_gray_b</Material>
+			</Decal>
+			<Decal minscale="0.02" maxscale="0.03" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_gray_c</Material>
+			</Decal>
+		</RandEffect>
+	</Effect>
+	<Effect name="bullet_concrete_gray_shotgun" delay="0.05">
+		<Audio trigger="bullet_impact_shg_mat_concrete">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.5" maxscaledist="80">bullet.hit_concrete.shotgun_gray_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.5" maxscaledist="80">bullet.hit_concrete.shotgun_gray_b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.5" maxscaledist="80">bullet.hit_concrete.shotgun_gray_c</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<Decal minscale="0.02" maxscale="0.03" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_gray_a</Material>
+			</Decal>
+			<Decal minscale="0.02" maxscale="0.04" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_gray_b</Material>
+			</Decal>
+			<Decal minscale="0.02" maxscale="0.03" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_gray_c</Material>
+			</Decal>
+		</RandEffect>
+	</Effect>
+	<Effect name="bullet_concrete_gray_shotgun_thin" delay="0.05">
+		<Audio trigger="bullet_impact_shg_mat_concrete">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.4" maxscaledist="80">bullet.hit_concrete.shotgun_gray_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.8" maxscale="1.4" maxscaledist="80">bullet.hit_concrete.shotgun_gray_b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.4" maxscaledist="80">bullet.hit_concrete.shotgun_gray_c</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<Decal minscale="0.02" maxscale="0.03" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_gray_a</Material>
+			</Decal>
+			<Decal minscale="0.02" maxscale="0.04" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_gray_b</Material>
+			</Decal>
+			<Decal minscale="0.02" maxscale="0.03" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_gray_c</Material>
+			</Decal>
+		</RandEffect>
+	</Effect>
+	<Effect name="bullet_concrete_yellow_shotgun" delay="0.05">
+		<Audio trigger="bullet_impact_shg_mat_concrete">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.5" maxscaledist="80">bullet.hit_concrete.shotgun_yellow_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.5" maxscaledist="80">bullet.hit_concrete.shotgun_yellow_b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.5" maxscaledist="80">bullet.hit_concrete.shotgun_yellow_c</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<Decal minscale="0.02" maxscale="0.03" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_gray_a</Material>
+			</Decal>
+			<Decal minscale="0.02" maxscale="0.04" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_gray_b</Material>
+			</Decal>
+			<Decal minscale="0.02" maxscale="0.03" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_gray_c</Material>
+			</Decal>
+		</RandEffect>
+	</Effect>
+	<Effect name="bullet_concrete_yellow_shotgun_thin" delay="0.05">
+		<Audio trigger="bullet_impact_shg_mat_concrete">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.4" maxscaledist="80">bullet.hit_concrete.shotgun_yellow_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.4" maxscaledist="80">bullet.hit_concrete.shotgun_yellow_b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.4" maxscaledist="80">bullet.hit_concrete.shotgun_yellow_c</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<Decal minscale="0.02" maxscale="0.03" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_gray_a</Material>
+			</Decal>
+			<Decal minscale="0.02" maxscale="0.04" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_gray_b</Material>
+			</Decal>
+			<Decal minscale="0.02" maxscale="0.03" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_gray_c</Material>
+			</Decal>
+		</RandEffect>
+	</Effect>
+
+	<Effect name="bullet_asphalt_shotgun" delay="0.05">
+		<Audio trigger="bullet_impact_shg_mat_concrete">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.5" maxscaledist="80">bullet.hit_concrete.shotgun_gray_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.8" maxscale="1.5" maxscaledist="80">bullet.hit_concrete.shotgun_gray_b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.5" maxscaledist="80">bullet.hit_concrete.shotgun_gray_c</Name>
+			</Particle>
+		</RandEffect>
+				<RandEffect>
+			<Decal minscale="0.02" maxscale="0.04" lifetime="8.0">
+				<Material>materials/decals/bullet_hits/asphalt_a</Material>		
+			</Decal>
+			<Decal minscale="0.02" maxscale="0.04" lifetime="7.0">
+				<Material>materials/decals/bullet_hits/asphalt_b</Material>		
+			</Decal>
+			<Decal minscale="0.02" maxscale="0.04" lifetime="8.0">
+				<Material>materials/decals/bullet_hits/asphalt_c</Material>		
+			</Decal>
+		</RandEffect>
+		<!-- <FlowGraph name="dirt_bullet_hit" maxdist="2"/> -->
+	</Effect>
+	<Effect name="bullet_ceramic_shotgun" delay="0.05">
+		<Audio trigger="bullet_impact_shg_mat_concrete">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.4" maxscaledist="80">bullet.hit_concrete.shotgun_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.8" maxscale="1.4" maxscaledist="80">bullet.hit_concrete.shotgun_b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.4" maxscaledist="80">bullet.hit_concrete.shotgun_c</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<Decal minscale="0.03" maxscale="0.05" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_gray_a</Material>
+			</Decal>
+			<Decal minscale="0.03" maxscale="0.05" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_gray_b</Material>
+			</Decal>
+			<Decal minscale="0.03" maxscale="0.05" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_gray_c</Material>
+			</Decal>
+		</RandEffect>
+		<!-- <FlowGraph name="dirt_bullet_hit" maxdist="2"/> -->
+	</Effect>
+	<Effect name="bullet_gravel_shotgun" delay="0.05">
+		<Audio trigger="bullet_impact_shg_mat_gravel">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.7" maxscale="1.4" maxscaledist="80">bullet.hit_concrete.shotgun_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.8" maxscale="1.4" maxscaledist="80">bullet.hit_concrete.shotgun_b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.7" maxscale="1.4" maxscaledist="80">bullet.hit_concrete.shotgun_c</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<!-- <Decal minscale="0.02" maxscale="0.1"> -->
+				<!-- <Material>materials/decals/concrete/concrete_plain</Material> -->
+			<!-- </Decal> -->
+			<!-- <Decal minscale="0.03" maxscale="0.08"> -->
+				<!-- <Material>materials/decals/rock/rock_sandy</Material> -->
+				<!-- <Material>materials/decals/rock/rock_sandy</Material> -->
+			<!-- </Decal> -->
+		</RandEffect>
+		<RandEffect>
+			<!-- <Decal minscale="0.05" maxscale="0.4"> -->
+				<!-- <Material>materials/decals/concrete/concrete_crack1</Material> -->
+			<!-- </Decal> -->
+			<!-- <Decal minscale="0.04" maxscale="0.1"> -->
+				<!-- <Material>materials/decals/concrete/concrete_crack2</Material> -->
+			<!-- </Decal> -->
+			<!-- <Decal minscale="0.05" maxscale="0.2"> -->
+				<!-- <Material>materials/decals/concrete/concrete_crack3</Material> -->
+			<!-- </Decal> -->
+		</RandEffect>
+		<!-- <FlowGraph name="dirt_bullet_hit" maxdist="2"/> -->
+	</Effect>	
+ 
+ <!-- *******************************   NEW AI   **********************************-->	
+ 
+ 	<Effect name="bullet_adamant_body" delay="0.05" >
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.85" maxscale="1.1" maxscaledist="70" maxpossiblescalemod="4.5">bullet.hit_ai.adamant.body_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.85" maxscale="1.0" maxscaledist="70" maxpossiblescalemod="4">bullet.hit_ai.adamant.body_b</Name>
+			</Particle>
+		</RandEffect>
+	</Effect> 
+ 	<Effect name="bullet_adamant_body_shotgun" delay="0.05" >
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.65" maxscale="1.0" maxscaledist="70">bullet.hit_ai.adamant.shotgun_body_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.50" maxscale="0.8" maxscaledist="70">bullet.hit_ai.adamant.shotgun_body_a</Name>
+			</Particle>
+		</RandEffect>
+	</Effect> 
+  	<Effect name="bullet_adamant_weakpoint" delay="0.05" >
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="1.15" maxscale="1.5" maxscaledist="70" maxpossiblescalemod="5">bullet.hit_ai.adamant.weakpoint_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="1.2" maxscale="1.6" maxscaledist="70" maxpossiblescalemod="5">bullet.hit_ai.adamant.weakpoint_a</Name>
+			</Particle>
+		</RandEffect>
+	</Effect> 
+ 
+ 	<Effect name="bullet_glasshead_body" delay="0.05" >
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="1.25" maxscale="1.7" maxscaledist="70" maxpossiblescalemod="5">bullet.hit_ai.glasshead.body_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="1.15" maxscale="1.6" maxscaledist="70" maxpossiblescalemod="2.5">bullet.hit_ai.glasshead.body_a</Name>
+			</Particle>
+		</RandEffect>
+	</Effect>
+  	<Effect name="bullet_glasshead_head" delay="0.05" >
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.85" maxscale="1.1" maxscaledist="70" maxpossiblescalemod="3">bullet.hit_ai.glasshead.head_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.75" maxscale="1.0" maxscaledist="70" maxpossiblescalemod="3">bullet.hit_ai.glasshead.head_a</Name>
+			</Particle>
+		</RandEffect>
+	</Effect>
+  	<Effect name="bullet_queen_body" delay="0.05" >
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="1.35" maxscale="2.2" maxscaledist="70" maxpossiblescalemod="3">bullet.hit_ai.queen.body_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="1.25" maxscale="2.4" maxscaledist="70" maxpossiblescalemod="3">bullet.hit_ai.queen.body_b</Name>
+			</Particle>
+		</RandEffect>
+	</Effect>
+  	<Effect name="bullet_queen_body_shotgun" delay="0.05" >
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.55" maxscale="1.0" maxscaledist="70" maxpossiblescalemod="2">bullet.hit_ai.queen.shotgun_body_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.55" maxscale="0.8" maxscaledist="70" maxpossiblescalemod="2">bullet.hit_ai.queen.shotgun_body_a</Name>
+			</Particle>
+		</RandEffect>
+	</Effect> 	
+
+  	<Effect name="bullet_queen_shield" delay="0.05" >
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="1.0" maxscale="1.8" maxscaledist="70" maxpossiblescalemod="3">bullet.hit_ai.queen.shield_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.6" maxscaledist="70" maxpossiblescalemod="3">bullet.hit_ai.queen.shield_a</Name>
+			</Particle>
+		</RandEffect>
+	</Effect>
+  	<Effect name="bullet_queen_shield_shotgun" delay="0.05" >
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.55" maxscale="1.0" maxscaledist="70" maxpossiblescalemod="2">bullet.hit_ai.queen.shotgun_shield_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.55" maxscale="0.8" maxscaledist="70" maxpossiblescalemod="2">bullet.hit_ai.queen.shotgun_shield_a</Name>
+			</Particle>
+		</RandEffect>
+	</Effect> 
+ 	
+  	<Effect name="bullet_shardskin_body" delay="0.05" >
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.85" maxscale="1.2" maxscaledist="70" maxpossiblescalemod="3">bullet.hit_ai.shardskin.body_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.75" maxscale="1.1" maxscaledist="70" maxpossiblescalemod="3">bullet.hit_ai.shardskin.body_a</Name>
+			</Particle>
+		</RandEffect>
+	</Effect> 	
+  	<Effect name="bullet_stilt_body" delay="0.05" >
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.5" maxscaledist="70" maxpossiblescalemod="3">bullet.hit_ai.stilt.body_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.6" maxscale="0.9" maxscaledist="70" maxpossiblescalemod="3">bullet.hit_ai.stilt.body_b</Name>
+			</Particle>
+		</RandEffect>
+	</Effect> 
+  	<Effect name="bullet_stilt_body_shotgun" delay="0.05" >
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.6" maxscale="1.2" maxscaledist="70" maxpossiblescalemod="2">bullet.hit_ai.stilt.shotgun_body_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.4" maxscale="1.0" maxscaledist="70" maxpossiblescalemod="2">bullet.hit_ai.stilt.shotgun_body_a</Name>
+			</Particle>
+		</RandEffect>
+	</Effect> 
+	
+	<Effect name="bullet_stilt_weakpoint" delay="0.05" >
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="1.2" maxscale="1.8" maxscaledist="70" maxpossiblescalemod="3">bullet.hit_ai.stilt.weakpoint_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="1.0" maxscale="1.4" maxscaledist="70" maxpossiblescalemod="3">bullet.hit_ai.stilt.weakpoint_b</Name>
+			</Particle>
+		</RandEffect>
+	</Effect> 
+  	<Effect name="bullet_stilt_weakpoint_shotgun" delay="0.05" >
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.3" maxscaledist="70" maxpossiblescalemod="2">bullet.hit_ai.stilt.shotgun_weakpoint_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.7" maxscale="1.0" maxscaledist="70" maxpossiblescalemod="2">bullet.hit_ai.stilt.shotgun_weakpoint_a</Name>
+			</Particle>
+		</RandEffect>
+	</Effect> 
+	
+  	<Effect name="bullet_minotaur_armor" delay="0.05" >
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.6" maxscale="1.2" maxscaledist="70" maxpossiblescalemod="3">bullet.hit_ai.minotaur.armor_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.4" maxscale="1.0" maxscaledist="70" maxpossiblescalemod="3">bullet.hit_ai.minotaur.armor_a</Name>
+			</Particle>
+		</RandEffect>
+	</Effect> 	
+  	<Effect name="bullet_minotaur_armor_shotgun" delay="0.05" >
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.6" maxscale="1.2" maxscaledist="70" maxpossiblescalemod="2">bullet.hit_ai.minotaur.armor_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.4" maxscale="1.0" maxscaledist="70" maxpossiblescalemod="2">bullet.hit_ai.minotaur.armor_a</Name>
+			</Particle>
+		</RandEffect>
+	</Effect> 
+	
+ 	<Effect name="bullet_minotaur_weakpoint" delay="0.05" >
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.6" maxscale="1.2" maxscaledist="70" maxpossiblescalemod="3">bullet.hit_ai.minotaur.weakpoint_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.6" maxscale="1.2" maxscaledist="70" maxpossiblescalemod="3">bullet.hit_ai.minotaur.weakpoint_b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.6" maxscale="1.2" maxscaledist="70" maxpossiblescalemod="3">bullet.hit_ai.minotaur.weakpoint_c</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.6" maxscale="1.2" maxscaledist="70" maxpossiblescalemod="3">bullet.hit_ai.minotaur.weakpoint_d</Name>
+			</Particle>
+		</RandEffect>
+	</Effect> 	
+  	<Effect name="bullet_minotaur_weakpoint_shotgun" delay="0.05" >
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.6" maxscale="1.2" maxscaledist="70" maxpossiblescalemod="2">bullet.hit_ai.stilt.shotgun_body_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.4" maxscale="1.0" maxscaledist="70" maxpossiblescalemod="2">bullet.hit_ai.stilt.shotgun_body_a</Name>
+			</Particle>
+		</RandEffect>
+	</Effect> 		
+
+ 	<Effect name="bullet_minotaur_jetpack" delay="0.05" >
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.6" maxscale="1.2" maxscaledist="70" maxpossiblescalemod="3">bullet.hit_ai.minotaur.jetpack_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.4" maxscale="1.0" maxscaledist="70" maxpossiblescalemod="3">bullet.hit_ai.minotaur.jetpack_b</Name>
+			</Particle>
+		</RandEffect>
+	</Effect> 	
+  	<Effect name="bullet_minotaur_jetpack_shotgun" delay="0.05" >
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.6" maxscale="1.2" maxscaledist="70" maxpossiblescalemod="2">bullet.hit_ai.minotaur.jetpack_shg_a</Name>
+			</Particle>
+		</RandEffect>
+	</Effect> 		
+	
+<!--  ************************************ BEHEMOTH ***********************************-->
+ 	<Effect name="bullet_behemoth_armor" delay="0.05" >
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.6" maxscaledist="70" maxpossiblescalemod="2.5">bullet.hit_ai.behemoth.armor_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.8" maxscale="1.4" maxscaledist="70" maxpossiblescalemod="2.5">bullet.hit_ai.behemoth.armor_b</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.8" maxscale="1.4" maxscaledist="70" maxpossiblescalemod="3.5">bullet.hit_ai.behemoth.armor_b</Name>
+			</Particle>
+		</RandEffect>
+	</Effect> 	
+  	<Effect name="bullet_behemoth_armor_shotgun" delay="0.05" >
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.6" maxscale="1.2" maxscaledist="70" maxpossiblescalemod="3">bullet.hit_ai.behemoth.armor_shg_a</Name>
+			</Particle>
+		</RandEffect>
+	</Effect> 
+	
+ 	<Effect name="bullet_behemoth_weakpoint" delay="0.05" >
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="1.1" maxscale="1.7" maxscaledist="70" maxpossiblescalemod="3">bullet.hit_ai.behemoth.weakpoint_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="1.1" maxscale="1.7" maxscaledist="70" maxpossiblescalemod="3">bullet.hit_ai.behemoth.weakpoint_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="1.1" maxscale="1.7" maxscaledist="70" maxpossiblescalemod="3">bullet.hit_ai.behemoth.weakpoint_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="1.1" maxscale="1.7" maxscaledist="70" maxpossiblescalemod="3">bullet.hit_ai.behemoth.weakpoint_a</Name>
+			</Particle>
+		</RandEffect>
+	</Effect> 	
+  	<Effect name="bullet_behemoth_weakpoint_shotgun" delay="0.05" >
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.9" maxscale="1.5" maxscaledist="70" maxpossiblescalemod="3">bullet.hit_ai.behemoth.weakpoint_shg_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.8" maxscale="1.3" maxscaledist="70" maxpossiblescalemod="3">bullet.hit_ai.behemoth.weakpoint_shg_a</Name>
+			</Particle>
+		</RandEffect>
+	</Effect> 	
+	<Effect name="bullet_wood_hollow_unpierceable" delay="0.05">
+		<Audio trigger="bullet_impact_mat_wood">
+		</Audio>
+        <RandEffect>
+			<PopcornParticle>
+				<Name minscale="0.9" maxscale="1.4" maxscaledist="80" maxpossiblescalemod="3">libs/particles/bullet/mfx_wood_hollow_unpierceable.pkfx</Name>
+			</PopcornParticle>	
+		</RandEffect>
+		<RandEffect>
+		    <Decal minscale="0.04" maxscale="0.09" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_wood_a</Material>
+			</Decal>
+			<Decal minscale="0.03" maxscale="0.08" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/concrete_wood_b</Material>
+			</Decal>
+			<Decal minscale="0.03" maxscale="0.06" lifetime="15.0" rotation="0"> 
+				<Material>materials/decals/bullet_hits/wood_a.mtl</Material>
+			</Decal> 
+		</RandEffect>
+    </Effect>	
+	
+	<!--  ************************************ energy shields ***********************************-->
+	
+	<Effect name="bullet_energy_shield_smg" delay="0.05">
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+        <RandEffect>
+			<PopcornParticle>
+				<Name minscale="0.7" maxscale="0.8" maxscaledist="80" maxpossiblescalemod="1.1">libs/particles/bullet/mfx_energy_shield_foe.pkfx</Name>
+			</PopcornParticle>	
+		</RandEffect>
+    </Effect>
+	<Effect name="bullet_energy_shield_smg_sml" delay="0.05">
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+        <RandEffect>
+			<PopcornParticle>
+				<Name minscale="0.25" maxscale="0.3" maxscaledist="80" maxpossiblescalemod="1.1">libs/particles/bullet/mfx_energy_shield_foe.pkfx</Name>
+			</PopcornParticle>	
+		</RandEffect>
+    </Effect>
+	<Effect name="bullet_energy_shield_neutral_smg" delay="0.05">
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+        <RandEffect>
+			<PopcornParticle>
+				<Name minscale="0.65" maxscale="0.75" maxscaledist="80" maxpossiblescalemod="1.0">libs/particles/bullet/mfx_energy_shield_neutral.pkfx</Name>
+			</PopcornParticle>	
+		</RandEffect>
+    </Effect>
+	<Effect name="bullet_energy_shield_pistol" delay="0.05">
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+        <RandEffect>
+			<PopcornParticle>
+				<Name minscale="0.4" maxscale="0.5" maxscaledist="80" maxpossiblescalemod="1.4">libs/particles/bullet/mfx_energy_shield_foe.pkfx</Name>
+			</PopcornParticle>	
+		</RandEffect>
+    </Effect>
+	<Effect name="bullet_energy_shield_pistol_sml" delay="0.05">
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+        <RandEffect>
+			<PopcornParticle>
+				<Name minscale="0.13" maxscale="0.18" maxscaledist="80" maxpossiblescalemod="1.4">libs/particles/bullet/mfx_energy_shield_foe.pkfx</Name>
+			</PopcornParticle>	
+		</RandEffect>
+    </Effect>
+	<Effect name="bullet_energy_shield_neutral_pistol" delay="0.05">
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+        <RandEffect>
+			<PopcornParticle>
+				<Name minscale="0.35" maxscale="0.45" maxscaledist="80" maxpossiblescalemod="1.35">libs/particles/bullet/mfx_energy_shield_neutral.pkfx</Name>
+			</PopcornParticle>	
+		</RandEffect>
+    </Effect>
+	
+	<Effect name="bullet_energy_shield_shotgun" delay="0.05">
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+        <RandEffect>
+			<PopcornParticle>
+				<Name minscale="0.95" maxscale="1.15" maxscaledist="80" maxpossiblescalemod="1.35">libs/particles/bullet/mfx_energy_shield_shotgun_foe.pkfx</Name>
+			</PopcornParticle>	
+		</RandEffect>
+    </Effect>
+	
+	<Effect name="bullet_energy_shield_shotgun_sml" delay="0.05">
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+        <RandEffect>
+			<PopcornParticle>
+				<Name minscale="0.3" maxscale="0.4" maxscaledist="80" maxpossiblescalemod="1.35">libs/particles/bullet/mfx_energy_shield_shotgun_foe.pkfx</Name>
+			</PopcornParticle>	
+		</RandEffect>
+    </Effect>		
+	
+	<Effect name="bullet_energy_shield_shotgun_neutral" delay="0.05">
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+        <RandEffect>
+			<PopcornParticle>
+				<Name minscale="0.9" maxscale="1.05" maxscaledist="80" maxpossiblescalemod="0.85">libs/particles/bullet/mfx_energy_shield_shotgun_neutral.pkfx</Name>
+			</PopcornParticle>	
+		</RandEffect>
+	</Effect>	
+	
+  	<Effect name="bullet_energy_shield_target" delay="0.05" >
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+		<RandEffect>
+			<Particle>
+				<Name minscale="0.6" maxscale="1.2" maxscaledist="70" maxpossiblescalemod="3">bullet.hit_ai.minotaur.armor_a</Name>
+			</Particle>
+			<Particle>
+				<Name minscale="0.4" maxscale="1.0" maxscaledist="70" maxpossiblescalemod="3">bullet.hit_ai.minotaur.armor_a</Name>
+			</Particle>
+		</RandEffect>
+		<RandEffect>
+			<Decal minscale="0.06" maxscale="0.1" lifetime="15.0">
+				<Material>materials/decals/bullet_hits/energy_a</Material>
+			</Decal>
+		</RandEffect>
+	</Effect> 
+	
+	<Effect name="bullet_anomaly_hit" delay="0.05">
+		<Audio trigger="bullet_impact_mat_flesh">
+		</Audio>
+        <RandEffect>
+			<PopcornParticle>
+				<Name minscale="0.95" maxscale="1.15" maxscaledist="80" maxpossiblescalemod="1.35">libs/particles/bullet/mfx_anomaly_hit.pkfx</Name>
+			</PopcornParticle>	
+		</RandEffect>
+    </Effect>
+
+<!--*************************************Barricade Gun**************************************-->
+	<Effect name="bullet_barricade_rounds" delay="0.05">
+	<!--<Audio trigger="bullet_impact_mat_flesh">
+		</Audio> -->
+        <RandEffect>
+			<PopcornParticle>
+				<!--<Name minscale="0.35" maxscale="0.45" maxscaledist="80" maxpossiblescalemod="1.35">libs/particles/bullet/mfx_energy_shield_neutral.pkfx</Name> -->
+			</PopcornParticle>	
+		</RandEffect>
+    </Effect>
+
+</FXLib>
+
+
+
+

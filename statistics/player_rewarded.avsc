@@ -1,0 +1,85 @@
+{
+    "name": "player_rewarded",
+    "doc": "Origin: game session. Emitter: dedicated server. Indicates when player gets an any kind of a reward",
+    "type": "record",
+    "fields": [
+        {
+            "name": "lid",
+            "type": "int",
+            "default": -1,
+            "doc": "match-unique incremental id of a player's lifetime (time between spawn-death, including coma time)"
+        },
+        {
+            "name": "name",
+            "type": "string",
+            "default": "-1",
+            "doc": "unique name of the event"
+        },
+        {
+            "name": "cid",
+            "type": "int",
+            "default": -1,
+            "doc": "team unique identifier. -6 pve players, -5 AI, -4 team B, -3 team A or pid in FFA modes"
+        },
+        {
+            "name": "team",
+            "type": "string",
+            "default": "-1",
+            "doc": "categorical definition of the team which player belongs to"
+        },
+        {
+            "name": "reward_mult",
+            "type": "double",
+            "default": -1,
+            "doc": "boost power if reward is boosted"
+        },
+        {
+            "name": "pid",
+            "type": "long",
+            "default": -1,
+            "doc": "namespace-unique identifier of a player"
+        },
+        {
+            "name": "gained_reward",
+            "type": "int",
+            "default": -1,
+            "doc": "amount of received reward"
+        },
+        {
+            "name": "game_outcome",
+            "type": "string",
+            "default": "",
+            "doc": "game outcome used to calculate a reward (win, loss, draw, invalid)"
+        },
+        {
+            "name": "ts",
+            "type": "string",
+            "default": "-1",
+            "doc": "ISO8601 UTC timestamp of the event invocation"
+        },
+        {
+            "name": "gid",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace-unique identifier of the match"
+        },
+        {
+            "name": "sid",
+            "type": "string",
+            "default": "-1",
+            "doc": "global-unique identifier of the player's login session (time between login and logout)"
+        },
+        {
+            "name": "ns",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace of the server's deployment (realm)"
+        },
+        {
+            "name": "reward_id",
+            "type": "string",
+            "default": "-1",
+            "doc": "explicit name of received reward"
+        }
+    ]
+}

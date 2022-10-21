@@ -1,0 +1,289 @@
+{
+    "name": "Ranged/FireInOpenSpace",
+    "root": "4fcb754b-30c2-4fdc-a88c-fe471fe4d5ff",
+    "nodes": {
+        "726f5780-274e-48ab-ae50-b2a7ed167935": {
+            "name": "WaitRandom",
+            "pos": {
+                "x": -190,
+                "y": 736
+            },
+            "inputs": [
+                {
+                    "name": "MinWaitTime",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "wait_after_strafe_min"
+                    ]
+                },
+                {
+                    "name": "MaxWaitTime",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "wait_after_strafe_max"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "eaccfd40-24f8-45a8-a672-c183ebfb7044": {
+            "name": "Sequence",
+            "pos": {
+                "x": 195,
+                "y": 602
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "726f5780-274e-48ab-ae50-b2a7ed167935",
+                "5f31ebf5-9414-453b-958b-e6ef4e5b25d1",
+                "3065d651-cbd0-4f75-88a1-430d2341c90f"
+            ]
+        },
+        "5f31ebf5-9414-453b-958b-e6ef4e5b25d1": {
+            "name": "FindPointForStrafeStep",
+            "pos": {
+                "x": 195,
+                "y": 736
+            },
+            "inputs": [
+                {
+                    "name": "Target",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "RangedAI",
+                        "PointOfInterestPos"
+                    ]
+                },
+                {
+                    "name": "MinDistance",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "side_strafe_length_min"
+                    ]
+                },
+                {
+                    "name": "MaxDistance",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "side_strafe_length_max"
+                    ]
+                },
+                {
+                    "name": "RandomAngle",
+                    "type": "Float",
+                    "value": "0"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "ResultPosition",
+                    "type": "Variable",
+                    "value": [
+                        "DesiredPosition"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "1e906023-551b-4bab-8fa7-58f02a1fe807": {
+            "name": "Sequence",
+            "pos": {
+                "x": 195,
+                "y": 365
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "d5c032b4-fa01-4a5f-96ac-0cbc418e79cc",
+                "022fddc1-a2ea-4cbd-a6ea-25e5d9c6a0f7"
+            ]
+        },
+        "022fddc1-a2ea-4cbd-a6ea-25e5d9c6a0f7": {
+            "name": "Repeater",
+            "pos": {
+                "x": 195,
+                "y": 482
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Iterations",
+                    "type": "Integer",
+                    "value": "0"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "eaccfd40-24f8-45a8-a672-c183ebfb7044"
+        },
+        "d5c032b4-fa01-4a5f-96ac-0cbc418e79cc": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": 0,
+                "y": 485
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "DesiredPosition"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Position"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "85a3b297-5938-4244-b674-aaed9c5a2d7c": {
+            "name": "Noop",
+            "pos": {
+                "x": -445,
+                "y": 554
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "0bae61e9-6936-4caf-938e-c6b3430a1cad": {
+            "name": "Equals",
+            "pos": {
+                "x": -445,
+                "y": 363
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Lhs",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "side_strafe_length_max"
+                    ]
+                },
+                {
+                    "name": "Rhs",
+                    "type": "Float",
+                    "value": "0"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "85a3b297-5938-4244-b674-aaed9c5a2d7c"
+        },
+        "4fcb754b-30c2-4fdc-a88c-fe471fe4d5ff": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 85
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "FireInOpenSpace"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "9350d3c9-1f29-432e-98b7-dbe86d85bb22"
+        },
+        "9350d3c9-1f29-432e-98b7-dbe86d85bb22": {
+            "name": "Selector",
+            "pos": {
+                "x": 0,
+                "y": 216
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "0bae61e9-6936-4caf-938e-c6b3430a1cad",
+                "1e906023-551b-4bab-8fa7-58f02a1fe807"
+            ]
+        },
+        "3065d651-cbd0-4f75-88a1-430d2341c90f": {
+            "name": "ApproachTo",
+            "pos": {
+                "x": 530,
+                "y": 736
+            },
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "DesiredPosition"
+                    ]
+                },
+                {
+                    "name": "EndDistance",
+                    "type": "Float",
+                    "value": "0.00"
+                },
+                {
+                    "name": "UpdateDestinationPoint",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

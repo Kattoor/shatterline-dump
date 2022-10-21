@@ -1,0 +1,291 @@
+{
+    "waves": [
+        {
+            "name": "horde_turret_boss",
+            "totalLimit": 1,
+            "count": 1,
+            "groupCount": 1,
+            "spawnDelay": 0.0,
+            "filterTag": "teleport_boss",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(2)Glasshead: Turret" ],
+                    "probability": 100,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                }
+            ]
+        },
+        {
+            "name": "horde_wave_inside_teleport_w1",
+            "totalLimit": 40,
+            "count": 0,
+            "groupCount": 2,
+            "spawnDelay": 4.0,
+            "filterTag": "teleport_inside",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(2) Glasshead: Basic melee" ],
+                    "probability": 100,
+                    "count": 4,
+                    "groupCount": 2,
+                    "spawnDelay": 8.0
+                }
+            ]
+        },
+        {
+            "name": "horde_wave_inside_teleport_w2",
+            "totalLimit": 40,
+            "count": 0,
+            "groupCount": 2,
+            "spawnDelay": 2.0,
+            "filterTag": "teleport_inside",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(2) Glasshead: Shardskin" ],
+                    "probability": 100,
+                    "count": 1,
+                    "groupCount": 1,
+                    "spawnDelay": 6.0
+                },
+                {
+                    "tags": [ "(2) Glasshead: Basic melee" ],
+                    "probability": 100,
+                    "count": 2,
+                    "groupCount": 2,
+                    "spawnDelay": 4.0
+                }
+            ]
+        },
+        {
+            "name": "horde_wave_outside_teleport1",
+            "totalLimit": 99,
+            "count": 6,
+            "groupCount": 3,
+            "spawnDelay": 8.0,
+            "filterTag": "teleport_outside",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(2) Glasshead: Basic melee" ],
+                    "probability": 100,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                },
+                {
+                    "tags": [ "(2) Glasshead: Basic ranged" ],
+                    "probability": 50,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                }
+            ]
+        },
+        {
+            "name": "horde_wave_outside_teleport2",
+            "totalLimit": 99,
+            "count": 6,
+            "groupCount": 3,
+            "spawnDelay": 7.0,
+            "filterTag": "teleport_outside",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(2) Glasshead: Basic ranged" ],
+                    "probability": 100,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                },
+                {
+                    "tags": [ "(2)Glasshead: Bomb Dog" ],
+                    "probability": 60,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                },
+                {
+                    "tags": [ "(2) Glasshead: Basic melee" ],
+                    "probability": 100,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                }
+            ]
+        },
+        {
+            "name": "horde_wave_outside_teleport_miniboss_w1",
+            "totalLimit": 2,
+            "count": 2,
+            "groupCount": 2,
+            "spawnDelay": 0.0,
+            "filterTag": "teleport_outside_miniboss",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(2) Glasshead: Shardskin" ],
+                    "probability": 100,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                }
+            ]
+        },
+        {
+            "name": "horde_wave_outside_teleport_miniboss_w2",
+            "totalLimit": 2,
+            "count": 2,
+            "groupCount": 2,
+            "spawnDelay": 0.0,
+            "filterTag": "teleport_outside_miniboss",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(2) Glasshead: Adamant" ],
+                    "probability": 100,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                }
+            ]
+        },
+        {
+            "name": "horde_wave_outside_teleport_miniboss_w3",
+            "totalLimit": 3,
+            "count": 0,
+            "groupCount": 3,
+            "spawnDelay": 0.0,
+            "filterTag": "",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(2) Glasshead: Shardskin" ],
+                    "probability": 100,
+                    "count": 1,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                },
+                {
+                    "tags": [ "(2) Glasshead: Adamant" ],
+                    "probability": 100,
+                    "count": 2,
+                    "groupCount": 2,
+                    "spawnDelay": 0.0
+                }
+            ]
+        },
+        {
+            "name": "horde_wave_outside_teleport_adamant1",
+            "totalLimit": 1,
+            "count": 1,
+            "groupCount": 1,
+            "spawnDelay": 0.0,
+            "filterTag": "teleport_outside_adamant",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(2) Glasshead: Adamant" ],
+                    "probability": 100,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                }
+            ]
+        },
+        {
+            "name": "horde_wave_outside_teleport_adamant2",
+            "totalLimit": 1,
+            "count": 1,
+            "groupCount": 1,
+            "spawnDelay": 0.0,
+            "filterTag": "teleport_outside_adamant",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(2) Glasshead: Adamant" ],
+                    "probability": 100,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                }
+            ]
+        },
+        {
+            "name": "horde_wave_outside_teleport_adamant3",
+            "totalLimit": 1,
+            "count": 1,
+            "groupCount": 1,
+            "spawnDelay": 0.0,
+            "filterTag": "teleport_outside_adamant",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(2) Glasshead: Adamant" ],
+                    "probability": 100,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                }
+            ]
+        },
+        {
+            "name": "horde_wave_inside_teleport_adamant1",
+            "totalLimit": 1,
+            "count": 1,
+            "groupCount": 1,
+            "spawnDelay": 0.0,
+            "filterTag": "teleport_inside_adam",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(2) Glasshead: Adamant" ],
+                    "probability": 100,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                }
+            ]
+        },
+        {
+            "name": "horde_wave_inside_teleport_adamant2",
+            "totalLimit": 1,
+            "count": 1,
+            "groupCount": 1,
+            "spawnDelay": 0.0,
+            "filterTag": "teleport_inside_adam",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(2) Glasshead: Adamant" ],
+                    "probability": 100,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                }
+            ]
+        },
+        {
+            "name": "horde_wave_inside_teleport_adamant3",
+            "totalLimit": 1,
+            "count": 1,
+            "groupCount": 1,
+            "spawnDelay": 0.0,
+            "filterTag": "teleport_inside_adam",
+            "competitor": "",
+            "agents": [
+                {
+                    "tags": [ "(2) Glasshead: Adamant" ],
+                    "probability": 100,
+                    "count": 0,
+                    "groupCount": 1,
+                    "spawnDelay": 0.0
+                }
+            ]
+        }
+    ]
+}

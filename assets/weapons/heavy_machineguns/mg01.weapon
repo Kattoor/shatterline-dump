@@ -1,0 +1,150 @@
+{
+    "selection": {
+        "nearest_camera_offset": {
+            "z": 0.0,
+            "x": 0.0,
+            "y": 0.0
+        },
+        "deselection_duration": 0.33,
+        "selection_duration": 0.4
+    },
+    "spread": {
+        "max_hip_spread": 3.0,
+        "decay_time": 0.4,
+        "slide_multiplier": 0.6,
+        "zoom_multiplier": 0.0,
+        "crouch_multiplier": 0.25,
+        "crouch_idle_multiplier": 0.2,
+        "hip_step": 0.2,
+        "min_hip_spread": 2.0,
+        "decay_delay": 0.1,
+        "stand_multiplier": 0.3,
+        "walk_multiplier": 0.6,
+        "jump_multiplier": 2.0
+    },
+    "zoom": {
+        "weapon_offset": {
+            "z": 0.0,
+            "x": 0.0,
+            "y": 0.0
+        },
+        "delay_after_jump": 0.3,
+        "weapon_fov": 25.0,
+        "zoom_out_time": 0.15,
+        "hide_crosshair": false,
+        "zoom_fov": 40.0,
+        "zoom_in_time": 0.15,
+        "in_air": false
+    },
+    "common": {
+        "item_tag": "AR"
+    },
+    "muzzle_sight_distance": 1.0,
+    "shooting": {
+        "base_damage_distribution": {
+            "points": [
+                {
+                    "distance": 0.0,
+                    "damage": 30.0
+                }
+            ]
+        },
+        "pierceability": {
+            "type": "none",
+            "pierceability_level": 3
+        },
+        "backpack_capacity": 2000,
+        "chamber_capacity": 1,
+        "head_damage_distribution": {
+            "points": [
+                {
+                    "distance": 0.0,
+                    "damage": 90.0
+                }
+            ]
+        },
+        "chambers_fired_per_shot": 1,
+        "rpm": 1000.0,
+        "auto_reload_mode": "None",
+        "clip_capacity": 200,
+        "reload": {
+            "reload_time": 3.0,
+            "reload_out_complete_threshold": 0.7,
+            "reload_in_complete_threshold": 0.7
+        }
+    },
+    "recoil": {
+        "kick_time": 0.1,
+        "decay_time": 0.16,
+        "max_vertical_angle": 10.0,
+        "decay_delay": 0.03,
+        "recoil_points": [
+            {
+                "num": 1,
+                "force": {
+                    "min": 1.57,
+                    "max": 1.75
+                },
+                "angle": {
+                    "min": -180.0,
+                    "max": 180.0
+                }
+            },
+            {
+                "num": 5,
+                "force": {
+                    "min": 1.22,
+                    "max": 1.4
+                },
+                "angle": {
+                    "min": -180.0,
+                    "max": 180.0
+                }
+            },
+            {
+                "num": 10,
+                "force": {
+                    "min": 0.87,
+                    "max": 1.05
+                },
+                "angle": {
+                    "min": -180.0,
+                    "max": 180.0
+                }
+            },
+            {
+                "num": 15,
+                "force": {
+                    "min": 0.52,
+                    "max": 0.7
+                },
+                "angle": {
+                    "min": -180.0,
+                    "max": 180.0
+                }
+            },
+            {
+                "num": 20,
+                "force": {
+                    "min": 0.26,
+                    "max": 0.35
+                },
+                "angle": {
+                    "min": -180.0,
+                    "max": 180.0
+                }
+            },
+            {
+                "num": 30,
+                "force": {
+                    "min": 0.09,
+                    "max": 0.17
+                },
+                "angle": {
+                    "min": -180.0,
+                    "max": 180.0
+                }
+            }
+        ]
+    }
+}

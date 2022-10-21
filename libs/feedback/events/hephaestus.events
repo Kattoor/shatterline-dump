@@ -1,0 +1,273 @@
+{
+    "events": [
+        {
+            "name": "TokensRefilled",
+            "actions" : [
+                {"message_announcer": {"message": "@tokens_refilled", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "CheckpointActivated",
+            "actions" : [
+                {"message_announcer": {"message": "@checkpoint_activated", "timeout": 3}},
+                {"sound_trigger": {"trigger_name": "instant_reward"}}
+            ]
+        },
+        {
+            "name": "pve_hephaestus_briefing",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_hephaestus_velasquez_00", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_hephaestus_intro",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_hephaestus_velasquez_01", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_hephaestus_hughes_01", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"narration_objective": {"trigger_name": "pve_hephaestus_velasquez_02", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_hephaestus_reach_quarry", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_hephaestus_broadcasting_signal",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_hephaestus_hughes_02", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"narration_objective": {"trigger_name": "pve_hephaestus_velasquez_03", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_hephaestus_hughes_03", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"message_objective": {"message": "@obj_hephaestus_proceed_quarry", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_hephaestus_proceed_quarry",
+            "actions" : [
+                {"message_objective": {"message": "@obj_hephaestus_proceed_quarry"}}
+            ]
+        },
+        {
+            "name": "pve_hephaestus_hack_bulldozer",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_hephaestus_velasquez_04", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_hephaestus_hughes_04", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"message_objective": {"message": "@obj_hephaestus_hack_bulldozer"}}
+            ]
+        },
+        {
+            "name": "pve_hephaestus_gate_bash",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_hephaestus_hughes_05", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}}
+            ]
+        },
+        {
+            "name": "pve_hephaestus_escort_bulldozer",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_hephaestus_hughes_06", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"message_objective": {"message": "@obj_hephaestus_escort_bulldozer", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_hephaestus_vehicle_warning",
+            "actions" : 
+            [
+                {"narration_objective": {"trigger_name": "pve_hephaestus_hughes_07", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}}
+            ]
+        },
+        {
+            "name": "pve_hephaestus_hughes_07_a",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_hephaestus_hughes_07_a", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}}
+            ]
+        },
+        {
+            "name": "pve_hephaestus_hughes_07_b",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_hephaestus_hughes_07_b", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}}
+            ]
+        },
+        {
+            "name": "pve_hephaestus_hughes_07_c",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_hephaestus_hughes_07_c", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}}
+            ]
+        },
+        {
+            "name": "pve_hephaestus_penetrate_quarry",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_hephaestus_hughes_08", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"message_objective": {"message": "@obj_hephaestus_gate_bash", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_hephaestus_investigate_quarry",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_hephaestus_velasquez_05", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_hephaestus_hughes_09", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"narration_objective": {"trigger_name": "pve_hephaestus_velasquez_06", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_hephaestus_investigate_quarry", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_hephaestus_quarry_dialogue",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_hephaestus_hughes_10", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"narration_objective": {"trigger_name": "pve_hephaestus_velasquez_07", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_hephaestus_hughes_11", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"narration_objective": {"trigger_name": "pve_hephaestus_velasquez_08", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_hephaestus_sullivan_online",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_hephaestus_sullivan_01", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_hephaestus_velasquez_09", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_hephaestus_sullivan_02", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_hephaestus_velasquez_10", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_hephaestus_sullivan_03", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_hephaestus_velasquez_11", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_hephaestus_hughes_12", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}}
+            ]
+        },
+        {
+            "name": "pve_hephaestus_sullivan_warning",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_hephaestus_sullivan_04", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_hephaestus_velasquez_12", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_hephaestus_sullivan_05", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_hephaestus_proceed_generator", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_hephaestus_activate_generator",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_hephaestus_sullivan_06", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_hephaestus_activate_generator"}}
+            ]
+        },
+        {
+            "name": "pve_hephaestus_survive_eruption",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_hephaestus_sullivan_07", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_hephaestus_survive_eruption", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_hephaestus_mid_eruption",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_hephaestus_velasquez_13", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}}
+            ]
+        },
+        {
+            "name": "pve_hephaestus_free_sullivan",
+            "actions" : [
+                {"message_objective": {"message": "@obj_hephaestus_free_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_hephaestus_escort_sullivan",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_hephaestus_sullivan_08", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_hephaestus_velasquez_14", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_hephaestus_sullivan_09", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_hephaestus_velasquez_15", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_hephaestus_sullivan_10", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_hephaestus_free_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_hephaestus_elevator_briefing_1",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_hephaestus_sullivan_11"}},
+                {"narration_objective": {"trigger_name": "pve_hephaestus_velasquez_16"}},
+                {"narration_objective": {"trigger_name": "pve_hephaestus_sullivan_12", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_hephaestus_ascend_volcano", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_hephaestus_elevator_stop",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_hephaestus_sullivan_13", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_hephaestus_fix_lift"}}
+            ]
+        },
+        {
+            "name": "pve_hephaestus_elevator_battle",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_hephaestus_sullivan_14", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_hephaestus_elevator_briefing_2",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_hephaestus_sullivan_15", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_hephaestus_velasquez_17", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_hephaestus_sullivan_16", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_hephaestus_reach_control_room", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_hephaestus_detonate_cluster",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_hephaestus_sullivan_17", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"message_objective": {"message": "@obj_hephaestus_plant_bomb"}}
+            ]
+        },
+        {
+            "name": "pve_hephaestus_tunnel_dialogue",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_hephaestus_sullivan_18", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}},
+                {"narration_objective": {"trigger_name": "pve_hephaestus_velasquez_18", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_hephaestus_hughes_13", "img": "specialist_hughes", "narrator": "@narrator_specialist_hughes"}},
+                {"narration_objective": {"trigger_name": "pve_hephaestus_velasquez_19", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_hephaestus_escape", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_hephaestus_cooling_chamber",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_hephaestus_sullivan_19", "img": "doctor_sullivan", "narrator": "@narrator_doctor_sullivan"}}
+            ]
+        },
+        {
+            "name": "pve_hephaestus_defeat_boss",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_hephaestus_sullivan_20"}},
+                {"narration_objective": {"trigger_name": "pve_hephaestus_velasquez_20"}},
+                {"message_objective": {"message": "@obj_hephaestus_defeat_boss", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_hephaestus_escape",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_hephaestus_sullivan_21"}}
+            ]
+        },
+        {
+            "name": "pve_hephaestus_sullivan_22",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_hephaestus_sullivan_22"}}
+            ]
+        },
+        {
+            "name": "pve_hephaestus_sullivan_23",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_hephaestus_sullivan_23"}}
+            ]
+        },
+        {
+            "name": "pve_hephaestus_vehicle_under_attack",
+            "actions" : 
+            [
+                {"message_announcer": {"message": "@hephaestus_vehicle_under_attack", "timeout": 2}}
+            ]
+        },
+        {
+            "name": "pve_hephaestus_vehicle_destroyed",
+            "actions" : 
+            [
+                {"message_announcer": {"message": "@hephaestus_vehicle_destroyed", "timeout": 6}}
+            ]
+        }
+        
+    ]
+
+}

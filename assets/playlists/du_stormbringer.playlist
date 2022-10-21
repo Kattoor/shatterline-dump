@@ -1,0 +1,28 @@
+{
+    "lobby_config": {
+        "game_type": "pve",
+        "name_token": "@stormbringer_label",
+        "type_token": "@long_story",
+        "info_token": "@pve_briefing",
+        "time_token": "@stormbringer_time",
+        "location_token": "@stormbringer_location",
+        "video_path": "videos/pve/stormbringer.bk2",
+        "custom_audio": "pve_stormb_hughes_00",
+        "small_image": "pve1_mods_small",
+        "background": "bg_playlist_stormbringer"
+    },
+    "min_profile_level": 0,
+    "play_again_allowed": false,
+    "missions": [
+        "du_stormbringer"
+    ],
+    "rewards": [
+        {
+            "type_token": "@pve_completion_rewards_title",
+            "items": [
+                {"image": "season_xp", "value": 30},
+                {"image": "soft", "value": 100}
+            ]
+        }
+    ]
+}

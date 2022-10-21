@@ -1,0 +1,171 @@
+{
+    "name": "QueenNew/TestActionSpawn",
+    "root": "63a57d93-0ae9-4ced-ae2a-64603713571f",
+    "nodes": {
+        "39dd1a49-c1af-48a5-8a71-dc514580457e": {
+            "name": "SendEventToScript",
+            "pos": {
+                "x": 115,
+                "y": 881
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EventName",
+                    "type": "StringHash",
+                    "value": "SpawnSlice"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "63a57d93-0ae9-4ced-ae2a-64603713571f": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 103
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ActionTest"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "fd8aeb8e-4372-4edb-926d-8efc970cc18e"
+        },
+        "4f175b32-e30a-4716-9808-1f4a06e948cc": {
+            "name": "Play Animation",
+            "pos": {
+                "x": -85,
+                "y": 880
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "AnimationName",
+                    "type": "StringHash",
+                    "value": "spawn_gh"
+                },
+                {
+                    "name": "IsLooped",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Duration",
+                    "type": "Float",
+                    "value": "0.00"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "ce5614ba-95ca-4c0a-9bf8-22bb5cb078ca": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 522
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "SpawnAI"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "e83fbc61-b807-4e85-a16f-940633d1634b"
+        },
+        "e83fbc61-b807-4e85-a16f-940633d1634b": {
+            "name": "UnbreakableBehavior",
+            "pos": {
+                "x": 0,
+                "y": 651
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "2caaf871-58c7-41d7-b02b-d3ed3e083bf5"
+        },
+        "54f61d8c-2c4f-4ea9-a36a-262854fdecc9": {
+            "name": "SetBehaviorConditionAndResetOnExit",
+            "pos": {
+                "x": 0,
+                "y": 389
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Attack"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "ce5614ba-95ca-4c0a-9bf8-22bb5cb078ca"
+        },
+        "fd8aeb8e-4372-4edb-926d-8efc970cc18e": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 247
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Test Spawn"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "54f61d8c-2c4f-4ea9-a36a-262854fdecc9"
+        },
+        "2caaf871-58c7-41d7-b02b-d3ed3e083bf5": {
+            "name": "ParallelUntilAllComplete",
+            "pos": {
+                "x": 0,
+                "y": 760
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "4f175b32-e30a-4716-9808-1f4a06e948cc",
+                "39dd1a49-c1af-48a5-8a71-dc514580457e"
+            ]
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

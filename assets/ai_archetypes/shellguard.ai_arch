@@ -1,0 +1,154 @@
+{
+    "ai_archetypes":
+    [
+        {
+            "name":"mdr01",
+            "add_tags":["Drone","MDR", "ShellguardAI"],
+            "slice": "slices/ai/resurrection_drone_01_ai.dynamicslice",
+            "tp_slice": "slices/ai/resurrection_drone_01_ai_tp.dynamicslice",
+            "tags":["ResurrectionDrone: 01", "CQC: ResurrectionDrones"],
+            "vo_profile":"ResurrectionDrone",
+            "health":100,
+            "equip":
+            [
+                {
+                    "item":"defibrillator_mdr01",
+                    "params":
+                    {
+                        "effective_distance":"1.0"
+                    }
+                }
+            ],
+            "speed":
+            {
+                "sprint":20,
+                "run":7,
+                "strafe":7,
+                "back":7,
+                "crouch":7,
+                "fire":7
+            },
+            "obstacle_radius_multiplier":2,
+            "body_turn_limit":360,
+            "behavior":
+            {
+                "behavior_tree": "Root",
+                "profile":"ResurrectionDrone",
+                "params":
+                {
+                    "lifetime":"15",
+                    "owned_drones_limit": "2",
+                    "range":"60",
+                    "ignore_path_range":"3",
+                    "distance_to_keep":"3"
+                }
+            },
+            "death":
+            {
+                "lifetime": 1.0
+            },
+            "can_be_blinded":false,
+            "count_as_ai":false
+        },
+        {
+            "name":"intro_med_drone",
+            "parent": "mdr01",
+            "tags":["ResurrectionDrone: Intro"],
+            "health":100000,
+            "behavior":
+            {
+                "behavior_tree": "Root",
+                "profile":"ResurrectionDrone",
+                "params":
+                {
+                    "lifetime":"60",
+                    "range":"60",
+                    "distance_to_keep":"3"
+                }
+            }
+        },        
+        {
+         "name": "kdr01",
+         "add_tags":["Drone","KDR", "ShellguardAI"],
+         "tags": ["KamikazeDrone: 01"],
+         "slice": "slices/ai/kdr01.dynamicslice",
+         "tp_slice": "slices/ai/kdr01_tp.dynamicslice",
+         "vo_profile": "",
+         "health": 115,
+         "equip":
+         [
+            {
+               "item": "ml06_ai_kdr",
+               "params":
+               {
+                  "effective_distance_min": "2.7",
+                  "effective_distance_max": "3.5",
+                  "attack_distance": "2.5",
+                  "combo_min_hits": "1",
+                  "combo_max_hits": "1"
+               }
+            }
+         ],
+        "behavior":
+        {
+            "behavior_tree": "BehaviorSelector",
+            "profile":"HunterPetDrone",
+            "params":
+            {
+                "lifetime":"30",
+                "owned_drones_limit": "1"
+            }
+        },
+         "perception":
+         {
+            "sight_range": 50.0,
+            "max_memory_time": 60.0,
+            "sound_stimulus_scale": 10.0
+         },
+         "speed":
+         {
+            "run": 7.5,
+            "strafe": 2.5,
+            "back": 4.5,
+            "crouch": 2,
+            "fire": 2
+         },
+         "target_selection":
+         {
+            "tag_weights":
+            {
+               "vip": -100,
+               "breakable": -10
+            },
+            "thresholds":
+            {
+               "critical_range": 10,
+               "damage_dealer_duration": 0
+            },
+            "weights":
+            {
+               "critical_range": 0,
+               "damage_dealer": 0,
+               "target_visible": 0,
+               "target_sound": 0,
+               "target_memory": 5
+            }
+         },
+         "wounds":
+         {
+             "damage":
+             {
+                 "profile": "Gunman",
+                 "value": 500,
+                 "time": 0.5,
+                 "prob": 0.0
+             }
+         },
+         "death":
+         {
+             "lifetime": 2.0
+         },
+         "count_as_ai":false
+      }
+    ]
+}

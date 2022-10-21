@@ -1,0 +1,22 @@
+{
+    "script": "scripts/ui/lobby/custom_game/create_game.lua",
+    "view_path": "CreateGamePage.html",
+    "send_stats": true,
+    "children":
+    [
+        {"name": "mode_selection_title", "type": "Label", "view_path": "container.leftContainer.modeSelectionTitle", "text": "@game_mode"},
+        {"name": "mode_selection", "type": "Component", "file": "common/choice_chips.json", "view_path": "container.leftContainer.modeSelection"},
+
+        {"name": "test_selection_title", "type": "Label", "view_path": "container.leftContainer.testMapsSelectionTitle", "text": "@custom_test_map_filter"},
+        {"name": "test_selection", "type": "Component", "file": "common/choice_chips.json", "view_path": "container.leftContainer.testMapsSelection"},
+        
+        {"name": "missions_list_title", "type": "Label", "view_path": "container.leftContainer.listTitle", "text": "@maps_list"},
+        {"name": "missions_list", "type": "ListBox", "view_path": "container.leftContainer.mapsList"},
+        {"name": "missions_container", "type": "Component", "view_path": "container.leftContainer.mapsList.container"},
+
+        {"name": "selected_mission_title", "type": "Label", "view_path": "container.rightContainer.selectedWrapper.title", "text": "@selected_mission"},
+        {"name": "selected_mission", "type": "Label", "view_path": "container.rightContainer.selectedWrapper.selectedMap"},
+        {"name": "start_game_btn", "type": "Button", "view_path": "container.rightContainer.playButton", "text": "@custom_start_btn"},
+        {"name": "start_game_btn_hint", "type": "ActionLabel", "view_path": "container.rightContainer.playButton.wrapper.key", "gamepad_only": true}
+    ]
+}

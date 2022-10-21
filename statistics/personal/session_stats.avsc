@@ -1,0 +1,153 @@
+{
+    "name": "session_stats",
+    "doc": "Origin: game session. Emitter: dedicated server.",
+    "type": "record",
+    "fields": [
+        {
+            "name": "ts",
+            "type": "string",
+            "default": "",
+            "doc": "ISO8601 UTC timestamp of the event invocation"
+        },
+        {
+            "name": "name",
+            "type": "string",
+            "default": "-1",
+            "doc": "unique name of the event"
+        },
+        {
+            "name": "ns",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace of the server's deployment (realm)"
+        },
+        {
+            "name": "pid",
+            "type": "long",
+            "default": 0,
+            "doc": "Identifier of a player"
+        },
+        {
+            "name": "gid",
+            "type": "string",
+            "default": "",
+            "doc": "Identifier of a game session"
+        },
+        {
+            "name": "game_outcome",
+            "type": "string",
+            "default": "",
+            "doc": "Game outcome"
+        },
+        {
+            "name": "game_in_top",
+            "type": "int",
+            "default": 0,
+            "doc": "Final place in game session"
+        },
+        {
+            "name": "mission_name",
+            "type": "string",
+            "default": "",
+            "doc": "Mission name"
+        },
+        {
+            "name": "mission_completed",
+            "type": "int",
+            "default": 0,
+            "doc": "Is mission completed"
+        },
+        {
+            "name": "mission_played_time",
+            "type": "int",
+            "default": 0,
+            "doc": "Time spent on the mission"
+        },
+        {
+            "name": "game_mode",
+            "type": "string",
+            "default": "",
+            "doc": "Game mode"
+        },
+        {
+            "name": "game_type",
+            "type": "string",
+            "default": "",
+            "doc": "Game type"
+        },
+        {
+            "name": "game_bombs_planted",
+            "type": "int",
+            "default": 0
+        },
+        {
+            "name": "game_bombs_defused",
+            "type": "int",
+            "default": 0
+        },
+        {
+            "name": "game_rounds_played",
+            "type": "int",
+            "default": 0
+        },
+        {
+            "name": "game_rounds_won",
+            "type": "int",
+            "default": 0
+        },
+        {
+            "name": "game_rounds_attack_count",
+            "type": "int",
+            "default": 0
+        },
+        {
+            "name": "game_rounds_defense_count",
+            "type": "int",
+            "default": 0
+        },
+        {
+            "name": "game_rounds_attack_won",
+            "type": "int",
+            "default": 0
+        },
+        {
+            "name": "game_rounds_defense_won",
+            "type": "int",
+            "default": 0
+        },
+        {
+            "name": "game_capture_time",
+            "type": "int",
+            "default": 0
+        },
+        {
+            "name": "game_captured",
+            "type": "int",
+            "default": 0
+        },
+        {
+            "name": "game_invasion_team",
+            "type": "int",
+            "default": 0,
+            "doc": "Invasion team; 0 - not invasion mode; 1 - play as invader; 2 - play as shellguard"
+        },
+        {
+            "name": "game_objectives_completed",
+            "type": "int",
+            "default": 0,
+            "doc": "Objectives completed"
+        },
+        {
+            "name": "game_best_kill_streak",
+            "type": "int",
+            "default": 0,
+            "doc": "Biggest number of kills without dying"
+        },
+        {
+            "name": "game_horde_completion_time",
+            "type": "int",
+            "default": 0,
+            "doc": "Time from session start to final boss elimination"
+        }
+    ]
+}

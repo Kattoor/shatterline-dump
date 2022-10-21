@@ -1,0 +1,21 @@
+{
+    "script": "scripts/ui/hud_killer_info.lua",
+    "view_path": "KillerInfo.html",
+    "hide_cursor": true,
+    "children":
+    [
+        {"name": "player_weapon_icon", "type": "Image", "view_path": "content.containerLeft.containerWeaponScore.weaponImage"},
+        {"name": "player_score", "type": "Label", "view_path": "content.containerLeft.containerWeaponScore.score"},
+        {"name": "player_name", "type": "Label", "view_path": "content.containerLeft.playerName"},
+        {"name": "player_class_icon", "type": "Image", "view_path": "content.containerLeft.classContainer.classImage"},
+
+        {"name": "killer_weapon_icon", "type": "Image", "view_path": "content.containerRight.containerWeaponScore.weaponImage"},
+        {"name": "killer_score", "type": "Label", "view_path": "content.containerRight.containerWeaponScore.score"},
+        {"name": "killer_name", "type": "Label", "view_path": "content.containerRight.playerNameWrapper.playerName"},
+        {"name": "killer_health", "type": "Label", "view_path": "content.containerRight.playerNameWrapper.playerHealth"},
+        {"name": "killer_hp_label", "type": "Label", "view_path": "content.containerRight.playerNameWrapper.hpLabel", "text": "@health_point"},
+        {"name": "killer_class_icon", "type": "Image", "view_path": "content.containerRight.classContainer.classImage"},
+
+        {"name": "vs_label", "type": "Label", "view_path": "content.containerCenter.vsLabel", "text": "@vs"}
+    ]
+}

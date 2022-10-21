@@ -1,0 +1,14 @@
+{
+    "script": "",
+    "view_path": "",
+    "hide_cursor": false,
+    "action_filter": "ingame_menu_blocking, input_window",
+    "send_stats": true,
+    "children":
+    [
+        {"name": "channel_btn", "type": "Label", "view_path": "panel.channelTitle"},
+        
+        {"name": "input_field", "type": "EditBox", "view_path": "panel.labels.editBox"},
+        {"name": "invite_label", "type": "Label", "view_path": "panel.labels.inviteLabel", "text": "@press_tab_to_cycle_channels"}
+    ]
+}

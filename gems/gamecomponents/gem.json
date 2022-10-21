@@ -1,0 +1,117 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "00f05751e45c4c61ae7da3e551d06909",
+    "Name": "GameComponents",
+    "DisplayName": "GameComponents",
+    "Version": "0.1.0",
+    "Summary": "Components that require Editor part.",
+    "Tags": ["Untagged"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        },
+        {
+            "Type": "EditorModule",
+            "Name": "Editor",
+            "Extends": "GameModule"
+        }
+    ],
+    "Dependencies": [
+        {
+            "Uuid": "ff06785f7145416b9d46fde39098cb0c",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "LmbrCentral"
+        },
+        {
+            "Uuid": "a9290a69531f4aa9be6b5e3d39db883f",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01PhysXCharacters"
+        },
+        {
+            "Uuid": "7452d0edae814358afd8902dc6b49561",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01Physics"
+        },
+        {
+            "Uuid": "1b84470a5c68417da323becf125ba847",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "GameSessionStatisticsProtocol"
+        },
+        {
+            "Uuid": "a5af5a5e072741c4978f8f3bf765ce14",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "FixedTimestep"
+        },
+        {
+            "Uuid": "f12ac08609c0483486b4ff48ae193ee2",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "BackendAssetsInterfaces"
+        },
+        {
+            "Uuid": "7e24ebb066104127a4abb14e13ec7bed",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "GameSession"
+        },
+        {
+            "Uuid": "c17e7ff0d4294726b89d6f1b2d67be24",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "AISystem"
+        },
+        {
+            "Uuid": "2ebd4481cbf142b89286f28b4c29ace3",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01Interfaces"
+        },
+        {
+            "Uuid": "46f33e3a60c14b35b5bf843399f2a991",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "AssetCache"
+        },
+        {
+            "Uuid": "7cedf2bfc6684bb8a046350371ca261c",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Marshalers"
+        },
+        {
+            "Uuid": "e9f42946ff83451091589c3d585a09a8",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "BackendAssets"
+        },
+        {
+            "Uuid": "044a63ea67d04479aa5daf62ded9d9ca",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "EMotionFX"
+        },
+        {
+            "Uuid": "d3ed407a19bb4c0d92b7c4872313d600",
+            "VersionConstraints": ["~>1.0"],
+            "_comment": "Multiplayer"
+        },
+        {
+            "Uuid": "4e08125824434932a0fe3717259caa47",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "PhysX"
+        },
+        {
+            "Uuid": "28502d2aff664e6b8ee01a8dc493a42f",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "StatisticsCore"
+        },
+        {
+            "Uuid": "94748877847b4749a583914e5b2c17ed",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "StatisticsProtocol"
+        },
+        {
+            "Uuid": "8f608e7ed6fe4047961dc990edc76285",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01JsonAssetBuilder"
+        },
+        {
+            "Uuid": "c5833dbda2e045d3a5f16b7414280c27",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "WhiteBox"
+        }
+    ]
+}

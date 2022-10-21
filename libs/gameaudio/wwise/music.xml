@@ -1,0 +1,436 @@
+<ATLConfig atl_name="music">
+ <AudioTriggers>
+  <ATLTrigger atl_name="hephaestus_loading" path="music_hephaestus">
+   <WwiseEvent wwise_name="hephaestus_loading"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="stop_music_bus" path="music_hephaestus">
+   <WwiseEvent wwise_name="stop_music_bus"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="hephaestus_intro" path="music_hephaestus">
+   <WwiseEvent wwise_name="hephaestus_intro"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="colossus_bossfight_music" path="music_hephaestus">
+   <WwiseEvent wwise_name="colossus_bossfight_music"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="horde_match_end" path="music_hordemode">
+   <WwiseEvent wwise_name="horde_match_end"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="cut_hm_intro" path="music_hordemode">
+   <WwiseEvent wwise_name="cut_hm_intro"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="march_loading" path="music_hordemode">
+   <WwiseEvent wwise_name="march_loading"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="street_combat" path="music_hordemode">
+   <WwiseEvent wwise_name="street_combat"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="stinger_player_death" path="music_hordemode">
+   <WwiseEvent wwise_name="stinger_player_death"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="metro" path="music_hordemode">
+   <WwiseEvent wwise_name="metro"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="horde_mode_stop_all_music_fade" path="music_hordemode">
+   <WwiseEvent wwise_name="horde_mode_stop_all_music_fade"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="horde_mode_stop_all_music" path="music_hordemode">
+   <WwiseEvent wwise_name="horde_mode_stop_all_music"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="head" path="music_hordemode">
+   <WwiseEvent wwise_name="head"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="final_fight" path="music_hordemode">
+   <WwiseEvent wwise_name="final_fight"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="darkroom" path="music_hordemode">
+   <WwiseEvent wwise_name="darkroom"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="combat_eb" path="music_hordemode">
+   <WwiseEvent wwise_name="combat_eb"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="combat_c" path="music_hordemode">
+   <WwiseEvent wwise_name="combat_c"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="badass" path="music_hordemode">
+   <WwiseEvent wwise_name="badass"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="pvp_escort_endless_rise" path="music_pvp/music_escort">
+   <WwiseEvent wwise_name="pvp_escort_endless_rise"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="pvp_escort_time_stop" path="music_pvp/music_escort">
+   <WwiseEvent wwise_name="pvp_escort_time_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="pvp_escort_time" path="music_pvp/music_escort">
+   <WwiseEvent wwise_name="pvp_escort_time"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="pvp_checkpoint" path="music_pvp/music_escort">
+   <WwiseEvent wwise_name="pvp_checkpoint"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="pvp_bomb_planted_rise_20sec" path="music_pvp/music_ptb">
+   <WwiseEvent wwise_name="pvp_bomb_planted_rise_20sec"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="pvp_bomb_planted_loop_stop" path="music_pvp/music_ptb">
+   <WwiseEvent wwise_name="pvp_bomb_planted_loop_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="pvp_bomb_planted_loop" path="music_pvp/music_ptb">
+   <WwiseEvent wwise_name="pvp_bomb_planted_loop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="pvp_round_start_5_sec" path="music_pvp">
+   <WwiseEvent wwise_name="pvp_round_start_5_sec"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="pvp_player_death" path="music_pvp">
+   <WwiseEvent wwise_name="pvp_player_death"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="pvp_match_middle" path="music_pvp">
+   <WwiseEvent wwise_name="pvp_match_middle"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="pvp_match_intro" path="music_pvp">
+   <WwiseEvent wwise_name="pvp_match_intro"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="pvp_match_end" path="music_pvp">
+   <WwiseEvent wwise_name="pvp_match_end"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="pvp_last_minute_loop" path="music_pvp">
+   <WwiseEvent wwise_name="pvp_last_minute_loop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="pvp_round_end" path="music_pvp">
+   <WwiseEvent wwise_name="pvp_round_end"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="trigger_state_up" path="triggers_global">
+   <WwiseEvent wwise_name="trigger_state_up"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="trigger_bossfight_finished" path="triggers_global">
+   <WwiseEvent wwise_name="trigger_bossfight_finished"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="trigger_encounter_finished" path="triggers_global">
+   <WwiseEvent wwise_name="trigger_encounter_finished"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="bc_gardens_shellguard_stop" path="music_bordercontrol">
+   <WwiseEvent wwise_name="bc_gardens_shellguard_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="bc_gardens_shellguard" path="music_bordercontrol">
+   <WwiseEvent wwise_name="bc_gardens_shellguard"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="stop_bc_music" path="music_bordercontrol">
+   <WwiseEvent wwise_name="stop_bc_music"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="cut_bc_stilt_155bpm" path="music_bordercontrol">
+   <WwiseEvent wwise_name="cut_bc_stilt_155bpm"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="bc_metro_155bpm_stop" path="music_bordercontrol">
+   <WwiseEvent wwise_name="bc_metro_155bpm_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="bc_metro_155bpm" path="music_bordercontrol">
+   <WwiseEvent wwise_name="bc_metro_155bpm"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="bc_loading_87bpm_loop_stop" path="music_bordercontrol">
+   <WwiseEvent wwise_name="bc_loading_87bpm_loop_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="bc_loading_87bpm_loop" path="music_bordercontrol">
+   <WwiseEvent wwise_name="bc_loading_87bpm_loop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="bc_intro_115bpm_stinger" path="music_bordercontrol">
+   <WwiseEvent wwise_name="bc_intro_115bpm_stinger"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="bc_bossfight_155bpm_stop" path="music_bordercontrol">
+   <WwiseEvent wwise_name="bc_bossfight_155bpm_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="bc_bossfight_155bpm" path="music_bordercontrol">
+   <WwiseEvent wwise_name="bc_bossfight_155bpm"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="bc_badass_186bpm_stop" path="music_bordercontrol">
+   <WwiseEvent wwise_name="bc_badass_186bpm_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="bc_badass_186bpm" path="music_bordercontrol">
+   <WwiseEvent wwise_name="bc_badass_186bpm"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="bc_amb_stingers_stop" path="music_bordercontrol">
+   <WwiseEvent wwise_name="bc_amb_stingers_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="bc_amb_stingers" path="music_bordercontrol">
+   <WwiseEvent wwise_name="bc_amb_stingers"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="pvp_pregame_stop" path="music_pvp_general">
+   <WwiseEvent wwise_name="pvp_pregame_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="pvp_pregame" path="music_pvp_general">
+   <WwiseEvent wwise_name="pvp_pregame"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="intro_future_stinger" path="music_intro">
+   <WwiseEvent wwise_name="intro_future_stinger"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="stop_intro_music" path="music_intro">
+   <WwiseEvent wwise_name="stop_intro_music"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="intro_combat_02_stop" path="music_intro">
+   <WwiseEvent wwise_name="intro_combat_02_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="intro_combat_02" path="music_intro">
+   <WwiseEvent wwise_name="intro_combat_02"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="intro_combat_01_stop" path="music_intro">
+   <WwiseEvent wwise_name="intro_combat_01_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="intro_combat_01" path="music_intro">
+   <WwiseEvent wwise_name="intro_combat_01"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="intro_boss_fight_stop" path="music_intro">
+   <WwiseEvent wwise_name="intro_boss_fight_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="intro_boss_fight" path="music_intro">
+   <WwiseEvent wwise_name="intro_boss_fight"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="intro_amb_stingers_stop" path="music_intro">
+   <WwiseEvent wwise_name="intro_amb_stingers_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="intro_amb_stingers" path="music_intro">
+   <WwiseEvent wwise_name="intro_amb_stingers"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="cut_intro_outro_music" path="music_intro">
+   <WwiseEvent wwise_name="cut_intro_outro_music"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="cut_intro_intro_music" path="music_intro">
+   <WwiseEvent wwise_name="cut_intro_intro_music"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="result_screen_music_stop" path="music_lobby">
+   <WwiseEvent wwise_name="result_screen_music_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="result_screen_music" path="music_lobby">
+   <WwiseEvent wwise_name="result_screen_music"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="replay_music" path="music_lobby">
+   <WwiseEvent wwise_name="replay_music"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="lobby_music_unmute" path="music_lobby">
+   <WwiseEvent wwise_name="lobby_music_unmute"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="lobby_music_mute" path="music_lobby">
+   <WwiseEvent wwise_name="lobby_music_mute"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="lobby_music_stop" path="music_lobby">
+   <WwiseEvent wwise_name="lobby_music_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="lobby_music" path="music_lobby">
+   <WwiseEvent wwise_name="lobby_music"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="lobby_intro_stop" path="music_lobby">
+   <WwiseEvent wwise_name="lobby_intro_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="lobby_intro" path="music_lobby">
+   <WwiseEvent wwise_name="lobby_intro"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="stb_combat_03_stop" path="music_stormbringer">
+   <WwiseEvent wwise_name="stb_combat_03_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="stb_combat_03" path="music_stormbringer">
+   <WwiseEvent wwise_name="stb_combat_03"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="stop_stb_music" path="music_stormbringer">
+   <WwiseEvent wwise_name="stop_stb_music"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="stb_loading" path="music_stormbringer">
+   <WwiseEvent wwise_name="stb_loading"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="stb_intro" path="music_stormbringer">
+   <WwiseEvent wwise_name="stb_intro"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="stb_final_fight_stop" path="music_stormbringer">
+   <WwiseEvent wwise_name="stb_final_fight_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="stb_final_fight_state_med" path="music_stormbringer">
+   <WwiseEvent wwise_name="stb_final_fight_state_med"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="stb_final_fight_state_high" path="music_stormbringer">
+   <WwiseEvent wwise_name="stb_final_fight_state_high"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="stb_final_fight" path="music_stormbringer">
+   <WwiseEvent wwise_name="stb_final_fight"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="stb_dark_room_stop" path="music_stormbringer">
+   <WwiseEvent wwise_name="stb_dark_room_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="stb_dark_room_intro" path="music_stormbringer">
+   <WwiseEvent wwise_name="stb_dark_room_intro"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="stb_dark_room" path="music_stormbringer">
+   <WwiseEvent wwise_name="stb_dark_room"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="stb_combat_1_2_stop" path="music_stormbringer">
+   <WwiseEvent wwise_name="stb_combat_1_2_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="stb_combat_1_2" path="music_stormbringer">
+   <WwiseEvent wwise_name="stb_combat_1_2"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="stb_combat_02_stop" path="music_stormbringer">
+   <WwiseEvent wwise_name="stb_combat_02_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="stb_combat_02" path="music_stormbringer">
+   <WwiseEvent wwise_name="stb_combat_02"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="stb_combat_01_stop" path="music_stormbringer">
+   <WwiseEvent wwise_name="stb_combat_01_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="stb_combat_01" path="music_stormbringer">
+   <WwiseEvent wwise_name="stb_combat_01"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="stb_amb_stingers" path="music_stormbringer">
+   <WwiseEvent wwise_name="stb_amb_stingers"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="invasion_loading_stop" path="music_invasion">
+   <WwiseEvent wwise_name="invasion_loading_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="invasion_loading" path="music_invasion">
+   <WwiseEvent wwise_name="invasion_loading"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="shellguard_wiped" path="music_invasion">
+   <WwiseEvent wwise_name="shellguard_wiped"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="invasion_invader_stop" path="music_invasion">
+   <WwiseEvent wwise_name="invasion_invader_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="invasion_invader_start" path="music_invasion">
+   <WwiseEvent wwise_name="invasion_invader_start"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="invasion_intro" path="music_invasion">
+   <WwiseEvent wwise_name="invasion_intro"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="invasion_bossfight_stop" path="music_invasion">
+   <WwiseEvent wwise_name="invasion_bossfight_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="invasion_bossfight_start" path="music_invasion">
+   <WwiseEvent wwise_name="invasion_bossfight_start"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="invader_spawn" path="music_invasion">
+   <WwiseEvent wwise_name="invader_spawn"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="invader_killed" path="music_invasion">
+   <WwiseEvent wwise_name="invader_killed"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="intense_med_inv" path="music_invasion">
+   <WwiseEvent wwise_name="intense_med_inv"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="intense_low_inv" path="music_invasion">
+   <WwiseEvent wwise_name="intense_low_inv"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="intense_high_inv" path="music_invasion">
+   <WwiseEvent wwise_name="intense_high_inv"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="intense_death_inv" path="music_invasion">
+   <WwiseEvent wwise_name="intense_death_inv"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="shellguard_stop" path="music_invasion">
+   <WwiseEvent wwise_name="shellguard_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="shellguard_start" path="music_invasion">
+   <WwiseEvent wwise_name="shellguard_start"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="invader_ultimate" path="music_invasion">
+   <WwiseEvent wwise_name="invader_ultimate"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="intense_med" path="music_invasion">
+   <WwiseEvent wwise_name="intense_med"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="intense_low" path="music_invasion">
+   <WwiseEvent wwise_name="intense_low"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="intense_high" path="music_invasion">
+   <WwiseEvent wwise_name="intense_high"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="hecatomb_action_04_stop" path="music_hecatomb">
+   <WwiseEvent wwise_name="hecatomb_action_04_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="hecatomb_action_04" path="music_hecatomb">
+   <WwiseEvent wwise_name="hecatomb_action_04"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="hecatomb_action_03_stop" path="music_hecatomb">
+   <WwiseEvent wwise_name="hecatomb_action_03_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="hecatomb_action_03" path="music_hecatomb">
+   <WwiseEvent wwise_name="hecatomb_action_03"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="stop_hecatomb_music" path="music_hecatomb">
+   <WwiseEvent wwise_name="stop_hecatomb_music"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="hecatomb_statue_stop" path="music_hecatomb">
+   <WwiseEvent wwise_name="hecatomb_statue_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="hecatomb_statue" path="music_hecatomb">
+   <WwiseEvent wwise_name="hecatomb_statue"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="hecatomb_loading" path="music_hecatomb">
+   <WwiseEvent wwise_name="hecatomb_loading"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="hecatomb_laboratory_stop" path="music_hecatomb">
+   <WwiseEvent wwise_name="hecatomb_laboratory_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="hecatomb_laboratory" path="music_hecatomb">
+   <WwiseEvent wwise_name="hecatomb_laboratory"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="hecatomb_intro" path="music_hecatomb">
+   <WwiseEvent wwise_name="hecatomb_intro"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="hecatomb_behemoth_stop" path="music_hecatomb">
+   <WwiseEvent wwise_name="hecatomb_behemoth_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="hecatomb_behemoth" path="music_hecatomb">
+   <WwiseEvent wwise_name="hecatomb_behemoth"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="hecatomb_action_02_stop" path="music_hecatomb">
+   <WwiseEvent wwise_name="hecatomb_action_02_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="hecatomb_action_02" path="music_hecatomb">
+   <WwiseEvent wwise_name="hecatomb_action_02"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="hecatomb_action_01_stop" path="music_hecatomb">
+   <WwiseEvent wwise_name="hecatomb_action_01_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="hecatomb_action_01" path="music_hecatomb">
+   <WwiseEvent wwise_name="hecatomb_action_01"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="fade_all_music" path="music_global">
+   <WwiseEvent wwise_name="fade_all_music"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="stop_all_music" path="music_global">
+   <WwiseEvent wwise_name="stop_all_music"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="stop_redlake_music" path="music_redlake">
+   <WwiseEvent wwise_name="stop_redlake_music"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="redlake_stilt_stop" path="music_redlake">
+   <WwiseEvent wwise_name="redlake_stilt_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="redlake_stilt" path="music_redlake">
+   <WwiseEvent wwise_name="redlake_stilt"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="redlake_queen" path="music_redlake">
+   <WwiseEvent wwise_name="redlake_queen"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="redlake_loading" path="music_redlake">
+   <WwiseEvent wwise_name="redlake_loading"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="redlake_intro" path="music_redlake">
+   <WwiseEvent wwise_name="redlake_intro"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="redlake_ending" path="music_redlake">
+   <WwiseEvent wwise_name="redlake_ending"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="redlake_amb_stingers_stop" path="music_redlake">
+   <WwiseEvent wwise_name="redlake_amb_stingers_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="redlake_amb_stingers" path="music_redlake">
+   <WwiseEvent wwise_name="redlake_amb_stingers"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="redlake_action_02_stop" path="music_redlake">
+   <WwiseEvent wwise_name="redlake_action_02_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="redlake_action_02" path="music_redlake">
+   <WwiseEvent wwise_name="redlake_action_02"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="redlake_action_01_stop" path="music_redlake">
+   <WwiseEvent wwise_name="redlake_action_01_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="redlake_action_01" path="music_redlake">
+   <WwiseEvent wwise_name="redlake_action_01"/>
+  </ATLTrigger>
+ </AudioTriggers>
+</ATLConfig>

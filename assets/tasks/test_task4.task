@@ -1,0 +1,29 @@
+{
+  "name": "test_task4",
+  "type": "daily",
+  "active": true,
+  "image": "test_icon",
+  "rarity": "common",
+  "display_name": { "localization_key": "@test_task4" },
+  "description": { "localization_key": "@test_task_description" },
+  "conditions": [
+    {
+      "name": "test_task4",
+      "event_description": { "localization_key": "@test_task_event_description" },
+      "event": { "event_id": "Headshot", "actor_is_me": true },
+      "progress": 10
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 1000
+    },
+    {
+      "reward_type": "item",
+      "name": "test_gacha_box",
+      "amount": 1
+    }
+  ]
+}

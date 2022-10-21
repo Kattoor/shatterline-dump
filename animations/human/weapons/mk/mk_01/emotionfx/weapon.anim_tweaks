@@ -1,0 +1,47 @@
+{
+    "weapon_assets":
+    [
+        "mk01"
+    ],
+    "motion_sets":
+    [
+        "mk01_1p",
+        "mk01_wpn",
+        "mk01_3p"
+    ],
+    "binding_motions_to_parameters":
+    [
+        {
+            "motion": "toss_prepare",
+            "weapon_parameter" : "grenade_duration_prepare"
+        },
+        {
+            "motion": "toss_prepare_wpn",
+            "weapon_parameter" : "grenade_duration_prepare"
+        },
+        {
+            "motion": "toss_throw",
+            "weapon_parameter" : "grenade_duration_throw"
+        },
+        {
+            "motion": "toss_throw_wpn",
+            "weapon_parameter" : "grenade_duration_throw"
+        },
+        {
+            "motion": "ironsight_in",
+            "weapon_parameter" : "zoom_in_time"
+        },
+        {
+            "motion": "ironsight_out",
+            "weapon_parameter" : "zoom_out_time"
+        },
+        {
+            "motion": "stand_toss_throw_grenade_3p",
+            "weapon_parameter" : "grenade_duration_throw"
+        },
+        {
+            "motion": "stand_toss_prepare_grenade_3p",
+            "weapon_parameter" : "grenade_duration_prepare"
+        }
+    ]
+}

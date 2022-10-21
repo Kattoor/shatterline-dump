@@ -1,0 +1,63 @@
+{
+    "name": "Default/NavlinkMove",
+    "root": "3bbd89ff-1a10-49ca-9ec0-462560919d18",
+    "nodes": {
+        "3bbd89ff-1a10-49ca-9ec0-462560919d18": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 86
+            },
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "FollowNavlink"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "6123e9c1-e485-4340-ba12-3bc16bbcacdd"
+        },
+        "6123e9c1-e485-4340-ba12-3bc16bbcacdd": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 197
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "NavLinkMoveRequested"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "407772ff-1871-40bb-ba0a-0d7ad3bead38"
+        },
+        "407772ff-1871-40bb-ba0a-0d7ad3bead38": {
+            "name": "FollowNavlink",
+            "pos": {
+                "x": 0,
+                "y": 329
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

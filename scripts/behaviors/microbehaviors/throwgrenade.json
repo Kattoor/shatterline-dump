@@ -1,0 +1,245 @@
+{
+    "name": "Microbehaviors/ThrowGrenade",
+    "root": "c69ea571-5c12-46d3-917a-93183dffb4b4",
+    "nodes": {
+        "4b8ee4a8-789b-4a0d-9436-3ab333404a98": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 210
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ThrowGrenade"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "58e811f2-d371-4c38-9d3f-ebb4ac198a33"
+        },
+        "51aaea04-311e-4ce5-b5ed-6fd87e6aa594": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 564
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "a7fbb8c1-da36-4d5f-9d3b-ec70b9cc4f87",
+                "f97d5d83-ba2a-4b98-ad40-12acadcd25cc",
+                "f0627519-f0ff-4c27-af1c-3fca981b917b"
+            ]
+        },
+        "c69ea571-5c12-46d3-917a-93183dffb4b4": {
+            "name": "ResetCurrentMicrobehaviorOnExit",
+            "pos": {
+                "x": 0,
+                "y": 93
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "4b8ee4a8-789b-4a0d-9436-3ab333404a98"
+        },
+        "f0627519-f0ff-4c27-af1c-3fca981b917b": {
+            "name": "ThrowGrenade",
+            "pos": {
+                "x": 415,
+                "y": 708
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ItemTag",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Microbehaviors",
+                        "Params",
+                        "item_tag"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "e5d8b816-b817-4a5c-b78d-e8fc4f3628ec": {
+            "name": "AngleToTarget",
+            "pos": {
+                "x": -310,
+                "y": 822
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Target",
+                    "type": "Variable",
+                    "value": [
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "MaxAngle",
+                    "type": "Float",
+                    "value": "5.00"
+                },
+                {
+                    "name": "UseBodyYaw",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "f2cba12e-7aaf-45b7-bf31-ba90bc9790c5"
+        },
+        "f2cba12e-7aaf-45b7-bf31-ba90bc9790c5": {
+            "name": "Success",
+            "pos": {
+                "x": -310,
+                "y": 1028
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "58e811f2-d371-4c38-9d3f-ebb4ac198a33": {
+            "name": "ScriptEventGate",
+            "pos": {
+                "x": 0,
+                "y": 315
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EnterEvent",
+                    "type": "StringHash",
+                    "value": "ThrowGrenadeBegin"
+                },
+                {
+                    "name": "ExitEvent",
+                    "type": "StringHash",
+                    "value": "ThrowGrenadeEnd"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "d0c95745-a4ed-4d86-9f98-b59c9b6f64c4"
+        },
+        "f97d5d83-ba2a-4b98-ad40-12acadcd25cc": {
+            "name": "ExactBodyRotateTo",
+            "pos": {
+                "x": 110,
+                "y": 708
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Target",
+                    "type": "Variable",
+                    "value": [
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "DegreesPerSecond",
+                    "type": "Float",
+                    "value": "360"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "d0c95745-a4ed-4d86-9f98-b59c9b6f64c4": {
+            "name": "SetStrafeAllowedAndRestoreOnExit",
+            "pos": {
+                "x": 0,
+                "y": 450
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Allow",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "51aaea04-311e-4ce5-b5ed-6fd87e6aa594"
+        },
+        "a7fbb8c1-da36-4d5f-9d3b-ec70b9cc4f87": {
+            "name": "ParallelUntilAnyComplete",
+            "pos": {
+                "x": -205,
+                "y": 708
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "e5d8b816-b817-4a5c-b78d-e8fc4f3628ec",
+                "3074577d-d096-479b-acd1-4894b1cf85e7"
+            ]
+        },
+        "3074577d-d096-479b-acd1-4894b1cf85e7": {
+            "name": "Wait",
+            "pos": {
+                "x": -120,
+                "y": 825
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Float",
+                    "value": "0.5"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

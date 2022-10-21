@@ -1,0 +1,120 @@
+{
+    "events": [
+        {
+            "name": "pve_twins_start",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_twins_velasquez_01"}},
+                {"message_objective": {"message": "@obj_twins_start", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_twins_investigate_portal_1",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_twins_velasquez_02", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_twins_investigate"}}
+            ]
+        },
+        {
+            "name": "pve_twins_grab_sample_tutor",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_twins_velasquez_03", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_twins_grab"}}
+            ]
+        },
+        {
+            "name": "pve_twins_grab_sample",
+            "actions" : [
+                {"message_announcer": {"message": "@obj_twins_grab", "timeout": 3}}
+            ]
+        },
+        {
+            "name": "pve_twins_carry_sample",
+            "actions" : [
+                {"message_announcer": {"message": "@obj_twins_carry", "timeout": 3}}
+            ]
+        },
+        {
+            "name": "pve_twins_protect_delivery",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_twins_velasquez_04", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_twins_deliver"}}
+            ]
+        },
+        {
+            "name": "pve_twins_investigate_portal_2",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_twins_velasquez_05", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_twins_investigate", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_twins_investigate_portal_3",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_twins_velasquez_06", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_twins_investigate", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_twins_await_helicopter",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_samples_05", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@tmp_horde_enc_02_extraction_on_its_way"}}
+            ]
+        },
+        {
+            "name": "pve_twins_reach_base",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_twins_velasquez_07", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_twins_reach"}}
+            ]
+        },
+        {
+            "name": "pve_twins_attack_base",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_twins_velasquez_08", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_twins_assault", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_twins_cross_cave",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_twins_velasquez_09", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_twins_cave", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_twins_cave_monologue",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_twins_velasquez_10", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_twins_cave", "show_in_center": false}}
+            ]
+        },
+        {
+            "name": "pve_twins_defeat_stilts",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_twins_velasquez_11", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_twins_stilts"}}
+            ]
+        },
+        {
+            "name": "pve_twins_disable_tower_1",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_twins_velasquez_12", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_announcer": {"message": "@obj_twins_tower_1", "timeout": 3}}
+            ]
+        },
+        {
+            "name": "pve_twins_disable_tower_2",
+            "actions" : [
+                {"message_announcer": {"message": "@obj_twins_tower_2", "timeout": 3}}
+            ]
+        },
+        {
+            "name": "pve_twins_finish_stilts",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_short_twins_velasquez_13", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_bcontrol_victory", "show_in_center": false}}
+            ]
+        }
+    ]
+}

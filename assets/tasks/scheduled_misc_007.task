@@ -1,0 +1,34 @@
+{
+  "name": "scheduled_misc_007",
+  "type": "scheduled",
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "common",
+  "display_name": { "localization_key": "@scheduled_misc_007_name" },
+  "description": { "localization_key": "@scheduled_misc_007_description" },
+  "conditions": [
+    {
+      "name": "scheduled_misc_007",
+      "event_description": { "localization_key": "@scheduled_misc_007_event_description" },
+      "event": { "event_id": "Resurrect", "actor_is_me": true, "game_type_is": ["pve"]},
+      "progress": 10
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 2000
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 1000
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 15
+    }
+  ]
+}

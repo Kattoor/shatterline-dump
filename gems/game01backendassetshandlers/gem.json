@@ -1,0 +1,27 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "333df742d34243cab0fdffe96a803bb1",
+    "Name": "BackendAssetsHandlers",
+    "DisplayName": "BackendAssetsHandlers",
+    "Version": "0.1.0",
+    "Summary": "A short description of my Gem.",
+    "Tags": ["Untagged"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type":     "GameModule"
+        },
+        {
+            "Type":     "EditorModule",
+            "Name":     "Editor",
+            "Extends":  "GameModule"
+        }
+    ],
+    "Dependencies" : [
+        {
+            "Uuid": "8f608e7ed6fe4047961dc990edc76285",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01JsonAssetBuilder"
+        }
+    ]
+}

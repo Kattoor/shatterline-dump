@@ -1,0 +1,19 @@
+{
+    "script": "scripts/ui/lobby/modifications/modifications_confirm.lua",
+    "view_path": "ModificationConfirm.html",
+    "children": [
+
+        {"name": "header", "type": "Label", "view_path": "header", "text": "@modifications_confirm_header"},
+        {"name": "info_text", "type": "Label", "view_path": "infoText", "text": "@modifications_confirm_info_text"},
+
+        {"name": "modification_name", "type": "Label", "view_path": "bottomPanel.modificationName"},
+        {"name": "modification_description", "type": "Label", "view_path": "bottomPanel.modificationDescription"},
+
+        {"name": "ok_btn", "type": "Button", "view_path": "bottomPanel.buttons.okBtn", "text": "@ok_btn"},
+        {"name": "ok_btn_hint", "type": "ActionLabel", "view_path": "bottomPanel.buttons.okBtn.wrapper.key", "gamepad_only": true},
+
+        {"name": "equip_btn", "type": "Button", "view_path": "bottomPanel.buttons.equipBtn", "text": "@modifications_reward_go_equip"},
+        {"name": "equip_btn_hint", "type": "ActionLabel", "view_path": "bottomPanel.buttons.equipBtn.wrapper.key", "gamepad_only": true}
+
+    ]
+}

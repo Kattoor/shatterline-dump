@@ -1,0 +1,24 @@
+{
+  "name": "pill_taskchain_012",
+  "type": "challenge",
+  "active": false,
+  "image": "hero_pill_large",
+  "rarity": "epic",
+  "display_name": { "localization_key": "@pill_taskchain_012_name" },
+  "description": { "localization_key": "@pill_taskchain_012_description" },
+  "conditions": [
+   {
+      "name": "pill_taskchain_012",
+      "event_description": { "localization_key": "@pill_taskchain_012_event_description" },
+      "event": { "event_id": "PillPlay", "actor_is_me": true },
+      "progress": 3
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "item",
+      "name": "pill_item_box",
+      "amount": 1
+    }
+  ]
+}

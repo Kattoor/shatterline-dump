@@ -1,0 +1,18 @@
+{
+    "name": "bleed_axe01",
+    "remove_on_death": true,
+    "duration": 5.0,
+    "effects": [
+        { 
+            "bleed": 
+            { 
+                "threshold": 0,
+                "hp_decrease_per_time_interval": 50,
+                "time_interval": 0.5,
+                "screen_effect_intensity_param": "ScreenBlood_Amount",
+                "screen_effect_intensity_value": 0.6,
+                "screen_effect_fade_out_time": 3
+            }
+        }
+    ]
+}

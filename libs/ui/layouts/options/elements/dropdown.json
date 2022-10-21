@@ -1,0 +1,13 @@
+{
+    "script": "scripts/ui/options/dropdown.lua",
+    "view_path": "OptionsDropdown.html",
+    "children":
+    [
+        {"name": "title", "type": "Label", "view_path": "title", "text": ""},
+        {"name": "dropdown", "type": "Component", "view_path": "elementContainer.dropdown"},
+        {"name": "list_box", "type": "ListBox", "view_path": "elementContainer.dropdown.wrapper.listBox"},
+        {"name": "wrapper", "type": "Component", "view_path": "elementContainer.dropdown.wrapper"},
+        {"name": "container", "type": "Component", "view_path": "elementContainer.dropdown.wrapper.listBox.container"},
+        {"name": "selected", "type": "Button", "view_path": "elementContainer.dropdown.wrapper.selected"}
+    ]
+}

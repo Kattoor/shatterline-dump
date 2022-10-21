@@ -1,0 +1,41 @@
+{
+    "name": "Ranged/DoNothing",
+    "root": "9e09969e-c7fe-42e6-ad41-42fdb5dccdef",
+    "nodes": {
+        "9e09969e-c7fe-42e6-ad41-42fdb5dccdef": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 83
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "DoNothing"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "8d37bd88-f044-474d-a33a-7e0ec8dd30c7"
+        },
+        "8d37bd88-f044-474d-a33a-7e0ec8dd30c7": {
+            "name": "Noop",
+            "pos": {
+                "x": 0,
+                "y": 204
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

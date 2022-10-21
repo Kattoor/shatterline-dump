@@ -1,0 +1,88 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "f3e68d4266444582af8ae517c768ebff",
+    "Name": "Game01HUD",
+    "DisplayName": "Game01HUD",
+    "Version": "0.1.0",
+    "Summary": "HUD system for Game01. The whole gem is a set of subsystem,  which forms bridge between ui and game code",
+    "Tags": ["Untagged"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        },
+        {
+            "Type": "EditorModule",
+            "Name": "Editor",
+            "Extends": "GameModule"
+        }
+    ],
+    "Dependencies":
+    [
+        {
+            "Uuid": "00f05751e45c4c61ae7da3e551d06909",
+            "VersionConstraints": ["~>0.1"],
+            "_comment": "GameComponents"
+        },
+        {
+            "Uuid": "3935319725ff4f7b957ad1516afcd1fe",
+            "VersionConstraints": ["~>0.1"],
+            "_comment": "Game01AudioSystem"
+        },
+        {
+            "Uuid": "2ebd4481cbf142b89286f28b4c29ace3",
+            "VersionConstraints": ["~>0.1"],
+            "_comment": "Game01Interfaces"
+        },
+        {
+            "Uuid": "ff06785f7145416b9d46fde39098cb0c",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "LmbrCentral"
+        },
+        {
+            "Uuid": "c17e7ff0d4294726b89d6f1b2d67be24",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "AISystem"
+        },
+        {
+            "Uuid": "044a63ea67d04479aa5daf62ded9d9ca",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "EmotionFX"
+        },
+        {
+            "Uuid": "7452d0edae814358afd8902dc6b49561",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01Physics"
+        },
+        {
+            "Uuid": "4e08125824434932a0fe3717259caa47",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "PhysX"
+        },
+        {
+            "Uuid": "a9290a69531f4aa9be6b5e3d39db883f",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01PhysXCharacters"
+        },
+        {
+            "Uuid": "8f608e7ed6fe4047961dc990edc76285",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01JsonAssetBuilder"
+        },
+        {
+            "Uuid": "6109d307d44c437ea1fb5c931e4a3e1e",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01MetagameInventory"
+        },
+        {
+            "Uuid": "b8e16ebeec9346f18af81fe09b6844bf",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01ClientBackend"
+        },
+        {
+            "Uuid": "0642af88bb00468b8b90a9285c1a278c",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01KillCounter"
+        }
+    ]
+}

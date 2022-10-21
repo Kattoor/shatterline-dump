@@ -1,0 +1,135 @@
+{
+    "name": "Goliath/Engage",
+    "root": "d592bee2-3418-4aac-b1e6-a5b941bfaa57",
+    "nodes": {
+        "f59c564b-db4d-4795-bb86-94935546cc6d": {
+            "name": "SetDestinationPoint",
+            "pos": {
+                "x": -200,
+                "y": 527
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Goliath",
+                        "PointOfInterestPos"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "c5250c51-9b01-430a-8fb0-253c89e4a398": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 408
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "f59c564b-db4d-4795-bb86-94935546cc6d",
+                "b24ccaf9-2d5b-408a-9437-04eb924f743e"
+            ]
+        },
+        "e853ba8c-9ac0-4974-83a8-0fd783aaf235": {
+            "name": "IsBBValueExist",
+            "pos": {
+                "x": 0,
+                "y": 230
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ValuePath",
+                    "type": "StringHash",
+                    "value": "Gai.Goliath.PointOfInterestPos"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "c5250c51-9b01-430a-8fb0-253c89e4a398"
+        },
+        "d592bee2-3418-4aac-b1e6-a5b941bfaa57": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 88
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Engage"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "e853ba8c-9ac0-4974-83a8-0fd783aaf235"
+        },
+        "b24ccaf9-2d5b-408a-9437-04eb924f743e": {
+            "name": "ApproachTo",
+            "pos": {
+                "x": 165,
+                "y": 526
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Goliath",
+                        "PointOfInterestPos"
+                    ]
+                },
+                {
+                    "name": "EndDistance",
+                    "type": "Float",
+                    "value": "0"
+                },
+                {
+                    "name": "UpdateDestinationPoint",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

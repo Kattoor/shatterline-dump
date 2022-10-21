@@ -1,0 +1,319 @@
+{
+    "name": "Microbehaviors/FaceToFaceReaction",
+    "root": "98b20408-bf7e-4ddb-b666-86956d8b9ab6",
+    "nodes": {
+        "cf1ec8fe-0fd5-4c33-9af4-4ec655370b6c": {
+            "name": "Add",
+            "pos": {
+                "x": -820,
+                "y": 456
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "InputA",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Microbehaviors",
+                        "Params",
+                        "animations_base_index"
+                    ]
+                },
+                {
+                    "name": "InputB",
+                    "type": "Variable",
+                    "value": [
+                        "Index"
+                    ]
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Result",
+                    "type": "Variable",
+                    "value": [
+                        "Index"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "59e8486f-a026-430c-af06-fe1560add7e9": {
+            "name": "PlayVO",
+            "pos": {
+                "x": -240.5,
+                "y": 464
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Character",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "VOEventName",
+                    "type": "StringHash",
+                    "value": "face_to_face"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "b03bd216-9b93-4071-b93f-979b75fc1b83": {
+            "name": "StopFireAndRestoreOnExit",
+            "pos": {
+                "x": 0,
+                "y": 422
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "15031b3d-91a7-4fa3-8428-eb181e9895dd"
+        },
+        "96b60edc-b2f0-41a1-b1e3-2db99f1dbc47": {
+            "name": "GetShuffledRandomIndex",
+            "pos": {
+                "x": -1140,
+                "y": 457
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ContextName",
+                    "type": "StringHash",
+                    "value": "FaceToFace"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Index",
+                    "type": "Variable",
+                    "value": [
+                        "Index"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "b4d0fa6d-40c8-486a-8a40-fa81df495b58": {
+            "name": "CreateShuffledRandomContextIfAbsent",
+            "pos": {
+                "x": -1450,
+                "y": 454
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ContextName",
+                    "type": "StringHash",
+                    "value": "FaceToFace"
+                },
+                {
+                    "name": "Size",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Microbehaviors",
+                        "Params",
+                        "animations_count"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "a66bc905-a2b7-47d5-a732-76b725bc6457": {
+            "name": "Add",
+            "pos": {
+                "x": -495,
+                "y": 464
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "InputA",
+                    "type": "Variable",
+                    "value": [
+                        "Index"
+                    ]
+                },
+                {
+                    "name": "InputB",
+                    "type": "Integer",
+                    "value": "1"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Result",
+                    "type": "Variable",
+                    "value": [
+                        "Index"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "62d01540-5148-4421-bc14-8b6471b14372": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 192
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "FaceToFaceReaction"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "4e7b5651-3591-4974-87cf-eea197cccc8b"
+        },
+        "f0fe172d-e14d-4fa2-86d5-a55436622765": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -1745,
+                "y": 452
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Index"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Integer"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "15031b3d-91a7-4fa3-8428-eb181e9895dd": {
+            "name": "DisableMovementAndRestoreOnExit",
+            "pos": {
+                "x": 0,
+                "y": 537
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "27030c3e-cc36-4384-9060-05edf663d9fb"
+        },
+        "98b20408-bf7e-4ddb-b666-86956d8b9ab6": {
+            "name": "ResetCurrentMicrobehaviorOnExit",
+            "pos": {
+                "x": 0,
+                "y": 92
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "62d01540-5148-4421-bc14-8b6471b14372"
+        },
+        "27030c3e-cc36-4384-9060-05edf663d9fb": {
+            "name": "SetAIStateAndRestoreOnExit",
+            "pos": {
+                "x": 0,
+                "y": 653
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Index",
+                    "type": "Variable",
+                    "value": [
+                        "Index"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "fd13605c-2703-423d-90ad-64f1bc55cbed"
+        },
+        "4e7b5651-3591-4974-87cf-eea197cccc8b": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 329
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "f0fe172d-e14d-4fa2-86d5-a55436622765",
+                "b4d0fa6d-40c8-486a-8a40-fa81df495b58",
+                "96b60edc-b2f0-41a1-b1e3-2db99f1dbc47",
+                "cf1ec8fe-0fd5-4c33-9af4-4ec655370b6c",
+                "a66bc905-a2b7-47d5-a732-76b725bc6457",
+                "59e8486f-a026-430c-af06-fe1560add7e9",
+                "b03bd216-9b93-4071-b93f-979b75fc1b83"
+            ]
+        },
+        "fd13605c-2703-423d-90ad-64f1bc55cbed": {
+            "name": "WaitForAGNodeState",
+            "pos": {
+                "x": 0,
+                "y": 796
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Entering",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "Entered",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "Exiting",
+                    "type": "StringHash",
+                    "value": "FaceToFaceReact_stateMachine_CODE"
+                },
+                {
+                    "name": "Exited",
+                    "type": "StringHash",
+                    "value": ""
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

@@ -1,0 +1,11 @@
+{
+    "script": "scripts/ui/ingame/scoreboard/scoreboard_player_item.lua",
+    "view_path": "ScoreboardPlayerItem.html",
+    "hide_cursor": true,
+
+    "children":
+    [
+        {"name": "player_position", "type": "Label", "view_path": "playerInfo.playerPosition", "visible": false},
+        {"name": "empty_slot_label", "type": "Label", "view_path": "playerInfo.wrapper.emptySlotLabel"}
+    ]
+}

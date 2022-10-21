@@ -1,0 +1,42 @@
+{
+    "script": "scripts/ui/lobby/armory/armory.lua",
+    "view_path": "Armory.html",
+    "children": [
+        {"name": "weapon_type_label", "type": "Label", "view_path": "info.leftBlock.weaponType.label"},
+        {"name": "weapon_name", "type": "Label", "view_path": "info.leftBlock.weaponType.weaponTitle"},
+
+        {"name": "weapon_level_label", "type": "Label", "view_path": "info.leftBlock.weaponInfo.levelWrapper.title", "text": "@armory_level"},
+        {"name": "weapon_level", "type": "Label", "view_path": "info.leftBlock.weaponInfo.levelWrapper.level"},
+
+        {"name": "progress", "type": "Component", "view_path": "info.leftBlock.weaponInfo.progressText", "visible": false},
+        {"name": "current_exp", "type": "Label", "view_path": "info.leftBlock.weaponInfo.progressText.currentExp"},
+        {"name": "max_exp", "type": "Label", "view_path": "info.leftBlock.weaponInfo.progressText.maxTierExp"},
+        {"name": "progress_bar", "type": "ProgressBar", "view_path": "info.leftBlock.weaponInfo.progressWrapper.progressBar"},
+        
+        {"name": "locked", "type": "Label", "view_path": "info.leftBlock.weaponInfo.lockedText", "text": "@armory_tier_locked", "visible": false},
+
+        {"name": "description", "type": "Label", "view_path": "info.leftBlock.description.label"},
+
+        {"name": "parameters", "type": "Component", "view_path": "info.leftBlock.weaponStats.parameters", "file": "lobby/armory/armory_parameters.json"},
+        {"name": "specifications", "type": "Component", "view_path": "info.leftBlock.weaponStats.specifications", "file": "lobby/armory/armory_specifications.json"},
+
+        {"name": "perks", "type": "Component", "view_path": "info.perks", "file": "common/weapon_perks.json"},
+
+        {"name": "buy_btn_container", "type": "Component", "view_path": "info.rightBlock.buttons.buyBtnWrapper"},
+        {"name": "buy_btn", "type": "Button", "view_path": "info.rightBlock.buttons.buyBtnWrapper.buyBtn", "text": "@buy_label"},
+        {"name": "buy_btn_hint", "type": "ActionLabel", "view_path": "info.rightBlock.buttons.buyBtnWrapper.buyBtn.wrapper.key", "gamepad_only": true},
+        {"name": "buy_price", "type": "Label", "view_path": "info.rightBlock.buttons.buyBtnWrapper.priceContainer.price"},
+
+        {"name": "customize_btn", "type": "Button", "view_path": "info.rightBlock.buttons.customizeBtnWrapper.customizeBtn", "text": "@customize_label"},
+        {"name": "customize_btn_hint", "type": "ActionLabel", "view_path": "info.rightBlock.buttons.customizeBtnWrapper.customizeBtn.wrapper.key", "gamepad_only": true},
+        {"name": "customize_btn_recent_icon", "type": "Component", "view_path": "info.rightBlock.buttons.customizeBtnWrapper.customizeBtn.recentIcon", "visible": false},
+        {"name": "customize_btn_recent_wave", "type": "Component", "view_path": "info.rightBlock.buttons.customizeBtnWrapper.recentWave", "visible": false},
+
+        { "name": "tiers_list", "type": "ArmoryTierItemsGrid", "view_path": "grid.container.contentContainer.tiersList" },
+        { "name": "weapons_list", "type": "ArmoryWeaponItemsGrid", "view_path": "grid.container.contentContainer.weaponsList" },
+        { "name": "weapons_list_container", "type": "Component", "view_path": "grid.container.contentContainer.weaponsList.container" },
+        { "name": "progress_list", "type": "ArmoryProgressGrid", "view_path": "grid.container.contentContainer.progressList" },
+
+        {"name": "rotation_area", "type": "Panel", "view_path": "rotationAreaWrapper.rotationArea"}
+    ]
+}

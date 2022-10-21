@@ -1,0 +1,39 @@
+{
+  "name": "scheduled_operatives_009",
+  "type": "scheduled",
+  "tags": [
+    "pve",
+    "gun"
+  ],
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "rare",
+  "display_name": { "localization_key": "@scheduled_operatives_009_name" },
+  "description": { "localization_key": "@scheduled_operatives_009_description" },
+  "conditions": [
+    {
+      "name": "scheduled_operatives_009",
+      "event_description": { "localization_key": "@scheduled_operatives_009_event_description" },
+      "event": { "event_id": "Kill", "actor_is_me": true, "actor_player_preset_is":["m_pill"], "target_player_preset_is_not": []},
+      "progress": 50
+    }
+  ],
+  
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 3000
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 2000
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 25
+    }
+  ]
+}

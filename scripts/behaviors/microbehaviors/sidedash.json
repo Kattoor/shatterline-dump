@@ -1,0 +1,205 @@
+{
+    "name": "Microbehaviors/SideDash",
+    "root": "b9be0f4c-c975-4877-a283-af636447c50a",
+    "nodes": {
+        "f7f0a568-e63d-4c69-9f2d-9e65ef3988f7": {
+            "name": "DashTo",
+            "pos": {
+                "x": 10,
+                "y": 642
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "DashPoint"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "b9be0f4c-c975-4877-a283-af636447c50a": {
+            "name": "ResetCurrentMicrobehaviorOnExit",
+            "pos": {
+                "x": 10,
+                "y": 82
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "6b30d821-5421-45c6-9487-5e9b539a32de"
+        },
+        "6f18fd96-83bf-453b-9623-69b778e5df24": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -600,
+                "y": 282
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "DashPoint"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Position"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "01edcbd3-5889-408d-8dc9-55d81253fed5": {
+            "name": "CheckForObstacles",
+            "pos": {
+                "x": 10,
+                "y": 282
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "DashPoint"
+                    ]
+                },
+                {
+                    "name": "SourceVertOffset",
+                    "type": "Float",
+                    "value": "1.5"
+                },
+                {
+                    "name": "DestinationVertOffset",
+                    "type": "Float",
+                    "value": "0.2"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "a4941e87-c3d3-4664-a8b1-19de2d0835a6"
+        },
+        "a4941e87-c3d3-4664-a8b1-19de2d0835a6": {
+            "name": "StopFireAndRestoreOnExit",
+            "pos": {
+                "x": 10,
+                "y": 521
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "f7f0a568-e63d-4c69-9f2d-9e65ef3988f7"
+        },
+        "6b30d821-5421-45c6-9487-5e9b539a32de": {
+            "name": "Sequence",
+            "pos": {
+                "x": 10,
+                "y": 171
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "6f18fd96-83bf-453b-9623-69b778e5df24",
+                "94a44400-7ca4-44e1-9283-c4ad17117bf4",
+                "01edcbd3-5889-408d-8dc9-55d81253fed5"
+            ]
+        },
+        "94a44400-7ca4-44e1-9283-c4ad17117bf4": {
+            "name": "FindPointForStrafeStep",
+            "pos": {
+                "x": -315,
+                "y": 282
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Target",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "MinDistance",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Microbehaviors",
+                        "Params",
+                        "min_distance"
+                    ]
+                },
+                {
+                    "name": "MaxDistance",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Microbehaviors",
+                        "Params",
+                        "max_distance"
+                    ]
+                },
+                {
+                    "name": "RandomAngle",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Microbehaviors",
+                        "Params",
+                        "random_angle"
+                    ]
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "ResultPosition",
+                    "type": "Variable",
+                    "value": [
+                        "DashPoint"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

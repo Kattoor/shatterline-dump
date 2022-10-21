@@ -1,0 +1,151 @@
+{
+  "metagame_info": {
+    "name_token": "@ptb_label",
+    "mission": "t_ptb_highpick_lastkill",
+    "game_type": "pvp",
+    "voice_chat_mode": "party_only",
+    "min_players_count": 6,
+    "time_to_join_sec": 300
+  },
+  "session_info": {
+    "level": "pvp/ptb_highpick",
+    "level_params": [
+      "ptb_active"
+    ],
+    "game_mode": "test_ptb_lastkill"
+  },
+  "reward_info": {
+    "reward_calculators": [
+      {
+        "name": "session_outcome",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "win": 30,
+              "draw": 25,
+              "loss": 20
+            }
+          },
+          {
+            "type": "xp",
+            "values": {
+              "win": 800,
+              "draw": 700,
+              "loss": 600
+            }
+          },
+          {
+            "type": "skill",
+            "values": {
+              "win": 1,
+              "draw": 0,
+              "loss": -1
+            }
+          }
+        ]
+      },
+      {
+        "name": "session_play_time",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "reward": 0,
+              "max_reward": 500
+            }
+          }
+        ]
+      },
+      {
+        "name": "session_score",
+        "score": "BombArmed",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "reward": 0,
+              "max_reward": 100
+            }
+          }
+        ]
+      },
+      {
+        "name": "session_score",
+        "score": "BombDisarmed",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "reward": 0,
+              "max_reward": 0
+            }
+          }
+        ]
+      }
+    ],
+    "weapon_score": [
+      {
+        "event": {
+          "event_id": "Kill"
+        },
+        "score": 500
+      },
+      {
+        "event": {
+          "event_id": "Headshot"
+        },
+        "score": 100
+      },
+      {
+        "event": {
+          "event_id": "WeaponTick"
+        },
+        "score": 12
+      },
+      {
+        "event": {
+          "event_id": "Assist"
+        },
+        "score": 500
+      }
+    ],
+    "hero_score": [
+      {
+        "event": {
+          "event_id": "Kill"
+        },
+        "score": 150
+      },
+      {
+        "event": {
+          "event_id": "Assist"
+        },
+        "score": 100
+      },
+      {
+        "event": {
+          "event_id": "Heal",
+          "target_team": "Same"
+        },
+        "score": 5
+      },
+      {
+        "event": {
+          "event_id": "Resurrect"
+        },
+        "score": 150
+      },
+      {
+        "event": {
+          "event_id": "WeaponTick"
+        },
+        "score": 15
+      }
+    ]
+  }
+}

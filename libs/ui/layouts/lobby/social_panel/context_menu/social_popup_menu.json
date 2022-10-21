@@ -1,0 +1,33 @@
+{
+    "script": "scripts/ui/lobby/social_panel/context_menu/social_popup_menu.lua",
+    "view_path": "SocialPopupMenu.html",
+
+    "children":
+    [
+        {"name": "fader", "type": "Button", "view_path": "wrapper.fader"},
+
+        {"name": "container", "type": "Component", "view_path": "wrapper.panel.content"},
+
+        {"name": "title", "type": "Label", "view_path": "wrapper.panel.content.title", "text": "@friend_request_from"},
+
+        {"name": "badge", "type": "PlayerListItem", "view_path": "wrapper.panel.content.badge"},
+
+        {"name": "request_buttons", "type": "Component", "view_path": "wrapper.panel.content.requestButtons"},
+        {"name": "request_button_1", "type": "Button", "view_path": "wrapper.panel.content.requestButtons.button1", "text": "@accept"},
+        {"name": "request_button_2", "type": "Button", "view_path": "wrapper.panel.content.requestButtons.button2", "text": "@decline"},
+
+        {"name": "profile_buttons", "type": "Component", "view_path": "wrapper.panel.content.profileButtons"},
+        {"name": "profile_button_1", "type": "Button", "view_path": "wrapper.panel.content.profileButtons.button1"},
+        {"name": "profile_button_2", "type": "Button", "view_path": "wrapper.panel.content.profileButtons.button2"},
+        {"name": "profile_button_3", "type": "Button", "view_path": "wrapper.panel.content.profileButtons.button3"},
+        {"name": "profile_button_4", "type": "Button", "view_path": "wrapper.panel.content.profileButtons.button4"},
+
+        {"name": "report_buttons", "type": "Component", "view_path": "wrapper.panel.content.reportButtons"},
+        {"name": "report_button_1", "type": "Button", "view_path": "wrapper.panel.content.reportButtons.button1"},
+        {"name": "report_button_2", "type": "Button", "view_path": "wrapper.panel.content.reportButtons.button2"},
+        {"name": "report_button_3", "type": "Button", "view_path": "wrapper.panel.content.reportButtons.button3"},
+
+        {"name": "back_button", "type": "Button", "view_path": "wrapper.panel.content.backButton", "text": "@back_hint"},
+        {"name": "back_button_hint", "type": "ActionLabel", "view_path": "wrapper.panel.content.backButton.wrapper.key", "gamepad_only": true}
+    ]
+}

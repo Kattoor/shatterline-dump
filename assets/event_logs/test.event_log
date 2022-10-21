@@ -1,0 +1,132 @@
+{
+  "events": [
+    {
+      "event_icon": "kill_log_headshot",
+      "event": [
+        {
+          "event_id": "Kill",
+          "hit_part_is": ["Head"]
+        }
+      ]
+    },
+    {
+      "event": [
+        {
+          "event_id": "Kill"
+        }
+      ]
+    },
+    {
+      "event_icon": "falldown",
+      "event": [
+        {
+          "event_id": "Suicide",
+          "hit_type_is": ["Fall"]
+        }
+      ]
+    },
+    {
+      "event_icon": "explosion",
+      "event": [
+        {
+          "event_id": "Suicide",
+          "hit_type_is": ["AOE"]
+        }
+      ]
+    },
+    {
+      "event_icon": "killzone_crystal",
+      "event": [
+        {
+          "event_id": "Suicide",
+          "hit_type_is": ["DOT"],
+          "dot_type_is": ["Crystalline"]
+        }
+      ]
+    },
+    {
+      "event_icon": "killzone_fire",
+      "event": [
+        {
+          "event_id": "Suicide",
+          "hit_type_is": ["DOT"],
+          "dot_type_is": ["Fire"]
+        }
+      ]
+    },
+    {
+      "event_icon": "kill_log_suicide",
+      "event": [
+        {
+          "event_id": "Suicide",
+          "target_ai_archetype_is_not": ["mdr01"]
+        }
+      ]
+    },
+    {
+      "item_icon": "resurrect_drone",
+      "event": [
+        {
+          "event_id": "Resurrect",
+          "actor_item_tag_is": ["drone"]
+        }
+      ]
+    },
+    {
+      "item_icon": "resurrect",
+      "event": [
+        {
+          "event_id": "Resurrect"
+        }
+      ]
+    },
+    {
+      "event": [
+        {
+          "event_id": "MedkitUsed",
+          "target_team": "Same"
+        }
+      ]
+    },
+    {
+      "event_text": "@event_log_first_blood",
+      "event": [
+        {
+          "event_id": "FirstBlood"
+        }
+      ]
+    },
+    {
+      "event_text": "@event_log_bomb_planted",
+      "event": [
+        {
+          "event_id": "BombPlanted"
+        }
+      ]
+    },
+    {
+      "event_text": "@event_log_bomb_defused",
+      "event": [
+        {
+          "event_id": "BombDefused"
+        }
+      ]
+    },
+    {
+      "event_text": "@event_log_return_fire",
+      "event": [
+        {
+          "event_id": "ReturnFire"
+        }
+      ]
+    },
+    {
+      "event_text": "@event_log_ultimate",
+      "event": [
+        {
+          "event_id": "Ultimate"
+        }
+      ]
+    }
+  ]
+}

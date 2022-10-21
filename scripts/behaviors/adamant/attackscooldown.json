@@ -1,0 +1,462 @@
+{
+    "name": "Adamant/AttacksCooldown",
+    "root": "a92a747d-4e4c-40e0-b962-b377a9c37ccc",
+    "nodes": {
+        "4eaad629-fd03-4b3b-8cda-c3173b498c5b": {
+            "name": "SetBBValueByPath",
+            "pos": {
+                "x": 315,
+                "y": 550
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "BB Path",
+                    "type": "StringHash",
+                    "value": "Gai.Adamant.SlamCooldown"
+                },
+                {
+                    "name": "Value",
+                    "type": "Variable",
+                    "value": [
+                        "SlamCooldown"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "3f857fe7-4fa3-472c-a7c3-57e3e2e69e5c": {
+            "name": "IsBBValueExist",
+            "pos": {
+                "x": -830,
+                "y": 238
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ValuePath",
+                    "type": "StringHash",
+                    "value": "Gai.Adamant.JumpCooldown"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "f4182dae-71ce-489a-9604-7f4d6138fba6"
+        },
+        "7de50ee0-24cb-40c0-ba3b-f3c0795beebf": {
+            "name": "GenerateRandomFloat",
+            "pos": {
+                "x": 0,
+                "y": 549
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Min",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "slam_attack_cooldown_min"
+                    ]
+                },
+                {
+                    "name": "Max",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "slam_attack_cooldown_max"
+                    ]
+                },
+                {
+                    "name": "Scale",
+                    "type": "Float",
+                    "value": "1.00"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Result",
+                    "type": "Variable",
+                    "value": [
+                        "SlamCooldown"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "b4fc9daf-fec2-4d21-8c23-0987b49e6d86": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": 585,
+                "y": 548
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "WaveCooldown"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Float"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "b2970cdc-4acf-4b55-ba73-51ac71bd2e80": {
+            "name": "SetBBValueByPath",
+            "pos": {
+                "x": 1175,
+                "y": 549
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "BB Path",
+                    "type": "StringHash",
+                    "value": "Gai.Adamant.WaveCooldown"
+                },
+                {
+                    "name": "Value",
+                    "type": "Variable",
+                    "value": [
+                        "WaveCooldown"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "38c048cb-7ed2-4367-a61c-d3021867f12e": {
+            "name": "IsBBValueExist",
+            "pos": {
+                "x": 0,
+                "y": 241
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ValuePath",
+                    "type": "StringHash",
+                    "value": "Gai.Adamant.SlamCooldown"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "9a0d1403-3502-411a-892e-68577976f279"
+        },
+        "f4182dae-71ce-489a-9604-7f4d6138fba6": {
+            "name": "Sequence",
+            "pos": {
+                "x": -830,
+                "y": 423
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "3dbb0e0e-54e2-413c-84d2-08e30ee4f268",
+                "c899e5cb-ce4c-4e4d-b37b-5c5a2f7b4cf2",
+                "da3ddfc0-e2fa-46e1-9c5a-51ddcb364ce8"
+            ]
+        },
+        "a92a747d-4e4c-40e0-b962-b377a9c37ccc": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 106
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "3f857fe7-4fa3-472c-a7c3-57e3e2e69e5c",
+                "38c048cb-7ed2-4367-a61c-d3021867f12e",
+                "86c8891f-5529-43cd-b932-02095ad5ec16"
+            ]
+        },
+        "9a0d1403-3502-411a-892e-68577976f279": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 426
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "d6e0ad80-5828-43ab-bb8b-55df2d2dfcd5",
+                "7de50ee0-24cb-40c0-ba3b-f3c0795beebf",
+                "4eaad629-fd03-4b3b-8cda-c3173b498c5b"
+            ]
+        },
+        "c899e5cb-ce4c-4e4d-b37b-5c5a2f7b4cf2": {
+            "name": "GenerateRandomFloat",
+            "pos": {
+                "x": -830,
+                "y": 546
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Min",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "jump_cooldown_min"
+                    ]
+                },
+                {
+                    "name": "Max",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "jump_cooldown_max"
+                    ]
+                },
+                {
+                    "name": "Scale",
+                    "type": "Float",
+                    "value": "1.00"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Result",
+                    "type": "Variable",
+                    "value": [
+                        "JumpCooldown"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "da3ddfc0-e2fa-46e1-9c5a-51ddcb364ce8": {
+            "name": "SetBBValueByPath",
+            "pos": {
+                "x": -540,
+                "y": 547
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "BB Path",
+                    "type": "StringHash",
+                    "value": "Gai.Adamant.JumpCooldown"
+                },
+                {
+                    "name": "Value",
+                    "type": "Variable",
+                    "value": [
+                        "JumpCooldown"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "6bbe2823-b61a-4eb0-8bf4-9d5b2caa940a": {
+            "name": "Sequence",
+            "pos": {
+                "x": 860,
+                "y": 425
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "b4fc9daf-fec2-4d21-8c23-0987b49e6d86",
+                "26f7af1c-bbae-4bef-a834-97e1eff518c6",
+                "b2970cdc-4acf-4b55-ba73-51ac71bd2e80"
+            ]
+        },
+        "26f7af1c-bbae-4bef-a834-97e1eff518c6": {
+            "name": "GenerateRandomFloat",
+            "pos": {
+                "x": 860,
+                "y": 548
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Min",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "wave_attack_cooldown_min"
+                    ]
+                },
+                {
+                    "name": "Max",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "wave_attack_cooldown_max"
+                    ]
+                },
+                {
+                    "name": "Scale",
+                    "type": "Float",
+                    "value": "1.00"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Result",
+                    "type": "Variable",
+                    "value": [
+                        "WaveCooldown"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "86c8891f-5529-43cd-b932-02095ad5ec16": {
+            "name": "IsBBValueExist",
+            "pos": {
+                "x": 860,
+                "y": 240
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ValuePath",
+                    "type": "StringHash",
+                    "value": "Gai.Adamant.WaveCooldown"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "6bbe2823-b61a-4eb0-8bf4-9d5b2caa940a"
+        },
+        "d6e0ad80-5828-43ab-bb8b-55df2d2dfcd5": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -275,
+                "y": 549
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "SlamCooldown"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Float"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "3dbb0e0e-54e2-413c-84d2-08e30ee4f268": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -1085,
+                "y": 546
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "JumpCooldown"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Float"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

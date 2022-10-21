@@ -1,0 +1,118 @@
+{
+    "shooting_mass_effect_overrides": {
+        "add": -30.0,
+        "lerp": 3.0
+    },
+    "sounds": {
+        "sets": [
+            {
+                "tag": "default",
+                "triggers": {
+                    "fire_start": "hmg03_fire_start",
+                    "fire_stop": "hmg03_fire_stop"
+                }
+            },
+            {
+                "tag": "silenced",
+                "triggers": {
+                    "fire_start": "",
+                    "fire_stop": ""
+                }
+            }
+        ],
+        "tag": "default"
+    },
+    "selection": {
+        "nearest_camera_offset": {
+            "z": 0.0,
+            "x": 0.0,
+            "y": 0.0
+        },
+        "deselection_duration": 0.5,
+        "selection_duration": 0.9
+    },
+    "spread": {
+        "hip_distribution": {
+            "points": [
+                {
+                    "distance": 5.0,
+                    "spread": 0.3
+                },
+                {
+                    "distance": 15.0,
+                    "spread": 0.1
+                },
+                {
+                    "distance": 25.0,
+                    "spread": 0.09
+                },
+                {
+                    "distance": 35.0,
+                    "spread": 0.07
+                }
+            ]
+        },
+        "max_hip_spread": 0.1,
+        "decay_time": 0.0,
+        "slide_multiplier": 1.0,
+        "zoom_multiplier": 1.0,
+        "crouch_multiplier": 1.0,
+        "crouch_idle_multiplier": 1.0,
+        "hip_step": 0.0,
+        "min_hip_spread": 0.0,
+        "decay_delay": 0.0,
+        "stand_multiplier": 1.0,
+        "walk_multiplier": 1.0,
+        "jump_multiplier": 1.0
+    },
+    "zoom": {
+        "weapon_offset": {
+            "z": 0.0,
+            "x": 0.0,
+            "y": 0.0
+        },
+        "delay_after_jump": 0.3,
+        "weapon_fov": 25.0,
+        "zoom_out_time": 0.15,
+        "hide_crosshair": true,
+        "zoom_fov": 40.0,
+        "zoom_in_time": 0.15,
+        "in_air": false
+    },
+    "common": {
+        "item_tag": "HMG"
+    },
+    "muzzle_sight_distance": 0.0,
+    "shooting": {
+        "sprint_to_shoot_time": 0.1,
+        "base_damage_distribution": {
+            "points": [
+                {
+                    "distance": 10.0,
+                    "damage": 0.0
+                }
+            ]
+        },
+        "backpack_capacity": 65000,
+        "chamber_capacity": 1,
+        "forced_shot_after_transition": true,
+        "head_damage_distribution": {
+            "points": [
+                {
+                    "distance": 10.0,
+                    "damage": 0.0
+                }
+            ]
+        },
+        "chambers_fired_per_shot": 1,
+        "rpm": 1.0,
+        "auto_reload_mode": "Chamber",
+        "bullet_type": "HMG",
+        "clip_capacity": 60000,
+        "reload": {
+            "reload_time": 6.94,
+            "reload_out_complete_threshold": 0.7,
+            "reload_in_complete_threshold": 0.7
+        }
+    }
+}

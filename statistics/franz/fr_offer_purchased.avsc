@@ -1,0 +1,95 @@
+{
+    "type":"record",   
+    "name":"offer_purchased_v1",
+    "namespace": "{{REALM}}.{{PGN}}.backend",   
+    "fields":[
+        {
+            "name":"header",
+            "type":{
+                "type":"record",
+                "name":"header",
+                "fields":[
+                    {
+                        "name":"event_id",
+                        "type":"string"
+                    },
+                    {
+                        "name":"np_tracking_id",
+                        "type":"string"
+                    },
+                    {
+                        "name":"emitter_id",
+                        "type":"int"
+                    },
+                    {
+                        "name":"event_timestamp",
+                        "type":"long"
+                  }
+               ]
+            }
+         },
+         {
+            "name":"body",
+            "type":{
+               "type":"record",
+               "name":"body",
+               "fields":[
+                  {
+                     "name":"gained_item",
+                     "type":"string",
+                     "default":"-1",
+                     "doc":"unique service name of an item"
+                  },
+                  {
+                     "name":"name",
+                     "type":"string",
+                     "default":"-1",
+                     "doc":"unique name of the event"
+                  },
+                  {
+                     "name":"spa_id",
+                     "type":"long",
+                     "default":-1,
+                     "doc":"global-unique platform identifier of the player"
+                  },
+                  {
+                     "name":"offer_id",
+                     "type":"string",
+                     "default":"-1",
+                     "doc":"name of the offer in the shop"
+                  },
+                  {
+                     "name":"pid",
+                     "type":"long",
+                     "default":-1,
+                     "doc":"namespace-unique identifier of a player"
+                  },
+                  {
+                     "name":"sid",
+                     "type":"string",
+                     "default":"-1",
+                     "doc":"global-unique identifier of the player's login session (time between login and logout)"
+                  },
+                  {
+                     "name":"ns",
+                     "type":"string",
+                     "default":"-1",
+                     "doc":"namespace of the server's deployment (realm)"
+                  },
+                  {
+                     "name":"currency_type",
+                     "type":"string",
+                     "default":"-1",
+                     "doc":"categorical value to define what exact type of currency was spent (hard or soft)"
+                  },
+                  {
+                     "name":"currency_amount",
+                     "type":"int",
+                     "default":-1,
+                     "doc":"amount of currency spent on purchased offer"
+                  }
+               ]
+            }
+         }
+      ]
+}

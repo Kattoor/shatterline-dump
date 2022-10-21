@@ -1,0 +1,17 @@
+{
+    "script": "",
+    "view_path": "HudMessages.html",
+    "hide_cursor": true,
+    "children":
+    [
+        {"name": "messageLabel", "type": "ActionLabel", "view_path": "messageLabel"},
+        {"name": "warningLabel", "type": "Label", "view_path": "warningLabel"},
+        
+        {"name": "objectiveMessage", "type": "Objective", "view_path": "ObjectiveMessage.html"},
+        {"name": "narratorMessage", "type": "Narrator", "view_path": "NarratorMessage.html"},
+        {"name": "encounterCompletion", "type": "EncounterCompletion", "file": "hud/encounter_completion.json"},
+        
+        {"name": "instantUsageLabel", "type": "ActionLabel", "view_path": "usageMessage"},
+        {"name": "instantUsageProgress", "type": "ProgressBar", "view_path": "usageMessage.panel.progressbar"}
+    ]
+}

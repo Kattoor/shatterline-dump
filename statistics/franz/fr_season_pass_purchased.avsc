@@ -1,0 +1,83 @@
+{
+    "type":"record",   
+    "name":"season_pass_purchased_v1",
+    "namespace": "{{REALM}}.{{PGN}}.backend",   
+    "fields":[
+        {
+            "name":"header",
+            "type":{
+                "type":"record",
+                "name":"header",
+                "fields":[
+                    {
+                        "name":"event_id",
+                        "type":"string"
+                    },
+                    {
+                        "name":"np_tracking_id",
+                        "type":"string"
+                    },
+                    {
+                        "name":"emitter_id",
+                        "type":"int"
+                    },
+                    {
+                        "name":"event_timestamp",
+                        "type":"long"
+                  }
+               ]
+            }
+         },
+         {
+            "name":"body",
+            "type":{
+               "type":"record",
+               "name":"body",
+               "fields":[
+                    {
+                        "name": "name",
+                        "type": "string",
+                        "default": "-1",
+                        "doc": "unique name of the event"
+                    },
+                    {
+                        "name": "spa_id",
+                        "type": "long",
+                        "default": -1,
+                        "doc": "global-unique platform identifier of the player"
+                    },
+                    {
+                        "name": "pid",
+                        "type": "long",
+                        "default": -1,
+                        "doc": "namespace-unique identifier of a player"
+                    },
+                    {
+                        "name": "ts",
+                        "type": "string",
+                        "default": "-1",
+                        "doc": "ISO8601 UTC timestamp of the event invocation"
+                    },
+                    {
+                        "name": "sid",
+                        "type": "string",
+                        "default": "-1",
+                        "doc": "global-unique identifier of the player's login session (time between login and logout)"
+                    },
+                    {
+                        "name": "ns",
+                        "type": "string",
+                        "default": "-1",
+                        "doc": "namespace of the server's deployment (realm)"
+                    },
+                    {
+                        "name": "season_id",
+                        "type": "int",
+                        "default": -1,
+                        "doc": "index (id) of purchased season pass"
+                    }
+               ]
+            }
+         }
+      ]
+}

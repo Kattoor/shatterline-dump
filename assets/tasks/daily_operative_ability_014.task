@@ -1,0 +1,33 @@
+{
+  "name": "daily_operative_ability_014",
+  "type": "daily",
+  "tags": [
+    "daily_operative_ability"
+  ],
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "uncommon",
+  "display_name": { "localization_key": "@daily_operative_ability_014_name" },
+  "description": { "localization_key": "@daily_operative_ability_014_description" },
+  "conditions": [
+    {
+      "name": "daily_operative_ability_014",
+      "event_description": { "localization_key": "@daily_operative_ability_014_event_description" },
+      "event": { "event_id": "Kill", "actor_is_me": true, "actor_item_tag_is": ["FG"], "actor_player_preset_is":["a_mongoose"], "target_player_class_is": ["A", "M", "H", "S", "I"]},
+      "progress": 5
+    }
+  ],
+  
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 250
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 200
+    }
+  ]
+}

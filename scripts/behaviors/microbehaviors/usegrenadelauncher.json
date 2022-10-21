@@ -1,0 +1,166 @@
+{
+    "name": "Microbehaviors/UseGrenadeLauncher",
+    "root": "27a7ea4c-22b1-48a8-ab7c-0c18c3451f26",
+    "nodes": {
+        "c9b415a2-a06a-45d0-909e-1cf6d65a256f": {
+            "name": "Wait",
+            "pos": {
+                "x": 670,
+                "y": 631
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Float",
+                    "value": "0.1"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "79f24567-bdf3-4310-a2db-14d2fd56ce57": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 323
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "3d2bd438-e9ce-49f5-95c2-b931be6314b7",
+                "46125716-970c-4706-b75f-63c32ff878f3",
+                "4dda323d-de6a-4369-897e-cf13069f0de0",
+                "5fddd11f-d985-4ef7-ae83-de2cad03c61a",
+                "c9b415a2-a06a-45d0-909e-1cf6d65a256f"
+            ]
+        },
+        "27a7ea4c-22b1-48a8-ab7c-0c18c3451f26": {
+            "name": "ResetCurrentMicrobehaviorOnExit",
+            "pos": {
+                "x": 0,
+                "y": 103
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "ea5e9eb2-1241-48a8-8176-34af24159910"
+        },
+        "3d2bd438-e9ce-49f5-95c2-b931be6314b7": {
+            "name": "Wait",
+            "pos": {
+                "x": -655,
+                "y": 620
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Float",
+                    "value": "0.1"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "ea5e9eb2-1241-48a8-8176-34af24159910": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 202
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "UseGrenadeLauncher"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "79f24567-bdf3-4310-a2db-14d2fd56ce57"
+        },
+        "4dda323d-de6a-4369-897e-cf13069f0de0": {
+            "name": "Wait",
+            "pos": {
+                "x": -100,
+                "y": 621
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Float",
+                    "value": "0.5"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "46125716-970c-4706-b75f-63c32ff878f3": {
+            "name": "ExactBodyRotateTo",
+            "pos": {
+                "x": -435,
+                "y": 621
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Target",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "DegreesPerSecond",
+                    "type": "Float",
+                    "value": "360"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "5fddd11f-d985-4ef7-ae83-de2cad03c61a": {
+            "name": "SendEventToScript",
+            "pos": {
+                "x": 340,
+                "y": 631
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EventName",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Microbehaviors",
+                        "Params",
+                        "script_event_to_send"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

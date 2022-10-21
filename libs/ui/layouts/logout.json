@@ -1,0 +1,10 @@
+{
+    "script": "scripts/ui/logout.lua",
+    "view_path": "RootScreen.html",
+    "hide_cursor": true,
+    "send_stats": true,
+    "children": [
+        { "name": "background", "type": "Component", "file": "logout/background.json" },
+        { "name": "error_message", "type": "Component", "file": "modal_window/error_message_container.json" }
+    ]
+}

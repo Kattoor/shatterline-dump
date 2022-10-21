@@ -1,0 +1,29 @@
+{
+  "name": "kite_taskchain_010",
+  "type": "challenge",
+  "active": false,
+  "image": "hero_kite_large",
+  "rarity": "uncommon",
+  "display_name": { "localization_key": "@kite_taskchain_010_name" },
+  "description": { "localization_key": "@kite_taskchain_010_description" },
+  "conditions": [
+    {
+      "name": "kite_taskchain_010",
+      "event_description": { "localization_key": "@kite_taskchain_010_event_description" },
+      "event": { "event_id": "KitePlay", "actor_is_me": true },
+      "progress": 1
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "item",
+      "name": "kite_item_box",
+      "amount": 1
+    },
+    {
+      "reward_type": "task",
+      "name": "kite_taskchain_011",
+      "amount": 1
+    }
+  ]
+}

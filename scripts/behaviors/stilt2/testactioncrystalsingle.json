@@ -1,0 +1,415 @@
+{
+    "name": "Stilt2/TestActionCrystalSingle",
+    "root": "2dda1b7a-278b-4b21-be64-ce86bdd33ef0",
+    "nodes": {
+        "b40fe6fc-e6e4-42dd-a947-ca8c851e31d3": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 544
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Launch Single Crystalines"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "5ae4e427-304a-4871-b6cf-87a8bbc972a2"
+        },
+        "5ae4e427-304a-4871-b6cf-87a8bbc972a2": {
+            "name": "ParallelUntilAllComplete",
+            "pos": {
+                "x": 0,
+                "y": 659
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "cdae35e1-28c2-4384-81c7-2cfd37654290",
+                "20753d5f-56a6-47bc-bdad-9c856bbbcf8b"
+            ]
+        },
+        "20753d5f-56a6-47bc-bdad-9c856bbbcf8b": {
+            "name": "SendEventToScript",
+            "pos": {
+                "x": 145,
+                "y": 779
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EventName",
+                    "type": "StringHash",
+                    "value": "LaunchSingle"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "b82a1e30-27c0-4fe1-911e-1be1c1e8cba6": {
+            "name": "Add",
+            "pos": {
+                "x": -395,
+                "y": 545
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "InputA",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Pos"
+                    ]
+                },
+                {
+                    "name": "InputB",
+                    "type": "Variable",
+                    "value": [
+                        "lookOffset"
+                    ]
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Result",
+                    "type": "Variable",
+                    "value": [
+                        "targetPt"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "cd8839ff-b2eb-4368-bd26-e24c275f25ba": {
+            "name": "ResetCustomTargetPos",
+            "pos": {
+                "x": 415,
+                "y": 540
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "342d755f-5317-439e-bee1-bbcd1adc88cd": {
+            "name": "CancelMeleeAttack",
+            "pos": {
+                "x": 245,
+                "y": 538
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "c888340b-1cc3-4bf2-a744-b5f810d6029b": {
+            "name": "Timer",
+            "pos": {
+                "x": -1025,
+                "y": 660
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "RunTime",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "crystaline_attack_max_rot_time"
+                    ]
+                },
+                {
+                    "name": "FailOnTimeout",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "48d70019-2cf4-49b8-be87-60579907e3d3"
+        },
+        "d664f889-f7a1-40ca-b915-924347f96542": {
+            "name": "SetCustomTargetPos",
+            "pos": {
+                "x": -235,
+                "y": 542
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Position",
+                    "type": "Variable",
+                    "value": [
+                        "targetPt"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "93568422-01ad-422f-b90f-60f4338cd43f": {
+            "name": "ResetCustomTargetPos",
+            "pos": {
+                "x": -1300,
+                "y": 551
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "808623d5-490f-4d45-b346-315153e8d1f2": {
+            "name": "Multiply",
+            "pos": {
+                "x": -635,
+                "y": 543
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "InputA",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "CharacterProperties",
+                        "BodyDirection"
+                    ]
+                },
+                {
+                    "name": "InputB",
+                    "type": "Integer",
+                    "value": "5"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Result",
+                    "type": "Variable",
+                    "value": [
+                        "lookOffset"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "14486e38-79e5-4ab0-8af7-167832aef74b": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": -1025,
+                "y": 550
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Rotate To Target"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "c888340b-1cc3-4bf2-a744-b5f810d6029b"
+        },
+        "cdae35e1-28c2-4384-81c7-2cfd37654290": {
+            "name": "Succeeder",
+            "pos": {
+                "x": -85,
+                "y": 779
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "a1f6dcff-5cb8-4a9a-89d4-6ec78faa205a"
+        },
+        "2dda1b7a-278b-4b21-be64-ce86bdd33ef0": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 105
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ActionTest"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "28a792a7-5539-4026-a4b2-a75198d34a8d"
+        },
+        "48d70019-2cf4-49b8-be87-60579907e3d3": {
+            "name": "RepeatUntilSucceeds",
+            "pos": {
+                "x": -1025,
+                "y": 789
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Iterations",
+                    "type": "Integer",
+                    "value": "0"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "4f7a794e-8078-429e-9fce-5e8ddecb81b9"
+        },
+        "a1f6dcff-5cb8-4a9a-89d4-6ec78faa205a": {
+            "name": "AOEMeleeSuperAttack",
+            "pos": {
+                "x": -85,
+                "y": 874
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "PrepareTime",
+                    "type": "Float",
+                    "value": "0.00"
+                },
+                {
+                    "name": "PrepareIndex",
+                    "type": "Integer",
+                    "value": "0"
+                },
+                {
+                    "name": "AttackIndex",
+                    "type": "Integer",
+                    "value": "0"
+                },
+                {
+                    "name": "AOE Attack slice",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "SliceRandomPostfix",
+                    "type": "Float",
+                    "value": "0"
+                },
+                {
+                    "name": "Close melee attack",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "a0895e50-8413-4013-875a-8057d43e6e99": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 404
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "93568422-01ad-422f-b90f-60f4338cd43f",
+                "14486e38-79e5-4ab0-8af7-167832aef74b",
+                "808623d5-490f-4d45-b346-315153e8d1f2",
+                "b82a1e30-27c0-4fe1-911e-1be1c1e8cba6",
+                "d664f889-f7a1-40ca-b915-924347f96542",
+                "b40fe6fc-e6e4-42dd-a947-ca8c851e31d3",
+                "342d755f-5317-439e-bee1-bbcd1adc88cd",
+                "cd8839ff-b2eb-4368-bd26-e24c275f25ba"
+            ]
+        },
+        "28a792a7-5539-4026-a4b2-a75198d34a8d": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 249
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Test Launch Single Crystalines"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "a0895e50-8413-4013-875a-8057d43e6e99"
+        },
+        "4f7a794e-8078-429e-9fce-5e8ddecb81b9": {
+            "name": "AngleToTargetNow",
+            "pos": {
+                "x": -1025,
+                "y": 901
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Target",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "MaxAngle",
+                    "type": "Float",
+                    "value": "15.00"
+                },
+                {
+                    "name": "UseBodyYaw",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

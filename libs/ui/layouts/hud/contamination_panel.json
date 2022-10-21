@@ -1,0 +1,18 @@
+{
+    "script": "",
+    "view_path": "ContaminationPanel.html",
+    "hide_cursor": true,
+    "children":
+    [
+        {"name": "label", "type": "Label", "view_path": "wrapper.container.label"},
+        {"name": "progressbar", "type": "ProgressBar", "view_path": "wrapper.container.progressWrapper.progressBar"},
+
+        {"name": "icon1", "type": "Image", "view_path": "wrapper.iconsContainer.contaminationIcon1"},
+        {"name": "icon2", "type": "Image", "view_path": "wrapper.iconsContainer.contaminationIcon2"},
+        {"name": "icon3", "type": "Image", "view_path": "wrapper.iconsContainer.contaminationIcon3"},
+        {"name": "icon4", "type": "Image", "view_path": "wrapper.iconsContainer.contaminationIcon4"},
+        {"name": "icon5", "type": "Image", "view_path": "wrapper.iconsContainer.contaminationIcon5"},
+
+        {"name": "modifier", "type": "ContaminationModifierItem", "view_path": "wrapper.modifierContainer.modifier"}
+    ]
+}

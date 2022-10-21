@@ -1,0 +1,81 @@
+{
+    "events": [
+        {
+            "name": "CPandWIN",
+            "actions" : [
+                {"message_announcer": {"message": "@CPandWIN", "timeout": 3}},
+                {"message_objective": {"message": "@CPandWIN"}}
+            ]
+        },
+        {
+            "name": "rtdm_win_message",
+            "actions" : [
+                {"message_announcer": {"message": "@team_eliminated_win", "timeout": 3}},
+                {"narration_objective": {"trigger_name": "tdm_phillips_victory_time"}}
+            ]
+        },
+        {
+            "name": "rtdm_lose_message",
+            "actions" : [
+                {"message_announcer": {"message": "@team_eliminated_lose", "timeout": 3}},
+                {"narration_objective": {"trigger_name": "tdm_phillips_defeat_time"}}
+            ]
+        },
+        {
+            "name": "rtdm_time_is_up_win",
+            "actions" : [
+                {"message_announcer": {"message": "@round_time_is_up_win", "timeout": 3}},
+                {"narration_objective": {"trigger_name": "ptb_phillips_victory_time"}}
+            ]
+        },
+        {
+            "name": "rtdm_time_is_up_lose",
+            "actions" : [
+                {"message_announcer": {"message": "@round_time_is_up_lose", "timeout": 3}},
+                {"narration_objective": {"trigger_name": "ptb_phillips_defeat_time"}}
+            ]
+        },
+        {
+            "name": "rtdm_draw_message",
+            "actions" : [
+                {"message_announcer": {"message": "@time_is_up_draw", "timeout": 3}},
+                {"narration_objective": {"trigger_name": "tdm_phillips_draw"}}
+            ]
+        },
+        {
+            "name": "rtdm_round_start",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "tdm_phillips_brief"}},
+                {"message_objective": {"message": "@eliminate_team"}}
+            ]
+        },
+        {
+            "name": "rtdm_midround_us",
+            "actions" : [
+                {"message_announcer": {"message": "@midround_winning", "timeout": 3}},
+                {"narration_objective": {"trigger_name": "tdm_phillips_midround_us"}}
+            ]
+        },
+        {
+            "name": "rtdm_midround_them",
+            "actions" : [
+                {"message_announcer": {"message": "@midround_losing", "timeout": 3}},
+                {"narration_objective": {"trigger_name": "tdm_phillips_midround_them"}}
+            ]
+        },
+        {
+            "name": "rtdm_almost_us",
+            "actions" : [
+                {"message_announcer": {"message": "@almost_over_winning", "timeout": 3}},
+                {"narration_objective": {"trigger_name": "tdm_phillips_almost_over_us"}}
+            ]
+        },
+        {
+            "name": "rtdm_almost_them",
+            "actions" : [
+                {"message_announcer": {"message": "@almost_over_losing", "timeout": 3}},
+                {"narration_objective": {"trigger_name": "tdm_phillips_almost_over_them"}}
+            ]
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+{
+  "name": "scheduled_pvp_001",
+  "type": "scheduled",
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "uncommon",
+  "display_name": { "localization_key": "@scheduled_pvp_001_name" },
+  "description": { "localization_key": "@scheduled_pvp_001_description" },
+  "conditions": [
+    {
+      "name": "scheduled_pvp_001",
+      "event_description": { "localization_key": "@scheduled_pvp_001_event_description" },
+      "event": { "event_id": "AbilityKill", "actor_is_me": true, "game_type_is": ["pvp"] },
+      "progress": 35
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 2500
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 1500
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 20
+    }
+  ]
+}

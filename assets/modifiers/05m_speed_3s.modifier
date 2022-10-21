@@ -1,0 +1,38 @@
+{
+    "name": "05m_speed_3s",
+    "duration": 5,
+    "effects": [
+        { "max_speed": { "speed_cap": 2.0 }},
+        {
+            "input_filter":
+            {
+                "block_move": false,
+                "block_jump": true,
+                "block_sprint": true,
+                "block_crouch": true,
+                "block_selection_and_abilities": true,
+                "block_weapon": false,
+                "block_melee": true,
+                "block_usable_objects": true
+            }
+        },
+        { 
+            "spawn_personal_slice":
+            {
+                "slice_name": "slices/ai/feedback/timestop_fp_feedback.dynamicslice",
+                "position": [0, 0, 0],
+                "attach_to_fp": true,
+                "attach_to_tp": false
+            }
+        },
+        {
+            "add_tags":
+            {
+                "tags":
+                [
+                    "Stasis"
+                ]
+            }
+        }
+    ]
+}

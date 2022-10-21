@@ -1,0 +1,1828 @@
+{
+    "name": "Gunmen/FireFromCover",
+    "root": "ba624902-778c-4b56-a844-d8d3a82fc012",
+    "nodes": {
+        "5d2d96f0-6bbc-4979-baa5-1d295edc926e": {
+            "name": "Succeeder",
+            "pos": {
+                "x": 0,
+                "y": 712
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "57173611-4a8f-47e9-9aac-e115fcbe5f11"
+        },
+        "4e84ef6c-e320-407d-a853-cc2a9d11f5c8": {
+            "name": "IsTargetPerceivedAndVisible",
+            "pos": {
+                "x": -1100,
+                "y": 1829
+            },
+            "inputs": [
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "64a6f830-8eb0-4ad7-82bc-2a793a2881ba"
+        },
+        "e885da61-06e2-48f9-a744-ce4e8838792c": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -1335,
+                "y": 1999
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "LeaveFromCover"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "f0a79091-48a1-456b-92a5-8988864ac0c1": {
+            "name": "IsSMCover",
+            "pos": {
+                "x": 810,
+                "y": 1126
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "c89b6c69-5667-488e-a2d5-032e9a921407"
+        },
+        "6c18f303-0268-4443-8007-2a2b73633b83": {
+            "name": "IsUnbreakableBehavior",
+            "pos": {
+                "x": 125,
+                "y": 1467
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "f2f73a71-187d-4478-b874-1e8209661073"
+        },
+        "21f13598-f7a5-4131-8250-e0cd9654c024": {
+            "name": "Equals",
+            "pos": {
+                "x": -3080,
+                "y": 1978
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Lhs",
+                    "type": "Variable",
+                    "value": [
+                        "WantHideInCover"
+                    ]
+                },
+                {
+                    "name": "Rhs",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "ce8d28f1-3a14-4ab4-b812-a1915fed8496"
+        },
+        "e7052608-dc79-48d8-8796-25ea9627ddbf": {
+            "name": "IsUnbreakableBehavior",
+            "pos": {
+                "x": -285,
+                "y": 1465
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "bc86c248-7220-4e00-81ef-2621ab673c26"
+        },
+        "c956e72c-b5af-4bcf-8eba-166b105aa23c": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -885,
+                "y": 2020
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "WantHideInCover"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "e1884cf7-876b-40b5-9a3d-c82859229edf": {
+            "name": "Selector",
+            "pos": {
+                "x": -480,
+                "y": 1822
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "575e30ef-49f3-4845-bb6c-a273d7645bad",
+                "44cca43e-56a1-4bcd-b2c6-a93f2e6902c4"
+            ]
+        },
+        "42e0575c-5705-4f51-9e97-7f503bf2305a": {
+            "name": "Wait",
+            "pos": {
+                "x": 925,
+                "y": 1380
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Float",
+                    "value": "0.9"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "575e30ef-49f3-4845-bb6c-a273d7645bad": {
+            "name": "Equals",
+            "pos": {
+                "x": -595,
+                "y": 1934
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Lhs",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "hide_in_cover_if_underfire"
+                    ]
+                },
+                {
+                    "name": "Rhs",
+                    "type": "Float",
+                    "value": "0"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "8cecfeee-ec66-4f40-a167-9fa6d08a5fae"
+        },
+        "294e7803-c73e-44af-a906-2d60800bfdd8": {
+            "name": "StartFireAndStopOnExit",
+            "pos": {
+                "x": -1450,
+                "y": 1419
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "ab4fde2e-616e-4c1d-b3e1-4232a029cec4"
+        },
+        "09b7e589-8586-49c9-89e2-e3060d804944": {
+            "name": "GreaterThan",
+            "pos": {
+                "x": -495,
+                "y": 303
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Lhs",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "hide_in_cover_max"
+                    ]
+                },
+                {
+                    "name": "Rhs",
+                    "type": "Float",
+                    "value": "0"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "6342cd72-0c99-40b5-a3cd-1b93eae4f57c"
+        },
+        "e96d710b-c528-49e4-853a-afe7cf5da2c0": {
+            "name": "Succeeder",
+            "pos": {
+                "x": -2175,
+                "y": 1511
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "c36742c4-d135-4ae6-9bb4-5074b7c5cd3e"
+        },
+        "c36742c4-d135-4ae6-9bb4-5074b7c5cd3e": {
+            "name": "Selector",
+            "pos": {
+                "x": -2345,
+                "y": 1722
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "fb010aed-da42-4f9d-a4ee-378ebb4ca829",
+                "3051722b-1ded-4141-b633-45d727aa7533"
+            ]
+        },
+        "6e7f2247-bd19-4239-9dc2-f960aa2f7ca9": {
+            "name": "HideInCover",
+            "pos": {
+                "x": -3360,
+                "y": 2602
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "11654384-0bf1-428c-bae6-970a8d06fe5f": {
+            "name": "SetStance",
+            "pos": {
+                "x": 695,
+                "y": 1381
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Stance",
+                    "type": "StringHash",
+                    "value": "Stand"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "ce8d28f1-3a14-4ab4-b812-a1915fed8496": {
+            "name": "UnbreakableBehavior",
+            "pos": {
+                "x": -3080,
+                "y": 2178
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "405213bb-c149-428b-a932-91486bc6b608"
+        },
+        "5e8a7a60-13ca-4e5b-936c-e2062826185d": {
+            "name": "Success",
+            "pos": {
+                "x": -640,
+                "y": 1292
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "f0a16706-af1a-444e-b1a0-b2682bdf4b0f": {
+            "name": "SendBehaviorEvent",
+            "pos": {
+                "x": -165,
+                "y": 302
+            },
+            "inputs": [
+                {
+                    "name": "EventName",
+                    "type": "StringHash",
+                    "value": "cover_actions_cover_shooting"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "9856e722-b01e-44c3-92f4-e26419d1721d": {
+            "name": "ClipAmmoLessThan",
+            "pos": {
+                "x": -885,
+                "y": 1825
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Count",
+                    "type": "Integer",
+                    "value": "0"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "c956e72c-b5af-4bcf-8eba-166b105aa23c"
+        },
+        "690ed156-b4bc-4c7b-903a-8f71b79a6a4c": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -1170,
+                "y": 491
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "WantHideInCover"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "ab4fde2e-616e-4c1d-b3e1-4232a029cec4": {
+            "name": "Sequence",
+            "pos": {
+                "x": -1295,
+                "y": 1565
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "70f85009-3a60-4680-8181-7fc9a9d739d0",
+                "259fd5d1-4f80-494c-8bc7-e43ce401b525"
+            ]
+        },
+        "6259af6e-7d54-4bcc-93ed-2bbc1aa3382f": {
+            "name": "UnbreakableBehavior",
+            "pos": {
+                "x": -1905,
+                "y": 1721
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "825729c4-6dd7-45d2-9aef-2fa2e6e7109f"
+        },
+        "2eb9469f-a315-4c12-9d47-8b0615cef400": {
+            "name": "IsUnbreakableBehavior",
+            "pos": {
+                "x": 465,
+                "y": 1152
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "67da7337-6f07-49ed-8b7b-0da57a371cd6"
+        },
+        "7c8259ba-e5f4-489f-bb0d-bc52549d690f": {
+            "name": "Equals",
+            "pos": {
+                "x": -1905,
+                "y": 1512
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Lhs",
+                    "type": "Variable",
+                    "value": [
+                        "HiddenInCover"
+                    ]
+                },
+                {
+                    "name": "Rhs",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "6259af6e-7d54-4bcc-93ed-2bbc1aa3382f"
+        },
+        "64a6f830-8eb0-4ad7-82bc-2a793a2881ba": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -1100,
+                "y": 1998
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "LeaveFromCover"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "bc86c248-7220-4e00-81ef-2621ab673c26": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -285,
+                "y": 1637
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "LeaveFromCover"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "011ec88f-e65f-4a6f-bf10-3da1f3697a76": {
+            "name": "SetVariableOnExit",
+            "pos": {
+                "x": -3080,
+                "y": 1834
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "WantHideInCover"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "21f13598-f7a5-4131-8250-e0cd9654c024"
+        },
+        "43115cc0-be05-4f5d-80b3-9ca50b6882a6": {
+            "name": "UnbreakableBehavior",
+            "pos": {
+                "x": 895,
+                "y": 900
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "2b10c107-5f09-4a5c-a86f-b611b15946c4"
+        },
+        "55672335-01fa-4575-88b4-9cbfefbfae54": {
+            "name": "Equals",
+            "pos": {
+                "x": 895,
+                "y": 710
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Lhs",
+                    "type": "Variable",
+                    "value": [
+                        "LeaveFromCover"
+                    ]
+                },
+                {
+                    "name": "Rhs",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "43115cc0-be05-4f5d-80b3-9ca50b6882a6"
+        },
+        "ba624902-778c-4b56-a844-d8d3a82fc012": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 82
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "FireFromCover"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "738b4192-7ffa-4ae0-bfee-893b69425086"
+        },
+        "825729c4-6dd7-45d2-9aef-2fa2e6e7109f": {
+            "name": "PopFromCover",
+            "pos": {
+                "x": -1905,
+                "y": 1822
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "793522de-3619-4ee0-a8cc-ab8bf7aa6e15": {
+            "name": "SetBehaviorCondition",
+            "pos": {
+                "x": 1005,
+                "y": 1126
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "FireFromCover"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "ebc8a8bf-e6cb-4e0e-a290-7a36e43e05bb": {
+            "name": "Equals",
+            "pos": {
+                "x": -2885,
+                "y": 1611
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Lhs",
+                    "type": "Variable",
+                    "value": [
+                        "HideInCoverEnabled"
+                    ]
+                },
+                {
+                    "name": "Rhs",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "011ec88f-e65f-4a6f-bf10-3da1f3697a76"
+        },
+        "38989a8c-e264-49ec-8b88-d4391168275a": {
+            "name": "WaitRandom",
+            "pos": {
+                "x": -2215,
+                "y": 2068
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "MinWaitTime",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "hide_in_cover_min"
+                    ]
+                },
+                {
+                    "name": "MaxWaitTime",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "hide_in_cover_max"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "3051722b-1ded-4141-b633-45d727aa7533": {
+            "name": "Equals",
+            "pos": {
+                "x": -2215,
+                "y": 1829
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Lhs",
+                    "type": "Variable",
+                    "value": [
+                        "HiddenInCover"
+                    ]
+                },
+                {
+                    "name": "Rhs",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "38989a8c-e264-49ec-8b88-d4391168275a"
+        },
+        "aff5f1cc-c33d-4558-ba69-ecf114c3c699": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -3200,
+                "y": 2608
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "HiddenInCover"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "10ed565d-bbb8-47b5-9d34-8100466536f7": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -1600,
+                "y": 303
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "LeaveFromCover"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Boolean"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "67da7337-6f07-49ed-8b7b-0da57a371cd6": {
+            "name": "SetVariable",
+            "pos": {
+                "x": 465,
+                "y": 1352
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "LeaveFromCover"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "bca03c96-c09f-4546-ac87-f8559a55698f": {
+            "name": "Sequence",
+            "pos": {
+                "x": -1985,
+                "y": 1298
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "f662a521-9fbf-4934-8e89-0d9eddc9a0c2",
+                "e96d710b-c528-49e4-853a-afe7cf5da2c0",
+                "928602b3-5188-4e80-b7eb-9d6ab2eed70b",
+                "9316243e-9c77-405f-a0de-01a368b7d132",
+                "294e7803-c73e-44af-a906-2d60800bfdd8"
+            ]
+        },
+        "738b4192-7ffa-4ae0-bfee-893b69425086": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 213
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "10ed565d-bbb8-47b5-9d34-8100466536f7",
+                "4d253bc5-9ceb-4c84-8ccd-40dd04551e1f",
+                "8d8fbb0c-bad8-4544-a46a-70870404ceda",
+                "40a2f1c3-e666-4b2d-a72b-7f16ba88bf5d",
+                "804005b1-94e0-4184-813e-d43ce365da56",
+                "09b7e589-8586-49c9-89e2-e3060d804944",
+                "f0a16706-af1a-444e-b1a0-b2682bdf4b0f",
+                "40d10ab5-1d3c-4838-86c1-40b3c0e74d90"
+            ]
+        },
+        "405213bb-c149-428b-a932-91486bc6b608": {
+            "name": "Selector",
+            "pos": {
+                "x": -3080,
+                "y": 2300
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "f0e095a7-bed8-49e1-8907-8a3c114c87e8",
+                "8bd08cc6-6866-4ddd-9f78-1f837681d1a7"
+            ]
+        },
+        "09228426-5d8e-4287-a272-b9ffd2c8a4af": {
+            "name": "Selector",
+            "pos": {
+                "x": 112.91795665634708,
+                "y": 991.1673669467788
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "48bd3e13-aaa6-41fe-91df-3f617c20cdd6",
+                "f7bd3038-05df-4739-aa4c-74e80c442515"
+            ]
+        },
+        "928602b3-5188-4e80-b7eb-9d6ab2eed70b": {
+            "name": "Succeeder",
+            "pos": {
+                "x": -1905,
+                "y": 1421
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "7c8259ba-e5f4-489f-bb0d-bc52549d690f"
+        },
+        "f2f73a71-187d-4478-b874-1e8209661073": {
+            "name": "SetVariable",
+            "pos": {
+                "x": 125,
+                "y": 1639
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "LeaveFromCover"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "6342cd72-0c99-40b5-a3cd-1b93eae4f57c": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -495,
+                "y": 491
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "HideInCoverEnabled"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "70f85009-3a60-4680-8181-7fc9a9d739d0": {
+            "name": "Wait",
+            "pos": {
+                "x": -1450,
+                "y": 1681
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Float",
+                    "value": "1"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "607bcea6-700a-4fc0-9487-78c444ace6b7": {
+            "name": "Reload",
+            "pos": {
+                "x": -2390,
+                "y": 2367
+            },
+            "inputs": [
+                {
+                    "name": "Blocking",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "b1379946-a495-47b2-89d1-f7b155660ef8": {
+            "name": "Sequence",
+            "pos": {
+                "x": -2490,
+                "y": 2246
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "fcf407e8-22c8-408e-b95c-428959f452a4",
+                "607bcea6-700a-4fc0-9487-78c444ace6b7"
+            ]
+        },
+        "f7bd3038-05df-4739-aa4c-74e80c442515": {
+            "name": "TargetInRange",
+            "pos": {
+                "x": 125,
+                "y": 1252
+            },
+            "inputs": [
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Source",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Min",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "leave_cover_target_distance"
+                    ]
+                },
+                {
+                    "name": "Max",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Inventory",
+                        "CurrentItem",
+                        "effective_distance_max"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "6c18f303-0268-4443-8007-2a2b73633b83"
+        },
+        "48bd3e13-aaa6-41fe-91df-3f617c20cdd6": {
+            "name": "IsInsideDefenseArea",
+            "pos": {
+                "x": -285,
+                "y": 1088
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "b2859065-731c-4df6-9c56-c9dcc508e40a"
+        },
+        "41f0f0c8-e0a6-4608-bfe3-e010b05bfc2d": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": -2490,
+                "y": 2003
+            },
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ReloadInCover"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "ca1100e9-4483-4f53-9591-0532de08061b"
+        },
+        "f0e095a7-bed8-49e1-8907-8a3c114c87e8": {
+            "name": "Sequence",
+            "pos": {
+                "x": -3250,
+                "y": 2420
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "6e7f2247-bd19-4239-9dc2-f960aa2f7ca9",
+                "aff5f1cc-c33d-4558-ba69-ecf114c3c699"
+            ]
+        },
+        "8cecfeee-ec66-4f40-a167-9fa6d08a5fae": {
+            "name": "Noop",
+            "pos": {
+                "x": -595,
+                "y": 2128
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "41af27ed-ba32-4501-b0ea-79abc0660f7d": {
+            "name": "Equals",
+            "pos": {
+                "x": -640,
+                "y": 1089
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Lhs",
+                    "type": "Variable",
+                    "value": [
+                        "LeaveFromCover"
+                    ]
+                },
+                {
+                    "name": "Rhs",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "5e8a7a60-13ca-4e5b-936c-e2062826185d"
+        },
+        "b1155b70-c5b9-490d-9122-beb0f3735fb9": {
+            "name": "CoverIsInUsefulAngle",
+            "pos": {
+                "x": 465,
+                "y": 993
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "2eb9469f-a315-4c12-9d47-8b0615cef400"
+        },
+        "44cca43e-56a1-4bcd-b2c6-a93f2e6902c4": {
+            "name": "UnderFire",
+            "pos": {
+                "x": -330,
+                "y": 1936
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "3b931b27-88bd-457e-a0b3-40df6a5c7d05"
+        },
+        "4d253bc5-9ceb-4c84-8ccd-40dd04551e1f": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -1360,
+                "y": 304
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "WantHideInCover"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "3b931b27-88bd-457e-a0b3-40df6a5c7d05": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -330,
+                "y": 2101
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "WantHideInCover"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "fcf407e8-22c8-408e-b95c-428959f452a4": {
+            "name": "SendBehaviorEvent",
+            "pos": {
+                "x": -2580,
+                "y": 2369
+            },
+            "inputs": [
+                {
+                    "name": "EventName",
+                    "type": "StringHash",
+                    "value": "need_to_reload"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "ca1100e9-4483-4f53-9591-0532de08061b": {
+            "name": "UnbreakableBehavior",
+            "pos": {
+                "x": -2490,
+                "y": 2125
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "b1379946-a495-47b2-89d1-f7b155660ef8"
+        },
+        "40a2f1c3-e666-4b2d-a72b-7f16ba88bf5d": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -955,
+                "y": 304
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "HideInCoverEnabled"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Boolean"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "2b10c107-5f09-4a5c-a86f-b611b15946c4": {
+            "name": "Sequence",
+            "pos": {
+                "x": 895,
+                "y": 1007
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "f0a79091-48a1-456b-92a5-8988864ac0c1",
+                "793522de-3619-4ee0-a8cc-ab8bf7aa6e15"
+            ]
+        },
+        "0d7fc316-3d09-405e-9280-d7780a2b5c41": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 539
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "5d2d96f0-6bbc-4979-baa5-1d295edc926e",
+                "55672335-01fa-4575-88b4-9cbfefbfae54"
+            ]
+        },
+        "b2859065-731c-4df6-9c56-c9dcc508e40a": {
+            "name": "TargetInRange",
+            "pos": {
+                "x": -285,
+                "y": 1250
+            },
+            "inputs": [
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Source",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Min",
+                    "type": "Float",
+                    "value": "0"
+                },
+                {
+                    "name": "Max",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "leave_cover_target_distance"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "e7052608-dc79-48d8-8796-25ea9627ddbf"
+        },
+        "40d10ab5-1d3c-4838-86c1-40b3c0e74d90": {
+            "name": "SetStanceOnExit",
+            "pos": {
+                "x": 0,
+                "y": 397
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Stance",
+                    "type": "StringHash",
+                    "value": "Stand"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "0d7fc316-3d09-405e-9280-d7780a2b5c41"
+        },
+        "fb010aed-da42-4f9d-a4ee-378ebb4ca829": {
+            "name": "ClipAmmoLessThan",
+            "pos": {
+                "x": -2490,
+                "y": 1829
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Count",
+                    "type": "Integer",
+                    "value": "0"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "41f0f0c8-e0a6-4608-bfe3-e010b05bfc2d"
+        },
+        "f662a521-9fbf-4934-8e89-0d9eddc9a0c2": {
+            "name": "Succeeder",
+            "pos": {
+                "x": -2885,
+                "y": 1420
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "ebc8a8bf-e6cb-4e0e-a290-7a36e43e05bb"
+        },
+        "8bda1f4b-6665-4dd5-b6db-1d92dcc4a5c4": {
+            "name": "Repeater",
+            "pos": {
+                "x": -1985,
+                "y": 1168
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Iterations",
+                    "type": "Integer",
+                    "value": "0"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "bca03c96-c09f-4546-ac87-f8559a55698f"
+        },
+        "804005b1-94e0-4184-813e-d43ce365da56": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -755,
+                "y": 303
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "HiddenInCover"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Boolean"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "c89b6c69-5667-488e-a2d5-032e9a921407": {
+            "name": "Sequence",
+            "pos": {
+                "x": 805,
+                "y": 1271
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "11654384-0bf1-428c-bae6-970a8d06fe5f",
+                "42e0575c-5705-4f51-9e97-7f503bf2305a"
+            ]
+        },
+        "8d8fbb0c-bad8-4544-a46a-70870404ceda": {
+            "name": "TargetRaycast",
+            "pos": {
+                "x": -1170,
+                "y": 304
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "690ed156-b4bc-4c7b-903a-8f71b79a6a4c"
+        },
+        "9316243e-9c77-405f-a0de-01a368b7d132": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -1675,
+                "y": 1417
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "HiddenInCover"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "57173611-4a8f-47e9-9aac-e115fcbe5f11": {
+            "name": "ParallelUntilAnyComplete",
+            "pos": {
+                "x": 0,
+                "y": 808
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "8bda1f4b-6665-4dd5-b6db-1d92dcc4a5c4",
+                "41af27ed-ba32-4501-b0ea-79abc0660f7d",
+                "09228426-5d8e-4287-a272-b9ffd2c8a4af",
+                "b1155b70-c5b9-490d-9122-beb0f3735fb9"
+            ]
+        },
+        "3248a2bd-31c0-4acd-8e5c-eb532e300a49": {
+            "name": "IsTargetExistButNotVisible",
+            "pos": {
+                "x": -1335,
+                "y": 1832
+            },
+            "inputs": [
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "e885da61-06e2-48f9-a744-ce4e8838792c"
+        },
+        "259fd5d1-4f80-494c-8bc7-e43ce401b525": {
+            "name": "ParallelUntilAnyComplete",
+            "pos": {
+                "x": -1010,
+                "y": 1682
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "3248a2bd-31c0-4acd-8e5c-eb532e300a49",
+                "4e84ef6c-e320-407d-a853-cc2a9d11f5c8",
+                "9856e722-b01e-44c3-92f4-e26419d1721d",
+                "e1884cf7-876b-40b5-9a3d-c82859229edf"
+            ]
+        },
+        "8bd08cc6-6866-4ddd-9f78-1f837681d1a7": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -2995,
+                "y": 2421
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "HideInCoverEnabled"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

@@ -1,0 +1,32 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "4671215805b44743a64710ac1ba31694",
+    "Name": "Game01TextChat",
+    "DisplayName": "Game01TextChat",
+    "Version": "0.1.0",
+    "Summary": "Text chat client implementation (currently uses XMPP).",
+    "Tags": ["Untagged"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        }
+    ],
+    "Dependencies" : [
+        {
+            "Uuid": "d3ed407a19bb4c0d92b7c4872313d600",
+            "VersionConstraints": ["~>1.0"],
+            "_comment": "Multiplayer"
+        },
+        {
+            "Uuid": "7e24ebb066104127a4abb14e13ec7bed",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "GameSession"
+        },
+        {
+            "Uuid": "c0bf497f08e64a38ad901aecf5ce4f1d",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01PlayerProfile"
+        }
+    ]
+}

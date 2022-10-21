@@ -1,0 +1,9 @@
+{
+    "script": "scripts/ui/common/weapon_perks.lua",
+    "view_path": "Component.html",
+    "children": 
+    [
+        {"name": "perks_list", "type": "WeaponPerksList", "view_path":"perksList"},
+        {"name": "perks_container", "type": "Component", "view_path":"perksList.container"}
+    ]
+}

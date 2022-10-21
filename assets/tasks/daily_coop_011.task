@@ -1,0 +1,37 @@
+{
+  "name": "daily_coop_011",
+  "type": "daily",
+  "tags": [
+    "daily_coop"
+  ],
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "rare",
+  "display_name": { "localization_key": "@daily_coop_011_name" },
+  "description": { "localization_key": "@daily_coop_011_description" },
+  "conditions": [
+    {
+      "name": "daily_coop_011",
+      "event_description": { "localization_key": "@daily_coop_011_event_description" },
+      "event": { "event_id": "BossKill", "actor_team": "Same"},
+      "progress": 1
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 300
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 250
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 5
+    }
+  ]
+}

@@ -1,0 +1,676 @@
+
+{
+   "ai_archetypes":
+   [
+      {
+         "name": "Stilt",
+         "add_tags":["GlassheadAI", "BossAI", "RamDashHitArticulated"],
+         "display_name": "@boss_stilt",
+         "tags": ["Stilt"],
+         "slice": "slices/ai/stilt_02.dynamicslice",
+         "tp_slice": "slices/ai/stilt_tp_02.dynamicslice",
+         "vo_profile": "",
+         "competitor": "Glasshead",
+         "enemy_type": "boss",
+         "leave_dead_body": true,
+         "leave_dead_body_check_viewcone": false,
+         "health": 11500,
+         "can_be_frozen": false,
+         "behavior":
+         {
+            "behavior_tree": "Root",
+            "profile": "Stilt2",
+            "params":
+            {
+               "idle_range_min": "10",
+               "idle_range_max": "50",
+               "idle_stay_duration": "4",
+               "close_melee_range": "5",
+               "multi_attack_hp_threshold": "0.5",
+               "multi_attack_period": "1",
+               "crystaline_attack_range": "15",
+               "crystaline_attack_delay": "2",
+               "crystaline_attack_max_rot_time": "0.0",
+               "super_attack_minimum_time": "10",
+               "super_attack_finish_time": "2",
+               "super_attack_stun_time": "3.5",
+               "projectile_attack_min_distance":"12",
+               "projectile_attack_max_distance":"50",
+               "projectile_attack_probability":"0.0025",
+               "projectile_attack_unreachable_probability":"1.0",
+               "projectile_attack_allowed_angle":"45",
+               "projectile_attack_duration":"3",
+               "projectile_attack_delay_after_shoot":"3"
+            }
+         },
+         "equip":
+         [
+            {
+               "item": "ml02_ai"
+            },
+            {
+               "item":"rl03_stilt_ai",
+               "shooting_pattern":["1; 1"],
+               "check_view_cone": false,
+               "restart_shooting_pattern_on_interrupt":true
+            }
+         ],
+         "spawn_on_death":
+         {
+            "slice": "slices/stilt/stilt_on_death.dynamicslice",
+            "delay": 0.0
+         },
+         "speed":
+         {
+            "run": 5.4,
+            "strafe": 5.4,
+            "back": 5.4,
+            "crouch": 5.4,
+            "fire": 5.4
+         },
+         "target_selection":
+         {
+            "tag_weights":
+            {
+              "vip": -100,
+              "Breakable": -100,
+              "Drone": -100
+            },
+            "thresholds":
+            {
+               "critical_range": 10
+            }
+         },
+         "avoidance_radius_multiplier": 5,
+         "body_turn_limit": 360,
+         "can_be_blinded": false,
+         "can_be_alldead": false
+      },
+      
+      {
+         "name": "Stilt_Strafer",
+         "add_tags":["GlassheadAI", "BossAI", "RamDashHitArticulated"],
+         "display_name": "@boss_stilt",
+         "tags": ["Stilt_Strafer"],
+         "slice": "slices/ai/stilt_03.dynamicslice",
+         "tp_slice": "slices/ai/stilt_tp_03.dynamicslice",
+         "vo_profile": "",
+         "competitor": "Strafer",
+         "enemy_type": "boss",
+         "leave_dead_body": true,
+         "leave_dead_body_check_viewcone": false,
+         "can_be_frozen": false,
+         "health": 12000,
+         "behavior":
+         {
+            "behavior_tree": "Root",
+            "profile": "Stilt2",
+            "params":
+            {
+               "idle_range_min": "10",
+               "idle_range_max": "50",
+               "idle_stay_duration": "4",
+               "close_melee_range": "5",
+               "multi_attack_hp_threshold": "0.6",
+               "multi_attack_period": "0",
+               "crystaline_attack_range": "15",
+               "crystaline_attack_delay": "2",
+               "crystaline_attack_max_rot_time": "1.5",
+               "super_attack_minimum_time": "10",
+               "super_attack_finish_time": "2",
+               "super_attack_stun_time": "3.5",
+               "projectile_attack_min_distance":"12",
+               "projectile_attack_max_distance":"50",
+               "projectile_attack_probability":"0.0075",
+               "projectile_attack_unreachable_probability":"1.0",
+               "projectile_attack_allowed_angle":"45",
+               "projectile_attack_duration":"3",
+               "projectile_attack_delay_after_shoot":"3"
+            }
+         },
+         "equip":
+         [
+            {
+               "item": "ml02_ai"
+            },
+            {
+               "item":"rl03_stilt_ai",
+               "shooting_pattern":["1; 1"],
+               "check_view_cone": false,
+               "restart_shooting_pattern_on_interrupt":true
+            }
+         ],
+         "spawn_on_death":
+         {
+            "slice": "slices/stilt/stilt_on_death.dynamicslice",
+            "delay": 0.0
+         },
+         "speed":
+         {
+            "run": 5.4,
+            "strafe": 5.4,
+            "back": 5.4,
+            "crouch": 5.4,
+            "fire": 5.4
+         },
+         "target_selection":
+         {
+            "tag_weights":
+            {
+              "vip": -100,
+              "Breakable": -100,
+              "Drone": -100
+            },
+            "thresholds":
+            {
+               "critical_range": 10
+            }
+         },
+         "avoidance_radius_multiplier": 5,
+         "body_turn_limit": 360,
+         "can_be_blinded": false,
+         "can_be_alldead": false
+      },
+      
+      {
+         "name": "Queen",
+         "add_tags":["GlassheadAI", "BossAI", "RamDashHitArticulated"],
+         "display_name": "@boss_queen",
+         "tags": ["Queen"],
+         "slice": "slices/ai/queen.dynamicslice",
+         "tp_slice": "slices/ai/queen_tp.dynamicslice",
+         "competitor": "Glasshead",
+         "enemy_type": "boss",
+         "can_be_frozen": false,
+         "health": 6000,
+         "behavior":
+         {
+            "behavior_tree": "Root",
+            "profile": "Queen",
+            "params":
+            {
+               "dynamic_spawner1": "slices/ai/bosses/queen/queen_dynamic_spawner1.dynamicslice",
+               "dynamic_spawner2": "slices/ai/bosses/queen/queen_dynamic_spawner2.dynamicslice",
+               "dynamic_spawner3": "slices/ai/bosses/queen/queen_dynamic_spawner3.dynamicslice",
+               "max_total_alive_ai_count": "4",
+               "spawned_ai_lifetime": "25",
+               "tornado_prepare_attack_distance": "25",
+               "tornado_attack_distance": "35",
+               "death_offset_z": "2.5",
+               "death_velocity_z": "2.0",
+               "glitch_offset_z": "4.5",
+               "glitch_velocity_z": "2.0",
+               "idle_offset_z": "10.0",
+               "idle_velocity_z": "1.0",
+               "spawn_offset_z": "5.5",
+               "spawn_velocity_z": "2.0",
+               "tornado_offset_z": "2.0",
+               "tornado_velocity_z": "3.0",
+               "distance_attack_offset_z": "2.5",
+               "distance_attack_velocity_z": "2.0",
+               "range_attack_firing_time": "10",
+               "range_for_distance_attack": "30",
+               "health_floor": "1000.0",
+               "death_voice_duration": "15"
+            }
+         },
+         "equip":
+         [
+            {
+               "item": "rl02_queen_ai",
+               "shooting_pattern": ["3; 1.1 - 2.1"],
+               "params":
+               {
+                  "effective_distance": "30"
+               }
+            }
+         ],
+         "speed":
+         {
+            "sprint": 23,
+            "run": 11,
+            "strafe": 11,
+            "back": 11,
+            "crouch": 2,
+            "fire": 2
+         },
+         "target_selection":
+         {
+            "tag_weights": { "breakable": -50 },
+            "weights": { "attention_max_duration": -25 },
+            "thresholds": { "attention_max_duration": 15, "attention_restore_cooldown": 10 }
+         },
+         "body_turn_limit": 40,
+         "leave_dead_body": false,
+         "can_be_alldead": false
+      },
+      {
+         "name": "Behemoth",
+         "add_tags":["GlassheadAI", "BossAI", "RamDashHitArticulated"],
+         "display_name": "@boss_behemoth",
+         "tags": ["Behemoth"],
+         "slice": "slices/ai/behemoth_01.dynamicslice",
+         "tp_slice": "slices/ai/behemoth_tp_01.dynamicslice",
+         "enemy_type": "boss",
+         "vo_profile": "",
+         "competitor": "Glasshead",
+         "health": 21000,
+         "can_be_frozen": false,
+         "leave_dead_body": true,
+         "leave_dead_body_check_viewcone": false,
+         "behavior":
+         {
+            "behavior_tree": "BehaviorSelector",
+            "profile": "Behemoth",
+            "params":
+            {
+               "weakpoint_health": "700",
+               "weakpoint_phase_points": "500",
+               "weakpoint_hp_damage_percent": "5",
+               "weakpoint_can_kill": "true",
+               "weakpoint_damage_health_cap": "200",
+               "rage_phase_points": "1500",
+               "far_from_target_out": "25",
+               "far_from_target_in": "16",
+               "attacks_angle_to_target":"25",
+               "close_to_target_range": "12",
+               "max_angle_for_close_melee":"60",
+               "correct_melee_dir_speed":"180",
+               "correct_melee_dir_time":"1",
+               "shockwave_prob":"0.5",
+               "shockwave_repeat_count_min":"1",
+               "shockwave_repeat_count_max":"2",
+               "shockwave_repeats_delay_min":"1.0",
+               "shockwave_repeats_delay_max":"2.3",
+               "shockwave_attack_anim_duration":"1.67",
+               "shockwave_target_tracking_time":"0.3",
+               "shockwave_launch_time":"1.2",
+               "shockwave_unit_slice": "slices/ai/bosses/behemoth/behemoth_shockwave_move.dynamicslice",
+               "shockwave_units_spread_angle":"60",
+               "shockwave_unit_start_offset":"4",
+               "shockwave_units_count_min":"3",
+               "shockwave_units_count_max":"4",
+               "shockwave_unit_move_speed":"9",
+               "shockwave_unit_move_duration":"4",
+               "shockwave_unit_max_z_offset":"1",
+               "ranged_attack_duration_min":"6",
+               "ranged_attack_duration_max":"10",
+               "ranged_attack_cancel_if_angle":"45",
+               "roar_to_agro_anim_duration":"2.8",
+               "immune_off_delay":"0.15",
+               "jump_during_fire_delay_min": "4",
+               "jump_during_fire_delay_max": "6",
+               "jump_during_fire_prob": "0.9",
+               "jump_out_sqs_name": "BehemothJumpOut",
+               "jump_out_delay":"0.9",
+               "jump_out_in_air_time":"0.6",
+               "jump_out_animation_duration":"2.15",
+               "jump_out_directions_count":"3",
+               "burrow_shockwave_prob":"0.3",
+               "burrow_down_anim_duration": "1.93",
+               "burrow_up_anim_duration": "2.03",
+               "burrow_follow_target_offset": "2.8",
+               "burrow_move_speed": "9",
+               "burrow_move_max_duration": "5",
+               "burrow_move_slice": "slices/ai/bosses/behemoth/behemoth_burrow_move.dynamicslice",
+               "burrow_up_slice": "slices/ai/bosses/behemoth/behemoth_mine_explosion.dynamicslice",
+               "burrow_move_target_tracking_buffer_size": "9",
+               "burrow_move_target_tracking_delay": "0.1",
+               "burrow_to_target_min_distance": "10",
+               "min_melee_phase_time": "8",
+               "max_melee_phase_time": "40",
+               "melee_phase_damage_threshold": "10000",
+               "between_melee_delay_min": "1",
+               "between_melee_delay_max": "3",
+               "immune_phase_heal_points":"1000",
+               "immune_phase_heal_duration":"35",
+               "min_immune_phase_duration": "100",
+               "max_immune_phase_duration": "100",
+               "immune_phase_ai_slice": "slices/ai/bosses/behemoth/behemoth_ai_spawner.dynamicslice"
+            }
+         },
+         "equip":
+         [
+            {
+               "item": "wpn02_behemoth_ai",
+               "shooting_pattern": ["1; 0.0 - 0.5"],
+               "restart_shooting_pattern_on_interrupt": true
+            }
+         ],
+        "microbehaviors":
+        [
+            {
+                "name":"WoundTrigger",
+                "params":
+                {
+                    "delay_min":"3",
+                    "delay_max":"5",
+                    "profile":"Behemoth",
+                    "trigger":"weakpoint"
+                }
+            }
+        ],
+         "speed":
+         {
+            "run": 7,
+            "strafe": 7,
+            "back": 7,
+            "crouch": 7,
+            "fire": 7
+         },
+         "death":
+         {
+             "lifetime": 10.0
+         },
+         "target_selection":
+         {
+            "tag_weights":
+            {
+               "VIP": -10,
+               "Breakable": -100
+            },
+            "thresholds":
+            {
+               "critical_range": 10,
+               "damage_dealer_duration": 3
+            },
+            "weights":
+            {
+               "critical_range": 16,
+               "damage_dealer": 20,
+               "target_visible": 15,
+               "target_sound": 10,
+               "target_memory": 5
+            }
+         },
+         "avoidance_radius_multiplier": 3,
+         "body_turn_limit": 220,
+         "can_be_blinded": false,
+         "can_be_alldead": false
+      },
+        {
+            "name": "queen_new",
+            "add_tags":["GlassheadAI", "BossAI", "RamDashHitArticulated"],
+            "display_name": "@boss_queen",
+            "slice": "slices/ai/queen_new.dynamicslice",
+            "tp_slice": "slices/ai/queen_tp.dynamicslice",
+            "tags": [ "Queen_phased" ],
+            "enemy_type": "boss",
+            "body_turn_limit": 360,
+            "health": 8000,
+            "competitor": "Glasshead",
+            "leave_dead_body": false,
+            "can_be_alldead": false,
+            "can_be_frozen": false,
+            "equip":
+            [
+                {
+                    "item": "rl02_queen_ai",
+                    "shooting_pattern": ["1"]
+                }
+            ],
+            "behavior":
+            {
+                "behavior_tree": "BehaviorSelector",
+                "profile": "QueenNew",
+                "params":
+                {
+                    "ground_attack_random_chance": "0.35",
+                    "personal_glitch_random_chance": "0.1",
+                    "mass_glitch_random_chance": "0.1",
+                    "spawn_random_chance": "1.0",
+                    "health_floor": "1000",
+                    "health_prc_step": "0.25",
+                    "distance_to_player_min": "15.0",
+                    "update_path_rate": "1.0",
+                    "mass_glitch_range": "60",
+
+                    "shield_phase_max_duration": "60",
+
+                    "range_attack_firing_time": "2.5",
+                    "range_attack_delay_between_shoot_min": "0",
+                    "range_attack_delay_between_shoot_max": "0",
+
+                    "ground_attack_distance":"40",
+                    "ground_attack_offset_z": "3.0",
+                    "ground_attack_velocity_z": "3.0",
+                    "shield_phase_offset_z": "4.0",
+                    "shield_phase_velocity_z": "2.0",
+                    "base_offset_z": "2.0",
+                    "base_velocity_z": "2.0",
+                    "death_voice_duration": "15", 
+                    "attack_cooldown_min": "0.0",
+                    "attack_cooldown_max": "1.0",
+                    "flight_max_time": "10.0",
+                    "chase_lost_target_max_time": "10.0",
+                    "personal_glitch_duration": "1.0",
+                    "mass_glitch_duration": "1.0",
+                    "spawn_ai_points_count": "2",
+                    "dynamic_spawner": "slices/ai/bosses/queen/queen_dynamic_spawner_all.dynamicslice",
+                    "dynamic_spawner_wave_prefix": "wave",
+                    "ground_attack_trail": "slices/ai/bosses/queen/queen_trail_dynamic.dynamicslice",
+
+                    "hp_to_aoe_attack_probability": "0.75:0, 0.50:0.25, 0.25:0.5, 0:0.75",
+                    "hp_to_modify_aoe_attack_probability_when_spawn": "0.75:0.3, 0.50:0.3, 0.25:0.75, 0:0.2",
+                    "hp_to_aoe_attack_time": "0:15",
+                    "hp_to_aoe_attack_cooldown": "0.75:15, 0.50:9, 0.25:8, 0:7",
+                    "aoe_attack_area_size": "10",
+                    "aoe_attack_area_targets_count": "2",
+                    "aoe_attack_spawn_distance_from_random_player": "2",
+                    "damage_for_evade_in_aoe_attack": "1000",
+                    "aoe_attack_slice_name": "slices/ai/bosses/queen/queen_aoe_attack.dynamicslice"
+                }
+            },
+            "microbehaviors":
+            [
+                {
+                    "name":"evading_move_by_damage",
+                    "params":
+                    {
+                        "damage": "80",
+                        "damage_time": "1",
+                        "count":"2",
+                        "reset_time":"8",
+                        "delay_min":"3",
+                        "delay_max":"12",
+                        "anim_duration": "1.0",
+                        "move_distance": "8.0"
+                    }
+                }
+            ],
+            "target_selection":
+            {
+                "tag_weights": { 
+                    "Breakable": -100,
+                    "Drone": -100
+                },
+                "weights": { "attention_max_duration": -25 },
+                "thresholds": { "attention_max_duration": 15, "attention_restore_cooldown": 10 }
+            },
+            "speed":
+            {
+                "sprint": 18,
+                "run": 12,
+                "walk": 10,
+                "strafe": 12,
+                "back": 12,
+                "crouch": 2,
+                "fire": 2
+            },
+            "death":
+            {
+                "lifetime": 10.0
+            }
+        },
+        
+        {
+            "name": "Colossus",
+            "competitor": "Strafer",
+            "enemy_type": "boss",
+            "display_name": "@boss_colossus",
+            "tags": ["Colossus"],
+            "add_tags":["StraferAI", "BossAI", "RamDashHitArticulated"],
+            "slice": "slices/ai/bosses/colossus/colossus.dynamicslice",
+            "tp_slice": "slices/ai/bosses/colossus/colossus_tp.dynamicslice",
+            "health": 18000,
+            "body_turn_limit": 180,
+            "leave_dead_body": false,
+            "can_be_alldead": false,
+            "can_be_frozen": false,
+            "behavior":
+            {
+                "behavior_tree": "BehaviorSelector",
+                "profile": "Colossus",
+                "params":
+                {
+                    "shield_phase_flight_height": "7.5",
+                    "recharge_phase_flight_height": "0.0",
+
+                    "hp_to_shield_drones_count": "0.75:4, 0.50:5, 0.25:6, 0:6",
+                    "shield_drone_slice_name": "slices/ai/bosses/colossus/colossus_shield_drone.dynamicslice",
+                    "shield_drone_tp_slice_name": "slices/ai/bosses/colossus/colossus_shield_drone_tp.dynamicslice",
+                    "shield_drones_fly_radius": "8.2",
+                    "shield_drones_rotate_speed": "40.0",
+                    "shield_drones_allowed_delta_z": "0.0",
+                    "shield_phase_damage_before_recharge": "1000.0",
+                    
+                    "shield_drones_respawn_delay_in_shield_phase": "15.0",
+                    "shield_drones_respawn_delay_in_recharge_phase": "4.0",
+                    "shield_drones_respawn_limit_in_shield_phase": "1",
+                    "shield_drones_respawn_limit_in_recharge_phase": "0",
+
+                    "time_for_recharge_shield": "30.0",
+                    "recharge_phase_max_damage_to_get": "5500.0",
+
+                    "laser_wall_rotating_drone_slice_name": "slices/ai/bosses/colossus/colossus_laser_wall_drone.dynamicslice",
+                    "laser_wall_rotating_area_size": "10",
+                    "laser_wall_rotating_targets_count": "2",
+                    "laser_wall_rotating_spawn_distance": "2",
+                    "laser_wall_rotating_elevation": "-0.75",
+                    "laser_wall_rotating_activation_delay": "2",
+                    "laser_wall_rotating_rotation_speed": "80",
+                    "laser_wall_rotating_fragments_count": "1",
+                    "laser_wall_rotating_fragments_gap": "1",
+                    "laser_wall_rotating_fragment_width": "12",
+                    "laser_wall_rotating_fragment_height": "4",
+                    "laser_wall_rotating_hp_to_cooldown": "0.75:10, 0.50:8, 0.25:6, 0:5",
+                    "laser_wall_rotating_hp_to_lifetime": "0.75:12, 0.50:12, 0.25:12, 0:14",
+                    "laser_wall_rotating_damage": "50",
+                    "laser_wall_rotating_first_drones_spawn_flight_time": "1",
+                    "laser_wall_rotating_remaining_drones_spawn_flight_time": "1",
+
+                    "laser_aim_effect_scale": "0.1",
+                    "laser_damage_effect_scale": "5.0",
+                    "laser_hp_to_damage_delay": "0.75:1.5, 0.50:1.5, 0.25:1.5, 0:1.5",
+                    "laser_hp_to_active_time": "0.75:3, 0.50:4, 0.25:5, 0:6",
+                    "laser_hp_to_move_speed": "0.75:3.5, 0.50:3.5, 0.25:3.5, 0:3.5",
+                    "laser_active_to_cooldown_delay": "0",
+                    "laser_hp_to_cooldown": "0.75:10, 0.50:9, 0.25:8, 0:8",
+                    "laser_damage_zone_server_slice_name": "slices/ai/bosses/colossus/colossus_laser_damage_zone_server.dynamicslice",
+                    "laser_damage_zone_client_slice_name": "slices/ai/bosses/colossus/colossus_laser_damage_zone_client.dynamicslice",
+                    "laser_damage_zone_damage": "6",
+                    "laser_damage_zone_damage_period": "0.1",
+                    "laser_speedup_distance": "2",
+
+                    "projectile_hp_to_cooldown": "0:3",
+                    "rocket_attack_hp_to_interval": "0:6",
+    
+                    "rocket_attack_damage": "150",
+                    "rocket_attack_start_delay": "1",
+                    "rocket_attack_preparation_delay": "1",
+                    "rocket_attack_time_to_launch": "2",
+                    "rocket_attack_targets_area_size": "16",
+                    "rocket_attack_targets_in_area_count": "2",
+                    "rocket_attack_offset_from_single_target": "2",
+
+                    "rocket_attack_launch_move_time": "3",
+                    "rocket_attack_launch_rockets_number": "8",
+                    "rocket_attack_launch_hp_to_rockets_interval": "0:0-0.2",
+                    "rocket_attack_launch_slice_name": "slices/ai/bosses/colossus/colossus_rocket_attack_launch.dynamicslice",
+                    "rocket_attack_launch_tp_slice_name": "slices/ai/bosses/colossus/colossus_rocket_attack_launch_tp.dynamicslice",
+
+                    "rocket_attack_rocket_flight_time": "1",
+                    "rocket_attack_rocket_dispersion": "6",
+                    "rocket_attack_rocket_slice_name": "slices/ai/bosses/colossus/colossus_rocket_attack_rocket.dynamicslice",
+                    "rocket_attack_rocket_tp_slice_name": "slices/ai/bosses/colossus/colossus_rocket_attack_rocket_tp.dynamicslice",
+
+                    "rocket_attack_target_mark_slice_name": "slices/ai/minotaur/impact_zone.dynamicslice",
+                    "rocket_attack_explosion_slice_name": "slices/ai/bosses/colossus/colossus_rocket_attack_explosion.dynamicslice",
+                    "rocket_attack_explosion_tp_slice_name": "slices/ai/bosses/colossus/colossus_rocket_attack_explosion_tp.dynamicslice",
+
+                    "battle_area_width": "55",
+                    "battle_area_length": "75",
+                    "battle_area_wall_elevation": "0",
+                    "battle_area_wall_height": "5",
+                    "battle_area_wall_damage": "200",
+                    "battle_area_drone_slice_name": "slices/ai/bosses/colossus/colossus_battle_area_wall_drone.dynamicslice",
+                    "battle_area_drones_spawn_flight_time": "2",
+                    "battle_area_time_to_scale": "0.2",
+
+                    "laser_wall_pattern_drone_slice_name": "slices/ai/bosses/colossus/colossus_laser_pattern_drone.dynamicslice",
+                    "laser_wall_pattern_drone_tp_slice_name": "slices/ai/bosses/colossus/colossus_laser_pattern_drone_tp.dynamicslice",
+                    "laser_wall_pattern_hp_to_cooldown": "0.75:25, 0.50:25, 0.25:25, 0:25",
+                    "laser_wall_pattern_elevation": "-0.25",
+                    "laser_wall_pattern_fragments_count": "6",
+                    "laser_wall_pattern_absent_fragments_count": "1",
+                    "laser_wall_pattern_fragment_height": "2",
+                    "laser_wall_pattern_damage": "100",
+                    "laser_wall_pattern_hp_to_move_speed": "0.75:5.5, 0.50:5.5, 0.25:5.5, 0:5.5",
+                    "laser_wall_pattern_hp_to_walls_count": "0.75:4, 0.50:5, 0.25:5, 0:6",
+                    "laser_wall_pattern_hp_to_walls_period": "0.75:2, 0.50:1.8, 0.25:1.6, 0:1.4",
+                    "laser_wall_pattern_drones_spawn_flight_time": "0.5",
+                    "laser_wall_pattern_hp_to_absent_fragments_distance": "0.75:2, 0.50:2, 0.25:2, 0:2",
+                    "laser_wall_pattern_distance_to_edge": "5",
+                    "laser_wall_pattern_timeout_for_move_to_position": "3",
+
+                    "strafer_pod_spawner_slice_name": "slices/ai/bosses/colossus/colossus_pod_spawner.dynamicslice",
+                    "strafer_spawn_pods_min_distance_between": "14",
+                    "strafer_spawn_pods_shift_from_walls": "12",
+                    "strafer_spawn_pods_shift_from_boss": "20",
+                    "strafer_spawn_hp_to_pods_count": "0.75:6, 0.50:6, 0.25:6, 0:6",
+                    
+                    "distance_to_player_min": "20.0",
+                    "update_path_rate": "1.0",
+                    "death_voice_duration": "15", 
+                    "attack_cooldown_min": "1.0",
+                    "attack_cooldown_max": "2.0"
+                }
+            },
+            "microbehaviors":
+            [
+                {
+                    "name":"evading_move_by_damage",
+                    "params":
+                    {
+                        "damage": "80",
+                        "damage_time": "1",
+                        "count":"2",
+                        "reset_time":"8",
+                        "delay_min":"3",
+                        "delay_max":"12",
+                        "anim_duration": "1.0",
+                        "move_distance": "8.0"
+                    }
+                }
+            ],
+            "target_selection":
+            {
+                "tag_weights": { 
+                    "Breakable": -100,
+                    "Drone": -100
+                },
+                "weights": { "attention_max_duration": -25 },
+                "thresholds": { "attention_max_duration": 15, "attention_restore_cooldown": 10 }
+            },
+            "speed":
+            {
+                "sprint": 20,
+                "run": 7,
+                "strafe": 5,
+                "back": 5,
+                "crouch": 5,
+                "fire": 5
+            }
+        }
+   ]
+}

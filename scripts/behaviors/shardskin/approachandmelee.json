@@ -1,0 +1,677 @@
+{
+    "name": "Shardskin/ApproachAndMelee",
+    "root": "b78d99f3-40c7-4881-a26c-9e827e1c82fa",
+    "nodes": {
+        "8b301f09-2064-428d-9c97-328d77c09ef7": {
+            "name": "Sequence",
+            "pos": {
+                "x": -555,
+                "y": 854
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "f2f7eb71-2c10-4e9e-8b5d-879dcf2f1b1c",
+                "246220a2-c139-4a91-9f35-150e4321ed4c"
+            ]
+        },
+        "a07ca32b-9bf0-4e58-a4ea-6035c0490ab4": {
+            "name": "Selector",
+            "pos": {
+                "x": -110,
+                "y": 991
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "c4f94b11-6599-41ff-a5ff-7a9f73fe3683",
+                "453ff7c5-338a-4f8c-8709-259e1074a84c"
+            ]
+        },
+        "2cb151b8-1a8b-47fb-8ba4-0c24c5760178": {
+            "name": "ParallelUntilAnyComplete",
+            "pos": {
+                "x": 425,
+                "y": 878
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "55f7d796-582f-4d2a-a24f-fab72825f936",
+                "db908098-fb2d-4ebb-a2d4-c5730d19315b"
+            ]
+        },
+        "313194c7-fe6c-406d-bb95-e6b89268a455": {
+            "name": "ApproachToKeepDistance",
+            "pos": {
+                "x": 385,
+                "y": 1193
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "Distance",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "close_melee_range"
+                    ]
+                },
+                {
+                    "name": "DistanceDeviationMin",
+                    "type": "Float",
+                    "value": "-0.5"
+                },
+                {
+                    "name": "DistanceDeviationMax",
+                    "type": "Float",
+                    "value": "-1"
+                },
+                {
+                    "name": "MoveBackDirectionRandomization",
+                    "type": "Float",
+                    "value": "0.00"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "db908098-fb2d-4ebb-a2d4-c5730d19315b": {
+            "name": "Wait",
+            "pos": {
+                "x": 710,
+                "y": 1044
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "max_melee_approach_time"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "3e791188-492d-46d9-8429-376dcad05d8e": {
+            "name": "Sequence",
+            "pos": {
+                "x": 425,
+                "y": 653
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "4a6c73ef-8090-467b-8746-d00c4f11c121",
+                "655000b2-fa2d-4970-891b-f89d5352a608"
+            ]
+        },
+        "40ddd54a-ca07-489a-84cd-6bd491f16905": {
+            "name": "Sequence",
+            "pos": {
+                "x": -255,
+                "y": 1498
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "6ae8c66f-6c27-40d7-8b24-1581b5893d51",
+                "c0167b61-6243-4ad5-a8c7-853c0caadf14"
+            ]
+        },
+        "6cea5afc-3edd-4307-a9a9-0a5ed725dd20": {
+            "name": "TargetInHorizontalRange",
+            "pos": {
+                "x": -110,
+                "y": 656
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Source",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Min",
+                    "type": "Float",
+                    "value": "0"
+                },
+                {
+                    "name": "Max",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "close_melee_range"
+                    ]
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "5ea846a9-a381-4de0-b99e-422091315f14"
+        },
+        "c4f94b11-6599-41ff-a5ff-7a9f73fe3683": {
+            "name": "IsBehaviorCondition",
+            "pos": {
+                "x": -255,
+                "y": 1107
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "AttackOnFailedMove"
+                },
+                {
+                    "name": "ResetOnExit",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "5169cbff-dbb8-49e8-9945-173a35b248ab"
+        },
+        "f2f7eb71-2c10-4e9e-8b5d-879dcf2f1b1c": {
+            "name": "SetBehaviorCondition",
+            "pos": {
+                "x": -665,
+                "y": 975
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "SkipMeleeAttack"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "5169cbff-dbb8-49e8-9945-173a35b248ab": {
+            "name": "RandomChance",
+            "pos": {
+                "x": -255,
+                "y": 1320
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Probability",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "skip_melee_attack_prob"
+                    ]
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "40ddd54a-ca07-489a-84cd-6bd491f16905"
+        },
+        "6ae8c66f-6c27-40d7-8b24-1581b5893d51": {
+            "name": "SetBehaviorCondition",
+            "pos": {
+                "x": -365,
+                "y": 1619
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "SkipMeleeAttack"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "3bd58296-0c1b-48a8-9d73-b8bae66cef0e": {
+            "name": "TimeIsOut",
+            "pos": {
+                "x": -555,
+                "y": 586
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "TimerName",
+                    "type": "StringHash",
+                    "value": "CooldownAfterIncreaseGap"
+                },
+                {
+                    "name": "Seconds",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "cooldown_after_increase_gap"
+                    ]
+                },
+                {
+                    "name": "StartIfAbsent",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "SucceedOnTimerAbsent",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "ForgetOnSucceed",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "8b301f09-2064-428d-9c97-328d77c09ef7"
+        },
+        "d0684c77-6fd4-43a8-acf6-015015963d25": {
+            "name": "StopFireAndRestoreOnExit",
+            "pos": {
+                "x": 165,
+                "y": 387
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "1b85ea4e-147f-488a-bc5c-e9df4c8bfdaf"
+        },
+        "4a6c73ef-8090-467b-8746-d00c4f11c121": {
+            "name": "Succeeder",
+            "pos": {
+                "x": 425,
+                "y": 767
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "2cb151b8-1a8b-47fb-8ba4-0c24c5760178"
+        },
+        "af196f9d-e274-415e-a4c1-e119234cb32e": {
+            "name": "Selector",
+            "pos": {
+                "x": 0,
+                "y": 232
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "df2b5821-f1ad-4556-983d-4ea271537f0c",
+                "d0684c77-6fd4-43a8-acf6-015015963d25"
+            ]
+        },
+        "453ff7c5-338a-4f8c-8709-259e1074a84c": {
+            "name": "MeleeAttack",
+            "pos": {
+                "x": 15,
+                "y": 1107
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "AttackIndex",
+                    "type": "Integer",
+                    "value": "-1"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "246220a2-c139-4a91-9f35-150e4321ed4c": {
+            "name": "SetBehaviorCondition",
+            "pos": {
+                "x": -450,
+                "y": 975
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "NeedToIncreaseGap"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "5ea846a9-a381-4de0-b99e-422091315f14": {
+            "name": "Succeeder",
+            "pos": {
+                "x": -110,
+                "y": 878
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "a07ca32b-9bf0-4e58-a4ea-6035c0490ab4"
+        },
+        "df2b5821-f1ad-4556-983d-4ea271537f0c": {
+            "name": "IsBehaviorCondition",
+            "pos": {
+                "x": -555,
+                "y": 386
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "AttackOnFailedMove"
+                },
+                {
+                    "name": "ResetOnExit",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "3bd58296-0c1b-48a8-9d73-b8bae66cef0e"
+        },
+        "55f7d796-582f-4d2a-a24f-fab72825f936": {
+            "name": "SetMovementPaceAndRestoreOnExit",
+            "pos": {
+                "x": 385,
+                "y": 1045
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "PaceType",
+                    "type": "StringHash",
+                    "value": "Sprint"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "313194c7-fe6c-406d-bb95-e6b89268a455"
+        },
+        "c0167b61-6243-4ad5-a8c7-853c0caadf14": {
+            "name": "SetBehaviorCondition",
+            "pos": {
+                "x": -150,
+                "y": 1619
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "NeedToIncreaseGap"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "b78d99f3-40c7-4881-a26c-9e827e1c82fa": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 102
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ApproachAndMelee"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "af196f9d-e274-415e-a4c1-e119234cb32e"
+        },
+        "1b85ea4e-147f-488a-bc5c-e9df4c8bfdaf": {
+            "name": "Selector",
+            "pos": {
+                "x": 165,
+                "y": 509
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "6cea5afc-3edd-4307-a9a9-0a5ed725dd20",
+                "3e791188-492d-46d9-8429-376dcad05d8e"
+            ]
+        },
+        "655000b2-fa2d-4970-891b-f89d5352a608": {
+            "name": "TargetInHorizontalRange",
+            "pos": {
+                "x": 790,
+                "y": 782
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Source",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Min",
+                    "type": "Float",
+                    "value": "0"
+                },
+                {
+                    "name": "Max",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "close_melee_range"
+                    ]
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "149fb7b2-e3e7-4cf8-8d46-dd340322aa3f"
+        },
+        "149fb7b2-e3e7-4cf8-8d46-dd340322aa3f": {
+            "name": "MeleeAttack",
+            "pos": {
+                "x": 1015,
+                "y": 991
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "AttackIndex",
+                    "type": "Integer",
+                    "value": "-1"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

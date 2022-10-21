@@ -1,0 +1,54 @@
+{
+    "name": "play_landing",
+    "items":
+    [
+        {
+            "enabled": true,
+            "type": "playlist",
+            "ui_path": "mode_info_pve",
+            "param": "cpl_expeditions",
+            "title_token": "@event_badge_pve",
+            "subtitle_token": "@open_world_mode",
+            "image1": "pve_play_tile",
+            "image2": "",
+            "image3": "",
+            "image4": ""
+        },
+        {
+            "enabled": true,
+            "type": "playlist",
+            "ui_path": "mode_info_pvp",
+            "param": "versus_2",
+            "title_token": "@event_badge_pvp",
+            "subtitle_token": "@pvp_mode_title",
+            "image1": "pvp_play_tile",
+            "image2": "",
+            "image3": "",
+            "image4": ""
+        },
+        {
+            "enabled": true,
+            "type": "common",
+            "ui_path": "play_popup",
+            "param": "pve",
+            "title_token": "@event_badge_weekly",
+            "subtitle_token": "@weekly_special_label",
+            "image1": "tdm_hardcore_play_tile",
+            "reduced": false
+        },
+        {
+            "enabled": true,
+            "type": "playlist",
+            "ui_path": "mode_info_pve",
+            "param": "intro",
+            "title_token": "@intro_name",
+            "subtitle_token": "@pve_intro_label",
+            "image1": "pve_intro_layer4",
+            "image2": "pve_intro_layer3",
+            "image3": "pve_intro_layer2",
+            "image4": "pve_intro_layer1",
+            "reduced": true
+        }
+    ]
+}
+

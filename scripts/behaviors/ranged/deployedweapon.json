@@ -1,0 +1,80 @@
+{
+    "name": "Ranged/DeployedWeapon",
+    "root": "9a6eccb5-c072-4346-b49f-c1fb82bca8de",
+    "nodes": {
+        "afb35425-365f-4833-b80b-5316100ebce7": {
+            "name": "IsBehaviorCondition",
+            "pos": {
+                "x": 0,
+                "y": 208
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "DeployedWeapon"
+                },
+                {
+                    "name": "ResetOnExit",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "444c1efa-0d3d-42a9-a3c1-788637253a65"
+        },
+        "444c1efa-0d3d-42a9-a3c1-788637253a65": {
+            "name": "Success",
+            "pos": {
+                "x": 0,
+                "y": 395
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "9a6eccb5-c072-4346-b49f-c1fb82bca8de": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 79
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "DeployedWeapon"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "afb35425-365f-4833-b80b-5316100ebce7"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

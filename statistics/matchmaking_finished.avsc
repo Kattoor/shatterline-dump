@@ -1,0 +1,115 @@
+{
+    "name": "matchmaking_finished",
+    "doc": "Origin:. Emitter: backend. Indicates when matchmaking process was finished",
+    "type": "record",
+    "fields": [
+        {
+            "name": "party_id",
+            "type": "string",
+            "default": "0",
+            "doc": "global-unique identifier of the party"
+        },
+        {
+            "name": "party_size",
+            "type": "int",
+            "default": -1,
+            "doc": "count of distinct players in the party (1 for solo players without party)"
+        },
+        {
+            "name": "playlist",
+            "type": "string",
+            "default": "-1",
+            "doc": "playlist name"
+        },
+        {
+            "name": "mission_id",
+            "type": "string",
+            "default": "-1",
+            "doc": "name of the mission"
+        },
+        {
+            "name": "mission_modifiers",
+            "type": "string",
+            "default": "-1",
+            "doc": "applied mission modifiers"
+        },
+        {
+            "name": "mmid",
+            "type": "string",
+            "default": "-1",
+            "doc": "matchmaking id to match all players who participated a MM session or (potentially) to pass to the joined session to group"
+        },
+        {
+            "name": "mm_end_reason",
+            "type": "string",
+            "default": "-1",
+            "doc": "the reason why matchmaking ended"
+        },
+        {
+            "name": "pid",
+            "type": "long",
+            "default": -1,
+            "doc": "namespace-unique identifier of a player"
+        },
+        {
+            "name": "pid_leader",
+            "type": "long",
+            "default": -1,
+            "doc": "pid of party leader for this particular mmid; -1 if its solo mm"
+        },
+        {
+            "name": "ts",
+            "type": "string",
+            "default": "-1",
+            "doc": "ISO8601 UTC timestamp of the event invocation"
+        },
+        {
+            "name": "current_skill",
+            "type": "double",
+            "default": -1,
+            "doc": "a current value of a matchmaking skill level"
+        },
+        {
+            "name": "gid",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace-unique identifier of the match"
+        },
+        {
+            "name": "sid",
+            "type": "string",
+            "default": "-1",
+            "doc": "global-unique identifier of the player's login session (time between login and logout)"
+        },
+        {
+            "name": "dur",
+            "type": "int",
+            "default": -1,
+            "doc": "duration time in milliseconds passed since the action/feature/event start"
+        },
+        {
+            "name": "ns",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace of the server's deployment (realm)"
+        },
+        {
+            "name": "name",
+            "type": "string",
+            "default": "-1",
+            "doc": "unique name of the event"
+        },
+        {
+            "name": "region",
+            "type": "string",
+            "default": "-1",
+            "doc": "region name"
+        },
+        {
+            "name": "is_cross_play",
+            "type": "boolean",
+            "default": true,
+            "doc": "cross play enabled"
+        }
+    ]
+}

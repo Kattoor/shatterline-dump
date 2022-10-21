@@ -1,0 +1,37 @@
+{
+    "name": "server_disbanded",
+    "doc": "Origin: game session. Emitter: dedicated server. Emitted when AWS spot instance is interrupted and DS goes down",
+    "type": "record",
+    "fields": [
+        {
+            "name": "name",
+            "type": "string",
+            "default": "-1",
+            "doc": "unique name of the event"
+        },
+        {
+            "name": "ts",
+            "type": "string",
+            "default": "-1",
+            "doc": "ISO8601 UTC timestamp of the event invocation"
+        },
+        {
+            "name": "gid",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace-unique identifier of the match"
+        },
+        {
+            "name": "ns",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace of the server's deployment (realm)"
+        },
+        {
+            "name": "territory",
+            "type": "string",
+            "default": "-1",
+            "doc": "dedicated server territory"
+        }
+    ]
+}

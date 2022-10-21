@@ -1,0 +1,53 @@
+{
+    "foot_ik":
+    [
+        {
+            "heel":
+            {
+                "bone_name":"Bip01_R_Finger0",
+                "angle_tolerance":5.0,
+                "top_bound":0.3,
+                "bot_bound":0.2
+            },
+            "max_ik_angle":75.0,
+            "smooth_time":0.03,
+            "reference_bone": "Bip01"
+        },
+        {
+            "heel":
+            {
+                "bone_name":"Bip01_L_Finger0",
+                "angle_tolerance":5.0,
+                "top_bound":0.3,
+                "bot_bound":0.2
+            },
+            "max_ik_angle":75.0,
+            "smooth_time":0.03,
+            "reference_bone": "Bip01"
+        },
+        {
+            "heel":
+            {
+                "bone_name":"Bip01_R_Toe0",
+                "angle_tolerance":5.0,
+                "top_bound":0.7,
+                "bot_bound":0.3
+            },
+            "max_ik_angle":75.0,
+            "smooth_time":0.03,
+            "reference_bone": "Bip01"
+        },
+        {
+            "heel":
+            {
+                "bone_name":"Bip01_L_Toe0",
+                "angle_tolerance":5.0,
+                "top_bound":0.7,
+                "bot_bound":0.3
+            },
+            "max_ik_angle":75.0,
+            "smooth_time":0.03,
+            "reference_bone": "Bip01"
+        }
+    ]
+}

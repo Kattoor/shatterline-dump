@@ -1,0 +1,42 @@
+{
+    "script": "scripts/ui/lobby/season_hub/season_pass.lua",
+    "view_path": "SeasonPass.html",
+    "send_stats": true,
+    "children":
+    [
+        { "name": "season", "type": "Label", "view_path": "seasonPanel.seasonPassSeason.wrapper.header.season" },
+        { "name": "expire_time", "type": "Label", "view_path": "seasonPanel.seasonPassSeason.wrapper.header.expireTime" },
+        { "name": "title", "type": "Label", "view_path": "seasonPanel.seasonPassSeason.wrapper.title", "text": "@season_pass_season_title" },
+        { "name": "title_outline", "type": "Label", "view_path": "seasonPanel.seasonPassSeason.wrapper.titleOutline", "text": "@season_pass_season_title" },
+
+        { "name": "season_xp_booster", "type": "Component", "view_path": "seasonPanel.boostersPanel.xpBooster" },
+        { "name": "season_xp_booster_icon", "type": "Image", "view_path": "seasonPanel.boostersPanel.xpBooster.icon", "image": "season_xp" },
+        { "name": "season_xp_booster_value", "type": "Label", "view_path": "seasonPanel.boostersPanel.xpBooster.valueWrapper.value" },
+        { "name": "season_xp_booster_prefix", "type": "Label", "view_path": "seasonPanel.boostersPanel.xpBooster.expirationWrapper.prefix", "text": "@booster_expiration_prefix" },
+        { "name": "season_xp_booster_expiration", "type": "Label", "view_path": "seasonPanel.boostersPanel.xpBooster.expirationWrapper.expiration" },
+
+        { "name": "season_pass_progress", "type": "Component", "view_path": "bottomPanel.leftPanel.seasonPassProgressWrapper.seasonPassProgress" },
+
+        { "name": "get_premium_button", "type": "Button", "view_path": "bottomPanel.leftPanel.seasonPassProgressWrapper.getPremiumButton", "text": "@season_pass_get_premium_button" },
+        { "name": "get_premium_button_hint","type": "ActionLabel", "view_path": "bottomPanel.leftPanel.seasonPassProgressWrapper.getPremiumButton.wrapper.key", "gamepad_only": true },
+
+        { "name": "rewards", "type": "Component", "view_path": "bottomPanel.leftPanel.rewardsWrapper" },
+        { "name": "free_title", "type": "Label", "view_path": "bottomPanel.leftPanel.rewardsWrapper.titles.freeTitleWrapper.title", "text": "@season_pass_free_title" },
+        { "name": "premium_title", "type": "Label", "view_path": "bottomPanel.leftPanel.rewardsWrapper.titles.premiumTitleWrapper.title", "text": "@season_pass_premium_title" },
+
+        { "name": "rewards_list", "type": "RewardItemsGrid", "view_path": "bottomPanel.leftPanel.rewardsWrapper.rewardsList" },
+        { "name": "rewards_list_container", "type": "Component", "view_path": "bottomPanel.leftPanel.rewardsWrapper.rewardsList.container" },
+
+        { "name": "reward_progress_list", "type": "SeasonPassProgressGrid", "view_path": "bottomPanel.leftPanel.rewardsWrapper.rewardsList.container.progressList" },
+
+        { "name": "reward_info", "type": "Control", "view_path": "bottomPanel.rightPanel.rewardInfo", "visible": false },
+        { "name": "reward_type", "type": "Label", "view_path": "bottomPanel.rightPanel.rewardInfo.type" },
+        { "name": "reward_title", "type": "Label", "view_path": "bottomPanel.rightPanel.rewardInfo.title" },
+        { "name": "reward_image_1", "type": "Image", "view_path": "bottomPanel.rightPanel.rewardImage1", "visible": false },
+        { "name": "reward_image_2", "type": "Image", "view_path": "bottomPanel.rightPanel.rewardImage2", "visible": false },
+
+        { "name": "preview_button", "type": "Button", "view_path": "bottomPanel.rightPanel.moreButton", "text": "@season_pass_preview_button", "visible": false },
+
+        { "name": "paginator", "type": "Component", "file": "common/paginator.json", "view_path": "bottomPanel.leftPanel.rewardsWrapper.rewardsList.paginator" }
+    ]
+}

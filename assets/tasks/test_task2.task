@@ -1,0 +1,24 @@
+{
+  "name": "test_task2",
+  "type": "daily",
+  "active": true,
+  "image": "test_icon",
+  "rarity": "common",
+  "display_name": { "localization_key": "@test_task2" },
+  "description": { "localization_key": "@test_task_description" },
+  "conditions": [
+    {
+      "name": "test_task2",
+      "event_description": { "localization_key": "@test_task_event_description" },
+      "event": { "event_id": "Headshot", "actor_is_me": true },
+      "progress": 10
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 1000
+    }
+  ]
+}

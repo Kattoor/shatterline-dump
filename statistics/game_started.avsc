@@ -1,0 +1,55 @@
+{
+    "name": "game_started",
+    "doc": "Origin: game session. Emitter: dedicated server. Indicates when game was created on dedicated server",
+    "type": "record",
+    "fields": [
+        {
+            "name": "ver",
+            "type": "string",
+            "default": "-1",
+            "doc": "server build version"
+        },
+        {
+            "name": "name",
+            "type": "string",
+            "default": "-1",
+            "doc": "unique name of the event"
+        },
+        {
+            "name": "gamemode",
+            "type": "string",
+            "default": "-1",
+            "doc": "gamemode"
+        },
+        {
+            "name": "ts",
+            "type": "string",
+            "default": "-1",
+            "doc": "ISO8601 UTC timestamp of the event invocation"
+        },
+        {
+            "name": "mission_id",
+            "type": "string",
+            "default": "-1",
+            "doc": "name of the mission"
+        },
+        {
+            "name": "map_name",
+            "type": "string",
+            "default": "-1",
+            "doc": "name of the map"
+        },
+        {
+            "name": "gid",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace-unique identifier of the match"
+        },
+        {
+            "name": "ns",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace of the server's deployment (realm)"
+        }
+    ]
+}

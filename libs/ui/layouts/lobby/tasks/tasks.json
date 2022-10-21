@@ -1,0 +1,23 @@
+{
+    "script": "scripts/ui/lobby/tasks/tasks.lua",
+    "view_path": "Tasks.html",
+    "send_stats": true,
+    "children": [
+        {"name": "wrapper", "type": "Component", "view_path":"wrapper"},
+        {"name": "category_list", "type": "TaskCategoryList", "view_path":"wrapper.tasksCategory"},
+        {"name": "category_list_container", "type": "Component", "view_path":"wrapper.tasksCategory.container"},
+
+        {"name": "tasks_list", "type": "TaskItemsList", "view_path": "wrapper.tasksContainer"},
+        {"name": "tasks_list_container", "type": "Component", "view_path": "wrapper.tasksContainer.container"},
+        {"name": "tasks_list_empty_badge", "type": "Component", "view_path": "wrapper.tasksContainer.container.emptyBadge"},
+
+        {"name": "season_pass_progress", "type": "Component", "view_path": "wrapper.right.seasonPassProgress"},
+
+        {"name": "rewards_list", "type": "TaskRewardsList", "view_path": "wrapper.right.rewards"},
+        {"name": "rewards_container", "type": "Component", "view_path": "wrapper.right.rewards.container"},
+
+        {"name": "rewards_info", "type": "Component", "view_path": "wrapper.right.rewardInfo"},
+        {"name": "rewards_info_type", "type": "Label", "view_path": "wrapper.right.rewardInfo.type"},
+        {"name": "rewards_info_title", "type": "Label", "view_path": "wrapper.right.rewardInfo.title"}
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "script": "",
+    "view_path": "LicenseWindow.html",
+    "defined_actions": ["hide_gamepad_cursor"],
+    "children": [
+        {"name": "container", "type": "Component", "view_path": "container"},
+        {"name": "title", "type": "Label", "view_path": "container.title", "text": "@license_title"},
+        {"name": "licenseGrid", "type": "Component", "view_path": "container.content.grid"},
+        {"name": "licenseGridContainer", "type": "Component", "view_path": "container.content.grid.container"},
+        {"name": "licenseText", "type": "Label", "view_path": "container.content.grid.container.label", "text": "@license_text"},
+        {"name": "slider", "type": "Component", "view_path": "container.content.grid.sliderWrapper.slider"}
+    ]
+}

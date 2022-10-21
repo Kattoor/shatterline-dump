@@ -1,0 +1,55 @@
+{
+    "name": "game_ended",
+    "doc": "Origin: game session. Emitter: dedicated server. Indicates when a game match was ended",
+    "type": "record",
+    "fields": [
+        {
+            "name": "cid_winner",
+            "type": "int",
+            "default": -1,
+            "doc": "cid of a winning team"
+        },
+        {
+            "name": "team_winner",
+            "type": "string",
+            "default": "-1",
+            "doc": "categorical definition of the team which player belongs to"
+        },
+        {
+            "name": "name",
+            "type": "string",
+            "default": "-1",
+            "doc": "unique name of the event"
+        },
+        {
+            "name": "players_cnt",
+            "type": "int",
+            "default": -1,
+            "doc": "amount of players in game"
+        },
+        {
+            "name": "ts",
+            "type": "string",
+            "default": "-1",
+            "doc": "ISO8601 UTC timestamp of the event invocation"
+        },
+        {
+            "name": "gid",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace-unique identifier of the match"
+        },
+        {
+            "name": "dur",
+            "type": "int",
+            "default": -1,
+            "doc": "duration time in milliseconds passed since the action/feature/event start"
+        },
+        {
+            "name": "ns",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace of the server's deployment (realm)"
+        }
+    ]
+}

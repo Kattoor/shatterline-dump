@@ -1,0 +1,20 @@
+{
+    "name": "test_random_item_secondary",
+    "effects": [
+        { 
+            "random_item":
+            { 
+                "category": "secondary_weapon",
+                "allowed_range": "list",
+                "allowed_items_list": [
+                    "test_pt01",
+                    "test_pt_02",
+                    "test_pt_02_scope_01"
+                ],
+                "not_allowed_items_list": [
+                    "test_pt_01_scope_02"
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "script": "",
+    "view_path": "BigNewsWindow.html",
+    "defined_actions": ["hide_gamepad_cursor"],
+    "children": [
+        {"name": "image", "type": "Image", "view_path": "container.image"},
+        {"name": "seen_btn", "type": "Button", "view_path": "container.seenButton", "text": "@big_news_seen"},
+        {"name": "seen_btn_hint", "type": "ActionLabel", "view_path": "container.seenButton.wrapper.key", "gamepad_only": true}
+    ]
+}

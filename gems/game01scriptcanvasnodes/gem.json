@@ -1,0 +1,42 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "5d8c5b490798470fb7bdbb44cadd798d",
+    "Name": "Game01ScriptCanvasNodes",
+    "DisplayName": "Game01 ScriptCanvas Nodes",
+    "Version": "0.1.0",
+    "Summary": "Contains Game01 specific ScriptCanvas nodes.",
+    "Tags": ["Script", "ScriptCanvas", "Game01"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        }
+    ],
+    "Dependencies" : [
+        {
+            "Uuid" : "ff06785f7145416b9d46fde39098cb0c",
+            "VersionConstraints" : [">=0.1.0"],
+            "_comment" : "LmbrCentral"
+        },
+        {
+            "Uuid": "00f05751e45c4c61ae7da3e551d06909",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "GameComponents"
+        },
+        {
+            "Uuid": "869a0d0ec11a45c299917d45c81555e6",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "ScriptCanvas"
+        },
+        {
+            "Uuid": "7e24ebb066104127a4abb14e13ec7bed",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "GameSession"
+        },
+        {
+            "Uuid": "2ebd4481cbf142b89286f28b4c29ace3",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01Interfaces"
+        }
+    ]
+}

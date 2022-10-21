@@ -1,0 +1,66 @@
+<FXLib>
+
+	<!-- START   Grenade explosions(grenade)   START -->
+	<Effect name="explosion_default" delay="0">
+		<!-- <Audio trigger=""> -->
+		<!-- </Audio> -->
+		<Particle>
+			<Name minscale="0.9" maxscale="1.3" maxscaledist="80">grenades.mfx.flash_default</Name>
+		</Particle>
+		<!-- <RandEffect> -->
+			<!-- <Decal minscale="1.2" maxscale="1.6" lifetime="5.0"> -->
+				<!-- <Material>materials/decals/default_blast</Material> -->
+			<!-- </Decal> -->
+		<!-- </RandEffect> -->
+        <Audio trigger="flg01_explosion"></Audio>
+	</Effect>
+
+	<Effect name="explosion_water" delay="0">
+		<!-- <Audio trigger=""> -->
+		<!-- </Audio> -->
+		<Particle>
+			<Name minscale="0.75" maxscale="1.3" maxscaledist="80">grenades.mfx.explosion_water</Name>
+		</Particle>
+	</Effect>
+	<!-- END   Grenade explosions(grenade)   END -->
+	
+	<!-- START   Grenade impacts(grenade)   START -->
+	<Effect name="grenade_default">
+		<!-- <Audio trigger=""> -->
+		<!-- </Audio> -->
+	</Effect>
+	
+	<Effect name="grenade_soil">
+		<!-- <Audio trigger=""> -->
+		<!-- </Audio> -->
+	</Effect>
+	
+	<Effect name="grenade_grass">
+		<!-- <Audio trigger=""> -->
+		<!-- </Audio> -->
+	</Effect>
+	
+	<Effect name="grenade_wood">
+		<!-- <Audio trigger=""> -->
+		<!-- </Audio> -->
+	</Effect>
+	
+	<Effect name="grenade_rock">
+		<!-- <Audio trigger=""> -->
+		<!-- </Audio> -->
+	</Effect>
+	
+	<Effect name="grenade_water">
+		<!-- <Audio trigger=""> -->
+		<!-- </Audio> -->
+		<Particle>
+			<Name>collisions.small.water</Name>
+		</Particle>
+	</Effect>
+<!-- END   Grenade impacts(grenade)   END -->
+	 
+</FXLib>
+
+
+
+

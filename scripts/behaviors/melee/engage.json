@@ -1,0 +1,306 @@
+{
+    "name": "Melee/Engage",
+    "root": "e7ff89db-37e7-4099-8de4-9b4d41b73a87",
+    "nodes": {
+        "84df9e38-4b1b-42ad-9a2b-a5567e3ecd2c": {
+            "name": "ApproachTo",
+            "pos": {
+                "x": -255,
+                "y": 885
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "MeleeAI",
+                        "PointOfInterestPos"
+                    ]
+                },
+                {
+                    "name": "EndDistance",
+                    "type": "Float",
+                    "value": "0"
+                },
+                {
+                    "name": "UpdateDestinationPoint",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "872061ac-8ccb-4030-84db-fab7f901279b": {
+            "name": "Success",
+            "pos": {
+                "x": 185,
+                "y": 1109
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "c0eae4f8-eded-4d84-9e14-d5c504b04802": {
+            "name": "RepeatUntilSucceeds",
+            "pos": {
+                "x": 185,
+                "y": 765
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Iterations",
+                    "type": "Integer",
+                    "value": "0"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "f4d28cad-9839-45cb-ba9d-197ec2b8df84"
+        },
+        "777fe5cf-854e-447e-acd7-8b6e423150f3": {
+            "name": "Sequence",
+            "pos": {
+                "x": -420,
+                "y": 767
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "6f7ea440-0e19-49cf-9fb4-f57d81598ff0",
+                "84df9e38-4b1b-42ad-9a2b-a5567e3ecd2c"
+            ]
+        },
+        "6f7ea440-0e19-49cf-9fb4-f57d81598ff0": {
+            "name": "SetDestinationPoint",
+            "pos": {
+                "x": -620,
+                "y": 886
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "MeleeAI",
+                        "PointOfInterestPos"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "e7ff89db-37e7-4099-8de4-9b4d41b73a87": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 84
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Engage"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "f1fcb86a-163e-4bc7-9680-711f8280e44a"
+        },
+        "f4d28cad-9839-45cb-ba9d-197ec2b8df84": {
+            "name": "IsInRange",
+            "pos": {
+                "x": 185,
+                "y": 885
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Start",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "MeleeAI",
+                        "PointOfInterestPos"
+                    ]
+                },
+                {
+                    "name": "End",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "MinRange",
+                    "type": "Float",
+                    "value": "0.00"
+                },
+                {
+                    "name": "MaxRange",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "MeleeAI",
+                        "ApproachRange"
+                    ]
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "872061ac-8ccb-4030-84db-fab7f901279b"
+        },
+        "2a5d063c-6801-40ea-a38b-cd66afb8620c": {
+            "name": "ParallelUntilAnyComplete",
+            "pos": {
+                "x": 0,
+                "y": 641
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "777fe5cf-854e-447e-acd7-8b6e423150f3",
+                "c0eae4f8-eded-4d84-9e14-d5c504b04802"
+            ]
+        },
+        "f1fcb86a-163e-4bc7-9680-711f8280e44a": {
+            "name": "IsBBValueExist",
+            "pos": {
+                "x": 0,
+                "y": 226
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ValuePath",
+                    "type": "StringHash",
+                    "value": "Gai.MeleeAI.PointOfInterestPos"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "a8b53e19-c047-41a3-8f26-8cd292602d2b"
+        },
+        "a8b53e19-c047-41a3-8f26-8cd292602d2b": {
+            "name": "IsInRange",
+            "pos": {
+                "x": 0,
+                "y": 411
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Start",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "MeleeAI",
+                        "PointOfInterestPos"
+                    ]
+                },
+                {
+                    "name": "End",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "MinRange",
+                    "type": "Float",
+                    "value": "0.00"
+                },
+                {
+                    "name": "MaxRange",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "MeleeAI",
+                        "ApproachRange"
+                    ]
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "2a5d063c-6801-40ea-a38b-cd66afb8620c"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

@@ -1,0 +1,47 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "b8e16ebeec9346f18af81fe09b6844bf",
+    "Name": "ClientBackend",
+    "DisplayName": "ClientBackend",
+    "Version": "0.1.0",
+    "Summary": "A short description of my Gem.",
+    "Tags": ["Untagged"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        }
+    ],
+    "Dependencies" : [
+        {
+            "Uuid": "28479e255bde466e91fc34eec808d9c7",
+            "VersionConstraints": [ "~>1.0" ],
+            "_comment": "HttpRequestor"
+        },
+		{
+            "Uuid": "71f233c8118b4c8283e3406b447657ab",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "BackendCommon"
+        },
+        {
+            "Uuid": "4d5d71b02d454ca3be846eb7e16b82f3",
+            "VersionConstraints": ["~>0.1"],
+            "_comment": "Notification"
+        },
+        {
+            "Uuid": "93ccb44a96b142f7942a3fb6b9ca36e1",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "LocalUser"
+        },
+        {
+            "Uuid": "8040a1a42c844b8abcf6ab387a7c8963",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "JWT"
+        },
+        {
+            "Uuid": "bbac7b640c4448fad56e166e54fee0ef",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Steam"
+        }
+    ]
+}

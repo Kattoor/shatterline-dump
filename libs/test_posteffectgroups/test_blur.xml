@@ -1,0 +1,16 @@
+<PostEffectGroup priority="1" hold="1">
+    <Effect name="MaskBlur">
+        <Param name="Amount" floatValue="2.0"/>
+        <Param name="UseMask" floatValue="1.0"/>
+        <Param name="MaskScalingDisabled" floatValue="1.0"/>
+        <Param name="MaskOffset" vec4Value="0.0,0.0,0.0,0.0"/>
+    </Effect>
+    <BlendIn curve="smooth">
+        <Key time="0.0" value="0.0"/>
+        <Key time="1.0" value="1.0"/>
+    </BlendIn>
+    <BlendOut curve="smooth">
+        <Key time="0.0" value="1.0"/>
+        <Key time="1.0" value="0.0"/>
+    </BlendOut>
+</PostEffectGroup>

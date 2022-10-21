@@ -1,0 +1,109 @@
+{
+    "markers": [
+        {
+            "name": "ult_pickup_marker",
+            "elements": [
+                {
+                    "radial_progress_icon":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 1,
+                            "alpha_upper_bound": 0.5,
+                            "alpha_lower_bound": 1.0
+                        },
+                        "opacity": 0.5,
+                        
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        "image_alias": "ammo_ult",
+                        "info_text": "@special_weapon",
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_rhombus_icon_wave_npa",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_rhombus_icon_mask_npa",
+                        "radial_progress_bg_color": "#E9F0F3",
+                        "radial_progress_color": "#3a3a3a",
+                        "ready_to_use_text": "@hold_to_resupply",
+                        "using_text": "@using_btn",
+                        "race_icon_min_scale": 0.8,
+                        "race_icon_max_scale": 1.0,
+                        "race_icon_track_scale": 0.6,
+                        "race_icon_min_dist_visibility": 80,
+                        "offset": 1
+                    }
+                },
+                { "instant_use_message": { "info_text":"@hold_to_resupply",  "hide_at_use": false }},
+                { "radar_icon": { "icon_alias": "ammo_ult", "snapped": true } }
+            ]
+        },
+        {
+            "name": "ult_wielder",
+            "elements": [
+                { 
+                    "generic_icon":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.4,
+                            "alpha_upper_bound": 1.0,
+                            "alpha_lower_bound": 1.0
+                        },
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        "opacity": 1,
+                        "visibility_mode":"Always",
+                        "image_alias": "ammo_ult",
+                        "image_color": "#f4be34",
+                        "wave_is_visible": false,
+                        "wave_is_animation_infinite": true,
+                        "is_radial_progress_visible": false,
+                        "wave_image_alias": "marker_rhombus_icon_wave_npa",
+                        "radial_progress_mask_image_alias": "marker_rhombus_icon_mask_npa",
+                        "radial_progress_bg_color": "#D00000",
+                        "race_icon_min_dist": 3,
+                        "race_icon_max_dist": 30,
+                        "race_icon_track_scale": 0.75,
+                        "race_icon_min_scale": 1.0,
+                        "race_icon_max_scale": 1.0,
+                        "race_icon_min_dist_visibility": 30,
+                        "offset": 2
+                    }
+                }
+            ]
+        },
+        {
+            "name": "ult_wielder_friend",
+            "elements": [
+                { 
+                    "generic_icon":
+                    {
+                        "blind_zone_config":
+                        {
+                            "radius": 0.4,
+                            "alpha_upper_bound": 1.0,
+                            "alpha_lower_bound": 1.0
+                        },
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        "opacity": 1,
+                        "visibility_mode":"Always",
+                        "image_alias": "",
+                        "image_color": "#f4be34",
+                        "wave_is_visible": false,
+                        "wave_is_animation_infinite": true,
+                        "is_radial_progress_visible": false,
+                        "wave_image_alias": "marker_rhombus_icon_wave_npa",
+                        "radial_progress_mask_image_alias": "marker_rhombus_icon_wave_npa",
+                        "radial_progress_bg_color": "#D00000",
+                        "race_icon_min_dist": 3,
+                        "race_icon_max_dist": 100,
+                        "race_icon_track_scale": 0.75,
+                        "race_icon_min_scale": 1.0,
+                        "race_icon_max_scale": 1.0,
+                        "race_icon_min_dist_visibility": 100,
+                        "offset": 2.2
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,77 @@
+{
+    "priorities":
+    [
+        {
+            "aggregation": "min",
+            "competitor": "same_team",
+            "entities": "character",
+            "measure": "distance",
+            
+            "measure_min": 0,
+            "measure_max": 1,
+            "measure_default": 1,
+            "priority_min": 0,
+            "priority_max": 10
+        },
+        {
+            "aggregation": "min",
+            "competitor": "same_team",
+            "entities": "character",
+            "measure": "distance",    
+            
+            "measure_min": 1,
+            "measure_max": 500,
+            "measure_default": 500,            
+            "priority_min": 600,
+            "priority_max": 0
+        },
+        {
+            "aggregation": "min",
+            "competitor": "opposite_team",
+            "entities": "character",
+            "measure": "distance",    
+            
+            "measure_min": 50,
+            "measure_max": 200,
+            "measure_default": 200,            
+            "priority_min": 350,
+            "priority_max": 0
+        },
+        {
+            "aggregation": "min",
+            "competitor": "opposite_team",
+            "entities": "character",
+            "measure": "distance",    
+            
+            "measure_min": 0,
+            "measure_max": 50,
+            "measure_default": 50,            
+            "priority_min": 0,
+            "priority_max": 350
+        },
+        {
+            "aggregation": "min",
+            "competitor": "same_team",
+            "entities": "death_point",
+            "measure": "distance",    
+            
+            "measure_min": 0,
+            "measure_max": 50,
+            "measure_default": 50,            
+            "priority_min": 0,
+            "priority_max": 150
+        },
+        {
+            "aggregation": "average",
+            "competitor": "opposite_team",
+            "entities": "character",
+            "measure": "entity_aim_to_point_angle",    
+            
+            "measure_min": 1,
+            "measure_max": 180,
+            "measure_default": 180,            
+            "priority_min": 0,
+            "priority_max": 100
+        }
+    ]
+}

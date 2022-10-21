@@ -1,0 +1,35 @@
+{
+  "name": "scheduled_operatives_005",
+  "type": "scheduled",
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "rare",
+  "display_name": { "localization_key": "@scheduled_operatives_005_name" },
+  "description": { "localization_key": "@scheduled_operatives_005_description" },
+  "conditions": [
+    {
+      "name": "scheduled_operatives_005",
+      "event_description": { "localization_key": "@scheduled_operatives_005_event_description" },
+      "event": { "event_id": "RamPlay", "actor_is_me": true },
+      "progress": 7
+    }
+  ],
+  
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 3000
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 2000
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 25
+    }
+  ]
+}

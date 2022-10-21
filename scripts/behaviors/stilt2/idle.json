@@ -1,0 +1,221 @@
+{
+    "name": "Stilt2/Idle",
+    "root": "a2a83dc4-129e-49b4-a8a1-4856df5f7f80",
+    "nodes": {
+        "2343a605-80d4-4013-8fcd-d6cf01f0e563": {
+            "name": "ApproachTo",
+            "pos": {
+                "x": 435,
+                "y": 207
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "idlePt"
+                    ]
+                },
+                {
+                    "name": "EndDistance",
+                    "type": "Float",
+                    "value": "3"
+                },
+                {
+                    "name": "UpdateDestinationPoint",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "f41cfcc2-0721-41d5-a097-59b9b56f440e": {
+            "name": "Character_RandomPointInRange",
+            "pos": {
+                "x": 120,
+                "y": 442
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Range",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "idle_range_max"
+                    ]
+                },
+                {
+                    "name": "MinDistance",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "idle_range_min"
+                    ]
+                },
+                {
+                    "name": "Angle",
+                    "type": "Float",
+                    "value": ""
+                },
+                {
+                    "name": "Direction",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                },
+                {
+                    "name": "Center",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Pos"
+                    ]
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Point",
+                    "type": "Variable",
+                    "value": [
+                        "idlePt"
+                    ]
+                },
+                {
+                    "name": "Distance",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "a2a83dc4-129e-49b4-a8a1-4856df5f7f80": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 93
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "4f6050b1-cda9-4411-9948-5ffaa1a4856e",
+                "5f1173d5-b15f-4078-90b4-a1e37c351a79",
+                "75c52f26-25eb-4709-9592-fbd8d5e314dd",
+                "2343a605-80d4-4013-8fcd-d6cf01f0e563"
+            ]
+        },
+        "5f1173d5-b15f-4078-90b4-a1e37c351a79": {
+            "name": "StartTimer",
+            "pos": {
+                "x": -200,
+                "y": 207
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "TimerName",
+                    "type": "StringHash",
+                    "value": "random_idle_point"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "75c52f26-25eb-4709-9592-fbd8d5e314dd": {
+            "name": "TimeIsOut",
+            "pos": {
+                "x": 120,
+                "y": 207
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "TimerName",
+                    "type": "StringHash",
+                    "value": "random_idle_point"
+                },
+                {
+                    "name": "Seconds",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "idle_stay_duration"
+                    ]
+                },
+                {
+                    "name": "StartIfAbsent",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "SucceedOnTimerAbsent",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "ForgetOnSucceed",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "f41cfcc2-0721-41d5-a097-59b9b56f440e"
+        },
+        "4f6050b1-cda9-4411-9948-5ffaa1a4856e": {
+            "name": "SetStrafeAllowed",
+            "pos": {
+                "x": -390,
+                "y": 207
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Allow",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

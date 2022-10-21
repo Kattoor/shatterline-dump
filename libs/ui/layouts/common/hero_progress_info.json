@@ -1,0 +1,12 @@
+{
+    "script": "",
+    "view_path": "HeroProgressInfo.html",
+    "children":
+    [
+        {"name": "level_label", "type": "Label", "view_path": "wrapper.levelWrapper.title", "text": "@armory_level"},
+        {"name": "level", "type": "Label", "view_path": "wrapper.levelWrapper.level"},
+        {"name": "current_exp", "type": "Label", "view_path": "wrapper.progressText.currentExp"},
+        {"name": "max_exp", "type": "Label", "view_path": "wrapper.progressText.maxExp"},
+        {"name": "progress", "type": "ProgressBar", "view_path": "wrapper.progressWrapper.progressBar"}
+    ]
+}

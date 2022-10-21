@@ -1,0 +1,30 @@
+{
+    "script": "scripts/ui/lobby/modifications/modifications.lua",
+    "view_path": "Modifications.html",
+    "children": [
+
+        {"name": "blueprints_icon", "type": "Image", "view_path": "wrapper.blueprints.icon", "image": "blueprint"},
+        {"name": "blueprints_header", "type": "Label", "view_path": "wrapper.blueprints.textWrapper.header", "text": "@modifications_blueprints_header"},
+        {"name": "blueprints_amount", "type": "Label", "view_path": "wrapper.blueprints.textWrapper.amountWrapper.amount"},
+        {"name": "blueprints_limit", "type": "Label", "view_path": "wrapper.blueprints.textWrapper.amountWrapper.limit"},
+
+        {"name": "information", "type": "Label", "view_path": "wrapper.information", "text": "@modifications_information"},
+
+        {"name": "modifications_owned_label", "type": "Label", "view_path": "wrapper.buttons.owned.label", "text": "@modifications_blueprints_owned"},
+        {"name": "modifications_owned", "type": "Label", "view_path": "wrapper.buttons.owned.amount"},
+
+        {"name": "view_all_mods_btn", "type": "Button", "view_path": "wrapper.buttons.viewAllBtn", "text": "@modifications_view_all_mods_btn", "visible": false},
+        {"name": "modifications_owned_label_", "type": "Label", "view_path": "wrapper.buttons.viewAllBtn.wrapper.owned.label", "text": "@modifications_blueprints_owned"},
+        {"name": "modifications_owned_", "type": "Label", "view_path": "wrapper.buttons.viewAllBtn.wrapper.owned.amount"},
+
+        {"name": "not_enough_currency", "type": "Component", "view_path": "craftBtnWrapper.currencyWarningWrapper", "visible": false},
+        {"name": "not_enough_currency_label", "type": "Label", "view_path": "craftBtnWrapper.currencyWarningWrapper.label", "text": "@not_enough_currency_blueprint"},
+
+        {"name": "currency_icon", "type": "Image", "view_path": "craftBtnWrapper.priceContainer.currency", "image": "blueprint"},
+        {"name": "required_blueprints", "type": "Label", "view_path": "craftBtnWrapper.priceContainer.requiredBlueprints"},
+
+        {"name": "craft_btn", "type": "Button", "view_path": "craftBtnWrapper.craftBtn", "text": "@modifications_craft_btn"},
+        {"name": "hint", "type": "ActionLabel", "view_path": "craftBtnWrapper.craftBtn.wrapper.key", "gamepad_only": true}
+
+    ]
+}

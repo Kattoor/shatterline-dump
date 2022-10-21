@@ -1,0 +1,16 @@
+{
+    "name": "test_crystalline_injection",
+    "duration": 9.0,
+    "effects": [
+        { "max_speed": { "speed_cap": 5.0 }},
+        { "health_change": { "hit_points": 100.0 }},
+        { "damage_filter": {"damage_modifiers": [
+            { "filter_type": "hit", "hit_type": "Shot", "modifier": 0.1 },
+            { "filter_type": "hit", "hit_type": "AOE", "modifier": 0.5 },
+            { "filter_type": "hit", "hit_type": "DOT", "modifier": 0.5 },
+            { "filter_type": "hit", "hit_type": "Bleed", "modifier": 0.5 },
+            { "filter_type": "hit", "hit_type": "Melee", "modifier": 0.5 }
+        ]}},
+        { "visual_stage": { "priority": 100, "fp_stage": "crystallized", "tp_stage": "crystallized" }}
+    ]
+}

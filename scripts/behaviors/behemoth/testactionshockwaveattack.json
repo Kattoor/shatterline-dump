@@ -1,0 +1,187 @@
+{
+    "name": "Behemoth/TestActionShockwaveAttack",
+    "root": "9769b736-a4a6-4aa3-87bc-03236a639b01",
+    "nodes": {
+        "d8d6a975-e61c-4958-8a5d-bed34f713568": {
+            "name": "IsBehaviorCondition",
+            "pos": {
+                "x": 0,
+                "y": 746
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ShockwaveDone"
+                },
+                {
+                    "name": "ResetOnExit",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "14b61f45-068a-467e-9150-463054f3c16e"
+        },
+        "65dadd86-fb58-4ab6-a4e8-c35bdea8543e": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 605
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ShockwaveDone"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "d8d6a975-e61c-4958-8a5d-bed34f713568"
+        },
+        "474c715b-48d5-406f-af28-84417de940fa": {
+            "name": "ScriptEventGate",
+            "pos": {
+                "x": 0,
+                "y": 461
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EnterEvent",
+                    "type": "StringHash",
+                    "value": "shockwave_attack_begin"
+                },
+                {
+                    "name": "ExitEvent",
+                    "type": "StringHash",
+                    "value": "shockwave_attack_end"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "65dadd86-fb58-4ab6-a4e8-c35bdea8543e"
+        },
+        "1c6187ca-9308-4c1e-89cb-e153200b3f1d": {
+            "name": "LogGate",
+            "pos": {
+                "x": 0,
+                "y": 252
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CVar",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "OnEnter",
+                    "type": "StringHash",
+                    "value": "ActionTest: ShockwaveAttack started"
+                },
+                {
+                    "name": "OnExit",
+                    "type": "StringHash",
+                    "value": "ActionTest: ShockwaveAttack finished"
+                },
+                {
+                    "name": "Attribute1",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                },
+                {
+                    "name": "Attribute2",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "474c715b-48d5-406f-af28-84417de940fa"
+        },
+        "14b61f45-068a-467e-9150-463054f3c16e": {
+            "name": "Wait",
+            "pos": {
+                "x": 0,
+                "y": 948
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "shockwave_repeats_delay_min"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "9769b736-a4a6-4aa3-87bc-03236a639b01": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 105
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ActionTest"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "1c6187ca-9308-4c1e-89cb-e153200b3f1d"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

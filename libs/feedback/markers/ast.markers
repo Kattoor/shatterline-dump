@@ -1,0 +1,125 @@
+{
+    "markers": [
+        
+        {
+            "name": "plant_icon_a1",
+            "elements": [
+                { 
+                    "plant_icon":
+                    { 
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "image_alias": "marker_plant_icon_a",
+                        "image_color": "#FFE400",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_hexagon_icon_mask_npa",
+                        "race_icon_track_scale": 0.5
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_plant_radar_icon_a"} }
+            ]
+        },
+         {
+            "name": "plant_icon_b2",
+            "elements": [
+                { 
+                    "plant_icon":
+                    { 
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "image_alias": "marker_plant_icon_b",
+                        "image_color": "#FFE400",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_hexagon_icon_mask_npa",
+                        "race_icon_track_scale": 0.5
+                    }
+                },
+                { "radar_icon": { "icon_alias": "marker_plant_radar_icon_b"} }
+            ]
+        },
+        {
+            "name": "capture_icon_my1",
+            "elements": [
+                {
+                    "way_point":
+                    {
+                        "ui_component_file": "hud/markers/pie_progress_icon.json",
+                        
+                        "image_alias": "marker_way_point_icon",
+                        "image_color": "#FFE400",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_rhombus_icon_mask_npa",
+                        "radial_progress_bg_color": "#E9F0F3",
+                        "radial_progress_color": "#1494D8",
+                        "race_icon_min_dist_visibility": 50,
+                        "race_icon_max_dist": 2,
+                        "race_icon_min_dist": 1,
+                        "race_icon_max_scale": 1,
+                        "race_icon_min_scale": 0.5
+                    }
+                }
+            ]
+        },
+        {
+            "name": "ast_objective_a",
+            "elements": [
+                {
+                    "way_point":
+                    {
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        
+                        "image_alias": "marker_hidden_crate_icon",
+                        "info_text": "@ast_objective_a",
+                        "image_color": "#E9F0F3",
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_hidden_crate_icon_wave_npa",
+                        "race_icon_min_scale": 1.0,
+                        "race_icon_max_scale": 1.0,
+                        "race_icon_track_scale": 0.6,
+                        "race_icon_max_dist": 30,
+                        "offset": 2.9
+                    }
+                }
+            ]
+        },
+        {
+            "name": "ast_hp_marker",
+            "elements": [
+                {
+                    "shield_hp_bar":
+                    {
+                        "ui_component_file": "hud/ai_health_bars/normal.json",
+                        "offset": 2.7,
+                        "race_icon_track_scale": 0,
+                        "show_after_initial_damage": true,
+                        "image_color": "#D21E46"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "ast_objective_b",
+            "elements": [
+                {
+                    "way_point":
+                    {
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        
+                        "image_alias": "marker_hidden_crate_icon",
+                        "info_text": "@ast_objective_b",
+                        "image_color": "#E9F0F3",
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": true,
+                        "wave_image_alias": "marker_hidden_crate_icon_wave_npa",
+                        "race_icon_min_scale": 1.0,
+                        "race_icon_max_scale": 1.0,
+                        "race_icon_track_scale": 0.6,
+                        "race_icon_max_dist": 30,
+                        "offset": 2.9
+                    }
+                }
+            ]
+        }
+    ]
+}

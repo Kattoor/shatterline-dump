@@ -1,0 +1,65 @@
+{
+    "name": "Shardskin/AllDead",
+    "root": "7139e5cd-18dc-4667-b97d-14de08cfffe4",
+    "nodes": {
+        "7139e5cd-18dc-4667-b97d-14de08cfffe4": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 78
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "AllDead"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "d3fa06bb-95c2-40ae-b0ce-94f7dafcf05a"
+        },
+        "d3fa06bb-95c2-40ae-b0ce-94f7dafcf05a": {
+            "name": "EraseBBValueByPathOnExit",
+            "pos": {
+                "x": 0,
+                "y": 213
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "BB Path",
+                    "type": "StringHash",
+                    "value": "Gai.VictoryBehavior"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "8adc1eaf-dd0c-487d-8b58-5e92203b5f6c"
+        },
+        "8adc1eaf-dd0c-487d-8b58-5e92203b5f6c": {
+            "name": "Success",
+            "pos": {
+                "x": 0,
+                "y": 322
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

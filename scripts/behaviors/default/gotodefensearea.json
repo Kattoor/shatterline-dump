@@ -1,0 +1,134 @@
+{
+    "name": "Default/GoToDefenseArea",
+    "root": "86072f9f-6d78-4432-9331-f0cf71757912",
+    "nodes": {
+        "2e3f776e-aa1f-4a1d-9f1d-a75d497850ab": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -495,
+                "y": 239
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "GoToDefenseAreaSubtreeName"
+                },
+                {
+                    "name": "Value",
+                    "type": "StringHash",
+                    "value": "GoToDefenseArea_Old"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "28d3c07d-d0f3-4309-88cd-789603903520": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -245,
+                "y": 422
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "GoToDefenseAreaSubtreeName"
+                },
+                {
+                    "name": "Value",
+                    "type": "StringHash",
+                    "value": "GoToDefenseArea_Autocover"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "d3062b9f-b00c-45bf-a76a-c09d111f397f": {
+            "name": "CVarEnabled",
+            "pos": {
+                "x": -245,
+                "y": 239
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CVar",
+                    "type": "StringHash",
+                    "value": "gai_auto_covers_enabled"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "28d3c07d-d0f3-4309-88cd-789603903520"
+        },
+        "4da33394-002e-4afb-9041-622eb907cc22": {
+            "name": "CallSubtree",
+            "pos": {
+                "x": 0,
+                "y": 243
+            },
+            "inputs": [
+                {
+                    "name": "Label",
+                    "type": "Variable",
+                    "value": [
+                        "GoToDefenseAreaSubtreeName"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "39ae2a3c-3e00-4293-be25-d7c3403cf4cc"
+        },
+        "39ae2a3c-3e00-4293-be25-d7c3403cf4cc": {
+            "name": "Success",
+            "pos": {
+                "x": 0,
+                "y": 374
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "86072f9f-6d78-4432-9331-f0cf71757912": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 90
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "2e3f776e-aa1f-4a1d-9f1d-a75d497850ab",
+                "d3062b9f-b00c-45bf-a76a-c09d111f397f",
+                "4da33394-002e-4afb-9041-622eb907cc22"
+            ]
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

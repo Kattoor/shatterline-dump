@@ -1,0 +1,19 @@
+{
+    "events": [
+
+        {
+            "name": "BuildingTime",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "barricade_hughes_build"}},
+                {"message_objective": {"message": "@building_time"}}
+            ]
+        },
+        {
+            "name": "BuildingDone",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "barricade_hughes_assault"}},
+                {"message_objective": {"message": "@eliminate_team"}}
+            ]
+        }
+    ]
+}

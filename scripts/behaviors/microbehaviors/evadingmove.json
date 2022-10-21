@@ -1,0 +1,205 @@
+{
+    "name": "Microbehaviors/EvadingMove",
+    "root": "c1a24cec-20fc-4413-b7bd-48d545cd7aba",
+    "nodes": {
+        "e4680b62-e2b5-4c81-860a-b5523f717b7a": {
+            "name": "EvadingMove",
+            "pos": {
+                "x": 15,
+                "y": 739
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Duration",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Microbehaviors",
+                        "Params",
+                        "anim_duration"
+                    ]
+                },
+                {
+                    "name": "Impulse",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Microbehaviors",
+                        "Params",
+                        "move_impulse"
+                    ]
+                },
+                {
+                    "name": "ImpulseStartTime",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Microbehaviors",
+                        "Params",
+                        "impulse_start"
+                    ]
+                },
+                {
+                    "name": "ImpulseEndTime",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Microbehaviors",
+                        "Params",
+                        "impulse_end"
+                    ]
+                },
+                {
+                    "name": "MoveDistance",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Microbehaviors",
+                        "Params",
+                        "move_distance"
+                    ]
+                },
+                {
+                    "name": "UseUnderFireRadius",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Microbehaviors",
+                        "Params",
+                        "use_under_fire_radius"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "4c503238-5b57-4a45-bb99-4e9c1e761e9d": {
+            "name": "ResetCurrentMicrobehaviorOnExit",
+            "pos": {
+                "x": 0,
+                "y": 212
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "e7b1011f-eea4-4021-8328-11ec04132948"
+        },
+        "c1a24cec-20fc-4413-b7bd-48d545cd7aba": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 96
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "EvadingMove"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "4c503238-5b57-4a45-bb99-4e9c1e761e9d"
+        },
+        "e7b1011f-eea4-4021-8328-11ec04132948": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 310
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Wounded"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "ca8c5792-2985-4519-a266-3cc96364da5e"
+        },
+        "ce4f9e08-72ee-4618-a87b-03b77e75aa28": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 600
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "308c6018-02a8-437f-a3cd-9750aea3e47f",
+                "e4680b62-e2b5-4c81-860a-b5523f717b7a",
+                "134e9dc6-1894-4235-8491-dea8a37598c3"
+            ]
+        },
+        "308c6018-02a8-437f-a3cd-9750aea3e47f": {
+            "name": "CancelMeleeAttack",
+            "pos": {
+                "x": -320,
+                "y": 742
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "134e9dc6-1894-4235-8491-dea8a37598c3": {
+            "name": "Wait",
+            "pos": {
+                "x": 340,
+                "y": 739
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Float",
+                    "value": "0.1"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "ca8c5792-2985-4519-a266-3cc96364da5e": {
+            "name": "DisableBodyRotationAndEnableOnExit",
+            "pos": {
+                "x": 0,
+                "y": 464
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "ce4f9e08-72ee-4618-a87b-03b77e75aa28"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

@@ -1,0 +1,137 @@
+{
+    "name": "Gunmen/Reload",
+    "root": "c12a737d-ce7e-499f-b724-178dfd195948",
+    "nodes": {
+        "934c46aa-8919-4da8-8d5c-46e035a5375a": {
+            "name": "RandomChance",
+            "pos": {
+                "x": -135,
+                "y": 552
+            },
+            "inputs": [
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Probability",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "reload_in_crouch_prc"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "a4643e9c-d3a1-46a4-b1ed-e7dcfdf65bd6"
+        },
+        "9cb52d4d-4402-4945-aa21-6bfffd9d9b46": {
+            "name": "Succeeder",
+            "pos": {
+                "x": -135,
+                "y": 422
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "934c46aa-8919-4da8-8d5c-46e035a5375a"
+        },
+        "1991bca9-1a99-47ef-a071-4fad7ec3a436": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 306
+            },
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "9cb52d4d-4402-4945-aa21-6bfffd9d9b46",
+                "756504c1-305f-4018-a9ea-f6a9d23b36ed"
+            ]
+        },
+        "a4643e9c-d3a1-46a4-b1ed-e7dcfdf65bd6": {
+            "name": "SetStance",
+            "pos": {
+                "x": -135,
+                "y": 720
+            },
+            "inputs": [
+                {
+                    "name": "Stance",
+                    "type": "StringHash",
+                    "value": "Crouch"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "756504c1-305f-4018-a9ea-f6a9d23b36ed": {
+            "name": "Reload",
+            "pos": {
+                "x": 40,
+                "y": 421
+            },
+            "inputs": [
+                {
+                    "name": "Blocking",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "64c54a81-b688-4ab6-9b05-ddf7a83a8a5c": {
+            "name": "SetStanceOnExit",
+            "pos": {
+                "x": 0,
+                "y": 189
+            },
+            "inputs": [
+                {
+                    "name": "Stance",
+                    "type": "StringHash",
+                    "value": "Stand"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "1991bca9-1a99-47ef-a071-4fad7ec3a436"
+        },
+        "c12a737d-ce7e-499f-b724-178dfd195948": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 80
+            },
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Reload"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "64c54a81-b688-4ab6-9b05-ddf7a83a8a5c"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": []
+}

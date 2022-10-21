@@ -1,0 +1,11 @@
+{
+    "script": "scripts/ui/modal_window/messagebox_container.lua",
+    "action_filter": "message_box",
+    "view_path": "MessageContainer.html",
+    "defined_actions": ["hide_gamepad_cursor"],
+    "hide_cursor": true,
+    "children":
+    [
+        {"name": "window", "type": "Component", "file": "modal_window/messagebox_window.json", "visible": false}
+    ]
+}

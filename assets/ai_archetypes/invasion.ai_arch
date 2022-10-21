@@ -1,0 +1,202 @@
+{
+    "ai_archetypes":
+    [
+        {
+         "name": "chosen_glasshead",
+         "display_name": "@glasshead_worker_invasion",
+         "tags": ["(3) Chosen: Chosen Glasshead", "InvaderSpawn"],
+         "add_tags":["ChosenSpawn", "GlassheadAI", "RegularAI", "ChosenGlassheadAI"],
+         "parent": "glasshead",
+         "health":130,
+         "competitor": "Invader",
+         "slice": "slices/ai/glasshead_skins/glasshead_electro_head_armor.dynamicslice",
+         "tp_slice": "slices/ai/glasshead_skins/glasshead_electro_tp.dynamicslice"
+        },
+        {
+            "name":"test_turret",
+            "parent":"gunmen",
+            "tags":["test_turret", "InvaderSpawn"],
+            "slice": "slices/ai/strafer_drone.dynamicslice",
+            "tp_slice": "slices/ai/strafer_drone_tp.dynamicslice",
+            "wounds":
+            {
+                "damage":
+                {
+                    "profile": "",
+                    "value": 50000,
+                    "time": 0.5,
+                    "prob": 0.0
+                }
+            },
+            "vo_profile":"Glasshead",
+            "health":550,
+             "equip":
+            [
+                {
+                    "item":"hmg_turret_ai",
+                    "shooting_pattern":["40-49; 2-2.5"],
+                    "check_visible" : false,
+                    "params":
+                    {
+                        "effective_distance_min":"0",
+                        "effective_distance_max":"500",
+                        "low_ammo":"7"
+                    }
+                }
+            ],
+            "speed": { "run":0, "strafe":0, "back":0, "crouch":0, "fire":0 },
+            "body_turn_limit":90
+        },
+        {
+            "name":"chosen_turret",
+            "display_name": "@glasshead_turret",
+            "parent":"glasshead_turret",
+            "tags":["Chosen Turret", "InvaderSpawn"],
+            "add_tags":["ChosenSpawn", "GlassheadAI", "SpecialAI", "ChosenTurretAI", "RamDashHitArticulated"],
+            "vo_profile":"CrystallineTurret",
+            "competitor": "Invader",
+            "health":1350,
+             "equip":
+            [
+                {
+                    "item":"wpn01_invader_turret",
+                    "shooting_pattern":["1; 0.1","1; 0.1","1; 0.1","1; 0.1","1; 1.5-2.5"],
+                    "check_visible" : false
+                }
+            ],
+            "microbehaviors":
+            [
+                {
+                    "name": "SideDash",
+                    "params":
+                    {
+                        "damage": "50000",
+                        "damage_time": "1",
+                        "prob": "0.3",
+                        "counter": "1",
+                        "reset_time": "2",
+                        "delay_min": "1",
+                        "delay_max": "1",
+                        "min_distance": "2.0",
+                        "max_distance": "4.0",
+                        "random_angle": "15"
+                    }
+                }
+            ],
+            "body_turn_limit":360,
+            "eye_offset_z": 1
+        },
+        {
+            "name":"stilt_invasion",
+            "display_name": "@boss_stilt",
+            "parent":"Stilt",
+            "tags":["stilt_invasion"],
+            "add_tags":["InvasionBoss", "GlassheadAI", "BossAI"],
+            "health":9500
+        },
+        {
+            "name":"behemoth_invasion",
+            "display_name": "@boss_behemoth",
+            "parent":"Behemoth",
+            "tags":["behemoth_invasion"],
+            "add_tags":["InvasionBoss", "GlassheadAI", "BossAI", "RamDashHitArticulated"],
+            "health":13000,
+            "behavior":
+             {
+                "behavior_tree": "BehaviorSelector",
+                "profile": "Behemoth",
+                "params":
+                {
+                   "weakpoint_health": "250",
+                   "close_to_target_range": "12",
+                   "burrow_move_speed": "7",
+                   "burrow_move_max_duration": "4",
+                   "min_melee_phase_time": "8",
+                   "max_melee_phase_time": "40",
+                   "melee_phase_damage_threshold": "16000",
+                   "immune_phase_heal_points":"0",
+                   "immune_phase_heal_duration":"0",
+                   "min_immune_phase_duration": "15",
+                   "max_immune_phase_duration": "15",
+                   "immune_phase_ai_slice": ""
+                }
+         },
+         "equip":
+         [
+            {
+               "item": "wpn02_behemoth_ai",
+               "shooting_pattern": ["1 - 2; 2.0 - 3.0"],
+               "restart_shooting_pattern_on_interrupt": true
+            }
+         ]
+        },
+        {
+            "name": "queen_invasion",
+            "display_name": "@boss_queen",
+            "parent":"queen_new",
+            "slice": "slices/ai/queen_new.dynamicslice",
+            "tp_slice": "slices/ai/queen_tp.dynamicslice",
+            "tags": [ "Queen Invasion" ],
+            "add_tags":["InvasionBoss", "GlassheadAI", "BossAI", "RamDashHitArticulated"],
+            "enemy_type": "boss",
+            "body_turn_limit": 360,
+            "health": 5500,
+            "competitor": "Glasshead",
+            "leave_dead_body": false,
+            "can_be_alldead": false,
+            "equip":
+            [
+                {
+                    "item": "rl02_queen_ai",
+                    "damage_multiplier": 0.6,
+                    "shooting_pattern": ["1"]
+                }
+            ],
+            "behavior":
+            {
+                "behavior_tree": "BehaviorSelector",
+                "profile": "QueenNew",
+                "params":
+                {
+                    "spawn_ai_points_count": "2",
+                    "dynamic_spawner": "slices/ai/bosses/queen/queen_dynamic_spawner_invasion.dynamicslice",
+                    "dynamic_spawner_wave_prefix": "wave",
+                    "ground_attack_trail": "slices/ai/bosses/queen/queen_trail_dynamic.dynamicslice"
+                }
+            },
+            "microbehaviors":
+            [
+                {
+                    "name":"evading_move_by_damage",
+                    "params":
+                    {
+                        "damage": "80",
+                        "damage_time": "1",
+                        "count":"2",
+                        "reset_time":"8",
+                        "delay_min":"3",
+                        "delay_max":"12",
+                        "anim_duration": "1.0",
+                        "move_distance": "8.0"
+                    }
+                }
+            ],
+            "target_selection":
+            {
+                "tag_weights": { "breakable": -50 },
+                "weights": { "attention_max_duration": -25 },
+                "thresholds": { "attention_max_duration": 15, "attention_restore_cooldown": 10 }
+            },
+            "speed":
+            {
+                "sprint": 18,
+                "run": 12,
+                "walk": 10,
+                "strafe": 12,
+                "back": 12,
+                "crouch": 2,
+                "fire": 2
+            }
+        }
+    ]
+}

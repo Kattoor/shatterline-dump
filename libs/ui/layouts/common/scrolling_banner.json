@@ -1,0 +1,14 @@
+{
+    "script": "scripts/ui/common/scrolling_banner.lua",
+    "view_path": "ScrollingBanner.html",
+    "children":
+    [
+        {"name": "wrapper", "type": "Component", "view_path": "wrapper"},
+        {"name": "container", "type": "Component", "view_path": "wrapper.content.container"},
+        {"name": "title", "type": "Label", "view_path": "wrapper.bottomContainer.itemTitle"},
+        {"name": "hint", "type": "ActionLabel", "view_path": "wrapper.bottomContainer.hint", "gamepad_only": true},
+        {"name": "marker", "type": "Component", "view_path": "wrapper.markerWrapper", "visible": false},
+        {"name": "marker_label", "type": "Label", "view_path": "wrapper.markerWrapper.markerLabel"}
+        
+    ]
+}

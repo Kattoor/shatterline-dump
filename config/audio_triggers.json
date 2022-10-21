@@ -1,0 +1,23 @@
+{
+    "presets":
+    {
+        "pvp" :
+        {
+            "OnPostRoundStart" : "",
+            "OnSessionFinish" : "pvp_match_end",
+            "OnReplayStart": "replay_music",
+            "OnReplayFinish": "",
+            "OnResultScreenStart": "result_screen_music",
+            "OnResultScreenFinish": "result_screen_music_stop",
+        },
+        "horde" :
+        {
+            "OnPostRoundStart" : "",
+            "OnSessionFinish" : "horde_match_end",
+            "OnReplayStart": "",
+            "OnReplayFinish": "",
+            "OnResultScreenStart": "result_screen_music",
+            "OnResultScreenFinish": "result_screen_music_stop",
+        }
+    }
+}

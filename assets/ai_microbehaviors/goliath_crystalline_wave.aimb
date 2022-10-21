@@ -1,0 +1,126 @@
+
+{
+    "microbehaviors":
+    [
+        {
+            "name": "GoliathCrystallineWave",
+            "conditions":
+            [
+                {
+                    "template": "TargetExistAndVisible"
+                },
+                {
+                    "template": "Range",
+                    "params":
+                    {
+                        "to": "target",
+                        "min": "#min_range",
+                        "max": "#max_range"
+                    }
+                },
+                {
+                    "template": "AngleTo",
+                    "params":
+                    {
+                        "to": "target",
+                        "angle": "10"
+                    }
+                },
+                {
+                    "template": "IsAGParam",
+                    "inverse": true,
+                    "params":
+                    {
+                        "name": "out_attack_active"
+                    }
+                },
+                {
+                    "template": "IsBehaviorCondition",
+                    "inverse": true,
+                    "params":
+                    {
+                        "name": "Wounded"
+                    }
+                },
+                {
+                    "template": "IsBehaviorCondition",
+                    "inverse": true,
+                    "params":
+                    {
+                        "name": "Blinded"
+                    }
+                },
+                {
+                    "template": "AttackInProgress",
+                    "inverse": true
+                },
+                {
+                    "template":"FrequencyLimit",
+                    "origin":"source",
+                    "params":
+                    {
+                        "name":"GoliathCrystallineWaveGlobal",
+                        "delay_min":"#local_wave_cd_min",
+                        "delay_max":"#local_wave_cd_max"
+                    }
+                },
+                {
+                    "template":"FrequencyLimit",
+                    "origin":"source",
+                    "params":
+                    {
+                        "name":"GoliathLocal",
+                        "delay_min":"#shared_local_cooldown_min",
+                        "delay_max":"#shared_local_cooldown_max"
+                    }
+                },
+                {
+                    "template":"FrequencyLimit",
+                    "origin":"global",
+                    "params":
+                    {
+                        "name":"GoliathCrystallineWaveGlobal",
+                        "delay_min":"#global_wave_cd_min",
+                        "delay_max":"#global_wave_cd_max"
+                    }
+                },
+                {
+                    "template":"FrequencyLimit",
+                    "origin":"global",
+                    "params":
+                    {
+                        "name":"GoliathGlobal",
+                        "delay_min":"#shared_global_cooldown_min",
+                        "delay_max":"#shared_global_cooldown_max"
+                    }
+                }
+            ],
+            "actions":
+            [
+                {
+                    "template": "RunMicrobehavior",
+                    "params":
+                    {
+                        "name": "ActivateScript",
+                        "script_event_enter": "GoliathCrystallineWave",
+                        "script_event_exit": "GoliathCrystallineWave_Exit",
+                        "complete_condition": "GoliathCrystallineWave_Complete"
+                    }
+                }
+            ],
+            "default_params":
+            {
+                "min_range": "5",
+                "max_range": "9",
+                "local_wave_cd_min": "10.0",
+                "local_wave_cd_max": "12.0",
+                "shared_local_cooldown_min": "6.0",
+                "shared_local_cooldown_max": "6.0",
+                "global_wave_cd_min": "8.0",
+                "global_wave_cd_max": "10.0",
+                "shared_global_cooldown_min": "3.0",
+                "shared_global_cooldown_max": "3.0"
+            }
+        }
+    ]
+}

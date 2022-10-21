@@ -1,0 +1,15 @@
+{
+    "script": "scripts/ui/options/options_keyboard_mouse.lua",
+    "view_path": "OptionsList.html",
+    "send_stats": true,
+    "children":
+    [
+        {"name": "grid", "type": "Component", "view_path": "wrapper.container.optionsListGrid"},
+        {"name": "container", "type": "Component", "view_path": "wrapper.container.optionsListGrid.container.content"},
+        {"name": "scroll", "type": "Component", "view_path": "wrapper.container.optionsListGrid.sliderWrapper"},
+
+        {"name": "info_title", "type": "Label", "view_path": "wrapper.container.parameterInfo.title", "visible": false},
+        {"name": "info_image", "type": "Image", "view_path": "wrapper.container.parameterInfo.image", "visible": false},
+        {"name": "info_description", "type": "Label", "view_path": "wrapper.container.parameterInfo.description", "visible": false}
+    ]
+}

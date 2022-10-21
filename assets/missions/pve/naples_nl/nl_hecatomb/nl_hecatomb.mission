@@ -1,0 +1,198 @@
+{
+  "metagame_info": {
+    "name_token": "@nl_hecatomb_label",
+    "mission": "nl_hecatomb",
+    "game_type": "pve",
+    "voice_chat_mode": "team_and_party",
+    "min_players_count": 3,
+    "time_to_join_sec": 24000,
+    "reconnect_enable": true
+  },
+  "session_info": {
+    "level": "pve/naples_nl/nl_hecatomb",
+    "mission_modifiers": [
+      "ai_director",
+      "normal_ai_spawn_modifier",
+      "pve_pushback",
+      "task_custom_event_sender"
+    ],
+    "game_mode": "pve",
+    "result_scene": "levels/pve/naples_nl/nl_hecatomb/slices/result_stage_hecatomb/result_stage_hecatomb.dynamicslice"
+  },
+  "game_vo_info": {
+    "game_vo": "hecatomb_commentary.game_vo",
+    "ignore_default_vo": false
+  },
+  "ui_info": {
+    "background_image": "loading_hecatomb",
+    "sound_event": "hecatomb_loading"
+  },
+  "reward_info": {
+    "reward_calculators": [
+      {
+        "name": "pve_session_outcome",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "win": 200,
+              "draw": 50,
+              "loss": 25
+            }
+          },
+          {
+             "type": "season_xp",
+             "values": {
+             "win": 30,
+              "draw": 20,
+              "loss": 15
+            }
+          },
+          {
+            "type": "xp",
+            "values": {
+              "win": 1600,
+              "draw": 500,
+              "loss": 200
+            }
+          },
+          {
+            "type": "skill",
+            "values": {
+              "win": 1,
+              "draw": 0,
+              "loss": -1
+            }
+          }
+        ]
+      },
+      {
+        "name": "session_score",
+        "score": "Time",
+        "configs": [
+          {
+            "type": "season_xp",
+            "name": "",
+            "range_based": true,
+            "cumulative": true,
+            "values": {
+              "60": 5,
+              "120": 5,
+              "180": 5,
+              "240": 5,
+              "300": 5,
+              "360": 5,
+              "420": 5,
+              "480": 5,
+              "540": 5,
+              "600": 5,
+              "660": 5,
+              "720": 5,
+              "780": 5,
+              "840": 5,
+              "900": 5,
+              "960": 5,
+              "1020": 5,
+              "1080": 5,
+              "1140": 5,
+              "1200": 5,
+              "1260": 5,
+              "1320": 5,
+              "1380": 5,
+              "1440": 5,
+              "1500": 5,
+              "1560": 5,
+              "1620": 5,
+              "1680": 5,
+              "1740": 5,
+              "1800": 5
+            }
+          }
+        ]
+      },
+      {
+        "name": "session_score",
+        "score": "Kill",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "reward": 0,
+              "max_reward": 1
+            }
+          },
+          {
+            "type": "xp",
+            "values": {
+              "reward": 3,
+              "max_reward": 600
+            }
+          }
+        ]
+      }
+    ],
+    "weapon_score": [
+      {
+        "event": {
+          "event_id": "Kill",
+          "target_ai_archetype_is_not": []
+        },
+        "score": 75
+      },
+      {
+        "event": {
+          "event_id": "Headshot"
+        },
+        "score": 30
+      },
+      {
+        "event": {
+          "event_id": "WeaponTick"
+        },
+        "score": 12
+      },
+      {
+        "event": {
+          "event_id": "Assist"
+        },
+        "score": 60
+      }
+    ],
+    "hero_score": [
+      {
+        "event": {
+          "event_id": "Kill",
+          "target_ai_archetype_is_not": []
+        },
+        "score": 75
+      },
+      {
+        "event": {
+          "event_id": "Assist"
+        },
+        "score": 50
+      },
+      {
+        "event": {
+          "event_id": "Heal",
+          "target_team": "Same"
+        },
+        "score": 1
+      },
+      {
+        "event": {
+          "event_id": "Resurrect"
+        },
+        "score": 100
+      },
+      {
+        "event": {
+          "event_id": "WeaponTick"
+        },
+        "score": 10
+      }
+    ]
+  }
+}

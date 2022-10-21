@@ -1,0 +1,14 @@
+{
+    "script": "scripts/ui/lobby/weapon_customization/weapon_customization_hint.lua",
+    "view_path": "Component.html",
+    "children": 
+    [
+        {"name": "buttons_container", "type": "Component", "view_path": "container.controlContainer"},
+
+        {"name": "button_1", "type": "Button", "view_path": "container.controlContainer.button1"},
+        {"name": "button_1_hint", "type": "ActionLabel", "view_path": "container.controlContainer.button1.wrapper.key", "action_name": "nav_enter", "gamepad_only": true},
+
+        {"name": "button_2", "type": "Button", "view_path": "container.controlContainer.button2"},
+        {"name": "button_2_hint", "type": "ActionLabel", "view_path": "container.controlContainer.button2.wrapper.key", "gamepad_only": true}
+    ]
+}

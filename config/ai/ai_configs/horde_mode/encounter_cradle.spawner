@@ -1,0 +1,92 @@
+{
+    "waves": [
+        {
+            "name": "strafers_1",
+            "totalLimit": 15,
+            "count": 0,
+            "groupCount": 1,
+            "spawnDelay": 0.0,
+            "filterTag": "strafer_drop_pod",
+            "tagsToAdd": [ ],
+            "competitor": "Strafer",
+            "agents": [
+                {
+                    "tags": [ "(1) Strafer: SHG" ],
+                    "probability": 100,
+                    "count": 5,
+                    "groupCount": 1,
+                    "agentLimit": 0,
+                    "spawnDelay": 1.0
+                },
+                {
+                    "tags": [ "(1) Strafer: SMG" ],
+                    "probability": 100,
+                    "count": 4,
+                    "groupCount": 1,
+                    "agentLimit": 0,
+                    "spawnDelay": 1.0
+                }
+            ]
+        },
+        {
+            "name": "mino_sphere",
+            "totalLimit": 1,
+            "count": 0,
+            "groupCount": 1,
+            "spawnDelay": 0.0,
+            "filterTag": "mino_sphere",
+            "tagsToAdd": [ ],
+            "competitor": "Strafer",
+            "agents": [
+                {
+                    "tags": [ "prototype_strafer_goliath" ],
+                    "probability": 100,
+                    "count": 1,
+                    "groupCount": 1,
+                    "agentLimit": 0,
+                    "spawnDelay": 0.0
+                }
+            ]
+        },
+        {
+            "name": "turrets",
+            "totalLimit": 6,
+            "count": 0,
+            "groupCount": 1,
+            "spawnDelay": 0.0,
+            "filterTag": "turrets",
+            "tagsToAdd": [ ],
+            "competitor": "Strafer",
+            "agents": [
+                {
+                    "tags": [ "(1) Strafer: Turret" ],
+                    "probability": 100,
+                    "count": 6,
+                    "groupCount": 1,
+                    "agentLimit": 0,
+                    "spawnDelay": 0.0
+                }
+            ]
+        },
+        {
+            "name": "bomb_spawner",
+            "totalLimit": 5,
+            "count": 0,
+            "groupCount": 1,
+            "spawnDelay": 0.0,
+            "filterTag": "cradle_bombs",
+            "tagsToAdd": [ ],
+            "competitor": "Strafer",
+            "agents": [
+                {
+                    "tags": [ "(1) Strafer: Bomb Drone" ],
+                    "probability": 100,
+                    "count": 2,
+                    "groupCount": 1,
+                    "agentLimit": 0,
+                    "spawnDelay": 0.0
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,117 @@
+{
+    "voice_events":
+    [
+        {
+            "audio_trigger": "pve_stormb_hero2_02",
+            "event": [ { "event_id": "central_cant_hear", "actor_team": "Same" } ],
+            "team_only": true,
+            "commentator": {"actor": "ActorTeammate"},
+            "ignore_commentator_cooldown": true,
+            "event_priority": 10,
+            "on_finish_event": {
+              "event_name": "pve_stormb_phillips_response",
+              "delay": 3
+            }
+        },
+        {
+            "audio_trigger": "pve_stormb_hero1_03",
+            "event": [ { "event_id": "who_is_this_guy", "actor_team": "Same" } ],
+            "team_only": true,
+            "commentator": {"actor": "ActorTeammate"},
+            "ignore_commentator_cooldown": true,
+            "event_priority": 10,
+            "on_finish_event": {
+              "event_name": "looks_like_a_strafer",
+              "delay": 2
+            }
+        },
+        {
+            "audio_trigger": "pve_stormb_hero2_03",
+            "event": [ { "event_id": "looks_like_a_strafer", "actor_team": "Same" } ],
+            "team_only": true,
+            "commentator": {"actor": "ActorTeammate"},
+            "ignore_commentator_cooldown": true,
+            "event_priority": 10,
+            "on_finish_event": {
+              "event_name": "why_listen_to_him",
+              "delay": 3
+            }
+        },
+        {
+            "audio_trigger": "pve_stormb_hero1_04",
+            "event": [ { "event_id": "why_listen_to_him", "actor_team": "Same" } ],
+            "team_only": true,
+            "commentator": {"actor": "Target"},
+            "ignore_commentator_cooldown": true,
+            "event_priority": 10,
+            "on_finish_event": {
+              "event_name": "better_than_dying",
+              "delay": 3
+            }
+        },
+        {
+            "audio_trigger": "pve_stormb_hero2_04",
+            "event": [ { "event_id": "better_than_dying", "actor_team": "Same" } ],
+            "team_only": true,
+            "commentator": {"actor": "ActorTeammate"},
+            "ignore_commentator_cooldown": true,
+            "event_priority": 10
+        },
+        {
+            "audio_trigger": "pve_stormb_hero1_05",
+            "event": [ { "event_id": "anonymous_source", "actor_team": "Same" } ],
+            "team_only": true,
+            "commentator": {"actor": "ActorTeammate"},
+            "ignore_commentator_cooldown": true,
+            "event_priority": 10,
+            "on_finish_event": {
+              "event_name": "pve_stormb_reach_lab_2",
+              "delay": 3
+            }
+        },
+        {
+            "audio_trigger": "pve_stormb_hero2_05",
+            "event": [ { "event_id": "what_you_need", "actor_team": "Same" } ],
+            "team_only": true,
+            "commentator": {"actor": "ActorTeammate"},
+            "ignore_commentator_cooldown": true,
+            "event_priority": 10,
+            "on_finish_event": {
+              "event_name": "pve_stormb_reach_lab_3",
+              "delay": 3
+            }
+        },
+        {
+            "audio_trigger": "pve_stormb_hero1_06",
+            "event": [ { "event_id": "its_brandon_phillips", "actor_team": "Same" } ],
+            "team_only": true,
+            "ignore_commentator_cooldown": true,
+            "event_priority": 10,
+            "commentator": {"actor": "ActorTeammate"},
+            "on_finish_event": {
+              "event_name": "no_he_died",
+              "delay": 5
+            }
+        },
+        {
+            "audio_trigger": "pve_stormb_hero2_06",
+            "event": [ { "event_id": "no_he_died", "actor_team": "Same" } ],
+            "team_only": true,
+            "commentator": {"actor": "ActorTeammate"},
+            "ignore_commentator_cooldown": true,
+            "event_priority": 10,
+            "on_finish_event": {
+              "event_name": "no_its_him",
+              "delay": 4
+            }
+        },
+        {
+            "audio_trigger": "pve_stormb_hero1_07",
+            "event": [ { "event_id": "no_its_him", "actor_team": "Same" } ],
+            "team_only": true,
+            "commentator": {"actor": "Target"},
+            "ignore_commentator_cooldown": true,
+            "event_priority": 10
+        }
+    ]
+}

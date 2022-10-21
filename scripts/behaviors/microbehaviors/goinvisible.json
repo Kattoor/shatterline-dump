@@ -1,0 +1,168 @@
+{
+    "name": "Microbehaviors/GoInvisible",
+    "root": "1c140e26-f8a7-4d38-adde-52e12381d1a9",
+    "nodes": {
+        "e532707b-ba79-4381-9307-f17466f94576": {
+            "name": "Wait",
+            "pos": {
+                "x": 210,
+                "y": 475
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Float",
+                    "value": "0.1"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "4820cb5f-98ef-48c8-9ea1-acbedfb5ad60": {
+            "name": "Sequence",
+            "pos": {
+                "x": -10,
+                "y": 556
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "69d4c71c-bf49-4933-b21b-a9d52216c3de"
+            ]
+        },
+        "d78821ef-e299-4f8c-b4db-e4908a26c7e6": {
+            "name": "Sequence",
+            "pos": {
+                "x": -10,
+                "y": 357
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "3569c527-b639-400a-833f-32fe0aca8ec5",
+                "ce6c6598-5050-4e40-8716-53a597631825",
+                "e532707b-ba79-4381-9307-f17466f94576"
+            ]
+        },
+        "3569c527-b639-400a-833f-32fe0aca8ec5": {
+            "name": "Wait",
+            "pos": {
+                "x": -215,
+                "y": 472
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Float",
+                    "value": "0.1"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "ac756a1c-7858-4ac2-bce7-99be5785c791": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": -10,
+                "y": 236
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "DeployCover"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "d78821ef-e299-4f8c-b4db-e4908a26c7e6"
+        },
+        "69d4c71c-bf49-4933-b21b-a9d52216c3de": {
+            "name": "SpawnSliceEntityTransform",
+            "pos": {
+                "x": -215,
+                "y": 668
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Slice",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Microbehaviors",
+                        "Params",
+                        "invisibility_slice"
+                    ]
+                },
+                {
+                    "name": "EntityTransform",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "EntityOwner",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "lifetime",
+                    "type": "Float",
+                    "value": "0"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "ce6c6598-5050-4e40-8716-53a597631825": {
+            "name": "DisableMovementAndRestoreOnExit",
+            "pos": {
+                "x": -10,
+                "y": 475
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "4820cb5f-98ef-48c8-9ea1-acbedfb5ad60"
+        },
+        "1c140e26-f8a7-4d38-adde-52e12381d1a9": {
+            "name": "ResetCurrentMicrobehaviorOnExit",
+            "pos": {
+                "x": -10,
+                "y": 111
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "ac756a1c-7858-4ac2-bce7-99be5785c791"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

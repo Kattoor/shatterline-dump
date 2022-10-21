@@ -1,0 +1,20 @@
+{
+    "script": "scripts/ui/test_navigation_page.lua",
+    "view_path": "TestNavigation.html",
+    "children":
+    [
+        {"name": "category_container", "type": "Component", "view_path": "navContainer"},
+        {"name": "elements", "type": "Component", "view_path": "elements"},
+        
+        {"name": "grid", "type": "Component", "view_path": "elements.gridContainer.grid"},
+        {"name": "grid_container", "type": "Component", "view_path": "elements.gridContainer.grid.container"},
+
+        {"name": "static_container", "type": "Component", "view_path": "elements.static.container"},
+        {"name": "static_btn", "type": "Button", "view_path": "elements.static.container.TestNavigationButton"},
+        {"name": "static_slider", "type": "Slider", "view_path": "elements.static.container.TestNavigationSlider"},
+        {"name": "static_editbox", "type": "EditBox", "view_path": "elements.static.container.labels.TestNavigationEditbox"},
+        {"name": "static_product_1", "type": "Component", "view_path": "elements.static.container.TestNavigationProduct1", "file": "test_navigation_product.json"},
+        {"name": "static_product_2", "type": "Component", "view_path": "elements.static.container.TestNavigationProduct2", "file": "test_navigation_product.json"},
+        {"name": "static_product_3", "type": "Component", "view_path": "elements.static.container.TestNavigationProduct3", "file": "test_navigation_product.json"}
+    ]
+}

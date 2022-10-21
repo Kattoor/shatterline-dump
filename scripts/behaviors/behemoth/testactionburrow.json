@@ -1,0 +1,375 @@
+{
+    "name": "Behemoth/TestActionBurrow",
+    "root": "a403a9d3-59a6-41fd-8006-3be41eb430a1",
+    "nodes": {
+        "4f26214f-e3c4-4038-a715-3f9a251be50b": {
+            "name": "ScriptEventGate",
+            "pos": {
+                "x": 0,
+                "y": 439
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EnterEvent",
+                    "type": "StringHash",
+                    "value": "WantHideWeakpoints"
+                },
+                {
+                    "name": "ExitEvent",
+                    "type": "StringHash",
+                    "value": "WantShowWeakpoints"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "f7347027-9d86-4fa6-8882-7bbee4272dec"
+        },
+        "a73a61c2-f6c7-4d58-be0c-f0019ece5138": {
+            "name": "Sequence",
+            "pos": {
+                "x": 225,
+                "y": 919
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "b8546afa-52c9-40c2-a3ea-e01c376a67e5",
+                "aab1e988-351d-4d78-ab89-d64d568b960e",
+                "527b925f-c1b2-46e5-9b2c-1071760f6e5b"
+            ]
+        },
+        "b8546afa-52c9-40c2-a3ea-e01c376a67e5": {
+            "name": "SetBehaviorCondition",
+            "pos": {
+                "x": 50,
+                "y": 1054
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "BurrowComplete"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "3f62858e-b139-430b-bed5-d3dd4526efe1": {
+            "name": "LogGate",
+            "pos": {
+                "x": 0,
+                "y": 242
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "CVar",
+                    "type": "StringHash",
+                    "value": ""
+                },
+                {
+                    "name": "OnEnter",
+                    "type": "StringHash",
+                    "value": "ActionTest: Burrow started"
+                },
+                {
+                    "name": "OnExit",
+                    "type": "StringHash",
+                    "value": "ActionTest: Burrow finished"
+                },
+                {
+                    "name": "Attribute1",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                },
+                {
+                    "name": "Attribute2",
+                    "type": "Variable",
+                    "value": [
+                        ""
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "4f26214f-e3c4-4038-a715-3f9a251be50b"
+        },
+        "f7347027-9d86-4fa6-8882-7bbee4272dec": {
+            "name": "ScriptEventGate",
+            "pos": {
+                "x": 0,
+                "y": 592
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EnterEvent",
+                    "type": "StringHash",
+                    "value": "EnterMeleePhase"
+                },
+                {
+                    "name": "ExitEvent",
+                    "type": "StringHash",
+                    "value": "ExitMeleePhase"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "45d6b328-eca1-4e30-8a98-3138baa95d0c"
+        },
+        "9d952ffd-4a26-4222-bd69-b631d078a442": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": -285,
+                "y": 1011
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "MeleeRageAnimFinished"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "a281ef87-7bae-4561-94ae-118f75b78d6c"
+        },
+        "a281ef87-7bae-4561-94ae-118f75b78d6c": {
+            "name": "IsBehaviorCondition",
+            "pos": {
+                "x": -285,
+                "y": 1140
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "MeleeRageAnimFinished"
+                },
+                {
+                    "name": "ResetOnExit",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "a40d87a6-1849-4982-a53a-012d26ea2ac0"
+        },
+        "a403a9d3-59a6-41fd-8006-3be41eb430a1": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 95
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ActionTest"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "3f62858e-b139-430b-bed5-d3dd4526efe1"
+        },
+        "527b925f-c1b2-46e5-9b2c-1071760f6e5b": {
+            "name": "IsBehaviorCondition",
+            "pos": {
+                "x": 425,
+                "y": 1055
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "BurrowComplete"
+                },
+                {
+                    "name": "ResetOnExit",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "WaitFor"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "6a32435b-e9d7-433a-b98a-dd6c06e3fd24"
+        },
+        "3e3fdeed-41c5-4793-b438-61590778585e": {
+            "name": "SetBehaviorCondition",
+            "pos": {
+                "x": -550,
+                "y": 1006
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "MeleeRageAnimFinished"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "5cc50b0c-b845-4207-8f21-cc77a942bafb": {
+            "name": "Sequence",
+            "pos": {
+                "x": -285,
+                "y": 909
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "3e3fdeed-41c5-4793-b438-61590778585e",
+                "9d952ffd-4a26-4222-bd69-b631d078a442"
+            ]
+        },
+        "a40d87a6-1849-4982-a53a-012d26ea2ac0": {
+            "name": "Success",
+            "pos": {
+                "x": -285,
+                "y": 1329
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "aab1e988-351d-4d78-ab89-d64d568b960e": {
+            "name": "SendEventToScript",
+            "pos": {
+                "x": 225,
+                "y": 1057
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EventName",
+                    "type": "StringHash",
+                    "value": "Burrow"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "6a32435b-e9d7-433a-b98a-dd6c06e3fd24": {
+            "name": "SetBehaviorCondition",
+            "pos": {
+                "x": 425,
+                "y": 1238
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "BurrowComplete"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "45d6b328-eca1-4e30-8a98-3138baa95d0c": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 740
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "5cc50b0c-b845-4207-8f21-cc77a942bafb",
+                "a73a61c2-f6c7-4d58-be0c-f0019ece5138"
+            ]
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

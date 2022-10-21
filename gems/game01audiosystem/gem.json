@@ -1,0 +1,26 @@
+{
+    "GemFormatVersion": 3,
+    "Uuid": "3935319725ff4f7b957ad1516afcd1fe",
+    "Name": "Game01AudioSystem",
+    "DisplayName": "Game01AudioSystem",
+    "Version": "0.1.0",
+    "Summary": "FragLab specific audio components.",
+    "Tags": ["Audio"],
+    "LinkType": "Dynamic",
+    "IconPath": "preview.png",
+    "EditorModule": true,
+    "Dependencies": [
+        {
+            "Uuid": "ff06785f7145416b9d46fde39098cb0c",
+            "VersionConstraints": [
+                "~>0.1"
+            ],
+            "_comment": "LmbrCentral"
+        },
+        {
+            "Uuid": "6f63f2b6d07f4b89b4b7c86ebee7feb8",
+            "VersionConstraints": [">=0.1.0"],
+            "_comment": "AudioSystem"
+        }
+    ]
+}

@@ -1,0 +1,60 @@
+
+{
+    "microbehaviors": [
+        {
+            "name": "SpawnAIProjectile",
+            "conditions": [
+
+                {
+                    "template": "IsBehaviorCondition",
+                    "origin": "source",
+                    "params":
+                    {
+                        "name": "PositionTaken"
+                    }
+                },
+                {
+                    "template": "FrequencyLimit",
+                    "origin": "source",
+                    "params":
+                    {
+                        "name": "#source_limit_name",
+                        "count": "#source_counter",
+                        "time": "#source_reset_time",
+                        "delay_min": "#source_delay_min",
+                        "delay_max": "#source_delay_max"
+                    }
+                }
+            ],
+            "actions": [
+                {
+                    "template": "StopBehavior"
+                },
+                {
+                    "template": "RunMicrobehavior",
+                    "params":
+                    {
+                        "name": "SpawnAIProjectile",
+                        "slice": "#slice_name",
+                        "lifetime": "#slice_lifetime",
+                        "animation_to_play": "#animation_to_play",
+                        "forbidden_range": "#forbidden_range"
+                    }
+                }
+            ],
+
+            "default_params":
+            {
+                "slice_name": "ai/bomb_drone_launcher",
+                "slice_lifetime": "2",
+                "forbidden_range": "10",
+                "animation_to_play": "stand_blinded_02_in",
+                "source_limit_name": "SpawnSlice",
+                "source_counter": "1",
+                "source_reset_time": "1",
+                "source_delay_min": "7",
+                "source_delay_max": "7"
+            }
+        }
+    ]
+}

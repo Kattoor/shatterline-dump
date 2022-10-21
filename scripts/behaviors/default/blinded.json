@@ -1,0 +1,87 @@
+{
+    "name": "Default/Blinded",
+    "root": "732e1499-80bd-4857-a0b2-8cba5eb0d9a8",
+    "nodes": {
+        "08ed8dc8-f842-4717-aabb-128b15e10474": {
+            "name": "EnterBlindState",
+            "pos": {
+                "x": 0,
+                "y": 401
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Duration",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "ConditionVariables",
+                        "BlindDuration"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "732e1499-80bd-4857-a0b2-8cba5eb0d9a8": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 88
+            },
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Blinded"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "5888f887-af19-4721-97a1-2201f7410a47"
+        },
+        "5888f887-af19-4721-97a1-2201f7410a47": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 190
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Blinded"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "0fbb753c-5b0e-4f79-a3ff-293e94649b64"
+        },
+        "0fbb753c-5b0e-4f79-a3ff-293e94649b64": {
+            "name": "StopFireAndRestoreOnExit",
+            "pos": {
+                "x": 0,
+                "y": 312
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "08ed8dc8-f842-4717-aabb-128b15e10474"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

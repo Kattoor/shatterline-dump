@@ -1,0 +1,27 @@
+{
+    "name": "burn_horde",
+    "remove_on_death": true,
+    "duration": 15.0,
+    "effects": [
+        { 
+            "bleed": 
+            { 
+                "threshold": 1,
+                "hp_decrease_per_time_interval": 1.0,
+                "time_interval": 0.2,
+                "screen_effect_intensity_param": "Game01Blood",
+                "screen_effect_intensity_value": 1.0,
+                "screen_effect_fade_out_time": 1
+            }
+        },
+        {
+            "spawn_personal_slice":
+            {
+                "slice_name": "slices/ai/feedback/incendiary_ammo_fp_feedback.dynamicslice",
+                "position": [0, 0, 0],
+                "attach_to_fp": true,
+                "attach_to_tp": false
+            }
+        }
+    ]
+}

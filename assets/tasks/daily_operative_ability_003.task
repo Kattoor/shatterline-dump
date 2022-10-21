@@ -1,0 +1,35 @@
+{
+  "name": "daily_operative_ability_003",
+  "type": "daily",
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "rare",
+  "display_name": { "localization_key": "@daily_operative_ability_003_name" },
+  "description": { "localization_key": "@daily_operative_ability_003_description" },
+  "conditions": [
+    {
+      "name": "daily_operative_ability_003",
+      "event_description": { "localization_key": "@daily_operative_ability_003_event_description" },
+      "event": { "event_id": "Kill", "actor_is_me": true, "actor_item_tag_is": ["CM"], "actor_player_preset_is":["s_brisa"], "target_player_class_is": ["A", "M", "H", "S"]},
+      "progress": 5
+    }
+  ],
+  
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 300
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 250
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 5
+    }
+  ]
+}

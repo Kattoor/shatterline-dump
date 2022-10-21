@@ -1,0 +1,19 @@
+{
+    "script": "scripts/ui/lobby/weapon_customization/weapon_customization_block.lua",
+    "view_path": "Component.html",
+    "children": 
+    [
+        {"name": "title_1", "type": "Label", "view_path": "header.headerSlot1.title"},
+        {"name": "recent_icon_1", "type": "Component", "view_path": "header.headerSlot1.recentIcon", "visible": true},
+        {"name": "title_2", "type": "Label", "view_path": "header.headerSlot2.title"},
+        {"name": "recent_icon_2", "type": "Component", "view_path": "header.headerSlot2.recentIcon", "visible": false},
+        {"name": "title_3", "type": "Label", "view_path": "header.headerSlot3.title"},
+        {"name": "recent_icon_3", "type": "Component", "view_path": "header.headerSlot3.recentIcon", "visible": true},
+        {"name": "title_4", "type": "Label", "view_path": "header.headerSlot4.title"},
+        {"name": "recent_icon_4", "type": "Component", "view_path": "header.headerSlot4.recentIcon", "visible": false},
+        {"name": "title_5", "type": "Label", "view_path": "header.headerSlot5.title"},
+        {"name": "recent_icon_5", "type": "Component", "view_path": "header.headerSlot5.recentIcon", "visible": true},
+        {"name": "list", "type": "WeaponCustomizationItemsGrid", "view_path": "slotsList"},
+        {"name": "list_container", "type": "Control", "view_path": "slotsList.container"}
+    ]
+}

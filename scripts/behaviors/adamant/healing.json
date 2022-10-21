@@ -1,0 +1,568 @@
+{
+    "name": "Adamant/Healing",
+    "root": "0a91720b-3b47-4a6b-81d0-a2222503b9ae",
+    "nodes": {
+        "a9aa4606-bb4b-4526-bb02-6fe8ae57d72a": {
+            "name": "Sequence",
+            "pos": {
+                "x": 895,
+                "y": 792
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "da41cc76-ee8e-473a-b078-039dffe9b5bc",
+                "2066e248-19c9-4e14-9fd9-89123e69e248"
+            ]
+        },
+        "da41cc76-ee8e-473a-b078-039dffe9b5bc": {
+            "name": "StartTimer",
+            "pos": {
+                "x": 705,
+                "y": 926
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "TimerName",
+                    "type": "StringHash",
+                    "value": "Heal"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "261f6453-a1ab-4d16-b6ba-60cc3ce0888a": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 895,
+                "y": 572
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Healing"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "be635e23-e687-4bd6-a65f-060bdc912478"
+        },
+        "06a14f49-f231-4f32-812f-e7ac308d6616": {
+            "name": "Sequence",
+            "pos": {
+                "x": 195,
+                "y": 384
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "ea068315-224c-4551-86b2-4ea3e6514f1a",
+                "261f6453-a1ab-4d16-b6ba-60cc3ce0888a"
+            ]
+        },
+        "0a91720b-3b47-4a6b-81d0-a2222503b9ae": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 99
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Healing"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "a30703c8-7148-4c17-80fb-8dc2abd125f9"
+        },
+        "835da6ec-024a-44dc-95fe-e864bbabf272": {
+            "name": "IsBBValueExist",
+            "pos": {
+                "x": -320,
+                "y": 1180
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ValuePath",
+                    "type": "StringHash",
+                    "value": "Gai.Adamant.DashesLeft"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "922e553e-7cac-455d-ad30-34a9b3910637"
+        },
+        "2066e248-19c9-4e14-9fd9-89123e69e248": {
+            "name": "Heal",
+            "pos": {
+                "x": 1015,
+                "y": 926
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "HP",
+                    "type": "Float",
+                    "value": "0.00"
+                },
+                {
+                    "name": "Rate",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "heal_hp_per_second"
+                    ]
+                },
+                {
+                    "name": "Timeout",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "healing_timeout"
+                    ]
+                },
+                {
+                    "name": "InvulnerabilityDuration",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "healing_invul_duration"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "922e553e-7cac-455d-ad30-34a9b3910637": {
+            "name": "SetBBValueByPath",
+            "pos": {
+                "x": -320,
+                "y": 1368
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "BB Path",
+                    "type": "StringHash",
+                    "value": "Gai.Adamant.DashesLeft"
+                },
+                {
+                    "name": "Value",
+                    "type": "Float",
+                    "value": "0"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "be635e23-e687-4bd6-a65f-060bdc912478": {
+            "name": "ScriptEventGate",
+            "pos": {
+                "x": 895,
+                "y": 668
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "EnterEvent",
+                    "type": "StringHash",
+                    "value": "HealBegin"
+                },
+                {
+                    "name": "ExitEvent",
+                    "type": "StringHash",
+                    "value": "HealEnd"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "a9aa4606-bb4b-4526-bb02-6fe8ae57d72a"
+        },
+        "c6a7c1e2-4283-45e1-b36a-3c4005e50cee": {
+            "name": "MoveDashedTo",
+            "pos": {
+                "x": 130,
+                "y": 1180
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "HealPoint"
+                    ]
+                },
+                {
+                    "name": "DashType",
+                    "type": "StringHash",
+                    "value": "Healing"
+                },
+                {
+                    "name": "RaycastCheck",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "DashStepRangeMin",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "dash_step_min_range"
+                    ]
+                },
+                {
+                    "name": "DashStepRange",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "dash_step_range"
+                    ]
+                },
+                {
+                    "name": "DashStepsCount",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Adamant",
+                        "DashesLeft"
+                    ]
+                },
+                {
+                    "name": "DelayBetweenDashSteps",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "dash_delay_between_steps"
+                    ]
+                },
+                {
+                    "name": "DelayBetweenDashStepsBBPath",
+                    "type": "StringHash",
+                    "value": "Gai.Adamant.NextTimeForDashStep"
+                },
+                {
+                    "name": "DashStepsLeftBBPath",
+                    "type": "StringHash",
+                    "value": "Gai.Adamant.DashesLeft"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "8faf8355-8557-44f6-aded-46ca6f6bd06a": {
+            "name": "ApproachTo",
+            "pos": {
+                "x": 360,
+                "y": 974
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "HealPoint"
+                    ]
+                },
+                {
+                    "name": "EndDistance",
+                    "type": "Float",
+                    "value": "0.00"
+                },
+                {
+                    "name": "UpdateDestinationPoint",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "1e583e37-a512-4611-a045-b548e3249713": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 360,
+                "y": 850
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "MoveBackForHeal"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "8faf8355-8557-44f6-aded-46ca6f6bd06a"
+        },
+        "ea068315-224c-4551-86b2-4ea3e6514f1a": {
+            "name": "Selector",
+            "pos": {
+                "x": 195,
+                "y": 530
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "45eafa0f-3d16-4014-b0ba-1f3c766e5379",
+                "1e583e37-a512-4611-a045-b548e3249713"
+            ]
+        },
+        "a30703c8-7148-4c17-80fb-8dc2abd125f9": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 237
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "91bee15b-e321-457d-aea5-0c10906eb4c8",
+                "aec3cf02-1058-4774-876e-b34b70943f6f",
+                "06a14f49-f231-4f32-812f-e7ac308d6616"
+            ]
+        },
+        "e43cefcb-600f-403c-94b0-809d1d6a04eb": {
+            "name": "Sequence",
+            "pos": {
+                "x": -80,
+                "y": 1001
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "835da6ec-024a-44dc-95fe-e864bbabf272",
+                "c6a7c1e2-4283-45e1-b36a-3c4005e50cee"
+            ]
+        },
+        "22779e7f-3789-4924-b5fb-65a4c60e32d1": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": -20,
+                "y": 850
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "DashBackForHeal"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "e43cefcb-600f-403c-94b0-809d1d6a04eb"
+        },
+        "91bee15b-e321-457d-aea5-0c10906eb4c8": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -315,
+                "y": 386
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "HealPoint"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Position"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "45eafa0f-3d16-4014-b0ba-1f3c766e5379": {
+            "name": "Equals",
+            "pos": {
+                "x": -20,
+                "y": 652
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Lhs",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "use_dash_before_healing"
+                    ]
+                },
+                {
+                    "name": "Rhs",
+                    "type": "Boolean",
+                    "value": "true"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "22779e7f-3789-4924-b5fb-65a4c60e32d1"
+        },
+        "aec3cf02-1058-4774-876e-b34b70943f6f": {
+            "name": "FindPointForFrontBackStep",
+            "pos": {
+                "x": -50,
+                "y": 384
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Target",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "MinDistance",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "heal_move_back_range"
+                    ]
+                },
+                {
+                    "name": "MaxDistance",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "heal_move_back_range"
+                    ]
+                },
+                {
+                    "name": "Forward",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "ResultPosition",
+                    "type": "Variable",
+                    "value": [
+                        "HealPoint"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [
+        {
+            "id": "a82832f8-fb9e-4922-bbeb-feb64288978f",
+            "pos": {
+                "x": -200,
+                "y": -100
+            },
+            "extent": {
+                "x": 400,
+                "y": 200
+            },
+            "text": "Adamant/Healing: [behavior description]",
+            "color": "rgba(150,250,150, 0.4)",
+            "collapseLevel": null
+        }
+    ],
+    "commentOrder": [
+        "a82832f8-fb9e-4922-bbeb-feb64288978f"
+    ]
+}

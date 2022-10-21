@@ -1,0 +1,35 @@
+{
+    "script": "scripts/ui/ingame/scoreboard/scoreboard.lua",
+    "view_path": "Scoreboard.html",
+    "hide_cursor": true,
+    "send_stats": true,
+    "action_map": "scoreboard",
+    
+    "children":
+    [
+        {"name": "title_container", "type": "Label", "view_path": "wrapper.content.titleWrapper"},
+        {"name": "title", "type": "Label", "view_path": "wrapper.content.titleWrapper.title"},
+
+        {"name": "score_block_container", "type": "HUDComponent", "view_path": "wrapper.content.scoreBlockContainer"},
+
+        {"name": "wrapper", "type":"Panel", "view_path": "wrapper"},
+        {"name": "content", "type":"Control", "view_path": "wrapper.content"},
+
+        {"name": "modifiers_container", "type": "Component", "view_path": "wrapper.content.modifiersListContainer", "file": "common/no_cursor_container.json"},
+        {"name": "horde_perks_container", "type": "Component", "view_path": "wrapper.content.hordePerksContainer", "file": "common/no_cursor_container.json"},
+
+        {"name": "mute_all_label", "type": "ActionLabel", "view_path": "wrapper.content.hintsContainer.muteAllLabel.text"},
+        {"name": "mute_all_icon", "type": "Image", "view_path": "wrapper.content.hintsContainer.muteAllLabel.img"},
+        {"name": "icon_unmute", "type":"HUDComponent", "view_path": "wrapper.content.hintsContainer.muteAllLabel.voiceIcon.icon_unmute", "visible": false},
+        {"name": "icon_mute", "type":"HUDComponent", "view_path": "wrapper.content.hintsContainer.muteAllLabel.voiceIcon.icon_mute", "visible": false},
+        {"name": "switch_channel_voice_label", "type": "ActionLabel", "view_path": "wrapper.content.hintsContainer.switchVoiceLabel.text", "text": "@press_key_to_voice_chat_team"},
+
+        {"name": "console_hints_container", "type": "HUDComponent", "view_path": "wrapper.content.hintsContainer.consoleHints", "file": "ingame/scoreboard/scoreboard_console_hints.json"},
+
+        {"name": "toggle_label", "type": "ActionLabel", "view_path": "wrapper.content.hintsContainer.toggleLabel.text"},
+        {"name": "toggle_icon", "type": "Image", "view_path": "wrapper.content.hintsContainer.toggleLabel.img"},
+
+        {"name": "popup_window", "type": "Component", "view_path": "contextMenu", "file": "ingame/scoreboard/scoreboard_popup_window.json", "visible": false},
+        {"name": "close_background", "type": "Panel", "view_path": "closeBackground"}
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "script": "scripts/ui/test_messagebox.lua",
+    "view_path": "",
+    "children": [
+        {"name": "okay_message_btn", "type": "Button", "x": 100, "y": 100, "text": "Test Message"},
+        {"name": "error_message_btn", "type": "Button", "x": 100, "y": 150, "text": "Test Error"},
+        {"name": "exit_message_btn", "type": "Button", "x": 100, "y": 200, "text": "Test exit"},
+
+        { "name": "okay_message", "type": "Component", "file": "modal_window/messagebox_container.json"},
+        { "name": "error_message", "type": "Component", "file": "modal_window/error_message_container.json"},
+        { "name": "exit_message", "type": "Component", "file": "modal_window/messagebox_container.json"}
+    ]
+}

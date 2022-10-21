@@ -1,0 +1,49 @@
+{
+    "name": "party_left",
+    "doc": "Origin:. Emitter: backend. Emitted when player leaves the party",
+    "type": "record",
+    "fields": [
+        {
+            "name": "pid",
+            "type": "long",
+            "default": -1,
+            "doc": "namespace-unique identifier of a player"
+        },
+        {
+            "name": "ts",
+            "type": "string",
+            "default": "-1",
+            "doc": "ISO8601 UTC timestamp of the event invocation"
+        },
+        {
+            "name": "sid",
+            "type": "string",
+            "default": "-1",
+            "doc": "global-unique identifier of the player's login session (time between login and logout)"
+        },
+        {
+            "name": "party_id",
+            "type": "string",
+            "default": "-1",
+            "doc": "global-unique identifier of the party"
+        },
+        {
+            "name": "ns",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace of the server's deployment (realm)"
+        },
+        {
+            "name": "name",
+            "type": "string",
+            "default": "-1",
+            "doc": "unique name of the event"
+        },
+        {
+            "name": "party_leave_reason",
+            "type": "string",
+            "default": "-1",
+            "doc": "categodial reason of leave from party: kicked_by_leader, left, banned, etc."
+        }
+    ]
+}

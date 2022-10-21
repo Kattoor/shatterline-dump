@@ -1,0 +1,14 @@
+{
+    "script": "",
+    "view_path": "WeaponLevelUp.html",
+    "hide_cursor": true,
+    "children":
+    [
+        {"name": "Title", "type": "Label", "view_path": "container.title", "text": "@weapon_level_up"},
+        {"name": "ItemTitle", "type": "Label", "view_path": "container.weaponContainer.weaponTitle"},
+        {"name": "ItemLevel", "type": "Label", "view_path": "container.weaponContainer.weaponLevel"},
+        {"name": "ItemIcon", "type": "Image", "view_path": "container.weaponContainer.weaponImage"},
+        {"name": "AttachmentIcon", "type": "Image", "view_path": "container.unlockContainer.unlockImage"},
+        {"name": "AttachmentTitle", "type": "Label", "view_path": "container.unlockContainer.unlockTitle"}
+    ]
+}

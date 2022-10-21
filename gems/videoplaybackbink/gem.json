@@ -1,0 +1,29 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "9ed3b1dfdb0c4befb9272cc996f0efb0",
+    "Name": "VideoPlaybackBink",
+    "DisplayName": "Video Playback Bink",
+    "Version": "0.1.0",
+    "Summary": "Video Playback provided by the RAD Bink decompressor.",
+    "Tags": [ "Video" ],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        },
+        {
+            "Name": "Editor",
+            "Type": "EditorModule",
+            "Extends": "GameModule"
+        }
+    ],
+    "Dependencies": [
+        {
+            "Uuid": "560d69cbaafd40bea8a09bccfe7f77e6",
+            "VersionConstraints": [
+                "~>0.1"
+            ],
+            "_comment": "VideoPlaybackFramework"
+        }
+    ]
+}

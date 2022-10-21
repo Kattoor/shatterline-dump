@@ -1,0 +1,148 @@
+{
+    "events": [
+        {
+            "name": "pve_insideout_briefing",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_insideout_velasquez_00"}}
+            ]
+        },
+        {
+            "name": "pve_insideout_spawn",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_dark_01", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_insideout_spawn"}}
+            ]
+        },
+        {
+            "name": "pve_insideout_warehose",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_dark_02", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_insideout_reach_warehouse"}}
+            ]
+        },
+        {
+            "name": "pve_insideout_investigate_anomomaly",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_dark_01", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_insideout_investigate_anomomaly"}}
+            ]
+        },
+        {
+            "name": "pve_insideout_collect_anomaly",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_dark_02", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_insideout_collect_anomaly"}}
+            ]
+        },
+        {
+            "name": "pve_insideout_reach_assambler",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_dark_02", "img": "doctor_vickers", "narrator": "@narrator_doctor_vickers"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_dark_02", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_insideout_reach_assambler"}}
+            ]
+        },
+        {
+            "name": "pve_insideout_reach_station",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_dark_01", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_dark_01", "img": "doctor_vickers", "narrator": "@narrator_doctor_vickers"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_dark_01", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_insideout_reach_station"}}
+            ]
+        },
+        {
+            "name": "pve_insideout_open_cave",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_dark_02", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_insideout_open_cave"}}
+            ]
+        },
+        {
+            "name": "pve_insideout_investigate_cave",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_dark_01", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_insideout_investigate_cave"}}
+            ]
+        },
+        {
+            "name": "pve_insideout_detonate_block",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_dark_02", "img": "doctor_vickers", "narrator": "@narrator_doctor_vickers"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_dark_01", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_insideout_detonate_block"}}
+            ]
+        },
+        {
+            "name": "pve_insideout_find_portal_generator",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_dark_02", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_insideout_find_portal_generator"}}
+            ]
+        },
+        {
+            "name": "pve_insideout_defence_generator",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_dark_01", "img": "doctor_vickers", "narrator": "@narrator_doctor_vickers"}},
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_dark_02", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_insideout_defence_generator"}}
+            ]
+        },
+        {
+            "name": "pve_insideout_traverse_portal_area",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_dark_02", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_insideout_traverse_portal_area"}}
+            ]
+        },
+        {
+            "name": "pve_insideout_hack_panel",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_dark_02", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_insideout_hack_panel"}}
+            ]
+        },
+        {
+            "name": "pve_insideout_survive_attack",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_dark_02", "img": "doctor_velasquez", "narrator": "@narrator_doctor_velasquez"}},
+                {"message_objective": {"message": "@obj_insideout_survive_attack"}}
+            ]
+        },
+        {
+            "name": "pve_insideout_enter_portal",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_dark_04", "img": "doctor_vickers", "narrator": "@narrator_doctor_vickers"}},
+                {"message_objective": {"message": "@obj_insideout_enter_portal"}}
+            ]
+        },
+        {
+            "name": "pve_insideout_kill_boss",
+            "actions" : [
+                {"narration_objective": {"trigger_name": "pve_horde_velasquez_dark_01", "img": "doctor_vickers", "narrator": "@narrator_doctor_vickers"}},
+                {"message_objective": {"message": "@obj_insideout_kill_boss"}}
+            ]
+        },
+        {
+            "name": "insideout_anomaly_capturing",
+            "actions" : 
+            [
+                {"message_announcer": {"message": "@insideout_anomaly_capturing", "timeout": 2}}
+            ]
+        },
+        {
+            "name": "insideout_under_attack",
+            "actions" : 
+            [
+                {"message_announcer": {"message": "@insideout_under_attack", "timeout": 2}}
+            ]
+        },
+        {
+            "name": "insideout_is_destroyed",
+            "actions" : 
+            [
+                {"message_announcer": {"message": "@insideout_is_destroyed", "timeout": 3}}
+            ]
+        }
+    ]
+}

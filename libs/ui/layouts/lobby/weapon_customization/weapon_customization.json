@@ -1,0 +1,51 @@
+{
+    "script": "scripts/ui/lobby/weapon_customization/weapon_customization.lua",
+    "view_path": "WeaponCustomization.html",
+    "send_stats": true,
+    "children": 
+    [
+        {"name": "screen_header", "type": "Component", "file": "common/screen_header.json"},
+
+        {"name": "weapon_type_label", "type": "Label", "view_path": "wrapper.header.weaponType.label"},
+        {"name": "weapon_name", "type": "Label", "view_path": "wrapper.header.weaponType.weaponTitle"},
+
+        {"name": "weapon_level_label", "type": "Label", "view_path": "wrapper.header.weaponInfo.levelWrapper.title", "text": "@armory_level"},
+        {"name": "weapon_level", "type": "Label", "view_path": "wrapper.header.weaponInfo.levelWrapper.level"},
+
+        {"name": "progress", "type": "Component", "view_path": "wrapper.header.weaponInfo.progressText", "visible": false},
+        {"name": "current_exp", "type": "Label", "view_path": "wrapper.header.weaponInfo.progressText.currentExp"},
+        {"name": "max_exp", "type": "Label", "view_path": "wrapper.header.weaponInfo.progressText.maxTierExp"},
+        {"name": "progress_bar", "type": "ProgressBar", "view_path": "wrapper.header.weaponInfo.progressWrapper.progressBar"},
+        
+        {"name": "locked", "type": "Label", "view_path": "wrapper.header.weaponInfo.lockedText", "text": "@armory_tier_locked", "visible": false},
+
+        {"name": "description", "type": "Label", "view_path": "wrapper.header.description.label"},
+
+        {"name": "specifications", "type": "Component", "view_path": "wrapper.header.weaponStats.specifications", "file": "lobby/armory/armory_specifications.json"},
+        {"name": "parameters", "type": "Component", "view_path": "wrapper.header.weaponStats.parameters", "file": "lobby/armory/armory_parameters.json"},
+
+        {"name": "slots_list", "type": "WeaponCustomizationItemsGrid", "view_path": "wrapper.header.weaponStats.slots", "visible": false},
+        {"name": "slots_container", "type": "Component", "view_path": "wrapper.header.weaponStats.slots.container"},
+        {"name": "slots_hint_left", "type": "ActionLabel", "view_path": "wrapper.header.weaponStats.slots.keyLeft", "action_name": "tab_prev", "gamepad_only": true},
+        {"name": "slots_hint_right", "type": "ActionLabel", "view_path": "wrapper.header.weaponStats.slots.keyRight", "action_name": "tab_next", "gamepad_only": true},
+
+        {"name": "perks", "type": "Component", "view_path": "wrapper.perks", "file": "common/weapon_perks.json"},
+
+        {"name": "customization_panel", "type": "Control", "view_path": "wrapper.main.customizationPanel"},
+
+        {"name": "modifications", "type": "Component", "view_path": "wrapper.main.customizationPanel.modifications", "file": "lobby/weapon_customization/weapon_customization_block.json"},
+        {"name": "attachments", "type": "Component", "view_path": "wrapper.main.customizationPanel.attachments", "file": "lobby/weapon_customization/weapon_customization_block.json"},
+        {"name": "attachments_lock", "type": "Label", "view_path": "wrapper.main.customizationPanel.attachments.slotsLockMessage", "text": "@locked_attachment_slots_description", "visible": false},
+        {"name": "cosmetics", "type": "Component", "view_path": "wrapper.main.customizationPanel.cosmetics", "file": "lobby/weapon_customization/weapon_customization_cosmetics_block.json"},
+
+        {"name": "items_panel", "type": "Component", "view_path": "wrapper.main.itemsPanel", "visible": false},
+
+        {"name": "modifications_items_panel", "type": "Component", "view_path": "wrapper.main.itemsPanel.modifications", "file": "lobby/weapon_customization/weapon_customization_items_panel.json", "visible": false},
+        {"name": "attachments_items_panel", "type": "Component", "view_path": "wrapper.main.itemsPanel.attachments", "file": "lobby/weapon_customization/weapon_customization_items_panel.json", "visible": false},
+        {"name": "cosmetics_items_panel", "type": "Component", "view_path": "wrapper.main.itemsPanel.cosmetics", "file": "lobby/weapon_customization/weapon_customization_items_panel.json", "visible": false},
+
+        {"name": "hint", "type": "WeaponCustomizationHint", "view_path": "wrapper.hintPanel.hint", "file": "lobby/weapon_customization/weapon_customization_hint.json", "visible": false},
+
+        {"name": "rotation_area", "type": "Panel", "view_path": "wrapper.rotationAreaWrapper.rotationArea"}
+    ]
+}

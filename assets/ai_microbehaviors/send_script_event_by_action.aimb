@@ -1,0 +1,46 @@
+
+{
+   "microbehaviors":
+   [
+      {
+         "name": "SendScriptEventByAttackInProgress",
+         "conditions":
+         [
+            {
+               "template": "FrequencyLimit",
+               "origin": "source",
+               "params":
+               {
+                  "name": "#source_counter_name",
+                  "count": "#source_counter",
+                  "time": "#source_reset_time",
+                  "delay_min": "#source_delay_min",
+                  "delay_max": "#source_delay_max"
+               }
+            },
+            {
+               "template": "AttackInProgress"
+            }
+         ],
+         "actions":
+         [
+            {
+               "template": "SendScriptEvent",
+               "params":
+               {
+                  "name": "#script_event_name"
+               }
+            }
+         ],
+         "default_params":
+         {  
+            "script_event_name": "AIAttackInProgress",
+            "source_counter_name": "SendScriptEventMB",
+            "source_counter": "1",
+            "source_reset_time": "1",
+            "source_delay_min": "0",
+            "source_delay_max": "0"
+         }
+      }
+   ]
+}

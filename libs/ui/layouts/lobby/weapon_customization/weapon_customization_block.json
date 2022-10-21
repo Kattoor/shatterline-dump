@@ -1,0 +1,11 @@
+{
+    "script": "scripts/ui/lobby/weapon_customization/weapon_customization_block.lua",
+    "view_path": "Component.html",
+    "children": 
+    [
+        {"name": "title", "type": "Label", "view_path": "header.headerSlot1.title", "text": "@item_modifications_title"},
+        {"name": "recent_icon", "type": "Component", "view_path": "header.headerSlot1.recentIcon", "visible": true},
+        {"name": "list", "type": "WeaponCustomizationItemsGrid", "view_path": "slotsList"},
+        {"name": "list_container", "type": "Control", "view_path": "slotsList.container"}
+    ]
+}

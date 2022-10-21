@@ -1,0 +1,164 @@
+<NavMeshParams>
+ <DefaultNavMeshName type="string">Default</DefaultNavMeshName>
+ <DefaultNavMeshType type="string">MediumSizedCharacters</DefaultNavMeshType>
+ <CoverCollisionGroup type="string">QueryNavMesh</CoverCollisionGroup>
+ <NavMeshNames type="bb">
+  <Default type="bba">
+   <Entry0 type="string">MediumSizedCharacters</Entry0>
+   <Entry1 type="string">ResurrectionDrone</Entry1>
+  </Default>
+  <Stilt type="bba">
+   <Entry0 type="string">Stilt</Entry0>
+  </Stilt>
+  <Queen type="bba">
+   <Entry0 type="string">Queen</Entry0>
+  </Queen>  
+  <Colossus type="bba">
+   <Entry0 type="string">Colossus</Entry0>
+  </Colossus>  
+  <Behemoth type="bba">
+   <Entry0 type="string">Behemoth</Entry0>
+  </Behemoth>
+ </NavMeshNames>
+ <NavMeshTypes type="bb">
+  <MediumSizedCharacters type="bb">
+   <NavmeshPhysicsCollisionGroup type="string">QueryNavMesh</NavmeshPhysicsCollisionGroup>
+   <AgentHeight type="float">1.650000</AgentHeight>
+   <AgentMaxClimb type="float">0.50000</AgentMaxClimb>
+   <AgentMaxSlope type="float">45.000000</AgentMaxSlope>
+   <AgentRadius type="float">0.400000</AgentRadius>
+   <CellHeight type="float">0.100000</CellHeight>
+   <CellSize type="float">0.100000</CellSize>
+   <AutoCover type="bb">
+    <BinSize type="float">0.1</BinSize>
+    <MaxCoverHeight type="float">3.0</MaxCoverHeight>
+    <MaxCoverDepth type="float">0.6</MaxCoverDepth>
+    <MaxAllowedGap type="float">0.5</MaxAllowedGap>
+    <DistanceFromGround type="float">0.2</DistanceFromGround>
+    <Categorizers type="bb">
+     <Full type="bb">
+      <Enabled type="bool">true</Enabled>
+      <MinHeight type="float">2.0</MinHeight>
+      <AdditionalMinWidth type="float">0.4</AdditionalMinWidth>
+      <MaxRailOffset type="float">0.15000</MaxRailOffset>
+     </Full>
+     <PopLeft type="bb">
+      <Enabled type="bool">true</Enabled>
+      <CoverStripMinHeight type="float">1.8</CoverStripMinHeight>
+      <PopOutMaxHeight type="float">1.1</PopOutMaxHeight>
+      <MaxRailOffset type="float">0.15000</MaxRailOffset>
+     </PopLeft>
+     <PopRight type="bb">
+      <Enabled type="bool">true</Enabled>
+      <CoverStripMinHeight type="float">1.8</CoverStripMinHeight>
+      <PopOutMaxHeight type="float">1.1</PopOutMaxHeight>
+      <MaxRailOffset type="float">0.15000</MaxRailOffset>
+     </PopRight>
+     <PopUp type="bb">
+      <Enabled type="bool">true</Enabled>
+      <MinHeight type="float">0.9</MinHeight>
+      <MaxHeight type="float">1.45</MaxHeight>
+      <MaxRailOffset type="float">0.15000</MaxRailOffset>
+     </PopUp>
+     <PopUpLow type="bb">
+      <Enabled type="bool">true</Enabled>
+      <MinHeight type="float">0.7</MinHeight>
+      <MaxHeight type="float">1.0</MaxHeight>
+      <MaxRailOffset type="float">0.15000</MaxRailOffset>
+     </PopUpLow>
+    </Categorizers>
+   </AutoCover>
+   <AutoContextNav type="bb">
+     <BinSize type="float">0.5</BinSize>
+     <Jump type="bb">
+         <Enabled type="bool">true</Enabled>
+         <MinDepth type="float">0.4</MinDepth>
+         <MaxDepth type="float">3.0</MaxDepth>
+         <MaxClimb type="float">1.75</MaxClimb>
+         <MaxDrop type="float">1.75</MaxDrop>
+         <EndHeight type="float">0.0</EndHeight>
+         <EndHeightTolerance type="float">1.6</EndHeightTolerance>
+         <AnimationName type="string">navlink_1</AnimationName>
+     </Jump>
+     <Vault type="bb">
+         <Enabled type="bool">false</Enabled>
+         <MinDepth type="float">1.5</MinDepth>
+         <MaxDepth type="float">2.5</MaxDepth>
+         <MaxClimb type="float">2.0</MaxClimb>
+         <MaxDrop type="float">2.0</MaxDrop>
+         <EndHeight type="float">0.0</EndHeight>
+         <EndHeightTolerance type="float">0.5</EndHeightTolerance>
+         <MinHeight type="float">0.5</MinHeight>
+         <MinSurfaceLength type="float">0.5</MinSurfaceLength>
+         <SurfaceHeightTolerance type="float">0.1</SurfaceHeightTolerance>
+         <AnimationName type="string">navlink_2</AnimationName>
+     </Vault>
+     <ClimbUp type="bb">
+         <Enabled type="bool">true</Enabled>
+         <MinDepth type="float">0.4</MinDepth>
+         <MaxDepth type="float">1.0</MaxDepth>
+         <MaxClimb type="float">4.0</MaxClimb>
+         <MaxDrop type="float">0.0</MaxDrop>
+         <EndHeight type="float">3.0</EndHeight>
+         <EndHeightTolerance type="float">1.1</EndHeightTolerance>
+         <AnimationName type="string">navlink_3</AnimationName>
+     </ClimbUp>
+     <ClimbDown type="bb">
+         <Enabled type="bool">true</Enabled>
+         <MinDepth type="float">0.4</MinDepth>
+         <MaxDepth type="float">1.0</MaxDepth>
+         <MaxClimb type="float">0.0</MaxClimb>
+         <MaxDrop type="float">4.0</MaxDrop>
+         <EndHeight type="float">-3.0</EndHeight>
+         <EndHeightTolerance type="float">1.1</EndHeightTolerance>
+         <AnimationName type="string">navlink_4</AnimationName>
+     </ClimbDown>
+    </AutoContextNav>
+  </MediumSizedCharacters>
+  <ResurrectionDrone type="bb">
+   <NavmeshPhysicsCollisionGroup type="string">QueryNavMesh</NavmeshPhysicsCollisionGroup>
+   <AgentHeight type="float">1.0</AgentHeight>
+   <AgentMaxClimb type="float">0.45</AgentMaxClimb>
+   <AgentMaxSlope type="float">45.0</AgentMaxSlope>
+   <AgentRadius type="float">0.2</AgentRadius>
+   <CellHeight type="float">0.05</CellHeight>
+   <CellSize type="float">0.10</CellSize>
+  </ResurrectionDrone>  
+  <Stilt type="bb">
+   <NavmeshPhysicsCollisionGroup type="string">QueryNavMesh</NavmeshPhysicsCollisionGroup>
+   <AgentHeight type="float">5.800000</AgentHeight>
+   <AgentMaxClimb type="float">0.5000000</AgentMaxClimb>
+   <AgentMaxSlope type="float">45.000000</AgentMaxSlope>
+   <AgentRadius type="float">2.000000</AgentRadius>
+   <CellHeight type="float">0.050000</CellHeight>
+   <CellSize type="float">0.100000</CellSize>
+  </Stilt>
+  <Behemoth type="bb">
+   <NavmeshPhysicsCollisionGroup type="string">QueryNavMesh</NavmeshPhysicsCollisionGroup>
+   <AgentHeight type="float">5.800000</AgentHeight>
+   <AgentMaxClimb type="float">0.5000000</AgentMaxClimb>
+   <AgentMaxSlope type="float">45.000000</AgentMaxSlope>
+   <AgentRadius type="float">2.000000</AgentRadius>
+   <CellHeight type="float">0.050000</CellHeight>
+   <CellSize type="float">0.100000</CellSize>
+  </Behemoth>
+  <Queen type="bb">
+   <NavmeshPhysicsCollisionGroup type="string">QueryNavMesh</NavmeshPhysicsCollisionGroup>
+   <AgentHeight type="float">8.00000</AgentHeight>
+   <AgentMaxClimb type="float">4.00000</AgentMaxClimb>
+   <AgentMaxSlope type="float">75.000000</AgentMaxSlope>
+   <AgentRadius type="float">1.500000</AgentRadius>
+   <CellHeight type="float">1.050000</CellHeight>
+   <CellSize type="float">1.100000</CellSize>
+  </Queen>
+  <Colossus type="bb">
+   <NavmeshPhysicsCollisionGroup type="string">QueryNavMesh</NavmeshPhysicsCollisionGroup>
+   <AgentHeight type="float">8.00000</AgentHeight>
+   <AgentMaxClimb type="float">4.00000</AgentMaxClimb>
+   <AgentMaxSlope type="float">75.000000</AgentMaxSlope>
+   <AgentRadius type="float">4.000000</AgentRadius>
+   <CellHeight type="float">1.050000</CellHeight>
+   <CellSize type="float">1.100000</CellSize>
+  </Colossus>
+ </NavMeshTypes>
+</NavMeshParams>

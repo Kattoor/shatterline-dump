@@ -1,0 +1,22 @@
+{
+    "script": "scripts/ui/hud_menus.lua",
+    "view_path": "Screen.html",
+    "hide_cursor": true,
+    "children":
+    [
+        { "name": "hud_killer_info", "type": "Component", "file": "hud/killer_info.json", "visible": false },
+        { "name": "hud_revive", "type": "Component", "file": "hud/hud_revive.json", "visible": false },
+        { "name": "hud_spectator_info", "type": "Component", "file": "hud/spectator_info.json", "visible": false },
+        
+        { "name": "pick_one", "type": "Component", "file": "ingame/pick_one.json", "visible": false },
+        
+        { "name": "scoreboard_container", "type": "Component", "file": "ingame/scoreboard/scoreboard_container.json" },
+
+        { "name": "escape_menu", "type": "Component", "file": "ingame/escape_menu.json", "visible": false },
+        { "name": "leave_session_msg", "type": "Component", "file": "leave_session_messagebox.json", "visible": false },
+        { "name": "options_ingame", "type": "Component", "file": "options/options_ingame.json", "visible": false },
+        { "name": "options_messages", "type": "Component", "file": "options/options_messages_ingame.json" },
+        { "name": "hints", "type": "Component", "file": "common/general_hints.json", "visible": false },
+        { "name": "report_player_container", "type": "Component", "file": "modal_window/report_player_container.json", "visible": false}
+    ]
+}

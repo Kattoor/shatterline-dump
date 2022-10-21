@@ -1,0 +1,282 @@
+{
+    "markers": [
+        {
+            "name": "frag_grenade_marker",
+            "elements": [
+                {
+                    "generic_icon":
+                    {
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        "image_alias": "marker_rocket_attack_warning_icon",
+                        "image_color": "#d00000",
+                        "race_track_type": 1,
+                        "visibility_mode": "IfNotVisible",
+                        "on_track_arrow_is_visible": true,
+                        "show_delay": 1.0,
+                        "offset": 0.3,
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": false,
+                        "wave_image_alias": "marker_rocket_attack_warning_icon",
+
+                        "race_icon_min_dist": 3,
+                        "race_icon_max_dist": 7,
+                        "race_icon_track_scale": 0.5,
+                        "race_icon_min_scale": 0.7,
+                        "race_icon_max_scale": 0.7,
+                        "race_icon_min_dist_visibility": 9
+                    }
+                }
+            ]
+        },
+        {
+            "name": "throwable_axe_marker",
+            "elements": [
+                {
+                    "generic_icon":
+                    {
+                        "ui_component_file": "hud/markers/throwable_icon.json",
+                        
+                        "image_alias": "kn03_icon",
+                        "race_icon_min_dist_visibility": 20,
+                        "race_icon_min_scale": 0.3,
+                        "race_icon_max_scale": 0.5,
+                        "race_icon_track_scale": 0.0,
+                        "race_icon_max_dist": 30,
+                        "race_icon_min_dist": 1,
+                        "offset": 0.3,
+                        "show_delay": 1.0
+                    }
+                }
+            ]
+        },
+        {
+            "name": "explosive_axe_marker",
+            "elements": [
+                {
+                    "generic_icon":
+                    {
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        "image_alias": "marker_rocket_attack_warning_icon",
+                        "image_color": "#d00000",
+                        "race_track_type": 1,
+                        "visibility_mode": "IfNotVisible",
+                        "on_track_arrow_is_visible": true,
+                        "show_delay": 0.2,
+                        "offset": 0.3,
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": false,
+                        "wave_image_alias": "marker_rocket_attack_warning_icon",
+
+                        "race_icon_min_dist": 0,
+                        "race_icon_max_dist": 5,
+                        "race_icon_track_scale": 0.5,
+                        "race_icon_min_scale": 0.7,
+                        "race_icon_max_scale": 0.7,
+                        "race_icon_min_dist_visibility": 8
+                    }
+                }
+            ]
+        },
+        {
+            "name": "fire_wave_marker",
+            "elements": [
+                {
+                    "generic_icon":
+                    {
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        "image_alias": "kill_log_fire",
+                        "image_color": "#d00000",
+                        "race_track_type": 1,
+                        "visibility_mode": "IfNotVisible",
+                        "on_track_arrow_is_visible": true,
+                        "show_delay": 0.1,
+                        "offset": 0.3,
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": false,
+                        "wave_image_alias": "kill_log_fire",
+
+                        "race_icon_min_dist": 3,
+                        "race_icon_max_dist": 7,
+                        "race_icon_track_scale": 0.5,
+                        "race_icon_min_scale": 0.7,
+                        "race_icon_max_scale": 0.7,
+                        "race_icon_min_dist_visibility": 9
+                    }
+                }
+            ]
+        },
+        {
+            "name": "pyro01_dot_marker",
+            "elements": [
+                {
+                    "generic_icon":
+                    {
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        "image_alias": "kill_log_fire",
+                        "image_color": "#d00000",
+                        "race_track_type": 1,
+                        "visibility_mode": "IfNotVisible",
+                        "on_track_arrow_is_visible": true,
+                        "show_delay": 0.01,
+                        "offset": 0.3,
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": false,
+                        "wave_image_alias": "kill_log_fire",
+
+                        "race_icon_min_dist": 1,
+                        "race_icon_max_dist": 7,
+                        "race_icon_track_scale": 1.0,
+                        "race_icon_min_scale": 1,
+                        "race_icon_max_scale": 0.7,
+                        "race_icon_min_dist_visibility": 9
+                    }
+                }
+            ]
+        },
+        {
+            "name": "flash_grenade_marker",
+            "elements": [
+                {
+                    "generic_icon":
+                    {
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        
+                        "image_alias": "kill_log_blindness",
+                        "image_color": "#d00000",
+                        "race_track_type": 1,
+                        "visibility_mode": "Always",
+                        "on_track_arrow_is_visible": true,
+                        "show_delay": 1.0,
+                        "offset": 0.3,
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": false,
+                        "wave_image_alias": "kill_log_blindness",
+
+                        "race_icon_min_dist": 5,
+                        "race_icon_max_dist": 9,
+                        "race_icon_track_scale": 0.5,
+                        "race_icon_min_scale": 0.7,
+                        "race_icon_max_scale": 0.7,
+                        "race_icon_min_dist_visibility": 22
+                    }
+                }
+            ]
+        },
+        {
+            "name": "crystalline_grenade_marker",
+            "elements": [
+                {
+                    "generic_icon":
+                    {
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        
+                        "image_alias": "hit",
+                        "image_color": "#d00000",
+                        "race_track_type": 1,
+                        "visibility_mode": "Always",
+                        "on_track_arrow_is_visible": true,
+                        "show_delay": 0.5,
+                        "offset": 0.3,
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": false,
+                        "wave_image_alias": "hit",
+
+                        "race_icon_min_dist": 5,
+                        "race_icon_max_dist": 9,
+                        "race_icon_track_scale": 0.5,
+                        "race_icon_min_scale": 0.7,
+                        "race_icon_max_scale": 0.7,
+                        "race_icon_min_dist_visibility": 7
+                    }
+                }
+            ]
+        },
+        {
+            "name": "lightning_zone_marker",
+            "elements": [
+                {
+                    "generic_icon":
+                    {
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        
+                        "image_alias": "contamination_icon_lighting_anomaly",
+                        "image_color": "#d00000",
+                        "race_track_type": 1,
+                        "visibility_mode": "Always",
+                        "on_track_arrow_is_visible": true,
+                        "show_delay": 0.3,
+                        "offset": 1.2,
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": false,
+                        "wave_image_alias": "contamination_icon_lighting_anomaly",
+
+                        "race_icon_min_dist": 5,
+                        "race_icon_max_dist": 9,
+                        "race_icon_track_scale": 0.5,
+                        "race_icon_min_scale": 0.7,
+                        "race_icon_max_scale": 0.7,
+                        "race_icon_min_dist_visibility": 9
+                    }
+                }
+            ]
+        },
+        {
+            "name": "swarm_grenade_marker",
+            "elements": [
+                {
+                    "generic_icon":
+                    {
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        "image_alias": "marker_rocket_attack_warning_icon",
+                        "image_color": "#d00000",
+                        "race_track_type": 1,
+                        "visibility_mode": "Always",
+                        "on_track_arrow_is_visible": true,
+                        "show_delay": 0.5,
+                        "offset": 0.3,
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": false,
+                        "wave_image_alias": "marker_rocket_attack_warning_icon",
+
+                        "race_icon_min_dist": 0,
+                        "race_icon_max_dist": 0.1,
+                        "race_icon_track_scale": 0.5,
+                        "race_icon_min_scale": 0.7,
+                        "race_icon_max_scale": 0.7,
+                        "race_icon_min_dist_visibility": 2.5
+                    }
+                }
+            ]
+        },
+        {
+            "name": "fire_grenade_marker",
+            "elements": [
+                {
+                    "generic_icon":
+                    {
+                        "ui_component_file": "hud/markers/default_icon.json",
+                        
+                        "image_alias": "kill_log_fire",
+                        "image_color": "#d00000",
+                        "race_track_type": 1,
+                        "visibility_mode": "Always",
+                        "on_track_arrow_is_visible": true,
+                        "show_delay": 1.0,
+                        "offset": 0.3,
+                        "wave_is_visible": true,
+                        "wave_is_animation_infinite": false,
+                        "wave_image_alias": "kill_log_fire",
+
+                        "race_icon_min_dist": 5,
+                        "race_icon_max_dist": 9,
+                        "race_icon_track_scale": 0.5,
+                        "race_icon_min_scale": 0.7,
+                        "race_icon_max_scale": 0.7,
+                        "race_icon_min_dist_visibility": 6.5
+                    }
+                }
+            ]
+        }
+        
+    ]
+}

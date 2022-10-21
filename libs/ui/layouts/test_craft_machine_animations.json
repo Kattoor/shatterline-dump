@@ -1,0 +1,12 @@
+{
+    "script": "scripts/ui/test_craft_machine_animations.lua",
+    "view_path": "",
+    "children": [
+        {"name": "goto_available", "type": "Button", "text": "Available", "x": 100, "y":400},
+        {"name": "goto_unavailable", "type": "Button", "text": "Unavailable", "x": 100, "y":430},
+        {"name": "goto_craft", "type": "Button", "text": "Craft", "x": 100, "y":460},
+        {"name": "reward", "type": "Label", "x":50, "y":500, "width":100, "text": "Reward name"},
+        {"name": "reward_name", "type": "EditBox", "text": "pt05_leg01", "x": 130, "y":510},
+        {"name": "confirm_msg", "type": "Component", "file": "lobby/modifications/modifications_confirm.json", "visible": false}
+    ]
+}

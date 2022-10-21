@@ -1,0 +1,91 @@
+{
+    "name": "preset_changed",
+    "doc": "Origin: game session. Emitter: dedicated server. Indicates when player changes an operative during the match",
+    "type": "record",
+    "fields": [
+        {
+            "name": "lid",
+            "type": "int",
+            "default": -1,
+            "doc": "match-unique incremental id of a player's lifetime (time between spawn-death, including coma time)"
+        },
+        {
+            "name": "name",
+            "type": "string",
+            "default": "-1",
+            "doc": "unique name of the event"
+        },
+        {
+            "name": "cid",
+            "type": "int",
+            "default": -1,
+            "doc": "team unique identifier. -6 pve players, -5 AI, -4 team B, -3 team A or pid in FFA modes"
+        },
+        {
+            "name": "team",
+            "type": "string",
+            "default": "-1",
+            "doc": "categorical definition of the team which player belongs to"
+        },
+        {
+            "name": "round_id",
+            "type": "int",
+            "default": -1,
+            "doc": "match-unique incremental counter of a round within a period in round-base modes"
+        },
+        {
+            "name": "pid",
+            "type": "long",
+            "default": -1,
+            "doc": "namespace-unique identifier of a player"
+        },
+        {
+            "name": "ts",
+            "type": "string",
+            "default": "-1",
+            "doc": "ISO8601 UTC timestamp of the event invocation"
+        },
+        {
+            "name": "gid",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace-unique identifier of the match"
+        },
+        {
+            "name": "period_id",
+            "type": "int",
+            "default": -1,
+            "doc": "match-unique incremental counter of a period of rounds within a set in round-base modes"
+        },
+        {
+            "name": "sid",
+            "type": "string",
+            "default": "-1",
+            "doc": "global-unique identifier of the player's login session (time between login and logout)"
+        },
+        {
+            "name": "ns",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace of the server's deployment (realm)"
+        },
+        {
+            "name": "operative_id",
+            "type": "string",
+            "default": "-1",
+            "doc": "name of selected operative (if player) or AI archetype (if an AI)"
+        },
+        {
+            "name": "set_id",
+            "type": "int",
+            "default": -1,
+            "doc": "match-unique incremental counter of a set in round-base modes"
+        },
+        {
+            "name": "preset_change_source",
+            "type": "string",
+            "default": "-1",
+            "doc": "shows a nature of preset change request (menu or box)"
+        }
+    ]
+}

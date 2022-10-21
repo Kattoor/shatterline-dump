@@ -1,0 +1,11 @@
+{
+    "script": "scripts/ui/ingame/pre_battle_empty.lua",
+    "view_path": "PreBattleEmpty.html",
+    "defined_actions": ["hide_gamepad_cursor"],
+    "children": [
+        {"name": "background", "type": "Image", "view_path": "wrapper.background"},
+
+        {"name": "ready_btn", "type": "Button", "view_path": "wrapper.readyBtnWrapper.readyBtn"},
+        {"name": "ready_btn_hint", "type": "ActionLabel", "view_path": "wrapper.readyBtnWrapper.readyBtn.wrapper.key", "gamepad_only": true}
+    ]
+}

@@ -1,0 +1,112 @@
+
+{
+    "microbehaviors":
+    [
+        {
+            "name": "CloseToGrenadeReaction",
+            "execute_prob": 1.0,
+            "execute_once": false,
+            "conditions":
+            [
+                {
+                    "template": "IsBehaviorCondition",
+                    "origin": "source",
+                    "inverse": true,
+                    "params":
+                    {
+                        "name": "Healing"
+                    }
+                },
+                {
+                   "template": "InCover",
+                   "inverse": true
+                },
+                {
+                    "template": "AttackInProgress",
+                    "inverse": true
+                },
+                {
+                    "template":"IsReloading",
+                    "origin":"source",
+                    "inverse":true
+                },
+                {
+                    "template": "IsDangerGrenadeNear",
+                    "origin": "source",
+                    "params":
+                    {
+                        "time_to_act": "#time_to_act"
+                    }
+                },
+                {
+                    "template":"FrequencyLimit",
+                    "origin":"source",
+                    "params":
+                    {
+                        "name":"CloseToGrenadeReaction",
+                        "delay_min":"5",
+                        "delay_max":"5"
+                    }
+                },
+                {
+                    "template": "Delay",
+                    "params":
+                    {
+                        "min": "#delay_min",
+                        "max": "#delay_max"
+                    }
+                },
+                {
+                    "template": "Random",
+                    "params":
+                    {
+                        "prob": "#probability",
+                        "time": "2"
+                    }
+                }
+            ],
+            "interrupt_conditions":
+            [
+                {
+                    "template": "IsBehaviorCondition",
+                    "origin": "source",
+                    "params":
+                    {
+                        "name": "Wounded"
+                    }
+                },
+                {
+                    "template": "IsBehaviorCondition",
+                    "origin": "source",
+                    "params":
+                    {
+                        "name": "Blinded"
+                    }
+                }
+            ],
+            "actions":
+            [
+                {
+                    "template": "RunMicrobehavior",
+                    "params":
+                    {
+                        "name": "CloseToGrenadeReaction",
+                        "animations_base_index": "5",
+                        "animations_side_index_capacity": "5",
+                        "animations_count_front": "1",
+                        "animations_count_back": "2",
+                        "animations_count_left": "2",
+                        "animations_count_right": "2"
+                    }
+                }
+            ],
+            "default_params":
+            {
+                "probability": "1.0",
+                "time_to_act": "1.4",
+                "delay_min": "0",
+                "delay_max": "0.5"
+            }
+        }
+    ]
+}

@@ -1,0 +1,184 @@
+{
+    "name": "QueenNew/SpawnFailedAttackTarget",
+    "root": "cd194857-9c0c-48ed-a7d0-a14a841b9fe9",
+    "nodes": {
+        "6a3cfe0a-21d1-4c73-9d30-a2e79e52fa71": {
+            "name": "ApproachTo",
+            "pos": {
+                "x": 0,
+                "y": 646
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "TargetPos"
+                    ]
+                },
+                {
+                    "name": "EndDistance",
+                    "type": "Float",
+                    "value": "1.0"
+                },
+                {
+                    "name": "UpdateDestinationPoint",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "4fff290f-2057-4094-8930-f68e60068935": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 527
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "7e8f1283-6bcc-4c4e-955b-8f1f68e68fb1",
+                "6a3cfe0a-21d1-4c73-9d30-a2e79e52fa71",
+                "7ee1f2f7-5159-42ac-b90d-74d1d0ba8f53"
+            ]
+        },
+        "7ee1f2f7-5159-42ac-b90d-74d1d0ba8f53": {
+            "name": "SetBehaviorCondition",
+            "pos": {
+                "x": 200,
+                "y": 641
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ForcedSpawn"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "true"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "7e8f1283-6bcc-4c4e-955b-8f1f68e68fb1": {
+            "name": "SetVariable",
+            "pos": {
+                "x": -210,
+                "y": 645
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "TargetPos"
+                },
+                {
+                    "name": "Value",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "Pos"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "36868c1a-4964-4eeb-8c71-5f9cfc12a07f": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 214
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "SpawnFailedAttackTarget"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "a1784dca-8158-4fbe-9111-570c97aa80b3"
+        },
+        "a1784dca-8158-4fbe-9111-570c97aa80b3": {
+            "name": "IsBBValueExist",
+            "pos": {
+                "x": 0,
+                "y": 350
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "ValuePath",
+                    "type": "StringHash",
+                    "value": "Target.Pos"
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "4fff290f-2057-4094-8930-f68e60068935"
+        },
+        "cd194857-9c0c-48ed-a7d0-a14a841b9fe9": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 94
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "SpawnFailedAttackTarget"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "36868c1a-4964-4eeb-8c71-5f9cfc12a07f"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

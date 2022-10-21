@@ -1,0 +1,12 @@
+{
+    "script": "scripts/ui/lobby/season_hub/purchase_season_pass_celebration.lua",
+    "view_path": "PurchaseSeasonPassCelebration.html",
+    "defined_actions": ["hide_gamepad_cursor"],
+    "hide_cursor": false,
+    "send_stats": true,
+    "children":
+    [
+        {"name": "video", "type": "Video", "view_path": "video", "video_path": "videos/celebration/season_pass_purchase.bk2", "background": true},
+        {"name": "label", "type": "Label", "view_path": "label", "text": "@season_pass_purchased"}
+    ]
+}

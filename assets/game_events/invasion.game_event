@@ -1,0 +1,416 @@
+{
+  "events": [
+    {
+      "name": "Kill"
+    },
+    {
+      "name": "Assist"
+    },
+    {
+      "name": "LeaderboardPlace"
+    },
+    {
+      "name": "Resurrect"
+    },
+    {
+      "name": "Death"
+    },
+    {
+      "name": "Heal"
+    },
+    {
+      "name": "SpotTarget"
+    },
+    {
+      "name": "SpotPosition"
+    },
+    {
+      "name": "MedkitUsed"
+    },
+    {
+      "name": "Suicide"
+    },
+    {
+      "name": "WeaponTick"
+    },
+    {
+      "name": "DestroyEnemyObjects"
+    },
+    {
+      "name": "EnemyFrozen"
+    },
+    {
+      "name": "KillEnemyDrone"
+    },
+    {
+      "name": "Headshot",
+      "event": [
+        {
+          "event_id": "Kill",
+          "hit_part_is": ["Head", "Weakpoint"]
+        }
+      ]
+    },
+  {
+      "name": "PlayerKill",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_player_class_is_not":[],
+          "target_player_class_is_not":[]
+        }
+      ]
+    },
+    {
+      "name": "PlayerKillAssist",
+      "event": [
+        {
+          "event_id": "Assist",
+          "target_player_class_is_not":[]
+        }
+      ]
+    },
+    {
+      "name": "Banish",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_player_class_is_not":[],
+          "target_player_class_is":["I"]
+        }
+      ]
+    },
+    {
+      "name": "Elimination",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_player_class_is":["I"],
+          "target_player_class_is":["S","A","H","M"]
+        }
+      ]
+    },
+    {
+      "name": "Marksman",
+      "event": [
+        {
+          "event_id": "Kill",
+          "hit_part_is": ["Head"],
+          "actor_player_class_is_not":[],
+          "target_player_class_is":["I"]
+        }
+      ]
+    },
+  {
+      "name": "Revenge",
+      "event": [
+        {
+          "event_id": "Revenge",
+          "target_player_class_is":["I"]
+        }
+      ]
+    },
+    {
+      "name": "ReturnFire",
+      "event": [
+        {
+          "event_id": "ReturnFire",
+          "target_player_class_is":["I"]
+        }
+      ]
+    },
+    {
+      "name": "ShutDown",
+      "event": [
+        {
+          "event_id": "ShutDown",
+          "actor_player_class_is_not":[],
+          "target_player_class_is_not":[]
+        }
+      ]
+    },
+    {
+      "name": "ChosenExecution",
+      "event": [
+        {
+          "event_id": "Kill",
+          "hit_type_is": ["Melee"],
+          "actor_player_class_is":["I"],
+          "target_player_preset_is_not": []
+        }
+      ],
+      "count": 1,
+      "reset_on_completion": true
+    },
+    {
+      "name": "ChosenSlaughter",
+      "event": [
+        {
+          "event_id": "Kill",
+          "hit_type_is": ["Melee"],
+          "actor_player_class_is":["I"],
+          "target_player_preset_is_not": []
+        }
+      ],
+      "count": 2,
+      "reset_on_completion": true
+    },
+    {
+      "name": "ChosenMassacre",
+      "event": [
+        {
+          "event_id": "Kill",
+          "hit_type_is": ["Melee"],
+          "actor_player_class_is":["I"],
+          "target_player_preset_is_not": []
+        }
+      ],
+      "count": 3,
+      "reset_on_completion": true
+    },
+    {
+      "name": "BladeMaster",
+      "event": [
+        {
+          "event_id": "Kill",
+          "hit_type_is": ["Melee"],
+          "target_player_class_is":["I"]
+        }
+      ]
+    },
+    {
+      "name": "SlideKill",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_stance_is": ["Slide"],
+          "target_player_class_is_not":[]
+        }
+      ]
+    },
+    {
+      "name": "FieldMedic",
+      "event": [
+        {
+          "event_id": "Resurrect"
+        }
+      ],
+      "count": 2,
+      "reset_on_completion": true
+    },
+    {
+      "name": "LifeGuard",
+      "event": [
+        {
+          "event_id": "Resurrect"
+        }
+      ],
+      "count": 3,
+      "reset_on_completion": true
+    },
+    {
+      "name": "Savior",
+      "event": [
+        {
+          "event_id": "Resurrect"
+        }
+      ],
+      "count": 5,
+      "reset_on_completion": true
+    },
+    {
+      "name": "DoubleKill",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_player_class_is_not":[],
+          "target_player_class_is_not":[]
+        }
+      ],
+      "count": 2,
+      "time_to_perform": 2,
+      "reset_on_completion": true
+    },
+    {
+      "name": "TripleKill",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_player_class_is_not":[],
+          "target_player_class_is_not":[]
+        }
+      ],
+      "count": 3,
+      "time_to_perform": 2,
+      "reset_on_completion": true
+    },
+    {
+      "name": "KillStreak",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_player_class_is_not":[],
+          "target_player_class_is_not":[]
+        },
+        {
+          "event_id": "Assist",
+          "target_player_class_is_not":[]
+        }
+      ],
+      "count": 3,
+      "reset_on_completion": true
+    },
+    {
+      "name": "Rampage",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_player_class_is_not":[],
+          "target_player_class_is_not":[]
+        },
+        {
+          "event_id": "Assist",
+          "target_player_class_is_not":[]
+        }
+      ],
+      "count": 4,
+      "reset_on_completion": true
+    },
+    {
+      "name": "Pistolero",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_item_tag_is": ["PT"]
+        }
+      ]
+    },
+    {
+      "name": "UltKill",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_item_tag_is": ["ULT", "ult_ik01"]
+        }
+      ]
+    },
+    {
+      "name": "AbilityKill",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_item_tag_is": ["FG", "CG", "CM", "KD", "PG", "SVO", "AXE", "IK03"]
+        }
+      ]
+    },
+    {
+      "name": "Support",
+      "event": [
+        {
+          "event_id": "Throw",
+          "actor_item_tag_is": ["FLG", "SG", "MK", "MD", "FD"]
+        },
+        {
+          "event_id": "PowerItemStart",
+          "actor_item_tag_is": ["IK02"]
+        }
+      ]
+    },
+    {
+      "name": "Bloodlust",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_player_class_is_not":[],
+          "target_player_class_is_not":[]
+        },
+        {
+          "event_id": "Assist",
+          "target_player_class_is_not":[]
+        }
+      ],
+      "count": 5,
+      "reset_on_completion": true
+    },
+    {
+      "name": "MedalAchieved",
+      "event": [
+        {
+          "event_id": "DoubleKill"
+        },
+        {
+          "event_id": "SlideKill"
+        },
+        {
+          "event_id": "BladeMaster"
+        },
+        {
+          "event_id": "FieldMedic"
+        },
+        {
+          "event_id": "FirstBlood"
+        },
+        {
+          "event_id": "KillStreak"
+        },
+        {
+          "event_id": "Rampage"
+        },
+        {
+          "event_id": "ReturnFire"
+        },
+        {
+          "event_id": "Revenge"
+        },
+        {
+          "event_id": "TripleKill"
+        },
+        {
+          "event_id": "ShutDown"
+        },
+        {
+          "event_id": "Banish"
+        },
+        {
+          "event_id": "ChosenExecution"
+        },
+        {
+          "event_id": "ChosenMassacre"
+        },
+        {
+          "event_id": "ChosenSlaughter"
+        },
+        {
+          "event_id": "ChosenWipeout"
+        },
+        {
+          "event_id": "Elimination"
+        },
+        {
+          "event_id": "Lifeguard"
+        },
+        {
+          "event_id": "Marksman"
+        },
+        {
+          "event_id": "Savior"
+        }
+      ]
+    },
+    {
+      "name": "Ultimator",
+      "event": [
+        {"event_id": "UltKill"}
+      ],
+      "count": 10,
+      "time_to_perform": 10
+    },
+    {
+      "name": "Handyman",
+      "event": [
+        {"event_id": "AbilityKill"}
+      ],
+      "count": 10
+    }
+  ]
+}

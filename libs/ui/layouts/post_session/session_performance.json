@@ -1,0 +1,9 @@
+{
+    "script": "scripts/ui/post_session/session_performance.lua",
+    "view_path": "SessionPerformance.html",
+    "children": [
+        {"name": "instant_rewards", "type": "SessionRewardsList", "view_path": "wrapper.instantRewardsList"},
+        {"name": "session_rewards", "type": "SessionRewardsList", "view_path": "wrapper.sessionRewardsList"},
+        {"name": "button", "type": "Button", "view_path": "wrapper.skipButton"}
+    ]
+}

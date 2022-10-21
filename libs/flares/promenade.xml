@@ -1,0 +1,95 @@
+<LensFlareLibrary Name="promenade">
+ <FlareItem Name="promenate.stick" Type="Root" Enable="1" Id="{47C2A64F-E29F-4C04-856C-ABE3139705B7}" Library="promenade">
+  <Params>
+   <Common Size="1" Perspectivefactor="1" DistanceFadingfactor="0.3" Brightness="1" Position="1,1" Tint="1,1,1" Tint.alpha="51" Orbitangle="0" OcclusionInteraction="0" AutoRotation="1" CorrectAspectRatio="1"/>
+   <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+   <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+   <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+   <GlobalSettings EnableOcclusion="1" OcclusionSize="0.02,0.02" Flarefadetime="0.2" Shaftfadetime="1" Affectedbylightcolor="0" Affectedbylightradius="0" AffectedbylightFOV="1" MultiplyColor="1"/>
+   <Sensor CustomSensorVariationMap="0" EffectiveSensorSize="0.8"/>
+  </Params>
+  <FlareItem Name="stick.glow" Type="Glow" Enable="1">
+   <Params>
+    <Common Size="0.4" Perspectivefactor="0" DistanceFadingfactor="1" Brightness="3" Position="1,1" Tint="0.991102,0.571125,0.00151763" Tint.alpha="255" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="0.5,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Glow Polygonfactor="32" Focusfactor="0" Gamma="1"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="stick.vol shafts" Type="Vol Shafts" Enable="1">
+   <Params>
+    <Common Size="3" Perspectivefactor="0.5" DistanceFadingfactor="1" Brightness="1" Position="1,1" Tint="0.991102,0.651406,0.0802198" Tint.alpha="128" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,0.5" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <ImageSpaceShafts HighQuality="0" GoboTex="EngineAssets/Textures/flares/iris_shaft.dds"/>
+   </Params>
+  </FlareItem>
+ </FlareItem>
+ <FlareItem Name="promenate.small_projector" Type="Root" Enable="1" Id="{ECA12E34-7981-4E89-805E-1056093B3964}" Library="promenade">
+  <Params>
+   <Common Size="1" Perspectivefactor="1" DistanceFadingfactor="0.3" Brightness="1" Position="1,1" Tint="1,1,1" Tint.alpha="51" Orbitangle="0" OcclusionInteraction="0" AutoRotation="1" CorrectAspectRatio="1"/>
+   <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+   <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+   <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+   <GlobalSettings EnableOcclusion="1" OcclusionSize="0.02,0.02" Flarefadetime="0.2" Shaftfadetime="1" Affectedbylightcolor="0" Affectedbylightradius="0" AffectedbylightFOV="1" MultiplyColor="1"/>
+   <Sensor CustomSensorVariationMap="0" EffectiveSensorSize="0.8"/>
+  </Params>
+  <FlareItem Name="small_projector.glow0" Type="Glow" Enable="1">
+   <Params>
+    <Common Size="0.2" Perspectivefactor="0.5" DistanceFadingfactor="1" Brightness="1" Position="1,1" Tint="0.775822,0.913099,0.991102" Tint.alpha="147" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Glow Polygonfactor="32" Focusfactor="0" Gamma="1"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="small_projector.streaks" Type="Streaks" Enable="1">
+   <Params>
+    <Common Size="0.2" Perspectivefactor="0.2" DistanceFadingfactor="1" Brightness="1" Position="1,1" Tint="0.723055,0.846873,0.991102" Tint.alpha="10" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Streaks Enablegradienttex="0" GradientTex="" Noiseseed="-145" Streakcount="3" Thickness="0.272727" Thicknessnoise="0" Sizenoise="0" Spacingnoise="0"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="small_projector.ghost" Type="Ghost" Enable="1">
+   <Params>
+    <Common Size="0.15" Perspectivefactor="0" DistanceFadingfactor="1" Brightness="0.05" Position="1,1" Tint="0.351533,0.391573,1" Tint.alpha="17" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <LensGhost Texture="textures/lights/lens_flares/streak01.dds"/>
+   </Params>
+  </FlareItem>
+ </FlareItem>
+ <FlareItem Name="promenate.stick_blue" Type="Root" Enable="1" Id="{70D0625D-6111-4114-A866-B9568CAAAADA}" Library="promenade">
+  <Params>
+   <Common Size="1" Perspectivefactor="1" DistanceFadingfactor="0.3" Brightness="1" Position="1,1" Tint="1,1,1" Tint.alpha="51" Orbitangle="0" OcclusionInteraction="0" AutoRotation="1" CorrectAspectRatio="1"/>
+   <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+   <Transformation Scale="1,1" Translation="0,0" Rotation="0"/>
+   <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+   <GlobalSettings EnableOcclusion="1" OcclusionSize="0.02,0.02" Flarefadetime="0.2" Shaftfadetime="1" Affectedbylightcolor="0" Affectedbylightradius="0" AffectedbylightFOV="1" MultiplyColor="1"/>
+   <Sensor CustomSensorVariationMap="0" EffectiveSensorSize="0.8"/>
+  </Params>
+  <FlareItem Name="stick_blue.glow" Type="Glow" Enable="1">
+   <Params>
+    <Common Size="0.4" Perspectivefactor="0" DistanceFadingfactor="1" Brightness="3" Position="1,1" Tint="0.0703601,0.502886,0.991102" Tint.alpha="255" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="0.5,1" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <Glow Polygonfactor="32" Focusfactor="0" Gamma="1"/>
+   </Params>
+  </FlareItem>
+  <FlareItem Name="stick_blue.vol shafts" Type="Vol Shafts" Enable="1">
+   <Params>
+    <Common Size="3" Perspectivefactor="0.5" DistanceFadingfactor="1" Brightness="1" Position="1,1" Tint="0.0781874,0.381326,0.982251" Tint.alpha="128" Orbitangle="0" OcclusionInteraction="0" AutoRotation="0" CorrectAspectRatio="1"/>
+    <Sensor Sensorimagesizevariationfactor="0" Sensorimagebrightnessvariationfactor="0"/>
+    <Transformation Scale="1,0.5" Translation="0,0" Rotation="0"/>
+    <Dynamics Enable="0" TriggerInvert="0" TriggerOffset="0,0" TriggerRange="1" TriggerFalloff="1"/>
+    <ImageSpaceShafts HighQuality="0" GoboTex="EngineAssets/Textures/flares/iris_shaft.dds"/>
+   </Params>
+  </FlareItem>
+ </FlareItem>
+</LensFlareLibrary>

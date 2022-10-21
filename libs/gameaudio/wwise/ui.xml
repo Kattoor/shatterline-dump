@@ -1,0 +1,375 @@
+<ATLConfig atl_name="ui">
+ <AudioTriggers>
+  <ATLTrigger atl_name="frag_lab_intro" path="video">
+   <WwiseEvent wwise_name="frag_lab_intro"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="rol_03_start" path="video">
+   <WwiseEvent wwise_name="rol_03_start"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="rol_02_start" path="video">
+   <WwiseEvent wwise_name="rol_02_start"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="rol_01_start" path="video">
+   <WwiseEvent wwise_name="rol_01_start"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="logo_shatterline" path="video">
+   <WwiseEvent wwise_name="logo_shatterline"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="all_logo_start" path="video">
+   <WwiseEvent wwise_name="all_logo_start"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="encounter_completion" path="hud">
+   <WwiseEvent wwise_name="encounter_completion"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="heal_feedback" path="hud">
+   <WwiseEvent wwise_name="heal_feedback"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="use_object_energy_stop_interrupted" path="hud">
+   <WwiseEvent wwise_name="use_object_energy_stop_interrupted"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="use_object_energy_stop" path="hud">
+   <WwiseEvent wwise_name="use_object_energy_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="use_object_energy_start" path="hud">
+   <WwiseEvent wwise_name="use_object_energy_start"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="kill_headshot_feedback" path="hud">
+   <WwiseEvent wwise_name="kill_headshot_feedback"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="ping_teammate" path="hud">
+   <WwiseEvent wwise_name="ping_teammate"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="ping_owner" path="hud">
+   <WwiseEvent wwise_name="ping_owner"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="ping_enemy" path="hud">
+   <WwiseEvent wwise_name="ping_enemy"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="ping_cancel" path="hud">
+   <WwiseEvent wwise_name="ping_cancel"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="contamination_decreased" path="hud">
+   <WwiseEvent wwise_name="contamination_decreased"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="contamination_increase" path="hud">
+   <WwiseEvent wwise_name="contamination_increase"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="item_ult_charger" path="hud">
+   <WwiseEvent wwise_name="item_ult_charger"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="hit_invulnerable_fb" path="hud">
+   <WwiseEvent wwise_name="hit_invulnerable_fb"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="hit_not_weak_point_fb" path="hud">
+   <WwiseEvent wwise_name="hit_not_weak_point_fb"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="hit_shield_fb" path="hud">
+   <WwiseEvent wwise_name="hit_shield_fb"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="hit_shield_broken_fb" path="hud">
+   <WwiseEvent wwise_name="hit_shield_broken_fb"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="hit_player_melee_fb" path="hud">
+   <WwiseEvent wwise_name="hit_player_melee_fb"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="hit_player_knife_fb" path="hud">
+   <WwiseEvent wwise_name="hit_player_knife_fb"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="fire_killzone" path="hud">
+   <WwiseEvent wwise_name="fire_killzone"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="ult_activation_enemy" path="hud">
+   <WwiseEvent wwise_name="ult_activation_enemy"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="ult_activation_friendly" path="hud">
+   <WwiseEvent wwise_name="ult_activation_friendly"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="error" path="hud">
+   <WwiseEvent wwise_name="error"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="ammo_receive" path="hud">
+   <WwiseEvent wwise_name="ammo_receive"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="point_lost" path="hud">
+   <WwiseEvent wwise_name="point_lost"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="point_captured" path="hud">
+   <WwiseEvent wwise_name="point_captured"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="point_capture" path="hud">
+   <WwiseEvent wwise_name="point_capture"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="kill_zone" path="hud">
+   <WwiseEvent wwise_name="kill_zone"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="stop_laser" path="hud">
+   <WwiseEvent wwise_name="stop_laser"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="start_laser" path="hud">
+   <WwiseEvent wwise_name="start_laser"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="use_object_interrupt" path="hud">
+   <WwiseEvent wwise_name="use_object_interrupt"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="crystal_damage_feedback_stop" path="hud">
+   <WwiseEvent wwise_name="crystal_damage_feedback_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="crystal_damage_feedback_start" path="hud">
+   <WwiseEvent wwise_name="crystal_damage_feedback_start"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="use_object_stop" path="hud">
+   <WwiseEvent wwise_name="use_object_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="use_object_start" path="hud">
+   <WwiseEvent wwise_name="use_object_start"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="fall_player_fb" path="hud">
+   <WwiseEvent wwise_name="fall_player_fb"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="ammo_refill_interrupt" path="hud">
+   <WwiseEvent wwise_name="ammo_refill_interrupt"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="ammo_refill" path="hud">
+   <WwiseEvent wwise_name="ammo_refill"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="instant_reward" path="hud">
+   <WwiseEvent wwise_name="instant_reward"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="instant_reward_mid" path="hud">
+   <WwiseEvent wwise_name="instant_reward_mid"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="instant_reward_high" path="hud">
+   <WwiseEvent wwise_name="instant_reward_high"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="hit_player_redfog_fb" path="hud">
+   <WwiseEvent wwise_name="hit_player_redfog_fb"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="item_ult_weapon_ready" path="hud">
+   <WwiseEvent wwise_name="item_ult_weapon_ready"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="item_restricted" path="hud">
+   <WwiseEvent wwise_name="item_restricted"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="item_ready" path="hud">
+   <WwiseEvent wwise_name="item_ready"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="low_health_stop" path="hud">
+   <WwiseEvent wwise_name="low_health_stop_sfx"/>
+   <WwiseEvent wwise_name="low_health_stop_vo"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="low_health_loop" path="hud">
+   <WwiseEvent wwise_name="low_health_loop_sfx"/>
+   <WwiseEvent wwise_name="low_health_loop_vo"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="bomb_spot" path="hud">
+   <WwiseEvent wwise_name="bomb_spot"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="kill_feedback" path="hud">
+   <WwiseEvent wwise_name="kill_feedback"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="hit_player_fb" path="hud">
+   <WwiseEvent wwise_name="hit_player_fb_sfx"/>
+   <WwiseEvent wwise_name="hit_player_fb_vo"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="hit_feedback" path="hud">
+   <WwiseEvent wwise_name="hit_feedback"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="headshot_player_fb" path="hud">
+   <WwiseEvent wwise_name="headshot_player_fb"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="headshot_feedback" path="hud">
+   <WwiseEvent wwise_name="headshot_feedback"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="headshot_fatal_player_fb" path="hud">
+   <WwiseEvent wwise_name="headshot_fatal_player_fb"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="ui_party_status_show" path="menu">
+   <WwiseEvent wwise_name="ui_party_status_show"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="ui_party_status_hide" path="menu">
+   <WwiseEvent wwise_name="ui_party_status_hide"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="ui_menu_claim_reward" path="menu">
+   <WwiseEvent wwise_name="ui_menu_claim_reward"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="chr_cust_strix" path="menu/character_presentation">
+   <WwiseEvent wwise_name="chr_cust_strix"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="chr_cust_ram" path="menu/character_presentation">
+   <WwiseEvent wwise_name="chr_cust_ram"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="chr_cust_pill" path="menu/character_presentation">
+   <WwiseEvent wwise_name="chr_cust_pill"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="chr_cust_orbit" path="menu/character_presentation">
+   <WwiseEvent wwise_name="chr_cust_orbit"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="chr_cust_mongoose" path="menu/character_presentation">
+   <WwiseEvent wwise_name="chr_cust_mongoose"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="chr_cust_malva" path="menu/character_presentation">
+   <WwiseEvent wwise_name="chr_cust_malva"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="chr_cust_kite" path="menu/character_presentation">
+   <WwiseEvent wwise_name="chr_cust_kite"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="chr_cust_brisa" path="menu/character_presentation">
+   <WwiseEvent wwise_name="chr_cust_brisa"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="chr_pres_pill_pre" path="menu/character_presentation">
+   <WwiseEvent wwise_name="chr_pres_pill_sfx_pre"/>
+   <WwiseEvent wwise_name="chr_pres_pill_vo"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="chr_pres_mongoose_pre" path="menu/character_presentation">
+   <WwiseEvent wwise_name="chr_pres_mongoose_sfx_pre"/>
+   <WwiseEvent wwise_name="chr_pres_mongoose_vo"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="chr_pres_kite_pre" path="menu/character_presentation">
+   <WwiseEvent wwise_name="chr_pres_kite_sfx_pre"/>
+   <WwiseEvent wwise_name="chr_pres_kite_vo"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="chr_pres_pill_pre_no_vo" path="menu/character_presentation">
+   <WwiseEvent wwise_name="chr_pres_pill_sfx_pre"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="chr_pres_mongoose_pre_no_vo" path="menu/character_presentation">
+   <WwiseEvent wwise_name="chr_pres_mongoose_sfx_pre"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="chr_pres_kite_pre_no_vo" path="menu/character_presentation">
+   <WwiseEvent wwise_name="chr_pres_kite_sfx_pre"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="chr_pres_unmute" path="menu/character_presentation">
+   <WwiseEvent wwise_name="chr_pres_unmute_sfx"/>
+   <WwiseEvent wwise_name="chr_pres_unmute_vo"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="chr_pres_strix_no_vo" path="menu/character_presentation">
+   <WwiseEvent wwise_name="chr_pres_strix_sfx"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="chr_pres_strix" path="menu/character_presentation">
+   <WwiseEvent wwise_name="chr_pres_strix_vo"/>
+   <WwiseEvent wwise_name="chr_pres_stop_all_sfx"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="chr_pres_stop_all" path="menu/character_presentation">
+   <WwiseEvent wwise_name="chr_pres_stop_all_sfx"/>
+   <WwiseEvent wwise_name="chr_pres_stop_all_vo"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="chr_pres_ram_no_vo" path="menu/character_presentation">
+   <WwiseEvent wwise_name="chr_pres_ram_sfx"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="chr_pres_ram" path="menu/character_presentation">
+   <WwiseEvent wwise_name="chr_pres_ram_vo"/>
+   <WwiseEvent wwise_name="chr_pres_stop_all_sfx"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="chr_pres_pill_no_vo" path="menu/character_presentation">
+   <WwiseEvent wwise_name="chr_pres_pill_sfx"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="chr_pres_pill" path="menu/character_presentation">
+   <WwiseEvent wwise_name="chr_pres_pill_sfx"/>
+   <WwiseEvent wwise_name="chr_pres_pill_vo"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="chr_pres_orbit_no_vo" path="menu/character_presentation">
+   <WwiseEvent wwise_name="chr_pres_orbit_sfx"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="chr_pres_orbit" path="menu/character_presentation">
+   <WwiseEvent wwise_name="chr_pres_orbit_vo"/>
+   <WwiseEvent wwise_name="chr_pres_stop_all_sfx"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="chr_pres_mute" path="menu/character_presentation">
+   <WwiseEvent wwise_name="chr_pres_mute_sfx"/>
+   <WwiseEvent wwise_name="chr_pres_mute_vo"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="chr_pres_mongoose" path="menu/character_presentation">
+   <WwiseEvent wwise_name="chr_pres_mongoose_sfx"/>
+   <WwiseEvent wwise_name="chr_pres_mongoose_vo"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="chr_pres_mongoose_no_vo" path="menu/character_presentation">
+   <WwiseEvent wwise_name="chr_pres_mongoose_sfx"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="chr_pres_malva_no_vo" path="menu/character_presentation">
+   <WwiseEvent wwise_name="chr_pres_malva_sfx"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="chr_pres_malva" path="menu/character_presentation">
+   <WwiseEvent wwise_name="chr_pres_malva_vo"/>
+   <WwiseEvent wwise_name="chr_pres_stop_all_sfx"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="chr_pres_kite" path="menu/character_presentation">
+   <WwiseEvent wwise_name="chr_pres_kite_sfx"/>
+   <WwiseEvent wwise_name="chr_pres_kite_vo"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="chr_pres_kite_no_vo" path="menu/character_presentation">
+   <WwiseEvent wwise_name="chr_pres_kite_sfx"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="chr_pres_brisa" path="menu/character_presentation">
+   <WwiseEvent wwise_name="chr_pres_brisa_vo"/>
+   <WwiseEvent wwise_name="chr_pres_stop_all_sfx"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="chr_pres_brisa_no_vo" path="menu/character_presentation">
+   <WwiseEvent wwise_name="chr_pres_brisa_sfx"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="post_instant_rewards" path="menu/achievements">
+   <WwiseEvent wwise_name="post_instant_rewards"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="task_rewards" path="menu/achievements">
+   <WwiseEvent wwise_name="task_rewards"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="weapon_level_up" path="menu/achievements">
+   <WwiseEvent wwise_name="weapon_level_up"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="task_completed" path="menu/achievements">
+   <WwiseEvent wwise_name="task_completed"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="rank_up_reward" path="menu/achievements">
+   <WwiseEvent wwise_name="rank_up_reward"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="rank_up_achieved" path="menu/achievements">
+   <WwiseEvent wwise_name="rank_up_achieved"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="rank_up" path="menu/achievements">
+   <WwiseEvent wwise_name="rank_up"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="rank_loop_stop" path="menu/achievements">
+   <WwiseEvent wwise_name="rank_loop_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="rank_loop_start" path="menu/achievements">
+   <WwiseEvent wwise_name="rank_loop_start"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="rank_app" path="menu/achievements">
+   <WwiseEvent wwise_name="rank_app"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="medal_multiplier" path="menu/achievements">
+   <WwiseEvent wwise_name="medal_multiplier"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="medal" path="menu/achievements">
+   <WwiseEvent wwise_name="medal"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="gacha_box_sfx" path="menu/achievements">
+   <WwiseEvent wwise_name="gacha_box_sfx"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="received_rewards" path="menu/achievements">
+   <WwiseEvent wwise_name="received_rewards"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="match_rewards" path="menu/achievements">
+   <WwiseEvent wwise_name="match_rewards"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="ui_menu_weapon_select" path="menu">
+   <WwiseEvent wwise_name="ui_menu_weapon_select"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="ui_menu_page_scroll_01" path="menu">
+   <WwiseEvent wwise_name="ui_menu_page_scroll_01"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="ui_menu_mouseover_02" path="menu">
+   <WwiseEvent wwise_name="ui_menu_mouseover_02"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="ui_menu_mouseover_01" path="menu">
+   <WwiseEvent wwise_name="ui_menu_mouseover_01"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="ui_menu_drop_box_01" path="menu">
+   <WwiseEvent wwise_name="ui_menu_drop_box_01"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="ui_menu_click_02" path="menu">
+   <WwiseEvent wwise_name="ui_menu_click_02"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="ui_menu_click_01" path="menu">
+   <WwiseEvent wwise_name="ui_menu_click_01"/>
+  </ATLTrigger>
+ </AudioTriggers>
+</ATLConfig>

@@ -1,0 +1,15 @@
+{
+    "script": "scripts/ui/common/season_pass_progress_widget.lua",
+    "view_path": "SeasonPassProgressWidget.html",
+    "children": 
+    [
+        {"name": "season_pass_level_value", "type": "Label", "view_path": "levelWrapper.level"},
+
+        {"name": "season_pass_progress_label", "type": "Label", "view_path": "progressWrapper.progressLabelWrapper.progressLabel"},
+        {"name": "season_pass_progress_next_reward", "type": "Label", "view_path": "progressWrapper.progressLabelWrapper.nextReward", "text": "@season_pass_next_reward"},
+
+        {"name": "season_pass_progress", "type": "ProgressBar", "view_path": "progressWrapper.progressBar", "min": 0.0, "max": 1.0},
+
+        {"name": "rewards", "type": "RewardItemsGrid", "view_path": "rewards" }
+    ]
+}

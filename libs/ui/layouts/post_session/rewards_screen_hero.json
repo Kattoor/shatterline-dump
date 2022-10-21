@@ -1,0 +1,18 @@
+{
+    "script": "",
+    "view_path": "RewardsScreenHero.html",
+    "children": [
+        {"name": "upgrade_item_title", "type": "Label", "view_path": "upgradeItem.upgradeItemBody.title", "visible": false},
+        {"name": "upgrade_item_level", "type": "Label", "view_path": "upgradeItem.upgradeItemBody.levelLabel"},
+        {"name": "upgrade_item_image", "type": "Image", "view_path": "upgradeItem.upgradeItemBody.image"},
+        {"name": "skin_image", "type": "Image", "view_path": "upgradeItem.upgradeItemBody.skinImage"},
+
+        {"name": "upgrade_item_progress_bar", "type": "ProgressBar", "view_path": "upgradeItem.doubleProgressBarContainer.doubleProgressBar"},
+
+        {"name": "item_old_progress", "type": "ProgressBar", "view_path": "upgradeItem.doubleProgressBarContainer.doubleProgressBar.wrapper.oldProgress"},
+        {"name": "item_new_progress", "type": "ProgressBar", "view_path": "upgradeItem.doubleProgressBarContainer.doubleProgressBar.wrapper.newProgress"},
+        
+        {"name": "reward_image", "type": "Image", "view_path": "reward.rewardImage"},
+        {"name": "reward_title", "type": "Label", "view_path": "reward.rewardTitle"}
+    ]
+}

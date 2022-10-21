@@ -1,0 +1,67 @@
+{
+    "name": "user_logged_in",
+    "doc": "Origin:. Emitter: backend. Emitted when player logged into the game",
+    "type": "record",
+    "fields": [
+        {
+            "name": "name",
+            "type": "string",
+            "default": "-1",
+            "doc": "unique name of the event"
+        },
+        {
+            "name": "pid",
+            "type": "long",
+            "default": -1,
+            "doc": "namespace-unique identifier of a player"
+        },
+        {
+            "name": "ts",
+            "type": "string",
+            "default": "-1",
+            "doc": "ISO8601 UTC timestamp of the event invocation"
+        },
+        {
+            "name": "sid",
+            "type": "string",
+            "default": "-1",
+            "doc": "global-unique identifier of the player's login session (time between login and logout)"
+        },
+        {
+            "name": "country",
+            "type": "string",
+            "default": "-1",
+            "doc": "player country"
+        },
+        {
+            "name": "region",
+            "type": "string",
+            "default": "-1",
+            "doc": "region name"
+        },
+        {
+            "name": "ns",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace of the server's deployment (realm)"
+        },
+        {
+            "name": "test_name",
+            "type": "string",
+            "default": "-1",
+            "doc": "user assigned name of a/b test"
+        },
+        {
+            "name": "test_group",
+            "type": "string",
+            "default": "-1",
+            "doc": "user assigned a/b test group name"
+        },
+        {
+            "name": "platform_type",
+            "type": "string",
+            "default": "-1",
+            "doc": "platform type as wg, xbox, psn, steam"
+        }
+    ]
+}

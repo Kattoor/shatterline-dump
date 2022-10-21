@@ -1,0 +1,14 @@
+{
+    "script": "",
+    "view_path": "StrategicView.html",
+    "hide_cursor": true,
+    "children":
+    [
+        {"name": "actionLabel", "type": "ActionLabel", "view_path": "container.keyLabel"},
+        {"name": "progressbar", "type": "ProgressBar", "view_path": "container.progressbar"},
+
+        {"name": "ultimate_ability", "type": "TacticalAbility", "file": "hud/strategic_ability.json", "view_path": "container.abilities.ability1"},
+        {"name": "ability_1", "type": "TacticalAbility", "file": "hud/strategic_ability.json", "view_path": "container.abilities.ability2"},
+        {"name": "ability_2", "type": "TacticalAbility", "file": "hud/strategic_ability.json", "view_path": "container.abilities.ability3"}
+    ]
+}

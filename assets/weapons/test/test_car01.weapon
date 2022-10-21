@@ -1,0 +1,98 @@
+{
+    "shooting": {
+        "rpm": 290.0,
+        "clip_capacity": 12,
+        "backpack_capacity": 240,
+        "chamber_capacity": 1,
+        "chambers_fired_per_shot": 1,
+        "auto_reload_mode": "Chamber",
+        "hit_feedback": "server",
+        "base_damage_distribution": {
+            "points": [
+                {
+                    "distance": 45.0,
+                    "damage": 60.0
+                },
+                {
+                    "distance": 60.0,
+                    "damage": 49.0
+                }
+            ]
+        },
+        "head_damage_distribution": {
+            "points": [
+                {
+                    "distance": 60.0,
+                    "damage": 105.0
+                },
+                {
+                    "distance": 70.0,
+                    "damage": 70.0
+                }
+            ]
+        },
+        "reload": {
+            "reload_time": 2.6,
+            "reload_out_complete_threshold": 0.7,
+            "reload_in_complete_threshold": 0.7
+        }
+    },
+    "recoil": {
+        "max_vertical_angle": 30.0,
+        "kick_time": 0.15,
+        "decay_time": 0.4,
+        "decay_delay": 0.08,
+        "recoil_points": [
+            {
+                "num": 1,
+                "angle": {
+                    "min": -30.0,
+                    "max": 50.0
+                },
+                "force": {
+                    "min": 0.7,
+                    "max": 1.4
+                }
+            }
+        ]
+    },
+    "spread": {
+        "min_hip_spread": 5.0,
+        "max_hip_spread": 18.0,
+        "hip_step": 1.6,
+        "decay_time": 0.4,
+        "decay_delay": 0.1,
+        "stand_multiplier": 0.3,
+        "walk_multiplier": 0.45,
+        "zoom_multiplier": 0.01,
+        "jump_multiplier": 2.0,
+        "crouch_multiplier": 0.4,
+        "crouch_idle_multiplier": 0.4,
+        "slide_multiplier": 0.6
+    },
+    "zoom": {
+        "zoom_fov": 45.0,
+        "weapon_fov": 20.0,
+        "zoom_in_time": 0.26,
+        "zoom_out_time": 0.25,
+        "delay_after_jump": 0.3,
+        "in_air": false,
+        "hide_crosshair": true,
+        "sniper_scope": false,
+        "scope_aiming_offset_forward": 0.0,
+        "scope_aiming_treshold": 0.5,
+        "blur_amount": 0.0,
+        "scope_grid_default_scale": 0.4,
+        "scope_grid_shot_max_scale": 0.5,
+        "scope_grid_scale_lerp_time": 0.15,
+        "scope_grid": "objects/weaponry/attachments/rds/rds01/textures/rds01_grid.tif"
+    },
+    "selection": {
+        "selection_duration": 0.4,
+        "deselection_duration": 0.33
+    },
+    "common": {
+        "item_tag": "PT"
+    },
+    "muzzle_sight_distance": 1.2
+}

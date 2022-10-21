@@ -1,0 +1,358 @@
+{
+    "name": "Shardskin/Healing",
+    "root": "ab70a778-0c83-42c8-80ad-064bb0513b9d",
+    "nodes": {
+        "035162e0-6bc0-4a4b-8da1-874eae810fb4": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 185
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Healing"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "78df9ee7-5272-4163-848a-1b528212851e"
+        },
+        "911cbaee-f7e0-458b-a266-6196dcb76d37": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 145,
+                "y": 575
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "Healing"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "8d5f25d9-099e-4686-ae22-f3ddf5efb6dd"
+        },
+        "dfe38395-87c3-4229-b3de-a0289a4675eb": {
+            "name": "ApproachToKeepDistance",
+            "pos": {
+                "x": -355,
+                "y": 1233
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Destination",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "Distance",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "heal_distance_from_target"
+                    ]
+                },
+                {
+                    "name": "DistanceDeviationMin",
+                    "type": "Float",
+                    "value": "0.00"
+                },
+                {
+                    "name": "DistanceDeviationMax",
+                    "type": "Float",
+                    "value": "0.00"
+                },
+                {
+                    "name": "MoveBackDirectionRandomization",
+                    "type": "Float",
+                    "value": "15"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "c0781ae2-00ca-4679-b8f8-79340f118915": {
+            "name": "Heal",
+            "pos": {
+                "x": 295,
+                "y": 824
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "HP",
+                    "type": "Float",
+                    "value": "0.00"
+                },
+                {
+                    "name": "Rate",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "heal_hp_per_second"
+                    ]
+                },
+                {
+                    "name": "Timeout",
+                    "type": "Float",
+                    "value": "0.00"
+                },
+                {
+                    "name": "InvulnerabilityDuration",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "healing_invul_duration"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "8d5f25d9-099e-4686-ae22-f3ddf5efb6dd": {
+            "name": "Sequence",
+            "pos": {
+                "x": 145,
+                "y": 689
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "fba0bf1b-4b89-4d98-9cc9-c6144c956a3f",
+                "c0781ae2-00ca-4679-b8f8-79340f118915"
+            ]
+        },
+        "a1517232-6c00-446a-89fa-ad087241c72a": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 452
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "d9541503-f1ae-4d22-9347-7d506ed5e501",
+                "911cbaee-f7e0-458b-a266-6196dcb76d37"
+            ]
+        },
+        "f9ace086-9c03-4b21-9a18-8b69c6bcd7f6": {
+            "name": "TargetInHorizontalRange",
+            "pos": {
+                "x": -275,
+                "y": 880
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Source",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "Min",
+                    "type": "Float",
+                    "value": "0"
+                },
+                {
+                    "name": "Max",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "heal_distance_from_target"
+                    ]
+                },
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Fail"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "4c40a134-f2bb-4959-8c79-aa6652d69b91"
+        },
+        "ab70a778-0c83-42c8-80ad-064bb0513b9d": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 76
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "MoveBackForHeal"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "035162e0-6bc0-4a4b-8da1-874eae810fb4"
+        },
+        "6093fd71-a4fb-4a28-92d3-de5724af939d": {
+            "name": "IsTargetPerceivedAndVisible",
+            "pos": {
+                "x": -275,
+                "y": 730
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Variant",
+                    "type": "StringHash",
+                    "value": "OnEnter"
+                },
+                {
+                    "name": "OnFalse",
+                    "type": "StringHash",
+                    "value": "Succeed"
+                },
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Conditional",
+            "child": "f9ace086-9c03-4b21-9a18-8b69c6bcd7f6"
+        },
+        "78df9ee7-5272-4163-848a-1b528212851e": {
+            "name": "StopFireAndRestoreOnExit",
+            "pos": {
+                "x": 0,
+                "y": 323
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "a1517232-6c00-446a-89fa-ad087241c72a"
+        },
+        "d9541503-f1ae-4d22-9347-7d506ed5e501": {
+            "name": "Succeeder",
+            "pos": {
+                "x": -140,
+                "y": 574
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "6093fd71-a4fb-4a28-92d3-de5724af939d"
+        },
+        "840847fe-dccf-4726-8242-87131b563e34": {
+            "name": "Wait",
+            "pos": {
+                "x": 95,
+                "y": 1236
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "max_time_go_to_heal_range"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "4c40a134-f2bb-4959-8c79-aa6652d69b91": {
+            "name": "ParallelUntilAnyComplete",
+            "pos": {
+                "x": -30,
+                "y": 1111
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "dfe38395-87c3-4229-b3de-a0289a4675eb",
+                "840847fe-dccf-4726-8242-87131b563e34"
+            ]
+        },
+        "fba0bf1b-4b89-4d98-9cc9-c6144c956a3f": {
+            "name": "StartTimer",
+            "pos": {
+                "x": 10,
+                "y": 823
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "TimerName",
+                    "type": "StringHash",
+                    "value": "Heal"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

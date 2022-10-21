@@ -1,0 +1,13 @@
+{
+    "script": "scripts/ui/test_subtitles.lua",
+    "view_path": "",
+    "hide_cursor": false,
+    "children":
+    [
+        {"name": "subtitles", "type": "SubtitlesPanel", "file": "hud/subtitles.json"},
+        
+        {"name": "show_short_sub_btn", "type": "Button", "x": 10, "y": 10},
+        {"name": "show_long_sub_btn", "type": "Button", "x": 10, "y": 55},
+        {"name": "stop_sub_btn", "type": "Button", "x": 10, "y": 100}
+    ]
+}

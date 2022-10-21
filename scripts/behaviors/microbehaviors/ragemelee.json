@@ -1,0 +1,199 @@
+{
+    "name": "Microbehaviors/RageMelee",
+    "root": "27a7ea4c-22b1-48a8-ab7c-0c18c3451f26",
+    "nodes": {
+        "ab4e5e04-49a6-4403-b71c-8fb8a2b1bcb5": {
+            "name": "Play Animation",
+            "pos": {
+                "x": 305,
+                "y": 789
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "AnimationName",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Microbehaviors",
+                        "Params",
+                        "animation"
+                    ]
+                },
+                {
+                    "name": "IsLooped",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Duration",
+                    "type": "Float",
+                    "value": "0.00"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "79f24567-bdf3-4310-a2db-14d2fd56ce57": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 323
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "46125716-970c-4706-b75f-63c32ff878f3",
+                "31ac7b77-9887-472d-aac1-02cf0bbdc884"
+            ]
+        },
+        "766add0a-f644-4b4b-ac0d-bfa3dd706c72": {
+            "name": "Sequence",
+            "pos": {
+                "x": 115,
+                "y": 578
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "380f0854-df01-4de4-9009-89188b021347",
+                "ab4e5e04-49a6-4403-b71c-8fb8a2b1bcb5"
+            ]
+        },
+        "27a7ea4c-22b1-48a8-ab7c-0c18c3451f26": {
+            "name": "ResetCurrentMicrobehaviorOnExit",
+            "pos": {
+                "x": 0,
+                "y": 103
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "ea5e9eb2-1241-48a8-8176-34af24159910"
+        },
+        "380f0854-df01-4de4-9009-89188b021347": {
+            "name": "SpawnSliceEntityTransform",
+            "pos": {
+                "x": -85,
+                "y": 788
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Slice",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Microbehaviors",
+                        "Params",
+                        "slice"
+                    ]
+                },
+                {
+                    "name": "EntityTransform",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "EntityOwner",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "lifetime",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Microbehaviors",
+                        "Params",
+                        "lifetime"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "ea5e9eb2-1241-48a8-8176-34af24159910": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 202
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "RageMelee"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "79f24567-bdf3-4310-a2db-14d2fd56ce57"
+        },
+        "46125716-970c-4706-b75f-63c32ff878f3": {
+            "name": "ExactBodyRotateTo",
+            "pos": {
+                "x": -165,
+                "y": 461
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Target",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Target",
+                        "ID"
+                    ]
+                },
+                {
+                    "name": "DegreesPerSecond",
+                    "type": "Float",
+                    "value": "360"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "31ac7b77-9887-472d-aac1-02cf0bbdc884": {
+            "name": "DisableMovementAndRestoreOnExit",
+            "pos": {
+                "x": 115,
+                "y": 461
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "766add0a-f644-4b4b-ac0d-bfa3dd706c72"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

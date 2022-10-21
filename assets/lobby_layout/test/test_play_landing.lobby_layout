@@ -1,0 +1,35 @@
+{
+    "name": "test_play_landing",
+    "items":
+    [
+        {
+            "enabled": true,
+            "type": "common",
+            "ui_path": "play_popup",
+            "param": "pve",
+            "title_token": "@pve_mode_label",
+            "subtitle_token": "@coop_mode_title",
+            "image1": "test_icon",
+            "marker_token": "@play_badge_token_new"
+        },
+        {
+            "enabled": true,
+            "type": "common",
+            "ui_path": "play_popup",
+            "param": "pvp",
+            "title_token": "@pvp_mode_label",
+            "subtitle_token": "@vs_players_message",
+            "image1": ""
+        },
+        {
+            "enabled": true,
+            "type": "common",
+            "ui_path": "play_popup",
+            "param": "invasion",
+            "title_token": "@hybrid_label",
+            "subtitle_token": "@hybrid_subtitle",
+            "image1": "test_icon",
+            "reduced": true
+        }
+    ]
+}

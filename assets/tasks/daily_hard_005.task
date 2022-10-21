@@ -1,0 +1,37 @@
+{
+  "name": "daily_hard_005",
+  "type": "daily",
+  "tags": [
+    "daily_hard"
+  ],
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "legendary",
+  "display_name": { "localization_key": "@daily_hard_005_name" },
+  "description": { "localization_key": "@daily_hard_005_description" },
+  "conditions": [
+    {
+      "name": "daily_hard_005",
+      "event_description": { "localization_key": "@daily_hard_005_event_description" },
+      "event": { "event_id": "Kill", "actor_is_me": true, "actor_stance_is": ["Crouch"], "actor_item_tag_is": ["PT"], "game_type_is": ["pvp"]},
+      "progress": 1
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 400
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 300
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 15
+    }
+  ]
+}

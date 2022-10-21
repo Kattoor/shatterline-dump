@@ -1,0 +1,13 @@
+{
+    "script": "scripts/ui/lobby/outfit_slot.lua",
+    "view_path": "HeroOutfitButton.html",
+    "children":
+    [
+        {"name": "recent_icon", "type": "Component", "view_path": "recentIcon", "visible": false},
+        
+        {"name": "slot_name", "type": "Label", "view_path": "label"},
+        {"name": "item_image", "type": "Image", "view_path": "image"},
+        {"name": "skin_image", "type": "Image", "view_path": "skinImage"},
+        {"name": "item_rarity", "type": "Label", "view_path": "rarity"}
+    ]
+}

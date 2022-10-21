@@ -1,0 +1,298 @@
+{
+    "name": "Behemoth/ShockwaveAttack",
+    "root": "5fcc39cc-d9ec-41f8-8d90-420441047000",
+    "nodes": {
+        "83022ee9-dd27-44ce-ac04-274dc9e25c02": {
+            "name": "Success",
+            "pos": {
+                "x": -260,
+                "y": 732
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "2fff9185-51f3-46c6-ba21-ed0482c52520": {
+            "name": "InitializeVariable",
+            "pos": {
+                "x": -575,
+                "y": 354
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "RepeatCount"
+                },
+                {
+                    "name": "Type",
+                    "type": "StringHash",
+                    "value": "Float"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "2f57f5f7-f4ef-44ce-af29-4d6c7c489dc6": {
+            "name": "WaitRandom",
+            "pos": {
+                "x": 85,
+                "y": 615
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "MinWaitTime",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "shockwave_repeats_delay_min"
+                    ]
+                },
+                {
+                    "name": "MaxWaitTime",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "shockwave_repeats_delay_max"
+                    ]
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "b3196410-cc6d-4f4c-9771-d963835b01fc": {
+            "name": "Sequence",
+            "pos": {
+                "x": 175,
+                "y": 481
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "710437f2-ed33-41d5-847f-493e50b2a42b",
+                "2f57f5f7-f4ef-44ce-af29-4d6c7c489dc6",
+                "644dd695-d237-4d61-81b6-f062bcd506d9",
+                "56a432db-d44b-46b3-9fbc-aeb07232bd18"
+            ]
+        },
+        "5fcc39cc-d9ec-41f8-8d90-420441047000": {
+            "name": "EnterDebugState",
+            "pos": {
+                "x": 0,
+                "y": 99
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "ShockwaveAttack"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "7f3866fc-0813-4e40-9ab3-229e5fb3b897"
+        },
+        "ee3d0158-f620-4301-9490-4a97d7e71107": {
+            "name": "GenerateRandomFloat",
+            "pos": {
+                "x": -290,
+                "y": 354
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Min",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "shockwave_repeat_count_min"
+                    ]
+                },
+                {
+                    "name": "Max",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Gai",
+                        "Behavior",
+                        "shockwave_repeat_count_max"
+                    ]
+                },
+                {
+                    "name": "Scale",
+                    "type": "Float",
+                    "value": "1.00"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Result",
+                    "type": "Variable",
+                    "value": [
+                        "RepeatCount"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "56a432db-d44b-46b3-9fbc-aeb07232bd18": {
+            "name": "GreaterThanNow",
+            "pos": {
+                "x": 595,
+                "y": 615
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Invert",
+                    "type": "Boolean",
+                    "value": "false"
+                },
+                {
+                    "name": "Lhs",
+                    "type": "Variable",
+                    "value": [
+                        "RepeatCount"
+                    ]
+                },
+                {
+                    "name": "Rhs",
+                    "type": "Float",
+                    "value": "0.5"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "7c33d726-0587-4ee6-8efa-cbcace7fe8c9": {
+            "name": "Wait",
+            "pos": {
+                "x": 0,
+                "y": 354
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "WaitTime",
+                    "type": "Float",
+                    "value": "0.5"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
+        "710437f2-ed33-41d5-847f-493e50b2a42b": {
+            "name": "CallSubtree",
+            "pos": {
+                "x": -259.0150144832836,
+                "y": 618.5135817055315
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Label",
+                    "type": "StringHash",
+                    "value": "ShockwaveAttackSingle"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "83022ee9-dd27-44ce-ac04-274dc9e25c02"
+        },
+        "f15c258d-cc60-45c8-89a4-8e3e27670d4b": {
+            "name": "RepeatUntilFails",
+            "pos": {
+                "x": 175,
+                "y": 354
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Iterations",
+                    "type": "Integer",
+                    "value": "0"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "b3196410-cc6d-4f4c-9771-d963835b01fc"
+        },
+        "644dd695-d237-4d61-81b6-f062bcd506d9": {
+            "name": "Subtract",
+            "pos": {
+                "x": 395,
+                "y": 615
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "InputA",
+                    "type": "Variable",
+                    "value": [
+                        "RepeatCount"
+                    ]
+                },
+                {
+                    "name": "InputB",
+                    "type": "Float",
+                    "value": "1"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Result",
+                    "type": "Variable",
+                    "value": [
+                        "RepeatCount"
+                    ]
+                }
+            ],
+            "family": "Leaf"
+        },
+        "7f3866fc-0813-4e40-9ab3-229e5fb3b897": {
+            "name": "Sequence",
+            "pos": {
+                "x": 0,
+                "y": 225
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "FlowControl",
+            "children": [
+                "2fff9185-51f3-46c6-ba21-ed0482c52520",
+                "ee3d0158-f620-4301-9490-4a97d7e71107",
+                "7c33d726-0587-4ee6-8efa-cbcace7fe8c9",
+                "f15c258d-cc60-45c8-89a4-8e3e27670d4b"
+            ]
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

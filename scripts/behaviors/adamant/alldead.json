@@ -1,0 +1,65 @@
+{
+    "name": "Adamant/AllDead",
+    "root": "ba91434e-b20e-45f3-88cf-4147c7acc923",
+    "nodes": {
+        "ba91434e-b20e-45f3-88cf-4147c7acc923": {
+            "name": "SetBehaviorConditionOnExit",
+            "pos": {
+                "x": 0,
+                "y": 79
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Name",
+                    "type": "StringHash",
+                    "value": "AllDead"
+                },
+                {
+                    "name": "Value",
+                    "type": "Boolean",
+                    "value": "false"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "51fcbbd2-92a6-4cf9-9929-350207ec9d1b"
+        },
+        "51fcbbd2-92a6-4cf9-9929-350207ec9d1b": {
+            "name": "EraseBBValueByPathOnExit",
+            "pos": {
+                "x": 0,
+                "y": 214
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "BB Path",
+                    "type": "StringHash",
+                    "value": "Gai.VictoryBehavior"
+                }
+            ],
+            "outputs": [],
+            "family": "Decorator",
+            "child": "176c65cf-5253-4caf-8d0a-0c5ca2843f97"
+        },
+        "176c65cf-5253-4caf-8d0a-0c5ca2843f97": {
+            "name": "Success",
+            "pos": {
+                "x": 0,
+                "y": 323
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [],
+            "outputs": [],
+            "family": "Leaf"
+        }
+    },
+    "inputs": [],
+    "outputs": [],
+    "comments": [],
+    "commentOrder": []
+}

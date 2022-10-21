@@ -1,0 +1,11 @@
+{
+    "script": "scripts/ui/lobby/inbox.lua",
+    "view_path": "Inbox.html",
+    "children": [
+        {"name": "subtab_menu", "type": "Component", "file": "lobby/subtab_menu.json"},
+        
+        {"name": "inbox_grid", "type": "Component", "view_path": "gridContainer.grid"},
+        {"name": "inbox_container", "type": "Component", "view_path": "gridContainer.grid.container.wrapper", "file": "common/skip_focus_container.json"}
+
+    ]
+}

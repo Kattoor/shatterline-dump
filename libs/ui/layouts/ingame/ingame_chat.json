@@ -1,0 +1,11 @@
+{
+    "script": "scripts/ui/ingame_chat.lua",
+    "view_path": "Chat.html",
+    "hide_cursor": true,
+    "children":
+    [
+        {"name": "interaction_part", "type": "Component", "file": "ingame/ingame_chat_interaction.json", "view_path": "input", "visible": false},
+        
+        {"name": "chat_message", "type": "Label", "view_path": "output"}
+    ]
+}

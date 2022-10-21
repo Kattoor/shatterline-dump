@@ -1,0 +1,607 @@
+<profile version="1">
+
+  <!-- platforms - Used to define which keys to map for each action based on the platform that is in use -->
+  <platforms>
+    <PC keyboard="1" xboxpad="1" ps4pad="0" androidkey="0"/>
+    <PS4 keyboard="1" xboxpad="0" ps4pad="1"/>
+    <Xbone keyboard="1" xboxpad="1" ps4pad="0"/>
+  </platforms>
+
+  <!-- default - Default action key mappings -->
+  <actionmap name="default">
+    <action name="open_chat" onPress="0" onHold="0" onRelease="1" retriggerable="0" keyboard="insert"/>
+    <action name="open_chat_secondary" onPress="0" onHold="0" onRelease="1" retriggerable="0" keyboard="insert"/>
+  </actionmap>
+
+  <actionmap name="debug">
+    <action name="ui_reload_components" onPress="1" keyboard="f5" consoleCmd="1"/>
+    <action name="ui_reload_all" onPress="1" keyboard="f6" consoleCmd="1"/>
+
+    <action name="tp_view" onPress="1" keyboard="f1"/>
+    <action name="linked_camera" onPress="1" keyboard="f2"/>
+    <action name="free_camera" onPress="1" keyboard="f3"/>
+    <action name="fly_mode" onPress="1" keyboard="f4"/>
+
+    <action name="select_attachment_0" onPress="1" onRelease="0" retriggerable="0" keyboard="6"/>
+    <action name="select_attachment_1" onPress="1" onRelease="0" retriggerable="0" keyboard="7"/>
+    <action name="select_attachment_2" onPress="1" onRelease="0" retriggerable="0" keyboard="8"/>
+    <action name="select_attachment_3" onPress="1" onRelease="0" retriggerable="0" keyboard="9"/>
+    <action name="select_attachment_4" onPress="1" onRelease="0" retriggerable="0" keyboard="0"/>
+    <action name="deselect_attachments" onPress="1" onRelease="0" retriggerable="0" keyboard="minus"/>
+  </actionmap>
+
+  <actionmap name="login">
+    <action name="login_confirm" onPress="1" onRelease="0" retriggerable="0" keyboard="enter" xboxpad="xi_a" ps4pad="pad_cross"/>
+  </actionmap>
+
+  <actionfilter name="message_box" type="actionFail">
+    <action name="login_confirm"/>
+  </actionfilter>
+
+  <actionmap name="nonblocking_message">
+    <action name="action_1" onPress="1" onRelease="0" retriggerable="0" keyboard="y" xboxpad="xi_thumbl" ps4pad="pad_l3"/>
+    <action name="action_2" onPress="1" onRelease="0" retriggerable="0" keyboard="n" xboxpad="xi_thumbr" ps4pad="pad_r3"/>
+  </actionmap>
+
+  <actionmap name="player_inactive">
+  </actionmap>
+
+  <actionmap name="player_dead">
+    <action name="revive" onPress="1" onRelease="0" retriggerable="0" keyboard="space" xboxpad="xi_a" ps4pad="pad_cross"/>
+  </actionmap>
+
+  <actionmap name="player_preround">
+    <action name="rotate_yaw" keyboard="maxis_x"/>
+    <action name="rotate_pitch" keyboard="maxis_y"/>
+    <action name="gamepad_rotate_yaw" xboxpad="xi_thumbrx" ps4pad="pad_stickrx"/>
+    <action name="gamepad_rotate_pitch" xboxpad="xi_thumbry" ps4pad="pad_stickry"/>
+  </actionmap>
+
+  <actionmap name="spawner_ability">
+    <action name="spawn_ability_shoot" onPress="1" onRelease="0" retriggerable="0" keyboard="mouse1" xboxpad="xi_a" ps4pad="pad_cross"/>
+    <action name="spawn_ability_abort" onPress="1" onRelease="0" retriggerable="0" keyboard="mouse2" xboxpad="xi_b" ps4pad="pad_circle"/>
+  </actionmap>
+
+  <actionmap name="player">
+    <!-- USER DEFINED -->
+    <!-- Weapon -->
+    <!-- Hold here causes shot after class change, no hold - not shooting after usable usage -->
+    <action name="fire" onPress="1" onRelease="1" onHold="1" retriggerable="0" keyboard="mouse1" xboxpad="xi_triggerr" ps4pad="pad_r2"/>
+    <action name="fire_secondary" onPress="1" onRelease="1" onHold="1" retriggerable="0" keyboard="mouse1"/>
+    <action name="zoom" onPress="1" onHold="1" onRelease="1" keyboard="mouse2"/>
+    <action name="zoom_secondary" onPress="1" onHold="1" onRelease="1" keyboard="mouse2"/>
+    <action name="gamepad_zoom" xboxpad="xi_triggerl" ps4pad="pad_l2"/>
+    <action name="reload" onPress="1" onRelease="0" retriggerable="0" keyboard="r" xboxpad="xi_x" ps4pad="pad_square"/>
+    <action name="reload_secondary" onPress="1" onRelease="0" retriggerable="0" keyboard="r"/>
+
+    <!-- Inventory -->
+    <action name="select_item_slot_primary_weapon" onPress="1" onRelease="0" retriggerable="0" keyboard="1" xboxpad="xi_y" ps4pad="pad_triangle"/>
+    <action name="select_item_slot_primary_weapon_secondary" onPress="1" onRelease="0" retriggerable="0" keyboard="1"/>
+    <action name="select_item_slot_power_weapon" onPress="1" onRelease="0" retriggerable="0" keyboard="3" xboxpad="xi_dpad_right" ps4pad="pad_right"/>
+    <action name="select_item_slot_secondary_weapon" onPress="1" onRelease="0" retriggerable="0" keyboard="2" xboxpad="xi_y" ps4pad="pad_triangle"/>
+    <action name="select_item_slot_secondary_weapon_secondary" onPress="1" onRelease="0" retriggerable="0" keyboard="2"/>
+    <action name="select_item_slot_reserved" onPress="1" onRelease="0" retriggerable="0" keyboard="4"/>
+
+    <action name="select_item_prev" onPress="1" keyboard="mwheel_up"/>
+    <action name="select_item_prev_secondary" onPress="1" keyboard="mwheel_up"/>
+    <action name="select_item_next" onPress="1" keyboard="mwheel_down" xboxpad="xi_y" ps4pad="pad_triangle"/>
+    <action name="select_item_next_secondary" onPress="1" keyboard="mwheel_down"/>
+
+    <!-- Movement -->
+    <action name="move_left" onPress="1" onHold="1" onRelease="1" retriggerable="0" keyboard="a"/>
+    <action name="move_left_secondary" onPress="1" onHold="1" onRelease="1" retriggerable="0" keyboard="a"/>
+    <action name="move_right" onPress="1" onHold="1" onRelease="1" retriggerable="0" keyboard="d"/>
+    <action name="move_right_secondary" onPress="1" onHold="1" onRelease="1" retriggerable="0" keyboard="d"/>
+    <action name="move_forward" onPress="1" onHold="1" onRelease="1" retriggerable="0" keyboard="w"/>
+    <action name="move_forward_secondary" onPress="1" onHold="1" onRelease="1" retriggerable="0" keyboard="w"/>
+    <action name="move_back" onPress="1" onHold="1" onRelease="1" retriggerable="0" keyboard="s"/>
+    <action name="move_back_secondary" onPress="1" onHold="1" onRelease="1" retriggerable="0" keyboard="s"/>
+    <action name="rotate_yaw" keyboard="maxis_x"/>
+    <action name="rotate_pitch" keyboard="maxis_y"/>
+    <action name="jump" onPress="1" onRelease="0" retriggerable="0" keyboard="space" xboxpad="xi_a" ps4pad="pad_cross"/>
+    <action name="jump_secondary" onPress="1" onRelease="0" retriggerable="0" keyboard="space"/>
+    <action name="crouch" onPress="1" onRelease="1" onHold="1" retriggerable="0" keyboard="lctrl"/>
+    <action name="crouch_secondary" onPress="1" onRelease="1" onHold="1" retriggerable="0" keyboard="rctrl"/>
+    <action name="gamepad_crouch" onPress="1" onRelease="1" onHold="1" retriggerable="0" xboxpad="xi_b" ps4pad="pad_circle"/>
+    <action name="sprint" onPress="1" onRelease="1" onHold="0" retriggerable="0" keyboard="lshift"/>
+    <action name="sprint_secondary" onPress="1" onRelease="1" onHold="0" retriggerable="0" keyboard="rshift"/>
+    <action name="gamepad_sprint" onPress="1" onRelease="1" xboxpad="xi_thumbl" ps4pad="pad_l3"/>
+
+    <action name="gamepad_move_forward" xboxpad="xi_thumbly" ps4pad="pad_stickly"/>
+    <action name="gamepad_move_right" xboxpad="xi_thumblx" ps4pad="pad_sticklx"/>
+    <action name="gamepad_rotate_yaw" xboxpad="xi_thumbrx" ps4pad="pad_stickrx"/>
+    <action name="gamepad_rotate_pitch" xboxpad="xi_thumbry" ps4pad="pad_stickry"/>
+
+    <!-- Actions -->
+    <action name="use" onPress="1" onRelease="1" onHold="1" retriggerable="0" keyboard="e" xboxpad="xi_x" ps4pad="pad_square"/>
+    <action name="use_secondary" onPress="1" onRelease="1" onHold="1" retriggerable="0" keyboard="e"/>
+    <action name="quick_melee" onPress="1" onRelease="1" onHold="0" retriggerable="0" keyboard="v" xboxpad="xi_thumbr" ps4pad="pad_r3"/>
+    <action name="quick_melee_secondary" onPress="1" onRelease="1" onHold="0" retriggerable="0" keyboard="v"/>
+    <action name="spot" onPress="1" onRelease="1" onHold="0" retriggerable="0" keyboard="mouse3" xboxpad="xi_dpad_up" ps4pad="pad_up"/>
+    <action name="spot_secondary" onPress="1" onRelease="1" onHold="0" retriggerable="0" keyboard="mouse3"/>
+
+    <action name="select_item_slot_special_weapon" onPress="1" onHold="1" onRelease="0" retriggerable="1" keyboard="q" xboxpad="xi_shoulderl+xi_shoulderr" ps4pad="pad_l1+pad_r1"/>
+    <action name="select_item_slot_special_weapon_secondary" onPress="1" onHold="1" onRelease="0" retriggerable="1" keyboard="q"/>
+    <action name="toss_grenade_1" onPress="1" onRelease="1" onHold="0" retriggerable="0" keyboard="f" xboxpad="xi_shoulderl" ps4pad="pad_l1"/>
+    <action name="toss_grenade_1_secondary" onPress="1" onRelease="1" onHold="0" retriggerable="0" keyboard="f"/>
+    <action name="toss_grenade_2" onPress="1" onRelease="1" onHold="0" retriggerable="0" keyboard="g" xboxpad="xi_shoulderr" ps4pad="pad_r1"/>
+    <action name="toss_grenade_2_secondary" onPress="1" onRelease="1" onHold="0" retriggerable="0" keyboard="g"/>
+    <action name="toss_grenade_3" onPress="1" onRelease="1" onHold="0" retriggerable="0" keyboard="h"/>
+    <action name="toss_grenade_4" onPress="1" onRelease="1" onHold="0" retriggerable="0" keyboard="j"/>
+  </actionmap>
+
+  <actionmap name="player_tactical_actions">
+    <action name="select_item_slot_tactical_special_weapon" onPress="1" onHold="1" onRelease="0" retriggerable="1" keyboard="q" xboxpad="xi_shoulderl+xi_shoulderr" ps4pad="pad_l1+pad_r1"/>
+    <action name="toss_tactical_1" onPress="1" onRelease="1" onHold="0" retriggerable="0" keyboard="g" xboxpad="xi_shoulderl" ps4pad="pad_l1"/>
+    <action name="toss_tactical_2" onPress="1" onRelease="1" onHold="0" retriggerable="0" keyboard="f" xboxpad="xi_shoulderr" ps4pad="pad_r1"/>
+    <action name="toss_tactical_3" onPress="1" onRelease="1" onHold="0" retriggerable="0" keyboard="h" xboxpad="xi_dpad_right" ps4pad="pad_right"/>
+    <action name="toss_tactical_4" onPress="1" onRelease="1" onHold="0" retriggerable="0" keyboard="j" xboxpad="xi_dpad_left" ps4pad="pad_left"/>
+
+    <action name="tactical_mode" onPress="1" onRelease="0" retriggerable="0" keyboard="c" xboxpad="xi_dpad_down" ps4pad="pad_down"/>
+    <action name="tactical_mode_secondary" onPress="1" onRelease="0" retriggerable="0" keyboard="c"/>
+    <action name="leave_tactical_mode" onPress="0" onRelease="1" retriggerable="0" keyboard="escape" xboxpad="xi_start" ps4pad="pad_start"/>
+    <action name="leave_tactical_mode_alternative" onPress="0" onRelease="1" retriggerable="0" xboxpad="xi_b" ps4pad="pad_circle"/>
+  </actionmap>
+
+  <actionfilter name="player_tactical_active_filter" type="actionFail"> <!-- used only for non-permanent tactical mode -->
+    <action name="toggle_esc_menu"/>
+    <action name="toggle_esc_menu_editor"/>
+  </actionfilter>
+
+  <actionfilter name="player_tactical_inactive_filter" type="actionFail"> <!-- used only for non-permanent tactical mode -->
+    <action name="select_item_slot_tactical_special_weapon"/>
+    <action name="toss_tactical_1"/>
+    <action name="toss_tactical_2"/>
+    <action name="toss_tactical_3"/>
+    <action name="toss_tactical_4"/>
+    <action name="leave_tactical_mode"/>
+    <action name="leave_tactical_mode_alternative"/>
+  </actionfilter>
+
+  <actionmap name="spectator">
+    <action name="next_player" onPress="1" onRelease="0" retriggerable="0" keyboard="mouse1" xboxpad="xi_shoulderl" ps4pad="pad_l1"/>
+    <action name="prev_player" onPress="1" onRelease="0" retriggerable="0" keyboard="mouse2" xboxpad="xi_shoulderr" ps4pad="pad_r1"/>
+  </actionmap>
+
+  <actionmap name="orbit_cam">
+    <action name="rotate_yaw" keyboard="maxis_x"/>
+    <action name="rotate_pitch" keyboard="maxis_y"/>
+    <action name="gamepad_rotate_yaw" xboxpad="xi_thumbrx" ps4pad="pad_stickrx"/>
+    <action name="gamepad_rotate_pitch" xboxpad="xi_thumbry" ps4pad="pad_stickry"/>
+  </actionmap>
+
+  <actionmap name="rts_cam">
+    <action name="rotate_yaw" keyboard="maxis_x"/>
+    <action name="rotate_pitch" keyboard="maxis_y"/>
+    <action name="gamepad_rotate_yaw" xboxpad="xi_thumbrx" ps4pad="pad_stickrx"/>
+    <action name="gamepad_rotate_pitch" xboxpad="xi_thumbry" ps4pad="pad_stickry"/>
+
+    <action name="move_left" onPress="1" onHold="1" onRelease="1" retriggerable="0" keyboard="a"/>
+    <action name="move_right" onPress="1" onHold="1" onRelease="1" retriggerable="0" keyboard="d"/>
+    <action name="move_forward" onPress="1" onHold="1" onRelease="1" retriggerable="0" keyboard="w"/>
+    <action name="move_back" onPress="1" onHold="1" onRelease="1" retriggerable="0" keyboard="s"/>
+
+    <action name="gamepad_move_forward" xboxpad="xi_thumbly" ps4pad="pad_stickly"/>
+    <action name="gamepad_move_right" xboxpad="xi_thumblx" ps4pad="pad_sticklx"/>
+  </actionmap>
+
+  <actionmap name="use_cam">
+    <action name="rotate_yaw" keyboard="maxis_x"/>
+    <action name="rotate_pitch" keyboard="maxis_y"/>
+    <action name="gamepad_rotate_yaw" xboxpad="xi_thumbrx" ps4pad="pad_stickrx"/>
+    <action name="gamepad_rotate_pitch" xboxpad="xi_thumbry" ps4pad="pad_stickry"/>
+  </actionmap>
+
+  <actionmap name="chat">
+    <action name="close_chat" onPress="0" onRelease="1" retriggerable="0" keyboard="escape" xboxpad="xi_b" ps4pad="pad_circle"/>
+    <action name="send_message" onPress="0" onRelease="1" retriggerable="0" keyboard="enter"/>
+    <action name="switch_channel" onPress="0" onRelease="1" retriggerable="0" keyboard="tab"/>
+  </actionmap>
+
+  <actionfilter name="ingame_menu_blocking" type="actionFail">
+    <action name="toggle_esc_menu"/>
+    <action name="toggle_esc_menu_editor"/>
+    <action name="scoreboard"/>
+    <action name="scoreboard_secondary"/>
+    <action name="open_chat"/>
+    <action name="open_chat_secondary"/>
+    <action name="push2talk"/>
+    <action name="push2talk_secondary"/>
+    <action name="mute_all"/>
+    <action name="mute_all_secondary"/>
+  </actionfilter>
+
+  <actionfilter name="ingame_menu" type="actionFail">
+    <action name="scoreboard"/>
+    <action name="scoreboard_secondary"/>
+    <action name="open_chat"/>
+    <action name="open_chat_secondary"/>
+  </actionfilter>
+
+  <actionfilter name="pregame_menu" type="actionFail">
+  </actionfilter>
+
+  <actionfilter name="ingame_options_menu" type="actionFail">
+    <action name="scoreboard"/>
+    <action name="scoreboard_secondary"/>
+    <action name="open_chat"/>
+    <action name="open_chat_secondary"/>
+  </actionfilter>
+
+  <actionfilter name="input_window" type="actionFail">
+    <action name="mute_all"/>
+    <action name="mute_all_secondary"/>
+    <action name="voice_chat_mode_switch"/>
+    <action name="voice_chat_mode_switch_secondary"/>
+    <action name="push2talk"/>
+    <action name="push2talk_secondary"/>
+  </actionfilter>
+
+  <!-- UI actions for whole in-game state -->
+  <actionmap name="scoreboard_enabled">
+    <action name="scoreboard" onPress="1" onHold="0" onRelease="1" retriggerable="0" keyboard="tab" xboxpad="xi_back" ps4pad="pad_select"/>
+    <action name="scoreboard_secondary" onPress="1" onHold="0" onRelease="1" retriggerable="0" keyboard="tab"/>
+  </actionmap>
+
+  <actionmap name="voice_chat">
+    <action name="mute_all" onPress="1" onRelease="0" onHold="0" retriggerable="0" keyboard="m"/>
+    <action name="mute_all_secondary" onPress="1" onRelease="0" onHold="0" retriggerable="0" keyboard=""/>
+    <action name="voice_chat_mode_switch" onPress="1" onRelease="0" onHold="0" retriggerable="0" keyboard="y"/>
+    <action name="voice_chat_mode_switch_secondary" onPress="1" onRelease="0" onHold="0" retriggerable="0" keyboard=""/>
+  </actionmap>
+
+  <actionmap name="voice_chat_active">
+    <action name="push2talk" onPress="1" onRelease="1" onHold="0" retriggerable="0" keyboard="t" xboxpad="xi_dpad_left" ps4pad="pad_left"/>
+    <action name="push2talk_secondary" onPress="1" onRelease="1" onHold="0" retriggerable="0" keyboard="t"/>
+  </actionmap>
+
+  <actionmap name="scoreboard">
+    <action name="mute_all" onPress="1" onRelease="0" onHold="0" retriggerable="0" xboxpad="xi_dpad_right" ps4pad="pad_right"/>
+    <action name="toggle_cursor" onPress="1" onRelease="0" onHold="0" retriggerable="0" keyboard="mouse3" xboxpad="xi_dpad_down" ps4pad="pad_down"/>
+    <action name="voice_chat_mode_switch" onPress="1" onRelease="0" onHold="0" retriggerable="0" xboxpad="xi_dpad_left" ps4pad="pad_left"/>
+  </actionmap>
+
+  <actionfilter name="scoreboard_gamepad" type="actionFail">
+    <action name="tactical_mode"/>
+    <action name="leave_tactical_mode"/>
+    <action name="grid_down"/>
+    <action name="grid_up"/>
+    <action name="toss_grenade_3"/>
+    <action name="toss_grenade_4"/>
+    <action name="toss_tactical_3"/>
+    <action name="toss_tactical_4"/>
+    <action name="spot"/>
+  </actionfilter>
+
+  <actionfilter name="scoreboard_gamepad_navigation" type="actionFail">
+    <action name="toggle_cursor"/>
+    <action name="leave_tactical_mode"/>
+  </actionfilter>
+
+  <actionmap name="startup">
+    <action name="skip_video" onPress="1" onRelease="0" retriggerable="0" keyboard="space" xboxpad="xi_a" ps4pad="pad_cross"/>
+    <action name="skip_video_2" onPress="1" onRelease="0" retriggerable="0" keyboard="escape"/>
+    <action name="skip_video_3" onPress="1" onRelease="0" retriggerable="0" keyboard="backspace"/>
+  </actionmap>
+
+  <actionfilter name="free_cam" type="actionFail">
+    <action name="rotate_yaw"  />
+    <action name="rotate_pitch"  />
+    <action name="gamepad_rotate_yaw"/>
+    <action name="gamepad_rotate_pitch"/>
+  </actionfilter>
+
+  <actionfilter name="free_cam_view_switch" type="actionFail">
+    <action name="tp_view"/>
+  </actionfilter>
+
+  <actionfilter name="ui_interactive" type="actionFail">
+    <!-- USER DEFINED -->
+    <action name="revive" />
+    <action name="tp_view"/>
+    <action name="free_camera"/>
+    <action name="linked_camera"/>
+
+    <!-- spectator_tp -->
+    <action name="next_player"/>
+    <action name="prev_player"/>
+
+    <!-- Weapon -->
+    <action name="fire"/>
+    <action name="fire_secondary"/>
+    <action name="zoom"/>
+    <action name="zoom_secondary"/>
+    <action name="gamepad_zoom"/>
+    <action name="reload"/>
+    <action name="reload_secondary"/>
+
+    <!-- Inventory -->
+    <action name="select_item_slot_primary_weapon"/>
+    <action name="select_item_slot_primary_weapon_secondary"/>
+    <action name="select_item_slot_power_weapon"/>
+    <action name="select_item_slot_secondary_weapon"/>
+    <action name="select_item_slot_secondary_weapon_secondary"/>
+    <action name="select_item_slot_special_weapon"/>
+    <action name="select_item_slot_special_weapon_secondary"/>
+    <action name="select_item_slot_reserved"/>
+
+    <action name="select_item_prev"/>
+    <action name="select_item_prev_secondary"/>
+    <action name="select_item_next"/>
+    <action name="select_item_next_secondary"/>
+    <action name="select_item_last"/>
+
+    <action name="select_attachment_1" />
+    <action name="select_attachment_2" />
+    <action name="select_attachment_3" />
+    <action name="select_attachment_0" />
+
+    <!-- Movement -->
+    <action name="move_left" />
+    <action name="move_left_secondary" />
+    <action name="move_right" />
+    <action name="move_right_secondary" />
+    <action name="move_forward" />
+    <action name="move_forward_secondary" />
+    <action name="move_back" />
+    <action name="move_back_secondary" />
+    <action name="rotate_yaw"  />
+    <action name="rotate_pitch"  />
+    <action name="jump" />
+    <action name="jump_secondary" />
+    <action name="sprint"  />
+    <action name="sprint_secondary"  />
+    <action name="crouch" />
+    <action name="crouch_secondary" />
+    <action name="gamepad_crouch" />
+
+    <action name="gamepad_move_forward"/>
+    <action name="gamepad_move_right"/>
+    <action name="gamepad_rotate_yaw"/>
+    <action name="gamepad_rotate_pitch"/>
+
+    <action name="quick_melee" />
+    <action name="quick_melee_secondary" />
+    <action name="use" />
+    <action name="use_secondary" />
+    <action name="toss_grenade_1" />
+    <action name="toss_grenade_1_secondary" />
+    <action name="toss_grenade_2" />
+    <action name="toss_grenade_2_secondary" />
+
+    <action name="tactical_mode" />
+    <action name="tactical_mode_secondary" />
+    <action name="spawn_ability_shoot"/>
+    <action name="spawn_ability_abort"/>
+
+    <action name="select_item_slot_tactical_special_weapon"/>
+    <action name="toss_tactical_1"/>
+    <action name="toss_tactical_2"/>
+    <action name="toss_tactical_3"/>
+    <action name="toss_tactical_4"/>
+    
+    <action name="spot"/>
+  </actionfilter>
+
+  <actionfilter name="usable_object" type="actionPass">
+    <action name="use" onPress="0" onRelease="1" retriggerable="0" keyboard="e" xboxpad="xi_x" ps4pad="pad_square"/>
+    <action name="use_secondary" onPress="0" onRelease="1" retriggerable="0" keyboard="e" xboxpad="xi_x" ps4pad="pad_square"/>
+    <action name="toggle_esc_menu"/>
+    <action name="toggle_esc_menu_editor"/>
+    <action name="scoreboard" />
+    <action name="push2talk"/>
+    <action name="push2talk_secondary"/>
+    <action name="voice_chat_mode_switch"/>
+    <action name="voice_chat_mode_switch_secondary"/>
+    <action name="mute_all"/>
+    <action name="mute_all_secondary"/>
+    <action name="open_chat"/>
+    <action name="open_chat_secondary"/>
+    <action name="close_chat"/>
+    <action name="send_message"/>
+    <action name="switch_channel"/>
+    <action name="spot"/>
+
+    <action name="rotate_yaw" keyboard="maxis_x"/>
+    <action name="rotate_pitch" keyboard="maxis_y"/>
+    <action name="gamepad_rotate_yaw" xboxpad="xi_thumbrx" ps4pad="pad_stickrx"/>
+    <action name="gamepad_rotate_pitch" xboxpad="xi_thumbry" ps4pad="pad_stickry"/>
+  </actionfilter>
+
+  <actionfilter name="player_reviving" type="actionPass">
+    <action name="toggle_esc_menu"/>
+    <action name="toggle_esc_menu_editor"/>
+    <action name="scoreboard" />
+    <action name="push2talk"/>
+    <action name="push2talk_secondary"/>
+    <action name="voice_chat_mode_switch"/>
+    <action name="voice_chat_mode_switch_secondary"/>
+    <action name="mute_all"/>
+    <action name="mute_all_secondary"/>
+    <action name="open_chat"/>
+    <action name="open_chat_secondary"/>
+    <action name="close_chat"/>
+    <action name="send_message"/>
+    <action name="switch_channel"/>
+    <action name="spot"/>
+
+    <action name="rotate_yaw" keyboard="maxis_x"/>
+    <action name="rotate_pitch" keyboard="maxis_y"/>
+    <action name="gamepad_rotate_yaw" xboxpad="xi_thumbrx" ps4pad="pad_stickrx"/>
+    <action name="gamepad_rotate_pitch" xboxpad="xi_thumbry" ps4pad="pad_stickry"/>
+  </actionfilter>
+
+  <actionfilter name="spawner_ability" type="actionFail">
+    <action name="next_player"/>
+    <action name="prev_player"/>
+  </actionfilter>
+
+  <actionfilter name="disabler_trap" type="actionPass">
+    <action name="toggle_esc_menu"/>
+    <action name="toggle_esc_menu_editor"/>
+    <action name="scoreboard" />
+    <action name="push2talk"/>
+    <action name="push2talk_secondary"/>
+    <action name="voice_chat_mode_switch"/>
+    <action name="voice_chat_mode_switch_secondary"/>
+    <action name="mute_all"/>
+    <action name="mute_all_secondary"/>
+    <action name="open_chat"/>
+    <action name="open_chat_secondary"/>
+    <action name="close_chat"/>
+    <action name="send_message"/>
+    <action name="switch_channel"/>
+    <action name="spot"/>
+
+    <action name="rotate_yaw"/>
+    <action name="rotate_pitch"/>
+    <action name="gamepad_rotate_yaw"/>
+    <action name="gamepad_rotate_pitch"/>
+  </actionfilter>
+
+
+  <actionmap name="ui_navigation">
+    <action name="horiz_scroll" xboxpad="xi_thumbrx" ps4pad="pad_stickrx"/>
+    <action name="vert_scroll" xboxpad="xi_thumbry" ps4pad="pad_stickry"/>
+
+    <!-- COMMON -->
+    <action name="grid_left" onPress="1" onHold="1" onRelease="0" retriggerable="0" keyboard="left" xboxpad="xi_dpad_left" ps4pad="pad_left"/>
+    <action name="grid_right" onPress="1" onHold="1" onRelease="0" retriggerable="0" keyboard="right" xboxpad="xi_dpad_right" ps4pad="pad_right"/>
+    <action name="grid_up" onPress="1" onHold="1" onRelease="0" retriggerable="0" keyboard="up" xboxpad="xi_dpad_up" ps4pad="pad_up"/>
+    <action name="grid_down" onPress="1" onHold="1" onRelease="0" retriggerable="1" keyboard="down" xboxpad="xi_dpad_down" ps4pad="pad_down"/>
+
+    <action name="tab_prev" onPress="1" onHold="1" onRelease="0" retriggerable="0" keyboard="q" xboxpad="xi_shoulderl" ps4pad="pad_l1"/>
+    <action name="tab_next" onPress="1" onHold="1" onRelease="0" retriggerable="0" keyboard="e" xboxpad="xi_shoulderr" ps4pad="pad_r1"/>
+    <action name="subtab_prev" onPress="1" onHold="1" onRelease="0" retriggerable="0" keyboard="a" xboxpad="xi_triggerl" ps4pad="pad_l2"/>
+    <action name="subtab_next" onPress="1" onHold="1" onRelease="0" retriggerable="0" keyboard="d" xboxpad="xi_triggerr" ps4pad="pad_r2"/>
+
+    <action name="page_prev" onPress="1" onHold="0" onRelease="0" retriggerable="0" keyboard="a" xboxpad="xi_triggerl" ps4pad="pad_l2"/>
+    <action name="page_next" onPress="1" onHold="0" onRelease="0" retriggerable="0" keyboard="d" xboxpad="xi_triggerr" ps4pad="pad_r2"/>
+
+    <action name="nav_enter" onPress="0" onHold="0" onRelease="1" retriggerable="0" keyboard="enter" xboxpad="xi_a" ps4pad="pad_cross"/>
+    <action name="nav_space" onPress="0" onHold="0" onRelease="1" retriggerable="0" keyboard="space" xboxpad="xi_a" ps4pad="pad_cross"/>
+    <action name="nav_back" onPress="0" onHold="0" onRelease="1" retriggerable="0" keyboard="escape" xboxpad="xi_b" ps4pad="pad_circle"/>
+
+    <!-- quickplay -->
+    <action name="start_quickplay" onPress="0" onHold="0" onRelease="1" retriggerable="0" keyboard="space" xboxpad="xi_x" ps4pad="pad_square"/>
+
+    <action name="toggle_briefing" onPress="1" onHold="0" onRelease="0" retriggerable="0" xboxpad="xi_a" ps4pad="pad_cross"/>
+    
+    <!-- friends -->
+    <action name="leave_squad" onPress="0" onHold="0" onRelease="1" retriggerable="0" xboxpad="xi_thumbr" ps4pad="pad_r3"/>
+    <action name="find_player" onPress="0" onHold="0" onRelease="1" retriggerable="0" xboxpad="xi_x" ps4pad="pad_square"/>
+
+    <!-- friends, inbox -->
+    <action name="accept" onPress="0" onHold="0" onRelease="1" retriggerable="0" xboxpad="xi_a" ps4pad="pad_cross"/>
+    <action name="reject" onPress="0" onHold="0" onRelease="1" retriggerable="0" xboxpad="xi_y" ps4pad="pad_triangle"/>
+
+    <action name="accept_equipment" onPress="0" onHold="0" onRelease="1" retriggerable="0" keyboard="space" xboxpad="xi_a" ps4pad="pad_cross"/>
+
+    <!-- hero selection -->
+    <action name="hero_prev" onPress="0" onHold="1" onRelease="0" retriggerable="0" keyboard="a" xboxpad="xi_triggerl" ps4pad="pad_l2"/>
+    <action name="hero_next" onPress="0" onHold="1" onRelease="0" retriggerable="0" keyboard="d" xboxpad="xi_triggerr" ps4pad="pad_r2"/>
+
+    <action name="nav_buy" onPress="0" onHold="0" onRelease="1" retriggerable="0" xboxpad="xi_a" ps4pad="pad_cross"/>
+    <action name="nav_customize" onPress="0" onHold="0" onRelease="1" retriggerable="0" keyboard="enter" xboxpad="xi_x" ps4pad="pad_square"/>
+
+    <action name="craft_modification" onPress="1" onHold="0" onRelease="0" retriggerable="0" keyboard="enter" xboxpad="xi_x" ps4pad="pad_square"/>
+
+    <!-- esc_menu -->
+    <action name="toggle_esc_menu" onPress="0" onRelease="1" retriggerable="0" keyboard="escape" xboxpad="xi_start" ps4pad="pad_start"/>
+    <action name="select_next_hero" onPress="1" onHold="0" onRelease="0" retriggerable="0" xboxpad="xi_x" ps4pad="pad_square"/>
+
+    <!-- lobby -->
+    <action name="open_options" onPress="0" onHold="0" onRelease="1" retriggerable="0" xboxpad="xi_start" ps4pad="pad_start"/>
+    <action name="exit_game" onPress="0" onHold="0" onRelease="1" retriggerable="0" keyboard="escape" xboxpad="xi_b" ps4pad="pad_circle"/>
+
+    <!-- options -->
+    <action name="options_cancel" onPress="0" onHold="0" onRelease="1" retriggerable="0" xboxpad="xi_y" ps4pad="pad_triangle"/>
+    <action name="options_apply" onPress="0" onHold="0" onRelease="1" retriggerable="0" xboxpad="xi_x" ps4pad="pad_square"/>
+    <action name="options_default" onPress="0" onHold="0" onRelease="1" retriggerable="0" xboxpad="xi_thumbr" ps4pad="pad_r3"/>
+
+    <!-- pick_one -->
+    <action name="pick_one_cancel" onPress="0" onHold="0" onRelease="1" retriggerable="0" keyboard="escape" xboxpad="xi_b" ps4pad="pad_circle"/>
+    <action name="pick_one_select" onPress="0" onHold="0" onRelease="1" retriggerable="0" keyboard="mouse1" xboxpad="xi_a" ps4pad="pad_cross"/>
+
+    <!-- prebattle -->
+    <action name="toggle_ready" onPress="0" onRelease="1" onHold="0" retriggerable="0" xboxpad="xi_x" ps4pad="pad_square"/>
+
+    <!-- modification -->
+    <action name="modification_equip" onPress="0" onRelease="1" onHold="0" retriggerable="0" keyboard="e" xboxpad="xi_y" ps4pad="pad_triangle"/>
+
+    <!-- social -->
+    <action name="open_social" onPress="0" onHold="0" onRelease="1" retriggerable="0" xboxpad="xi_y" ps4pad="pad_triangle"/>
+    <action name="toggle_player_menu" onPress="0" onHold="0" onRelease="1" retriggerable="0" xboxpad="xi_back" ps4pad="pad_select"/>
+
+    <!-- support window -->
+    <action name="apply_support" onPress="0" onHold="0" onRelease="1" retriggerable="0" xboxpad="xi_x" ps4pad="pad_square"/>
+
+    <!-- territory selection -->
+    <action name="apply_territory" onPress="0" onHold="0" onRelease="1" retriggerable="0" xboxpad="xi_x" ps4pad="pad_square"/>
+
+    <!-- hideout -->
+    <action name="open_hideout" onPress="0" onHold="0" onRelease="1" retriggerable="0" xboxpad="xi_thumbl" ps4pad="pad_l3"/>
+
+    <!-- banner -->
+    <action name="show_banner_details" onPress="0" onHold="0" onRelease="1" retriggerable="0" xboxpad="xi_x" ps4pad="pad_square"/>
+
+    <!-- territories -->
+    <action name="open_territories" onPress="0" onHold="0" onRelease="1" retriggerable="0" xboxpad="xi_thumbr" ps4pad="pad_r3"/>
+
+    <!-- task_widget -->
+    <action name="open_tasks" onPress="0" onHold="0" onRelease="1" retriggerable="0" xboxpad="xi_thumbl" ps4pad="pad_l3"/>
+
+    <!-- post_session -->
+    <action name="back_to_lobby" onPress="0" onHold="0" onRelease="1" retriggerable="0" xboxpad="xi_y" ps4pad="pad_triangle"/>
+    <action name="play_again" onPress="0" onHold="0" onRelease="1" retriggerable="0" xboxpad="xi_a" ps4pad="pad_cross"/>
+    <action name="leave_party" onPress="0" onHold="0" onRelease="1" retriggerable="0" xboxpad="xi_x" ps4pad="pad_square"/>
+    <action name="quickplay_cancel" onPress="0" onHold="0" onRelease="1" retriggerable="0" xboxpad="xi_b" ps4pad="pad_circle"/>
+    <action name="skip_post_session_step" onPress="0" onRelease="1" retriggerable="0" keyboard="space" xboxpad="xi_a" ps4pad="pad_cross"/>
+
+
+    <!-- error_message -->
+    <action name="close_error" onPress="0" onHold="0" onRelease="1" retriggerable="0" xboxpad="xi_a" ps4pad="pad_cross"/>
+    <action name="report_error" onPress="0" onHold="0" onRelease="1" retriggerable="0" xboxpad="xi_y" ps4pad="pad_triangle"/>
+
+    <!-- messagebox -->
+    <action name="messagebox_yes" onPress="0" onHold="0" onRelease="1" retriggerable="0" keyboard="enter" xboxpad="xi_a" ps4pad="pad_cross"/>
+
+    <!-- play_popup -->
+    <action name="play_custom" onPress="0" onHold="0" onRelease="1" retriggerable="0" xboxpad="xi_thumbr" ps4pad="pad_r3"/>
+
+    <!-- custom_game -->
+    <action name="games_refresh" onPress="0" onHold="0" onRelease="1" retriggerable="0" keyboard="space" xboxpad="xi_x" ps4pad="pad_square"/>
+    <action name="game_join" onPress="0" onHold="0" onRelease="1" retriggerable="0" keyboard="a" xboxpad="xi_triggerl" ps4pad="pad_l2"/>
+    <action name="game_spectate" onPress="0" onHold="0" onRelease="1" retriggerable="0" keyboard="d" xboxpad="xi_triggerr" ps4pad="pad_r2"/>
+
+    <!-- gacha_box -->
+    <action name="proceed_gacha_box" onPress="0" onHold="0" onRelease="1" retriggerable="0" keyboard="enter" xboxpad="xi_a" ps4pad="pad_cross"/>
+
+    <!-- rewards_unlock -->
+    <action name="proceed_rewards_unlock" onPress="0" onHold="0" onRelease="1" retriggerable="0" keyboard="enter" xboxpad="xi_a" ps4pad="pad_cross"/>
+
+    <!-- weapon_customization -->
+    <action name="toggle_hint" onPress="0" onHold="0" onRelease="1" retriggerable="0" xboxpad="xi_dpad_down" ps4pad="pad_down"/>
+
+  </actionmap>
+
+  <actionmap name="ui_navigation_editor">
+    <action name="nav_back" onPress="0" onHold="0" onRelease="1" retriggerable="0" keyboard="f10"/>
+    <action name="toggle_esc_menu" onPress="0" onRelease="1" retriggerable="0" keyboard="f10"/>
+    <action name="pick_one_cancel" onPress="0" onHold="0" onRelease="1" retriggerable="0" keyboard="f10"/>
+  </actionmap>
+
+
+  <actionmap name="ui_edit">
+    <action name="nav_enter" onPress="0" onHold="0" onRelease="1" retriggerable="0" keyboard="enter" xboxpad="xi_a" ps4pad="pad_cross"/>
+    <action name="nav_back" onPress="0" onHold="0" onRelease="1" retriggerable="0" keyboard="escape" xboxpad="xi_b" ps4pad="pad_circle"/>
+    <action name="grid_down" onPress="1" onHold="0" onRelease="0" retriggerable="0" keyboard="down" xboxpad="xi_dpad_down" ps4pad="pad_down"/>
+    <action name="grid_up" onPress="1" onHold="0" onRelease="0" retriggerable="0" keyboard="up" xboxpad="xi_dpad_up" ps4pad="pad_up"/>
+    <action name="apply_support" onPress="0" onHold="0" onRelease="1" retriggerable="0" xboxpad="xi_x" ps4pad="pad_square"/>
+  </actionmap>
+
+  <actionmap name="ui_edit_editor">
+    <action name="nav_back" onPress="0" onHold="0" onRelease="1" retriggerable="0" keyboard="f10"/>
+  </actionmap>
+
+</profile>

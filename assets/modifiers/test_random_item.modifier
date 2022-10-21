@@ -1,0 +1,21 @@
+{
+    "name": "test_random_item",
+    "effects": [
+        { 
+            "random_item":
+            { 
+                "category": "primary_weapon",
+                "allowed_range": "list",
+                "allowed_items_list": [
+                    "test_shg01",
+                    "test_ar_01",
+                    "test_pt_01"
+                ],
+                "not_allowed_items_list": [
+                    "test_ar_02",
+                    "test_ar_01_magazine_02"
+                ]
+            }
+        }
+    ]
+}

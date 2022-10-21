@@ -1,0 +1,44 @@
+{
+	"waves": [
+		{
+			"name": "part2_plane_snipers",
+			"totalLimit": 10,
+			"count": 4,
+			"spawnDelay": 1.000000,
+			"agents": [ { "tags": [ "(1) Strafer: AR" ], "probability": 1 } ]
+		},
+		{
+			"name": "part2_plane_glassheads",
+			"totalLimit": 8,
+			"count": 8,
+			"spawnDelay": 0.000000,
+			"agents": [ { "tags": [ "(2) Glasshead: Basic" ], "probability": 1 } ]
+		},
+		{
+			"name": "part2_redfiled_glassheads_basic",
+			"totalLimit": 12,
+			"count": 6,
+			"spawnDelay": 2.000000,
+			"agents": [ { "tags": [ "(2) Glasshead: Basic" ], "probability": 1 } ]
+		},
+		{
+			"name": "part2_redfiled_glassheads_shardskin",
+			"totalLimit": 10,
+			"count": 5,
+			"spawnDelay": 4.000000,
+			"agents": [ { "tags": [ "CQC: Shardskin" ], "probability": 1 } ]
+		},
+		{
+			"name": "part2_redfiled_glassheads_mixed",
+			"totalLimit": 10,
+			"count": 10,
+			"spawnDelay": 0.000000,
+			"agents": [
+				{
+					"tags": [ "(2) Glasshead: Basic", "CQC: Shardskin" ],
+					"probability": 1
+				}
+			]
+		}
+	]
+}

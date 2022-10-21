@@ -1,0 +1,119 @@
+{
+    "sounds": {
+        "sets": [
+            {
+                "tag": "default",
+                "triggers": {
+                    "fire_start": "ar05_fire_start",
+                    "fire_stop": "ar05_fire_stop"
+                }
+            },
+            {
+                "tag": "silenced",
+                "triggers": {
+                    "fire_start": "ar05_fire_silencer_start",
+                    "fire_stop": "ar05_fire_silencer_stop"
+                }
+            }
+        ],
+        "tag": "default"
+    },
+    "selection": {
+        "nearest_camera_offset": {
+            "z": 0.0,
+            "x": 0.0,
+            "y": 0.0
+        },
+        "deselection_duration": 0.3,
+        "selection_duration": 0.4
+    },
+    "spread": {
+        "hip_distribution": {
+            "points": [
+                {
+                    "distance": 0.0,
+                    "spread": 0.0
+                }
+            ]
+        },
+        "max_hip_spread": 0.45,
+        "decay_time": 0.0,
+        "slide_multiplier": 1.0,
+        "zoom_multiplier": 1.0,
+        "crouch_multiplier": 1.0,
+        "hip_step": 0.0,
+        "crouch_idle_multiplier": 1.0,
+        "min_hip_spread": 0.45,
+        "decay_delay": 0.0,
+        "stand_multiplier": 1.0,
+        "walk_multiplier": 1.0,
+        "jump_multiplier": 1.0
+    },
+    "zoom": {
+        "weapon_offset": {
+            "z": 0.0,
+            "x": 0.0,
+            "y": 0.0
+        },
+        "delay_after_jump": 0.3,
+        "weapon_fov": 25.0,
+        "zoom_out_time": 0.15,
+        "hide_crosshair": true,
+        "zoom_fov": 40.0,
+        "zoom_in_time": 0.15,
+        "in_air": false
+    },
+    "common": {
+        "item_tag": "AR"
+    },
+    "muzzle_sight_distance": 1.0,
+    "shooting": {
+        "base_damage_distribution": {
+            "points": [
+                {
+                    "distance": 0.0,
+                    "damage": 15.0
+                }
+            ]
+        },
+        "backpack_capacity": 600,
+        "chamber_capacity": 1,
+        "head_damage_distribution": {
+            "points": [
+                {
+                    "distance": 0.0,
+                    "damage": 15.0
+                }
+            ]
+        },
+        "chambers_fired_per_shot": 1,
+        "rpm": 600.0,
+        "auto_reload_mode": "Chamber",
+        "backpack_unlimited": true,
+        "clip_capacity": 30,
+        "reload": {
+            "reload_time": 2.6,
+            "reload_out_complete_threshold": 0.7,
+            "reload_in_complete_threshold": 0.7
+        }
+    },
+    "recoil": {
+        "kick_time": 0.1,
+        "decay_time": 0.16,
+        "max_vertical_angle": 0.0,
+        "decay_delay": 0.03,
+        "recoil_points": [
+            {
+                "num": 1,
+                "force": {
+                    "min": 0.0,
+                    "max": 0.0
+                },
+                "angle": {
+                    "min": 0.0,
+                    "max": 0.0
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,61 @@
+{
+    "name": "season_pass_progressed",
+    "doc": "Origin:. Emitter: backend. Emitted for every reward on every level on each track (including retrospective rewards for previous paid levels after payed track purchase). Emitted independently for paid and free tracks. If player doesn't own a paid track - only free track level gains are involved. Emitted on each progressed level, if several levels were progressed at once, separated events should be emitted for each level and each track.",
+    "type": "record",
+    "fields": [
+        {
+            "name": "name",
+            "type": "string",
+            "default": "-1",
+            "doc": "unique name of the event"
+        },
+        {
+            "name": "pid",
+            "type": "long",
+            "default": -1,
+            "doc": "namespace-unique identifier of a player"
+        },
+        {
+            "name": "ts",
+            "type": "string",
+            "default": "-1",
+            "doc": "ISO8601 UTC timestamp of the event invocation"
+        },
+        {
+            "name": "sid",
+            "type": "string",
+            "default": "-1",
+            "doc": "global-unique identifier of the player's login session (time between login and logout)"
+        },
+        {
+            "name": "ns",
+            "type": "string",
+            "default": "-1",
+            "doc": "namespace of the server's deployment (realm)"
+        },
+        {
+            "name": "season_id",
+            "type": "int",
+            "default": -1,
+            "doc": "index (id) of purchased season pass"
+        },
+        {
+            "name": "gained_season_lvl",
+            "type": "int",
+            "default": -1,
+            "doc": "recently gained level of a season pass"
+        },
+        {
+            "name": "is_paid",
+            "type": "boolean",
+            "default": false,
+            "doc": "to which track this particular level and reward are belong"
+        },
+        {
+            "name": "is_purchased",
+            "type": "boolean",
+            "default": false,
+            "doc": "in what way player gained this particular level"
+        }
+    ]
+}   

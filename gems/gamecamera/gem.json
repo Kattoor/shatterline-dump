@@ -1,0 +1,42 @@
+{
+    "GemFormatVersion": 4,
+    "Uuid": "c12105b2fbdf4dd4b2fd668000892f27",
+    "Name": "GameCamera",
+    "DisplayName": "GameCamera",
+    "Version": "0.1.0",
+    "Summary": "A short description of my Gem.",
+    "Tags": ["Untagged"],
+    "IconPath": "preview.png",
+    "Modules": [
+        {
+            "Type": "GameModule"
+        },
+        {
+            "Name": "Editor",
+            "Type": "EditorModule",
+            "Extends": "GameModule"
+        }
+    ],
+    "Dependencies" : [
+        {
+            "Uuid": "869a0d0ec11a45c299917d45c81555e6",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "ScriptCanvas"
+        },
+        {
+            "Uuid": "a5af5a5e072741c4978f8f3bf765ce14",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "FixedTimestep"
+        },
+        {
+            "Uuid": "7cedf2bfc6684bb8a046350371ca261c",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Marshalers"
+        },
+        {
+            "Uuid": "2ebd4481cbf142b89286f28b4c29ace3",
+            "VersionConstraints": [ "~>0.1" ],
+            "_comment": "Game01Interfaces"
+        }
+    ]
+}
