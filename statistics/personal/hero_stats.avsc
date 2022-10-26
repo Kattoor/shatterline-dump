@@ -4,34 +4,22 @@
     "type": "record",
     "fields": [
         {
-            "name": "ts",
+            "name": "datetime",
             "type": "string",
             "default": "",
-            "doc": "ISO8601 UTC timestamp of the event invocation"
+            "doc": "format: YYYY-MM-DD hh:mm:ss"
         },
         {
-            "name": "name",
-            "type": "string",
-            "default": "-1",
-            "doc": "unique name of the event"
-        },
-        {
-            "name": "ns",
-            "type": "string",
-            "default": "-1",
-            "doc": "namespace of the server's deployment (realm)"
-        },
-        {
-            "name": "pid",
+            "name": "profile_id",
             "type": "long",
             "default": 0,
             "doc": "Identifier of a player"
         },
         {
-            "name": "gid",
-            "type": "string",
-            "default": "",
-            "doc": "Identifier of a game session"
+            "name": "season_id",
+            "type": "long",
+            "default": 0,
+            "doc": "Identifier of Season"
         },
         {
             "name": "mission_name",
@@ -60,22 +48,32 @@
         {
             "name": "hero_healing",
             "type": "int",
-            "default": 0
+            "default": 0,
+            "doc": "HP healed count"
+        },
+        {
+            "name": "hero_assists",
+            "type": "int",
+            "default": 0,
+            "doc": "Kill assist count"
         },
         {
             "name": "hero_revives",
             "type": "int",
-            "default": 0
+            "default": 0,
+            "doc": "revives count"
         },
         {
             "name": "hero_deaths",
             "type": "int",
-            "default": 0
+            "default": 0,
+            "doc": "death count"
         },
         {
             "name": "hero_played_time",
             "type": "int",
-            "default": 0
+            "default": 0,
+            "doc": "played time in seconds"
         }
     ]
 }

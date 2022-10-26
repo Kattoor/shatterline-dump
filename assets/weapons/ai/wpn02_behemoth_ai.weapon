@@ -57,7 +57,7 @@
     },
     "projectile": {
         "slice_name": "slices/projectiles/behemoth_spit01.dynamicslice",
-        "speed": 8.0,
+        "speed": 9.0,
         "rotation_lock": true,
         "angle": 20,
         "act_reason": "collision",
@@ -86,25 +86,6 @@
     },
     "common": {
         "item_tag": "RL"
-    },
-    "sounds": {
-        "tag": "default",
-        "sets": [
-            {
-                "tag": "default",
-                "triggers": {
-                    "fire_start": "shardskin_attack_fire",
-                    "fire_stop": ""
-                }
-            },
-            {
-                "tag": "silenced",
-                "triggers": {
-                    "fire_start": "",
-                    "fire_stop": ""
-                }
-            }
-        ]
     },
     "muzzle_sight_distance": 1.0
 }

@@ -1,9 +1,6 @@
 {
   "name": "scheduled_hard_001",
   "type": "scheduled",
-  "tags": [
-    "gun"
-  ],
   "active": true,
   "image": "weekly_temp_icon",
   "rarity": "epic",
@@ -20,7 +17,7 @@
       "name": "scheduled_hard_001_2",
       "event_description": { "localization_key": "@scheduled_hard_001_2_event_description" },
       "event": { "event_id": "Headshot", "actor_is_me": true,  "target_player_preset_is_not": []},
-      "progress": 5
+      "progress": 3
     },
     {
       "name": "scheduled_hard_001_3",
@@ -48,7 +45,6 @@
     }
   ],
   "reset_on_events": [
-    {"event_id": "SessionFinish"},
-    {"event_id": "FinishRound"}
+    {"event_id": "SessionFinish"}
    ]
 }

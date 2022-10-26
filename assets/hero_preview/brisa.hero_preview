@@ -91,43 +91,13 @@
         "hero_progression": {
             "outfits": {
                 "default": {
-                    "inventory_slot": "",
-                    "motion_in": "presentation_brisa_in_01",
-                    "motion_idle": "presentation_brisa_idle_01",
-                    "greeting": "chr_pres_brisa_no_vo",
-                    "animation_controlled_rotation": false,
-                    "attachments": [
-                        {
-                            "slice": "slices/animals/crystalline_bird_brisa_presenatation.dynamicslice",
-                            "target_bone": "bn_02",
-                            "motion_in": "presentation_brisa_in_01",
-                            "motion_idle": "presentation_brisa_idle_01"
-                        },
-                        {
-                            "slice": "slices/inventory/sniper_rifles/sr05_presentation_fp.dynamicslice",
-                            "target_bone": "bn_01"
-                        },
-                        {
-                            "slice": "slices/vfx/lobby_characters/vfx_lobby_brisa.dynamicslice",
-                            "target_bone": "bn_01"
-                        },
-                        {
-                            "slice": "slices/vfx/lobby_characters/vfx_lobby_brisa_smoke.dynamicslice",
-                            "target_bone": "Bip01"
-                        },
-                        {
-                            "slice": "slices/vfx/lobby_characters/vfx_lobby_brisa_crystalline.dynamicslice",
-                            "target_bone": "bn_01"
-                        },
-                        {
-                            "slice": "slices/animals/feather_brisa_presenatation_02.dynamicslice",
-                            "target_bone": "bn_03"
-                        },
-                        {
-                            "slice": "slices/animals/feather_brisa_presenatation_01.dynamicslice",
-                            "target_bone": "bn_04"
-                        }
-                    ]
+                    "inventory_slot": "primary_weapon",
+                    "motion_in": "lobby_idle_brisa_01",
+                    "motion_idle": "lobby_idle_brisa_01",
+                    "hero_rotation": 
+                    {
+                        "rollback" : false
+                    }
                 }
             }
         },

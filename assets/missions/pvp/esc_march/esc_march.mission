@@ -4,7 +4,7 @@
     "mission": "esc_march",
     "game_type": "pvp",
     "voice_chat_mode": "team_and_party",
-    "min_players_count": 6,
+    "min_players_count": 12,
     "time_to_join_sec": 1500
   },
   "session_info": {
@@ -13,7 +13,7 @@
       "ast_active"
     ],
     "game_mode": "esc",
-    "result_scene": "levels/pvp/nl_escape/slices/result_stage_nl_escape/result_stage_nl_escape.dynamicslice",
+    "result_scene": "levels/pvp/esc_march/slices/result_stage/result_stage_esc_march.dynamicslice",
     "mission_modifiers": [
       "escort_music_modifier",
       "ult_feedback_in_radius",
@@ -25,7 +25,7 @@
     "ignore_default_vo": true
   },
   "ui_info": {
-    "background_image": "loading_pvp",
+    "background_image": "loading_escape_march",
     "sound_event": "pvp_pregame",
     "sound_stop_event": "pvp_pregame_stop"
   },
@@ -38,9 +38,9 @@
             "type": "currency",
             "name": "soft",
             "values": {
-              "win": 50,
-              "draw": 40,
-              "loss": 30
+              "win": 250,
+              "draw": 150,
+              "loss": 100
             }
           },
           {

@@ -1,21 +1,17 @@
 {
   "name": "scheduled_operatives_024",
   "type": "scheduled",
-  "tags": [
-    "pve",
-    "gun"
-  ],
   "active": true,
   "image": "weekly_temp_icon",
-  "rarity": "uncommon",
+  "rarity": "rare",
   "display_name": { "localization_key": "@scheduled_operatives_024_name" },
   "description": { "localization_key": "@scheduled_operatives_024_description" },
   "conditions": [
     {
       "name": "scheduled_operatives_024",
       "event_description": { "localization_key": "@scheduled_operatives_024_event_description" },
-      "event": { "event_id": "DestroyEnemyObjects", "actor_is_me": true },
-      "progress": 5
+      "event": { "event_id": "KillEnemyDrone", "actor_is_me": true },
+      "progress": 7
     }
   ],
   

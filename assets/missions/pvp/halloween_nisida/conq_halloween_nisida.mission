@@ -4,7 +4,7 @@
     "mission": "conq_halloween_nisida",
     "game_type": "pvp",
     "voice_chat_mode": "party_only",
-    "min_players_count": 6,
+    "min_players_count": 12,
     "time_to_join_sec": 300
   },
   "session_info": {
@@ -16,7 +16,7 @@
     "result_scene": "levels/pvp/halloween_nisida/slices/result_stage_halloween_nisida/result_stage_halloween_nisida.dynamicslice",
     "mission_modifiers": [
       "instant_spawn_round_events",
-      "tdm_music_modifier",
+      "tdm_music_halloween_modifier",
       "ult_feedback_in_radius",
       "task_custom_event_sender"
     ]
@@ -26,7 +26,7 @@
     "ignore_default_vo": true
   },
   "ui_info": {
-    "background_image": "loading_nisida",
+    "background_image": "loading_nisida_halloween2022",
     "sound_event": "pvp_pregame",
     "sound_stop_event": "pvp_pregame_stop"
   },
@@ -45,14 +45,6 @@
             }
           },
           {
-            "type": "season_xp",
-             "values": {
-              "win": 10,
-              "draw": 7,
-              "loss": 5
-            }
-          },
-          {
             "type": "xp",
             "values": {
               "win": 300,
@@ -61,31 +53,19 @@
             }
           },
           {
+             "type": "season_xp",
+             "values": {
+             "win": 150,
+              "draw": 120,
+              "loss": 100
+            }
+          },
+          {
             "type": "skill",
             "values": {
               "win": 1,
               "draw": 0,
               "loss": -1
-            }
-          }
-        ]
-      },
-      {
-        "name": "session_play_time",
-        "configs": [
-          {
-            "type": "currency",
-            "name": "soft",
-            "values": {
-              "reward": 0,
-              "max_reward": 1
-            }
-          },
-          {
-            "type": "xp",
-            "values": {
-              "reward": 0.33,
-              "max_reward": 200
             }
           }
         ]
@@ -110,6 +90,26 @@
               "480": 1,
               "540": 1,
               "600": 1
+            }
+          }
+        ]
+      },
+      {
+        "name": "session_play_time",
+        "configs": [
+          {
+            "type": "currency",
+            "name": "soft",
+            "values": {
+              "reward": 0,
+              "max_reward": 1
+            }
+          },
+          {
+            "type": "xp",
+            "values": {
+              "reward": 0.33,
+              "max_reward": 200
             }
           }
         ]

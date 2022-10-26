@@ -2,10 +2,10 @@
 
        "settings":
        {
-          "scope_fake_shadow_radius": 1.1,
+          "scope_fake_shadow_radius": 0.9,
           "scope_fake_shadow_interpolation_pow": 20.0,
           "scope_reflection_intensity": 35.0,
-          "scope_reflection_radius": 1.0,
+          "scope_reflection_radius": 0.85,
           "scope_reflection_interpolation_pow": 10.0,
           "scope_aiming_out_progress_mult": 0.2,
           "scope_aiming_progress_mult": 0.3,
@@ -21,15 +21,21 @@
           "zoom_fov": 61.0,
           "scope_grid_default_scale": 0.18,
           "blur_amount": 0.5,
-          "scope_aiming_offset_forward": 0.05,
+          "scope_aiming_offset_forward": 0.02,
           "sniper_scope": true,
 
-          "nearest_camera_offset":
-          {
-             "x": -0.03,
-             "y": -0.05,
-             "z": 0.02
-          },
+          "nearest_camera_offset": 
+        {
+            "x": -0.01,
+            "y": -0.04,
+            "z": 0.025
+        },
+        "nearest_camera_rotation": 
+        {
+            "pitch": 2.0,
+            "roll": -1.5,
+            "yaw": 2.0
+        },
           
           "zoom_out_time_multiplier": 0.9,
           "zoom_in_time_multiplier": 0.9,

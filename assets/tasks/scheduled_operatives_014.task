@@ -1,10 +1,6 @@
 {
   "name": "scheduled_operatives_014",
   "type": "scheduled",
-  "tags": [
-    "pve",
-    "gun"
-  ],
   "active": true,
   "image": "weekly_temp_icon",
   "rarity": "common",
@@ -14,14 +10,14 @@
     {
       "name": "scheduled_operatives_014_1",
       "event_description": { "localization_key": "@scheduled_operatives_014_1_event_description" },
-      "event": { "event_id": "Throw", "actor_is_me": true, "actor_item_tag_is": ["SG"], "actor_player_preset_is":["a_mongoose"]},
-      "progress": 30
+      "event": { "event_id": "Throw", "actor_is_me": true, "actor_player_preset_is":["a_mongoose"]},
+      "progress": 25
     },
     {
       "name": "scheduled_operatives_014_2",
       "event_description": { "localization_key": "@scheduled_operatives_014_2_event_description" },
-      "event": { "event_id": "Heal", "actor_is_me": true},
-      "progress": 20
+      "event": { "event_id": "Throw", "actor_is_me": true, "actor_player_preset_is":["m_malva"]},
+      "progress": 25
     }
   ],
   

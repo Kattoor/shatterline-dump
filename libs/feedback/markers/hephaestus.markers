@@ -169,20 +169,23 @@
         {   
             "name": "nl_hephaestus_strafer_gate",
             "elements": [
-                {
-                    "way_point":
+               {
+                  "usable_icon":
                     {
                         "ui_component_file": "hud/markers/pie_progress_icon.json",
-                        "image_alias": "marker_way_point_icon",
+                        "image_alias": "marker_interact_icon",
+                        "image_color": "#FFE400",
                         "info_text": "@plc_hephaestus_strafer_gate",
-                        "image_color": "#E9F0F3",
-                        "wave_is_visible": true,
-                        "wave_is_animation_infinite": true,
-                        "wave_image_alias": "marker_hexagon_icon_wave_npa",
+                        "ready_to_use_text": "@hold_to_use_btn",
+                        "using_text": "@using_btn",
+                        "is_radial_progress_visible": true,
+                        "radial_progress_mask_image_alias": "marker_rhombus_icon_mask_npa",
+                        "radial_progress_bg_color": "#E9F0F3",
+                        "radial_progress_color": "#1494D8",
                         "race_icon_min_scale": 0.6,
                         "race_icon_max_scale": 1.0,
                         "race_icon_track_scale": 0.6,
-                        "offset": 0.1
+                        "offset": 1.0
                     }
                 },
                 { "radar_icon": { "icon_alias": "marker_way_point_radar_icon", "snapped": true } }

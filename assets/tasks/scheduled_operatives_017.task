@@ -1,10 +1,6 @@
 {
   "name": "scheduled_operatives_017",
   "type": "scheduled",
-  "tags": [
-    "pve",
-    "gun"
-  ],
   "active": true,
   "image": "weekly_temp_icon",
   "rarity": "uncommon",
@@ -20,7 +16,7 @@
     {
       "name": "scheduled_operatives_017_2",
       "event_description": { "localization_key": "@scheduled_operatives_017_2_event_description" },
-      "event": { "event_id": "Throw", "actor_item_tag_is": ["ULT", "ult_ik01"], "actor_player_preset_is":["m_malva"]},
+      "event": { "event_id": "Throw", "actor_is_me": true, "actor_item_tag_is": ["ULT", "ult_ik01"], "actor_player_preset_is":["m_malva"]},
       "progress": 15
     },
     {

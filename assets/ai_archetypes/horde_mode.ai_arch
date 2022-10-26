@@ -189,6 +189,57 @@
         },
         
         {
+            "name": "horde_phantom_core",
+            "display_name": "@obj_defeat_creature",
+            "tags": ["(5)Glasshead: Phantom Core"],
+            "count_as_ai":false,
+            "add_tags":["NonconvertableAI", "GlassheadAI", "SpecialAI", "GlassheadTurretAI"],
+            "slice": "slices/ai/horde/phantom_core.dynamicslice",
+            "tp_slice": "slices/ai/horde/phantom_core_tp.dynamicslice",
+            "wounds":
+            {
+                "damage":
+                {
+                    "profile": "",
+                    "value": 50000,
+                    "time": 0.1,
+                    "prob": 0.0
+                }
+            },
+            "competitor": "Glasshead",
+            "enemy_type": "boss",
+            "health": 15000,
+            "behavior":
+            {
+                "behavior_tree": "BehaviorSelector",
+                "profile": "BasicRange",
+                "params":
+                {
+                    "dash_fade_out_slice": "ai/bosses/adamant/adamant_dash_fade_out",
+                    "dash_hide_after_fade_out_delay": "0.0",
+                    "dash_move_time": "0.1",
+                    "dash_fade_in_slice": "ai/bosses/adamant/adamant_dash_fade_in",
+                    "dash_show_after_fade_in_delay": "0.1"
+                }
+            },
+            "speed":
+            {
+                "run": 3,
+                "strafe": 3,
+                "back": 3,
+                "crouch": 3,
+                "fire": 0
+            },
+            "death":
+            {
+                "lifetime": 0.5
+            },
+            "body_turn_limit": 360,
+            "eye_offset_z": 1
+        },
+        
+        
+        {
             "name": "horde_glasshead_runner",
             "vo_profile": "GlassheadRunner",
             "add_tags":["RunnerAI", "NonconvertableAI"],
@@ -410,8 +461,8 @@
             "name":"glasshead_treasure_mob",
             "add_tags":["GlassheadAI", "SpecialAI", "TreasureMob", "NonconvertableAI"],
             "tags":["(5)Glasshead: Treasure Mob"],
-            "display_name": "@glasshead_nest_supporter",
-            "slice": "slices/ai/supporter_ai.dynamicslice",
+            "display_name": "@glasshead_worker_invasion",
+            "slice": "slices/ai/supporter_treasure_mob.dynamicslice",
             "tp_slice": "slices/ai/supporter_treasure_mob_tp.dynamicslice",
             "competitor": "Glasshead",
             "hud_marker": "generic_hp_marker_head",
@@ -446,7 +497,7 @@
                     "close_to_my_holding_pos_weight": "-10",
 
                     
-                    "cancel_attack_radius": "6",
+                    "cancel_attack_radius": "60",
                     "front_of_target_angle":"60",
                     "min_group_size":"2",
                     "group_area_radius":"10",
@@ -474,6 +525,119 @@
                 "weight_dec_step": 50,
                 "weight_dec_time": 0.7
             }
+        },
+        {
+            "name": "HordeStraferGoliath",
+            "display_name": "@strafer_goliath",
+            "tags": ["prototype_horde_strafer_goliath"],
+            "slice": "slices/ai/horde/horde_goliath.dynamicslice",
+            "tp_slice": "slices/ai/goliath/goliath_tp.dynamicslice",
+            "enemy_type": "boss",
+            "health": 10000,
+            "hud_marker": "boss_hp_marker",
+            "behavior":
+            {
+                "profile": "Goliath",
+                "behavior_tree": "BehaviorSelector",
+                "params":
+                {
+                    "backpack_health": "3000.0",
+                    
+                    "crystalline_wave_marker_slice_name": "slices/ai/goliath/misc/goliath_crystalline_wave_marker.dynamicslice",
+                    "crystalline_wave_marker_speed": "20",
+                    "crystalline_wave_marker_lifetime": "1.2",
+                    
+                    "crystalline_wave_unit_slice_name": "slices/ai/goliath/misc/goliath_crystalline_wave_unit.dynamicslice",
+                    "crystalline_wave_unit_speed": "15",
+                    "crystalline_wave_unit_lifetime": "1.5",
+                    "crystalline_wave_unit_max_damage": "75",
+                    
+                    "crystalline_wave_charge_time": "0.0",
+                    "crystalline_wave_units_count": "6",
+                    "crystalline_wave_units_angle": "120",
+                    "crystalline_wave_units_start_offset": "1",
+                    
+                    "crystalline_wave_sprout_slice_name": "slices/ai/goliath/misc/goliath_wave_sprout.dynamicslice",
+                    "crystalline_wave_killzones_max_lifetime": "4",
+                    
+                    "death_from_above_fly_to_hammer_time": "3",
+                    "death_from_above_charge_time": "2.6",
+                    "death_from_above_hammer_target_offset": "7",
+                    "death_from_above_wave_units_count": "8",
+                    "melee_range": "2.0"
+                }
+            },
+            "equip":
+            [
+                {
+                    "item": "ml09_goliath_ai"
+                },
+                {
+                    "item": "wpn07_goliath_dfa_ai"
+                }
+            ],
+            "microbehaviors":
+            [
+                {
+                    "name":"GoliathCrystallineWave",
+                    "params":
+                    {
+                        "min_range": "4",
+                        "max_range": "9",
+                        "cooldown_min":"8.0",
+                        "cooldown_max":"10.0"
+                    }
+                },
+                {
+                    "name":"GoliathRush",
+                    "params":
+                    {
+                        "min_range": "9",
+                        "max_range": "16",
+                        "cooldown_min":"7.0",
+                        "cooldown_max":"10.0"
+                    }
+                },
+                {
+                    "name":"GoliathDeathFromAbove",
+                    "params":
+                    {
+                        "min_range": "14",
+                        "max_range": "24",
+                        "cooldown_min":"10.0",
+                        "cooldown_max":"15.0"
+                    }
+                },
+                {
+                    "name":"GoliathRush",
+                    "params":
+                    {
+                        "min_range": "25",
+                        "max_range": "50",
+                        "cooldown_min":"7.0",
+                        "cooldown_max":"10.0"
+                    }
+                }
+            ],
+            "wounds":
+            {
+                "animation": "Glasshead",
+                "damage": 300,
+                "time": 0.002,
+                "prob": 1.0,
+                "cooldown_min": 2.0,
+                "cooldown_max": 3.0
+            },
+            "speed":
+            {
+                "run": 4.2,
+                "walk": 4.2,
+                "strafe": 4.2,
+                "back": 4.2,
+                "crouch": 4.2,
+                "fire": 4.2
+            },
+            "leave_dead_body": true
         }
     ]
 }

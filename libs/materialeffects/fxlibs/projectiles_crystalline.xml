@@ -12,9 +12,9 @@
 		<Audio trigger="bullet_impact_mat_crystalline_pistol">
 		</Audio>
         <RandEffect>
-            <Particle>
-                <Name minscale="0.8" maxscale="1.2" maxscaledist="80" maxpossiblescalemod="2">weapons_effects.kite_ulta.explosion_hit_crystalline_pt03_friend_a</Name>
-            </Particle>
+            <PopcornParticle>
+                <Name forwardaxisZ="true" minscale="0.8" maxscale="1.2" maxscaledist="80" maxpossiblescalemod="2">libs/particles/weapons_special/mfx_gravity_strike.pkfx</Name>
+            </PopcornParticle>
         </RandEffect>
     </Effect>    <Effect name="crystalline_pistol_explosion" delay="0.05">
 		<Audio trigger="bullet_expl_mat_crystalline_pistol">

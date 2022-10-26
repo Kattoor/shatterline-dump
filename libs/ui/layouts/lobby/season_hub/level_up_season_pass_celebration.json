@@ -1,0 +1,17 @@
+{
+    "script": "scripts/ui/lobby/season_hub/level_up_season_pass_celebration.lua",
+    "view_path": "LevelUpSeasonPassCelebration.html",
+    "defined_actions": ["hide_gamepad_cursor"],
+    "hide_cursor": false,
+    "send_stats": true,
+    "children":
+    [
+        {"name": "video", "type": "Video", "view_path": "video", "video_path": "videos/celebration/season_pass_level_up.bk2", "background": true},
+
+        {"name": "current_level", "type": "Label", "view_path": "levelWrapper.currentLevel"},
+        {"name": "new_level", "type": "Label", "view_path": "levelWrapper.newLevel"},
+
+        {"name": "level_up_label", "type": "Label", "view_path": "levelUp", "text": "@season_pass_level_up"},
+        {"name": "season_name", "type": "Label", "view_path": "seasonName", "text": "@season_pass_season_title"}
+    ]
+}

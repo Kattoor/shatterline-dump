@@ -388,13 +388,7 @@
             "name":"CrystallineTurret",
             "prefix":"gls_crystalline_turret",
             "events":
-            {
-                "death":{
-                    "name": "gls_crystalline_turret_destroy",
-                    "wait_other": 0, "play_time":3, "priority":3, 
-                    "source_claim":{"time":1.0, "count":1, "delay_min":0.0, "delay_max":0.0}, 
-                    "global_claim":{"time":1.0, "count":20, "delay_min":0.0, "delay_max":0.0}
-                },
+            {                
                 "OnTargetChanged":{
                     "name": "gls_crystalline_turret_spawn",
                     "wait_other": 0, "play_time":3, "priority":0,
@@ -463,6 +457,12 @@
                     "global_claim":{"time":1.0, "count":20, "delay_min":0.0, "delay_max":0.0}
                 }
             }
+        },
+        {
+            "name":"Queen"
+        },
+        {
+            "name":"Colossus"
         }
     ]
 }

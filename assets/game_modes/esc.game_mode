@@ -10,7 +10,7 @@
   },
   "reequip_cooldown": 10,
   "mechanics_config": {
-    "pre_game_time": 90,
+    "pre_game_time": 45,
     "self_respawn": true,
     "reset_power_items_on_team_rotation": true,
     "cancel_invulnerability_on_action": false
@@ -111,26 +111,26 @@
     }
   ],
   "auto_generate_result_score_messages": {
-     "team_score_messages": [
-        {
-          "min_ladder_position": 0,
-          "message_primary": "@session_draw"
-        },
-        {
-          "min_ladder_position": 1,
-          "message_primary": "@session_win"
-        },
-        {
-          "min_ladder_position": 2,
-          "message_primary": "@session_lose"
-        },
-        {
-          "min_objective_score": 1000,
-          "min_ladder_position": 2,
-          "message_primary": "@session_lose",
-          "message_secondary": "@escort_slower_team_lose"
-        }
-      ]
+    "team_score_messages": [
+      {
+        "min_ladder_position": 0,
+        "message_primary": "@session_draw"
+      },
+      {
+        "min_ladder_position": 1,
+        "message_primary": "@session_win"
+      },
+      {
+        "min_ladder_position": 2,
+        "message_primary": "@session_lose"
+      },
+      {
+        "min_objective_score": 1000,
+        "min_ladder_position": 2,
+        "message_primary": "@session_lose",
+        "message_secondary": "@escort_slower_team_lose"
+      }
+    ]
   },
   "session_result_messages_config": [
     {
@@ -315,229 +315,268 @@
   "score": [
     {
       "event": {
-        "event_id": "Kill", "actor_is_me": true
+        "event_id": "Kill",
+        "actor_is_me": true
       },
       "score": 5
     },
     {
       "event": {
-        "event_id": "Time", "actor_is_me": true
+        "event_id": "Time",
+        "actor_is_me": true
       },
       "score": 1
     },
     {
       "event": {
-        "event_id": "PlayerKill", "actor_is_me": true
+        "event_id": "PlayerKill",
+        "actor_is_me": true
       },
       "score": 0
     },
     {
       "event": {
-        "event_id": "Death", "actor_is_me": true
+        "event_id": "Death",
+        "actor_is_me": true
       },
       "score": 0
     },
     {
       "event": {
-        "event_id": "Headshot", "actor_is_me": true
+        "event_id": "Headshot",
+        "actor_is_me": true
       },
       "score": 8
     },
     {
       "event": {
-        "event_id": "Viking", "actor_is_me": true
+        "event_id": "Viking",
+        "actor_is_me": true
       },
       "score": 2
     },
     {
       "event": {
-        "event_id": "SupportUse", "actor_is_me": true
+        "event_id": "SupportUse",
+        "actor_is_me": true
       },
       "score": 2
     },
     {
       "event": {
-        "event_id": "Assist", "actor_is_me": true
+        "event_id": "Assist",
+        "actor_is_me": true
       },
       "score": 4
     },
     {
       "event": {
-        "event_id": "Resurrect", "actor_is_me": true
+        "event_id": "Resurrect",
+        "actor_is_me": true
       },
       "score": 10
     },
     {
       "event": {
-        "event_id": "Heal", "actor_is_me": true, "target_is_me": false
+        "event_id": "Heal",
+        "actor_is_me": true,
+        "target_is_me": false
       },
       "score": 0.1
     },
     {
       "event": {
-        "event_id": "DoubleKill", "actor_is_me": true
+        "event_id": "DoubleKill",
+        "actor_is_me": true
       },
       "score": 10
     },
     {
       "event": {
-        "event_id": "TripleKill", "actor_is_me": true
+        "event_id": "TripleKill",
+        "actor_is_me": true
       },
       "score": 10
     },
     {
       "event": {
-        "event_id": "KillStreak", "actor_is_me": true
+        "event_id": "KillStreak",
+        "actor_is_me": true
       },
       "score": 10
     },
     {
       "event": {
-        "event_id": "Rampage", "actor_is_me": true
+        "event_id": "Rampage",
+        "actor_is_me": true
       },
       "score": 10
     },
     {
       "event": {
-        "event_id": "Bloodlust", "actor_is_me": true
+        "event_id": "Bloodlust",
+        "actor_is_me": true
       },
       "score": 10
     },
     {
       "event": {
-        "event_id": "FirstBlood", "actor_is_me": true
+        "event_id": "FirstBlood",
+        "actor_is_me": true
       },
       "score": 8
     },
     {
       "event": {
-        "event_id": "BladeMaster", "actor_is_me": true
+        "event_id": "BladeMaster",
+        "actor_is_me": true
       },
       "score": 8
     },
     {
       "event": {
-        "event_id": "FieldMedic", "actor_is_me": true
+        "event_id": "FieldMedic",
+        "actor_is_me": true
       },
       "score": 5
     },
     {
       "event": {
-        "event_id": "CollateralKill", "actor_is_me": true
+        "event_id": "CollateralKill",
+        "actor_is_me": true
       },
       "score": 8
     },
     {
       "event": {
-        "event_id": "Revenge", "actor_is_me": true
+        "event_id": "Revenge",
+        "actor_is_me": true
       },
       "score": 8
     },
     {
       "event": {
-        "event_id": "ReturnFire", "actor_is_me": true
+        "event_id": "ReturnFire",
+        "actor_is_me": true
       },
       "score": 8
     },
     {
       "event": {
-        "event_id": "ShutDown", "actor_is_me": true
+        "event_id": "ShutDown",
+        "actor_is_me": true
       },
       "score": 15
     },
     {
       "event": {
-        "event_id": "SlideKill", "actor_is_me": true
+        "event_id": "SlideKill",
+        "actor_is_me": true
       },
       "score": 8
     },
     {
       "event": {
-        "event_id": "CaptureTickAssist", "actor_is_me": true
+        "event_id": "CaptureTickAssist",
+        "actor_is_me": true
       },
       "score": 4
     },
     {
       "event": {
-        "event_id": "ConquestDiscoverer", "actor_is_me": true
+        "event_id": "ConquestDiscoverer",
+        "actor_is_me": true
       },
       "score": 10
     },
     {
       "event": {
-        "event_id": "UltKill", "actor_is_me": true
+        "event_id": "UltKill",
+        "actor_is_me": true
       },
       "score": 5
     },
     {
       "event": {
-        "event_id": "MedalAchieved", "actor_is_me": true
+        "event_id": "MedalAchieved",
+        "actor_is_me": true
       },
       "score": 1
     },
     {
       "event": {
-        "event_id": "LifeGuard", "actor_is_me": true
+        "event_id": "LifeGuard",
+        "actor_is_me": true
       },
       "score": 7
     },
     {
       "event": {
-        "event_id": "Savior", "actor_is_me": true
+        "event_id": "Savior",
+        "actor_is_me": true
       },
       "score": 10
     },
     {
       "event": {
-        "event_id": "Marksman", "actor_is_me": true
+        "event_id": "Marksman",
+        "actor_is_me": true
       },
       "score": 10
     },
     {
       "event": {
-        "event_id": "Ultimator", "actor_is_me": true
+        "event_id": "Ultimator",
+        "actor_is_me": true
       },
       "score": 10
     },
     {
       "event": {
-        "event_id": "Handyman", "actor_is_me": true
+        "event_id": "Handyman",
+        "actor_is_me": true
       },
       "score": 10
     },
     {
       "event": {
-        "event_id": "Pistolero", "actor_is_me": true
+        "event_id": "Pistolero",
+        "actor_is_me": true
       },
       "score": 2
     },
     {
       "event": {
-        "event_id": "AbilityKill", "actor_is_me": true
+        "event_id": "AbilityKill",
+        "actor_is_me": true
       },
       "score": 10
     },
     {
       "event": {
-        "event_id": "Support", "actor_is_me": true
+        "event_id": "Support",
+        "actor_is_me": true
       },
       "score": 2
     },
     {
       "event": {
-        "event_id": "DestroyEnemyObjects", "actor_is_me": true
+        "event_id": "DestroyEnemyObjects",
+        "actor_is_me": true
       },
       "score": 1
     },
     {
       "event": {
-        "event_id": "EnemyFrozen", "actor_is_me": true
+        "event_id": "EnemyFrozen",
+        "actor_is_me": true
       },
       "score": 1
     },
     {
       "event": {
-        "event_id": "KillEnemyDrone", "actor_is_me": true
+        "event_id": "KillEnemyDrone",
+        "actor_is_me": true
       },
       "score": 3
     }
@@ -550,7 +589,7 @@
       "spawn_config_params": {
         "auto_respawn_time": 20,
         "spawn_config": "dynamic_spawn_near_players",
-        "respawn_cooldown": 4
+        "respawn_cooldown": 8
       },
       "hero_restriction": {
         "hero_count": 1,
@@ -569,7 +608,6 @@
             "test_preset_s01",
             "test_preset_h01",
             "test_preset_s02_locked"
-       
           ]
         }
       },
@@ -621,7 +659,7 @@
       "spawn_config_params": {
         "auto_respawn_time": 20,
         "spawn_config": "dynamic_spawn_near_players",
-        "respawn_cooldown": 4
+        "respawn_cooldown": 8
       },
       "hero_restriction": {
         "hero_count": 1,
@@ -640,12 +678,10 @@
             "test_preset_s01",
             "test_preset_h01",
             "test_preset_s02_locked"
-       
           ]
         }
       },
-      "scoring_events": [
-      ],
+      "scoring_events": [],
       "feedback_config": {
         "round_start_event": "EscortStartDefend",
         "round_end_events": [
@@ -670,109 +706,127 @@
   "ability_mult": [
     {
       "event": {
-        "event_id": "Kill", "actor_is_me": true
+        "event_id": "Kill",
+        "actor_is_me": true
       },
       "score": 0.4166
     },
     {
       "event": {
-        "event_id": "Headshot", "actor_is_me": true
+        "event_id": "Headshot",
+        "actor_is_me": true
       },
       "score": 0.5333
     },
     {
       "event": {
-        "event_id": "Assist", "actor_is_me": true
+        "event_id": "Assist",
+        "actor_is_me": true
       },
       "score": 0.5
     },
     {
       "event": {
-        "event_id": "DoubleKill", "actor_is_me": true
+        "event_id": "DoubleKill",
+        "actor_is_me": true
       },
       "score": 0.6666
     },
     {
       "event": {
-        "event_id": "TripleKill", "actor_is_me": true
+        "event_id": "TripleKill",
+        "actor_is_me": true
       },
       "score": 0.3333
     },
     {
       "event": {
-        "event_id": "KillStreak", "actor_is_me": true
+        "event_id": "KillStreak",
+        "actor_is_me": true
       },
       "score": 0.6666
     },
     {
       "event": {
-        "event_id": "Rampage", "actor_is_me": true
+        "event_id": "Rampage",
+        "actor_is_me": true
       },
       "score": 0.3333
     },
     {
       "event": {
-        "event_id": "Bloodlust", "actor_is_me": true
+        "event_id": "Bloodlust",
+        "actor_is_me": true
       },
       "score": 0.2
     },
     {
       "event": {
-        "event_id": "FirstBlood", "actor_is_me": true
+        "event_id": "FirstBlood",
+        "actor_is_me": true
       },
       "score": 0.5333
     },
     {
       "event": {
-        "event_id": "BladeMaster", "actor_is_me": true
+        "event_id": "BladeMaster",
+        "actor_is_me": true
       },
       "score": 0.5333
     },
     {
       "event": {
-        "event_id": "FieldMedic", "actor_is_me": true
+        "event_id": "FieldMedic",
+        "actor_is_me": true
       },
       "score": 0.5333
     },
     {
       "event": {
-        "event_id": "CollateralKill", "actor_is_me": true
+        "event_id": "CollateralKill",
+        "actor_is_me": true
       },
       "score": 0.5333
     },
     {
       "event": {
-        "event_id": "Revenge", "actor_is_me": true
+        "event_id": "Revenge",
+        "actor_is_me": true
       },
       "score": 0.5333
     },
     {
       "event": {
-        "event_id": "ReturnFire", "actor_is_me": true
+        "event_id": "ReturnFire",
+        "actor_is_me": true
       },
       "score": 0.5333
     },
     {
       "event": {
-        "event_id": "ShutDown", "actor_is_me": true
+        "event_id": "ShutDown",
+        "actor_is_me": true
       },
       "score": 0.5
     },
     {
       "event": {
-        "event_id": "SlideKill", "actor_is_me": true
+        "event_id": "SlideKill",
+        "actor_is_me": true
       },
       "score": 0.5333
     },
     {
       "event": {
-        "event_id": "ZoneCaptured", "actor_is_me": true
+        "event_id": "ZoneCaptured",
+        "actor_is_me": true
       },
       "score": 0
     },
     {
       "event": {
-        "event_id": "CaptureTickAssist", "actor_is_me": true
+        "event_id": "CaptureTickAssist",
+        "actor_is_me": true
       },
       "score": 0.4166
     }
@@ -780,5 +834,6 @@
   "event_log": "default",
   "skill_type": "esc",
   "highlight_enabled": true,
-  "personal_score_config": "esc"
+  "personal_score_config": "esc",
+  "afk_timeout": 100
 }

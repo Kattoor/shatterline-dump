@@ -4,16 +4,22 @@
     "type": "record",
     "fields": [
         {
-            "name": "ts",
+            "name": "datetime",
             "type": "string",
             "default": "",
-            "doc": "ISO8601 UTC timestamp of the event invocation"
+            "doc": "format: YYYY-MM-DD hh:mm:ss"
         },
         {
-            "name": "pid",
+            "name": "profile_id",
             "type": "long",
             "default": 0,
             "doc": "identifier of a player"
+        },
+        {
+            "name": "season_id",
+            "type": "long",
+            "default": 0,
+            "doc": "Identifier of Season"
         },
         {
             "name": "stat_name",

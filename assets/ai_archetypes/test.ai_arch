@@ -4,63 +4,63 @@
         {
             "name": "test_team2_strafer_AR_g1",
             "parent": "StraferAR",
-            "tp_slice": "slices/ai/recolored_strafers/strafer_ar_recolor_tp.dynamicslice",
+            "tp_slice": "slices/ai/strafers_old/strafer_ar_old_tp.dynamicslice",
             "competitor": "Glasshead",
             "tags": ["test_team2_strafer_AR"]
         },
         {
             "name": "test_team2_strafer_AR_g2",
             "parent": "StraferAR_grade2",
-            "tp_slice": "slices/ai/recolored_strafers/strafer_ar_recolor_tp.dynamicslice",
+            "tp_slice": "slices/ai/strafers_old/strafer_ar_old_tp.dynamicslice",
             "competitor": "Glasshead",
             "tags": ["test_team2_strafer_AR"]
         },
         {
             "name": "test_team2_strafer_AR_g3",
             "parent": "StraferAR_grade3",
-            "tp_slice": "slices/ai/recolored_strafers/strafer_ar_recolor_tp.dynamicslice",
+            "tp_slice": "slices/ai/strafers_old/strafer_ar_old_tp.dynamicslice",
             "competitor": "Glasshead",
             "tags": ["test_team2_strafer_AR"]
         },
         {
             "name": "test_team2_strafer_SMG_g1",
             "parent": "StraferSMG",
-            "tp_slice": "slices/ai/recolored_strafers/strafer_smg_recolor_tp.dynamicslice",
+            "tp_slice": "slices/ai/strafers_old/strafer_smg_old_tp.dynamicslice",
             "competitor": "Glasshead",
             "tags": ["test_team2_strafer_SMG"]
         },
         {
             "name": "test_team2_strafer_SMG_g2",
             "parent": "StraferSMG_grade2",
-            "tp_slice": "slices/ai/recolored_strafers/strafer_smg_recolor_tp.dynamicslice",
+            "tp_slice": "slices/ai/strafers_old/strafer_smg_old_tp.dynamicslice",
             "competitor": "Glasshead",
             "tags": ["test_team2_strafer_SMG"]
         },
         {
             "name": "test_team2_strafer_SMG_g3",
             "parent": "StraferSMG_grade3",
-            "tp_slice": "slices/ai/recolored_strafers/strafer_smg_recolor_tp.dynamicslice",
+            "tp_slice": "slices/ai/strafers_old/strafer_smg_old_tp.dynamicslice",
             "competitor": "Glasshead",
             "tags": ["test_team2_strafer_SMG"]
         },
         {
             "name": "test_team2_strafer_SHG_g1",
             "parent": "StraferSHG",
-            "tp_slice": "slices/ai/recolored_strafers/strafer_shg_recolor_tp.dynamicslice",
+            "tp_slice": "slices/ai/strafers_old/strafer_shg_old_tp.dynamicslice",
             "competitor": "Glasshead",
             "tags": ["test_team2_strafer_SHG"]
         },
         {
             "name": "test_team2_strafer_SHG_g2",
             "parent": "StraferSHG_grade2",
-            "tp_slice": "slices/ai/recolored_strafers/strafer_shg_recolor_tp.dynamicslice",
+            "tp_slice": "slices/ai/strafers_old/strafer_shg_old_tp.dynamicslice",
             "competitor": "Glasshead",
             "tags": ["test_team2_strafer_SHG"]
         },
         {
             "name": "test_team2_strafer_SHG_g3",
             "parent": "StraferSHG_grade3",
-            "tp_slice": "slices/ai/recolored_strafers/strafer_shg_recolor_tp.dynamicslice",
+            "tp_slice": "slices/ai/strafers_old/strafer_shg_old_tp.dynamicslice",
             "competitor": "Glasshead",
             "tags": ["test_team2_strafer_SHG"]
         },
@@ -2265,6 +2265,44 @@
             }
         },
         {
+            "name":"test_chaser_navlink",
+            "parent":"chaser",
+            "tags":["test_chaser_navlink"],
+            "behavior":
+            {
+                "behavior_tree":"BehaviorSelector",
+                "profile":"Chaser",
+                "params":
+                {
+                    "distance_to_player_min":"9.0",
+                    "distance_to_player_max":"10.0",
+                    "update_path_rate":"2.0",
+                    "attack_cooldown_min":"5.0",
+                    "attack_cooldown_max":"8.0",
+                    "ghost_target_following_duration_min":"3.0",
+                    "ghost_target_following_duration_max":"5.0",
+                    "check_view_cone_duration":"10.0",
+                    "allowed_target_view_cone_angle":"45",
+                    "attack_approaching_max_time": "5.0",
+                    "close_to_attack_range": "5.0",
+                    "ignore_collision_before_attack_range": "3.0",
+                    "attack_in_range":"1.0",
+                    "attacking_duration":"5.0",
+                    "attacking_damage":"15.0",
+                    "attacking_damage_period":"0.5",
+                    "dps_threshold":"200.0",
+                    "dps_decay":"5.0",
+                    "dps_regen_start_delay":"1.0",
+                    "capture_target":"true",
+                    "camera_limits_hor":"5",
+                    "camera_limits_vert":"0",
+                    "camera_yaw":"0",
+                    "camera_pitch":"20"
+                }
+            },
+            "navlinks_movement_type": "Fly"
+        },
+        {
             "name":"minotaur_test",
             "slice": "slices/ai/minotaur/minotaur_02.dynamicslice",
             "tp_slice": "slices/ai/minotaur/minotaur_02_tp.dynamicslice",
@@ -2358,8 +2396,8 @@
         {
             "name":"minotaur_miss_chance_test",
             "parent": "Minotaur",
-            "slice": "slices/ai/minotaur/minotaur_combined.dynamicslice",
-            "tp_slice": "slices/ai/minotaur/minotaur_combined_tp.dynamicslice",
+            "slice": "slices/ai/minotaur/minotaur_02.dynamicslice",
+            "tp_slice": "slices/ai/minotaur/minotaur_02_tp.dynamicslice",
             "competitor":"Strafer",
             "tags":["minotaur_miss_chance_test"],
             "enemy_type":"miniboss_01",
@@ -2509,8 +2547,8 @@
         },
         {
             "name":"minotaur_test_guntrace",
-            "slice": "slices/ai/minotaur/minotaur_combined.dynamicslice",
-            "tp_slice": "slices/ai/minotaur/minotaur_combined_tp.dynamicslice",
+            "slice": "slices/ai/minotaur/minotaur_02.dynamicslice",
+            "tp_slice": "slices/ai/minotaur/minotaur_02_tp.dynamicslice",
             "competitor":"Strafer",
             "tags":["minotaur_test_guntrace"],
             "enemy_type":"miniboss_01",
@@ -2599,8 +2637,8 @@
          "name": "minotaur_test_raycast",
          "display_name": "@strafer_minotaur",
          "tags": ["minotaur_test_raycast"],
-         "slice": "slices/ai/minotaur/minotaur_combined.dynamicslice",
-         "tp_slice": "slices/ai/minotaur/minotaur_combined_tp.dynamicslice",
+         "slice": "slices/ai/minotaur/minotaur_02.dynamicslice",
+         "tp_slice": "slices/ai/minotaur/minotaur_02_tp.dynamicslice",
          "vo_profile": "Gunman",
          "competitor": "Strafer",
          "enemy_type": "miniboss",
@@ -3116,6 +3154,8 @@
                     "distance_to_player_min": "20.0",
                     "update_path_rate": "1.0",
                     "mass_glitch_range": "60",
+                    
+                    "shield_phase_max_duration": "60",
                     
                     "range_attack_firing_time": "3",
                     "range_attack_delay_between_shoot_min": "0",
@@ -3718,8 +3758,8 @@
       },
       {
             "name":"minotaur_test_miss_special",
-            "slice": "slices/ai/minotaur/minotaur_combined.dynamicslice",
-            "tp_slice": "slices/ai/minotaur/minotaur_combined_tp.dynamicslice",
+            "slice": "slices/ai/minotaur/minotaur_02.dynamicslice",
+            "tp_slice": "slices/ai/minotaur/minotaur_02_tp.dynamicslice",
             "competitor":"Strafer",
             "tags":["minotaur_test_miss_special"],
             "enemy_type":"miniboss_01",
@@ -5605,6 +5645,14 @@
                             }
                         ]
                     }
+                },
+                "weights":
+                {
+                    "critical_range": 0,
+                    "damage_dealer": 10,
+                    "target_visible": 5,
+                    "target_sound": 0,
+                    "target_memory": 0
                 }
             },
             "microbehaviors": 
@@ -5677,6 +5725,20 @@
                     "camera_pitch": "40"
                 }
             }
+        },
+        {
+            "name":"test_strafer_audio_preload",
+            "parent": "StraferAR",
+            "tags":["test_strafer_audio_preload"],
+            "slice": "slices/ai/test_strafer_audio_preload.dynamicslice",
+            "audio_preload_scope": "strafers"
+        },
+        {
+            "name":"test_shardskin_audio_preload",
+            "parent": "Shardskin",
+            "tags":["test_shardskin_audio_preload"],
+            "slice": "slices/ai/test_shardskin_audio_preload.dynamicslice",
+            "audio_preload_scope": "shardskin"
         },
         {
             "name":"test_glasshead_death_slice",

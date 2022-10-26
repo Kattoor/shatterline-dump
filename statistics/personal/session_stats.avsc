@@ -4,64 +4,40 @@
     "type": "record",
     "fields": [
         {
-            "name": "ts",
+            "name": "datetime",
             "type": "string",
             "default": "",
-            "doc": "ISO8601 UTC timestamp of the event invocation"
+            "doc": "format: YYYY-MM-DD hh:mm:ss"
         },
         {
-            "name": "name",
-            "type": "string",
-            "default": "-1",
-            "doc": "unique name of the event"
-        },
-        {
-            "name": "ns",
-            "type": "string",
-            "default": "-1",
-            "doc": "namespace of the server's deployment (realm)"
-        },
-        {
-            "name": "pid",
+            "name": "profile_id",
             "type": "long",
             "default": 0,
             "doc": "Identifier of a player"
         },
         {
-            "name": "gid",
+            "name": "game_id",
             "type": "string",
             "default": "",
             "doc": "Identifier of a game session"
         },
         {
-            "name": "game_outcome",
-            "type": "string",
-            "default": "",
-            "doc": "Game outcome"
+            "name": "season_id",
+            "type": "long",
+            "default": 0,
+            "doc": "Identifier of Season"
         },
         {
-            "name": "game_in_top",
-            "type": "int",
-            "default": 0,
-            "doc": "Final place in game session"
+            "name": "game_outcome",
+            "type": "string",
+            "default": "invalid",
+            "doc": "Game outcome Enum('win', 'loss', 'draw', 'invalid')"
         },
         {
             "name": "mission_name",
             "type": "string",
             "default": "",
             "doc": "Mission name"
-        },
-        {
-            "name": "mission_completed",
-            "type": "int",
-            "default": 0,
-            "doc": "Is mission completed"
-        },
-        {
-            "name": "mission_played_time",
-            "type": "int",
-            "default": 0,
-            "doc": "Time spent on the mission"
         },
         {
             "name": "game_mode",
@@ -76,66 +52,22 @@
             "doc": "Game type"
         },
         {
-            "name": "game_bombs_planted",
-            "type": "int",
-            "default": 0
-        },
-        {
-            "name": "game_bombs_defused",
-            "type": "int",
-            "default": 0
-        },
-        {
-            "name": "game_rounds_played",
-            "type": "int",
-            "default": 0
-        },
-        {
-            "name": "game_rounds_won",
-            "type": "int",
-            "default": 0
-        },
-        {
-            "name": "game_rounds_attack_count",
-            "type": "int",
-            "default": 0
-        },
-        {
-            "name": "game_rounds_defense_count",
-            "type": "int",
-            "default": 0
-        },
-        {
-            "name": "game_rounds_attack_won",
-            "type": "int",
-            "default": 0
-        },
-        {
-            "name": "game_rounds_defense_won",
-            "type": "int",
-            "default": 0
-        },
-        {
-            "name": "game_capture_time",
-            "type": "int",
-            "default": 0
-        },
-        {
-            "name": "game_captured",
-            "type": "int",
-            "default": 0
-        },
-        {
-            "name": "game_invasion_team",
+            "name": "mission_played_time",
             "type": "int",
             "default": 0,
-            "doc": "Invasion team; 0 - not invasion mode; 1 - play as invader; 2 - play as shellguard"
+            "doc": "Time spent on the mission"
         },
         {
-            "name": "game_objectives_completed",
+            "name": "ladder_position",
             "type": "int",
             "default": 0,
-            "doc": "Objectives completed"
+            "doc": "position in the ladder. If the session wasn't finished, this equals to 0"
+        },
+        {
+            "name": "game_total_kills",
+            "type": "int",
+            "default": 0,
+            "doc": "Total number of kills for session"
         },
         {
             "name": "game_best_kill_streak",
@@ -148,6 +80,12 @@
             "type": "int",
             "default": 0,
             "doc": "Time from session start to final boss elimination"
+        },
+        {
+            "name": "game_horde_encounters_completed",
+            "type": "int",
+            "default": 0,
+            "doc": "Completed encounters in horde mode"
         }
     ]
 }

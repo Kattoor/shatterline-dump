@@ -14,7 +14,7 @@
          "enemy_type": "boss",
          "leave_dead_body": true,
          "leave_dead_body_check_viewcone": false,
-         "health": 11500,
+         "health": 13500,
          "can_be_frozen": false,
          "behavior":
          {
@@ -26,7 +26,7 @@
                "idle_range_max": "50",
                "idle_stay_duration": "4",
                "close_melee_range": "5",
-               "multi_attack_hp_threshold": "0.5",
+               "multi_attack_hp_threshold": "0.6",
                "multi_attack_period": "1",
                "crystaline_attack_range": "15",
                "crystaline_attack_delay": "2",
@@ -62,11 +62,11 @@
          },
          "speed":
          {
-            "run": 5.4,
-            "strafe": 5.4,
-            "back": 5.4,
-            "crouch": 5.4,
-            "fire": 5.4
+            "run": 6.4,
+            "strafe": 6.4,
+            "back": 6.4,
+            "crouch": 6.4,
+            "fire": 6.4
          },
          "target_selection":
          {
@@ -100,7 +100,7 @@
          "leave_dead_body": true,
          "leave_dead_body_check_viewcone": false,
          "can_be_frozen": false,
-         "health": 12000,
+         "health": 14000,
          "behavior":
          {
             "behavior_tree": "Root",
@@ -147,11 +147,11 @@
          },
          "speed":
          {
-            "run": 5.4,
-            "strafe": 5.4,
-            "back": 5.4,
-            "crouch": 5.4,
-            "fire": 5.4
+            "run": 6.4,
+            "strafe": 6.4,
+            "back": 6.4,
+            "crouch": 6.4,
+            "fire": 6.4
          },
          "target_selection":
          {
@@ -264,9 +264,9 @@
             "profile": "Behemoth",
             "params":
             {
-               "weakpoint_health": "700",
+               "weakpoint_health": "800",
                "weakpoint_phase_points": "500",
-               "weakpoint_hp_damage_percent": "5",
+               "weakpoint_hp_damage_percent": "3",
                "weakpoint_can_kill": "true",
                "weakpoint_damage_health_cap": "200",
                "rage_phase_points": "1500",
@@ -277,20 +277,20 @@
                "max_angle_for_close_melee":"60",
                "correct_melee_dir_speed":"180",
                "correct_melee_dir_time":"1",
-               "shockwave_prob":"0.5",
+               "shockwave_prob":"0.4",
                "shockwave_repeat_count_min":"1",
                "shockwave_repeat_count_max":"2",
-               "shockwave_repeats_delay_min":"1.0",
-               "shockwave_repeats_delay_max":"2.3",
-               "shockwave_attack_anim_duration":"1.67",
+               "shockwave_repeats_delay_min":"0.5",
+               "shockwave_repeats_delay_max":"0.83",
+               "shockwave_attack_anim_duration":"1.27",
                "shockwave_target_tracking_time":"0.3",
                "shockwave_launch_time":"1.2",
                "shockwave_unit_slice": "slices/ai/bosses/behemoth/behemoth_shockwave_move.dynamicslice",
                "shockwave_units_spread_angle":"60",
                "shockwave_unit_start_offset":"4",
-               "shockwave_units_count_min":"3",
-               "shockwave_units_count_max":"4",
-               "shockwave_unit_move_speed":"9",
+               "shockwave_units_count_min":"4",
+               "shockwave_units_count_max":"5",
+               "shockwave_unit_move_speed":"10",
                "shockwave_unit_move_duration":"4",
                "shockwave_unit_max_z_offset":"1",
                "ranged_attack_duration_min":"6",
@@ -305,19 +305,19 @@
                "jump_out_delay":"0.9",
                "jump_out_in_air_time":"0.6",
                "jump_out_animation_duration":"2.15",
-               "jump_out_directions_count":"3",
+               "jump_out_directions_count":"2",
                "burrow_shockwave_prob":"0.3",
                "burrow_down_anim_duration": "1.93",
                "burrow_up_anim_duration": "2.03",
                "burrow_follow_target_offset": "2.8",
-               "burrow_move_speed": "9",
+               "burrow_move_speed": "10",
                "burrow_move_max_duration": "5",
                "burrow_move_slice": "slices/ai/bosses/behemoth/behemoth_burrow_move.dynamicslice",
                "burrow_up_slice": "slices/ai/bosses/behemoth/behemoth_mine_explosion.dynamicslice",
                "burrow_move_target_tracking_buffer_size": "9",
                "burrow_move_target_tracking_delay": "0.1",
                "burrow_to_target_min_distance": "10",
-               "min_melee_phase_time": "8",
+               "min_melee_phase_time": "7",
                "max_melee_phase_time": "40",
                "melee_phase_damage_threshold": "10000",
                "between_melee_delay_min": "1",
@@ -333,7 +333,7 @@
          [
             {
                "item": "wpn02_behemoth_ai",
-               "shooting_pattern": ["1; 0.0 - 0.5"],
+               "shooting_pattern": ["1; 0.0 - 0.2"],
                "restart_shooting_pattern_on_interrupt": true
             }
          ],
@@ -352,7 +352,7 @@
         ],
          "speed":
          {
-            "run": 7,
+            "run": 7.5,
             "strafe": 7,
             "back": 7,
             "crouch": 7,
@@ -367,7 +367,8 @@
             "tag_weights":
             {
                "VIP": -10,
-               "Breakable": -100
+               "Breakable": -100,
+               "Drone": -100
             },
             "thresholds":
             {
@@ -394,10 +395,11 @@
             "display_name": "@boss_queen",
             "slice": "slices/ai/queen_new.dynamicslice",
             "tp_slice": "slices/ai/queen_tp.dynamicslice",
+            "vo_profile": "Queen",
             "tags": [ "Queen_phased" ],
             "enemy_type": "boss",
             "body_turn_limit": 360,
-            "health": 8000,
+            "health": 9000,
             "competitor": "Glasshead",
             "leave_dead_body": false,
             "can_be_alldead": false,
@@ -512,7 +514,8 @@
             "add_tags":["StraferAI", "BossAI", "RamDashHitArticulated"],
             "slice": "slices/ai/bosses/colossus/colossus.dynamicslice",
             "tp_slice": "slices/ai/bosses/colossus/colossus_tp.dynamicslice",
-            "health": 18000,
+            "vo_profile": "Colossus",
+            "health": 22000,
             "body_turn_limit": 180,
             "leave_dead_body": false,
             "can_be_alldead": false,
@@ -540,24 +543,25 @@
                     "shield_drones_respawn_limit_in_recharge_phase": "0",
 
                     "time_for_recharge_shield": "30.0",
-                    "recharge_phase_max_damage_to_get": "5500.0",
+                    "min_time_in_recharge_phase": "10.0",
+                    "recharge_phase_max_damage_to_get": "7000.0",
 
                     "laser_wall_rotating_drone_slice_name": "slices/ai/bosses/colossus/colossus_laser_wall_drone.dynamicslice",
                     "laser_wall_rotating_area_size": "10",
                     "laser_wall_rotating_targets_count": "2",
                     "laser_wall_rotating_spawn_distance": "2",
                     "laser_wall_rotating_elevation": "-0.75",
-                    "laser_wall_rotating_activation_delay": "2",
-                    "laser_wall_rotating_rotation_speed": "80",
-                    "laser_wall_rotating_fragments_count": "1",
-                    "laser_wall_rotating_fragments_gap": "1",
-                    "laser_wall_rotating_fragment_width": "12",
+                    "laser_wall_rotating_activation_delay": "1",
+                    "laser_wall_rotating_rotation_speed": "40",
+                    "laser_wall_rotating_fragments_count": "2",
+                    "laser_wall_rotating_fragments_gap": "8",
+                    "laser_wall_rotating_fragment_width": "6",
                     "laser_wall_rotating_fragment_height": "4",
-                    "laser_wall_rotating_hp_to_cooldown": "0.75:10, 0.50:8, 0.25:6, 0:5",
+                    "laser_wall_rotating_hp_to_cooldown": "0.75:1, 0.50:1, 0.25:1, 0:1",
                     "laser_wall_rotating_hp_to_lifetime": "0.75:12, 0.50:12, 0.25:12, 0:14",
                     "laser_wall_rotating_damage": "50",
-                    "laser_wall_rotating_first_drones_spawn_flight_time": "1",
-                    "laser_wall_rotating_remaining_drones_spawn_flight_time": "1",
+                    "laser_wall_rotating_first_drones_spawn_flight_time": "0.5",
+                    "laser_wall_rotating_remaining_drones_spawn_flight_time": "0.5",
 
                     "laser_aim_effect_scale": "0.1",
                     "laser_damage_effect_scale": "5.0",
@@ -565,20 +569,20 @@
                     "laser_hp_to_active_time": "0.75:3, 0.50:4, 0.25:5, 0:6",
                     "laser_hp_to_move_speed": "0.75:3.5, 0.50:3.5, 0.25:3.5, 0:3.5",
                     "laser_active_to_cooldown_delay": "0",
-                    "laser_hp_to_cooldown": "0.75:10, 0.50:9, 0.25:8, 0:8",
+                    "laser_hp_to_cooldown": "0.75:5, 0.50:4, 0.25:3, 0:3",
                     "laser_damage_zone_server_slice_name": "slices/ai/bosses/colossus/colossus_laser_damage_zone_server.dynamicslice",
                     "laser_damage_zone_client_slice_name": "slices/ai/bosses/colossus/colossus_laser_damage_zone_client.dynamicslice",
                     "laser_damage_zone_damage": "6",
                     "laser_damage_zone_damage_period": "0.1",
                     "laser_speedup_distance": "2",
 
-                    "projectile_hp_to_cooldown": "0:3",
-                    "rocket_attack_hp_to_interval": "0:6",
+                    "projectile_hp_to_cooldown": "0:4",
+                    "rocket_attack_hp_to_interval": "0:10",
     
                     "rocket_attack_damage": "150",
                     "rocket_attack_start_delay": "1",
                     "rocket_attack_preparation_delay": "1",
-                    "rocket_attack_time_to_launch": "2",
+                    "rocket_attack_time_to_launch": "1.2",
                     "rocket_attack_targets_area_size": "16",
                     "rocket_attack_targets_in_area_count": "2",
                     "rocket_attack_offset_from_single_target": "2",
@@ -589,7 +593,7 @@
                     "rocket_attack_launch_slice_name": "slices/ai/bosses/colossus/colossus_rocket_attack_launch.dynamicslice",
                     "rocket_attack_launch_tp_slice_name": "slices/ai/bosses/colossus/colossus_rocket_attack_launch_tp.dynamicslice",
 
-                    "rocket_attack_rocket_flight_time": "1",
+                    "rocket_attack_rocket_flight_time": "0.8",
                     "rocket_attack_rocket_dispersion": "6",
                     "rocket_attack_rocket_slice_name": "slices/ai/bosses/colossus/colossus_rocket_attack_rocket.dynamicslice",
                     "rocket_attack_rocket_tp_slice_name": "slices/ai/bosses/colossus/colossus_rocket_attack_rocket_tp.dynamicslice",
@@ -670,6 +674,10 @@
                 "back": 5,
                 "crouch": 5,
                 "fire": 5
+            },
+            "death":
+            {
+                "lifetime": 10.0
             }
         }
    ]

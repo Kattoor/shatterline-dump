@@ -181,7 +181,8 @@
         }
       ],
       "count": 3,
-      "reset_on_completion": false
+      "reset_on_death": true,
+      "reset_on_completion": true
     },
     {
       "name": "Rampage",
@@ -196,7 +197,8 @@
         }
       ],
       "count": 5,
-      "reset_on_completion": false
+      "reset_on_death": true,
+      "reset_on_completion": true
     },
     {
       "name": "Bloodlust",
@@ -211,7 +213,8 @@
         }
       ],
       "count": 7,
-      "reset_on_completion": false
+      "reset_on_death": true,
+      "reset_on_completion": true
     },
     {
       "name": "Defender",
@@ -589,6 +592,17 @@
       ]
     },
     {
+      "name": "BombDefuseOrPlant",
+      "event": [
+        {
+          "event_id": "BombDisarmed"
+        },
+        {
+          "event_id": "BombArmed"
+        }
+      ]
+    },
+    {
       "name": "KillOneLife",
       "event": [
         {
@@ -813,7 +827,7 @@
     {
       "name": "MongoHack",
       "event": [
-        {"event_id": "Kill", "actor_player_preset_is":["a_mongoose"]}
+        {"event_id": "Kill", "actor_player_preset_is":["a_mongoose", "s_brisa"]}
       ],
       "count": 1,
       "reset_on_death": false,
@@ -917,6 +931,13 @@
       "count": 1,
       "reset_on_death": false,
       "reset_on_completion": false
-    }    
+    },
+    {
+      "name": "DestroyDronesAndObjects",
+      "event": [
+        {"event_id": "DestroyEnemyObjects"},
+        {"event_id": "KillEnemyDrone"}
+      ]
+    }
   ]
 }

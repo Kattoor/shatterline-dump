@@ -11,6 +11,36 @@
       ]
     },
     {
+      "event_icon": "kill_log_box_kill",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_item_tag_is": ["movable"],
+          "target_player_class_is_not": []
+        }
+      ]
+    },
+    {
+      "event_icon": "kill_log_kick_kill",
+      "event": [
+        {
+          "event_id": "Kill",
+          "actor_item_tag_is": ["character_kick"],
+          "target_player_class_is_not": []
+        }
+      ]
+    },
+    {
+      "event_icon": "kill_log_headshot",
+      "event": [
+        {
+          "event_id": "Kill",
+          "hit_part_is": ["Head"],
+          "target_player_class_is_not": []
+        }
+      ]
+    },
+    {
       "event": [
         {
           "event_id": "Kill",
@@ -74,7 +104,7 @@
       ]
     },
     {
-      "item_icon": "resurrect_drone",
+      "item_icon": "mdr01_icon",
       "event": [
         {
           "event_id": "Resurrect",

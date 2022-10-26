@@ -1,0 +1,38 @@
+{
+  "name": "scheduled_hard_016",
+  "type": "scheduled",
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "rare",
+  "display_name": { "localization_key": "@scheduled_hard_016_name" },
+  "description": { "localization_key": "@scheduled_hard_016_description" },
+  "conditions": [
+    {
+      "name": "scheduled_hard_016",
+      "event_description": { "localization_key": "@scheduled_hard_016_event_description" },
+      "event": { "event_id": "Kill", "actor_is_me": true, "game_type_is": ["pve"]},
+      "progress": 100
+    }
+  ],
+  
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 3000
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 2000
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 25
+    }
+  ],
+  "reset_on_events": [
+    {"event_id": "Death"}
+   ]
+}

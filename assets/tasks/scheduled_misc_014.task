@@ -1,0 +1,46 @@
+{
+  "name": "scheduled_misc_014",
+  "type": "scheduled",
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "rare",
+  "display_name": { "localization_key": "@scheduled_misc_014_name" },
+  "description": { "localization_key": "@scheduled_misc_014_description" },
+  "conditions": [
+    {
+      "name": "scheduled_misc_014_1",
+      "event_description": { "localization_key": "@scheduled_misc_014_1_event_description" },
+      "event": { "event_id": "CaptureTickAssist", "actor_is_me": true, "game_mode_is": ["conq"]},
+      "progress": 600
+    },
+    {
+      "name": "scheduled_misc_014_2",
+      "event_description": { "localization_key": "@scheduled_misc_014_2_event_description" },
+       "event": { "event_id": "HordeSupplyDropCleared", "target_is_me": true, "game_type_is": ["pve"] },
+      "progress": 15
+    },
+    {
+      "name": "scheduled_misc_014_3",
+      "event_description": { "localization_key": "@scheduled_misc_014_3_event_description" },
+       "event": { "event_id": "DestroyExplosiveBarrel", "actor_is_me": true },
+      "progress": 15
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 3000
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 2000
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 25
+    }
+  ]
+}

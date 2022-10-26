@@ -183,6 +183,12 @@
   <ATLTrigger atl_name="headshot_fatal_player_fb" path="hud">
    <WwiseEvent wwise_name="headshot_fatal_player_fb"/>
   </ATLTrigger>
+  <ATLTrigger atl_name="season_pass_purchase" path="menu/season_pass">
+   <WwiseEvent wwise_name="season_pass_purchase"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="season_pass_level_up" path="menu/season_pass">
+   <WwiseEvent wwise_name="season_pass_level_up"/>
+  </ATLTrigger>
   <ATLTrigger atl_name="ui_party_status_show" path="menu">
    <WwiseEvent wwise_name="ui_party_status_show"/>
   </ATLTrigger>
@@ -304,6 +310,15 @@
   </ATLTrigger>
   <ATLTrigger atl_name="chr_pres_brisa_no_vo" path="menu/character_presentation">
    <WwiseEvent wwise_name="chr_pres_brisa_sfx"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="rewards_unlock_full" path="menu/achievements">
+   <WwiseEvent wwise_name="rewards_unlock_full"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="gacha_box_short" path="menu/achievements">
+   <WwiseEvent wwise_name="gacha_box_short"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="gacha_box_full" path="menu/achievements">
+   <WwiseEvent wwise_name="gacha_box_full"/>
   </ATLTrigger>
   <ATLTrigger atl_name="post_instant_rewards" path="menu/achievements">
    <WwiseEvent wwise_name="post_instant_rewards"/>

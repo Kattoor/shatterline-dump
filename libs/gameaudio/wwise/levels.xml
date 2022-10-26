@@ -1859,6 +1859,21 @@
    <WwiseEvent wwise_name="pve_hecatomb_cutscene_behemoth_intro_sfx"/>
    <WwiseEvent wwise_name="pve_hecatomb_cutscene_behemoth_intro_vo"/>
   </ATLTrigger>
+  <ATLTrigger atl_name="gls_spawn_water_splash" path="pve/hecatomb/script">
+   <WwiseEvent wwise_name="gls_spawn_water_splash"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="water_stream_falling" path="pve/hecatomb/script">
+   <WwiseEvent wwise_name="water_stream_falling"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="usable_push_button_start" path="pve/hecatomb/script">
+   <WwiseEvent wwise_name="usable_push_button_start"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="usable_push_button_stop" path="pve/hecatomb/script">
+   <WwiseEvent wwise_name="usable_push_button_stop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="explosion_big_distant" path="pve/hecatomb/script">
+   <WwiseEvent wwise_name="explosion_big_distant"/>
+  </ATLTrigger>
   <ATLTrigger atl_name="hecatomb_short_heli_away" path="pve/hecatomb/script">
    <WwiseEvent wwise_name="hecatomb_short_heli_away"/>
   </ATLTrigger>
@@ -1897,6 +1912,9 @@
   </ATLTrigger>
   <ATLTrigger atl_name="pve_hecatomb_bridge_explosion" path="pve/hecatomb/script">
    <WwiseEvent wwise_name="pve_hecatomb_bridge_explosion"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="sparks_short" path="pve/hecatomb/oneshots">
+   <WwiseEvent wwise_name="sparks_short"/>
   </ATLTrigger>
   <ATLTrigger atl_name="rnd_pve_hecatomb_drips_reverb" path="pve/hecatomb/oneshots">
    <WwiseEvent wwise_name="rnd_pve_hecatomb_drips_reverb"/>
@@ -1939,6 +1957,9 @@
   </ATLTrigger>
   <ATLTrigger atl_name="pve_hecatomb_dust_rocks" path="pve/hecatomb/oneshots">
    <WwiseEvent wwise_name="pve_hecatomb_dust_rocks"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="hecatomb_short_crystalline_noise" path="pve/hecatomb/ambient">
+   <WwiseEvent wwise_name="hecatomb_short_crystalline_noise"/>
   </ATLTrigger>
   <ATLTrigger atl_name="hecatomb_short_rain_amb" path="pve/hecatomb/ambient">
    <WwiseEvent wwise_name="hecatomb_short_rain_amb"/>
@@ -1994,8 +2015,47 @@
   <ATLTrigger atl_name="pve_hecatomb_boil_lava" path="pve/hecatomb/ambient">
    <WwiseEvent wwise_name="pve_hecatomb_boil_lava"/>
   </ATLTrigger>
+  <ATLTrigger atl_name="hecatomb_short_crystalline_amb" path="pve/hecatomb/ambient">
+   <WwiseEvent wwise_name="hecatomb_short_crystalline_amb"/>
+  </ATLTrigger>
   <ATLTrigger atl_name="amb_metal_construction_near" path="pve">
    <WwiseEvent wwise_name="amb_metal_construction_near"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="rnd_wood_creaks" path="pvp/nisida_halloween">
+   <WwiseEvent wwise_name="rnd_wood_creaks"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="rnd_halloween_indoor" path="pvp/nisida_halloween">
+   <WwiseEvent wwise_name="rnd_halloween_indoor"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="oragan_phrases" path="pvp/nisida_halloween">
+   <WwiseEvent wwise_name="oragan_phrases"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="rnd_halloween" path="pvp/nisida_halloween">
+   <WwiseEvent wwise_name="rnd_halloween"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="rnd_crows_dist" path="pvp/nisida_halloween">
+   <WwiseEvent wwise_name="rnd_crows_dist"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="rnd_crows_close" path="pvp/nisida_halloween">
+   <WwiseEvent wwise_name="rnd_crows_close"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="rnd_coffin_halloween" path="pvp/nisida_halloween">
+   <WwiseEvent wwise_name="rnd_coffin_halloween"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="amb_cemetary_halloween" path="pvp/nisida_halloween">
+   <WwiseEvent wwise_name="amb_cemetary_halloween"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="amb_candles_spot_loop" path="pvp/nisida_halloween">
+   <WwiseEvent wwise_name="amb_candles_spot_loop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="amb_candles_halloween" path="pvp/nisida_halloween">
+   <WwiseEvent wwise_name="amb_candles_halloween"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="rnd_lightning_strong_01" path="pvp/nisida_halloween">
+   <WwiseEvent wwise_name="rnd_lightning_strong_01"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="rnd_amb_halloween_thunder" path="pvp/nisida_halloween">
+   <WwiseEvent wwise_name="rnd_amb_halloween_thunder"/>
   </ATLTrigger>
   <ATLTrigger atl_name="cristaline_amb" path="pvp/deathlab/script">
    <WwiseEvent wwise_name="cristaline_amb"/>
@@ -2042,14 +2102,41 @@
   <ATLTrigger atl_name="amb_computer_room" path="pvp/deathlab/ambient">
    <WwiseEvent wwise_name="amb_computer_room"/>
   </ATLTrigger>
-  <ATLTrigger atl_name="escort_mega_snail" path="pvp/escape/script">
-   <WwiseEvent wwise_name="escort_mega_snail"/>
+  <ATLTrigger atl_name="helicopter_loop" path="pvp/escape/script">
+   <WwiseEvent wwise_name="helicopter_loop"/>
   </ATLTrigger>
   <ATLTrigger atl_name="escape_gate_metal_open_large" path="pvp/escape/script">
    <WwiseEvent wwise_name="escape_gate_metal_open_large"/>
   </ATLTrigger>
   <ATLTrigger atl_name="cristaline_loop" path="pvp/escape/script">
    <WwiseEvent wwise_name="cristaline_loop"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="rnd_wood_stress" path="pvp/escape/oneshots">
+   <WwiseEvent wwise_name="rnd_wood_stress"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="rnd_sand_metal_close_s" path="pvp/escape/oneshots">
+   <WwiseEvent wwise_name="rnd_sand_metal_close_s"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="rnd_textile_shake_m" path="pvp/escape/oneshots">
+   <WwiseEvent wwise_name="rnd_textile_shake_m"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="rnd_rocks_medium_falling_close" path="pvp/escape/oneshots">
+   <WwiseEvent wwise_name="rnd_rocks_medium_falling_close"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="rnd_metal_tank_rattle_m" path="pvp/escape/oneshots">
+   <WwiseEvent wwise_name="rnd_metal_tank_rattle_m"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="rnd_metal_creak_m" path="pvp/escape/oneshots">
+   <WwiseEvent wwise_name="rnd_metal_creak_m"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="rnd_metal_creak_l" path="pvp/escape/oneshots">
+   <WwiseEvent wwise_name="rnd_metal_creak_l"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="rnd_door_knock" path="pvp/escape/oneshots">
+   <WwiseEvent wwise_name="rnd_door_knock"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="rnd_bell_tower" path="pvp/escape/oneshots">
+   <WwiseEvent wwise_name="rnd_bell_tower"/>
   </ATLTrigger>
   <ATLTrigger atl_name="rnd_metal_creak_med" path="pvp/escape/oneshots">
    <WwiseEvent wwise_name="rnd_metal_creak_med"/>
@@ -2071,6 +2158,9 @@
   </ATLTrigger>
   <ATLTrigger atl_name="amb_indoor_bunker" path="pvp/escape/ambient">
    <WwiseEvent wwise_name="amb_indoor_bunker"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="amb_cliff_bridge_wind" path="pvp/escape/ambient">
+   <WwiseEvent wwise_name="amb_cliff_bridge_wind"/>
   </ATLTrigger>
   <ATLTrigger atl_name="amb_outdoor_wind_medium" path="pvp/escape/ambient">
    <WwiseEvent wwise_name="amb_outdoor_wind_medium"/>
@@ -2569,6 +2659,9 @@
   </ATLTrigger>
   <ATLTrigger atl_name="stilt_spawn" path="shared_assets">
    <WwiseEvent wwise_name="stilt_spawn"/>
+  </ATLTrigger>
+  <ATLTrigger atl_name="escort_mega_snail" path="shared_assets">
+   <WwiseEvent wwise_name="escort_mega_snail"/>
   </ATLTrigger>
  </AudioTriggers>
 </ATLConfig>

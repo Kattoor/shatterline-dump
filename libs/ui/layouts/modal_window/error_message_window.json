@@ -7,6 +7,7 @@
     [
         {"name": "message_title", "type": "Label", "view_path": "container.title", "text": "@default_error_category"},
         {"name": "message_info", "type": "Label", "view_path": "container.content.message", "text": "@tip_default"},
+        {"name": "extra_message_info", "type": "Label", "view_path": "container.content.extraMessage"},
         
         {"name": "error_code_title", "type": "Label", "view_path": "container.content.error.errorCodeTitle", "text": "@error_code"},
         {"name": "error_code", "type": "Label", "view_path": "container.content.error.errorCodeLabel"},

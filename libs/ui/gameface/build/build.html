@@ -1169,6 +1169,34 @@
 </div>
 
 
+<div id="ProductPreviewItem" data-control="ProductPreviewItem" data-dont-register-children="true" data-focus-on-hover="true" class="product-preview-item">
+    <div id="rhomb" class="product-preview-item__rhomb"></div>
+    <div id="stroke" class="product-preview-item__stroke"></div>
+    <div id="bg" class="product-preview-item__bg"></div>
+    <div id="innerMask" class="product-preview-item__inner-mask">
+        <div id="pattern" class="product-preview-item__pattern"></div>
+        <div id="background" class="product-preview-item__background"></div>
+        <div id="overlay" class="product-preview-item__overlay"></div>
+        <div id="image" class="product-preview-item__image"></div>
+    </div>
+    <div id="contentWrapper" class="product-preview-item__content-wrapper">
+        <div id="textWrapper" class="product-preview-item__text-wrapper">
+            <div id="title" class="product-preview-item__title"></div>
+            <div id="description" data-control="AutoScrollingLabel" data-direction="Horizontal" class="product-preview-item__description rarity-color FlexLabel"></div>
+        </div>
+        <div id="parentIconWrapper" class="product-preview-item__parent-icon-wrapper">
+            <div id="background" class="product-preview-item__parent-icon-shadow"></div>
+            <div id="parentIcon" class="product-preview-item__parent-icon"></div>
+            <div id="parentHeroIcon" class="product-preview-item__parent-hero-icon"></div>
+        </div>
+    </div>
+    <div id="label" class="product-preview-item__label"></div>
+    <div id="border" class="product-preview-item__border"></div>
+    <div id="borderRarity" class="product-preview-item__border-rarity"></div>
+    <div id="rarity" class="product-preview-item__rarity"></div>
+</div>
+
+
 <div id="Rarity" data-control="Rarity" class="rarity"></div>
 
 
@@ -1236,7 +1264,10 @@
     <div id="innerMask" class="rarity-item-small__inner-mask">
         <div id="overlay" class="rarity-item-small__overlay"></div>
         <div id="image" class="rarity-item-small__image"></div>
-        <div id="parentIcon" class="rarity-item-small__parent-icon"></div>
+        <div id="parentIconWrapper" class="rarity-item-small__parent-icon-wrapper">
+            <div id="background" class="rarity-item-small__parent-icon-shadow"></div>
+            <div id="parentIcon" class="rarity-item-small__parent-icon"></div>
+        </div>
     </div>
     <div id="label" class="rarity-item-small__label"></div>
     <div id="border" class="rarity-item-small__border"></div>
@@ -1393,10 +1424,8 @@
 
     <div id="background" class="rewards-unlock__background"></div>
 
-    <div id="loopedVideo" data-control="VideoControl" class="rewards-unlock__video"></div>
-    <div id="video" data-control="VideoControl" class="rewards-unlock__video"></div>
-
-    <div id="liveView" data-control="ImageControl" class="rewards-unlock__live-view"></div>
+    <img id="liveViewLooped" data-control="LiveViewControl" class="rewards-unlock__live_view"></img>
+    <img id="liveView" data-control="LiveViewControl" class="rewards-unlock__live_view"></img>
 
     <div id="rewards" data-control="Control" class="rewards-unlock__rewards-container">
 
@@ -1406,12 +1435,9 @@
                 <div id="contentContainer" data-control="Control" data-navigation="ItemsListContainer" data-is-horizontal="true" data-disable-action-select="true" class="rewards-unlock__rewards-list-box-content-container"></div>
                 <div id="gridEndIndent"></div>
             </div>
-
-            <div id="sliderWrapper" class="slider">
-                <div id="slider" data-control="DefaultSlider" data-is-horizontal="true" class="DefaultSlider">
-                    <div id="track" class="DefaultSlider__track">
-                        <div id="clip" class="DefaultSlider__clip"></div>
-                    </div>
+            <div id="slider" data-control="DefaultSlider" data-is-horizontal="true" class="DefaultSlider">
+                <div id="track" class="DefaultSlider__track">
+                    <div id="clip" class="DefaultSlider__clip"></div>
                 </div>
             </div>
         </div>
@@ -1439,6 +1465,17 @@
 
     </div>
 
+    <div id="title" data-control="Control" class="rewards-unlock__title-wrapper">
+        <div id="text" data-l10n-id="@rewards_unlock_title" class="rewards-unlock__title FontBlack"></div>
+        <div id="textOutline" data-l10n-id="@rewards_unlock_title" class="rewards-unlock__title-outline FontBlack"></div>
+    </div>
+
+</div>
+
+
+<div class="broken-sale-tag">
+    <div class="broken-sale-tag__left"></div>
+    <div class="broken-sale-tag__right"></div>
 </div>
 
 
@@ -4691,7 +4728,7 @@
 </div>
 
 
-<div id="Scoreboard" data-control="Scoreboard" class="scoreboard" data-navigation="NavigationGroupContainer">
+<div id="Scoreboard" data-control="Scoreboard" class="scoreboard" data-navigation="NavigationStackContainer">
     <div id="closeBackground" data-control="ButtonModelless" class="scoreboard__close-background"></div>
 
     <div id="wrapper" data-control="Control" class="scoreboard__wrapper">
@@ -4812,7 +4849,7 @@
 </div>
 
 
-<div id="ScoreboardPlayerItem" data-control="ScoreboardPlayerItem" data-navigation="NavigationElement" class="scoreboard-player-item Allies">
+<div id="ScoreboardPlayerItem" data-control="ScoreboardPlayerItem" data-navigation="NavigationElement" data-focus-on-hover="true" class="scoreboard-player-item Allies">
     <div id="zebra" class="scoreboard-player-item__zebra"></div>
     <div id="border" class="scoreboard-player-item__border"></div>
 
@@ -4821,7 +4858,7 @@
     <div id="voiceStatus" class="scoreboard-player-item__voice-status">
         <img id="invoice" data-control="Control" src="../../images/gameface/common/icon_sound_off.svg" class="scoreboard-player-item__invoice Hidden">
         <img id="speaking" data-control="Control" src="../../images/gameface/common/icon_sound_on.svg" class="scoreboard-player-item__speaking Hidden">
-        <img id="muted" data-control="Control" src="../../images/gameface/common/icon_mute.svg" class="scoreboard-player-item__muted ">
+        <img id="muted" data-control="Control" src="../../images/gameface/common/icon_mute.svg" class="scoreboard-player-item__muted">
     </div>
 
     <div id="playerInfo" class="scoreboard-player-item__player-info">
@@ -4999,7 +5036,7 @@
 </div>
 
 
-<div id="LoadingScreen" data-control="Control" class="loading-screen">
+<div id="LoadingScreen" data-control="DefaultScreen" class="loading-screen">
     <div id="background" data-control="ImageControl" class="loading-screen__background"></div>
     <div id="wrapper" class="loading-screen__wrapper" data-control="Control">
         <div id="topBlock" class="loading-screen__top-block">
@@ -5632,6 +5669,87 @@
 </div>
 
 
+<div id="BadgeBackgroundItem" data-control="EditNameplateItem" data-dont-register-children="true" class="badge-background-item">
+    <div id="image" class="badge-background-item__image"></div>
+    <div id="stroke" class="badge-background-item__stroke"></div>
+    <div id="equipped" class="badge-background-item__equipped"></div>
+</div>
+
+
+<div id="BadgeIconItem" data-control="EditNameplateItem" data-dont-register-children="true" class="badge-icon-item">
+    <div id="image" class="badge-icon-item__image"></div>
+    <div id="stroke" class="badge-icon-item__stroke"></div>
+    <div id="equipped" class="badge-icon-item__equipped"></div>
+</div>
+
+
+<div id="EditNameplate" data-control="Control" data-navigation="NavigationStackContainer" data-focus-without-elements="true" class="edit-nameplate Screen">
+
+    <div id="wrapper" data-control="Control" data-navigation="CommonList" data-is-horizontal="false" class="edit-nameplate__wrapper">
+
+        <div id="previewLabel" data-l10n-id="@preview" class="edit-nameplate__preview-label"></div>
+
+        <div id="preview" data-control="Control" class="edit-nameplate__preview">
+            <div id="nameplate" data-control="PlayerListItem">
+                <div id="wrapper" data-control="Control" data-dont-register-children="true" class="edit-nameplate__preview-nameplate-wrapper">
+                    <div id="nameplate" class="nameplate">
+                        <div id="gradient" class="player-list-item__gradient"></div>
+                        <div id="backgroundGradient" class="player-list-item__background-gradient"></div>
+                        <div id="background" class="nameplate__background"></div>
+                        <div id="bodyWrapper" class="nameplate__body-wrapper">
+                            <div id="icon" class="nameplate__icon"></div>
+                            <div id="leaderIcon" class="nameplate__leader-icon"></div>
+                            <div id="nameWrapper" class="nameplate__name-wrapper">
+                                <div id="name" class="nameplate__name"></div>
+                                <div id="clan" class="nameplate__clan"></div>
+                            </div>
+                        </div>
+                        <div id="border" class="nameplate__border"></div>
+                    </div>
+                    <div id="stroke" class="player-list-item__stroke"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="badgeIcons" class="edit-nameplate__badge-icons">
+            <div id="listBox" data-control="ItemsGrid" data-item="BadgeIconItem" data-bound-items-count="24" data-grid-start-indent="0.8" data-grid-end-indent="0.8" class="edit-nameplate__items-grid">
+
+                <div id="container" data-control="Control" data-navigation="ItemsGridContainer" class="edit-nameplate__items-grid-container">
+                    <div id="gridStartIndent"></div>
+                    <div id="contentContainer" data-control="Control" class="edit-nameplate__grid-content-container"></div>
+                    <div id="gridEndIndent"></div>
+                </div>
+
+                <div id="slider" data-control="DefaultSlider" data-is-horizontal="true" class="CustomSlider Hidden">
+                    <div id="track" class="CustomSlider__track">
+                        <div id="clip" class="CustomSlider__clip"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="badgeBackgrounds" class="edit-nameplate__badge-backgrounds">
+            <div id="listBox" data-control="ItemsGrid" data-item="BadgeBackgroundItem" data-bound-items-count="5" data-grid-start-indent="0.8" data-grid-end-indent="0.8" class="edit-nameplate__items-grid">
+
+                <div id="container" data-control="Control" data-navigation="ItemsGridContainer" class="edit-nameplate__items-grid-container">
+                    <div id="gridStartIndent"></div>
+                    <div id="contentContainer" data-control="Control" class="edit-nameplate__grid-content-container"></div>
+                    <div id="gridEndIndent"></div>
+                </div>
+
+                <div id="slider" data-control="DefaultSlider" data-is-horizontal="true" class="CustomSlider Hidden">
+                    <div id="track" class="CustomSlider__track">
+                        <div id="clip" class="CustomSlider__clip"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <div id="FriendsList" data-control="DefaultScreen" data-navigation="NavigationGroupContainer" data-is-horizontal="true" data-navigation-prev="nav_back" data-navigation-next="nav_enter" class="friends-list-screen">
 
     <div id="gridContainer" class="friends-list-screen__grid-container" data-control="Control" data-navigation="NavigationStackContainer">
@@ -6054,182 +6172,84 @@
 </div>
 
 
-<div id="HeroProgression" data-control="DefaultScreen" data-navigation="NavigationListContainer" data-is-horizontal="true" class="hero-progression-screen">
+<div id="HeroProgression" data-control="DefaultScreen" data-navigation="NavigationListContainer" data-is-horizontal="true" class="hero-progression">
 
+    <div id="content" data-control="Control" class="hero-progression__content">
+        <div id="background" class="hero-progression__background"></div>
+        <div id="info" data-control="Control" class="hero-progression__info">
+            <div id="title" data-l10n-id="@current_level" class="hero-progression__hero-info-title"></div>
 
-    <div id="heroInfo" class="info-block-with-hexagon">
-        <div id="hexagon" data-control="Control" class="hexagon">
-            <div id="wrapper" class="hexagon__wrapper">
-                <div class="hexagon__border"></div>
-                <div id="content" class="hexagon__content">
-                    <div id="level" data-control="Label" class="hexagon__level"></div>
+            <div id="heroProgressWrapper" data-control="Control" class="hero-progression__hero-progress-wrapper"></div>
+
+            <div id="progressionList" data-control="ItemsGrid" data-item="HeroProgressionItem" data-is-horizontal="true" data-grid-start-indent="2" data-grid-end-indent="2" data-dynamic-bounds="true" data-refresh-bounds-timeout="210" class="hero-progression__list">
+                <div id="container" data-control="Control" class="hero-progression__list-container">
+                    <div id="gridStartIndent"></div>
+                    <div id="contentContainer" data-control="Control" data-navigation="ItemsListContainer" data-is-horizontal="true" data-disable-action-select="true" class="hero-progression__list-content-container"></div>
+                    <div id="gridEndIndent"></div>
+                </div>
+                <div id="slider" data-control="DefaultSlider" data-is-horizontal="true" class="CustomSlider">
+                    <div id="track" class="CustomSlider__track">
+                        <div id="clip" class="CustomSlider__clip"></div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div id="labelWrapper" class="Flex FlexDirectionColumn">
-            <div id="title" data-control="Label" class="info-block-with-hexagon__title"></div>
-            <div id="description" data-control="Label" class="info-block-with-hexagon__description"></div>
+
+        <div id="description" data-control="Control" class="hero-progression__description-container">
+            <div id="titleWrapper" class="hero-progression__info-title">
+                <div class="broken-background White hero-progression__info-title-background">
+                    <div class="broken-background__right"></div>
+                </div>
+                <div id="title" data-control="Label" class="hero-progression__info-title-text"></div>
+            </div>
+            <div id="lockedWrapper" data-control="Control" class="hero-progression__locked-wrapper">
+                <div id="lock" data-control="Control" class="hero-progression__locked-content">
+                    <div id="lockIcon" class="hero-progression__locked-icon"></div>
+                    <div id="lockTitle" data-l10n-id="@unlock_at_level" class="hero-progression__locked-level-title"></div>
+                </div>
+                <div id="unlock" data-control="Control" class="hero-progression__locked-content">
+                    <div id="unlockIcon" class="hero-progression__unlocked-icon"></div>
+                    <div id="unlockTitle" data-l10n-id="@unlocked_at_level" class="hero-progression__locked-level-title"></div>
+                </div>
+                <div id="level" data-control="Label" class="hero-progression__locked-level-value"></div>
+            </div>
+            <div id="videoWrapper" data-control="Control" class="hero-progression__description-video-wrapper">
+                <div id="video" data-control="VideoControl" class="hero-progression__description-video"></div>
+            </div>
+            <div id="text" data-control="Label" class="hero-progression__description-text"></div>
         </div>
     </div>
 
+</div>
 
-    <div id="progressionContainer" data-control="Control" class="hero-progression-screen__progression-container">
 
-        <div id="item_1" data-control="HeroProgressionItem" data-navigation="NavigationElement" class="hexagon hero-progression-item hero-progression-item--move-bottom Closed">
-            <div id="wrapper" class="hexagon__wrapper">
-                <div class="hexagon__border"></div>
-                <div id="content" class="hexagon__content">
-                    <div id="bg" class="hero-progression-item__bg"></div>
-                    <div id="over" class="hero-progression-item__over"></div>
-                    <div id="progress" data-control="DefaultProgressBar" class="hexagon__progress">
-                        <div id="clip" class="hexagon__progress-clip"></div>
+<div id="HeroProgressionItem" data-control="HeroProgressionItem" data-select-on-focus="true" data-dont-register-children="true" class="hero-progression-item NoRarity">
+    <div id="content" class="hero-progression-item__content">
+        <div id="progressPoint" class="hero-progression-item__progress-point">
+            <div id="progressWrapper" class="hero-progression-item__progress-wrapper">
+                <div id="progressBar" class="ParticlesProgressBar hero-progression-item__progress-bar">
+                    <div id="clip" class="ParticlesProgressBar__clip">
+                        <div id="fill" class="ParticlesProgressBar__fill"></div>
+                        <div id="endCap" class="ParticlesProgressBar__end-cap">
+                            <div id="gradientBright" class="ParticlesProgressBar__gradient-bright"></div>
+                            <div id="gradientDark" class="ParticlesProgressBar__gradient-dark"></div>
+                            <div id="endCapFill" class="ParticlesProgressBar__end-cap-fill"></div>
+                        </div>
                     </div>
-                    <div id="icon" data-control="ImageControl" class="hexagon__icon"></div>
                 </div>
             </div>
         </div>
-
-        <div id="item_2" data-control="HeroProgressionItem" data-navigation="NavigationElement" class="hexagon hero-progression-item Closed">
-            <div id="wrapper" class="hexagon__wrapper">
-                <div class="hexagon__border"></div>
-                <div id="content" class="hexagon__content">
-                    <div id="bg" class="hero-progression-item__bg"></div>
-                    <div id="over" class="hero-progression-item__over"></div>
-                    <div id="progress" data-control="DefaultProgressBar" class="hexagon__progress">
-                        <div id="clip" class="hexagon__progress-clip"></div>
-                    </div>
-                    <div id="icon" data-control="ImageControl" class="hexagon__icon"></div>
-                </div>
-            </div>
+        <div id="stroke" class="hero-progression-item__stroke"></div>
+        <div id="bg" class="hero-progression-item__bg"></div>
+        <div id="innerMask" class="hero-progression-item__inner-mask">
+            <div id="pattern" class="hero-progression-item__pattern"></div>
+            <div id="patternSelected" class="hero-progression-item__selected-pattern"></div>
+            <div id="hoverOverlay" class="hero-progression-item__hover-overlay"></div>
+            <div id="overlay" class="hero-progression-item__overlay"></div>
         </div>
-
-        <div id="item_3" data-control="HeroProgressionItem" data-navigation="NavigationElement" class="hexagon hero-progression-item hero-progression-item--move-bottom Closed">
-            <div id="wrapper" class="hexagon__wrapper">
-                <div class="hexagon__border"></div>
-                <div id="content" class="hexagon__content">
-                    <div id="bg" class="hero-progression-item__bg"></div>
-                    <div id="over" class="hero-progression-item__over"></div>
-                    <div id="progress" data-control="DefaultProgressBar" class="hexagon__progress">
-                        <div id="clip" class="hexagon__progress-clip"></div>
-                    </div>
-                    <div id="icon" data-control="ImageControl" class="hexagon__icon"></div>
-                </div>
-            </div>
-        </div>
-
-        <div id="item_4" data-control="HeroProgressionItem" data-navigation="NavigationElement" class="hexagon hero-progression-item Closed">
-            <div id="wrapper" class="hexagon__wrapper">
-                <div class="hexagon__border"></div>
-                <div id="content" class="hexagon__content">
-                    <div id="bg" class="hero-progression-item__bg"></div>
-                    <div id="over" class="hero-progression-item__over"></div>
-                    <div id="progress" data-control="DefaultProgressBar" class="hexagon__progress">
-                        <div id="clip" class="hexagon__progress-clip"></div>
-                    </div>
-                    <div id="icon" data-control="ImageControl" class="hexagon__icon"></div>
-                </div>
-            </div>
-        </div>
-
-        <div id="item_5" data-control="HeroProgressionItem" data-navigation="NavigationElement" class="hexagon hero-progression-item hero-progression-item--move-bottom Closed">
-            <div id="wrapper" class="hexagon__wrapper">
-                <div class="hexagon__border"></div>
-                <div id="content" class="hexagon__content">
-                    <div id="bg" class="hero-progression-item__bg"></div>
-                    <div id="over" class="hero-progression-item__over"></div>
-                    <div id="progress" data-control="DefaultProgressBar" class="hexagon__progress">
-                        <div id="clip" class="hexagon__progress-clip"></div>
-                    </div>
-                    <div id="icon" data-control="ImageControl" class="hexagon__icon"></div>
-                </div>
-            </div>
-        </div>
-
-        <div id="item_6" data-control="HeroProgressionItem" data-navigation="NavigationElement" class="hexagon hero-progression-item Closed">
-            <div id="wrapper" class="hexagon__wrapper">
-                <div class="hexagon__border"></div>
-                <div id="content" class="hexagon__content">
-                    <div id="bg" class="hero-progression-item__bg"></div>
-                    <div id="over" class="hero-progression-item__over"></div>
-                    <div id="progress" data-control="DefaultProgressBar" class="hexagon__progress">
-                        <div id="clip" class="hexagon__progress-clip"></div>
-                    </div>
-                    <div id="icon" data-control="ImageControl" class="hexagon__icon"></div>
-                </div>
-            </div>
-        </div>
-
-        <div id="item_7" data-control="HeroProgressionItem" data-navigation="NavigationElement" class="hexagon hero-progression-item hero-progression-item--move-bottom Closed">
-            <div id="wrapper" class="hexagon__wrapper">
-                <div class="hexagon__border"></div>
-                <div id="content" class="hexagon__content">
-                    <div id="bg" class="hero-progression-item__bg"></div>
-                    <div id="over" class="hero-progression-item__over"></div>
-                    <div id="progress" data-control="DefaultProgressBar" class="hexagon__progress">
-                        <div id="clip" class="hexagon__progress-clip"></div>
-                    </div>
-                    <div id="icon" data-control="ImageControl" class="hexagon__icon"></div>
-                </div>
-            </div>
-        </div>
-
-        <div id="item_8" data-control="HeroProgressionItem" data-navigation="NavigationElement" class="hexagon hero-progression-item Closed">
-            <div id="wrapper" class="hexagon__wrapper">
-                <div class="hexagon__border"></div>
-                <div id="content" class="hexagon__content">
-                    <div id="bg" class="hero-progression-item__bg"></div>
-                    <div id="over" class="hero-progression-item__over"></div>
-                    <div id="progress" data-control="DefaultProgressBar" class="hexagon__progress">
-                        <div id="clip" class="hexagon__progress-clip"></div>
-                    </div>
-                    <div id="icon" data-control="ImageControl" class="hexagon__icon"></div>
-                </div>
-            </div>
-        </div>
-
-        <div id="item_9" data-control="HeroProgressionItem" data-navigation="NavigationElement" class="hexagon hero-progression-item hero-progression-item--move-bottom Closed">
-            <div id="wrapper" class="hexagon__wrapper">
-                <div class="hexagon__border"></div>
-                <div id="content" class="hexagon__content">
-                    <div id="bg" class="hero-progression-item__bg"></div>
-                    <div id="over" class="hero-progression-item__over"></div>
-                    <div id="progress" data-control="DefaultProgressBar" class="hexagon__progress">
-                        <div id="clip" class="hexagon__progress-clip"></div>
-                    </div>
-                    <div id="icon" data-control="ImageControl" class="hexagon__icon"></div>
-                </div>
-            </div>
-        </div>
-
-        <div id="item_10" data-control="HeroProgressionItem" data-navigation="NavigationElement" class="hexagon hero-progression-item Closed">
-            <div id="wrapper" class="hexagon__wrapper">
-                <div class="hexagon__border"></div>
-                <div id="content" class="hexagon__content">
-                    <div id="bg" class="hero-progression-item__bg"></div>
-                    <div id="over" class="hero-progression-item__over"></div>
-                    <div id="progress" data-control="DefaultProgressBar" class="hexagon__progress">
-                        <div id="clip" class="hexagon__progress-clip"></div>
-                    </div>
-                    <div id="icon" data-control="ImageControl" class="hexagon__icon"></div>
-                </div>
-            </div>
-        </div>
-
+        <div id="border" class="hero-progression-item__border"></div>
+        <div id="image" class="hero-progression-item__image"></div>
     </div>
-
-
-    <div id="descriptionContainer" data-control="HeroProgressionDescription" class="hero-progression-screen__description-container">
-
-        <div id="title" data-control="Label" class="hero-progression-screen__description-title"></div>
-        <div id="video" data-control="VideoControl" class="hero-progression-screen__description-video"></div>
-        <div id="image" data-control="ImageControl" class="hero-progression-screen__description-image"></div>
-        <div id="description" data-control="Label" class="hero-progression-screen__description-text"></div>
-
-    </div>
-
-    <div id="rotationArea" data-control="ButtonModelless" class="hero-progression-screen__rotation-area"></div>
-
-
 </div>
 
 
@@ -7693,7 +7713,7 @@
         </div>
 
         <div id="contextMenu" data-control="ContextMenu" class="player-info-widget__context-menu">
-            <div id="container" data-control="Control" data-navigation="NavigationGroupContainer" data-focus-without-elements="true" data-navigation-parent="lobby" class="player-info-widget__context-menu-container">
+            <div id="container" data-control="Control" data-navigation="NavigationGroupContainer" data-focus-without-elements="true" data-navigation-parent="../../../../../lobby" class="player-info-widget__context-menu-container">
                 <div id="buttons" data-control="Control" data-navigation="CommonList" data-is-horizontal="false" class="player-info-widget__context-menu-buttons">
                     <div id="item_1" data-control="Button" class="player-info-widget__context-menu-item" data-navigation="ButtonElement"></div>
                     <div id="item_2" data-control="Button" class="player-info-widget__context-menu-item" data-navigation="ButtonElement"></div>
@@ -7774,6 +7794,149 @@
 
     </div>
 
+
+</div>
+
+
+<div id="BuySeasonLevels" data-control="DefaultScreen" data-navigation="NavigationGroupContainer" class="buy-season-levels">
+    <div id="container" class="buy-season-levels__container">
+        <div id="leftPanel" class="buy-season-levels__left-panel">
+            <div id="description" data-control="Label" class="buy-season-levels__description"></div>
+
+            <div id="rewardsContainer" data-control="Control" class="buy-season-levels__rewards-container">
+                <div id="rewardsList" data-control="ItemsGrid" data-item="RarityItemLarge" data-grid-start-indent="1" data-grid-end-indent="2" data-bound-items-count="2" data-items-in-row="6" class="buy-season-levels__rewards-list">
+                    <div id="container" data-control="Control" data-navigation="ItemsGridContainer" data-is-horizontal="false" data-disable-action-select="true" class="buy-season-levels__rewards-list-container">
+                        <div id="gridStartIndent"></div>
+                        <div id="contentContainer" class="buy-season-levels__rewards-list-content-container"></div>
+                        <div id="gridEndIndent"></div>
+                    </div>
+                    <div id="sliderWrapper" class="slider PositionRelative">
+                        <div id="slider" data-control="DefaultSlider" data-is-horizontal="false" class="DefaultVSlider">
+                            <div id="track" class="DefaultVSlider__track">
+                                <div id="clip" class="DefaultVSlider__clip"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="purchaseDescription" data-control="Label" class="buy-season-levels__purchase-description"></div>
+
+            <div id="bottomPanel" data-control="Control" class="buy-season-levels__bottom-panel">
+                <div id="calculator" data-control="Calculator" class="buy-season-levels__calc-wrapper">
+                    <div id="minusButton2" data-control="PatternButton" class="PatternButton buy-season-levels__calc-button">
+                        <div id="key" data-control="Label" class="buy-season-levels__button-hint"></div>
+                        <div id="wrapper" class="PatternButton__wrapper">
+                            <div id="patternWrapper" class="PatternButton__pattern-wrapper">
+                                <div id="pattern" class="PatternButton__pattern"></div>
+                                <div id="lines" class="PatternButton__lines"></div>
+                            </div>
+                            <div id="overlay" class="PatternButton__overlay"></div>
+                            <div id="label" class="PatternButton__label"></div>
+                            <div id="stroke" class="PatternButton__stroke"></div>
+                            <div id="clickStroke" class="PatternButton__click-stroke"></div>
+                        </div>
+                    </div>
+                    <div id="minusButton1" data-control="PatternButton" class="PatternButton buy-season-levels__calc-button">
+                        <div id="key" data-control="Label" class="buy-season-levels__button-hint"></div>
+                        <div id="wrapper" class="PatternButton__wrapper">
+                            <div id="patternWrapper" class="PatternButton__pattern-wrapper">
+                                <div id="pattern" class="PatternButton__pattern"></div>
+                                <div id="lines" class="PatternButton__lines"></div>
+                            </div>
+                            <div id="overlay" class="PatternButton__overlay"></div>
+                            <div id="label" class="PatternButton__label"></div>
+                            <div id="stroke" class="PatternButton__stroke"></div>
+                            <div id="clickStroke" class="PatternButton__click-stroke"></div>
+                        </div>
+                    </div>
+                    <div id="levelsPriceWrapper" data-control="Control" class="buy-season-levels__levels-price-wrapper">
+                        <div id="levels" data-control="Label" class="buy-season-levels__levels-count"></div>
+                        <div id="price" data-control="Label" class="buy-season-levels__levels-price hard-currency-color"></div>
+                    </div>
+                    <div id="plusButton1" data-control="PatternButton" class="PatternButton buy-season-levels__calc-button">
+                        <div id="key" data-control="Label" class="buy-season-levels__button-hint"></div>
+                        <div id="wrapper" class="PatternButton__wrapper">
+                            <div id="patternWrapper" class="PatternButton__pattern-wrapper">
+                                <div id="pattern" class="PatternButton__pattern"></div>
+                                <div id="lines" class="PatternButton__lines"></div>
+                            </div>
+                            <div id="overlay" class="PatternButton__overlay"></div>
+                            <div id="label" class="PatternButton__label"></div>
+                            <div id="stroke" class="PatternButton__stroke"></div>
+                            <div id="clickStroke" class="PatternButton__click-stroke"></div>
+                        </div>
+                    </div>
+                    <div id="plusButton2" data-control="PatternButton" class="PatternButton buy-season-levels__calc-button">
+                        <div id="key" data-control="Label" class="buy-season-levels__button-hint"></div>
+                        <div id="wrapper" class="PatternButton__wrapper">
+                            <div id="patternWrapper" class="PatternButton__pattern-wrapper">
+                                <div id="pattern" class="PatternButton__pattern"></div>
+                                <div id="lines" class="PatternButton__lines"></div>
+                            </div>
+                            <div id="overlay" class="PatternButton__overlay"></div>
+                            <div id="label" class="PatternButton__label"></div>
+                            <div id="stroke" class="PatternButton__stroke"></div>
+                            <div id="clickStroke" class="PatternButton__click-stroke"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="currencyWarningWrapper" data-control="Control" class="buy-season-levels__currency-warning">
+                    <div id="label" data-control="Label" class="buy-season-levels__currency-warning-label"></div>
+                    <div id="background" class="buy-season-levels__currency-warning-background"></div>
+                </div>
+
+                <div id="buyBtnWrapper" data-control="Control" class="Flex FlexDirectionColumn PositionRelative AlignItemsCenter buy-season-levels__buy-button-wrapper">
+                    <div id="buyBtn" data-control="PatternButton" class="PatternImageButton Small">
+                        <div id="backgroundNormal" class="PatternImageButton__background PatternImageButton__background-normal"></div>
+                        <div id="backgroundHover" class="PatternImageButton__background PatternImageButton__background-hover"></div>
+                        <div id="wrapper" class="PatternImageButton__wrapper">
+                            <div id="key" data-control="Label" class="PatternImageButton__key"></div>
+                            <div id="label" class="PatternImageButton__label"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="rightPanel" class="buy-season-levels__right-panel">
+            <div id="rewardInfo" data-control="Control" class="season-pass-reward-info">
+                <p id="type" data-control="Label" class="season-pass-reward-info__type rarity-color FlexLabel" cohinline></p>
+                <div id="title" data-control="Label" class="season-pass-reward-info__title FontBold"></div>
+            </div>
+            <div id="moreButton" data-control="PatternButton" class="PatternButton">
+                <div id="wrapper" class="PatternButton__wrapper">
+                    <div id="patternWrapper" class="PatternButton__pattern-wrapper">
+                        <div id="pattern" class="PatternButton__pattern"></div>
+                        <div id="lines" class="PatternButton__lines"></div>
+                    </div>
+                    <div id="overlay" class="PatternButton__overlay"></div>
+                    <div id="key" data-control="Label" class="PatternButton__key"></div>
+                    <div id="label" class="PatternButton__label"></div>
+                    <div id="stroke" class="PatternButton__stroke"></div>
+                    <div id="clickStroke" class="PatternButton__click-stroke"></div>
+                </div>
+            </div>
+            <div id="rewardImage1" data-control="ImageControl" class="season-pass-reward-preview-image-1"></div>
+            <div id="rewardImage2" data-control="ImageControl" class="season-pass-reward-preview-image-2"></div>
+        </div>
+
+        <div id="bg" data-control="ImageControl" class="buy-season-levels__bg"></div>
+    </div>
+</div>
+
+
+<div id="LevelUpSeasonPassCelebration" data-control="DefaultScreen" data-navigation="NavigationElement" class="level-up-season-pass-celebration">
+
+    <div id="video" data-control="VideoControl" class="level-up-season-pass-celebration__video"></div>
+
+    <div id="levelWrapper" class="level-up-season-pass-celebration__level-wrapper">
+        <div id="currentLevel" data-control="Label" class="level-up-season-pass-celebration__level level-up-season-pass-celebration__level--current-level FontBlack"></div>
+        <div id="newLevel" data-control="Label" class="level-up-season-pass-celebration__level level-up-season-pass-celebration__level--new-level FontBlack"></div>
+    </div>
+
+    <div id="levelUp" data-control="Label" class="level-up-season-pass-celebration__label FontBold"></div>
+    <div id="seasonName" data-control="Label" class="level-up-season-pass-celebration__season-name"></div>
 
 </div>
 
@@ -7920,7 +8083,7 @@
     </div>
     <div id="bottomPanel" class="season-pass__bottom-panel">
         <div id="leftPanel" class="season-pass__left-panel">
-            <div id="seasonPassProgressWrapper" class="season-pass-progress-wrapper Flex AlignItemsCenter">
+            <div id="seasonPassProgressWrapper" class="season-pass-progress-wrapper">
                 <div id="seasonPassProgress" data-control="Control" class="season-pass-progress"></div>
                 <div id="getPremiumButton" data-control="PatternButton" class="PatternImageButton Large">
                     <div id="backgroundNormal" class="PatternImageButton__background PatternImageButton__background-normal"></div>
@@ -7929,6 +8092,15 @@
                         <div id="key" data-control="Label" class="PatternImageButton__key"></div>
                         <div id="label" class="PatternImageButton__label"></div>
                     </div>
+                </div>
+                <div id="getLevelsButton" data-control="PatternButton" class="PatternImageButton Large Blue">
+                    <div id="backgroundNormal" class="PatternImageButton__background PatternImageButton__background-normal"></div>
+                    <div id="backgroundHover" class="PatternImageButton__background PatternImageButton__background-hover"></div>
+                    <div id="wrapper" class="PatternImageButton__wrapper">
+                        <div id="key" data-control="Label" class="PatternImageButton__key"></div>
+                        <div id="label" class="PatternImageButton__label"></div>
+                    </div>
+                    <div id="icon" class="season-pass__buy-levels-icon"></div>
                 </div>
             </div>
             <div id="rewardsWrapper" data-control="Control" data-navigation="NavigationGroupContainer" class="season-pass-rewards">
@@ -8079,6 +8251,10 @@
                 <div id="price2" data-control="Label" class="shop-product__price"></div>
             </div>
 
+            <div id="boughtContainer" data-control="Control" class="shop-product__bought-container">
+                <div id="label" data-l10n-id="@bought_label" class="shop-product__bought-label"></div>
+            </div>
+
             <div id="heroName" data-control="Label" class="shop-product__hero-name"></div>
 
             <div id="heroIcon" data-control="ImageControl" class="shop-product__hero-icon"></div>
@@ -8100,7 +8276,7 @@
 </div>
 
 
-<div id="ShopProductPreview" data-control="DefaultScreen" data-navigation="NavigationElement" class="shop-product-preview-screen">
+<div id="ShopProductPreview" data-control="DefaultScreen" data-navigation="NavigationStackContainer" data-focus-without-elements="true" class="shop-product-preview-screen">
 
     <div id="fullscreenImage" data-control="ImageControl" class="shop-product-preview__fullscreen-image"></div>
 
@@ -8112,24 +8288,50 @@
         </div>
 
         <div id="header" class="shop-product-preview__header">
-            <div id="title" data-control="Label" class="shop-product-preview__title"></div>
-            <div id="heroLabel" data-control="Label" class="shop-product-preview__hero-label"></div>
+            <div id="subtitle" data-control="Label" class="shop-product-preview__subtitle rarity-color FlexLabel"></div>
+            <div id="title" data-control="Label" class="shop-product-preview__title FontBlack"></div>
         </div>
 
-        <div id="itemWrapper" data-control="ShopProductPreviewItem" class="shop-product-preview__item-wrapper">
-            <div id="item" data-control="ImageControl" data-background-size="cover" class="shop-product-preview__item"></div>
-            <div id="marker" data-control="Control" class="shop-product-preview__marker"></div>
-            <div id="rarity" data-control="Rarity" class="rarity"></div>
+        <div id="itemsList" data-control="ItemsGrid" data-item="ProductPreviewItem" data-navigation="NavigationGroupContainer" data-disable-select="true" class="shop-product-preview__items-list">
+            <div id="titleWrapper" class="shop-product-preview__items-list-title-wrapper">
+                <div id="divider" class="shop-product-preview__items-list-divider-horizontal-corner"></div>
+                <div id="title" data-control="Label" class="shop-product-preview__items-list-title"></div>
+                <div id="divider" class="shop-product-preview__items-list-divider-horizontal"></div>
+            </div>
+            <div id="dividersWrapper" class="shop-product-preview__items-list-dividers-wrapper">
+                <div id="dividerLeft" class="shop-product-preview__items-list-divider-vertical"></div>
+                <div id="dividerRight" class="shop-product-preview__items-list-divider-vertical"></div>
+            </div>
+            <div id="container" data-control="Control" -data-navigation="ItemsListContainer" data-is-horizontal="false" data-disable-action-select="true" class="shop-product-preview__items-list__container"></div>
+            <div id="dividerBottom" data-control="Control" class="shop-product-preview__items-list-divider-bottom"></div>
+            <div id="paginator" data-control="Paginator" data-navigation="NavigationElement" class="paginator shop-product-preview__items-list-paginator">
+                <div id="divider" class="shop-product-preview__items-list-divider-horizontal"></div>
+                <div id="hintLeft" data-control="Label" class="paginator__hint"></div>
+                <div id="arrowLeft" data-control="ButtonModelless" class="paginator__arrow-left-container"></div>
+                <div id="buttons" data-control="ListBox" data-item="PaginatorButton" class="paginator__buttons">
+                    <div id="container" data-control="Control" class="paginator__buttons-container"></div>
+                </div>
+                <div id="arrowRight" data-control="ButtonModelless" class="paginator__arrow-right-container"></div>
+                <div id="hintRight" data-control="Label" class="paginator__hint"></div>
+                <div id="divider" class="shop-product-preview__items-list-divider-horizontal"></div>
+            </div>
         </div>
 
         <div id="descriptionContainer" class="shop-product-preview__description-container">
-            <div id="descriptionTitle" data-control="Label" class="shop-product-preview__description-title"></div>
             <div id="description" data-control="Label" class="shop-product-preview__description"></div>
         </div>
 
         <div id="priceContainer" class="shop-product-preview__price-container">
 
-            <div id="priceWrapper" class="shop-product-preview__price-wrapper">
+            <div id="saleTag" data-control="Control" class="shop-product-preview__sale-tag">
+                <div class="shop-product-preview__sale-tag-background broken-sale-tag Black2">
+                    <div class="broken-sale-tag__left"></div>
+                    <div class="broken-sale-tag__right"></div>
+                </div>
+                <div id="label" data-control="Label" class="shop-product-preview__sale-tag-label"></div>
+            </div>
+
+            <div id="priceWrapper" data-control="Control" class="PatternImageButtonPrice">
                 <div id="oldPrice1" data-control="Label" class="shop-product__old-price"></div>
                 <div id="price1" data-control="Label" class="shop-product__price"></div>
 
@@ -8140,9 +8342,18 @@
 
                 <div id="oldPrice2" data-control="Label" class="shop-product__old-price"></div>
                 <div id="price2" data-control="Label" class="shop-product__price"></div>
+
+                <div id="currencyWarningWrapper" data-control="Control" class="shop-product-preview__currency-warning">
+                    <div id="label" data-control="Label" class="shop-product-preview__currency-warning-label"></div>
+                    <div id="background" class="shop-product-preview__currency-warning-background"></div>
+                </div>
             </div>
 
-            <div id="buyButton" data-control="PatternButton" class="PatternImageButton Small">
+            <div id="boughtWrapper" data-control="Control" class="PatternImageButtonPrice">
+                <div id="label" data-l10n-id="@bought_label" class="shop-product__price"></div>
+            </div>
+
+            <div id="buyButton" data-control="PatternButton" class="PatternImageButton Large">
                 <div id="backgroundNormal" class="PatternImageButton__background PatternImageButton__background-normal"></div>
                 <div id="backgroundHover" class="PatternImageButton__background PatternImageButton__background-hover"></div>
                 <div id="wrapper" class="PatternImageButton__wrapper">
@@ -8846,24 +9057,6 @@
 </div>
 
 
-<div id="TasksRewardsItem" data-control="RarityItem" data-dont-register-children="true" class="tasks-rewards-item rarity-item-medium">
-    <div id="rhomb" class="rarity-item-medium__rhomb"></div>
-    <div id="stroke" class="rarity-item-medium__stroke"></div>
-    <div id="bg" class="rarity-item-medium__bg"></div>
-    <div id="innerMask" class="rarity-item-medium__inner-mask">
-        <div id="pattern" class="rarity-item-medium__pattern"></div>
-        <div id="overlay" class="rarity-item-medium__overlay"></div>
-        <div id="image" class="rarity-item-medium__image"></div>
-    </div>
-    <div id="label" class="rarity-item-medium__label"></div>
-    <div id="border" class="rarity-item-medium__border"></div>
-    <div id="borderRarity" class="rarity-item-medium__border-rarity"></div>
-    <div id="rarity" class="rarity-item-medium__rarity"></div>
-    <div id="lockPanel" class="rarity-item-medium__lock-panel"></div>
-    <div id="lockIcon" class="rarity-item-medium__lock-icon"></div>
-</div>
-
-
 <div id="Tasks" data-control="DefaultScreen" data-navigation="NavigationStackContainer" -data-navigation-wait-children-ready="true" class="Screen tasks">
 
     <div id="wrapper" data-control="Control" data-navigation="CommonList" data-is-horizontal="true" class="tasks__wrapper">
@@ -8908,7 +9101,7 @@
 
             <div id="seasonPassProgress" data-control="Control" class="season-pass-progress"></div>
 
-            <div id="rewards" data-control="ItemsGrid" data-item="TasksRewardsItem" data-disable-select="true" class="tasks__rewards">
+            <div id="rewards" data-control="ItemsGrid" data-item="RarityItemMedium" data-disable-select="true" class="tasks__rewards">
                 <div id="title" data-l10n-id="@rewards"></div>
                 <div id="devider" class="tasks__rewards-divider"></div>
                 <div id="container" data-control="Control" data-navigation="ItemsGridContainer" data-disable-action-select="true" class="tasks__rewards-container"></div>
@@ -9288,11 +9481,14 @@
 
             <div id="wrapper" class="buy-window__currency-wrapper">
 
-                <div id="item_1" data-control="Control" class="buy-window__currency-item">
+                <div id="item_1" data-control="Control" class="buy-window__currency-item-small">
                     <div id="priceContainer" data-control="Control" class="PatternImageButtonPrice">
-                        <div id="price" data-control="Label"></div>
+                        <div id="price" data-control="Label" class="PatternImageButtonPrice__price"></div>
+                        <div id="currencyWarningWrapper" data-control="Control" class="buy-window__currency-warning">
+                            <div id="label" data-control="Label" class="buy-window__currency-warning-label"></div>
+                            <div id="background" class="buy-window__currency-warning-background"></div>
+                        </div>
                     </div>
-
                     <div id="buyButton" data-control="PatternButton" data-navigation="ButtonElement" class="PatternImageButton Small CutLeft buy-window__buy-button">
                         <div id="backgroundNormal" class="PatternImageButton__background PatternImageButton__background-normal"></div>
                         <div id="backgroundHover" class="PatternImageButton__background PatternImageButton__background-hover"></div>
@@ -9305,9 +9501,12 @@
 
                 <div id="item_2" data-control="Control" class="buy-window__currency-item">
                     <div id="priceContainer" data-control="Control" class="PatternImageButtonPrice">
-                        <div id="price" data-control="Label"></div>
+                        <div id="price" data-control="Label" class="PatternImageButtonPrice__price"></div>
+                        <div id="currencyWarningWrapper" data-control="Control" class="buy-window__currency-warning">
+                            <div id="label" data-control="Label" class="buy-window__currency-warning-label"></div>
+                            <div id="background" class="buy-window__currency-warning-background"></div>
+                        </div>
                     </div>
-
                     <div id="buyButton" data-control="PatternButton" data-navigation="ButtonElement" class="PatternImageButton Medium buy-window__buy-button">
                         <div id="backgroundNormal" class="PatternImageButton__background PatternImageButton__background-normal"></div>
                         <div id="backgroundHover" class="PatternImageButton__background PatternImageButton__background-hover"></div>
@@ -9318,11 +9517,14 @@
                     </div>
                 </div>
 
-                <div id="item_3" data-control="Control" class="buy-window__currency-item">
+                <div id="item_3" data-control="Control" class="buy-window__currency-item-small">
                     <div id="priceContainer" data-control="Control" class="PatternImageButtonPrice">
-                        <div id="price" data-control="Label"></div>
+                        <div id="price" data-control="Label" class="PatternImageButtonPrice__price"></div>
+                        <div id="currencyWarningWrapper" data-control="Control" class="buy-window__currency-warning">
+                            <div id="label" data-control="Label" class="buy-window__currency-warning-label"></div>
+                            <div id="background" class="buy-window__currency-warning-background"></div>
+                        </div>
                     </div>
-
                     <div id="buyButton" data-control="PatternButton" data-navigation="ButtonElement" class="PatternImageButton Small CutRight buy-window__buy-button">
                         <div id="backgroundNormal" class="PatternImageButton__background PatternImageButton__background-normal"></div>
                         <div id="backgroundHover" class="PatternImageButton__background PatternImageButton__background-hover"></div>
@@ -9357,7 +9559,7 @@
                         <div id="lines" class="PatternButton__lines"></div>
                     </div>
                     <div id="overlay" class="PatternButton__overlay"></div>
-                    <div id="hardCurrency" class="currency-purchase-item__hard-currency PatternButton__label "></div>
+                    <div id="hardCurrency" class="currency-purchase-item__hard-currency PatternButton__label"></div>
                     <div id="freeCurrency" class="currency-purchase-item__free-currency"></div>
                     <div id="stroke" class="PatternButton__stroke"></div>
                     <div id="clickStroke" class="PatternButton__click-stroke"></div>
@@ -9423,6 +9625,7 @@
         <div id="content" class="modal-window__content Flex FlexDirectionColumn AlignItemsCenter">
 
             <div id="message" data-control="Label"></div>
+            <div id="extraMessage" data-control="Label"></div>
 
             <div id="error" class="Flex AlignItemsCenter">
                 <div id="errorCodeTitle" data-control="Label"></div>
@@ -10169,10 +10372,8 @@
 
     <div id="background" class="gacha-box__background"></div>
 
-    <div id="loopedVideo" data-control="VideoControl" class="gacha-box__video"></div>
-    <div id="video" data-control="VideoControl" class="gacha-box__video"></div>
-
-    <div id="liveView" data-control="ImageControl" class="gacha-box__live_view"></div>
+    <img id="liveViewLooped" data-control="LiveViewControl" class="gacha-box__live_view"></img>
+    <img id="liveView" data-control="LiveViewControl" class="gacha-box__live_view"></img>
 
     <div id="rewards" data-control="Control" class="gacha-box__rewards-container">
 
@@ -10376,11 +10577,17 @@
                     </div>
                 </div>
 
-                <div id="tasksList" data-control="ListBox" data-item="TaskProgressItem" data-bound-items-count="6" class="session-pass-progression__tasks-list-box">
-                    <div id="container" data-control="Control" data-navigation="ItemsListContainer" data-is-horizontal="false" data-disable-action-select="true" class="session-pass-progression__tasks-list-box-container"></div>
-                    <div id="slider" data-control="DefaultSlider" data-is-horizontal="false" class="DefaultVSlider session-pass-progression__list-box-slider-left">
-                        <div id="track" class="DefaultVSlider__track">
-                            <div id="clip" class="DefaultVSlider__clip"></div>
+                <div id="tasksList" data-control="ListBox" data-item="TaskProgressItem" data-grid-start-indent="1" data-grid-end-indent="3" data-bound-items-count="6" class="session-pass-progression__tasks-list-box">
+                    <div id="container" data-control="Control" data-navigation="ItemsListContainer" data-is-horizontal="false" data-disable-action-select="true" class="session-pass-progression__tasks-list-box-container">
+                        <div id="gridStartIndent"></div>
+                        <div id="contentContainer" data-control="Control" class="session-pass-progression__tasks-list-box-content-container"></div>
+                        <div id="gridEndIndent"></div>
+                    </div>
+                    <div id="sliderWrapper" data-control="Control" class="slider session-pass-progression__tasks-slider">
+                        <div id="slider" data-control="DefaultSlider" data-is-horizontal="false" class="DefaultVSlider">
+                            <div id="track" class="DefaultVSlider__track">
+                                <div id="clip" class="DefaultVSlider__clip"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -10441,11 +10648,18 @@
                     </div>
                 </div>
 
-                <div id="rewardsList" data-control="RewardListBox" data-item="RewardListItem" data-grid-start-indent="2" data-grid-end-indent="3" class="session-pass-progression__rewards-list-box">
+                <div id="rewardsList" data-control="RewardListBox" data-item="RewardListItem" data-grid-start-indent="1" data-grid-end-indent="3" data-bound-items-count="3" data-items-in-row="3" class="session-pass-progression__rewards-list-box">
                     <div id="container" data-control="Control" data-navigation="ItemsGridContainer" data-is-horizontal="false" data-disable-action-select="true" class="session-pass-progression__rewards-list-box-container">
                         <div id="gridStartIndent"></div>
                         <div id="contentContainer" data-control="Control" class="session-pass-progression__rewards-list-box-content-container"></div>
                         <div id="gridEndIndent"></div>
+                    </div>
+                    <div id="sliderWrapper" data-control="Control" class="slider session-pass-progression__rewards-slider">
+                        <div id="slider" data-control="DefaultSlider" data-is-horizontal="false" class="DefaultVSlider">
+                            <div id="track" class="DefaultVSlider__track">
+                                <div id="clip" class="DefaultVSlider__clip"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -10589,19 +10803,25 @@
 
 
 <div id="SessionMVP" data-control="Control" class="session-mvp">
-    <div id="skipButton" data-control="SkipButton" class="skip-button PatternButton">
-        <div id="wrapper" class="PatternButton__wrapper">
-            <div id="overlay" class="PatternButton__overlay"></div>
-            <div id="progressBar" data-control="DefaultProgressBar" class="skip-button__progress-bar">
-                <div id="clip" class="skip-button__progress-bar-clip"></div>
+
+    <div id="wrapper" class="session-mvp__wrapper">
+
+        <div id="skipButton" data-control="SkipButton" class="skip-button PatternButton">
+            <div id="wrapper" class="PatternButton__wrapper">
+                <div id="overlay" class="PatternButton__overlay"></div>
+                <div id="progressBar" data-control="DefaultProgressBar" class="skip-button__progress-bar">
+                    <div id="clip" class="skip-button__progress-bar-clip"></div>
+                </div>
+                <div id="key" data-control="Label" class="PatternButton__key"></div>
+                <div id="label" class="PatternButton__label"></div>
+                <div id="icon" class="PatternButton__icon-next"></div>
+                <div id="stroke" class="PatternButton__stroke"></div>
+                <div id="clickStroke" class="PatternButton__click-stroke"></div>
             </div>
-            <div id="key" data-control="Label" class="PatternButton__key"></div>
-            <div id="label" class="PatternButton__label"></div>
-            <div id="icon" class="PatternButton__icon-next"></div>
-            <div id="stroke" class="PatternButton__stroke"></div>
-            <div id="clickStroke" class="PatternButton__click-stroke"></div>
         </div>
+
     </div>
+
 </div>
 
 

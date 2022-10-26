@@ -76,13 +76,11 @@
             "actions":
             [
                 {
-                   "template": "RunMicrobehavior",
-                   "params":
-                   {
-                      "name": "UseGrenadeLauncher",
-                      "script_event_to_send": "#script_event_to_send",
-                      "anim_to_play": "#anim_to_play"
-                   }
+                    "template":"SendScriptEvent",
+                    "params":
+                    {
+                        "name":"#script_event_to_send"
+                    }
                 }
             ],
             "default_params":
@@ -97,7 +95,6 @@
                 "source_reset_time":"1",
                 "source_delay_min":"7",
                 "source_delay_max":"12",
-                "anim_to_play":"stand_reload_begin_pt01_ub_3p_01",
                 "script_event_to_send":"LAUNCH_GRENADE",
                 "min_range":"18.0",
                 "max_range":"21.0"

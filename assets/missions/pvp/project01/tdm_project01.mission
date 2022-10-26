@@ -53,11 +53,43 @@
             }
           },
           {
+             "type": "season_xp",
+             "values": {
+             "win": 150,
+              "draw": 120,
+              "loss": 100
+            }
+          },
+          {
             "type": "skill",
             "values": {
               "win": 1,
               "draw": 0,
               "loss": -1
+            }
+          }
+        ]
+      },
+      {
+        "name": "session_score",
+        "score": "Time",
+        "configs": [
+          {
+            "type": "season_xp",
+            "name": "",
+            "range_based": true,
+            "cumulative": true,
+            "values": {
+              "60": 1,
+              "120": 1,
+              "180": 1,
+              "240": 1,
+              "300": 1,
+              "360": 1,
+              "420": 1,
+              "480": 1,
+              "540": 1,
+              "600": 1
             }
           }
         ]
@@ -107,7 +139,15 @@
     "weapon_score": [
       {
         "event": {
-          "event_id": "Kill"
+          "event_id": "Kill",
+          "target_player_preset_is_not": []
+        },
+        "score": 300
+      },
+      {
+        "event": {
+          "event_id": "Kill",
+          "target_ai_archetype_is_not": []
         },
         "score": 300
       },
@@ -133,7 +173,15 @@
     "hero_score": [
       {
         "event": {
-          "event_id": "Kill"
+          "event_id": "Kill",
+          "target_player_preset_is_not": []
+        },
+        "score": 150
+      },
+      {
+        "event": {
+          "event_id": "Kill",
+          "target_ai_archetype_is_not": []
         },
         "score": 150
       },

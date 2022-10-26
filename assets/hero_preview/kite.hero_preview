@@ -83,23 +83,13 @@
         "hero_progression": {
             "outfits": {
                 "default": {
-                    "inventory_slot": "",
-                    "motion_in": "presentation_kite_in_01",
-                    "motion_idle": "presentation_kite_idle_01",
-                    "greeting": "chr_pres_kite_no_vo",
-                    "animation_controlled_rotation": false,
-                    "attachments": [
-                        {
-                            "slice": "slices/inventory/pistols/ft_pt03_presentation_fp.dynamicslice",
-                            "target_bone": "bn_01",
-                            "motion_in": "presentation_kite_in_01",
-                            "motion_idle": "presentation_kite_idle_01"
-                        },
-                        {
-                            "slice": "slices/cinematic/lobby/presentation_kite/pt09_mobl.dynamicslice",
-                            "target_bone": "bn_02"
-                        }
-                    ]
+                    "inventory_slot": "primary_weapon",
+                    "motion_in": "lobby_idle_kite_01",
+                    "motion_idle": "lobby_idle_kite_01",
+                    "hero_rotation": 
+                    {
+                        "rollback" : false
+                    }
                 }
             }
         },

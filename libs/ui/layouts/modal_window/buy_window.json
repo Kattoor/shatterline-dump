@@ -11,16 +11,22 @@
         
         {"name": "item_dual_1", "type": "Component", "view_path": "container.controlContainer.wrapper.item_1"},
         {"name": "item_dual_1_label", "type": "Label", "view_path": "container.controlContainer.wrapper.item_1.priceContainer.price"},
+        {"name": "item_dual_1_not_enough_currency", "type": "Component", "view_path": "container.controlContainer.wrapper.item_1.priceContainer.currencyWarningWrapper", "visible": false },
+        {"name": "item_dual_1_not_enough_currency_label", "type": "Label", "view_path": "container.controlContainer.wrapper.item_1.priceContainer.currencyWarningWrapper.label", "text": "@currency_purchase_window_title" },
         {"name": "item_dual_1_button", "type": "Button", "view_path": "container.controlContainer.wrapper.item_1.buyButton"},
         {"name": "item_dual_1_button_hint", "type": "ActionLabel", "view_path": "container.controlContainer.wrapper.item_1.buyButton.wrapper.key", "gamepad_only": true},
 
         {"name": "item_1", "type": "Component", "view_path": "container.controlContainer.wrapper.item_2"},
         {"name": "item_1_label", "type": "Label", "view_path": "container.controlContainer.wrapper.item_2.priceContainer.price"},
+        {"name": "item_1_not_enough_currency", "type": "Component", "view_path": "container.controlContainer.wrapper.item_2.priceContainer.currencyWarningWrapper", "visible": false },
+        {"name": "item_1_not_enough_currency_label", "type": "Label", "view_path": "container.controlContainer.wrapper.item_2.priceContainer.currencyWarningWrapper.label", "text": "@currency_purchase_window_title" },
         {"name": "item_1_button", "type": "Button", "view_path": "container.controlContainer.wrapper.item_2.buyButton"},
         {"name": "item_1_button_hint", "type": "ActionLabel", "view_path": "container.controlContainer.wrapper.item_2.buyButton.wrapper.key", "gamepad_only": true},
 
         {"name": "item_dual_2", "type": "Component", "view_path": "container.controlContainer.wrapper.item_3"},
         {"name": "item_dual_2_label", "type": "Label", "view_path": "container.controlContainer.wrapper.item_3.priceContainer.price"},
+        {"name": "item_dual_2_not_enough_currency", "type": "Component", "view_path": "container.controlContainer.wrapper.item_3.priceContainer.currencyWarningWrapper", "visible": false },
+        {"name": "item_dual_2_not_enough_currency_label", "type": "Label", "view_path": "container.controlContainer.wrapper.item_3.priceContainer.currencyWarningWrapper.label", "text": "@currency_purchase_window_title" },
         {"name": "item_dual_2_button", "type": "Button", "view_path": "container.controlContainer.wrapper.item_3.buyButton"},
         {"name": "item_dual_2_button_hint", "type": "ActionLabel", "view_path": "container.controlContainer.wrapper.item_3.buyButton.wrapper.key", "gamepad_only": true}
     ]

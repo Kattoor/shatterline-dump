@@ -1,0 +1,30 @@
+{
+  "name": "alpha_shop_pos01_malva_outfit03",
+  "icon": "malva03_shop",
+  "preview_image": "malva03_shop_preview",
+  "display_name": "@offer_malva_outfit03_name",
+  "text_description": "@offer_malva_outfit03_description",
+  "icon_size": "1x2",
+  "order": 1,
+  "prerequisites": {
+    "available_if_purchased_any": ["alpha_shop_pos01_malva_outfit03"]
+  },
+  "price": [
+    {
+      "currency": "hard",
+      "amount": 990,
+      "initial_price": 1500
+    }
+  ],
+  "items": [
+    {
+      "item_name": "m_malva_outfit03",
+      "amount": 1
+    },
+    {
+      "item_name": "malva_uppart06",
+      "amount": 1
+    }
+  ],
+  "storefront": "lobby"
+}

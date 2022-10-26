@@ -4,7 +4,7 @@
   "loading_tips_path": "libs/ui/loading_tips/invasion_tips.json",
   "reequip_cooldown": 10,
   "mechanics_config": {
-    "pre_game_time": 90,
+    "pre_game_time": 45,
     "team_balance_rule": "InvasionBalanceRule"
   },
   "pre_round_config": {
@@ -87,7 +87,8 @@
   "score": [
     {
       "event": {
-        "event_id": "Kill", "actor_is_me": true,
+        "event_id": "Kill",
+        "actor_is_me": true,
         "target_player_class_is": [
           "A",
           "S",
@@ -99,7 +100,8 @@
     },
     {
       "event": {
-        "event_id": "Kill", "actor_is_me": true,
+        "event_id": "Kill",
+        "actor_is_me": true,
         "target_player_class_is": [
           "I"
         ]
@@ -108,104 +110,122 @@
     },
     {
       "event": {
-        "event_id": "Time", "actor_is_me": true
+        "event_id": "Time",
+        "actor_is_me": true
       },
       "score": 1
     },
     {
       "event": {
-        "event_id": "Kill", "actor_is_me": true
+        "event_id": "Kill",
+        "actor_is_me": true
       },
       "score": 4
     },
     {
       "event": {
-        "event_id": "Death", "actor_is_me": true
+        "event_id": "Death",
+        "actor_is_me": true
       },
       "score": 0
     },
     {
       "event": {
-        "event_id": "WeaponTick", "actor_is_me": true
+        "event_id": "WeaponTick",
+        "actor_is_me": true
       },
       "score": 0
     },
     {
       "event": {
-        "event_id": "Headshot", "actor_is_me": true
+        "event_id": "Headshot",
+        "actor_is_me": true
       },
       "score": 5
     },
     {
       "event": {
-        "event_id": "Assist", "actor_is_me": true
+        "event_id": "Assist",
+        "actor_is_me": true
       },
       "score": 3
     },
     {
       "event": {
-        "event_id": "Resurrect", "actor_is_me": true
+        "event_id": "Resurrect",
+        "actor_is_me": true
       },
       "score": 10
     },
     {
       "event": {
-        "event_id": "Heal", "actor_is_me": true, "target_is_me": false,
+        "event_id": "Heal",
+        "actor_is_me": true,
+        "target_is_me": false,
         "target_team": "Same"
       },
       "score": 0.1
     },
     {
       "event": {
-        "event_id": "TripleKill", "actor_is_me": true
+        "event_id": "TripleKill",
+        "actor_is_me": true
       },
       "score": 10
     },
     {
       "event": {
-        "event_id": "Bloodlust", "actor_is_me": true
+        "event_id": "Bloodlust",
+        "actor_is_me": true
       },
       "score": 10
     },
     {
       "event": {
-        "event_id": "FieldMedic", "actor_is_me": true
+        "event_id": "FieldMedic",
+        "actor_is_me": true
       },
       "score": 8
     },
     {
       "event": {
-        "event_id": "CollateralKill", "actor_is_me": true
+        "event_id": "CollateralKill",
+        "actor_is_me": true
       },
       "score": 8
     },
     {
       "event": {
-        "event_id": "Revenge", "actor_is_me": true
+        "event_id": "Revenge",
+        "actor_is_me": true
       },
       "score": 8
     },
     {
       "event": {
-        "event_id": "ReturnFire", "actor_is_me": true
+        "event_id": "ReturnFire",
+        "actor_is_me": true
       },
       "score": 8
     },
     {
       "event": {
-        "event_id": "DestroyEnemyObjects", "actor_is_me": true
+        "event_id": "DestroyEnemyObjects",
+        "actor_is_me": true
       },
       "score": 1
     },
     {
       "event": {
-        "event_id": "EnemyFrozen", "actor_is_me": true
+        "event_id": "EnemyFrozen",
+        "actor_is_me": true
       },
       "score": 1
     },
     {
       "event": {
-        "event_id": "KillEnemyDrone", "actor_is_me": true
+        "event_id": "KillEnemyDrone",
+        "actor_is_me": true
       },
       "score": 3
     }
@@ -387,59 +407,69 @@
   "ability_mult": [
     {
       "event": {
-        "event_id": "Kill", "actor_is_me": true
+        "event_id": "Kill",
+        "actor_is_me": true
       },
       "score": 0.3333
     },
     {
       "event": {
-        "event_id": "Headshot", "actor_is_me": true
+        "event_id": "Headshot",
+        "actor_is_me": true
       },
       "score": 0.3333
     },
     {
       "event": {
-        "event_id": "Assist", "actor_is_me": true
+        "event_id": "Assist",
+        "actor_is_me": true
       },
       "score": 0.375
     },
     {
       "event": {
-        "event_id": "TripleKill", "actor_is_me": true
+        "event_id": "TripleKill",
+        "actor_is_me": true
       },
       "score": 0.3333
     },
     {
       "event": {
-        "event_id": "Bloodlust", "actor_is_me": true
+        "event_id": "Bloodlust",
+        "actor_is_me": true
       },
       "score": 0.2
     },
     {
       "event": {
-        "event_id": "FieldMedic", "actor_is_me": true
+        "event_id": "FieldMedic",
+        "actor_is_me": true
       },
       "score": 0.5333
     },
     {
       "event": {
-        "event_id": "CollateralKill", "actor_is_me": true
+        "event_id": "CollateralKill",
+        "actor_is_me": true
       },
       "score": 0.5333
     },
     {
       "event": {
-        "event_id": "Revenge", "actor_is_me": true
+        "event_id": "Revenge",
+        "actor_is_me": true
       },
       "score": 0.5333
     },
     {
       "event": {
-        "event_id": "ReturnFire", "actor_is_me": true
+        "event_id": "ReturnFire",
+        "actor_is_me": true
       },
       "score": 0.5333
     }
   ],
   "event_log": "default",
-  "skill_type": "invasion"
+  "skill_type": "invasion",
+  "afk_timeout": 100
 }

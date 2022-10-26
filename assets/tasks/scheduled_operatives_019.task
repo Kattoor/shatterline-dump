@@ -1,10 +1,6 @@
 {
   "name": "scheduled_operatives_019",
   "type": "scheduled",
-  "tags": [
-    "pve",
-    "gun"
-  ],
   "active": true,
   "image": "weekly_temp_icon",
   "rarity": "rare",
@@ -14,7 +10,7 @@
     {
       "name": "scheduled_operatives_019_1",
       "event_description": { "localization_key": "@scheduled_operatives_019_1_event_description" },
-      "event": { "event_id": "Kill", "actor_item_tag_is": ["FG", "CG", "CM", "KD", "AXE", "IK03", "RD"], "actor_player_class_is":["S"]},
+      "event": { "event_id": "Kill", "actor_is_me": true, "actor_item_tag_is": ["FG", "CG", "CM", "KD", "AXE", "IK03", "RD"], "actor_player_class_is":["S"]},
       "progress": 20
     },
     {

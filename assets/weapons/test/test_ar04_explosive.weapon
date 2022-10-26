@@ -1,0 +1,232 @@
+{
+    "hit_feedback": {
+        "bullet_type_suffix": "explosive"
+    },
+    "movement": {
+        "sprint_speed_multiplier": 1.0,
+        "zoom_speed_multiplier": 0.5,
+        "walk_speed_multiplier": 1.0,
+        "crouch_speed_multiplier": 1.0
+    },
+    "sounds": {
+        "sets": [
+            {
+                "tag": "default",
+                "triggers": {
+                    "fire_start": "ar04_fire_start",
+                    "fire_stop": "ar04_fire_stop"
+                }
+            },
+            {
+                "tag": "silenced",
+                "triggers": {
+                    "fire_start": "ar04_fire_silencer_start",
+                    "fire_stop": "ar04_fire_silencer_stop"
+                }
+            }
+        ],
+        "tag": "default"
+    },
+    "selection": {
+        "nearest_camera_offset": {
+            "z": 0.0,
+            "x": -0.02,
+            "y": 0.027
+        },
+        "deselection_duration": 0.15,
+        "selection_duration": 0.1,
+        "nearest_camera_rotation": {
+            "pitch": 0.0,
+            "roll": 3.0,
+            "yaw": 2.0
+        },
+        "nearest_view_fov": 62.0
+    },
+    "fp_mass_effect_hip": 2.9,
+    "spread": {
+        "max_hip_spread": 2.7,
+        "decay_time": 0.5,
+        "slide_multiplier": 3.8,
+        "zoom_multiplier": 0.0,
+        "crouch_multiplier": 0.8,
+        "hip_step": 0.2,
+        "crouch_idle_multiplier": 0.65,
+        "min_hip_spread": 1.2,
+        "decay_delay": 0.1,
+        "stand_multiplier": 1.0,
+        "walk_multiplier": 1.7,
+        "jump_multiplier": 3.5
+    },
+    "zoom": {
+        "weapon_offset": {
+            "z": 0.0,
+            "x": 0.0,
+            "y": 0.025
+        },
+        "delay_after_jump": 0.3,
+        "weapon_fov": 55.0,
+        "scope_aiming_treshold": 0.5,
+        "zoom_out_time": 0.2,
+        "hide_crosshair": true,
+        "zoom_fov": 66.5,
+        "zoom_in_time": 0.2,
+        "blur_amount": 0.0,
+        "sniper_scope": true,
+        "in_air": false
+    },
+    "common": {
+        "item_tag": "AR"
+    },
+    "muzzle_sight_distance": 0.7,
+    "fp_mass_effect_zoom": 2,
+    "shooting": {
+        "base_damage_distribution": {
+            "points": [
+                {
+                    "distance": 45.0,
+                    "damage": 35.5
+                },
+                {
+                    "distance": 45.0,
+                    "damage": 28.0
+                },
+                {
+                    "distance": 110.0,
+                    "damage": 28.0
+                },
+                {
+                    "distance": 110.0,
+                    "damage": 0.0
+                }
+            ]
+        },
+        "pierceability": {
+            "type": "static",
+            "max_objects": 0,
+            "damage_drop": 0.0,
+            "multi_part": false,
+            "pierceability_level": 2
+        },
+        "backpack_capacity": 360,
+        "chamber_capacity": 1,
+        "head_damage_distribution": {
+            "points": [
+                {
+                    "distance": 30.0,
+                    "damage": 52.5
+                },
+                {
+                    "distance": 30.0,
+                    "damage": 40.5
+                },
+                {
+                    "distance": 110.0,
+                    "damage": 40.5
+                },
+                {
+                    "distance": 110.0,
+                    "damage": 0.0
+                }
+            ]
+        },
+        "chambers_fired_per_shot": 1,
+        "rpm": 618.0,
+        "auto_reload_mode": "Chamber",
+        "clip_capacity": 25,
+        "reload": {
+            "reload_time": 2.1,
+            "reload_out_complete_threshold": 0.5,
+            "reload_in_complete_threshold": 0.5,
+            "reload_chamber_time": 0.45
+        }
+    },
+    "recoil": {
+        "kick_time": 0.1,
+        "decay_time": 0.3,
+        "max_vertical_angle": 10.0,
+        "decay_delay": 0.02,
+        "recoil_points": [
+            {
+                "num": 1,
+                "force": {
+                    "min": 0.59,
+                    "max": 0.76
+                },
+                "angle": {
+                    "min": 45.0,
+                    "max": 70.0
+                }
+            },
+            {
+                "num": 2,
+                "force": {
+                    "min": 0.56,
+                    "max": 0.68
+                },
+                "angle": {
+                    "min": -30.0,
+                    "max": -60.0
+                }
+            },
+            {
+                "num": 3,
+                "force": {
+                    "min": 0.59,
+                    "max": 0.75
+                },
+                "angle": {
+                    "min": 50.0,
+                    "max": 70.0
+                }
+            },
+            {
+                "num": 4,
+                "force": {
+                    "min": 0.55,
+                    "max": 0.72
+                },
+                "angle": {
+                    "min": -40.0,
+                    "max": -70.0
+                }
+            },
+            {
+                "num": 5,
+                "force": {
+                    "min": 0.55,
+                    "max": 0.7
+                },
+                "angle": {
+                    "min": 40.0,
+                    "max": 60.0
+                }
+            },
+            {
+                "num": 8,
+                "force": {
+                    "min": 0.21,
+                    "max": 0.55
+                },
+                "angle": {
+                    "min": -10.0,
+                    "max": 80.0
+                }
+            },
+            {
+                "num": 13,
+                "force": {
+                    "min": 0.21,
+                    "max": 0.9
+                },
+                "angle": {
+                    "min": -90.0,
+                    "max": 90.0
+                }
+            }
+        ]
+    },
+    "tick_event": {
+        "interval": 20.0,
+        "tick_only_when_selected": true
+    }
+}

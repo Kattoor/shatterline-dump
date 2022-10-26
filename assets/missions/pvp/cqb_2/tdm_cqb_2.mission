@@ -4,7 +4,7 @@
     "mission": "tdm_cqb_2",
     "game_type": "pvp",
     "voice_chat_mode": "party_only",
-    "min_players_count": 6,
+    "min_players_count": 12,
     "time_to_join_sec": 300
   },
   "session_info": {
@@ -47,9 +47,9 @@
           {
             "type": "xp",
             "values": {
-              "win": 800,
-              "draw": 700,
-              "loss": 600
+              "win": 300,
+              "draw": 225,
+              "loss": 175
             }
           },
           {
@@ -101,14 +101,14 @@
             "type": "currency",
             "name": "soft",
             "values": {
-              "reward": 1,
-              "max_reward": 100
+              "reward": 0,
+              "max_reward": 1
             }
           },
           {
             "type": "xp",
             "values": {
-              "reward": 1,
+              "reward": 0.33,
               "max_reward": 200
             }
           }
@@ -123,14 +123,14 @@
             "name": "soft",
             "values": {
               "reward": 0,
-              "max_reward": 100
+              "max_reward": 1
             }
           },
           {
             "type": "xp",
             "values": {
-              "reward": 10,
-              "max_reward": 1000
+              "reward": 5,
+              "max_reward": 200
             }
           }
         ]

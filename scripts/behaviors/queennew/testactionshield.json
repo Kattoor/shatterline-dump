@@ -25,6 +25,32 @@
             "outputs": [],
             "family": "Leaf"
         },
+        "442a489d-8f26-4b85-a264-56f6d8d9febc": {
+            "name": "PlayVO",
+            "pos": {
+                "x": -1455,
+                "y": 576
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Character",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "VOEventName",
+                    "type": "StringHash",
+                    "value": "shield_enabled"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
+        },
         "ee3ed33e-17d2-44f1-bcb4-b0f1c42cc005": {
             "name": "SetBehaviorConditionOnExit",
             "pos": {
@@ -183,6 +209,7 @@
             "outputs": [],
             "family": "FlowControl",
             "children": [
+                "442a489d-8f26-4b85-a264-56f6d8d9febc",
                 "9204690e-bfcf-4f06-89cc-61767e349a11",
                 "31f76c55-fe9e-4508-80f5-d4b20b1c9bf1",
                 "550ed653-5304-476c-9be6-1d9dcbe06eff",

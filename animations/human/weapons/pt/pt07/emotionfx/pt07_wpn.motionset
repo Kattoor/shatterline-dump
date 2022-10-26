@@ -3,10 +3,38 @@
 		<Class name="AZStd::string" field="name" value="pt07_wpn" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
 		<Class name="AZStd::unordered_map" field="motionEntries" type="{7E795792-CEDD-52D6-ABCB-6EFC3BAF1CDA}">
 			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
-				<Class name="AZStd::string" field="value1" value="reload_mag_out" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				<Class name="AZStd::string" field="value1" value="ironsight_fireloop_rds20" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
 				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
-					<Class name="AZStd::string" field="id" value="reload_mag_out" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/reload_mag_out_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+					<Class name="AZStd::string" field="id" value="ironsight_fireloop_rds20" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/ironsight_fireloop_wpn_rds20.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				</Class>
+			</Class>
+			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
+				<Class name="AZStd::string" field="value1" value="reload_mag_out_empty" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
+					<Class name="AZStd::string" field="id" value="reload_mag_out_empty" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/reload_mag_out_empty_wpn .motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				</Class>
+			</Class>
+			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
+				<Class name="AZStd::string" field="value1" value="reference_add" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
+					<Class name="AZStd::string" field="id" value="reference_add" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/idle_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				</Class>
+			</Class>
+			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
+				<Class name="AZStd::string" field="value1" value="reload_mag_in_empty" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
+					<Class name="AZStd::string" field="id" value="reload_mag_in_empty" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/reload_mag_in_empty_wpn .motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				</Class>
+			</Class>
+			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
+				<Class name="AZStd::string" field="value1" value="reload_mag_end" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
+					<Class name="AZStd::string" field="id" value="reload_mag_end" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/reload_mag_end_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
 				</Class>
 			</Class>
 			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
@@ -17,17 +45,31 @@
 				</Class>
 			</Class>
 			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
-				<Class name="AZStd::string" field="value1" value="reload_mag_end_empty" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				<Class name="AZStd::string" field="value1" value="reload_mag_out" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
 				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
-					<Class name="AZStd::string" field="id" value="reload_mag_end_empty" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/reload_mag_end_empty_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+					<Class name="AZStd::string" field="id" value="reload_mag_out" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/reload_mag_out_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
 				</Class>
 			</Class>
 			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
-				<Class name="AZStd::string" field="value1" value="jump_idle" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				<Class name="AZStd::string" field="value1" value="ironsight_fireloop_as05" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
 				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
-					<Class name="AZStd::string" field="id" value="jump_idle" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/jump_idle_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+					<Class name="AZStd::string" field="id" value="ironsight_fireloop_as05" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/ironsight_fireloop_wpn_as05.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				</Class>
+			</Class>
+			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
+				<Class name="AZStd::string" field="value1" value="select" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
+					<Class name="AZStd::string" field="id" value="select" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/select_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				</Class>
+			</Class>
+			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
+				<Class name="AZStd::string" field="value1" value="ironsight_out" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
+					<Class name="AZStd::string" field="id" value="ironsight_out" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/ironsight_out_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
 				</Class>
 			</Class>
 			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
@@ -38,10 +80,38 @@
 				</Class>
 			</Class>
 			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
-				<Class name="AZStd::string" field="value1" value="idle_tail" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				<Class name="AZStd::string" field="value1" value="jump_idle" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
 				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
-					<Class name="AZStd::string" field="id" value="idle_tail" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/idle_tail_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+					<Class name="AZStd::string" field="id" value="jump_idle" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/jump_idle_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				</Class>
+			</Class>
+			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
+				<Class name="AZStd::string" field="value1" value="reload_mag_end_empty" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
+					<Class name="AZStd::string" field="id" value="reload_mag_end_empty" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/reload_mag_end_empty_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				</Class>
+			</Class>
+			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
+				<Class name="AZStd::string" field="value1" value="ironsight_idle" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
+					<Class name="AZStd::string" field="id" value="ironsight_idle" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/ironsight_idle_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				</Class>
+			</Class>
+			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
+				<Class name="AZStd::string" field="value1" value="quick_deselect" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
+					<Class name="AZStd::string" field="id" value="quick_deselect" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/deselect_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				</Class>
+			</Class>
+			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
+				<Class name="AZStd::string" field="value1" value="run" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
+					<Class name="AZStd::string" field="id" value="run" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/run_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
 				</Class>
 			</Class>
 			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
@@ -52,10 +122,10 @@
 				</Class>
 			</Class>
 			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
-				<Class name="AZStd::string" field="value1" value="run" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				<Class name="AZStd::string" field="value1" value="idle_tail" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
 				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
-					<Class name="AZStd::string" field="id" value="run" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/run_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+					<Class name="AZStd::string" field="id" value="idle_tail" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/idle_tail_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
 				</Class>
 			</Class>
 			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
@@ -73,31 +143,45 @@
 				</Class>
 			</Class>
 			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
+				<Class name="AZStd::string" field="value1" value="reload_mag_in" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
+					<Class name="AZStd::string" field="id" value="reload_mag_in" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/reload_mag_in_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				</Class>
+			</Class>
+			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
+				<Class name="AZStd::string" field="value1" value="onehanded_02" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
+					<Class name="AZStd::string" field="id" value="onehanded_02" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/idle_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				</Class>
+			</Class>
+			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
+				<Class name="AZStd::string" field="value1" value="ironsight_fireloop_as02" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
+					<Class name="AZStd::string" field="id" value="ironsight_fireloop_as02" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/ironsight_fireloop_wpn_as02.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				</Class>
+			</Class>
+			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
+				<Class name="AZStd::string" field="value1" value="slide_idle_add" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
+					<Class name="AZStd::string" field="id" value="slide_idle_add" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/idle_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				</Class>
+			</Class>
+			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
+				<Class name="AZStd::string" field="value1" value="idle" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
+					<Class name="AZStd::string" field="id" value="idle" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/idle_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				</Class>
+			</Class>
+			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
 				<Class name="AZStd::string" field="value1" value="deselect" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
 				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
 					<Class name="AZStd::string" field="id" value="deselect" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
 					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/deselect_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-				</Class>
-			</Class>
-			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
-				<Class name="AZStd::string" field="value1" value="firetail" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
-					<Class name="AZStd::string" field="id" value="firetail" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/firetail_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-				</Class>
-			</Class>
-			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
-				<Class name="AZStd::string" field="value1" value="ironsight_firetail" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
-					<Class name="AZStd::string" field="id" value="ironsight_firetail" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/ironsight_firetail_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-				</Class>
-			</Class>
-			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
-				<Class name="AZStd::string" field="value1" value="onehanded_04" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
-					<Class name="AZStd::string" field="id" value="onehanded_04" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/idle_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
 				</Class>
 			</Class>
 			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
@@ -136,87 +220,24 @@
 				</Class>
 			</Class>
 			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
-				<Class name="AZStd::string" field="value1" value="quick_deselect" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				<Class name="AZStd::string" field="value1" value="ironsight_firetail" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
 				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
-					<Class name="AZStd::string" field="id" value="quick_deselect" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/deselect_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+					<Class name="AZStd::string" field="id" value="ironsight_firetail" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/ironsight_firetail_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
 				</Class>
 			</Class>
 			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
-				<Class name="AZStd::string" field="value1" value="ironsight_idle" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				<Class name="AZStd::string" field="value1" value="onehanded_04" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
 				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
-					<Class name="AZStd::string" field="id" value="ironsight_idle" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/ironsight_idle_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-				</Class>
-			</Class>
-			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
-				<Class name="AZStd::string" field="value1" value="idle" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
-					<Class name="AZStd::string" field="id" value="idle" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+					<Class name="AZStd::string" field="id" value="onehanded_04" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
 					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/idle_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
 				</Class>
 			</Class>
 			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
-				<Class name="AZStd::string" field="value1" value="slide_idle_add" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+				<Class name="AZStd::string" field="value1" value="firetail" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
 				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
-					<Class name="AZStd::string" field="id" value="slide_idle_add" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/idle_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-				</Class>
-			</Class>
-			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
-				<Class name="AZStd::string" field="value1" value="ironsight_out" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
-					<Class name="AZStd::string" field="id" value="ironsight_out" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/ironsight_out_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-				</Class>
-			</Class>
-			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
-				<Class name="AZStd::string" field="value1" value="select" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
-					<Class name="AZStd::string" field="id" value="select" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/select_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-				</Class>
-			</Class>
-			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
-				<Class name="AZStd::string" field="value1" value="onehanded_02" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
-					<Class name="AZStd::string" field="id" value="onehanded_02" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/idle_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-				</Class>
-			</Class>
-			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
-				<Class name="AZStd::string" field="value1" value="reload_mag_in" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
-					<Class name="AZStd::string" field="id" value="reload_mag_in" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/reload_mag_in_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-				</Class>
-			</Class>
-			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
-				<Class name="AZStd::string" field="value1" value="reference_add" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
-					<Class name="AZStd::string" field="id" value="reference_add" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/idle_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-				</Class>
-			</Class>
-			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
-				<Class name="AZStd::string" field="value1" value="reload_mag_out_empty" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
-					<Class name="AZStd::string" field="id" value="reload_mag_out_empty" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/reload_mag_out_empty_wpn .motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-				</Class>
-			</Class>
-			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
-				<Class name="AZStd::string" field="value1" value="reload_mag_in_empty" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
-					<Class name="AZStd::string" field="id" value="reload_mag_in_empty" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/reload_mag_in_empty_wpn .motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-				</Class>
-			</Class>
-			<Class name="AZStd::pair" field="element" type="{7D28A706-15EE-5B30-B2F7-A224146B4C7F}">
-				<Class name="AZStd::string" field="value1" value="reload_mag_end" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-				<Class name="MotionSet::MotionEntry" field="value2" version="1" type="{A1859687-2DE7-4B29-8A39-07836FDF5956}">
-					<Class name="AZStd::string" field="id" value="reload_mag_end" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
-					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/reload_mag_end_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+					<Class name="AZStd::string" field="id" value="firetail" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
+					<Class name="AZStd::string" field="assetId" value="animations/human/weapons/pt/pt07/firetail_wpn.motion" type="{03AAAB3F-5C47-5A66-9EBC-D5FA4DB353C9}"/>
 				</Class>
 			</Class>
 		</Class>

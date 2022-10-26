@@ -1,12 +1,12 @@
-<ParticleLibrary Name="t_intro" SandboxVersion="1.23.0.0" ParticleVersion="33">
+<ParticleLibrary Name="t_intro" SandboxVersion="1.28.0.0" ParticleVersion="33">
  <Particles Name="tracer">
-  <Params Count="1" EmitterSizeDiameter="5" ParticleLifeTime="4" FocusAngle="90" FocusAzimuth="180" BlendType="Additive" Color="(x=0.73791,y=0.590619,z=0.590619)" Speed="1" ConfigMin="High"/>
+  <Params Count="1" EmitterSizeDiameter="5" ParticleLifeTime="4" FocusAngle="90" FocusAzimuth="180" BlendType="Additive" Color="(x=0.73791,y=0.590619,z=0.590619)" Speed="1" ConfigMin="Medium"/>
   <Childs>
    <Particles Name="HiSpec">
-    <Params Count="1" EmitterSizeDiameter="5" ParticleLifeTime="1" FocusAngle="90" FocusAzimuth="180" Speed="1" ConfigMin="High"/>
+    <Params Count="1" EmitterSizeDiameter="5" ParticleLifeTime="1" FocusAngle="90" FocusAzimuth="180" Speed="1" ConfigMin="Medium"/>
     <Childs>
      <Particles Name="emitter">
-      <Params Count="5" EmitterSizeDiameter="5" LocalInitAngles="y=-90" LocalRandomAngles="y=2" Continuous="true" ParticleLifeTime="0.2,Random=0.05"  Curvature="0" BlendType="Additive" Texture="textures/tracers/tracer_01.dds" MaintainAspectRatio="false" SizeX="0.5" SizeY="3" SizeZ="3" Speed="-100" InitAngles="y=-90" RandomAngles="y=2" CameraNonFacingFade="FadeCurve=(;t=1,v=1)"/>
+      <Params Count="5" EmitterSizeDiameter="5" LocalInitAngles="y=-90" LocalRandomAngles="y=2" Continuous="true" ParticleLifeTime="0.2,Random=0.05" Curvature="0" BlendType="Additive" Texture="textures/tracers/tracer_01.dds" MaintainAspectRatio="false" SizeX="0.5" SizeY="3" SizeZ="3" Speed="-100" InitAngles="y=-90" RandomAngles="y=2" CameraNonFacingFade="FadeCurve=(;t=1,v=1)"/>
      </Particles>
     </Childs>
    </Particles>

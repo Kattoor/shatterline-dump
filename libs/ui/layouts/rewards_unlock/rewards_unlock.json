@@ -12,12 +12,13 @@
         {"name": "button", "type": "Button", "view_path": "rewards.buttons.buttonProceed", "text": "@proceed"},
         {"name": "button_hint", "type": "ActionLabel", "view_path": "rewards.buttons.buttonProceed.wrapper.key", "gamepad_only": true},
         
-        {"name": "view", "type": "Image", "view_path": "liveView" },
-        {"name": "video", "type": "Video", "view_path": "video", "video_path": "videos/celebration/rewards_unlock_full.bk2", "is_live_view": true },
-        {"name": "looped_video", "type": "Video", "view_path": "loopedVideo", "video_path": "videos/celebration/rewards_unlock_looped.bk2", "is_live_view": true, "loop": true },
+        {"name": "video", "type": "LiveViewPlayer", "view_path": "liveView", "video_path": "videos/celebration/rewards_unlock_full.bk2", "visible": false},
+        {"name": "looped_video", "type": "LiveViewPlayer", "view_path": "liveViewLooped", "video_path": "videos/celebration/rewards_unlock_looped.bk2", "loop": true, "visible": false },
 
         {"name": "reward_info", "type": "Control", "view_path": "rewards.rewardInfo", "visible": false},
         {"name": "reward_type", "type": "Label", "view_path": "rewards.rewardInfo.type"},
-        {"name": "reward_title", "type": "Label", "view_path": "rewards.rewardInfo.title"}
+        {"name": "reward_title", "type": "Label", "view_path": "rewards.rewardInfo.title"},
+
+        {"name": "title", "type": "Control", "view_path": "title", "visible": false}
     ]
 }

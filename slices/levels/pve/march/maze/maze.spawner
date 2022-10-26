@@ -5,8 +5,9 @@
             "totalLimit": 1000,
             "count": 0,
             "groupCount": 3,
-            "spawnDelay": 8.000000,
+            "spawnDelay": 8.0,
             "filterTag": "maze_bombs",
+            "tagsToAdd": [ ],
             "competitor": "",
             "agents": [
                 {
@@ -14,7 +15,8 @@
                     "probability": 100,
                     "count": 3,
                     "groupCount": 1,
-                    "spawnDelay": 10.000000
+                    "agentLimit": 0,
+                    "spawnDelay": 10.0
                 }
             ]
         },
@@ -23,8 +25,9 @@
             "totalLimit": 100,
             "count": 1,
             "groupCount": 1,
-            "spawnDelay": 0.000000,
+            "spawnDelay": 0.0,
             "filterTag": "",
+            "tagsToAdd": [ ],
             "competitor": "",
             "agents": [
                 {
@@ -32,17 +35,19 @@
                     "probability": 100,
                     "count": 0,
                     "groupCount": 1,
-                    "spawnDelay": 0.000000
+                    "agentLimit": 0,
+                    "spawnDelay": 0.0
                 }
             ]
         },
         {
             "name": "maze_attackers",
             "totalLimit": 1000,
-            "count": 3,
-            "groupCount": 3,
-            "spawnDelay": 7.000000,
+            "count": 4,
+            "groupCount": 4,
+            "spawnDelay": 7.0,
             "filterTag": "maze_attackers",
+            "tagsToAdd": [ ],
             "competitor": "",
             "agents": [
                 {
@@ -50,21 +55,32 @@
                     "probability": 2,
                     "count": 0,
                     "groupCount": 1,
-                    "spawnDelay": 0.000000
+                    "agentLimit": 0,
+                    "spawnDelay": 0.0
                 },
                 {
                     "tags": [ "(1) Strafer: SMG" ],
                     "probability": 1,
                     "count": 0,
                     "groupCount": 1,
-                    "spawnDelay": 0.000000
+                    "agentLimit": 0,
+                    "spawnDelay": 0.0
                 },
                 {
                     "tags": [ "(1) Strafer: SHG" ],
                     "probability": 1,
                     "count": 0,
                     "groupCount": 1,
-                    "spawnDelay": 0.000000
+                    "agentLimit": 0,
+                    "spawnDelay": 0.0
+                },
+                {
+                    "tags": [ "(1) Strafer: SR" ],
+                    "probability": 2,
+                    "count": 0,
+                    "groupCount": 1,
+                    "agentLimit": 2,
+                    "spawnDelay": 0.0
                 }
             ]
         },
@@ -73,8 +89,9 @@
             "totalLimit": 1000,
             "count": 1,
             "groupCount": 1,
-            "spawnDelay": 16.000000,
+            "spawnDelay": 16.0,
             "filterTag": "maze_attackers",
+            "tagsToAdd": [ ],
             "competitor": "",
             "agents": [
                 {
@@ -82,14 +99,16 @@
                     "probability": 2,
                     "count": 0,
                     "groupCount": 1,
-                    "spawnDelay": 0.000000
+                    "agentLimit": 0,
+                    "spawnDelay": 0.0
                 },
                 {
                     "tags": [ "(1) Strafer: SR" ],
                     "probability": 5,
                     "count": 0,
                     "groupCount": 1,
-                    "spawnDelay": 0.000000
+                    "agentLimit": 0,
+                    "spawnDelay": 0.0
                 }
             ]
         },
@@ -98,8 +117,9 @@
             "totalLimit": 100,
             "count": 1,
             "groupCount": 1,
-            "spawnDelay": 10.000000,
+            "spawnDelay": 10.0,
             "filterTag": "maze_attackers_capture",
+            "tagsToAdd": [ ],
             "competitor": "",
             "agents": [
                 {
@@ -107,7 +127,8 @@
                     "probability": 100,
                     "count": 0,
                     "groupCount": 1,
-                    "spawnDelay": 0.000000
+                    "agentLimit": 0,
+                    "spawnDelay": 0.0
                 }
             ]
         },
@@ -116,8 +137,9 @@
             "totalLimit": 100,
             "count": 0,
             "groupCount": 1,
-            "spawnDelay": 0.000000,
+            "spawnDelay": 0.0,
             "filterTag": "maze_attackers",
+            "tagsToAdd": [ ],
             "competitor": "",
             "agents": [
                 {
@@ -125,21 +147,24 @@
                     "probability": 100,
                     "count": 4,
                     "groupCount": 4,
-                    "spawnDelay": 10.000000
+                    "agentLimit": 0,
+                    "spawnDelay": 10.0
                 },
                 {
                     "tags": [ "(1) Strafer: SHG" ],
                     "probability": 100,
                     "count": 2,
                     "groupCount": 2,
-                    "spawnDelay": 15.000000
+                    "agentLimit": 0,
+                    "spawnDelay": 15.0
                 },
                 {
                     "tags": [ "(1) Strafer: SR" ],
                     "probability": 100,
                     "count": 2,
                     "groupCount": 2,
-                    "spawnDelay": 20.000000
+                    "agentLimit": 0,
+                    "spawnDelay": 20.0
                 }
             ]
         },
@@ -148,8 +173,9 @@
             "totalLimit": 2,
             "count": 2,
             "groupCount": 2,
-            "spawnDelay": 0.000000,
+            "spawnDelay": 0.0,
             "filterTag": "maze_final_minotaurs",
+            "tagsToAdd": [ ],
             "competitor": "",
             "agents": [
                 {
@@ -157,7 +183,8 @@
                     "probability": 100,
                     "count": 0,
                     "groupCount": 1,
-                    "spawnDelay": 0.000000
+                    "agentLimit": 0,
+                    "spawnDelay": 0.0
                 }
             ]
         }

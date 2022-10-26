@@ -69,21 +69,13 @@
         "hero_progression": {
             "outfits": {
                 "default": {
-                    "inventory_slot": "",
-                    "motion_in": "presentation_orbit_in_01",
-                    "motion_idle": "presentation_orbit_idle_01",
-                    "greeting": "chr_pres_orbit_no_vo",
-                    "animation_controlled_rotation": false,
-                    "attachments": [
-                        {
-                            "slice": "slices/vfx/lobby_characters/vfx_lobby_orbit_bllue_sparks_hand.dynamicslice",
-                            "target_bone": "Bip01_R_UpperArm"
-                        },
-                        {
-                            "slice": "slices/vfx/lobby_characters/vfx_lobby_orbit_red_sparks_hand.dynamicslice",
-                            "target_bone": "Bip01_L_UpperArm"
-                        }
-                    ]
+                    "inventory_slot": "primary_weapon",
+                    "motion_in": "lobby_idle_orbit_01",
+                    "motion_idle": "lobby_idle_orbit_01",
+                    "hero_rotation": 
+                    {
+                        "rollback" : false
+                    }
                 }
             }
         },

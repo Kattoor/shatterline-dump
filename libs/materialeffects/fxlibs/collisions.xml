@@ -498,6 +498,16 @@
 		</Particle>
 	</Effect>
 	
+	
 <!-- END   SCAR   END -->
+ <Effect name="mfx_gravity_strike" delay="0.05">
+		<Audio trigger="bullet_impact_mat_crystalline_pistol">
+		</Audio>
+        <RandEffect>
+            <PopcornParticle>
+                <Name forwardaxisZ="true" minscale="0.8" maxscale="1.2" maxscaledist="80" maxpossiblescalemod="2">libs/particles/weapons_special/mfx_gravity_strike.pkfx</Name>
+            </PopcornParticle>
+        </RandEffect>
+    </Effect>   
 
 </FXLib>

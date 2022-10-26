@@ -1,0 +1,46 @@
+{
+    "script": "scripts/ui/lobby/season_hub/buy_season_levels.lua",
+    "view_path": "BuySeasonLevels.html",
+    "send_stats": true,
+    "children":
+    [
+        { "name": "screen_header", "type": "Component", "file": "common/screen_header.json", "visible": false },
+
+        { "name": "description", "type": "Label", "view_path": "container.leftPanel.description", "text": "@buy_levels_description"},
+
+        { "name": "rewards_list", "type": "RewardItemsGrid", "view_path": "container.leftPanel.rewardsContainer.rewardsList" },
+        { "name": "rewards_list_container", "type": "Component", "view_path": "container.leftPanel.rewardsContainer.rewardsList.container" },
+
+        { "name": "purchase_description", "type": "Label", "view_path": "container.leftPanel.purchaseDescription"},
+
+        { "name": "minus_5_button", "type": "Button", "view_path": "container.leftPanel.bottomPanel.calculator.minusButton2" },
+        { "name": "minus_5_button_hint", "type": "ActionLabel", "view_path": "container.leftPanel.bottomPanel.calculator.minusButton2.key", "gamepad_only": true },
+        { "name": "minus_1_button", "type": "Button", "view_path": "container.leftPanel.bottomPanel.calculator.minusButton1" },
+        { "name": "minus_1_button_hint", "type": "ActionLabel", "view_path": "container.leftPanel.bottomPanel.calculator.minusButton1.key", "gamepad_only": true },
+
+        { "name": "price_wrapper", "type": "Control", "view_path": "container.leftPanel.bottomPanel.calculator.levelsPriceWrapper", "visible": false },
+        { "name": "buy_levels_count", "type": "Label", "view_path": "container.leftPanel.bottomPanel.calculator.levelsPriceWrapper.levels" },
+        { "name": "price", "type": "Label", "view_path": "container.leftPanel.bottomPanel.calculator.levelsPriceWrapper.price" },
+
+        { "name": "plus_1_button", "type": "Button", "view_path": "container.leftPanel.bottomPanel.calculator.plusButton1" },
+        { "name": "plus_1_button_hint", "type": "ActionLabel", "view_path": "container.leftPanel.bottomPanel.calculator.plusButton1.key", "gamepad_only": true },
+        { "name": "plus_5_button", "type": "Button", "view_path": "container.leftPanel.bottomPanel.calculator.plusButton2" },
+        { "name": "plus_5_button_hint", "type": "ActionLabel", "view_path": "container.leftPanel.bottomPanel.calculator.plusButton2.key", "gamepad_only": true },
+
+        { "name": "not_enough_currency", "type": "Component", "view_path": "container.leftPanel.bottomPanel.currencyWarningWrapper", "visible": false },
+        { "name": "not_enough_currency_label", "type": "Label", "view_path": "container.leftPanel.bottomPanel.currencyWarningWrapper.label", "text": "@currency_purchase_window_title" },
+
+        { "name": "buy_button", "type": "Button", "view_path": "container.leftPanel.bottomPanel.buyBtnWrapper.buyBtn", "text": "@buy_label" },
+        { "name": "buy_button_hint", "type": "ActionLabel", "view_path": "container.leftPanel.bottomPanel.buyBtnWrapper.buyBtn.wrapper.key", "gamepad_only": true },
+
+        { "name": "reward_info", "type": "Control", "view_path": "container.rightPanel.rewardInfo", "visible": false },
+        { "name": "reward_type", "type": "Label", "view_path": "container.rightPanel.rewardInfo.type" },
+        { "name": "reward_title", "type": "Label", "view_path": "container.rightPanel.rewardInfo.title" },
+        { "name": "reward_image_1", "type": "Image", "view_path": "container.rightPanel.rewardImage1", "visible": false },
+        { "name": "reward_image_2", "type": "Image", "view_path": "container.rightPanel.rewardImage2", "visible": false },
+
+        { "name": "preview_button", "type": "Button", "view_path": "container.rightPanel.moreButton", "text": "@season_pass_preview_button", "visible": false },
+
+        { "name": "bg", "type": "Image", "view_path": "container.bg", "image": "bg_purchase_season_pass", "visible": false}
+    ]
+}

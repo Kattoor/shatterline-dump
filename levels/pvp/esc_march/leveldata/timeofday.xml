@@ -2,10 +2,10 @@
  <Variable Name="Sun color" Color="0.61720729,0.86315733,1">
   <Spline Keys="-0.000628322:(0.783538:0.89627:0.930341):36,0:(0.783538:0.887923:0.921582):36,0.229167:(0.783538:0.879623:0.921582):36,0.25:(0.947307:0.745404:0.577581):36,0.396108:(1:1:1):36,0.489924:(0.62396:0.871367:1):36,0.500347:(0.617207:0.863157:1):36,0.510771:(0.62396:0.871367:1):36,0.542043:(0.846873:0.947307:1):36,0.5625:(1:1:1):36,0.75:(0.947307:0.745404:0.577581):36,0.770833:(0.783538:0.879623:0.921582):36,1:(0.783538:0.89627:0.930556):36,"/>
  </Variable>
- <Variable Name="Sun intensity" Value="2000">
+ <Variable Name="Sun intensity" Value="2000.0916">
   <Spline Keys="0.489924:4000:36,0.500347:2000:36,0.510771:4000:36,"/>
  </Variable>
- <Variable Name="Sun specular multiplier" Value="1.5">
+ <Variable Name="Sun specular multiplier" Value="1.4999772">
   <Spline Keys="0.489924:1:36,0.500347:1.5:65572,0.510771:1:36,"/>
  </Variable>
  <Variable Name="Fog color" Color="0.13286802,0.13286802,0.13286802">
@@ -74,6 +74,9 @@
  <Variable Name="Volumetric fog: Shadow range" Value="0.1">
   <Spline Keys="0:0.1:36,0.25:0.1:36,0.489924:0.1:36,0.5:0.1:65572,0.500347:0.1:36,0.510771:0.1:36,0.75:0.1:36,1:0.1:36,"/>
  </Variable>
+ <Variable Name="Volumetric fog 2: Fog height is camera relative" Boolean="0">
+  <Spline Keys="0:0:0,1:0:0,"/>
+ </Variable>
  <Variable Name="Volumetric fog 2: Fog height (bottom)" Value="84.999916">
   <Spline Keys="0:0:0,0.500347:85:36,1:0:0,"/>
  </Variable>
@@ -95,7 +98,7 @@
  <Variable Name="Volumetric fog 2: Ramp end" Value="30.004118">
   <Spline Keys="0.489924:120:36,0.500347:30:36,0.510771:120:36,"/>
  </Variable>
- <Variable Name="Volumetric fog 2: Fog albedo color (atmosphere)" Color="0.72306794,0.74541599,0.7605356">
+ <Variable Name="Volumetric fog 2: Fog albedo color (atmosphere)" Color="0.7230677,0.74541563,0.76053596">
   <Spline Keys="0:(1:1:1):0,0.489924:(1:1:1):36,0.500347:(0.723055:0.745404:0.760525):36,0.510771:(1:1:1):36,1:(1:1:1):0,"/>
  </Variable>
  <Variable Name="Volumetric fog 2: Anisotropy factor (atmosphere)" Value="0.2">

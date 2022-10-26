@@ -2,15 +2,16 @@
     "waves": [
         {
             "name": "minefield_turret",
-            "totalLimit": 3,
+            "totalLimit": 1,
             "count": 0,
             "groupCount": 1,
             "spawnDelay": 0.0,
-            "filterTag": "",
+            "filterTag": "minefield_turret",
+            "tagsToAdd": [ ],
             "competitor": "Glasshead",
             "agents": [
                 {
-                    "tags": [ "(5)Glasshead: STATIC Fairfly Turret" ],
+                    "tags": [ "(5)Glasshead: Phantomcore Turret" ],
                     "probability": 100,
                     "count": 1,
                     "groupCount": 1,
@@ -21,11 +22,12 @@
         },
         {
             "name": "bombdogs",
-            "totalLimit": 45,
+            "totalLimit": 99,
             "count": 0,
             "groupCount": 1,
             "spawnDelay": 0.0,
             "filterTag": "",
+            "tagsToAdd": [ "minefield_bombdogs" ],
             "competitor": "Glasshead",
             "agents": [
                 {
@@ -34,7 +36,7 @@
                     "count": 2,
                     "groupCount": 1,
                     "agentLimit": 0,
-                    "spawnDelay": 0.0
+                    "spawnDelay": 3.0
                 }
             ]
         }

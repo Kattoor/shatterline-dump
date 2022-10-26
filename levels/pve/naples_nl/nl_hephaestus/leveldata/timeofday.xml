@@ -20,7 +20,7 @@
  <Variable Name="Fog layer density (bottom)" Value="1">
   <Spline Keys="0:1:36,0.25:1:36,0.489924:1:36,0.5:1:36,0.510771:1:36,0.75:1:36,1:1:36,"/>
  </Variable>
- <Variable Name="Fog color (top)" Color="0.59061897,0.4793202,0.32314324">
+ <Variable Name="Fog color (top)" Color="0.59061903,0.47931999,0.32314301">
   <Spline Keys="0:(0.00699541:0.00972122:0.0122865):36,0.229167:(0.00699541:0.00972122:0.0122865):36,0.25:(0.597202:0.723055:0.913099):36,0.396108:(0.223228:0.346704:0.462077):36,0.489924:(0.590619:0.47932:0.323143):36,0.500347:(0.590619:0.47932:0.323143):36,0.510771:(0.590619:0.47932:0.323143):36,0.75:(0.597202:0.723055:0.913099):36,0.770833:(0.00699541:0.00972122:0.0122865):36,1:(0.00699541:0.00972122:0.0122865):36,"/>
  </Variable>
  <Variable Name="Fog color (top) multiplier" Value="0.5">
@@ -73,6 +73,9 @@
  </Variable>
  <Variable Name="Volumetric fog: Shadow range" Value="0.1">
   <Spline Keys="0:0.1:36,0.25:0.1:36,0.489924:0.1:36,0.5:0.1:65572,0.500347:0.1:36,0.510771:0.1:36,0.75:0.1:36,1:0.1:36,"/>
+ </Variable>
+ <Variable Name="Volumetric fog 2: Fog height is camera relative" Boolean="0">
+  <Spline Keys="0:0:0,1:0:0,"/>
  </Variable>
  <Variable Name="Volumetric fog 2: Fog height (bottom)" Value="0">
   <Spline Keys="0:0:0,1:0:0,"/>

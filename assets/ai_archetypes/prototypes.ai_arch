@@ -104,6 +104,175 @@
             },
             "leave_dead_body": true
         },
+        
+        {
+            "name": "glasshead_turret_ray",
+            "display_name": "@glasshead_turret_ray",
+            "enemy_type": "special_ranged",
+            "add_tags":["GlassheadAI", "SpecialAI", "GlassheadTurretAI", "RamDashHitArticulated"],
+            "tags": ["(2)Glasshead: Turret Ray"],
+            "slice": "slices/ai/invasion/invader_turret.dynamicslice",
+            "tp_slice": "slices/ai/invasion/glasshead_turret_tp.dynamicslice",
+            "wounds":
+            {
+                "damage":
+                {
+                    "profile": "",
+                    "value": 50000,
+                    "time": 0.1,
+                    "prob": 0.0
+                }
+            },
+            "death":
+            {
+                "lifetime": 0.1
+            },
+            "vo_profile": "CrystallineTurret",
+            "competitor": "Glasshead",
+            "health": 2200,
+            "hud_marker": "generic_hp_marker",
+            "aabb_box":
+            {
+                "width": 0.9,
+                "length": 0.9,
+                "height": 4.0
+            },
+            "behavior":
+            {
+                "behavior_tree": "BehaviorSelector",
+                "profile": "BasicRange",
+                "params":
+                {
+                    "dash_fade_out_slice": "slices/ai/bosses/adamant/adamant_dash_fade_out.dynamicslice",
+                    "dash_hide_after_fade_out_delay": "0.0",
+                    "dash_move_time": "0.1",
+                    "dash_fade_in_slice": "slices/ai/bosses/adamant/adamant_dash_fade_in.dynamicslice",
+                    "dash_show_after_fade_in_delay": "0.1"
+                    
+                }
+            },
+            "equip":
+            [
+                {
+                    "item": "wpn01_turret_ray",
+                    "shooting_pattern": ["1; 4-5"],
+                    "check_visible": false,
+                    "damage_multiplier": 1.0,
+                    "max_shooting_range": 100,
+                    "laser_sight":
+                    {
+                        "wandering_time": 2.6,
+                        "after_shot_time": 0.1
+                    }
+                }
+            ],
+            "microbehaviors":
+            [
+                {
+                    "name": "SideDash",
+                    "params":
+                    {
+                        "damage": "50",
+                        "damage_time": "1",
+                        "prob": "0.1",
+                        "counter": "1",
+                        "reset_time": "10",
+                        "delay_min": "3",
+                        "delay_max": "7",
+                        "min_distance": "2.0",
+                        "max_distance": "4.0",
+                        "random_angle": "15"
+                    }
+                }
+            ],
+            "perception":
+            {
+                "sight_range": 80.0,
+                "max_memory_time": 8.0,
+                "sound_stimulus_scale": 0.0,
+                "weight_inc_step": 25,
+                "weight_inc_time": 0.5,
+                "weight_dec_step": 5,
+                "weight_dec_time": 1
+            },
+            "target_selection":
+            {
+                "tag_distance":
+                {
+                    "Character":
+                    {
+                        "visibility_cone_angle": 90,
+                        "weights":
+                        [
+                            {
+                                "weight":10,
+                                "distance":50
+                            }
+                        ]
+                    },
+                    "RegularAI":
+                    {
+                        "weights":
+                        [
+                            {
+                                "weight":10,
+                                "distance":5
+                            }
+                        ]
+                    },
+                    "Player":
+                    {
+                        "visibility_cone_angle": 110,
+                        "weights":
+                        [
+                            {
+                                "weight":10,
+                                "distance":25
+                            },
+                            {
+                                "weight":15,
+                                "distance":15
+                            },
+                            {
+                                "weight":20,
+                                "distance":7
+                            }
+                        ]
+                    }
+                },
+                "tag_weights":
+                {
+                    "VIP": -10,
+                    "InvisibleAI": -500,
+                    "ShooterPriority": 100,
+                    "Breakable": -40
+                },
+                "weights":
+                {
+                    "critical_range": 5,
+                    "damage_dealer": 10,
+                    "target_visible": 5,
+                    "target_sound": 0,
+                    "target_memory": 0
+                },
+                "thresholds":
+                {
+                    "critical_range": 3,
+                    "damage_dealer_duration": 5
+                }
+            },
+            "speed":
+            {
+                "run": 0,
+                "strafe": 0,
+                "back": 0,
+                "crouch": 0,
+                "fire": 0
+            },
+            "leave_dead_body": false,
+            "body_turn_limit": 360,
+            "eye_offset_z": 0.5
+        },
                 
         {
             "name":"glasshead_gardener_boss",
@@ -282,19 +451,36 @@
             "parent": "Minotaur_napalm",
             "tags": ["prototype Minotaur Chrono"],
             "slice": "slices/ai/minotaur/minotaur_chrono.dynamicslice",
-            "tp_slice": "slices/ai/minotaur/minotaur_combined_tp.dynamicslice",
+            "tp_slice": "slices/ai/minotaur/minotaur_02_tp.dynamicslice",
             "behavior":
             {
                 "behavior_tree": "BehaviorSelector",
                 "profile": "Minotaur",
                 "projectile_launcher":
                 {
-                    "min_targets": 10,
-                    "scan_range": 0,
-                    "update_targets_delay": 99.0,
-                    "prepare_delay": 0.0,
-                    "fire_delay": 0.1,
-                    "out_delay": 0.0
+                    "launch_on_demand_only": true,
+                    "bullets_per_shot": 1,
+                    "delay_for_bullet": 0.03,
+                    "bullet_spread": 4,
+                    "min_targets": 1,
+                    "min_distance": 15,
+                    "scan_range": 90,
+                    "group_radius": 10,
+                    "update_targets_delay": 2.0,
+                    "find_targets_sector_angle": 60.0,
+                    "prepare_delay": 1.7,
+                    "fire_delay": 0.9,
+                    "out_delay": 1.9,
+                    "cooldown_delay": 6.2,
+                    "launch_obstacle_check_angle": 45.0,
+                    "launch_obstacle_check_distance": 10.0,
+                    "target_obstacle_check_angle": 45.0,
+                    "target_obstacle_check_distance": 10.0
+                },
+                "params":
+                {
+                    "melee_jump_probability": "0.0",
+                    "jump_on_wound_enable": "false"
                 }
             },
             "speed":
@@ -321,9 +507,6 @@
                         "effective_distance_min": "2.8",
                         "effective_distance_max": "8"
                     }
-                },
-                {
-                    "item": "spg10"
                 }
             ],
             "microbehaviors": [

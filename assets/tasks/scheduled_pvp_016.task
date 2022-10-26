@@ -1,0 +1,37 @@
+{
+  "name": "scheduled_pvp_016",
+  "type": "scheduled",
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "epic",
+  "display_name": { "localization_key": "@scheduled_pvp_016_name" },
+  "description": { "localization_key": "@scheduled_pvp_016_description" },
+  "conditions": [
+    {
+      "name": "scheduled_pvp_016",
+      "event_description": { "localization_key": "@scheduled_pvp_016_event_description" },
+      "event": { "event_id": "Headshot", "actor_is_me": true},
+      "progress": 3
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 4000
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 2500
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 30
+    }
+  ],
+  "reset_on_events": [
+    {"event_id": "Death"}
+   ]
+}

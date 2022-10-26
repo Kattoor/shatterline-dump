@@ -85,27 +85,13 @@
         "hero_progression": {
             "outfits": {
                 "default": {
-                    "inventory_slot": "",
-                    "motion_in": "presentation_mongoose_in_01",
-                    "motion_idle": "presentation_mongoose_idle_01",
-                    "greeting": "chr_pres_mongoose_no_vo",
-                    "attachments": [
-                        {
-                            "slice": "slices/animals/fly01.dynamicslice",
-                            "target_bone": "bn_02",
-                            "motion_in": "presentation_mongoose_in_01",
-                            "motion_idle": "presentation_mongoose_idle_01"
-                        },
-                        {
-                            "slice": "slices/inventory/kn02_invader_presentation_tp.dynamicslice",
-                            "target_bone": "bn_01"
-                        },
-                        {
-                            "slice": "slices/vfx/lobby_characters/vfx_lobby_mongoose_sparks.dynamicslice",
-                            "target_bone": "bn_02"
-                        }
-                    ],
-                    "animation_controlled_rotation": false
+                    "inventory_slot": "primary_weapon",
+                    "motion_in": "lobby_idle_mongoose_01",
+                    "motion_idle": "lobby_idle_mongoose_01",
+                    "hero_rotation": 
+                    {
+                        "rollback" : false
+                    }
                 }
             }
         },

@@ -1,26 +1,29 @@
 {
   "name": "scheduled_weapon_005",
   "type": "scheduled",
-  "tags": [
-    "gun"
-  ],
   "active": true,
   "image": "weekly_temp_icon",
-  "rarity": "common",
+  "rarity": "uncommon",
   "display_name": { "localization_key": "@scheduled_weapon_005_name" },
   "description": { "localization_key": "@scheduled_weapon_005_description" },
   "conditions": [
     {
       "name": "scheduled_weapon_005_1",
       "event_description": { "localization_key": "@scheduled_weapon_005_1_event_description" },
-      "event": { "event_id": "AdsKill", "actor_is_me": true, "actor_item_tag_is": ["SR"], "game_type_is": ["pvp"]},
-      "progress": 10
+      "event": { "event_id": "SlideKill", "actor_is_me": true, "actor_item_tag_is": ["SMG"]},
+      "progress": 15
     },
     {
       "name": "scheduled_weapon_005_2",
       "event_description": { "localization_key": "@scheduled_weapon_005_2_event_description" },
-      "event": { "event_id": "AdsKill", "actor_is_me": true, "actor_item_tag_is": ["AR"], "game_type_is": ["pvp"]},
-      "progress": 3
+      "event": { "event_id": "SlideKill", "actor_is_me": true, "actor_item_tag_is": ["PT"]},
+      "progress": 5
+    },
+    {
+      "name": "scheduled_weapon_005_3",
+      "event_description": { "localization_key": "@scheduled_weapon_005_3_event_description" },
+      "event": { "event_id": "SlideKill", "actor_is_me": true, "actor_item_tag_is": ["SHG"]},
+      "progress": 15
     }
   ],
   
@@ -28,17 +31,17 @@
     {
       "reward_type": "season_score",
       "name": "",
-      "amount": 2000
+      "amount": 2500
     },
     {
       "reward_type": "currency",
       "name": "soft",
-      "amount": 1000
+      "amount": 1500
     },
     {
       "reward_type": "currency",
       "name": "blueprint",
-      "amount": 15
+      "amount": 20
     }
   ]
 }

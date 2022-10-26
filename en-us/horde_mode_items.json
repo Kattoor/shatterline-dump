@@ -198,27 +198,27 @@
         
         "@horde_bodybuilder_cap": "Bodybuilder Max Cap",
         "@horde_bodybuilder_pt_name": "Bodybuilder: Sidearms",
-        "@horde_bodybuilder_pt_descr": "Health Cap increases by 2 on Sidearm kills. Resets on death.",
+        "@horde_bodybuilder_pt_descr": "Health Cap is increased by 1 on Sidearm kills. Resets on death.",
         "@horde_bodybuilder_ar_name": "Bodybuilder: Assault rifles",
-        "@horde_bodybuilder_ar_descr": "Health Cap increases by 1 on Assault rifle kills. Resets on death.",
+        "@horde_bodybuilder_ar_descr": "Health Cap is increased by 1 on Assault rifle kills. Resets on death.",
         "@horde_bodybuilder_smg_name": "Bodybuilder: SMG",
-        "@horde_bodybuilder_smg_descr": "Health Cap increases by 1 on Submachine gun kills. Resets on death.",
+        "@horde_bodybuilder_smg_descr": "Health Cap is increased by 1 on Submachine gun kills. Resets on death.",
         "@horde_bodybuilder_shg_name": "Bodybuilder: Shotguns",
-        "@horde_bodybuilder_shg_descr": "Health Cap increases by 3 on Shotgun kills. Resets on death.",
+        "@horde_bodybuilder_shg_descr": "Health Cap is increased by 3 on Shotgun kills. Resets on death.",
         "@horde_bodybuilder_sr_name": "Bodybuilder: Sniper rifles",
-        "@horde_bodybuilder_sr_descr": "Health Cap increases by 2 on Sniper rifle kills. Resets on death.",
+        "@horde_bodybuilder_sr_descr": "Health Cap is increased by 2 on Sniper rifle kills. Resets on death.",
         
         "@regen_lifetime_perk_name": "Improved Cell Lifetime",
-        "@regen_lifetime_perk_descr": "Regeneration сell lifetime is doubled.",
+        "@regen_lifetime_perk_descr": "Life Cell lifetime is doubled.",
         
         "@regen_chance_perk_name": "Improved Cell Chance",
-        "@regen_chance_perk_descr": "<font face='FontMedium' color='#ffe88c'>Regeneration сell buff.</font><br><br>Regeneration сell drop chance is doubled.",
+        "@regen_chance_perk_descr": "<font face='FontMedium' color='#ffe88c'>Life Cell buff.</font><br><br>Life Cell drop chance is doubled.",
         
         "@regen_limit_perk_name": "Abundant Cells",
-        "@regen_limit_perk_descr": "<font face='FontMedium' color='#ffe88c'>Regeneration сell buff.</font><br><br>Doubles the amount of Regeneration cells dropped.",
+        "@regen_limit_perk_descr": "<font face='FontMedium' color='#ffe88c'>Life Cell buff.</font><br><br>Doubles the amount of Life Cells dropped.",
         
         "@regen_explosion_perk_name": "Explosive Cell",
-        "@regen_explosion_perk_descr": "Regeneration cells explode upon hit.",
+        "@regen_explosion_perk_descr": "Life Cells explode upon hit.",
         
         "@regen_speedup_name": "Improved Regeneration",
         "@regen_speedup_t1_descr": "Regeneration speed on cell pickup is slightly improved.",
@@ -227,16 +227,16 @@
         "@regen_speedup_t4_descr": "Regeneration speed on cell pickup is dramatically improved.",
         
         "@invul_on_regen_pickup_name": "Immortal Cell",
-        "@invul_on_regen_pickup_descr": "Regeneration cells grant brief invulnerability on pickup.",
+        "@invul_on_regen_pickup_descr": "Life Cells grant brief invulnerability on pickup.",
         
         "@regen_bodybuilder_perk_name": "Cell Bodybuilder",
         "@regen_bodybuilder_perk_text": "Max Health Increased",
-        "@regen_bodybuilder_perk_t1_descr": "When fully healed by a Regeneration cell, increase your Max Health by 1 for up to 20. Resets on death.",
-        "@regen_bodybuilder_perk_t2_descr": "When fully healed by a Regeneration cell, increase your Max Health by 2 for up to 30. Resets on death.",
-        "@regen_bodybuilder_perk_t3_descr": "When fully healed by a Regeneration cell, increase your Max Health by 3 for up to 50. Resets on death.",
+        "@regen_bodybuilder_perk_t1_descr": "When fully healed by a Life Cell, increase your Max Health by 1 for up to 20. Resets on death.",
+        "@regen_bodybuilder_perk_t2_descr": "When fully healed by a Life Cell, increase your Max Health by 2 for up to 30. Resets on death.",
+        "@regen_bodybuilder_perk_t3_descr": "When fully healed by a Life Cell, increase your Max Health by 3 for up to 50. Resets on death.",
         
         "@regen_pickup_impulse_perk_name": "Gravity Cell",
-        "@regen_pickup_impulse_perk_descr": "Regeneration cells unleash a gravity impulse upon nearby foes.",
+        "@regen_pickup_impulse_perk_descr": "Life Cells unleash a gravity impulse upon nearby foes.",
         
         "@arsenal_perk_name": "Expanded Arsenal",
         "@arsenal_perk_descr": "Allows to assign any weapon to any slot.",
@@ -260,8 +260,41 @@
         "@buff_type_sidearm": "<div class='FontColorPerkBuff FontMedium'>Sidearm buff</div>",
         "@buff_type_unique": "<div class='FontColorPerkBuff FontMedium'>Unique buff</div>",
         "@buff_type_health": "<div class='FontColorPerkBuff FontMedium'>Health buff</div>",
-        "@buff_type_regeneration_cell": "<div class='FontColorPerkBuff FontMedium'>Regeneration cell buff</div>",
+        "@buff_type_regeneration_cell": "<div class='FontColorPerkBuff FontMedium'>Life Cell buff</div>",
         "@buff_type_unique_perk": "<div class='FontColorPerkBuff FontMedium'>Unique perk</div>",
-        "@buff_type_body_armor": "<div class='FontColorPerkBuff FontMedium'>Body armor</div>"
+        "@buff_type_body_armor": "<div class='FontColorPerkBuff FontMedium'>Body armor</div>",
+        
+        "@horde_bodybuilder_kill_lightning_name": "Bodybuilder: Lightning Strike",
+        "@horde_bodybuilder_kill_lightning_descr": "Chance to discharge a chain lightning upon kill while on Max Health Cap.",
+
+        "@horde_bodybuilder_headshot_explode_name": "Bodybuilder: Marksman",
+        "@horde_bodybuilder_headshot_explode_descr": "Enemies killed with precision shots explode while you are on Max Health Cap.",
+
+        "@horde_bodybuilder_speedup_name": "Bodybuilder: Maniac",
+        "@horde_bodybuilder_speedup_descr": "Doubles the on-kill increase of Bodybuilder Health Cap.",
+
+        "@horde_bodybuilder_regen_name": "Bodybuilder: Fast Metabolism",
+        "@horde_bodybuilder_regen_descr": "Regenerate a portion of health upon Health Cap increase.",
+
+        "@horde_bodybuilder_charger_name": "Bodybuilder: Overcharge",
+        "@horde_bodybuilder_charger_descr": "Your abilities and Ultimate charge faster when on Max Health Cap.",
+
+        "@horde_bodybuilder_cap_retain_name": "Bodybuilder: Die Hard",
+        "@horde_bodybuilder_cap_retain_descr": "You only lose a half of your Bodybuilder Health Cap upon death.",
+
+        "@horde_bodybuilder_cap_increase_name": "Bodybuilder: Titan",
+        "@horde_bodybuilder_cap_increase_descr": "Bodybuilder Max Cap is doubled.",
+
+        "@bodybuilder_ammo_name": "Bodybuilder: Munitions",
+        "@bodybuilder_ammo_descr": "Restore some Primary weapon ammo upon Health Cap increase.",
+
+        "@horde_bodybuilder_ult_name": "Bodybuilder: Ultimate",
+        "@horde_bodybuilder_ult_descr": "Health Cap is increased by 10 on Ultimate ability kills. Resets on death.",
+
+        "@horde_bodybuilder_kn_name": "Bodybuilder: Melee",
+        "@horde_bodybuilder_kn_descr": "Health Cap is increased by 3 on Melee kills. Resets on death.",
+
+        "@horde_bodybuilder_ability_name": "Bodybuilder: Abilities",
+        "@horde_bodybuilder_ability_descr": "Health Cap is increased by 3 on Ability kills. Resets on death."
     }
 }

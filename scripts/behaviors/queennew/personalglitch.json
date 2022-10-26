@@ -288,6 +288,7 @@
             "outputs": [],
             "family": "FlowControl",
             "children": [
+                "3300ff75-919d-4918-bf58-4af4758d4f66",
                 "f2ebaa6c-fb28-48f5-a915-31dc288b8c92",
                 "3f4ed901-d727-48f9-a60d-b01ad63b2ba7",
                 "f3d386b9-dc2d-4053-8df2-655ffb0086da",
@@ -295,6 +296,32 @@
                 "bfbe2d4a-3a42-4a4f-a30a-8b4bc5076336",
                 "93b17496-fe6a-41a3-bc06-19859120838d"
             ]
+        },
+        "3300ff75-919d-4918-bf58-4af4758d4f66": {
+            "name": "PlayVO",
+            "pos": {
+                "x": -325,
+                "y": 939
+            },
+            "collapseLevel": null,
+            "collapseDetails": null,
+            "inputs": [
+                {
+                    "name": "Character",
+                    "type": "Variable",
+                    "value": [
+                        "Entity",
+                        "Id"
+                    ]
+                },
+                {
+                    "name": "VOEventName",
+                    "type": "StringHash",
+                    "value": "glitch_start"
+                }
+            ],
+            "outputs": [],
+            "family": "Leaf"
         },
         "9e025878-fcc0-4bfc-aec6-8b9155a4c72d": {
             "name": "ParallelUntilAllComplete",

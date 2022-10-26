@@ -1,0 +1,35 @@
+{
+  "name": "scheduled_coop_010",
+  "type": "scheduled",
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "uncommon",
+  "display_name": { "localization_key": "@scheduled_coop_010_name" },
+  "description": { "localization_key": "@scheduled_coop_010_description" },
+  "conditions": [
+    {
+      "name": "scheduled_coop_010",
+      "event_description": { "localization_key": "@scheduled_coop_010_event_description" },
+      "event": { "event_id": "HordeItemAcquired", "actor_is_me": true, "actor_score_is": [5] },
+      "progress": 5
+    }
+  ],
+  
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 2500
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 1500
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 20
+    }
+  ]
+}

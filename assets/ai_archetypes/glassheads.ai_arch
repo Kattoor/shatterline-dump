@@ -14,7 +14,7 @@
             "competitor": "Glasshead",
             "enemy_type": "regular_melee",
             "grade": "normal",
-            "health": 105,
+            "health": 125,
             "hud_marker": "trash_hp_marker_head",
             "aabb_box": {
                 "width": 1.2,
@@ -117,7 +117,7 @@
             },
             "speed":
             {
-                "run": 6,
+                "run": 6.6,
                 "walk": 3,
                 "strafe": 3,
                 "back": 3,
@@ -130,6 +130,7 @@
                 {
                     "Player":
                     {
+                        "visibility_cone_angle": 0,
                         "weights":
                         [
                             {
@@ -189,7 +190,7 @@
                 "damage":
                 {
                     "profile": "Glasshead",
-                    "value": 22.0,
+                    "value": 28.0,
                     "time": 0.02,
                     "prob": 1.0,
                     "cooldown_min": 3.0,
@@ -284,7 +285,7 @@
             "parent": "glasshead",
             "grade": "grade2",
             "tp_slice": "slices/ai/glasshead_skins/glasshead_grade2_tp.dynamicslice",
-            "health": 120,
+            "health": 135,
             "behavior":
             {
                 "params":
@@ -375,7 +376,7 @@
                 "damage":
                 {
                     "profile": "Glasshead",
-                    "value": 22.0,
+                    "value": 28.0,
                     "time": 0.02,
                     "prob": 1.0,
                     "cooldown_min": 3.0,
@@ -394,7 +395,7 @@
             "parent": "glasshead",
             "grade": "grade3",
             "tp_slice": "slices/ai/glasshead_skins/glasshead_grade3_tp.dynamicslice",
-            "health": 140,
+            "health": 145,
             "behavior":
             {
                 "params":
@@ -490,7 +491,7 @@
                 "damage":
                 {
                     "profile": "Glasshead",
-                    "value": 22.0,
+                    "value": 32.0,
                     "time": 0.02,
                     "prob": 1.0,
                     "cooldown_min": 3.0,
@@ -544,24 +545,93 @@
             "name": "glasshead_lava",
             "parent": "glasshead",
             "grade": "normal",
+            "display_name": "@glasshead_lava_normal",
             "tags": ["Glasshead", "(2) Glasshead: Lava"],
-            "tp_slice": "slices/ai/glasshead_skins/glasshead_lava_tp.dynamicslice"
+            "slice": "slices/ai/glasshead_lava.dynamicslice",
+            "tp_slice": "slices/ai/glasshead_skins/glasshead_lava_tp.dynamicslice",
+            "health": 125,
+            "leave_dead_body": false,
+            "death_animations_profile": "LavaGlasshead",
+            "death":
+            {
+                "actions":
+                {
+                    "spawn_slice_client":
+                    [
+                        {
+                            "hit_types": ["Shot", "AOE", "DespawnKill"],
+                            "name": "slices/ai/glasshead_lava_death_explode_visual.dynamicslice",
+                            "delay": 1.0,
+                            "despawn_tp": 1.2,
+                            "slice_lifetime": 2
+                        },
+                        {
+                            "hit_types": ["GravityStrike"],
+                            "name": "slices/ai/glasshead_lava_death_explode_visual.dynamicslice",
+                            "delay": 0.5,
+                            "despawn_tp": 0.5,
+                            "slice_lifetime": 2
+                        }
+                    ],
+                    "spawn_slice_server":
+                    [
+                        {
+                            "hit_types": ["Shot", "AOE", "DespawnKill"],
+                            "name": "slices/ai/glasshead_lava_death_explode.dynamicslice",
+                            "delay": 1.0,
+                            "despawn_tp": 1.2,
+                            "slice_lifetime": 2
+                        },
+                        {
+                            "hit_types": ["GravityStrike"],
+                            "name": "slices/ai/glasshead_lava_death_explode.dynamicslice",
+                            "delay": 0.5,
+                            "despawn_tp": 0.5,
+                            "slice_lifetime": 2
+                        }
+                    ],
+                    "dissolve":
+                    [
+                        {
+                            "hit_types": ["Shot", "AOE", "DespawnKill"],
+                            "delay": 0.0,
+                            "time": 5,
+                            "target_dissolve": 2.0
+                        },
+                        {
+                            "hit_types": ["GravityStrike"],
+                            "delay": 0.0,
+                            "time": 3,
+                            "target_dissolve": 3.0
+                        },
+                        {
+                            "hit_types": ["Melee"],
+                            "delay": 0.0,
+                            "time": 2,
+                            "target_dissolve": 2.0
+                        }
+                    ]
+                },
+                "lifetime": 5
+            }
         },
 
         {
             "name": "glasshead_lava_grade2",
             "parent": "glasshead_lava",
             "grade": "grade2",
+            "display_name": "@glasshead_lava_grade2",
             "tp_slice": "slices/ai/glasshead_skins/glasshead_lava_grade2_tp.dynamicslice",
-            "health": 120
+            "health": 135
         },
 
         {
             "name": "glasshead_lava_grade3",
             "parent": "glasshead_lava",
             "grade": "grade3",
+            "display_name": "@glasshead_lava_grade3",
             "tp_slice": "slices/ai/glasshead_skins/glasshead_lava_grade3_tp.dynamicslice",
-            "health": 150
+            "health": 145
         },
 
         {
@@ -602,30 +672,30 @@
                     "attack_state_time_min": "9",
                     "attack_state_time_max": "10",
                     "defense_state_time_min": "1",
-                    "defense_state_time_max": "3",
+                    "defense_state_time_max": "1",
                     
                     "change_position_if_target_too_close": "false",
                     "change_position_target_far_cooldown": "5",
                     "change_position_target_close_cooldown": "7",
-                    "change_position_in_cover_cooldown_min": "8",
-                    "change_position_in_cover_cooldown_max": "8",
-                    "change_position_in_openspace_cooldown_min": "7",
-                    "change_position_in_openspace_cooldown_max": "9",
+                    "change_position_in_cover_cooldown_min": "1",
+                    "change_position_in_cover_cooldown_max": "1",
+                    "change_position_in_openspace_cooldown_min": "1",
+                    "change_position_in_openspace_cooldown_max": "1",
 
                     "defense_area_weight": "3",
                     "effective_distance_min": "6",
                     "effective_distance_max": "30",
-                    "distance_to_self_mul": "-0.4",
-                    "distance_to_self_weight_min": "-7",
-                    "distance_to_self_weight_max": "-3",
+                    "distance_to_self_mul": "-2",
+                    "distance_to_self_weight_min": "-30",
+                    "distance_to_self_weight_max": "-10",
                     "distance_to_target_mul": "1.0",
-                    "distance_to_target_weight_min": "1",
-                    "distance_to_target_weight_max": "25",
+                    "distance_to_target_weight_min": "0",
+                    "distance_to_target_weight_max": "0",
                     "max_attack_time_during_move": "0.0",
                     "defense_to_attack_during_move_prob": "1.0",
                     "disable_defense_if_target_in_cone_and_move_angle": "45",
-                    "close_to_my_holding_pos_radius": "3",
-                    "close_to_my_holding_pos_weight": "5",
+                    "close_to_my_holding_pos_radius": "0",
+                    "close_to_my_holding_pos_weight": "0",
                     "ally_distance": "5",
                     "ally_count_max": "1",
                     "ally_points": "-5",
@@ -647,13 +717,23 @@
                     "deploy_weapon_shot_time":"0.55"
                 }
             },
+            "perception":
+            {
+                "sight_range": 100.0,
+                "max_memory_time": 30.0,
+                "sound_stimulus_scale": 0.0,
+                "weight_inc_step": 50,
+                "weight_inc_time": 0.1,
+                "weight_dec_step": 1,
+                "weight_dec_time": 0.1
+            },
             "microbehaviors":
             [
                 {
                     "name": "EvadingMoveUnderFire",
                     "params":
                     {
-                        "probability": "0.6",
+                        "probability": "0.0",
                         "source_delay_min": "1",
                         "source_delay_max": "2",
                         "global_freq_count": "8",
@@ -693,18 +773,91 @@
                         "weights":
                         [
                             {
+                                "weight":5,
+                                "distance":30
+                            },
+                            {
+                                "weight":10,
+                                "distance":27
+                            },
+                            {
+                                "weight":15,
+                                "distance":24
+                            },
+                            {
+                                "weight":20,
+                                "distance":21
+                            },
+                            {
+                                "weight":25,
+                                "distance":18
+                            },
+                            {
                                 "weight":30,
-                                "distance":20
+                                "distance":15
+                            },
+                            {
+                                "weight":35,
+                                "distance":12
+                            },
+                            {
+                                "weight":40,
+                                "distance":9
+                            },
+                            {
+                                "weight":45,
+                                "distance":6
+                            },
+                            {
+                                "weight":50,
+                                "distance":3
                             }
                         ]
                     },
                     "Player":
                     {
+                        "visibility_cone_angle": 110,
                         "weights":
                         [
                             {
+                                "weight":5,
+                                "distance":20
+                            },
+                            {
+                                "weight":10,
+                                "distance":18
+                            },
+                            {
+                                "weight":15,
+                                "distance":16
+                            },
+                            {
+                                "weight":20,
+                                "distance":14
+                            },
+                            {
+                                "weight":25,
+                                "distance":12
+                            },
+                            {
                                 "weight":30,
-                                "distance":11
+                                "distance":10
+                            },
+                            {
+                                "weight":35,
+                                "distance":8
+                            },
+                            {
+                                "weight":40,
+                                "distance":6
+                            },
+                            {
+                                "weight":45,
+                                "distance":4
+                            },
+                            {
+                                "weight":50,
+                                "distance":2
                             }
                         ]
                     },
@@ -973,6 +1126,7 @@
                 {
                     "Player":
                     {
+                        "visibility_cone_angle": 0,
                         "weights":
                         [
                             {
@@ -1495,7 +1649,7 @@
             "body_turn_limit": 360,
             "eye_offset_z": 0.5
         },
-
+        
         {
             "name": "glasshead_fairfly_turret",
             "add_tags":["GlassheadAI", "SpecialAI", "FairflyTurretAI", "RamDashHitArticulated"],

@@ -75,27 +75,13 @@
         "hero_progression": {
             "outfits": {
                 "default": {
-                    "inventory_slot": "",
-                    "motion_in": "presentation_pill_in_01",
-                    "motion_idle": "presentation_pill_idle_01",
-                    "greeting": "chr_pres_pill_no_vo",
-                    "animation_controlled_rotation": false,
-                    "attachments": [
-                        {
-                            "slice": "slices/ai/resurrection_drone_01_lobby_tp.dynamicslice",
-                            "target_bone": "bn_01",
-                            "motion_in": "presentation_in_01",
-                            "motion_idle": "presentation_idle_01"
-                        },
-                        {
-                            "slice": "slices/vfx/lobby_characters/vfx_lobby_phill_drone_glow.dynamicslice",
-                            "target_bone": "bn_01"
-                        },
-                        {
-                            "slice": "slices/vfx/lobby_characters/vfx_lobby_phill_drone.dynamicslice",
-                            "target_bone": "bn_01"
-                        }
-                    ]
+                    "inventory_slot": "primary_weapon",
+                    "motion_in": "lobby_idle_pill_01",
+                    "motion_idle": "lobby_idle_pill_01",
+                    "hero_rotation": 
+                    {
+                        "rollback" : false
+                    }
                 }
             }
         },

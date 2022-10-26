@@ -4,7 +4,7 @@
     "mission": "ffa_halloween_nisida",
     "game_type": "pvp",
     "voice_chat_mode": "party_only",
-    "min_players_count": 6,
+    "min_players_count": 12,
     "time_to_join_sec": 120
   },
   "session_info": {
@@ -15,7 +15,7 @@
     "game_mode": "ffa",
     "result_scene": "levels/pvp/halloween_nisida/slices/result_stage_halloween_nisida/result_stage_halloween_nisida.dynamicslice",
     "mission_modifiers": [
-      "tdm_music_modifier",
+      "tdm_music_halloween_modifier",
       "ult_feedback_in_radius",
       "task_custom_event_sender"
     ]
@@ -25,7 +25,7 @@
     "ignore_default_vo": true
   },
   "ui_info": {
-    "background_image": "loading_nisida",
+    "background_image": "loading_nisida_halloween2022",
     "sound_event": "pvp_pregame",
     "sound_stop_event": "pvp_pregame_stop"
   },
@@ -54,9 +54,9 @@
           {
              "type": "season_xp",
              "values": {
-             "win": 10,
-              "draw": 7,
-              "loss": 5
+             "win": 150,
+              "draw": 120,
+              "loss": 100
             }
           },
           {
