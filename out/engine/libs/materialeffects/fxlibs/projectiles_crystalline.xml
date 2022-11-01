@@ -1,0 +1,63 @@
+<FXLib>
+    <Effect name="crystalline_pistol_hit" delay="0.05">
+		<Audio trigger="bullet_impact_mat_crystalline_pistol">
+		</Audio>
+        <RandEffect>
+            <Particle>
+                <Name minscale="0.8" maxscale="1.2" maxscaledist="80" maxpossiblescalemod="2">weapons_effects.kite_ulta.explosion_hit_crystalline_pt03_foe_a</Name>
+            </Particle>
+        </RandEffect>
+    </Effect>
+    <Effect name="crystalline_pistol_hit_friend" delay="0.05">
+		<Audio trigger="bullet_impact_mat_crystalline_pistol">
+		</Audio>
+        <RandEffect>
+            <PopcornParticle>
+                <Name forwardaxisZ="true" minscale="0.8" maxscale="1.2" maxscaledist="80" maxpossiblescalemod="2">libs/particles/weapons_special/mfx_gravity_strike.pkfx</Name>
+            </PopcornParticle>
+        </RandEffect>
+    </Effect>    <Effect name="crystalline_pistol_explosion" delay="0.05">
+		<Audio trigger="bullet_expl_mat_crystalline_pistol">
+		</Audio>
+        <RandEffect>
+            <Particle>
+                <Name minscale="0.9" maxscale="1.3" maxscaledist="80">weapons_effects.crystalline.crystalline_pistol_b.pistol_03_crystalline_trail_explosion_a</Name>
+            </Particle>
+        </RandEffect>
+        <RandEffect>
+            <Decal minscale="0.03" maxscale="0.06" lifetime="5.0">
+                <Material>materials/test_decals/bullet_hits/concrete_a</Material>
+            </Decal>
+        </RandEffect>
+    </Effect>
+	
+	<Effect name="crystalline_sr05_hit" delay="0.05">
+		<Audio trigger="bullet_impact_mat_crystalline_pistol">
+		</Audio>
+        <RandEffect>
+            <Particle>
+                <Name minscale="1.0" maxscale="1.5" maxscaledist="80" maxpossiblescalemod="2">weapons_effects.crystalline_sr05.lightnining_hit_a</Name>
+            </Particle>
+        </RandEffect>
+        <RandEffect>
+            <Decal minscale="0.3" maxscale="0.5" lifetime="5.0">
+                <Material>materials/decals/bullet_hits/crystalline_a</Material>
+            </Decal>
+        </RandEffect>
+    </Effect>
+	
+	<Effect name="crystalline_pistol_hit_slug" delay="0.05">
+		<Audio trigger="bullet_impact_mat_crystalline_pistol">
+		</Audio>
+        <RandEffect>
+            <Particle>
+                <Name minscale="1.8" maxscale="3.0" maxscaledist="80" maxpossiblescalemod="2">weapons_effects.crystalline.crystalline_pistol_invader.pistol_03_crystalline_trail_explosion_a</Name>
+            </Particle>
+        </RandEffect>
+		<RandEffect>
+            <Decal minscale="0.1" maxscale="0.3" lifetime="5.0">
+                <Material>materials/decals/bullet_hits/crystalline_a</Material>
+            </Decal>
+        </RandEffect>
+    </Effect>
+</FXLib>

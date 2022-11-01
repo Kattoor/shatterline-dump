@@ -1,0 +1,398 @@
+{
+    "context": "Death",
+    "profiles":
+    [
+        {
+            "profile":"Strafer",
+            "hits":
+            [
+                {
+                    "hit_pattern": { "hit_type_is": ["DOT"], "dot_type_is": ["Fire"] },
+                    "animations": ["stand_death_fire_01","stand_death_fire_02","stand_death_fire_03"]
+                },
+                {
+                    "hit_pattern": { "hit_type_is": ["DOT"], "dot_type_is": ["Crystalline"] },
+                    "animations": ["stand_death_crystalline_01","stand_death_crystalline_02","stand_death_crystalline_03","stand_death_crystalline_04","stand_death_crystalline_05"]
+                },            
+                {
+                    "hit_pattern": { "custom_animation_is": ["kill_zone"] },
+                    "animations": ["dead_back"]
+                },
+                {
+                    "hit_pattern": { "hit_part_is": ["Head"], "hit_side_is": ["Front"] },
+                    "animations": ["dead_front_head"]
+                },
+                {
+                    "hit_pattern": { "hit_part_is": ["Head"], "hit_side_is": ["Back"] },
+                    "animations": ["dead_back_head"]
+                },
+                {
+                    "hit_pattern": { "hit_part_is": ["Head"], "hit_side_is": ["Right"] },
+                    "animations": ["dead_right_head"]
+                },
+                {
+                    "hit_pattern": { "hit_part_is": ["Head"], "hit_side_is": ["Left"] },
+                    "animations": ["dead_left_head"]
+                },
+                {
+                    "hit_pattern": { "hit_type_is": ["AOE"], "hit_side_is": ["Front"] },
+                    "animations": ["dead_explosion_front"]
+                },
+                {
+                    "hit_pattern": { "hit_type_is": ["AOE"], "hit_side_is": ["Back"] },
+                    "animations": ["dead_explosion_back"]
+                },
+                {
+                    "hit_pattern": { "hit_type_is": ["AOE"], "hit_side_is": ["Left"] },
+                    "animations": ["dead_explosion_left"]
+                },
+                {
+                    "hit_pattern": { "hit_type_is": ["AOE"], "hit_side_is": ["Right"] },
+                    "animations": ["dead_explosion_right"]
+                },
+                {
+                    "hit_pattern": { "hit_side_is": ["Front"] },
+                    "animations": ["dead_front1", "dead_front2"]
+                },
+                {
+                    "hit_pattern": { "hit_side_is": ["Back"] },
+                    "animations": ["dead_back"]
+                },
+                {
+                    "hit_pattern": { "hit_side_is": ["Left"] },
+                    "animations": ["dead_left"]
+                },
+                {
+                    "hit_pattern": { "hit_side_is": ["Right"] },
+                    "animations": ["dead_right"]
+                },
+                {
+                    "animations": ["dead_front1", "dead_front2"]
+                }
+            ]
+        },
+{
+            "profile":"Minotaur",
+            "hits":
+            [
+                {
+                    "hit_pattern": { "hit_type_is": ["DOT"], "dot_type_is": ["Fire"] },
+                    "animations": ["stand_death_fire_02"]
+                },
+                {
+                    "hit_pattern": { "hit_type_is": ["DOT"], "dot_type_is": ["Crystalline"] },
+                    "animations": ["stand_death_crystalline_03"]
+                },            
+                {
+                    "hit_pattern": { "custom_animation_is": ["backpack_explosion"] },
+                    "animations": ["dead_explosion_back"]
+                },
+                {
+                    "hit_pattern": { "custom_animation_is": ["kill_zone"] },
+                    "animations": ["dead_back"]
+                },
+                {
+                    "hit_pattern": { "hit_part_is": ["Head"], "hit_side_is": ["Front"] },
+                    "animations": ["dead_front_head"]
+                },
+                {
+                    "hit_pattern": { "hit_part_is": ["Head"], "hit_side_is": ["Back"] },
+                    "animations": ["dead_back_head"]
+                },
+                {
+                    "hit_pattern": { "hit_part_is": ["Head"], "hit_side_is": ["Right"] },
+                    "animations": ["dead_right_head"]
+                },
+                {
+                    "hit_pattern": { "hit_part_is": ["Head"], "hit_side_is": ["Left"] },
+                    "animations": ["dead_left_head"]
+                },
+                {
+                    "hit_pattern": { "hit_type_is": ["AOE"], "hit_side_is": ["Front"] },
+                    "animations": ["dead_explosion_front"]
+                },
+                {
+                    "hit_pattern": { "hit_type_is": ["AOE"], "hit_side_is": ["Back"] },
+                    "animations": ["dead_explosion_back"]
+                },
+                {
+                    "hit_pattern": { "hit_type_is": ["AOE"], "hit_side_is": ["Left"] },
+                    "animations": ["dead_explosion_left"]
+                },
+                {
+                    "hit_pattern": { "hit_type_is": ["AOE"], "hit_side_is": ["Right"] },
+                    "animations": ["dead_explosion_right"]
+                },
+                {
+                    "hit_pattern": { "hit_side_is": ["Front"] },
+                    "animations": ["dead_front1", "dead_front2"]
+                },
+                {
+                    "hit_pattern": { "hit_side_is": ["Back"] },
+                    "animations": ["dead_back"]
+                },
+                {
+                    "hit_pattern": { "hit_side_is": ["Left"] },
+                    "animations": ["dead_left"]
+                },
+                {
+                    "hit_pattern": { "hit_side_is": ["Right"] },
+                    "animations": ["dead_right"]
+                },
+                {
+                    "animations": ["dead_front1", "dead_front2"]
+                }
+            ]
+        },
+        {
+            "profile":"Glasshead",
+            "animation_driven": true,
+            "hits":
+            [
+                {
+                    "hit_pattern": { "hit_part_is": ["Leg"], "hit_side_is": ["Front"], "bullet_type_is": ["Shotgun","HMG","Crystallinepistol","CrystallineRifle"] },
+                    "animations": ["gh_stand_death_leg_front_3p_01"]
+                },
+                {
+                    "hit_pattern": { "hit_part_is": ["Head"], "hit_side_is": ["Back"] },
+                    "animations": ["gh_stand_death_headshot_back_3p_01"]
+                },
+                {
+                    "hit_pattern": { "hit_side_is": ["Back"], "bullet_type_is": ["Shotgun","HMG","Crystallinepistol","CrystallineRifle"] },
+                    "animations": ["gh_run_death_headshot_front_3p_01", "gh_run_death_headshot_front_3p_02", "gh_run_death_back_3p_01"]
+                },
+                {
+                    "hit_pattern": { "hit_part_is": ["Head"], "hit_side_is": ["Front"], "stance_is": ["Sprint"], "move_dir_is": ["Front"] },
+                    "animations": ["gh_run_death_headshot_front_3p_01", "gh_run_death_headshot_front_3p_02"]
+                },
+                {
+                    "hit_pattern": { "hit_part_is": ["Head"], "hit_side_is": ["Left"], "stance_is": ["Sprint"], "move_dir_is": ["Front"] },
+                    "animations": ["gh_run_death_headshot_left_3p_01", "gh_run_death_headshot_left_3p_02"]
+                },
+                {
+                    "hit_pattern": { "hit_part_is": ["Head"], "hit_side_is": ["Right"], "stance_is": ["Sprint"], "move_dir_is": ["Front"] },
+                    "animations": ["gh_run_death_headshot_right_3p_01", "gh_run_death_headshot_right_3p_02"]
+                },
+                {
+                    "hit_pattern": { "hit_part_is": ["Head"], "hit_side_is": ["Front"], "bullet_type_is": ["Pistol"], "stance_is": ["Stand"] },
+                    "animations": ["gh_stand_death_headshot_front_3p_02"]
+                },
+                {
+                    "hit_pattern": { "hit_side_is": ["Front"], "hit_type_is": ["AOE"] },
+                    "animations": ["gh_stand_death_front_flip_3p_01", "gh_stand_death_front_flip_3p_02", "gh_stand_death_front_flip_3p_03", "gh_stand_death_leg_front_3p_01"]
+                },
+                {
+                    "hit_pattern": { "hit_side_is": ["Right"], "hit_type_is": ["AOE"] },
+                    "animations": ["gh_run_death_right_3p_01", "gh_run_death_right_3p_02", "gh_run_death_headshot_right_3p_01", "gh_run_death_headshot_right_3p_02"]
+                },
+                {
+                    "hit_pattern": { "hit_side_is": ["Left"], "hit_type_is": ["AOE"] },
+                    "animations": ["gh_run_death_left_3p_01", "gh_run_death_left_3p_02", "gh_run_death_headshot_left_3p_01", "gh_run_death_headshot_left_3p_02"]
+                },
+                {
+                    "hit_pattern": { "hit_side_is": ["Back"], "hit_type_is": ["AOE"] },
+                    "animations": ["gh_run_death_back_3p_01", "gh_run_death_headshot_front_3p_01", "gh_run_death_headshot_front_3p_02", "gh_stand_death_front_flip_3p_05"]
+                },
+                {
+                    "hit_pattern": { "hit_part_is": ["Head"], "hit_side_is": ["Front"] },
+                    "animations": ["gh_stand_death_headshot_front_3p_01", "gh_stand_death_headshot_front_3p_03", "gh_stand_death_headshot_front_3p_04"]
+                },
+                {
+                    "hit_pattern": { "hit_part_is": ["Head"], "hit_side_is": ["Right"] },
+                    "animations": ["gh_stand_death_headshot_right_3p_01"]
+                },
+                {
+                    "hit_pattern": { "hit_part_is": ["Head"], "hit_side_is": ["Left"] },
+                    "animations": ["gh_stand_death_headshot_left_3p_01"]
+                },
+                {
+                    "hit_pattern": { "hit_side_is": ["Front"], "stance_is": ["Sprint"], "move_dir_is": ["Front"] },
+                    "animations": ["gh_run_death_front_3p_01", "gh_run_death_front_3p_02", "gh_run_death_front_3p_03", "gh_run_death_front_3p_04", "gh_stand_death_front_flip_3p_05"]
+                },
+                {
+                    "hit_pattern": { "hit_side_is": ["Back"], "stance_is": ["Sprint"], "move_dir_is": ["Front"] },
+                    "animations": ["gh_run_death_back_3p_01", "gh_stand_death_back_3p_02", "gh_stand_death_back_3p_03"]
+                },
+                {
+                    "hit_pattern": { "hit_side_is": ["Left"], "stance_is": ["Sprint"], "move_dir_is": ["Front"] },
+                    "animations": ["gh_run_death_left_3p_01", "gh_run_death_left_3p_02"]
+                },
+                {
+                    "hit_pattern": { "hit_side_is": ["Right"], "stance_is": ["Sprint"], "move_dir_is": ["Front"] },
+                    "animations": ["gh_run_death_right_3p_01", "gh_run_death_right_3p_02"]
+                },
+                {
+                    "hit_pattern": { "custom_animation_is": ["kill_zone"] },
+                    "animations": ["gh_stand_death_back_3p_02", "gh_stand_death_back_3p_03", "gh_run_death_back_3p_01"]
+                },
+                {
+                    "hit_pattern": { "hit_side_is": ["Front"], "bullet_type_is": ["Shotgun","HMG","Crystallinepistol","CrystallineRifle"] },
+                    "animations": ["gh_stand_death_front_flip_3p_01", "gh_stand_death_front_flip_3p_02", "gh_stand_death_front_flip_3p_03", "gh_stand_death_front_flip_3p_06"]
+                },
+                {
+                    "hit_pattern": { "hit_side_is": ["Front"] },
+                    "animations": ["gh_stand_death_front_3p_01", "gh_stand_death_front_3p_02", "gh_stand_death_front_3p_03", "gh_stand_death_front_3p_04", "gh_stand_death_front_flip_3p_04", "gh_run_death_front_3p_03"]
+                },
+                {
+                    "hit_pattern": { "hit_side_is": ["Back"] },
+                    "animations": ["gh_stand_death_back_3p_01", "gh_stand_death_back_3p_02", "gh_stand_death_back_3p_03", "gh_run_death_back_3p_01"]
+                },
+                {
+                    "hit_pattern": { "hit_side_is": ["Left"] },
+                    "animations": ["gh_stand_death_left_3p_01", "gh_stand_death_left_3p_02"]
+                },
+                {
+                    "hit_pattern": { "hit_side_is": ["Right"] },
+                    "animations": ["gh_stand_death_right_3p_01", "gh_stand_death_right_3p_02"]
+                },
+                {
+                    "animations": ["gh_stand_death_front_flip_3p_01", "gh_stand_death_front_flip_3p_03", "gh_stand_death_front_flip_3p_04", "gh_stand_death_front_flip_3p_05", "gh_stand_death_front_flip_3p_06", "gh_run_death_front_3p_02", "gh_run_death_front_3p_03", "gh_stand_death_back_3p_02", "gh_stand_death_back_3p_03"]
+                }
+            ]
+        },
+        {
+            "profile":"Adamant",
+            "animation_driven": true,
+            "hits":
+            [
+                {
+                    "hit_pattern": { "hit_part_is": ["Leg"], "hit_side_is": ["Front"], "bullet_type_is": ["Shotgun","HMG","Crystallinepistol","CrystallineRifle"] },
+                    "animations": ["gh_stand_death_leg_front_3p_01"]
+                },
+                {
+                    "hit_pattern": { "hit_part_is": ["Head"], "hit_side_is": ["Back"] },
+                    "animations": ["gh_stand_death_headshot_back_3p_01"]
+                },
+                {
+                    "hit_pattern": { "hit_side_is": ["Back"], "bullet_type_is": ["Shotgun","HMG","Crystallinepistol","CrystallineRifle"] },
+                    "animations": ["gh_run_death_headshot_front_3p_01", "gh_stand_death_headshot_front_3p_01"]
+                },
+                {
+                    "hit_pattern": { "hit_part_is": ["Head"], "hit_side_is": ["Front"], "stance_is": ["Sprint"], "move_dir_is": ["Front"] },
+                    "animations": ["gh_run_death_headshot_front_3p_01", "gh_run_death_headshot_front_3p_02"]
+                },
+                {
+                    "hit_pattern": { "hit_part_is": ["Head"], "hit_side_is": ["Left"], "stance_is": ["Sprint"], "move_dir_is": ["Front"] },
+                    "animations": ["gh_run_death_headshot_left_3p_02"]
+                },
+                {
+                    "hit_pattern": { "hit_part_is": ["Head"], "hit_side_is": ["Right"], "stance_is": ["Sprint"], "move_dir_is": ["Front"] },
+                    "animations": ["gh_run_death_headshot_right_3p_01"]
+                },
+                {
+                    "hit_pattern": { "hit_side_is": ["Front"], "hit_type_is": ["AOE"] },
+                    "animations": ["gh_stand_death_leg_front_3p_01"]
+                },
+                {
+                    "hit_pattern": { "hit_side_is": ["Right"], "hit_type_is": ["AOE"] },
+                    "animations": ["gh_run_death_right_3p_01", "gh_run_death_right_3p_02", "gh_run_death_headshot_right_3p_01"]
+                },
+                {
+                    "hit_pattern": { "hit_side_is": ["Left"], "hit_type_is": ["AOE"] },
+                    "animations": ["gh_run_death_left_3p_01", "gh_run_death_left_3p_02", "gh_run_death_headshot_left_3p_02"]
+                },
+                {
+                    "hit_pattern": { "hit_side_is": ["Back"], "hit_type_is": ["AOE"] },
+                    "animations": ["gh_run_death_headshot_front_3p_01", "gh_run_death_headshot_front_3p_02", "gh_stand_death_front_flip_3p_05"]
+                },
+                {
+                    "hit_pattern": { "hit_part_is": ["Head"], "hit_side_is": ["Front"] },
+                    "animations": ["gh_stand_death_headshot_front_3p_01", "gh_stand_death_headshot_front_3p_03", "gh_stand_death_headshot_front_3p_04"]
+                },
+                {
+                    "hit_pattern": { "hit_part_is": ["Head"], "hit_side_is": ["Right"] },
+                    "animations": ["gh_stand_death_headshot_right_3p_01"]
+                },
+                {
+                    "hit_pattern": { "hit_part_is": ["Head"], "hit_side_is": ["Left"] },
+                    "animations": ["gh_stand_death_headshot_left_3p_01"]
+                },
+                {
+                    "hit_pattern": { "hit_side_is": ["Front"], "stance_is": ["Sprint"], "move_dir_is": ["Front"] },
+                    "animations": ["gh_run_death_front_3p_01", "gh_run_death_front_3p_02", "gh_run_death_front_3p_03", "gh_run_death_front_3p_04"]
+                },
+                {
+                    "hit_pattern": { "hit_side_is": ["Back"], "stance_is": ["Sprint"], "move_dir_is": ["Front"] },
+                    "animations": ["gh_stand_death_back_3p_02", "gh_stand_death_back_3p_03"]
+                },
+                {
+                    "hit_pattern": { "hit_side_is": ["Left"], "stance_is": ["Sprint"], "move_dir_is": ["Front"] },
+                    "animations": ["gh_run_death_left_3p_01", "gh_run_death_left_3p_02"]
+                },
+                {
+                    "hit_pattern": { "hit_side_is": ["Right"], "stance_is": ["Sprint"], "move_dir_is": ["Front"] },
+                    "animations": ["gh_run_death_right_3p_01", "gh_run_death_right_3p_02"]
+                },
+                {
+                    "hit_pattern": { "custom_animation_is": ["kill_zone"] },
+                    "animations": ["gh_stand_death_back_3p_02", "gh_stand_death_back_3p_03"]
+                },
+                {
+                    "hit_pattern": { "hit_side_is": ["Front"] },
+                    "animations": ["gh_stand_death_front_3p_01", "gh_stand_death_front_3p_02", "gh_stand_death_front_3p_03", "gh_stand_death_front_3p_04", "gh_run_death_front_3p_03"]
+                },
+                {
+                    "hit_pattern": { "hit_side_is": ["Back"] },
+                    "animations": ["gh_stand_death_back_3p_02", "gh_stand_death_back_3p_03"]
+                },
+                {
+                    "hit_pattern": { "hit_side_is": ["Left"] },
+                    "animations": ["gh_stand_death_left_3p_01", "gh_stand_death_left_3p_02"]
+                },
+                {
+                    "hit_pattern": { "hit_side_is": ["Right"] },
+                    "animations": ["gh_stand_death_right_3p_01", "gh_stand_death_right_3p_02"]
+                },
+                {
+                    "animations": ["gh_run_death_front_3p_02", "gh_run_death_front_3p_03", "gh_stand_death_back_3p_02", "gh_stand_death_back_3p_03"]
+                }
+            ]
+        },
+        {
+            "profile":"LavaGlasshead",
+            "hits":
+            [
+                {
+                    "animations": ["gh_stand_rage_3p", "gh_stand_rage_3p_01"]
+                }
+            ]
+        },
+        {
+            "profile":"Stilt",
+            "hits":
+            [
+                {
+                    "animations": ["dead_front1"]
+                }
+            ]
+        },        
+        {
+            "profile":"Behemoth",            
+            "animation_driven": true,
+            "hits":
+            [
+                {
+                    "animations": ["dead_front1"]
+                }
+            ]
+        },
+        {
+            "profile":"Disabler",
+            "hits":
+            [
+                {
+                    "animations": ["dead"]
+                }
+            ]
+        },
+        {
+            "profile":"Chaser",
+            "hits":
+            [
+                {
+                    "animations": ["dead1"]
+                }
+            ]
+        }
+    ]
+}

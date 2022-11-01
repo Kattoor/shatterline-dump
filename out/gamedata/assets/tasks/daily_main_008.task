@@ -1,0 +1,32 @@
+{
+  "name": "daily_main_008",
+  "type": "daily",
+  "tags": [
+    "daily_main"
+  ],
+  "image": "weekly_temp_icon",
+  "rarity": "common",
+  "display_name": { "localization_key": "@daily_main_008_name" },
+  "description": { "localization_key": "@daily_main_008_description" },
+  "conditions": [
+    {
+      "name": "daily_main_008",
+      "event_description": { "localization_key": "@daily_main_008_event_description" },
+      "event": { "event_id": "Ultimate", "actor_player_preset_is":["h_strix", "h_ram", "m_malva", "m_pill", "s_kite", "s_brisa", "a_orbit", "a_mongoose" ], "actor_is_me": true},
+      "progress": 3
+    }
+  ],
+  
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 200
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 175
+    }
+  ]
+}

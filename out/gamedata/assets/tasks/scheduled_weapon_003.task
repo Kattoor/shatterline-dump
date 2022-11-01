@@ -1,0 +1,41 @@
+{
+  "name": "scheduled_weapon_003",
+  "type": "scheduled",
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "common",
+  "display_name": { "localization_key": "@scheduled_weapon_003_name" },
+  "description": { "localization_key": "@scheduled_weapon_003_description" },
+  "conditions": [
+    {
+      "name": "scheduled_weapon_003_1",
+      "event_description": { "localization_key": "@scheduled_weapon_003_1_event_description" },
+      "event": { "event_id": "Kill", "actor_is_me": true, "actor_item_tag_is": ["PT"]},
+      "progress": 50
+    },
+    {
+      "name": "scheduled_weapon_003_2",
+      "event_description": { "localization_key": "@scheduled_weapon_003_2_event_description" },
+      "event": { "event_id": "Headshot", "actor_is_me": true},
+      "progress": 20
+    }
+  ],
+  
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 2000
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 1500
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 20
+    }
+  ]
+}

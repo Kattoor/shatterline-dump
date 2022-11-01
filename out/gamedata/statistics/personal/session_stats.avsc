@@ -1,0 +1,91 @@
+{
+    "name": "session_stats",
+    "doc": "Origin: game session. Emitter: dedicated server.",
+    "type": "record",
+    "fields": [
+        {
+            "name": "datetime",
+            "type": "string",
+            "default": "",
+            "doc": "format: YYYY-MM-DD hh:mm:ss"
+        },
+        {
+            "name": "profile_id",
+            "type": "long",
+            "default": 0,
+            "doc": "Identifier of a player"
+        },
+        {
+            "name": "game_id",
+            "type": "string",
+            "default": "",
+            "doc": "Identifier of a game session"
+        },
+        {
+            "name": "season_id",
+            "type": "long",
+            "default": 0,
+            "doc": "Identifier of Season"
+        },
+        {
+            "name": "game_outcome",
+            "type": "string",
+            "default": "invalid",
+            "doc": "Game outcome Enum('win', 'loss', 'draw', 'invalid')"
+        },
+        {
+            "name": "mission_name",
+            "type": "string",
+            "default": "",
+            "doc": "Mission name"
+        },
+        {
+            "name": "game_mode",
+            "type": "string",
+            "default": "",
+            "doc": "Game mode"
+        },
+        {
+            "name": "game_type",
+            "type": "string",
+            "default": "",
+            "doc": "Game type"
+        },
+        {
+            "name": "mission_played_time",
+            "type": "int",
+            "default": 0,
+            "doc": "Time spent on the mission"
+        },
+        {
+            "name": "ladder_position",
+            "type": "int",
+            "default": 0,
+            "doc": "position in the ladder. If the session wasn't finished, this equals to 0"
+        },
+        {
+            "name": "game_total_kills",
+            "type": "int",
+            "default": 0,
+            "doc": "Total number of kills for session"
+        },
+        {
+            "name": "game_best_kill_streak",
+            "type": "int",
+            "default": 0,
+            "doc": "Biggest number of kills without dying"
+        },
+        {
+            "name": "game_horde_completion_time",
+            "type": "int",
+            "default": 0,
+            "doc": "Time from session start to final boss elimination"
+        },
+        {
+            "name": "game_horde_encounters_completed",
+            "type": "int",
+            "default": 0,
+            "doc": "Completed encounters in horde mode"
+        }
+    ]
+}

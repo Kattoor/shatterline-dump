@@ -1,0 +1,31 @@
+{
+  "name": "daily_pvp_001",
+  "type": "daily",
+  "tags": [
+    "daily_pvp"
+  ],
+  "image": "weekly_temp_icon",
+  "rarity": "common",
+  "display_name": { "localization_key": "@daily_pvp_001_name" },
+  "description": { "localization_key": "@daily_pvp_001_description" },
+  "conditions": [
+    {
+      "name": "daily_pvp_001",
+      "event_description": { "localization_key": "@daily_pvp_001_event_description" },
+      "event": { "event_id": "Kill", "actor_is_me": true, "game_mode_is": ["tdm_dynamic_spawn_near_players", "tdm_fast_ult"]},
+      "progress": 10
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 200
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 175
+    }
+  ]
+}

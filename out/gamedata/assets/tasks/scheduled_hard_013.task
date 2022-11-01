@@ -1,0 +1,41 @@
+{
+  "name": "scheduled_hard_013",
+  "type": "scheduled",
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "legendary",
+  "display_name": { "localization_key": "@scheduled_hard_013_name" },
+  "description": { "localization_key": "@scheduled_hard_013_description" },
+  "conditions": [
+    {
+      "name": "scheduled_hard_013_1",
+      "event_description": { "localization_key": "@scheduled_hard_013_1_event_description" },
+      "event": { "event_id": "KillOneLife", "actor_is_me": true, "actor_item_tag_is": ["AR", "SR", "SHG", "SMG"]},
+      "progress": 5
+    },
+    {
+      "name": "scheduled_hard_013_2",
+      "event_description": { "localization_key": "@scheduled_hard_013_2_event_description" },
+      "event": { "event_id": "SidearmKillOneLife", "actor_is_me": true},
+      "progress": 5
+    }
+  ],
+  
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 5000
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 3000
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 35
+    }
+  ]
+}

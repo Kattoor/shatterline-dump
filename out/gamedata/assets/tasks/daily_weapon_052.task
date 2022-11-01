@@ -1,0 +1,31 @@
+{
+  "name": "daily_weapon_052",
+  "type": "daily",
+  "tags": [
+    "daily_weapon"
+  ],
+  "image": "weekly_temp_icon",
+  "rarity": "uncommon",
+  "display_name": { "localization_key": "@daily_weapon_052_name" },
+  "description": { "localization_key": "@daily_weapon_052_description" },
+  "conditions": [
+    {
+      "name": "daily_weapon_052",
+      "event_description": { "localization_key": "@daily_weapon_052_event_description" },
+      "event": { "event_id": "HipKill", "actor_is_me": true, "actor_item_tag_is": ["SHG"], "game_type_is": ["pvp"]},
+      "progress": 10
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 250
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 200
+    }
+  ]
+}

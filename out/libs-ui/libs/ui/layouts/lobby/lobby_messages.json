@@ -1,0 +1,24 @@
+{
+    "script": "scripts/ui/lobby/lobby_messages.lua",
+    "view_path": "ComponentStackNavigation.html",
+    "children":
+    [
+        { "name": "support_container", "type": "Component", "file": "modal_window/support_container.json", "visible": false},
+        { "name": "error_message", "type": "Component", "file": "modal_window/error_message_container.json", "visible": false},
+        { "name": "okay_message", "type": "Component", "file": "modal_window/messagebox_container.json", "visible": false},
+        { "name": "exit_confirmation", "type": "Component", "file": "modal_window/messagebox_container.json"},
+        { "name": "reequip_confirmation", "type": "Component", "file": "modal_window/messagebox_container.json"},
+        { "name": "modal_message", "type": "Component", "file": "modal_window/messagebox_container.json"},
+        { "name": "task_completion_notification", "type": "HUDEventContainer", "file": "hud/event_container.json"},
+        { "name": "territory_selection_container", "type": "Component", "file": "modal_window/territory_selection_container.json", "visible": false},
+        { "name": "license_container", "type": "Component", "file": "modal_window/license_container.json"},
+        { "name": "buy_container", "type": "Component", "file": "modal_window/buy_container.json"},
+        { "name": "gacha_box", "type": "Component", "file": "gacha_box/gacha_box_container.json", "visible": false},
+        { "name": "nonblocking_messages", "type": "Component", "file": "popup/nonblocking_messages.json"},
+        { "name": "options_messages", "type": "Component", "file": "options/options_messages_lobby.json"},
+        { "name": "big_news_container", "type": "Component", "file": "modal_window/big_news_container.json"},
+        { "name": "mode_info_video_container", "type": "Component", "file": "modal_window/mode_info_video_container.json"},
+        { "name": "currency_purchase_window", "type": "Component", "file": "modal_window/currency_purchase_window.json", "visible": false},
+        { "name": "report_player_container", "type": "Component", "file": "modal_window/report_player_container.json", "visible": false}
+    ]
+}

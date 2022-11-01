@@ -1,0 +1,35 @@
+{
+  "name": "scheduled_hard_003",
+  "type": "scheduled",
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "epic",
+  "display_name": { "localization_key": "@scheduled_hard_003_name" },
+  "description": { "localization_key": "@scheduled_hard_003_description" },
+  "conditions": [
+    {
+      "name": "scheduled_hard_003",
+      "event_description": { "localization_key": "@scheduled_hard_003_event_description" },
+       "event": { "event_id": "HordeExtractionComplete","actor_is_me": true, "target_status_is": ["4"] },
+      "progress": 2
+    }
+  ],
+  
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 4000
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 2500
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 30
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "scheduled_hard_014",
+  "type": "scheduled",
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "legendary",
+  "display_name": { "localization_key": "@scheduled_hard_014_name" },
+  "description": { "localization_key": "@scheduled_hard_014_description" },
+  "conditions": [
+    {
+      "name": "scheduled_hard_014",
+      "event_description": { "localization_key": "@scheduled_hard_014_event_description" },
+      "event": { "event_id": "Kill", "actor_is_me": true, "target_player_preset_is_not": []},
+      "progress": 7
+    }
+  ],
+  
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 5000
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 3000
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 35
+    }
+  ],
+  "reset_on_events": [
+    {"event_id": "Death"}
+   ]
+}

@@ -1,0 +1,29 @@
+{
+    "configurations": 
+    {
+        "default": 
+        {
+            "0":
+            {
+                "events": [],
+                "batch_size": 200,
+                "batch_time": 15000
+            },
+            "1":
+            {
+                "events": ["hardware_collected", "question_answered", "user_reported"],
+                "enabled_probability": 1.0
+            },
+            "2":
+            {
+                "events": ["frame_rate", "performance_collected"],
+                "enabled_probability": 0.3
+            },
+            "3":
+            {
+                "events": ["frame_rate"],
+                "sampling_time": 1000
+            }
+        }
+    }
+}

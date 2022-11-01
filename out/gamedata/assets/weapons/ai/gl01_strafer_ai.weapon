@@ -1,0 +1,122 @@
+{
+    "sounds": {
+        "sets": [
+            {
+                "tag": "default",
+                "triggers": {
+                    "fire_start": "gl01_fire",
+                    "fire_stop": ""
+                }
+            },
+            {
+                "tag": "silenced",
+                "triggers": {
+                    "fire_start": "",
+                    "fire_stop": ""
+                }
+            }
+        ],
+        "tag": "default"
+    },
+    "selection": {
+        "nearest_camera_offset": {
+            "z": -0.03,
+            "x": 0.02,
+            "y": 0.0
+        },
+        "deselection_duration": 0.3,
+        "selection_duration": 0.3,
+        "nearest_camera_rotation": {
+            "pitch": 0.0,
+            "roll": 0.0,
+            "yaw": -3.0
+        },
+        "nearest_view_fov": 55.0
+    },
+    "spread": {
+        "max_hip_spread": 5.0,
+        "decay_time": 0.4,
+        "slide_multiplier": 0.6,
+        "zoom_multiplier": 0.15,
+        "crouch_multiplier": 0.4,
+        "hip_step": 0.35,
+        "crouch_idle_multiplier": 0.4,
+        "min_hip_spread": 1.0,
+        "decay_delay": 0.1,
+        "stand_multiplier": 0.3,
+        "walk_multiplier": 0.5,
+        "jump_multiplier": 2.0
+    },
+    "zoom": {
+        "weapon_offset": {
+            "z": 0.0,
+            "x": 0.0,
+            "y": 0.0
+        },
+        "delay_after_jump": 0.3,
+        "weapon_fov": 50.0,
+        "zoom_out_time": 0.26,
+        "hide_crosshair": false,
+        "zoom_fov": 25.0,
+        "zoom_in_time": 0.26,
+        "in_air": false
+    },
+    "projectile": {
+        "speed": 18.0,
+        "slice_name": "slices/projectiles/ai/ai_ballistic.dynamicslice",
+        "multi_projectile": {
+            "projectile_count": 1
+        },
+        "time_to_action": 10.0,
+        "offset": {
+            "z": 0.2,
+            "x": 0.0,
+            "y": 0.5
+        },
+        "act_reason": "time",
+        "rotation_lock": true,
+        "velocity_character_multiplier": 0.0,
+        "angle": 0.0
+    },
+    "common": {
+        "item_tag": "RL"
+    },
+    "muzzle_sight_distance": 1.0,
+    "shooting": {
+        "spin_out_time": 0.3,
+        "backpack_capacity": 600,
+        "chamber_capacity": 5,
+        "chambers_reload_count": 5,
+        "shoot_projectile_type": "projectile",
+        "chambers_fired_per_shot": 1,
+        "spin_rpm": 20.0,
+        "rpm": 100.0,
+        "auto_reload_mode": "Chamber",
+        "backpack_unlimited": true,
+        "clip_capacity": 0,
+        "reload": {
+            "reload_time": 6.0,
+            "reload_out_complete_threshold": 0.7,
+            "reload_in_complete_threshold": 0.7
+        }
+    },
+    "recoil": {
+        "kick_time": 0.3,
+        "decay_time": 0.3,
+        "max_vertical_angle": 20.0,
+        "decay_delay": 0.1,
+        "recoil_points": [
+            {
+                "num": 1,
+                "force": {
+                    "min": 1.05,
+                    "max": 1.2
+                },
+                "angle": {
+                    "min": -20.0,
+                    "max": 20.0
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "daily_hard_009",
+  "type": "daily",
+  "image": "weekly_temp_icon",
+  "rarity": "legendary",
+  "display_name": { "localization_key": "@daily_hard_009_name" },
+  "description": { "localization_key": "@daily_hard_009_description" },
+  "conditions": [
+    {
+      "name": "daily_hard_009",
+      "event_description": { "localization_key": "@daily_hard_009_event_description" },
+      "event": { "event_id": "MeleeKillOneLife", "actor_is_me": true, "game_type_is": ["pvp"]},
+      "progress": 1
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 400
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 300
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 15
+    }
+  ]
+}

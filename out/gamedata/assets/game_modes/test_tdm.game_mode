@@ -1,0 +1,600 @@
+{
+  "name_token": "@tdm_label",
+  "info_token": "",
+  "loading_tips_path": "libs/ui/loading_tips/test_tips.json",
+  "reequip_cooldown": 10,
+  "radar_config": {
+    "spot_idle_dist": 8,
+    "spot_crouch_idle_dist": 5,
+    "spot_sprint_dist": 10,
+    "spot_crouch_dist": 1.3,
+    "spot_walk_dist": 1.7
+  },
+  "game_event_config": "test",
+  "personal_score_config": "test_tdm",
+  "hud_config": {
+    "score_layout": "round",
+    "services": [
+      "BasicGameTimerService",
+      "TeamScoreService",
+      "EventLogService",
+      "TeamScoreProgressBarsService",
+      "TeamsInfoService"
+    ],
+    "team_layout": "two_team"
+  },
+  "result_status_config": [
+    {
+      "event": {
+        "event_id": "RoundTimesUp"
+      },
+      "status": "round_times_up"
+    },
+    {
+      "event": {
+        "event_id": "Kill"
+      },
+      "status": "kill"
+    },
+    {
+      "event": {
+        "event_id": "Suicide"
+      },
+      "status": "suicide"
+    }
+  ],
+  "auto_generate_result_score_messages": {
+    "team_score_messages": [
+      {
+        "min_ladder_position": 0,
+        "message_primary": "@session_draw",
+        "message_secondary": "@test"
+      },
+      {
+        "min_ladder_position": 1,
+        "message_primary": "@session_win",
+        "message_secondary": "@test"
+      },
+      {
+        "min_ladder_position": 2,
+        "message_primary": "@session_lose",
+        "message_secondary": "@test"
+      }
+    ]
+  },
+  "session_result_messages_config": [
+    {
+      "result_status": "round_times_up",
+      "reason_message": "@session_reason_times_up"
+    },
+    {
+      "result_status": "kill",
+      "reason_message": "@session_reason_score_limit_reached"
+    },
+    {
+      "result_status": "suicide",
+      "reason_message": "@session_reason_score_limit_reached"
+    }
+  ],
+  "mvp_config": [
+    {
+      "scores": [
+        "Resurrect"
+      ],
+      "title": "@resurrects"
+    },
+    {
+      "scores": [
+        "Kill"
+      ],
+      "title": "@best_kill"
+    },
+    {
+      "scores": [
+        "Assist"
+      ],
+      "title": "@best_assist"
+    },
+    {
+      "scores": [
+        "KillStreak",
+        "Rampage",
+        "Bloodlust"
+      ],
+      "title": "@best_killstreaks"
+    },
+    {
+      "scores": [
+        "Headshot"
+      ],
+      "title": "@best_headshot"
+    }
+  ],
+  "scoreboard": [
+    {
+      "scores": [
+        "TotalSum"
+      ],
+      "title": "@totalscore"
+    },
+    {
+      "scores": [
+        "Kill",
+        "Assist"
+      ],
+      "operations": [
+        "+"
+      ],
+      "title": "@kills"
+    },
+    {
+      "scores": [
+        "Death"
+      ],
+      "title": "@deaths"
+    },
+    {
+      "scores": [
+        "Headshot"
+      ],
+      "title": "@headshots"
+    },
+    {
+      "scores": [
+        "Resurrect"
+      ],
+      "title": "@resurrects"
+    },
+    {
+      "scores": [
+        "Kill",
+        "Assist",
+        "Death"
+      ],
+      "operations": [
+        "+",
+        "/"
+      ],
+      "title": "@k/d"
+    }
+  ],
+  "score": [
+    {
+      "event": {
+        "event_id": "Kill",
+        "actor_is_me": true,
+        "target_player_preset_is_not": []
+      },
+      "score": 10
+    },
+    {
+      "event": {
+        "event_id": "Kill",
+        "actor_is_me": true,
+        "target_ai_enemy_type_is": [
+          "ai_test_a"
+        ]
+      },
+      "score": 15
+    },
+    {
+      "event": {
+        "event_id": "Kill",
+        "actor_is_me": true,
+        "target_ai_enemy_type_is": [
+          "ai_test_b"
+        ]
+      },
+      "score": 5
+    },
+    {
+      "event": {
+        "event_id": "Kill",
+        "actor_is_me": true
+      },
+      "score": 1
+    },
+    {
+      "event": {
+        "event_id": "Death",
+        "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "Headshot",
+        "actor_is_me": true,
+        "target_ai_enemy_type_is": [
+          "ai_test_a"
+        ]
+      },
+      "score": 5
+    },
+    {
+      "event": {
+        "event_id": "Headshot",
+        "actor_is_me": true,
+        "target_ai_enemy_type_is": [
+          "ai_test_b"
+        ]
+      },
+      "score": 15
+    },
+    {
+      "event": {
+        "event_id": "Headshot",
+        "actor_is_me": true
+      },
+      "score": 10
+    },
+    {
+      "event": {
+        "event_id": "Assist",
+        "actor_is_me": true
+      },
+      "score": 5
+    },
+    {
+      "event": {
+        "event_id": "Resurrect",
+        "actor_is_me": true
+      },
+      "score": 10
+    },
+    {
+      "event": {
+        "event_id": "Heal",
+        "actor_is_me": true,
+        "target_team": "Same"
+      },
+      "score": 0.1
+    },
+    {
+      "event": {
+        "event_id": "DoubleKill",
+        "actor_is_me": true
+      },
+      "score": 0
+    },
+    {
+      "event": {
+        "event_id": "TripleKill",
+        "actor_is_me": true
+      },
+      "score": 15
+    },
+    {
+      "event": {
+        "event_id": "KillStreak",
+        "actor_is_me": true
+      },
+      "score": 10
+    },
+    {
+      "event": {
+        "event_id": "Rampage",
+        "actor_is_me": true
+      },
+      "score": 15
+    },
+    {
+      "event": {
+        "event_id": "Bloodlust",
+        "actor_is_me": true
+      },
+      "score": 20
+    },
+    {
+      "event": {
+        "event_id": "FirstBlood",
+        "actor_is_me": true
+      },
+      "score": 10
+    },
+    {
+      "event": {
+        "event_id": "BladeMaster",
+        "actor_is_me": true
+      },
+      "score": 10
+    },
+    {
+      "event": {
+        "event_id": "DestroyEnemyObjects",
+        "actor_is_me": true
+      },
+      "score": 10
+    },
+    {
+      "event": {
+        "event_id": "FieldMedic",
+        "actor_is_me": true
+      },
+      "score": 10
+    },
+    {
+      "event": {
+        "event_id": "CollateralKill",
+        "actor_is_me": true
+      },
+      "score": 15
+    },
+    {
+      "event": {
+        "event_id": "Revenge",
+        "actor_is_me": true
+      },
+      "score": 8
+    },
+    {
+      "event": {
+        "event_id": "ReturnFire",
+        "actor_is_me": true
+      },
+      "score": 8
+    },
+    {
+      "event": {
+        "event_id": "ShutDown",
+        "actor_is_me": true
+      },
+      "score": 15
+    },
+    {
+      "event": {
+        "event_id": "SlideKill",
+        "actor_is_me": true
+      },
+      "score": 5
+    },
+    {
+      "event": {
+        "event_id": "MovableObjectKill",
+        "actor_is_me": true
+      },
+      "score": 10
+    },
+    {
+      "event": {
+        "event_id": "ExplosiveObjectKill",
+        "actor_is_me": true
+      },
+      "score": 10
+    },
+    {
+      "event": {
+        "event_id": "KickKill",
+        "actor_is_me": true
+      },
+      "score": 10
+    }
+  ],
+  "ability_mult": [
+    {
+      "event": {
+        "event_id": "Assist",
+        "actor_is_me": true
+      },
+      "score": 0.5
+    },
+    {
+      "event": {
+        "event_id": "Death",
+        "actor_is_me": true
+      },
+      "score": 0
+    }
+  ],
+  "mechanics_config": {
+    "pre_game_time": 0
+  },
+  "pre_round_config": {
+    "timers": [
+      {
+        "name": "PreRoundTimesUp",
+        "start_on": [
+          {
+            "event_id": "PreRoundStart"
+          }
+        ],
+        "duration": 0
+      }
+    ],
+    "finish_on": [
+      {
+        "event_id": "PreRoundTimesUp"
+      }
+    ]
+  },
+  "round_config": {
+    "timers": [
+      {
+        "name": "RoundTimesUp",
+        "start_on": [
+          {
+            "event_id": "RoundStart"
+          }
+        ],
+        "duration": 30000
+      }
+    ],
+    "finish_on": [
+      {
+        "event_id": "RoundTimesUp"
+      },
+      {
+        "event_id": "RoundScoreLimitReached"
+      }
+    ]
+  },
+  "post_round_config": {
+    "timers": [
+      {
+        "name": "PostRoundTimesUp",
+        "start_on": [
+          {
+            "event_id": "PostRoundStart"
+          }
+        ],
+        "duration": 3
+      }
+    ],
+    "finish_on": [
+      {
+        "event_id": "PostRoundTimesUp"
+      }
+    ]
+  },
+  "time_is_up_events": {
+    "event": [
+      {
+        "event_id": "RoundTimesUp"
+      }
+    ],
+    "win_event": "time_is_up_win",
+    "defeat_event": "time_is_up_defeat",
+    "draw_event": "time_is_up_draw"
+  },
+  "teams": [
+    {
+      "competitor": "A",
+      "size": 8,
+      "score_limit": 75,
+      "spawn_config_params": {
+        "respawn_cooldown": 0
+      },
+      "hero_restriction": {
+        "hero_count": 0,
+        "preset_filter": {
+          "type": "restrict",
+          "presets": [
+            "a_nameless",
+            "i_chosen",
+            "preset_i02_proto",
+            "preset_i03_proto",
+            "preset_i04_proto",
+            "test_preset_i01"
+          ]
+        }
+      },
+      "scoring_events": [
+        {
+          "event": {
+            "event_id": "Kill",
+            "target_team": "Opposite",
+            "actor_team": "Same"
+          },
+          "score": 1
+        },
+        {
+          "event": {
+            "event_id": "Suicide",
+            "actor_team": "Opposite"
+          },
+          "score": 1
+        },
+        {
+          "event": {
+            "event_id": "Resurrect",
+            "target_team": "Opposite",
+            "actor_team": "Opposite"
+          },
+          "score": -1
+        }
+      ],
+      "feedback_config": {
+        "round_start_event": "EliminateEnemyTeam",
+        "round_end_events": [
+          {
+            "scoring_event": {
+              "event_id": "Kill",
+              "target_team": "Opposite",
+              "actor_team": "Same"
+            },
+            "feedback_event": "score_reached_win"
+          },
+          {
+            "scoring_event": {
+              "event_id": "Kill",
+              "target_team": "Same",
+              "actor_team": "Opposite"
+            },
+            "feedback_event": "score_reached_defeat"
+          }
+        ]
+      }
+    },
+    {
+      "competitor": "B",
+      "size": 8,
+      "score_limit": 75,
+      "spawn_config_params": {
+        "respawn_cooldown": 0
+      },
+      "hero_restriction": {
+        "hero_count": 0,
+        "preset_filter": {
+          "type": "restrict",
+          "presets": [
+            "a_nameless",
+            "i_chosen",
+            "preset_i02_proto",
+            "preset_i03_proto",
+            "preset_i04_proto",
+            "test_preset_i01"
+          ]
+        }
+      },
+      "scoring_events": [
+        {
+          "event": {
+            "event_id": "Kill",
+            "target_team": "Opposite",
+            "actor_team": "Same"
+          },
+          "score": 1
+        },
+        {
+          "event": {
+            "event_id": "Suicide",
+            "actor_team": "Opposite"
+          },
+          "score": 1
+        },
+        {
+          "event": {
+            "event_id": "Resurrect",
+            "target_team": "Opposite",
+            "actor_team": "Opposite"
+          },
+          "score": -1
+        }
+      ],
+      "feedback_config": {
+        "round_start_event": "EliminateEnemyTeam",
+        "round_end_events": [
+          {
+            "scoring_event": {
+              "event_id": "Kill",
+              "target_team": "Opposite",
+              "actor_team": "Same"
+            },
+            "feedback_event": "score_reached_win"
+          },
+          {
+            "scoring_event": {
+              "event_id": "Kill",
+              "target_team": "Same",
+              "actor_team": "Opposite"
+            },
+            "feedback_event": "score_reached_defeat"
+          }
+        ]
+      }
+    }
+  ],
+  "event_log": "test",
+  "skill_type": "tdm",
+  "afk_timeout": 120
+}

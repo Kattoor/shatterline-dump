@@ -1,0 +1,32 @@
+{
+  "name": "daily_weapon_002",
+  "type": "daily",
+  "tags": [
+    "daily_weapon"
+  ],
+  "game_type": "pvp",
+  "image": "weekly_temp_icon",
+  "rarity": "common",
+  "display_name": { "localization_key": "@daily_weapon_002_name" },
+  "description": { "localization_key": "@daily_weapon_002_description" },
+  "conditions": [
+    {
+      "name": "daily_weapon_002",
+      "event_description": { "localization_key": "@daily_weapon_002_event_description" },
+      "event": { "event_id": "Kill", "actor_is_me": true, "target_player_preset_is_not": [], "actor_item_tag_is": ["SR"]},
+      "progress": 7
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 200
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 175
+    }
+  ]
+}

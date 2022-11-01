@@ -1,0 +1,31 @@
+{
+  "name": "daily_pvp_004",
+  "type": "daily",
+  "tags": [
+    "daily_pvp"
+  ],
+  "image": "weekly_temp_icon",
+  "rarity": "common",
+  "display_name": { "localization_key": "@daily_pvp_004_name" },
+  "description": { "localization_key": "@daily_pvp_004_description" },
+  "conditions": [
+    {
+      "name": "daily_pvp_004",
+      "event_description": { "localization_key": "@daily_pvp_004_event_description" },
+      "event": { "event_id": "MedalAchieved", "actor_is_me": true, "game_mode_is": ["tdm_dynamic_spawn_near_players", "tdm_fast_ult"]},
+      "progress": 20
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 200
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 175
+    }
+  ]
+}

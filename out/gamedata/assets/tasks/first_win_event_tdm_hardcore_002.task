@@ -1,0 +1,27 @@
+{
+  "name": "first_win_event_tdm_hardcore_002",
+  "type": "daily",
+  "tags": [
+    "first_win_event_tdm_hardcore_002"
+  ],
+  "ui_tags": ["mode_specific", "event_tdm_hardcore"],
+  "image": "weekly_temp_icon",
+  "rarity": "rare",
+  "display_name": { "localization_key": "@first_win_event_tdm_hardcore_002_name" },
+  "description": { "localization_key": "@first_win_event_tdm_hardcore_002_description" },
+  "conditions": [
+    {
+      "name": "first_win_event_tdm_hardcore_002",
+      "event_description": { "localization_key": "@first_win_event_tdm_hardcore_002_event_description" },
+      "event": { "event_id": "Kill", "actor_is_me": true, "actor_playlist_name_is": ["event_tdm_hardcore"]},
+      "progress": 20
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 7
+    }
+  ]
+}

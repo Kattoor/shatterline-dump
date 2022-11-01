@@ -1,0 +1,30 @@
+{
+  "name": "alpha_shop_pos01_orbit_outfit03",
+  "icon": "orbit03_shop",
+  "preview_image": "orbit03_shop_preview",
+  "display_name": "@offer_orbit_outfit03_name",
+  "text_description": "@offer_orbit_outfit03_description",
+  "icon_size": "1x2",
+  "order": 1,
+  "prerequisites": {
+    "available_if_purchased_any": ["alpha_shop_pos01_orbit_outfit03"]
+  },
+  "price": [
+    {
+      "currency": "hard",
+      "amount": 990,
+      "initial_price": 1500
+    }
+  ],
+  "items": [
+    {
+      "item_name": "a_orbit_outfit03",
+      "amount": 1
+    },
+    {
+      "item_name": "orbit_uppart05",
+      "amount": 1
+    }
+  ],
+  "storefront": "lobby"
+}

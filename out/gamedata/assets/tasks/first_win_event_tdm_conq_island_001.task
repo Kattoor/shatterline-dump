@@ -1,0 +1,27 @@
+{
+  "name": "first_win_event_tdm_conq_island_001",
+  "type": "daily",
+  "tags": [
+    "first_win_event_tdm_conq_island_001"
+  ],
+  "ui_tags": ["mode_specific", "event_tdm_conq_island"],
+  "image": "weekly_temp_icon",
+  "rarity": "uncommon",
+  "display_name": { "localization_key": "@first_win_event_tdm_conq_island_001_name" },
+  "description": { "localization_key": "@first_win_event_tdm_conq_island_001_description" },
+  "conditions": [
+    {
+      "name": "first_win_event_tdm_conq_island_001",
+      "event_description": { "localization_key": "@first_win_event_tdm_conq_island_001_event_description" },
+      "event": { "event_id": "PlayerTeamResult", "actor_is_me": true, "actor_status_is": ["Won"], "actor_playlist_name_is": ["event_tdm_conq_island"]},
+      "progress": 1
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 5
+    }
+  ]
+}

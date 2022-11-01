@@ -1,0 +1,31 @@
+{
+  "name": "daily_weapon_008",
+  "type": "daily",
+  "tags": [
+    "daily_weapon"
+  ],
+  "image": "weekly_temp_icon",
+  "rarity": "common",
+  "display_name": { "localization_key": "@daily_weapon_008_name" },
+  "description": { "localization_key": "@daily_weapon_008_description" },
+  "conditions": [
+    {
+      "name": "daily_weapon_008",
+      "event_description": { "localization_key": "@daily_weapon_008_event_description" },
+      "event": { "event_id": "Kill", "actor_is_me": true, "actor_item_tag_is": ["SHG"]},
+      "progress": 15
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 200
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 175
+    }
+  ]
+}

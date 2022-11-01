@@ -1,0 +1,826 @@
+{
+    "voice_events":
+    [
+        {
+            "audio_trigger": "en_down_killstreak",
+            "event": [
+                { "event_id": "TripleKill", "actor_team": "Same", "target_team": "Opposite" },
+                { "event_id": "KillStreak", "actor_team": "Same", "target_team": "Opposite" },
+                { "event_id": "Rampage", "actor_team": "Same", "target_team": "Opposite" },
+                { "event_id": "Bloodlust", "actor_team": "Same", "target_team": "Opposite" } ],
+            "team_only": true,
+            "ignore_commentator_cooldown": true,
+            "event_priority": -5,
+            "event_cooldown": 5,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "few_enemies_left",
+            "event": [ { "event_id": "few_enemies_left", "actor_team": "Same" } ],
+            "team_only": true,
+            "is_radio": true,
+            "event_priority": -2,
+            "commentator": {"actor": "ActorTeammate"}
+        },
+        {
+            "audio_trigger": "death_feedback_common",
+            "event": [ { "event_id": "Death", "actor_player_preset_is_not": [] } ],
+            "event_priority": 30,
+            "ignore_commentator_cooldown": true,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "heavy_wound_feedback",
+            "event": [ { "event_id": "NeedRevive", "actor_player_preset_is_not": [] } ],
+            "ignore_commentator_cooldown": true,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "feedback_landing",
+            "event": [ { "event_id": "OnHit", "hit_type_is": ["Fall"], "target_player_preset_is_not": [] } ],
+            "event_priority": -15,
+            "skip_chance": 0,
+            "ignore_commentator_cooldown": true,
+            "commentator": {"actor": "Target"}
+        },
+        {
+            "audio_trigger": "pain_feedback_common",
+            "event": [ { "event_id": "OnHit", "hit_type_is_not": ["Fall"], "dot_type_is": ["Default"], "target_player_preset_is_not": [] } ],
+            "event_priority": -15,
+            "skip_chance": 0.90,
+            "commentator": {"actor": "Target"}
+        },
+        {
+            "audio_trigger": "pain_feedback_red_fog",
+            "event": [ { "event_id": "OnHit", "dot_type_is": ["Crystalline"], "target_player_preset_is_not": [] } ],
+            "event_priority": -15,
+            "skip_chance": 0.90,
+            "commentator": {"actor": "Target"}
+        },
+        {
+            "audio_trigger": "pain_feedback_fire",
+            "event": [ { "event_id": "OnHit", "dot_type_is": ["Fire"], "target_player_preset_is_not": [] } ],
+            "event_priority": -15,
+            "skip_chance": 0.50,
+            "commentator": {"actor": "Target"}
+        },
+        {
+            "audio_trigger": "teammate_down_mongoose",
+            "event": [ { "event_id": "Death", "actor_team": "Same", "actor_player_preset_is": ["a_mongoose"] } ],
+            "team_only": true,
+            "event_priority": -6,
+            "event_cooldown": 25,
+            "is_radio": true,
+            "commentator": {"actor": "ActorTeammate"}
+        },
+        {
+            "audio_trigger": "teammate_down_strix",
+            "event": [ { "event_id": "Death", "actor_team": "Same", "actor_player_preset_is": ["h_strix"] } ],
+            "team_only": true,
+            "event_priority": -6,
+            "event_cooldown": 25,
+            "is_radio": true,
+            "commentator": {"actor": "ActorTeammate"}
+        },
+        {
+            "audio_trigger": "teammate_down_pill",
+            "event": [ { "event_id": "Death", "actor_team": "Same", "actor_player_preset_is": ["m_pill"] } ],
+            "team_only": true,
+            "event_priority": -6,
+            "event_cooldown": 25,
+            "is_radio": true,
+            "commentator": {"actor": "ActorTeammate"}
+        },
+        {
+            "audio_trigger": "teammate_down_kite",
+            "event": [ { "event_id": "Death", "actor_team": "Same", "actor_player_preset_is": ["s_kite"] } ],
+            "team_only": true,
+            "event_priority": -6,
+            "event_cooldown": 25,
+            "is_radio": true,
+            "commentator": {"actor": "ActorTeammate"}
+        },
+        {
+            "audio_trigger": "teammate_down_orbit",
+            "event": [ { "event_id": "Death", "actor_team": "Same", "actor_player_preset_is": ["a_orbit"] } ],
+            "team_only": true,
+            "event_priority": -6,
+            "event_cooldown": 25,
+            "is_radio": true,
+            "commentator": {"actor": "ActorTeammate"}
+        },
+        {
+            "audio_trigger": "teammate_down_ram",
+            "event": [ { "event_id": "Death", "actor_team": "Same", "actor_player_preset_is": ["h_ram"] } ],
+            "team_only": true,
+            "event_priority": -6,
+            "event_cooldown": 25,
+            "is_radio": true,
+            "commentator": {"actor": "ActorTeammate"}
+        },
+        {
+            "audio_trigger": "teammate_down_malva",
+            "event": [ { "event_id": "Death", "actor_team": "Same", "actor_player_preset_is": ["m_malva"] } ],
+            "team_only": true,
+            "event_priority": -6,
+            "event_cooldown": 25,
+            "is_radio": true,
+            "commentator": {"actor": "ActorTeammate"}
+        },
+        {
+            "audio_trigger": "teammate_down_brisa",
+            "event": [ { "event_id": "Death", "actor_team": "Same", "actor_player_preset_is": ["s_brisa"] } ],
+            "team_only": true,
+            "event_priority": -6,
+            "event_cooldown": 25,
+            "is_radio": true,
+            "commentator": {"actor": "ActorTeammate"}
+        },
+        {
+            "audio_trigger": "en_down_common",
+            "event": [ { "event_id": "Kill", "hit_part_is_not": ["Head"], "actor_team": "Same", "target_team": "Opposite" } ],
+            "team_only": true,
+            "event_priority": -13,
+            "event_cooldown": 15,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "en_down_headshot",
+            "event": [ { "event_id": "Kill", "hit_part_is": ["Head"], "actor_team": "Same", "target_team": "Opposite" } ],
+            "team_only": true,
+            "event_priority": -10,
+            "event_cooldown": 12,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "en_down_leg",
+            "event": [ { "event_id": "OnHit", "hit_part_is": ["Leg"], "actor_team": "Same", "target_ai_archetype_is": ["adamant", "adamant_grade2", "adamant_grade3", "glasshead_nest_supporter", "Minotaur", "Minotaur_napalm", "StraferFlamethrower"] } ],
+            "team_only": true,
+            "event_priority": -12,
+            "event_cooldown": 15,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "en_down_arm",
+            "event": [ { "event_id": "OnHit", "hit_part_is": ["Arm"], "actor_team": "Same", "target_ai_archetype_is": ["adamant", "adamant_grade2", "adamant_grade3", "glasshead_nest_supporter", "Minotaur", "Minotaur_napalm", "StraferFlamethrower"] } ],
+            "team_only": true,
+            "event_priority": -12,
+            "event_cooldown": 15,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "en_down_torso",
+            "event": [ { "event_id": "OnHit", "hit_part_is": ["Torso"], "actor_team": "Same", "target_ai_archetype_is": ["adamant", "adamant_grade2", "adamant_grade3", "glasshead_nest_supporter", "Minotaur", "Minotaur_napalm", "StraferFlamethrower"] } ],
+            "team_only": true,
+            "event_priority": -12,
+            "event_cooldown": 15,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "gr_throw_crystalline",
+            "event": [ { "event_id": "Throw", "actor_team": "Same", "actor_item_tag_is": ["CG"], "actor_player_preset_is_not": ["a_orbit", "m_pill", "s_brisa"] } ],
+            "ignore_commentator_cooldown": true,
+            "event_priority": -3,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "usable_trap",
+            "event": [ { "event_id": "Throw", "actor_team": "Same", "actor_item_tag_is": ["CG"], "actor_player_preset_is": ["s_brisa"] } ],
+            "ignore_commentator_cooldown": true,
+            "event_priority": -3,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "gr_throw_swarm",
+            "event": [ { "event_id": "Throw", "actor_team": "Same", "actor_item_tag_is": ["CG"], "actor_player_preset_is": ["a_orbit"] } ],
+            "ignore_commentator_cooldown": true,
+            "event_priority": -3,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "usable_timestop",
+            "event": [ { "event_id": "Throw", "actor_team": "Same", "actor_item_tag_is": ["CG"], "actor_player_preset_is": ["m_pill"] } ],
+            "ignore_commentator_cooldown": true,
+            "event_priority": -3,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "ultimate_multi",
+            "event": [ { "event_id": "Throw", "actor_team": "Same", "actor_item_tag_is": ["PD01"], "actor_player_preset_is": ["m_pill"] } ],
+            "ignore_commentator_cooldown": true,
+            "event_priority": -4,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "gr_throw_flash",
+            "event": [ { "event_id": "Throw", "actor_team": "Same", "actor_item_tag_is": ["FLG"], "actor_player_preset_is_not": [] } ],
+            "ignore_commentator_cooldown": true,
+            "event_priority": -3,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "gr_throw_frag",
+            "event": [ { "event_id": "Throw", "actor_team": "Same", "actor_item_tag_is": ["FG"], "actor_player_preset_is_not": [] } ],
+            "ignore_commentator_cooldown": true,
+            "event_priority": -3,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "gr_throw_smoke",
+            "event": [ { "event_id": "Throw", "actor_team": "Same", "actor_item_tag_is": ["SG"], "actor_player_preset_is_not": [] } ],
+            "ignore_commentator_cooldown": true,
+            "event_priority": -3,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "usable_claymore",
+            "event": [ { "event_id": "Throw", "actor_team": "Same", "actor_item_tag_is": ["CM", "RD"], "actor_player_preset_is": ["s_kite"] } ],
+            "ignore_commentator_cooldown": true,
+            "event_priority": -3,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "usable_trap",
+            "event": [ { "event_id": "Throw", "actor_team": "Same", "actor_item_tag_is": ["CM"], "actor_player_preset_is": ["s_brisa"] } ],
+            "ignore_commentator_cooldown": true,
+            "event_priority": -3,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "usable_axe",
+            "event": [ { "event_id": "Throw", "actor_team": "Same", "actor_item_tag_is": ["AXE"], "actor_player_preset_is": ["h_ram"] } ],
+            "ignore_commentator_cooldown": true,
+            "event_priority": -3,
+            "skip_chance": 0.50,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "reloading_common",
+            "event": [ { "event_id": "Reload", "actor_team": "Same", "actor_item_tag_is_not": ["PT", "SG", "SHG"], "actor_player_preset_is_not": [] } ],
+            "event_priority": -14,
+            "event_cooldown": 30,
+            "skip_chance": 0.0,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "reloading_common",
+            "event": [ { "event_id": "Reload", "actor_team": "Same", "actor_item_tag_is": ["SHG"], "actor_player_preset_is_not": [] } ],
+            "skip_chance": 0.7,
+            "event_priority": -14,
+            "event_cooldown": 30,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "tca_med_drone",
+            "event": [ { "event_id": "Throw", "actor_team": "Same", "actor_item_tag_is": ["MD"], "actor_player_preset_is": ["m_pill"] } ],
+            "ignore_commentator_cooldown": true,
+            "event_priority": -3,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "usable_drone",
+            "event": [ { "event_id": "Throw", "actor_team": "Same", "actor_item_tag_is": ["KD"], "actor_player_preset_is": ["m_malva"] } ],
+            "ignore_commentator_cooldown": true,
+            "event_priority": -3,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "tca_med_kit",
+            "event": [ { "event_id": "Throw", "actor_team": "Same", "actor_item_tag_is": ["MK"], "actor_player_preset_is_not": [] } ],
+            "ignore_commentator_cooldown": true,
+            "event_priority": -3,
+            "event_cooldown": 15,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "revive_teammate_mongoose",
+            "event": [ { "event_id": "Resurrect", "actor_team": "Same", "target_team": "Same", "target_player_preset_is": ["a_mongoose"] } ],
+            "team_only": true,
+            "ignore_commentator_cooldown": true,
+            "event_priority": -3,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "revive_teammate_strix",
+            "event": [ { "event_id": "Resurrect", "actor_team": "Same", "target_team": "Same", "target_player_preset_is": ["h_strix"] } ],
+            "team_only": true,
+            "ignore_commentator_cooldown": true,
+            "event_priority": -3,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "revive_teammate_pill",
+            "event": [ { "event_id": "Resurrect", "actor_team": "Same", "target_team": "Same", "target_player_preset_is": ["m_pill"] } ],
+            "team_only": true,
+            "ignore_commentator_cooldown": true,
+            "event_priority": -3,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "revive_teammate_kite",
+            "event": [ { "event_id": "Resurrect", "actor_team": "Same", "target_team": "Same", "target_player_preset_is": ["s_kite"] } ],
+            "team_only": true,
+            "ignore_commentator_cooldown": true,
+            "event_priority": -3,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "revive_teammate_orbit",
+            "event": [ { "event_id": "Resurrect", "actor_team": "Same", "target_team": "Same", "target_player_preset_is": ["a_orbit"] } ],
+            "team_only": true,
+            "ignore_commentator_cooldown": true,
+            "event_priority": -3,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "revive_teammate_ram",
+            "event": [ { "event_id": "Resurrect", "actor_team": "Same", "target_team": "Same", "target_player_preset_is": ["h_ram"] } ],
+            "team_only": true,
+            "ignore_commentator_cooldown": true,
+            "event_priority": -3,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "revive_teammate_malva",
+            "event": [ { "event_id": "Resurrect", "actor_team": "Same", "target_team": "Same", "target_player_preset_is": ["m_malva"] } ],
+            "team_only": true,
+            "ignore_commentator_cooldown": true,
+            "event_priority": -3,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "revive_teammate_brisa",
+            "event": [ { "event_id": "Resurrect", "actor_team": "Same", "target_team": "Same", "target_player_preset_is": ["s_brisa"] } ],
+            "team_only": true,
+            "ignore_commentator_cooldown": true,
+            "event_priority": -3,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "ultimate_player",
+            "event": [ {"event_id": "Ultimate", "actor_team": "Same", "actor_player_preset_is": ["h_strix", "h_ram", "s_kite", "s_brisa", "m_malva", "m_pill", "a_mongoose"] } ],
+            "ignore_commentator_cooldown": true,
+            "team_only": true,
+            "is_radio": true,
+            "event_priority": -2,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "inv_chosen_spotted",
+            "event": [ {"event_id": "PingTarget", "target_player_class_is": ["I"], "actor_team": "Same"} ],
+            "ignore_commentator_cooldown": true,
+            "team_only": true,
+            "is_radio": true,
+            "event_priority": -2,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "en_down_glasshead",
+            "event": [ { "event_id": "Kill", "actor_team": "Same", "target_ai_archetype_is": ["glasshead", "glasshead_grade2", "glasshead_grade3", "glasshead_basic_melee_normal", "glasshead_basic_melee_grade2", "glasshead_basic_melee_grade3", "glasshead_lava", "glasshead_lava_grade2", "glasshead_lava_grade3", "glasshead_splinter_normal", "glasshead_splinter_grade2", "glasshead_splinter_grade3"] } ],
+            "team_only": true,
+            "event_priority": -12,
+            "event_cooldown": 20,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "en_down_adamant",
+            "event": [ { "event_id": "Kill", "actor_team": "Same", "target_ai_archetype_is": ["adamant", "adamant_grade2", "adamant_grade3"] } ],
+            "team_only": true,
+            "event_priority": -8,
+            "event_cooldown": 10,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "en_down_shardskin",
+            "event": [ { "event_id": "Kill", "actor_team": "Same", "target_ai_archetype_is": ["Shardskin"] } ],
+            "team_only": true,
+            "event_priority": -9,
+            "event_cooldown": 10,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "en_down_chaser",
+            "event": [ { "event_id": "Kill", "actor_team": "Same", "target_ai_archetype_is": ["chaser"] } ],
+            "team_only": true,
+            "event_priority": -8,
+            "event_cooldown": 10,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "en_down_gardener",
+            "event": [ { "event_id": "Kill", "actor_team": "Same", "target_ai_archetype_is": ["glasshead_nest_supporter"] } ],
+            "team_only": true,
+            "event_priority": -9,
+            "event_cooldown": 10,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "en_down_minotaur",
+            "event": [ { "event_id": "Kill", "actor_team": "Same", "target_ai_archetype_is": ["Minotaur", "Minotaur_napalm"] } ],
+            "team_only": true,
+            "event_priority": -8,
+            "event_cooldown": 10,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "en_down_sniper",
+            "event": [ { "event_id": "Kill", "actor_team": "Same", "target_ai_archetype_is": ["StraferSR", "StraferSR_grade2", "StraferRL"] } ],
+            "team_only": true,
+            "is_radio": true,
+            "event_priority": -10,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "en_down_strafer",
+            "event": [ { "event_id": "Kill", "actor_team": "Same", "target_ai_archetype_is": ["StraferAR", "StraferAR_grade2", "StraferAR_grade2_firegrenade", "StraferAR_grade3", "StraferSHG", "StraferSHG_grade2", "StraferSHG_grade3", "StraferSMG", "StraferSMG_grade2", "StraferSMG_grade3", "StraferGL", "StraferFlamethrower"] } ],
+            "team_only": true,
+            "event_priority": -11,
+            "event_cooldown": 20,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "team_order_help",
+            "event": [ { "event_id": "DisabledByTrap", "target_player_preset_is_not": [] } ],
+            "ignore_commentator_cooldown": true,
+            "event_priority": -1,
+            "commentator": {"actor": "Target"}
+        },
+        {
+            "audio_trigger": "en_spotted_glasshead",
+            "event": [ {"event_id": "PingTarget", "target_ai_archetype_is": ["glasshead", "glasshead_grade2", "glasshead_grade3", "glasshead_basic_melee_normal", "glasshead_basic_melee_grade2", "glasshead_basic_melee_grade3", "glasshead_lava", "glasshead_lava_grade2", "glasshead_lava_grade3", "glasshead_splinter_normal", "glasshead_splinter_grade2", "glasshead_splinter_grade3"], "actor_team": "Same"} ],
+            "team_only": true,
+            "is_radio": true,
+            "event_priority": -4,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "en_spotted_adamant",
+            "event": [ {"event_id": "PingTarget", "target_ai_archetype_is": ["adamant", "adamant_grade2", "adamant_grade3"], "actor_team": "Same"} ],
+            "team_only": true,
+            "is_radio": true,
+            "event_priority": -4,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "en_spotted_shardskin",
+            "event": [ {"event_id": "PingTarget", "target_ai_archetype_is": ["Shardskin"], "actor_team": "Same"} ],
+            "team_only": true,
+            "is_radio": true,
+            "event_priority": -4,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "en_spotted_boss",
+            "event": [ {"event_id": "PingTarget", "target_ai_archetype_is": ["Queen", "queen_new", "Stilt", "Stilt_Strafer", "Colossus", "Behemoth"], "actor_team": "Same"} ],
+            "ignore_commentator_cooldown": true,
+            "team_only": true,
+            "is_radio": true,
+            "event_priority": -4,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "en_spotted_strafer",
+            "event": [ {"event_id": "PingTarget", "target_ai_archetype_is": ["StraferAR", "StraferAR_grade2", "StraferAR_grade2_firegrenade", "StraferAR_grade3", "StraferSHG", "StraferSHG_grade2", "StraferSHG_grade3", "StraferSMG", "StraferSMG_grade2", "StraferSMG_grade3", "StraferGL", "StraferFlamethrower"], "actor_team": "Same"} ],
+            "team_only": true,
+            "is_radio": true,
+            "event_priority": -4,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "en_spotted_exdrone",
+            "event": [ {"event_id": "PingTarget", "target_ai_archetype_is": ["StraferBombDrone"], "actor_team": "Same"} ],
+            "team_only": true,
+            "is_radio": true,
+            "event_priority": -4,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "en_spotted_minotaur",
+            "event": [ {"event_id": "PingTarget", "target_ai_archetype_is": ["Minotaur", "Minotaur_napalm"], "actor_team": "Same"} ],
+            "team_only": true,
+            "is_radio": true,
+            "event_priority": -4,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "en_spotted_sniper",
+            "event": [ {"event_id": "PingTarget", "target_ai_archetype_is": ["StraferSR", "StraferSR_grade2", "StraferRL"], "actor_team": "Same"} ],
+            "team_only": true,
+            "is_radio": true,
+            "event_priority": -4,
+            "commentator": {"actor": "Actor"}
+        },        
+        {
+            "audio_trigger": "caution_dogs",
+            "event": [ {"event_id": "PVE_VO_KamikazeDogSpawned", "actor_team": "Same"} ],
+            "event_priority": -7,
+            "event_cooldown": 15,
+            "team_only": true,
+            "is_radio": true,
+            "skip_chance": 0.6,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "caution_mino_rockets",
+            "event": [ {"event_id": "PVE_VO_MinotaurRocketsLaunched", "actor_team": "Same"} ],
+            "event_priority": -6,
+            "event_cooldown": 10,
+            "team_only": true,
+            "is_radio": true,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "en_spotted_minotaur",
+            "event": [ {"event_id": "PVE_VO_MinotaurSighted", "actor_team": "Same"} ],
+            "event_priority": -5,
+            "event_cooldown": 15,
+            "team_only": true,
+            "is_radio": true,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "en_spotted_minotaur",
+            "event": [ {"event_id": "PVE_VO_MinotaurNapalmSighted", "actor_team": "Same"} ],
+            "event_priority": -5,
+            "event_cooldown": 15,
+            "team_only": true,
+            "is_radio": true,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "target_gasbag",
+            "event": [ {"event_id": "PVE_VO_MinotaurDamaged", "actor_team": "Same"} ],
+            "event_priority": -7,
+            "event_cooldown": 15,
+            "team_only": true,
+            "is_radio": true,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "att_adamant_heal",
+            "event": [ {"event_id": "PVE_VO_AdamantHealing", "actor_team": "Same"} ],
+            "event_priority": -8,
+            "event_cooldown": 15,
+            "team_only": true,
+            "is_radio": true,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "target_weak_points",
+            "event": [ {"event_id": "PVE_VO_AdamantDamaged", "actor_team": "Same"} ],
+            "event_priority": -8,
+            "event_cooldown": 15,
+            "team_only": true,
+            "is_radio": true,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "en_spotted_adamant",
+            "event": [ {"event_id": "PVE_VO_AdamantSighted", "actor_team": "Same"} ],
+            "event_priority": -5,
+            "event_cooldown": 15,
+            "team_only": true,
+            "is_radio": true,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "en_spotted_shardskin",
+            "event": [ {"event_id": "PVE_VO_ShardskinSighted", "actor_team": "Same"} ],
+            "event_priority": -6,
+            "event_cooldown": 15,
+            "team_only": true,
+            "is_radio": true,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "caution_sniper_aim",
+            "event": [ {"event_id": "PVE_VO_StraferSRSighted", "actor_team": "Same"} ],
+            "event_priority": -5,
+            "event_cooldown": 15,
+            "team_only": true,
+            "is_radio": true,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "gr_spotted_frag",
+            "event": [ {"event_id": "PVE_VO_StraferGrenade", "actor_team": "Same"} ],
+            "ignore_commentator_cooldown": true,
+            "event_priority": -4,
+            "event_cooldown": 5,
+            "team_only": true,
+            "is_radio": true,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "gr_spotted_flash",
+            "event": [ {"event_id": "PVE_VO_StraferGrenadeFlash", "actor_team": "Same"} ],
+            "ignore_commentator_cooldown": true,
+            "event_priority": -4,
+            "event_cooldown": 5,
+            "team_only": true,
+            "is_radio": true,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "en_spotted_exdrone",
+            "event": [ {"event_id": "PVE_VO_StraferMineSpawned", "actor_team": "Same"} ],
+            "ignore_commentator_cooldown": true,
+            "event_priority": -7,
+            "event_cooldown": 15,
+            "team_only": true,
+            "skip_chance": 0.30,
+            "is_radio": true,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "caution_chaser",
+            "event": [ {"event_id": "PVE_VO_ChaserSpawned", "actor_team": "Same"} ],
+            "ignore_commentator_cooldown": true,
+            "event_priority": -5,
+            "event_cooldown": 15,
+            "team_only": true,
+            "is_radio": true,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "en_spotted_gardener",
+            "event": [ {"event_id": "PVE_VO_GardenerSpawned", "actor_team": "Same"} ],
+            "ignore_commentator_cooldown": true,
+            "event_priority": -5,
+            "event_cooldown": 15,
+            "team_only": true,
+            "is_radio": true,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "gr_spotted_frag",
+            "event": [ {"event_id": "FRAG_Collision", "actor_team": "Opposite"} ],
+            "ignore_commentator_cooldown": true,
+            "event_priority": -4,
+            "event_cooldown": 3,
+            "team_only": true,
+            "commentator": {"actor": "Target"}
+        },
+        {
+            "audio_trigger": "gr_spotted_smoke",
+            "event": [ {"event_id": "SMOKE_Act", "actor_team": "Opposite"} ],
+            "ignore_commentator_cooldown": true,
+            "event_priority": -7,
+            "event_cooldown": 3,
+            "team_only": true,
+            "commentator": {"actor": "Target"}
+        },
+        {
+            "audio_trigger": "gr_spotted_flash",
+            "event": [ {"event_id": "FLASH_Collision", "actor_team": "Opposite"} ],
+            "ignore_commentator_cooldown": true,
+            "event_priority": -7,
+            "event_cooldown": 3,
+            "team_only": true,
+            "commentator": {"actor": "Target"}
+        },
+        {
+            "audio_trigger": "gr_spotted_crystalline",
+            "event": [ {"event_id": "CRYSTALLINE_Act", "actor_team": "Opposite"} ],
+            "ignore_commentator_cooldown": true,
+            "event_priority": -4,
+            "event_cooldown": 3,
+            "team_only": true,
+            "commentator": {"actor": "Target"}
+        },
+        {
+            "audio_trigger": "team_order_attack",
+            "event": [ {"event_id": "team_order_attack" } ],
+            "commentator": {"actor": "Actor"},
+            "ignore_commentator_cooldown": true
+        },
+        {
+            "audio_trigger": "team_order_follow",
+            "event": [ {"event_id": "team_order_follow" } ],
+            "commentator": {"actor": "Actor"},
+            "ignore_commentator_cooldown": true
+        },
+        {
+            "audio_trigger": "tag_loc_goto",
+            "event": [ {"event_id": "tag_loc_goto" } ],
+            "commentator": {"actor": "Actor"},
+            "ignore_commentator_cooldown": true
+        },
+        {
+            "audio_trigger": "tag_loc_defend",
+            "event": [ {"event_id": "tag_loc_defend" } ],
+            "commentator": {"actor": "Actor"},
+            "ignore_commentator_cooldown": true
+        },
+        {
+            "audio_trigger": "tag_loc_capture",
+            "event": [ {"event_id": "tag_loc_capture" } ],
+            "commentator": {"actor": "Actor"},
+            "ignore_commentator_cooldown": true
+        },
+        {
+            "audio_trigger": "team_response_no",
+            "event": [ {"event_id": "team_response_no" } ],
+            "commentator": {"actor": "Actor"},
+            "ignore_commentator_cooldown": true
+        },
+        {
+            "audio_trigger": "team_response_yes",
+            "event": [ {"event_id": "team_response_yes" } ],
+            "commentator": {"actor": "Actor"},
+            "ignore_commentator_cooldown": true
+        },
+        {
+            "audio_trigger": "tag_loc_plant",
+            "event": [ {"event_id": "tag_loc_plant" } ],
+            "commentator": {"actor": "Actor"},
+            "ignore_commentator_cooldown": true
+        },
+        {
+            "audio_trigger": "tag_loc_regroup",
+            "event": [ {"event_id": "tag_loc_regroup" } ],
+            "commentator": {"actor": "Actor"},
+            "ignore_commentator_cooldown": true
+        },
+        {
+            "audio_trigger": "team_order_help",
+            "event": [ {"event_id": "team_order_help" } ],
+            "commentator": {"actor": "Actor"},
+            "ignore_commentator_cooldown": true
+        },
+        {
+            "audio_trigger": "feedback_landing",
+            "event": [ {"event_id": "PushedBack" } ],
+            "commentator": {"actor": "Actor"},
+            "ignore_commentator_cooldown": true
+        },
+        {
+            "audio_trigger": "pve_horde_primary",
+            "event": [ { "event_id": "primary_spotted"} ],
+            "ignore_commentator_cooldown": true,
+            "event_priority": -1,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "pve_horde_supply",
+            "event": [ { "event_id": "secondary_spotted"} ],
+            "ignore_commentator_cooldown": true,
+            "event_priority": -1,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "pve_horde_supply",
+            "event": [ { "event_id": "lost_supply_spotted"} ],
+            "ignore_commentator_cooldown": true,
+            "event_priority": -1,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "tag_loc_regroup",
+            "event": [ { "event_id": "spotting_regroup"} ],
+            "ignore_commentator_cooldown": true,
+            "event_priority": -1,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "team_order_attack",
+            "event": [ { "event_id": "spotting_attack"} ],
+            "ignore_commentator_cooldown": true,
+            "event_priority": -1,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "tag_loc_goto",
+            "event": [ { "event_id": "spotting_my_target"} ],
+            "ignore_commentator_cooldown": true,
+            "event_priority": -1,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "tag_loc_goto",
+            "event": [ { "event_id": "PingPosition", "actor_team": "Same"} ],
+            "ignore_commentator_cooldown": true,
+            "event_cooldown": 10,
+            "event_priority": -3,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "team_order_help",
+            "event": [ { "event_id": "PingRevive", "actor_team": "Same"} ],
+            "ignore_commentator_cooldown": true,
+            "event_cooldown": 5,
+            "event_priority": -1,
+            "commentator": {"actor": "Actor"}
+        },
+        {
+            "audio_trigger": "target_weak_points",
+            "event": [ {"event_id": "PingWeakpoint", "actor_team": "Same"} ],
+            "event_priority": -3,
+            "event_cooldown": 5,
+            "team_only": true,
+            "is_radio": true,
+            "ignore_commentator_cooldown": true,
+            "commentator": {"actor": "Actor"}
+        }
+    ]
+}

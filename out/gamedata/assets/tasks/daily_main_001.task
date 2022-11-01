@@ -1,0 +1,31 @@
+{
+  "name": "daily_main_001",
+  "type": "daily",
+  "tags": [
+    "daily_main"
+  ],
+  "image": "weekly_temp_icon",
+  "rarity": "common",
+  "display_name": { "localization_key": "@daily_main_001_name" },
+  "description": { "localization_key": "@daily_main_001_description" },
+  "conditions": [
+    {
+      "name": "daily_main_001",
+      "event_description": { "localization_key": "@daily_main_001_event_description" },
+      "event": { "event_id": "Kill", "actor_is_me": true },
+      "progress": 20
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 200
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 175
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+    "name": "weapon_stats",
+    "doc": "Origin: game session. Emitter: dedicated server.",
+    "type": "record",
+    "fields": [
+        {
+            "name": "datetime",
+            "type": "string",
+            "default": "",
+            "doc": "format: YYYY-MM-DD hh:mm:ss"
+        },
+        {
+            "name": "profile_id",
+            "type": "long",
+            "default": 0,
+            "doc": "Identifier of a player"
+        },
+        {
+            "name": "season_id",
+            "type": "long",
+            "default": 0,
+            "doc": "Identifier of Season"
+        },
+        {
+            "name": "mission_name",
+            "type": "string",
+            "default": "",
+            "doc": "Mission name"
+        },
+        {
+            "name": "game_mode",
+            "type": "string",
+            "default": "",
+            "doc": "Game mode"
+        },
+        {
+            "name": "game_type",
+            "type": "string",
+            "default": "",
+            "doc": "Game type"
+        },
+        {
+            "name": "hero_name",
+            "type": "string",
+            "default": "",
+            "doc": "Hero name"
+        },
+        {
+            "name": "weapon_name",
+            "type": "string",
+            "default": "",
+            "doc": "Weapon name"
+        },
+        {
+            "name": "weapon_shots",
+            "type": "int",
+            "default": 0,
+            "doc": "shots count"
+        },
+        {
+            "name": "weapon_hits",
+            "type": "int",
+            "default": 0,
+            "doc": "hits count"
+        },
+        {
+            "name": "weapon_damage_done",
+            "type": "int",
+            "default": 0,
+            "doc": "damage count in HP"
+        },
+        {
+            "name": "weapon_headshots",
+            "type": "int",
+            "default": 0,
+            "doc": "headshots count"
+        },
+        {
+            "name": "weapon_kills_ai",
+            "type": "int",
+            "default": 0,
+            "doc": "ai kill count"
+        },
+        {
+            "name": "weapon_kills_player",
+            "type": "int",
+            "default": 0,
+            "doc": "players kill count"
+        },
+        {
+            "name": "weapon_played_time",
+            "type": "int",
+            "default": 0,
+            "doc": "played time in seconds"
+        }
+    ]
+}

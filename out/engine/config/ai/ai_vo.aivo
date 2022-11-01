@@ -1,0 +1,468 @@
+{
+    "thresholds":
+    {
+        "count_by_time":
+        {
+            "time":0.1,
+            "count":4
+        },
+        "global_delay":
+        {
+            "delay_min":0.0,
+            "delay_max":0.0
+        }
+    },
+    "common_params":
+    {
+        "teammate_die_vo_radius":25.0
+    },
+    "profiles":
+    [
+        {
+            "name":"Gunman",
+            "prefix":"strf_03_",
+            "events":
+            {
+                "OnTargetChanged":{
+                    "name": "strf_03_generic_attack",
+                    "wait_other": 0, "play_time":3, "priority":3,
+                    "source_claim":{"time":3.0, "count":1, "delay_min":0.0, "delay_max":0.5},
+                    "global_claim":{"time":20.0, "count":1, "delay_min":1, "delay_max":3}
+                },
+                "enemy_spotted":{
+                    "wait_other": 0, "play_time":5, "priority":0,
+                    "source_claim":{"time":5.0, "count":1, "delay_min":0.0, "delay_max":0.0},
+                    "global_claim":{"time":10.0, "count":1, "delay_min":1, "delay_max":3}
+                },
+                "target_priority_closest":{
+                    "name": "strf_01_close_attack_melee",
+                    "wait_other": 0, "play_time":5, "priority":2,
+                    "source_claim":{"time":5.0, "count":1, "delay_min":0.0, "delay_max":0.0},
+                    "global_claim":{"time":10.0, "count":2, "delay_min":1, "delay_max":3}
+                },
+                "target_priority_damage_dealer":{
+                    "wait_other": 0, "play_time":5, "priority":0,
+                    "source_claim":{"time":5.0, "count":1, "delay_min":0.0, "delay_max":0.0},
+                    "global_claim":{"time":10.0, "count":2, "delay_min":1, "delay_max":2}
+                },
+                "cover_actions_taking_cover":{
+                    "wait_other": 0, "play_time":5, "priority":1,
+                    "source_claim":{"time":5.0, "count":1, "delay_min":0.0, "delay_max":0.0},
+                    "global_claim":{"time":10.0, "count":1, "delay_min":0.5, "delay_max":2}
+                },
+                "cover_actions_cover_shooting":{
+                    "wait_other": 0, "play_time":5, "priority":0,
+                    "source_claim":{"time":5.0, "count":1, "delay_min":0.0, "delay_max":0.0},
+                    "global_claim":{"time":10.0, "count":2, "delay_min":1, "delay_max":5}
+                },
+                "position_change":{
+                    "name": "strf_03_position_change",
+                    "wait_other": 0, "play_time":5, "priority":0,
+                    "source_claim":{"time":15.0, "count":1, "delay_min":0.0, "delay_max":3},
+                    "global_claim":{"time":30.0, "count":2, "delay_min":2, "delay_max":5}
+                },
+                "need_to_reload":{
+                    "wait_other": 0, "play_time":5, "priority":0,
+                    "source_claim":{"time":3.0, "count":1, "delay_min":0.0, "delay_max":0.0},
+                    "global_claim":{"time":6.0, "count":2, "delay_min":1, "delay_max":3}
+                },
+                "need_to_reload_under_fire":{
+                    "wait_other": 0, "play_time":5, "priority":1,
+                    "source_claim":{"time":3.0, "count":1, "delay_min":0.0, "delay_max":0.0},
+                    "global_claim":{"time":6.0, "count":2, "delay_min":1, "delay_max":3}
+                },
+                "special_attack_frag_grenade":{
+                    "wait_other": 0, "play_time":3, "priority":4,
+                    "source_claim":{"time":1.0, "count":1, "delay_min":0.0, "delay_max":0.0},
+                    "global_claim":{"time":1.0, "count":10, "delay_min":0.5, "delay_max":1}
+                },
+                "close_to_grenade":{
+                    "name": "strf_03_frag_grenade_in_proximity",
+                    "wait_other": 0, "play_time":3, "priority":9,
+                    "source_claim":{"time":3.0, "count":1, "delay_min":0.0, "delay_max":0.0},
+                    "global_claim":{"time":1.0, "count":10, "delay_min":0.1, "delay_max":0.3}
+                },
+                "state_change_reactions_wound_state":{
+                    "wait_other": 0, "play_time":2, "priority":8, 
+                    "source_claim":{"time":1.0, "count":5, "delay_min":0.0, "delay_max":0.0},
+                    "global_claim":{"time":1.0, "count":50, "delay_min":0.0, "delay_max":0}
+                },
+                "target_lost_reaction_wait_at_position":{
+                    "wait_other": 0, "play_time":5, "priority":1,
+                    "source_claim":{"time":20.0, "count":1, "delay_min":0.0, "delay_max":3},
+                    "global_claim":{"time":40.0, "count":2, "delay_min":2, "delay_max":5}
+                },
+                "enemy_down_outrage_abuse":{
+                    "wait_other": 0, "play_time":5, "priority":1,
+                    "source_claim":{"time":5.0, "count":1, "delay_min":0.0, "delay_max":3},
+                    "global_claim":{"time":10.0, "count":2, "delay_min":1, "delay_max":3}
+                },
+                "flash_grenade_hit_blinded_confused":{
+                    "wait_other": 0, "play_time":2, "priority":7, 
+                    "source_claim":{"time":1.0, "count":5, "delay_min":0.0, "delay_max":0.0},
+                    "global_claim":{"time":1.0, "count":50, "delay_min":0.0, "delay_max":0}
+                },
+                "smoke_barrier_overcome":{
+                    "wait_other": 0, "play_time":5, "priority":1,
+                    "source_claim":{"time":20.0, "count":1, "delay_min":0.0, "delay_max":3},
+                    "global_claim":{"time":40.0, "count":2, "delay_min":1, "delay_max":3}
+                },
+                "victory":{
+                    "wait_other": 0, "play_time":5, "priority":3,
+                    "source_claim":{"time":5.0, "count":1, "delay_min":0.0, "delay_max":3},
+                    "global_claim":{"time":5.0, "count":2, "delay_min":3, "delay_max":5}
+                },
+                "enemy_down_body_check":{
+                    "wait_other": 0, "play_time":5, "priority":1,
+                    "source_claim":{"time":5.0, "count":1, "delay_min":0.0, "delay_max":3},
+                    "global_claim":{"time":5.0, "count":1, "delay_min":1, "delay_max":3}
+                },
+                "sniper_lock_on_target":{
+                    "wait_other": 0, "play_time":5, "priority":1,
+                    "source_claim":{"time":20.0, "count":1, "delay_min":0.0, "delay_max":3},
+                    "global_claim":{"time":20.0, "count":2, "delay_min":1, "delay_max":3}
+                },
+                "light_hit_reaction":{
+                    "wait_other": 0, "play_time":5, "priority":1,
+                    "source_claim":{"time":1.0, "count":5, "delay_min":0.0, "delay_max":0.0},
+                    "global_claim":{"time":1.0, "count":50, "delay_min":0.0, "delay_max":0.0}
+                },
+                "target_flanked":{
+                    "wait_other": 0, "play_time":5, "priority":1,
+                    "source_claim":{"time":5.0, "count":1, "delay_min":0.0, "delay_max":0},
+                    "global_claim":{"time":8.0, "count":3, "delay_min":0.5, "delay_max":2}
+                },
+                "shoot":{
+                    "name": "strf_03_close_range_combat",
+                    "wait_other": 0, "play_time":3, "priority":3, 
+                    "source_claim":{"time":15.0, "count":2, "delay_min":3, "delay_max":8}, 
+                    "global_claim":{"time":20.0, "count":2, "delay_min":3, "delay_max":5}
+                },
+                "teammate_die":{
+                    "name": "strf_03_brother_is_dead",
+                    "wait_other": 0, "play_time":3, "priority":6, "playback_delay_min":1.0, "playback_delay_max":3.0,
+                    "source_claim":{"time":1.0, "count":1, "delay_min":0.0, "delay_max":0.3}, 
+                    "global_claim":{"time":10.0, "count":1, "delay_min":0.0, "delay_max":0.0}
+                },
+                "death":{
+                    "name": "strf_03_death",
+                    "wait_other": 0, "play_time":3, "priority":10,
+                    "source_claim":{"time":1.0, "count":1, "delay_min":0.0, "delay_max":0.0}, 
+                    "global_claim":{"time":1.0, "count":8, "delay_min":0.0, "delay_max":0.0}
+                }
+            }
+        },
+        {
+            "name":"StraferSMG",
+            "prefix":"strf_02_",
+            "events":
+            {
+                "OnTargetChanged":{
+                    "name": "strf_02_smg_attack",
+                    "wait_other": 0, "play_time":3, "priority":3,
+                    "source_claim":{"time":5.0, "count":1, "delay_min":0.0, "delay_max":0.0},
+                    "global_claim":{"time":16.0, "count":2, "delay_min":1, "delay_max":3}
+                },
+                "enemy_spotted":{
+                    "wait_other": 0, "play_time":5, "priority":0,
+                    "source_claim":{"time":5.0, "count":1, "delay_min":0.0, "delay_max":0.0},
+                    "global_claim":{"time":5.0, "count":1, "delay_min":1, "delay_max":3}
+                },
+                "target_priority_closest":{
+                    "name": "strf_01_close_attack_melee",
+                    "wait_other": 0, "play_time":5, "priority":20,
+                    "source_claim":{"time":5.0, "count":1, "delay_min":0.0, "delay_max":0.0},
+                    "global_claim":{"time":5.0, "count":1, "delay_min":1, "delay_max":3}
+                },
+                "target_priority_damage_dealer":{
+                    "wait_other": 0, "play_time":5, "priority":0,
+                    "source_claim":{"time":5.0, "count":1, "delay_min":0.0, "delay_max":0.0},
+                    "global_claim":{"time":5.0, "count":2, "delay_min":1, "delay_max":2}
+                },
+                "cover_actions_taking_cover":{
+                    "wait_other": 0, "play_time":5, "priority":0,
+                    "source_claim":{"time":5.0, "count":1, "delay_min":0.0, "delay_max":0.0},
+                    "global_claim":{"time":5.0, "count":2, "delay_min":1, "delay_max":2}
+                },
+                "cover_actions_cover_shooting":{
+                    "wait_other": 0, "play_time":5, "priority":0,
+                    "source_claim":{"time":5.0, "count":1, "delay_min":0.0, "delay_max":0.0},
+                    "global_claim":{"time":5.0, "count":2, "delay_min":1, "delay_max":2}
+                },
+                "position_change":{
+                    "name": "strf_01_start_moving",
+                    "wait_other": 0, "play_time":5, "priority":0,
+                    "source_claim":{"time":15.0, "count":1, "delay_min":0.0, "delay_max":3},
+                    "global_claim":{"time":15.0, "count":1, "delay_min":2, "delay_max":5}
+                },
+                "need_to_reload":{
+                    "name": "strf_02_close_range_combat",
+                    "wait_other": 0, "play_time":5, "priority":0,
+                    "source_claim":{"time":3.0, "count":1, "delay_min":0.0, "delay_max":0.0},
+                    "global_claim":{"time":3.0, "count":1, "delay_min":1, "delay_max":3}
+                },
+                "need_to_reload_under_fire":{
+                    "wait_other": 0, "play_time":5, "priority":1,
+                    "source_claim":{"time":3.0, "count":1, "delay_min":0.0, "delay_max":0.0},
+                    "global_claim":{"time":3.0, "count":1, "delay_min":1, "delay_max":3}
+                },
+                "special_attack_frag_grenade":{
+                    "name":"strf_02_special_attack_flash_grenade",
+                    "wait_other": 0, "play_time":3, "priority":4,
+                    "source_claim":{"time":1.0, "count":1, "delay_min":0.0, "delay_max":0.0},
+                    "global_claim":{"time":1.0, "count":10, "delay_min":0.5, "delay_max":1}
+                },
+                "close_to_grenade":{
+                    "name": "strf_02_frag_grenade_in_proximity",
+                    "wait_other": 0, "play_time":3, "priority":9,
+                    "source_claim":{"time":3.0, "count":1, "delay_min":0.0, "delay_max":0.0},
+                    "global_claim":{"time":1.0, "count":10, "delay_min":0.1, "delay_max":0.3}
+                },
+                "state_change_reactions_wound_state":{
+                    "wait_other": 0, "play_time":2, "priority":7, 
+                    "source_claim":{"time":1.0, "count":5, "delay_min":0.0, "delay_max":0.0},
+                    "global_claim":{"time":1.0, "count":50, "delay_min":0.0, "delay_max":0}
+                },
+                "target_lost_reaction_wait_at_position":{
+                    "wait_other": 0, "play_time":5, "priority":1,
+                    "source_claim":{"time":20.0, "count":1, "delay_min":0.0, "delay_max":3},
+                    "global_claim":{"time":20.0, "count":2, "delay_min":2, "delay_max":5}
+                },
+                "enemy_down_outrage_abuse":{
+                    "wait_other": 0, "play_time":5, "priority":1,
+                    "source_claim":{"time":5.0, "count":1, "delay_min":0.0, "delay_max":3},
+                    "global_claim":{"time":5.0, "count":2, "delay_min":1, "delay_max":3}
+                },
+                "flash_grenade_hit_blinded_confused":{
+                    "wait_other": 0, "play_time":2, "priority":7, 
+                    "source_claim":{"time":1.0, "count":5, "delay_min":0.0, "delay_max":0.0},
+                    "global_claim":{"time":1.0, "count":50, "delay_min":0.0, "delay_max":0}
+                },
+                "smoke_barrier_overcome":{
+                    "wait_other": 0, "play_time":5, "priority":1,
+                    "source_claim":{"time":20.0, "count":1, "delay_min":0.0, "delay_max":3},
+                    "global_claim":{"time":20.0, "count":1, "delay_min":1, "delay_max":3}
+                },
+                "victory":{
+                    "wait_other": 0, "play_time":5, "priority":3,
+                    "source_claim":{"time":5.0, "count":1, "delay_min":0.0, "delay_max":3},
+                    "global_claim":{"time":5.0, "count":2, "delay_min":3, "delay_max":5}
+                },
+                "enemy_down_body_check":{
+                    "wait_other": 0, "play_time":5, "priority":1,
+                    "source_claim":{"time":5.0, "count":1, "delay_min":0.0, "delay_max":3},
+                    "global_claim":{"time":5.0, "count":1, "delay_min":1, "delay_max":3}
+                },
+                "sniper_lock_on_target":{
+                    "wait_other": 0, "play_time":5, "priority":1,
+                    "source_claim":{"time":20.0, "count":1, "delay_min":0.0, "delay_max":3},
+                    "global_claim":{"time":20.0, "count":1, "delay_min":1, "delay_max":3}
+                },
+                "light_hit_reaction":{
+                    "wait_other": 0, "play_time":5, "priority":1,
+                    "source_claim":{"time":1.0, "count":5, "delay_min":0.0, "delay_max":0.0},
+                    "global_claim":{"time":1.0, "count":50, "delay_min":0.0, "delay_max":0.0}
+                },
+                "target_flanked":{
+                    "wait_other": 0, "play_time":5, "priority":1,
+                    "source_claim":{"time":20.0, "count":1, "delay_min":0.0, "delay_max":3},
+                    "global_claim":{"time":5.0, "count":3, "delay_min":1, "delay_max":3}
+                },
+                "shoot":{
+                    "name": "strf_02_close_range_combat",
+                    "wait_other": 0, "play_time":3, "priority":3, 
+                    "source_claim":{"time":15.0, "count":2, "delay_min":3, "delay_max":8}, 
+                    "global_claim":{"time":20.0, "count":2, "delay_min":3, "delay_max":5}
+                },
+                "teammate_die":{
+                    "name": "strf_02_brother_is_dead",
+                    "wait_other": 0, "play_time":3, "priority":6, "playback_delay_min":1.0, "playback_delay_max":3.0,
+                    "source_claim":{"time":1.0, "count":1, "delay_min":0.0, "delay_max":0.3}, 
+                    "global_claim":{"time":10.0, "count":1, "delay_min":0.0, "delay_max":0.0}
+                },
+                "death":{
+                    "wait_other": 0, "play_time":3, "priority":10,
+                    "source_claim":{"time":1.0, "count":1, "delay_min":0.0, "delay_max":0.3}, 
+                    "global_claim":{"time":1.0, "count":8, "delay_min":0.0, "delay_max":0.0}
+                }
+            }
+        },
+        {
+            "name":"Glasshead",
+            "prefix":"gls_",
+            "events":
+            {
+                "OnTargetChanged":{
+                    "name": "gls_spawn",
+                    "wait_other": 0, "play_time":3, "priority":3,
+                    "source_claim":{"time":3.0, "count":1, "delay_min":0.0, "delay_max":0.5},
+                    "global_claim":{"time":8.0, "count":3, "delay_min":0, "delay_max":3}
+                },
+                "wave_attack":{
+                    "name": "stilt_take_damage",
+                    "wait_other": 0, "play_time":1, "priority":4,
+                    "source_claim":{"time":0.1, "count":1, "delay_min":0.0, "delay_max":0.0},
+                    "global_claim":{"time":1.0, "count":3, "delay_min":0, "delay_max":0}
+                },
+                "slam_attack":{
+                    "name": "stilt_stun_out",
+                    "wait_other": 0, "play_time":1, "priority":4,
+                    "source_claim":{"time":0.1, "count":1, "delay_min":0.0, "delay_max":0.0},
+                    "global_claim":{"time":1.0, "count":3, "delay_min":0, "delay_max":0}
+                },
+                "jump_attack_melee":{
+                    "name": "stilt_attack_close_start",
+                    "wait_other": 0, "play_time":1, "priority":4,
+                    "source_claim":{"time":0.1, "count":1, "delay_min":0.0, "delay_max":0.0},
+                    "global_claim":{"time":1.0, "count":3, "delay_min":0, "delay_max":0}
+                },
+                "light_hit_reaction":{
+                    "wait_other": 0, "play_time":0, "priority":1,
+                    "source_claim":{"time":1.0, "count":5, "delay_min":0.0, "delay_max":0.0},
+                    "global_claim":{"time":1.0, "count":50, "delay_min":0.0, "delay_max":0.0}
+                },
+                "close_attack_melee":{
+                    "wait_other": 0, "play_time":0, "priority":2,
+                    "source_claim":{"time":1.0, "count":5, "delay_min":0.0, "delay_max":0.0},
+                    "global_claim":{"time":1.0, "count":50, "delay_min":0.0, "delay_max":0.0}
+                },
+                "state_change_reactions_wound_state":{
+                    "name": "gls_light_hit_reaction",
+                    "wait_other": 0, "play_time":3, "priority":0, 
+                    "source_claim":{"time":1.0, "count":100, "delay_min":0.0, "delay_max":0.0}, 
+                    "global_claim":{"time":1.0, "count":100, "delay_min":0.0, "delay_max":0.0}
+                },
+                "target_flanked":{
+                    "name": "stilt_take_damage",
+                    "wait_other": 0, "play_time":5, "priority":1,
+                    "source_claim":{"time":10.0, "count":1, "delay_min":0.0, "delay_max":3},
+                    "global_claim":{"time":10.0, "count":5, "delay_min":1, "delay_max":3}
+                },
+                "death":{
+                    "wait_other": 0, "play_time":3, "priority":5, 
+                    "source_claim":{"time":1.0, "count":1, "delay_min":0.0, "delay_max":0.0}, 
+                    "global_claim":{"time":1.0, "count":20, "delay_min":0.0, "delay_max":0.0}
+                }
+            }
+        },
+        {
+            "name":"GlassheadSupporter",
+            "prefix":"gh_supporter_vo_",
+            "events":
+            {
+                "OnTargetChanged":{
+                    "wait_other": 0, "play_time":3, "priority":3,
+                    "source_claim":{"time":3.0, "count":1, "delay_min":0.0, "delay_max":0.5},
+                    "global_claim":{"time":8.0, "count":3, "delay_min":0, "delay_max":3}
+                },
+                "light_hit_reaction":{
+                    "wait_other": 0, "play_time":0, "priority":1,
+                    "source_claim":{"time":3.0, "count":1, "delay_min":0.0, "delay_max":0.0},
+                    "global_claim":{"time":1.0, "count":50, "delay_min":0.0, "delay_max":0.0}
+                },
+                "close_attack_melee":{
+                    "wait_other": 0, "play_time":0, "priority":2,
+                    "source_claim":{"time":1.0, "count":5, "delay_min":0.0, "delay_max":0.0},
+                    "global_claim":{"time":1.0, "count":50, "delay_min":0.0, "delay_max":0.0}
+                },
+                "state_change_reactions_wound_state":{
+                    "name": "gls_light_hit_reaction",
+                    "wait_other": 0, "play_time":3, "priority":0, 
+                    "source_claim":{"time":1.0, "count":100, "delay_min":0.0, "delay_max":0.0}, 
+                    "global_claim":{"time":1.0, "count":100, "delay_min":0.0, "delay_max":0.0}
+                },
+                "target_flanked":{
+                    "name": "stilt_take_damage",
+                    "wait_other": 0, "play_time":5, "priority":1,
+                    "source_claim":{"time":20.0, "count":1, "delay_min":0.0, "delay_max":3},
+                    "global_claim":{"time":20.0, "count":1, "delay_min":1, "delay_max":3}
+                },
+                "death":{
+                    "wait_other": 0, "play_time":3, "priority":3, 
+                    "source_claim":{"time":1.0, "count":1, "delay_min":0.0, "delay_max":0.0}, 
+                    "global_claim":{"time":1.0, "count":20, "delay_min":0.0, "delay_max":0.0}
+                }
+            }
+        },
+        {
+            "name":"CrystallineTurret",
+            "prefix":"gls_crystalline_turret",
+            "events":
+            {                
+                "OnTargetChanged":{
+                    "name": "gls_crystalline_turret_spawn",
+                    "wait_other": 0, "play_time":3, "priority":0,
+                    "source_claim":{"time":99.0, "count":1, "delay_min":0.0, "delay_max":0.5},
+                    "global_claim":{"time":8.0, "count":3, "delay_min":0, "delay_max":3}
+                }
+            }
+        },
+        {
+            "name":"FairflyTurret",
+            "prefix":"gls_fairfly_turret",
+            "events":
+            {
+                "spawn":{
+                    "name": "gls_fairfly_turret_spawn",
+                    "wait_other": 0, "play_time":3, "priority":3, 
+                    "source_claim":{"time":1.0, "count":1, "delay_min":0.0, "delay_max":0.0}, 
+                    "global_claim":{"time":1.0, "count":20, "delay_min":0.0, "delay_max":0.0}
+                    },
+                "death":{
+                    "name": "gls_fairfly_turret_death",
+                    "wait_other": 0, "play_time":3, "priority":5, 
+                    "source_claim":{"time":1.0, "count":1, "delay_min":0.0, "delay_max":0.0}, 
+                    "global_claim":{"time":1.0, "count":20, "delay_min":0.0, "delay_max":0.0}
+                }
+            }
+        },
+        {
+            "name":"GlassheadRunner",
+            "prefix":"gls_runner",
+            "events":
+            {
+                "OnTargetChanged":{
+                    "name": "gls_runner_spawn",
+                    "wait_other": 0, "play_time":3, "priority":3,
+                    "source_claim":{"time":3.0, "count":1, "delay_min":0.0, "delay_max":0.5},
+                    "global_claim":{"time":8.0, "count":3, "delay_min":0, "delay_max":3}
+                },
+                "death":{
+                    "name": "gls_runner_death",
+                    "wait_other": 0, "play_time":3, "priority":5, 
+                    "source_claim":{"time":1.0, "count":1, "delay_min":0.0, "delay_max":0.0}, 
+                    "global_claim":{"time":1.0, "count":20, "delay_min":0.0, "delay_max":0.0}
+                }
+            }
+        },
+        {
+            "name":"ResurrectionDrone",
+            "prefix":"mdr_",
+            "events":
+            {
+                "deploy":{},
+                "go_resurrect":{},
+                "expire_alarm":{}
+            }
+        },
+        {
+            "name":"chaser",
+            "prefix":"chaser_",
+            "events":
+            {
+                "death":{
+                    "name": "chaser_death_vo",
+                    "wait_other": 0, "play_time":3, "priority":5, 
+                    "source_claim":{"time":1.0, "count":1, "delay_min":0.0, "delay_max":0.0}, 
+                    "global_claim":{"time":1.0, "count":20, "delay_min":0.0, "delay_max":0.0}
+                }
+            }
+        },
+        {
+            "name":"Queen"
+        },
+        {
+            "name":"Colossus"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "script": "scripts/ui/lobby/shop_product_preview.lua",
+    "view_path": "ShopProductPreview.html",
+    "defined_actions": ["hide_gamepad_cursor"],
+    "children":
+    [
+        {"name": "screen_header", "type": "Component", "file": "common/screen_header.json"},
+
+        {"name": "fullscreen_image", "type": "Image", "view_path": "fullscreenImage"},
+        {"name": "item_image_large", "type": "Image", "view_path": "wrapper.imageWrapper.itemImage"},
+
+        {"name": "subtitle", "type": "Label", "view_path": "wrapper.header.subtitle"},
+        {"name": "title", "type": "Label", "view_path": "wrapper.header.title"},
+
+        {"name": "items_list", "type": "RewardItemsGrid", "view_path": "wrapper.itemsList"},
+        {"name": "items_list_title", "type": "Label", "view_path": "wrapper.itemsList.titleWrapper.title"},
+        {"name": "items_list_container", "type": "Component", "view_path": "wrapper.itemsList.container"},
+        {"name": "divider_bottom", "type": "Component", "view_path": "wrapper.itemsList.dividerBottom"},
+        {"name": "items_paginator", "type": "Component", "file": "common/paginator.json", "view_path": "wrapper.itemsList.paginator"},
+        
+        {"name": "description", "type": "Label", "view_path": "wrapper.descriptionContainer.description"},
+
+        {"name": "sale_tag", "type": "Component", "view_path": "wrapper.priceContainer.saleTag", "visible": false},
+        {"name": "sale_tag_label", "type": "Label", "view_path": "wrapper.priceContainer.saleTag.label"},
+
+        {"name": "price_container", "type": "Label", "view_path": "wrapper.priceContainer.priceWrapper"},
+
+        {"name": "initial_price_1", "type": "Label", "view_path": "wrapper.priceContainer.priceWrapper.oldPrice1", "visible": false},
+        {"name": "price_1", "type": "Label", "view_path": "wrapper.priceContainer.priceWrapper.price1", "visible": false},
+
+        {"name": "price_divider", "type": "Component", "view_path": "wrapper.priceContainer.priceWrapper.divider"},
+        {"name": "price_divider_label", "type": "Label", "view_path": "wrapper.priceContainer.priceWrapper.divider.label", "text": "@or_divider_label"},
+
+        {"name": "initial_price_2", "type": "Label", "view_path": "wrapper.priceContainer.priceWrapper.oldPrice2", "visible": false},
+        {"name": "price_2", "type": "Label", "view_path": "wrapper.priceContainer.priceWrapper.price2", "visible": false},
+        
+        { "name": "not_enough_currency", "type": "Component", "view_path": "wrapper.priceContainer.priceWrapper.currencyWarningWrapper" },
+        { "name": "not_enough_currency_label", "type": "Label", "view_path": "wrapper.priceContainer.priceWrapper.currencyWarningWrapper.label", "text": "@currency_purchase_window_title" },
+
+        {"name": "bought_container", "type": "Label", "view_path": "wrapper.priceContainer.boughtWrapper"},
+
+        {"name": "expire_container", "type": "Component", "view_path": "wrapper.expireWrapper"},
+        {"name": "expire_timer", "type": "Label", "view_path": "wrapper.expireWrapper.timerContainer.expireTimer"},
+
+        {"name": "buy_button", "type": "Button", "view_path": "wrapper.priceContainer.buyButton", "text": "@buy_label"},
+        {"name": "buy_button_hint", "type": "ActionLabel", "view_path": "wrapper.priceContainer.buyButton.wrapper.key", "gamepad_only": true}
+    ]
+}

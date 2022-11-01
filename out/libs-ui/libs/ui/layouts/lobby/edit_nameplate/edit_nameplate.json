@@ -1,0 +1,19 @@
+{
+    "script": "scripts/ui/lobby/edit_nameplate/edit_nameplate.lua",
+    "view_path": "EditNameplate.html",
+    "send_stats": true,
+    "children":
+    [
+        {"name": "screen_header", "type": "Component", "file": "common/screen_header.json"},
+
+        {"name": "wrapper", "type": "Component", "view_path": "wrapper"},
+
+        {"name": "nameplate", "type": "PlayerListItem", "view_path": "wrapper.preview.nameplate"},
+
+        {"name": "icons_list", "type": "RewardItemsGrid", "view_path": "wrapper.badgeIcons.listBox"},
+        {"name": "icons_container", "type": "Component", "view_path": "wrapper.badgeIcons.listBox.container"},
+
+        {"name": "backgrounds_list", "type": "RewardItemsGrid", "view_path": "wrapper.badgeBackgrounds.listBox"},
+        {"name": "backgrounds_container", "type": "Component", "view_path": "wrapper.badgeBackgrounds.listBox.container"}
+    ]
+}

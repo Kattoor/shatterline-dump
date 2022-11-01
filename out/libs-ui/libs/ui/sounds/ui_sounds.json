@@ -1,0 +1,126 @@
+{
+    "sounds":
+    [
+        {"event_name":"clicked", "sound_name": "ui_menu_click_01", "control_type": "Button"},
+        {"event_name":"clicked", "sound_name": "ui_menu_drop_box_01", "control_type": "ListItem"},
+        {"event_name":"mouse_overed", "sound_name": "ui_menu_mouseover_01", "control_type": "Button"},
+        {"event_name":"item_overed", "sound_name": "ui_menu_mouseover_01", "control_type" : "ItemsList"},
+        {"event_name":"mouse_overed", "sound_name": "ui_menu_mouseover_01", "control_type": "ListItem", "control_name" : "slot_btn"},
+        {"event_name":"mouse_overed", "sound_name": "ui_menu_mouseover_02", "control_type": "ListItem"},
+
+        {"event_name":"item_overed", "sound_name": "ui_menu_mouseover_02", "control_type": "ListBox"},
+        {"event_name":"item_selected", "sound_name": "ui_menu_click_01", "control_type": "ListBox"},
+        {"event_name":"item_overed", "sound_name": "ui_menu_mouseover_02", "control_type": "FiltersListBox"},
+        {"event_name":"item_selected", "sound_name": "ui_menu_click_01", "control_type": "FiltersListBox"},
+        {"event_name":"item_overed", "sound_name": "ui_menu_mouseover_02", "control_type": "RewardsList"},
+        {"event_name":"item_selected", "sound_name": "ui_menu_click_01", "control_type": "RewardsList"},
+
+        {"event_name":"item_overed", "sound_name": "ui_menu_mouseover_02", "control_type": "RewardItemsGrid"},
+        {"event_name":"item_selected", "sound_name": "ui_menu_click_01", "control_type": "RewardItemsGrid"},
+
+        {"event_name":"item_overed", "sound_name": "ui_menu_mouseover_02", "control_type": "TaskItemsList"},
+        {"event_name":"item_selected", "sound_name": "ui_menu_click_01", "control_type": "TaskItemsList"},
+
+        {"event_name":"item_overed", "sound_name": "ui_menu_mouseover_02", "control_type": "TaskCategoryList"},
+
+        {"event_name":"item_overed", "sound_name": "ui_menu_mouseover_02", "control_type": "TaskRewardsList"},
+        {"event_name":"item_selected", "sound_name": "ui_menu_click_01", "control_type": "TaskRewardsList"},
+
+        {"event_name":"item_overed", "sound_name": "ui_menu_mouseover_02", "control_type": "PlayerList"},
+        {"event_name":"item_selected", "sound_name": "ui_menu_click_01", "control_type": "PlayerList"},
+
+        {"event_name":"item_overed", "sound_name": "ui_menu_mouseover_02", "control_type": "ArmoryWeaponItemsGrid"},
+        {"event_name":"item_selected", "sound_name": "ui_menu_click_01", "control_type": "ArmoryWeaponItemsGrid"},
+
+        {"event_name":"item_overed", "sound_name": "ui_menu_mouseover_02", "control_type": "WeaponCustomizationItemsGrid"},
+        {"event_name":"item_selected", "sound_name": "ui_menu_click_01", "control_type": "WeaponCustomizationItemsGrid"},
+
+        {"event_name":"item_overed", "sound_name": "ui_menu_mouseover_02", "control_type": "HeroAbilitiesGrid"},
+        {"event_name":"item_selected", "sound_name": "ui_menu_click_01", "control_type": "HeroAbilitiesGrid"},
+
+        {"event_name":"item_overed", "sound_name": "ui_menu_mouseover_02", "control_type": "HeroSelectionGrid"},
+        {"event_name":"item_selected", "sound_name": "ui_menu_click_01", "control_type": "HeroSelectionGrid"},
+
+        {"event_name":"item_overed", "sound_name": "ui_menu_mouseover_02", "control_type": "HeroProgressionGrid"},
+        {"event_name":"item_selected", "sound_name": "ui_menu_click_01", "control_type": "HeroProgressionGrid"},
+
+        {"event_name":"animateTransition", "sound_name": "ui_menu_page_scroll_01", "control_type": "Component", "control_name":"pages"},
+        {"event_name":"item_selected", "sound_name": "ui_menu_weapon_select", "control_type" : "ItemsList", "control_name" : "items_list"},
+        {"event_name":"item_selected", "sound_name": "ui_menu_click_01", "control_type" : "ItemsList"},
+        {"event_name":"kill_feedback_headshot", "sound_name": "kill_headshot_feedback", "control_type": "HitFeedback"},
+        {"event_name":"kill_feedback", "sound_name": "kill_feedback", "control_type": "HitFeedback"},
+        {"event_name":"kill_assist_feedback", "sound_name": "kill_feedback", "control_type": "HitFeedback"},
+        {"event_name":"mouse_overed", "sound_name": "ui_menu_mouseover_02", "control_type": "Component"},
+        {"event_name":"clicked", "sound_name": "ui_menu_click_01", "control_type": "Component"},
+        
+        {"event_name":"weapon_level_up", "sound_name": "instant_reward", "control_type": "WeaponLevelUp"},
+
+        {"event_name":"clicked", "sound_name": "ui_menu_click_01", "control_type" : "ItemsList", "control_name" : "category_items"},
+        {"event_name":"mouse_overed", "sound_name": "ui_menu_mouseover_01", "control_type" : "ItemsList", "control_name" : "category_items"},
+        {"event_name":"clicked", "sound_name": "ui_menu_click_01", "control_type" : "Component", "control_name" : "categories_tabs"},
+        {"event_name":"mouse_overed", "sound_name": "ui_menu_mouseover_01", "control_type" : "Component", "control_name" : "categories_tabs"},
+        {"event_name":"clicked", "sound_name": "ui_menu_click_01", "control_type" : "ListItemComponent"},
+        {"event_name":"mouse_overed", "sound_name": "ui_menu_mouseover_01", "control_type" : "ListItemComponent"},
+        
+        {"event_name":"Ready", "sound_name": "item_ready", "control_type" : "StaminaIndicator", "control_name" : "StaminaIndicator"},
+        {"event_name":"restricted", "sound_name": "item_restricted", "control_type" : "StaminaIndicator", "control_name" : "StaminaIndicator"},
+
+        {"event_name":"Ready", "sound_name": "item_ult_weapon_ready", "control_type" : "Ability", "control_name" : "ultimate"},
+        {"event_name":"Ready", "sound_name": "item_ready", "control_type" : "Ability"},
+        {"event_name":"Restricted", "sound_name": "item_restricted", "control_type" : "Ability"},
+
+        {"event_name":"lobby_music", "sound_name": "lobby_music_halloween", "control_type": "Component", "control_name" : "lobby"},
+        {"event_name":"lobby_music_stop", "sound_name": "lobby_music_stop", "control_type": "Component", "control_name" : "lobby"},
+
+        {"event_name":"lobby_music_mute", "sound_name": "lobby_music_mute", "control_type": "Component"},
+        {"event_name":"lobby_music_unmute", "sound_name": "lobby_music_unmute", "control_type": "Component"},
+
+        {"event_name":"lobby_intro", "sound_name": "lobby_intro", "control_type": "Component", "control_name" : "pages"},
+        {"event_name":"lobby_intro_stop", "sound_name": "lobby_intro_stop", "control_type": "Component", "control_name" : "pages"},
+
+        {"event_name":"pvp_pregame", "sound_name": "pvp_pregame", "control_type": "Component", "control_name" : "pregame_hero_selection"},
+        {"event_name":"pvp_pregame_stop", "sound_name": "pvp_pregame_stop", "control_type": "Component", "control_name" : "pregame_hero_selection"},
+        {"event_name":"redlake_loading", "sound_name": "redlake_loading", "control_type": "Component", "control_name" : "pregame_hero_selection"},
+        {"event_name":"stormbringer_loading", "sound_name": "stb_loading", "control_type": "Component", "control_name" : "pregame_hero_selection"},
+        {"event_name":"hecatomb_loading", "sound_name": "hecatomb_loading", "control_type": "Component", "control_name" : "pregame_hero_selection"},
+        {"event_name":"bordercontrol_loading", "sound_name": "bc_loading_87bpm_loop", "control_type": "Component", "control_name" : "pregame_hero_selection"},
+        {"event_name":"march_loading", "sound_name": "march_loading", "control_type": "Component", "control_name" : "pregame_hero_selection"},
+        {"event_name":"invasion_loading", "sound_name": "invasion_loading", "control_type": "Component", "control_name" : "pregame_hero_selection"},
+        {"event_name":"invasion_loading_stop", "sound_name": "invasion_loading_stop", "control_type": "Component", "control_name" : "pregame_hero_selection"},
+        {"event_name":"hephaestus_loading", "sound_name": "hephaestus_loading", "control_type": "Component", "control_name" : "pregame_hero_selection"},
+
+        {"event_name":"clicked", "sound_name": "ui_menu_claim_reward", "control_type": "Button", "control_name" : "claim_btn"},
+
+        {"event_name":"clicked", "sound_name": "ui_menu_click_01", "control_type": "CheckBox"},
+
+        {"event_name":"perk_ready", "sound_name": "ui_menu_click_02", "control_type": "Image"},
+
+        {"event_name":"post_session_instant_rewards", "sound_name": "post_instant_rewards", "control_type": "SessionRewardsList", "control_name" : "instant_rewards"},
+        {"event_name":"post_session_instant_rewards_multiplier", "sound_name": "match_rewards", "control_type": "SessionRewardsList", "control_name" : "instant_rewards"},
+        {"event_name":"session_rewards", "sound_name": "medal_multiplier", "control_type": "SessionRewardsList", "control_name" : "session_rewards"},
+
+        {"event_name":"session_progression_xp_gain", "sound_name": "match_rewards", "control_type": "SessionProgressionHeroesList",  "control_name" : "hero_progression_list"},
+        {"event_name":"session_progression_level_up", "sound_name": "received_rewards", "control_type": "SessionProgressionHeroesList",  "control_name" : "hero_progression_list"},
+
+        {"event_name":"session_progression_xp_gain", "sound_name": "match_rewards", "control_type": "SessionProgressionWeaponsList",  "control_name" : "weapon_progression_list"},
+        {"event_name":"session_progression_level_up", "sound_name": "received_rewards", "control_type": "SessionProgressionWeaponsList",  "control_name" : "weapon_progression_list"},
+
+        {"event_name":"session_progression_shown", "sound_name": "rank_app", "control_type": "Component", "control_name" : "session_progression"},
+        {"event_name":"animation_started", "sound_name": "match_rewards", "control_type": "SessionProgressionArmoryTier", "control_name" : "tier_progression"},
+        {"event_name":"animation_started", "sound_name": "rank_up", "control_type": "SessionProgressionUnlockedTierWeapons", "control_name" : "unlocked_tier_weapons"},
+
+        {"event_name":"rank_up_achieved", "sound_name": "gacha_box_sfx", "control_type": "Component", "control_name" : "gacha_box"},
+        {"event_name":"rank_up_reward", "sound_name": "rank_up_reward", "control_type": "Component", "control_name" : "gacha_box"},
+
+        {"event_name":"task_progressing", "sound_name": "match_rewards", "control_type": "Component"},
+        {"event_name":"task_completed", "sound_name": "received_rewards", "control_type": "Component"},
+        {"event_name":"currency_recived", "sound_name": "rank_up_reward", "control_type": "Component"},
+        {"event_name":"item_recived", "sound_name": "medal_multiplier", "control_type": "Component"},
+        {"event_name":"season_claim_rewards", "sound_name": "rank_up_achieved", "control_type": "Component"},
+        {"event_name":"item_unlocked", "sound_name": "rank_loop_stop", "control_type": "Component"},
+
+        {"event_name":"window_show", "sound_name": "ui_party_status_show", "control_type": "Component"},
+        {"event_name":"window_hide", "sound_name": "ui_party_status_hide", "control_type": "Component"}
+    ]
+}
+

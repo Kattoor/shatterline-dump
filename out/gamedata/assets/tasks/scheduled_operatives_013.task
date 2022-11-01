@@ -1,0 +1,41 @@
+{
+  "name": "scheduled_operatives_013",
+  "type": "scheduled",
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "uncommon",
+  "display_name": { "localization_key": "@scheduled_operatives_013_name" },
+  "description": { "localization_key": "@scheduled_operatives_013_description" },
+  "conditions": [
+    {
+      "name": "scheduled_operatives_013_1",
+      "event_description": { "localization_key": "@scheduled_operatives_013_1_event_description" },
+       "event": { "event_id": "Throw", "actor_is_me": true, "actor_item_tag_is": ["WG"], "actor_player_preset_is":["h_strix"]},
+      "progress": 30
+    },
+    {
+      "name": "scheduled_operatives_013_2",
+      "event_description": { "localization_key": "@scheduled_operatives_013_2_event_description" },
+       "event": { "event_id": "Throw", "actor_is_me": true, "actor_item_tag_is": ["WG"], "actor_player_preset_is":["s_kite"]},
+      "progress": 30
+    }
+  ],
+  
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 2500
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 1500
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 20
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+       "destroy_on_act": false,
+       "time_to_action": 25,
+       "selection":
+       {
+          "quick_selection_duration": 0.0,
+          "quick_deselection_duration": 0.0,
+          "deselection_duration": 0.0,
+          "selection_duration": 0.0
+       },
+       "time_to_throw": 0.09,
+       "act_reason": "time",
+       "projectile":
+       {
+          "speed": 6.0,
+          "slice_name": "slices/projectiles/throwables/fdr01.dynamicslice",
+          "offset":
+          {
+             "z": -0.2,
+             "x": 0.0,
+             "y": 0.03
+          },
+          "velocity_character_multiplier": 2.0,
+          "angle": 20.0
+       },
+       "explosion_damage":
+       {
+          "points":
+          [
+             {
+                "distance": 0.0,
+                "damage": 30.0
+             },
+             {
+                "distance": 1.5,
+                "damage": 20.0
+             },
+             {
+                "distance": 1.5,
+                "damage": 0.0
+             }
+          ]
+       },
+       "time_to_destroy": 30.0,
+       "count": 1,
+       "common":
+       {
+          "item_tag": "FD"
+       },
+       "duration_throw": 0.23,
+       "duration_prepare": 0.15,
+       "can_cook": false
+    }

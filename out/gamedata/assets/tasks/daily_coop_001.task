@@ -1,0 +1,31 @@
+{
+  "name": "daily_coop_001",
+  "type": "daily",
+  "tags": [
+    "daily_coop"
+  ],
+  "image": "weekly_temp_icon",
+  "rarity": "uncommon",
+  "display_name": { "localization_key": "@daily_coop_001_name" },
+  "description": { "localization_key": "@daily_coop_001_description" },
+  "conditions": [
+    {
+      "name": "daily_coop_001",
+      "event_description": { "localization_key": "@daily_coop_001_event_description" },
+      "event": { "event_id": "HordeExtractionComplete", "actor_is_me": true, "game_mode_is": ["pve_horde"]},
+      "progress": 1
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 250
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 200
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "daily_pvp_153",
+  "type": "daily",
+  "tags": [
+  ],
+  "image": "weekly_temp_icon",
+  "rarity": "common",
+  "display_name": { "localization_key": "@daily_pvp_153_name" },
+  "description": { "localization_key": "@daily_pvp_153_description" },
+  "conditions": [
+    {
+      "name": "daily_pvp_153",
+      "event_description": { "localization_key": "@daily_pvp_153_event_description" },
+      "event": { "event_id": "PlayerLeaderboardResult", "actor_is_me": true, "actor_score_board_is_less_than": [4], "game_mode_is": ["esc"]},
+      "progress": 20
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 175
+    },
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 200
+    }
+  ]
+}

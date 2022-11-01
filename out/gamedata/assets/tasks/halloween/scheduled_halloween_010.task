@@ -1,0 +1,25 @@
+{
+  "name": "scheduled_halloween_010",
+  "type": "scheduled",
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "legendary",
+  "display_name": { "localization_key": "@scheduled_halloween_010_name" },
+  "description": { "localization_key": "@scheduled_halloween_010_description" },
+  "conditions": [
+    {
+      "name": "scheduled_halloween_010",
+      "event_description": { "localization_key": "@scheduled_halloween_010_event_description" },
+      "event": { "event_id": "HalloweenPumpkinSmashed", "actor_is_me": true},
+      "progress": 350
+    }
+  ],
+  
+  "rewards": [
+    {
+      "reward_type": "item",
+      "name": "wt78",
+      "amount": 1
+    }
+  ]
+}

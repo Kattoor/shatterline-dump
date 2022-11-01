@@ -1,0 +1,48 @@
+{
+  "name": "test_task8",
+  "type": "special",
+  "active": true,
+  "reset_on_events": [
+    { "event_id": "Death" , "actor_is_me": true },
+    { "event_id": "SessionFinish" },
+    { "event_id": "FinishRound" }
+  ],
+  "image": "test_icon",
+  "rarity": "common",
+  "display_name": { 
+    "localizations": {
+      "en-us": "Test task 8 (en-us)",
+      "uk-ua": "Test task 8 (uk-ua)",
+      "ja-jp": "Test task 8 (ja-jp)"
+    }
+  },
+  "description": { 
+    "localizations": {
+      "en-us": "Test task 8 description (en-us)",
+      "uk-ua": "Test task 8 description (uk-ua)",
+      "ja-jp": "Test task 8 description (ja-jp)"
+    }
+  },
+  "conditions": [
+    {
+      "name": "test_task8",
+      "event_description": { 
+        "localizations": {
+          "en-us": "Test task 8 event description (en-us)",
+          "uk-ua": "Test task 8 event description (uk-ua)",
+          "ja-jp": "Test task 8 event description (ja-jp)"
+        }
+      },
+      "event": { "event_id": "OnHit" , "actor_is_me": true },
+      "counter_type": "damage",
+      "progress": 175
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 1000
+    }
+  ]
+}

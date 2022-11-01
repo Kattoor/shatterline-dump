@@ -1,0 +1,61 @@
+{
+    "weapon_assets":
+    [
+        "pt09",
+        "invader_ultimate"
+    ],
+    "motion_sets":
+    [
+        "pt09_1p",
+        "pt09_wpn",
+        "pt09_3p",
+        "invader_ultimate01_1p",
+        "invader_ultimate01_wpn" 
+    ],
+    "binding_motions_to_parameters":
+    [
+
+        {
+            "motion": "deselect",
+            "weapon_parameter" : "item_deselection_duration"
+        },
+        {
+            "motion": "select",
+            "weapon_parameter" : "item_selection_duration",
+            "scale" : 1.0
+        },
+        {
+            "motion": "quick_deselect",
+            "weapon_parameter" : "item_quick_deselection_duration",
+            "scale" : 0.99
+        },
+        {
+            "motion": "ironsight_in",
+            "weapon_parameter" : "zoom_in_time"
+        },
+        {
+            "motion": "ironsight_out",
+            "weapon_parameter" : "zoom_out_time"
+        },
+        {
+            "motion": "fireloop",
+            "weapon_parameter" : "rpm",
+            "scale" : 0.8
+        },
+        {
+            "motion": "ironsight_fireloop",
+            "weapon_parameter" : "rpm",
+            "scale" : 1.0
+        },
+        {
+            "motion": "fire_add_3p_01",
+            "weapon_parameter" : "rpm",
+            "scale" : 0.85
+        },
+        {
+            "motion": "stand_select_rifle_3p_01",
+            "weapon_parameter" : "item_selection_duration",
+            "scale" : 0.6
+        }        
+    ]
+}

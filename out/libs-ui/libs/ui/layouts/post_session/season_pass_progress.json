@@ -1,0 +1,38 @@
+{
+    "script": "scripts/ui/post_session/season_pass_progress.lua",
+    "view_path": "SeasonPassProgression.html",
+    "send_stats": true,
+    "children": [
+        {"name": "season_pass_progress_widget", "type": "Component", "view_path": "wrapper.seasonProgressWrapper.seasonProgress", "file": "post_session/season_pass_progress_widget.json"},
+        {"name": "background", "type": "Component", "file": "lobby/lobby_background.json"},
+
+        {"name": "content_wrapper", "type": "Component", "view_path": "wrapper.contentWrapper"},
+
+        {"name": "tasks_title", "type": "Label", "view_path": "wrapper.contentWrapper.tasksWrapper.titleWrapper.textWrapper.title", "text" : "@updated_tasks"},
+        {"name": "tasks_list", "type": "TaskProgressList", "view_path": "wrapper.contentWrapper.tasksWrapper.tasksList"},
+        {"name": "tasks_list_container", "type": "Component", "view_path": "wrapper.contentWrapper.tasksWrapper.tasksList.container.contentContainer"},
+
+        {"name": "match_rewards_title", "type": "Label", "view_path": "wrapper.contentWrapper.currenciesWrapper.matchRewards.matchRewardsTitleWrapper.textWrapper.title", "text" : "@match_rewards"},
+        {"name": "match_rewards_list", "type": "CurrencyList", "view_path": "wrapper.contentWrapper.currenciesWrapper.matchRewards.matchRewardsList"},
+
+        {"name": "progression_rewards", "type": "Component", "view_path": "wrapper.contentWrapper.currenciesWrapper.progressionRewards", "visible": false},
+        {"name": "progression_rewards_title", "type": "Label", "view_path": "wrapper.contentWrapper.currenciesWrapper.progressionRewards.progressionRewardsTitleWrapper.textWrapper.title", "text" : "@progression_rewards"},
+        {"name": "progression_rewards_list", "type": "CurrencyList", "view_path": "wrapper.contentWrapper.currenciesWrapper.progressionRewards.progressionRewardsList"},
+
+        {"name": "total_rewards", "type": "Component", "view_path": "wrapper.contentWrapper.currenciesWrapper.totalRewards", "visible": false},
+        {"name": "total_rewards_title", "type": "Label", "view_path": "wrapper.contentWrapper.currenciesWrapper.totalRewards.totalRewardsTitleWrapper.textWrapper.title", "text" : "@total_rewards"},
+        {"name": "total_rewards_list", "type": "CurrencyList", "view_path": "wrapper.contentWrapper.currenciesWrapper.totalRewards.totalRewardsList"},
+
+        {"name": "rewards", "type": "Component", "view_path": "wrapper.contentWrapper.rewardsWrapper"},
+        {"name": "rewards_title", "type": "Label", "view_path": "wrapper.contentWrapper.rewardsWrapper.titleWrapper.textWrapper.title", "text" : "@received_rewards"},
+        {"name": "rewards_list", "type": "RewardItemsGrid", "view_path": "wrapper.contentWrapper.rewardsWrapper.rewardsList"},
+        {"name": "rewards_list_container", "type": "Component", "view_path": "wrapper.contentWrapper.rewardsWrapper.rewardsList.container"},
+
+        {"name": "reward_info", "type": "Control", "view_path": "wrapper.contentWrapper.rewardsWrapper.rewardInfo", "visible": false},
+        {"name": "reward_type", "type": "Label", "view_path": "wrapper.contentWrapper.rewardsWrapper.rewardInfo.type"},
+        {"name": "reward_title", "type": "Label", "view_path": "wrapper.contentWrapper.rewardsWrapper.rewardInfo.title"},
+
+        {"name": "skip_button", "type": "Button", "view_path": "wrapper.skipButton", "text": "@btn_skip", "visible": false},
+        {"name": "fader", "type": "Component", "view_path": "loadingFader", "visible": false}
+    ]
+}

@@ -1,0 +1,37 @@
+{
+  "name": "daily_operative_ability_024",
+  "type": "daily",
+  "tags": [
+    "daily_operative_ability"
+  ],
+  "image": "weekly_temp_icon",
+  "rarity": "rare",
+  "display_name": { "localization_key": "@daily_operative_ability_024_name" },
+  "description": { "localization_key": "@daily_operative_ability_024_description" },
+  "conditions": [
+    {
+      "name": "daily_operative_ability_024",
+      "event_description": { "localization_key": "@daily_operative_ability_024_event_description" },
+      "event": { "event_id": "DoubleKill", "actor_item_tag_is": ["CG"], "game_type_is": ["pve"], "actor_player_preset_is":["a_orbit"], "actor_is_me": true},
+      "progress": 10
+    }
+  ],
+  
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 300
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 250
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 5
+    }
+  ]
+}

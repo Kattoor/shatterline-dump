@@ -1,0 +1,41 @@
+<ParticleLibrary Name="muzzleflash_sr_ai" SandboxVersion="1.28.0.0" ParticleVersion="33">
+ <Particles Name="sr01_ai_tp">
+  <Params Count="1" EmitterSizeDiameter="5" LocalRandomAngles="y=180" ParticleLifeTime="2" Facing="Free" BlendType="Additive" DiffuseLighting="0" EmissiveLighting="1" MoveRelEmitter="Yes" RandomAngles="y=180"/>
+  <Childs>
+   <Particles Name="glow_4points_a_hi_med">
+    <Params Count="1" EmitterSizeDiameter="5" LocalRandomAngles="y=360" ParticleLifeTime="0.03" FocusAngle="90" FocusAzimuth="180" EmitAngle="0.6,Random=1" BlendType="Additive" Texture="textures/sprites/muzzleflash/muzzle_4points_c.dds" TextureTiling="TilesX=2,TilesY=2" Alpha="0.5,ParticleAge=(v=1,flags=36;t=0.596,v=1,flags=9;t=1,flags=9)" DiffuseLighting="0" EmissiveLighting="10" NotAffectedByFog="true" SizeX="0.7,Random=0.5,ParticleAge=(v=0.514;t=1,v=1)" SizeY="0.7,Random=0.5,ParticleAge=(v=0.514;t=1,v=1)" SizeZ="0.7,Random=0.5,ParticleAge=(v=0.514;t=1,v=1)" MinPixels="1" MoveRelEmitter="Yes" RandomAngles="y=360" RotationRateY="200,Random=0.5" SortOffset="0.01" FillRateCost="0"/>
+   </Particles>
+   <Particles Name="light">
+    <Params Count="1" EmitterSizeDiameter="5" LocalSpawnPosOffset="y=0.22" ParticleLifeTime="0.04" SpawnPosOffset="y=0.22" Curvature="0" Alpha="0.2" Color="(x=0.838799,y=0.527115,z=0.152926)" DiffuseLighting="0" LightSource="Radius=4,Intensity=0.6" CameraNonFacingFade="FadeCurve=(;t=1,v=1)" ViewDistanceAdjust="0.5" CameraMaxDistance="50"/>
+   </Particles>
+   <Particles Name="flame_b_petals_hi_med">
+    <Params Count="0.75,Random=1" EmitterSizeDiameter="5" LocalSpawnPosOffset="z=0.02" LocalRandomAngles="y=360" ParticleLifeTime="0.03" SpawnPosOffset="z=0.02" FocusAngle="90" FocusAzimuth="180" EmitAngle="0.6,Random=1" BlendType="Additive" Texture="textures/sprites/fire/fire_anim_petals_d.dds" TextureTiling="TilesX=5,TilesY=5,AnimFramesCount=25,AnimBlend=true" DiffuseLighting="0" EmissiveLighting="1" NotAffectedByFog="true" SizeX="0.2,Random=0.7" SizeY="0.2,Random=0.7" SizeZ="0.2,Random=0.7" MinPixels="30" Speed="10" MoveRelEmitter="Yes" RandomAngles="y=360" SortOffset="0.01" FillRateCost="0"/>
+   </Particles>
+   <Particles Name="refraction_hi">
+    <Params Count="1" EmitterSizeDiameter="5" LocalRandomAngles="y=180" LocalStretch="0.1" ParticleLifeTime="0.05" FocusAngle="90" FocusAzimuth="180" EmitAngle="10,Random=1" Curvature="0" Material="materials/particles/refraction_c" Alpha="0.51,ParticleAge=(v=1;t=1)" DiffuseLighting="0" NotAffectedByFog="true" SizeX="0.6,Random=0.178,ParticleAge=(v=0.082,d=0.91764706,flags=32;t=1,v=1,s=0.91764706,flags=4)" SizeY="0.6,Random=0.178,ParticleAge=(v=0.082,d=0.91764706,flags=32;t=1,v=1,s=0.91764706,flags=4)" SizeZ="0.6,Random=0.178,ParticleAge=(v=0.082,d=0.91764706,flags=32;t=1,v=1,s=0.91764706,flags=4)" Stretch="0.1" Speed="20" AirResistance="0.5" RandomAngles="y=180" FillRateCost="0" ConfigMin="Medium"/>
+   </Particles>
+   <Particles Name="flame_a_geometry_hi_med">
+    <Params Count="0.8,Random=1" EmitterSizeDiameter="5" LocalSpawnPosOffset="y=0.01" ParticleLifeTime="0.03" SpawnPosOffset="y=0.01" FocusAngle="90" Facing="Free" FacingGpu="Free" Curvature="0" BlendType="Additive" GeometryPieces="RandomPiece" NoOffset="true" DiffuseLighting="0" EmissiveLighting="0.5" NotAffectedByFog="true" LightSource="Radius=(Random=0.4),Intensity=(Random=0.5)" SizeX="0.6,ParticleAge=(v=0.8,d=0.19999993,flags=36;t=1,v=1,s=0.19999993,flags=36)" SizeY="0.6,ParticleAge=(v=0.8,d=0.19999993,flags=36;t=1,v=1,s=0.19999993,flags=36)" SizeZ="0.6,ParticleAge=(v=0.8,d=0.19999993,flags=36;t=1,v=1,s=0.19999993,flags=36)" MinPixels="10" Speed="Random=0.7" MoveRelEmitter="Yes" SortOffset="0.01" FillRateCost="0"/>
+   </Particles>
+   <Particles Name="dummy_smoke_hi">
+    <Params Count="0.8,Random=1" EmitterSizeDiameter="5" ParticleLifeTime="1" Curvature="0" CameraNonFacingFade="FadeCurve=(;t=1,v=1)" ConfigMin="Medium"/>
+    <Childs>
+     <Particles Name="smoke_a_hi">
+      <Params SpawnIndirection="ParentStart" Count="5" EmitterSizeDiameter="5" LocalRandomAngles="y=180" LocalStretch="0.05,ParticleAge=(v=1;t=1)" ParticleLifeTime="0.9,Random=1" FocusAngle="90" FocusAzimuth="180" EmitAngle="5,Random=1" Curvature="0.6" TextureTiling="TilesX=9,TilesY=9,FirstTile=20,AnimFramesCount=61" Material="materials/particles/smoke_anim_a_medium" Tessellation="true" SoftParticle="true" Alpha="0.1,ParticleAge=(v=0.047;t=0.035,v=1;t=0.29,v=1,flags=9;t=1)" AlphaClip="SourceMin=(Min=0.1,Max=0.3)" Color="(x=0.571125,y=0.701102,z=0.7529423)" DiffuseBacklighting="0.6" EnvProbeLighting="0.5" ReceiveShadows="true" SizeX="0.6,Random=0.5,ParticleAge=(;t=0.137,v=0.52,d=0.9568627,flags=32;t=0.99,v=1)" SizeY="0.6,Random=0.5,ParticleAge=(;t=0.137,v=0.52,d=0.9568627,flags=32;t=0.99,v=1)" SizeZ="0.6,Random=0.5,ParticleAge=(;t=0.137,v=0.52,d=0.9568627,flags=32;t=0.99,v=1)" Stretch="0.05,ParticleAge=(v=1;t=1)" Speed="10,Random=0.8" InheritVelocity="0.5" AirResistance="5" RandomAngles="y=180" FillRateCost="0" ConfigMin="Medium"/>
+     </Particles>
+    </Childs>
+   </Particles>
+   <Particles Name="dummy_smoke_med">
+    <Params Count="0.8,Random=1" EmitterSizeDiameter="5" ParticleLifeTime="1" Curvature="0" CameraNonFacingFade="FadeCurve=(;t=1,v=1)" ConfigMax="Low"/>
+    <Childs>
+     <Particles Name="smoke_a_med">
+      <Params SpawnIndirection="ParentStart" Count="5" EmitterSizeDiameter="5" LocalRandomAngles="y=180" LocalStretch="0.05,ParticleAge=(v=1;t=1)" ParticleLifeTime="0.9,Random=1" FocusAngle="90" FocusAzimuth="180" EmitAngle="5,Random=1" Curvature="0.6" Texture="textures/sprites/smoke/smoke_medium_a_anim.dds" TextureTiling="TilesX=9,TilesY=9,FirstTile=20,AnimFramesCount=61" Tessellation="true" SoftParticle="true" Alpha="0.15,ParticleAge=(v=0.047;t=0.035,v=1;t=0.29,v=1,flags=9;t=1)" AlphaClip="SourceMin=(Min=0.2,Max=0.4)" DiffuseLighting="0" EmissiveLighting="1" ReceiveShadows="true" SizeX="0.6,Random=0.5,ParticleAge=(;t=0.137,v=0.52,d=0.9568627,flags=32;t=0.99,v=1)" SizeY="0.6,Random=0.5,ParticleAge=(;t=0.137,v=0.52,d=0.9568627,flags=32;t=0.99,v=1)" SizeZ="0.6,Random=0.5,ParticleAge=(;t=0.137,v=0.52,d=0.9568627,flags=32;t=0.99,v=1)" Stretch="0.05,ParticleAge=(v=1;t=1)" Speed="10,Random=0.8" InheritVelocity="0.5" AirResistance="5" RandomAngles="y=180" FillRateCost="0" ConfigMax="Low"/>
+     </Particles>
+    </Childs>
+   </Particles>
+   <Particles Name="flame_6points_a_hi_med_low">
+    <Params Count="1" EmitterSizeDiameter="5" LocalRandomAngles="y=360" ParticleLifeTime="0.03" FocusAngle="90" FocusAzimuth="180" Curvature="0" BlendType="Additive" Texture="textures/sprites/muzzleflash/muzzle_6points_b.dds" TextureTiling="TilesX=3,TilesY=2,FirstTile=3,HorizontalFlipChance=1" Alpha="0.9" Color="(x=0.806952,y=0.473532,z=0.104616)" DiffuseLighting="0" EmissiveLighting="7" NotAffectedByFog="true" SizeX="0.25,Random=0.2,ParticleAge=(v=0.81,d=0.18823522,flags=36;t=1,v=1,s=0.18823522,flags=36)" SizeY="0.15625,Random=0.2,ParticleAge=(v=0.81,d=0.18823522,flags=36;t=1,v=1,s=0.18823522,flags=36)" SizeZ="0.15625,Random=0.2,ParticleAge=(v=0.81,d=0.18823522,flags=36;t=1,v=1,s=0.18823522,flags=36)" MinPixels="20" GravityScale="Random=0.5" MoveRelEmitter="Yes" RandomAngles="y=360" CameraNonFacingFade="FadeCurve=(;t=1,v=1)" SortOffset="0.01" FillRateCost="0"/>
+   </Particles>
+  </Childs>
+ </Particles>
+</ParticleLibrary>

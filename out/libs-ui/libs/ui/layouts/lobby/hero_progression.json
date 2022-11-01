@@ -1,0 +1,25 @@
+{
+    "script": "scripts/ui/lobby/hero_progression.lua",
+    "view_path": "HeroProgression.html",
+    "children": [
+
+        { "name": "hero_progress_container", "type": "Component", "view_path": "content.info.heroProgressWrapper"},
+
+        { "name": "progress_list", "type": "HeroProgressionGrid", "view_path": "content.info.progressionList" },
+        { "name": "progress_list_container", "type": "Component", "view_path": "content.info.progressionList.container.contentContainer" },
+
+        { "name": "description_container", "type": "Component", "view_path": "content.description" },
+
+        { "name": "title", "type": "Label", "view_path": "content.description.titleWrapper.title" },
+
+        { "name": "locked", "type": "Component", "view_path": "content.description.lockedWrapper.lock" },
+        { "name": "unlocked", "type": "Component", "view_path": "content.description.lockedWrapper.unlock" },
+        { "name": "locked_level", "type": "Label", "view_path": "content.description.lockedWrapper.level" },
+
+        { "name": "video_container", "type": "Component", "view_path": "content.description.videoWrapper", "visible": true },
+        { "name": "video", "type": "Video", "view_path": "content.description.videoWrapper.video", "loop": true, "background": true },
+
+        { "name": "description", "type": "Label", "view_path": "content.description.text" }
+
+    ]
+}

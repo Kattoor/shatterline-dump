@@ -1,0 +1,118 @@
+{
+    "sounds": {
+        "sets": [
+            {
+                "tag": "default",
+                "triggers": {
+                    "fire_prepare": "pt_09_powerup",
+                    "fire_start": "pt09_fire_01",
+                    "fire_prepare_cancel": "pt09_canceled"
+                }
+            }
+        ],
+        "tag": "default"
+    },
+    "selection": {
+        "selection_celebration_duration": 1.85,
+        "nearest_camera_offset": {
+            "z": -0.03,
+            "x": 0.04,
+            "y": -0.02
+        },
+        "deselection_duration": 0.2,
+        "quick_deselection_duration": 0.15,       
+        "selection_duration": 1.0,
+        "nearest_camera_rotation": {
+            "pitch": 0.0,
+            "roll": 0.0,
+            "yaw": 0.0
+        },
+        "nearest_view_fov": 45.0
+    },
+    "spread": {
+        "max_hip_spread": 0.0,
+        "decay_time": 0.4,
+        "slide_multiplier": 0.5,
+        "zoom_multiplier": 0.15,
+        "crouch_multiplier": 0.25,
+        "hip_step": 0.15,
+        "crouch_idle_multiplier": 0.2,
+        "min_hip_spread": 0.0,
+        "decay_delay": 0.1,
+        "stand_multiplier": 0.3,
+        "walk_multiplier": 0.5,
+        "jump_multiplier": 2.0
+    },
+    "zoom": {
+        "weapon_offset": {
+            "z": 0.0,
+            "x": 0.0,
+            "y": 0.0
+        },
+        "delay_after_jump": 0.3,
+        "weapon_fov": 25.0,
+        "zoom_out_time": 0.11,
+        "nearest_camera_rotation": {
+            "pitch": 0.0,
+            "roll": 0.0,
+            "yaw": 0.0
+        },
+        "hide_crosshair": false,
+        "zoom_fov": 48.0,
+        "zoom_in_time": 0.11,
+        "in_air": true
+    },
+    "common": {
+        "item_tag": "ULT"
+    },
+    "muzzle_sight_distance": 1.0,
+    "shooting": {
+        "base_damage_distribution": {
+            "points": [
+                {
+                    "distance": 0.0,
+                    "damage": 300.0
+                }
+            ]
+        },
+        "pierceability": {
+            "type": "survivor",
+            "pierceability_level": 3
+        },
+        "interrupt_idle_to_shoot": false,
+        "backpack_capacity": 0,
+        "chamber_capacity": 4,
+        "shoot_projectile_type": "raycast",
+        "chambers_fired_per_shot": 1,
+        "idle_to_shoot_time": 0.48,
+        "hit_feedback": "server",
+        "rpm": 260.0,
+        "auto_reload_mode": "Chamber",
+        "bullet_type": "Crystallinepistol",
+        "clip_capacity": 0,
+        "reload": {
+            "reload_time": 2.2,
+            "reload_out_complete_threshold": 0.7,
+            "reload_in_complete_threshold": 0.7
+        }
+    },
+    "recoil": {
+        "kick_time": 0.1,
+        "decay_time": 0.4,
+        "max_vertical_angle": 20.0,
+        "decay_delay": 0.0,
+        "recoil_points": [
+            {
+                "num": 1,
+                "force": {
+                    "min": 1.05,
+                    "max": 1.22
+                },
+                "angle": {
+                    "min": -20.0,
+                    "max": 20.0
+                }
+            }
+        ]
+    }
+}

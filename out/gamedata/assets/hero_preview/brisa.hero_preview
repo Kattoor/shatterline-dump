@@ -1,0 +1,160 @@
+{
+    "stages": {
+        "play_page": {
+            "outfits": {
+                "default": {
+                    "inventory_slot": "",
+                    "motion_in": "presentation_brisa_in_01",
+                    "motion_idle": "presentation_brisa_idle_01",
+                    "greeting": "chr_pres_brisa_no_vo",
+                    "animation_controlled_rotation": false,
+                    "attachments": [
+                        {
+                            "slice": "slices/animals/crystalline_bird_brisa_presenatation.dynamicslice",
+                            "target_bone": "bn_02",
+                            "motion_in": "presentation_in_01",
+                            "motion_idle": "presentation_idle_01"
+                        },
+                        {
+                            "slice": "slices/inventory/sniper_rifles/sr05_presentation_fp.dynamicslice",
+                            "target_bone": "bn_01"
+                        },
+                        {
+                            "slice": "slices/vfx/lobby_characters/vfx_lobby_brisa.dynamicslice",
+                            "target_bone": "bn_01"
+                        },
+                        {
+                            "slice": "slices/vfx/lobby_characters/vfx_lobby_brisa_smoke.dynamicslice",
+                            "target_bone": "Bip01"
+                        },
+                        {
+                            "slice": "slices/vfx/lobby_characters/vfx_lobby_brisa_crystalline.dynamicslice",
+                            "target_bone": "bn_01"
+                        },
+                        {
+                            "slice": "slices/animals/feather_brisa_presenatation_02.dynamicslice",
+                            "target_bone": "bn_03"
+                        },
+                        {
+                            "slice": "slices/animals/feather_brisa_presenatation_01.dynamicslice",
+                            "target_bone": "bn_04"
+                        }
+                    ],
+                    "hero_rotation": {
+                        "rotation_limit_min": 25.0,
+                        "rotation_limit_max": 25.0,
+                        "dynamic_angular_speed": true
+                    }
+                }
+            }
+        },
+        "hero_selection": {
+            "outfits": {
+                "default": {
+                    "inventory_slot": "",
+                    "motion_in": "hero_selection_brisa_01",
+                    "motion_idle": "hero_selection_brisa_01",
+                    "greeting": "chr_pres_brisa",
+                    "animation_controlled_rotation": false,
+                    "name_image": "objects/lobby/hero_names/lobby_hero_name_brisa.mtl",
+                    "background_image": "objects/lobby/lobby_hero_bg_mat.mtl"
+                }
+            }
+        },
+        "hero_container": {
+            "outfits": {
+                "default": {
+                    "inventory_slot": "",
+                    "motion_in": "customize_brisa_in_01",
+                    "motion_idle": "customize_brisa_idle_01",
+                    "greeting": "chr_cust_brisa",
+                    "hero_rotation": 
+                    {
+                        "rollback" : false
+                    }
+                }
+            }
+        },
+        "hero_equipment": {
+            "outfits": {
+                "default": {
+                    "inventory_slot": "primary_weapon",
+                    "motion_in": "lobby_idle_brisa_01",
+                    "motion_idle": "lobby_idle_brisa_01",
+                    "hero_rotation": 
+                    {
+                        "rollback" : false
+                    }
+                }
+            }
+        },
+        "hero_progression": {
+            "outfits": {
+                "default": {
+                    "inventory_slot": "primary_weapon",
+                    "motion_in": "lobby_idle_brisa_01",
+                    "motion_idle": "lobby_idle_brisa_01",
+                    "hero_rotation": 
+                    {
+                        "rollback" : false
+                    }
+                }
+            }
+        },
+        "pregame_hero_selection": {
+            "outfits": {
+                "default": {
+                    "inventory_slot": "primary_weapon",
+                    "motion_in": "lobby_idle_brisa_01",
+                    "motion_idle": "lobby_idle_brisa_01"
+                }
+            }
+        },
+        "session_mvp": {
+            "outfits": {
+                "default": {
+                    "inventory_slot": "primary_weapon",
+                    "win_pose_active": true,
+                    "motion_in": "result_screen_female_01_in",
+                    "motion_idle": "result_screen_female_01_idle"
+                }
+            }
+        },
+        "session_tasks": {
+            "outfits": {
+                "default": {
+                    "inventory_slot": "primary_weapon",
+                    "motion_in": "lobby_idle_brisa_01",
+                    "motion_idle": "lobby_idle_brisa_01"
+                }
+            }
+        },
+        "session_rewards": {
+            "outfits": {
+                "default": {
+                    "inventory_slot": "primary_weapon",
+                    "motion_in": "lobby_idle_brisa_01",
+                    "motion_idle": "lobby_idle_brisa_01"
+                }
+            }
+        },
+        "session_details": {
+            "outfits": {
+                "default": {
+                    "inventory_slot": "primary_weapon",
+                    "motion_in": "lobby_idle_brisa_01",
+                    "motion_idle": "lobby_idle_brisa_01"
+                }
+            }
+        },
+        "session_performance": {
+            "outfits": {
+                "default": {
+                    "inventory_slot": "primary_weapon",
+                    "motion_in": "lobby_result_screen_04",
+                    "motion_idle": "lobby_result_screen_04"
+                }
+            }
+        }
+    }
+}

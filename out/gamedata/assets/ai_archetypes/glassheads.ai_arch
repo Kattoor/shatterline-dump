@@ -1,0 +1,2095 @@
+
+{
+    "ai_archetypes":
+    [
+
+        {
+            "name": "glasshead",
+            "add_tags":["GlassheadAI", "RegularAI"],
+            "display_name": "@glasshead_worker",
+            "tags": ["Glasshead", "(2) Glasshead: Basic melee"],
+            "slice": "slices/ai/glasshead_worker_1_melee_basic.dynamicslice",
+            "tp_slice": "slices/ai/glasshead_mid02_tp.dynamicslice",
+            "vo_profile": "Glasshead",
+            "competitor": "Glasshead",
+            "enemy_type": "regular_melee",
+            "grade": "normal",
+            "health": 125,
+            "hud_marker": "trash_hp_marker_head",
+            "aabb_box": {
+                "width": 1.2,
+                "length": 1.2,
+                "height": 2.0
+            },
+            "behavior":
+            {
+                "behavior_tree": "BehaviorSelector",
+                "profile": "Melee",
+                "params":
+                {
+                    "alldead_leave_min_dist": "10",
+                    "alldead_leave_max_dist": "40",
+                    "alldead_move_start_min_delay": "2",
+                    "alldead_move_start_max_delay": "5",
+                    "before_run_attack_duration": "5",
+                    "before_run_attack_velocity": "5",
+                    "before_run_attack_distance": "7",
+                    "run_attack_velocity": "6",
+                    "run_attack_velocity_duration": "0.75",
+                    "run_attack_target_velocity_duration": "0.75",
+                    
+                    "approach_range": "1.75",
+                    "melee_range_in": "2.7",
+                    "melee_range_out": "3.5",
+                    "melee_vertical_range": "1.7",
+                    "melee_point_blank_range": "1.0",
+                    "melee_combo_count_min": "3",
+                    "melee_combo_count_max": "5",
+                    "melee_combo_complete_count":"3"
+                }
+            },
+            "microbehaviors":
+            [
+                {
+                    "name": "EvadingMoveUnderFire",
+                    "params":
+                    {
+                        "probability": "0.4",
+                        "source_delay_min": "2",
+                        "source_delay_max": "3",
+                        "global_freq_count": "8",
+                        "global_freq_time": "1.0",
+                        "global_delay_min": "0.1",
+                        "global_delay_max": "0.2",
+                        "anim_duration": "0.6",
+                        "move_impulse": "3.5",
+                        "impulse_start":"0",
+                        "impulse_end":"0.4"
+                    }
+                },
+                {
+                    "name": "EvadingMoveWhenTargeted",
+                    "params":
+                    {
+                        "probability":"0.3",
+                        "source_delay_min":"4",
+                        "source_delay_max":"6",
+                        "global_freq_count":"8",
+                        "global_freq_time":"1.0",
+                        "global_delay_min":"0.1",
+                        "global_delay_max":"0.15",
+                        "anim_duration": "0.6",
+                        "move_impulse": "3.5",
+                        "impulse_start": "0",
+                        "impulse_end": "0.4"
+                    }
+                },
+                { "name": "RageAnim" }
+            ],
+            "equip":
+            [
+                {
+                    "item": "ml01_ai",
+                    "damage_multiplier": 0.37,
+                    "params":
+                    {
+                        "effective_distance_min": "5.5",
+                        "effective_distance_max": "7",
+                        "attack_distance": "2.3",
+                        "combo_min_hits": "2",
+                        "combo_max_hits": "3"
+                    }
+                },
+                {
+                    "item": "ml05_glasshead_run_attack_ai",
+                    "damage_multiplier": 0.87
+                }
+            ],
+            "perception":
+            {
+                "sight_range": 50.0,
+                "sound_stimulus_scale": 0.0,
+                
+                "weight_inc_step": 50,
+                "weight_inc_time": 0.3,
+                "weight_dec_step": 50,
+                "weight_dec_time": 0.7
+            },
+            "speed":
+            {
+                "run": 6.6,
+                "walk": 3,
+                "strafe": 3,
+                "back": 3,
+                "crouch": 4,
+                "fire": 4.9
+            },
+            "target_selection":
+            {
+                "tag_distance":
+                {
+                    "Player":
+                    {
+                        "visibility_cone_angle": 0,
+                        "weights":
+                        [
+                            {
+                                "weight":30,
+                                "distance":11
+                            }
+                        ]
+                    },
+                    "Breakable":
+                    {
+                        "weights":
+                        [
+                            {
+                                "weight":20,
+                                "distance":6
+                            }
+                        ]
+                    }
+                },
+                "tag_weights":
+                {
+                    "MeleePriority": 100,
+                    "InvisibleAI": -500,
+                    "Strafer": -25,
+                    "Drone": -100,
+                    "NPC": -250
+                },
+                "thresholds":
+                {
+                    "critical_range": 5,
+                    "damage_dealer_duration": 2.7,
+                    "attention_max_duration": 10, "attention_restore_cooldown": 5
+                },
+                "weights":
+                {
+                    "melee": true,
+                    "reachable": 10.0,
+                    "critical_range": 50,
+                    "damage_dealer": 0,
+                    "target_visible": 15,
+                    "target_sound": 10,
+                    "target_memory": 5,
+                    "attention_max_duration": 0
+                }
+            },
+            "wounds":
+            {
+                "impulse":
+                {
+                    "profile": "Glasshead",
+                    "value": 50.0,
+                    "ignore_impulse": false,
+                    "prob": 1.0,
+                    "cooldown_min": 0.0,
+                    "cooldown_max": 0.0
+                },
+                "damage":
+                {
+                    "profile": "Glasshead",
+                    "value": 28.0,
+                    "time": 0.02,
+                    "prob": 1.0,
+                    "cooldown_min": 3.0,
+                    "cooldown_max": 5.0
+                },
+                "cooldown_min": 0.0,
+                "cooldown_max": 0.0
+            },
+            "death":
+            {
+                "actions":
+                {
+                    "dissolve":
+                    [
+                        {
+                            "hit_types": ["AOE"],
+                            "delay": 0.0,
+                            "time": 1.5,
+                            "target_dissolve": 1.0
+                        },
+                        {
+                            "hit_types": ["DOT"],
+                            "delay": 0.5,
+                            "time": 2.3,
+                            "target_dissolve": 1.0
+                        }
+                    ]
+                }
+            },
+            "hit_reactions":
+            {
+                "animation": "Glasshead",
+                "damage": 10,
+                "probability": 0.9
+            },
+            "slow_down_effect":
+            {
+                "slow_down_speed": 0.1,
+                "damage_threshold": 35,
+                "time_threshold": 0.1,
+                "effect_time": 0.3,
+                "max_effect_time": 1.0,
+                "bullet_type": ["Rifle", "Shotgun", "Sniper", "Pistol"]
+            },
+            "navlinks":
+            [
+                {
+                    "name": "navlink_1",
+                    "params": { "probability": 1 }
+                },
+                {
+                    "name": "navlink_2",
+                    "params": { "probability": 1 }
+                },
+                {
+                    "name": "navlink_3",
+                    "params": { "probability": 1 }
+                },
+                {
+                    "name": "navlink_4",
+                    "params": { "probability": 1 }
+                }
+            ],
+            "navlinks_movement_type": "AnimationDriven",
+            "dynamic_avoidance_radius":
+            {
+                "ranges":
+                [
+                    {
+                        "range": 10,
+                        "multiplier": 2
+                    },
+                    {
+                        "range": 20,
+                        "multiplier": 3
+                    },
+                    {
+                        "range": 30,
+                        "multiplier": 5
+                    }
+                ]
+            },
+            "avoidance_radius_multiplier": 1,
+            "body_turn_speed": [{"angle":0, "speed":270}, {"angle":120, "speed":720}],
+            "leave_dead_body": true,
+            "can_be_blinded": true
+        },
+
+        {
+            "name": "glasshead_grade2",
+            "display_name": "@glasshead_worker_grade2",
+            "parent": "glasshead",
+            "grade": "grade2",
+            "tp_slice": "slices/ai/glasshead_skins/glasshead_grade2_tp.dynamicslice",
+            "health": 135,
+            "behavior":
+            {
+                "params":
+                {
+                    "crystalline_heart_spawn_chance": "0.15",
+                    "before_run_attack_duration": "3",
+                    "run_attack_velocity": "6",
+                    "run_attack_velocity_duration": "0.75",
+                    "run_attack_target_velocity_duration": "1.0"
+                }
+            },
+            "microbehaviors":
+            [
+                {
+                    "name": "EvadingMoveUnderFire",
+                    "params":
+                    {
+                        "probability": "0.8",
+                        "source_delay_min": "1",
+                        "source_delay_max": "3",
+                        "global_freq_count": "8",
+                        "global_freq_time": "1.0",
+                        "global_delay_min": "0.1",
+                        "global_delay_max": "0.2",
+                        "anim_duration": "0.6",
+                        "move_impulse": "4",
+                        "impulse_start":"0",
+                        "impulse_end":"0.4"
+                    }
+                },
+                {
+                    "name": "EvadingMoveWhenTargeted",
+                    "params":
+                    {
+                        "probability":"0.4",
+                        "source_delay_min":"4",
+                        "source_delay_max":"6",
+                        "global_freq_count":"8",
+                        "global_freq_time":"1.0",
+                        "global_delay_min":"0.1",
+                        "global_delay_max":"0.15",
+                        "anim_duration": "0.6",
+                        "move_impulse": "3.5",
+                        "impulse_start": "0",
+                        "impulse_end": "0.4"
+                    }
+                },
+                { "name": "RageAnim" }
+            ],
+            "equip":
+            [
+                {
+                    "item": "ml01_ai",
+                    "damage_multiplier": 0.42,
+                    "params":
+                    {
+                        "effective_distance_min": "5.5",
+                        "effective_distance_max": "7",
+                        "attack_distance": "2.3",
+                        "combo_min_hits": "2",
+                        "combo_max_hits": "4"
+                    }
+                },
+                {
+                    "item": "ml05_glasshead_run_attack_ai",
+                    "damage_multiplier": 0.87
+                }
+            ],
+            "speed":
+            {
+                "run": 8,
+                "strafe": 6,
+                "back": 3,
+                "crouch": 4,
+                "fire": 4.9
+            },
+            "wounds":
+            {
+                "impulse":
+                {
+                    "profile": "Glasshead",
+                    "value": 50.0,
+                    "ignore_impulse": false,
+                    "prob": 1.0,
+                    "cooldown_min": 0.0,
+                    "cooldown_max": 0.0
+                },
+                "damage":
+                {
+                    "profile": "Glasshead",
+                    "value": 28.0,
+                    "time": 0.02,
+                    "prob": 1.0,
+                    "cooldown_min": 3.0,
+                    "cooldown_max": 5.0
+                }
+            },
+            "slow_down_effect":
+            {
+                "damage_threshold": 45
+            }          
+        },
+
+        {
+            "name": "glasshead_grade3",
+            "display_name": "@glasshead_worker_grade3",
+            "parent": "glasshead",
+            "grade": "grade3",
+            "tp_slice": "slices/ai/glasshead_skins/glasshead_grade3_tp.dynamicslice",
+            "health": 145,
+            "behavior":
+            {
+                "params":
+                {
+                    "crystalline_heart_spawn_chance": "0.2",
+                    "before_run_attack_duration": "1.5",
+                    "run_attack_velocity": "6",
+                    "run_attack_velocity_duration": "0.75",
+                    "run_attack_target_velocity_duration": "1.0"
+                }
+            },
+            "microbehaviors":
+            [
+                {
+                    "name": "EvadingMoveUnderFire",
+                    "params":
+                    {
+                        "probability": "0.9",
+                        "source_delay_min": "1",
+                        "source_delay_max": "2",
+                        "global_freq_count": "8",
+                        "global_freq_time": "1.0",
+                        "global_delay_min": "0.1",
+                        "global_delay_max": "0.2",
+                        "anim_duration": "0.6",
+                        "move_impulse": "4",
+                        "impulse_start":"0",
+                        "impulse_end":"0.4"
+                    }
+                },
+                {
+                    "name": "EvadingMoveWhenTargeted",
+                    "params":
+                    {
+                        "probability":"0.9",
+                        "source_delay_min":"4",
+                        "source_delay_max":"6",
+                        "global_freq_count":"8",
+                        "global_freq_time":"1.0",
+                        "global_delay_min":"0.1",
+                        "global_delay_max":"0.15",
+                        "anim_duration": "0.6",
+                        "move_impulse": "3.5",
+                        "impulse_start": "0",
+                        "impulse_end": "0.4"
+                    }
+                },
+                { "name": "RageAnim" }
+            ],
+            "equip":
+            [
+                {
+                    "item": "ml01_ai",
+                    "damage_multiplier": 0.51,
+                    "params":
+                    {
+                        "effective_distance_min": "5.5",
+                        "effective_distance_max": "7",
+                        "attack_distance": "2.4",
+                        "combo_min_hits": "3",
+                        "combo_max_hits": "6"
+                    }
+                },
+                {
+                    "item": "ml05_glasshead_run_attack_ai",
+                    "damage_multiplier": 0.97
+                }
+            ],
+            "spawn_on_death":
+            {
+                "slice": "slices/ai/glasshead_on_death.dynamicslice",
+                "delay": 0.0
+            },
+            "speed":
+            {
+                "run": 8,
+                "strafe": 6,
+                "back": 3,
+                "crouch": 4,
+                "fire": 4.9
+            },
+            "wounds":
+            {
+                "impulse":
+                {
+                    "profile": "Glasshead",
+                    "value": 50.0,
+                    "ignore_impulse": false,
+                    "prob": 1.0,
+                    "cooldown_min": 0.0,
+                    "cooldown_max": 0.0
+                },
+                "damage":
+                {
+                    "profile": "Glasshead",
+                    "value": 32.0,
+                    "time": 0.02,
+                    "prob": 1.0,
+                    "cooldown_min": 3.0,
+                    "cooldown_max": 5.0
+                }
+            },
+            "slow_down_effect":
+            {
+                "damage_threshold": 45
+            }    
+        },
+
+        {
+            "name": "glasshead_grade4",
+            "display_name": "@glasshead_adamant",
+            "tags": ["Glasshead", "(2) Glasshead: Basic melee"],
+            "parent": "adamant",
+            "enemy_type": "regular_melee",
+            "grade": "grade4"
+        },
+
+        {
+            "name": "glasshead_basic_melee_normal",
+            "parent": "glasshead",
+            "tags": ["Glasshead", "(2) Glasshead: Basic", "(2) Glasshead: Jump"],
+            "enemy_type": "regular_glasshead_mixed"
+        },
+
+        {
+            "name": "glasshead_basic_melee_grade2",
+            "parent": "glasshead_grade2",
+            "tags": ["Glasshead", "(2) Glasshead: Basic", "(2) Glasshead: Jump"],
+            "enemy_type": "regular_glasshead_mixed"
+        },
+
+        {
+            "name": "glasshead_basic_melee_grade3",
+            "parent": "glasshead_grade3",
+            "tags": ["Glasshead", "(2) Glasshead: Basic", "(2) Glasshead: Jump"],
+            "enemy_type": "regular_glasshead_mixed"
+        },
+
+        {
+            "name": "glasshead_basic_melee_grade4",
+            "parent": "glasshead_grade4",
+            "tags": ["Glasshead", "(2) Glasshead: Basic", "(2) Glasshead: Jump"],
+            "enemy_type": "regular_glasshead_mixed"
+        },
+
+        {
+            "name": "glasshead_lava",
+            "parent": "glasshead",
+            "grade": "normal",
+            "display_name": "@glasshead_lava_normal",
+            "tags": ["Glasshead", "(2) Glasshead: Lava"],
+            "slice": "slices/ai/glasshead_lava.dynamicslice",
+            "tp_slice": "slices/ai/glasshead_skins/glasshead_lava_tp.dynamicslice",
+            "health": 125,
+            "leave_dead_body": false,
+            "death_animations_profile": "LavaGlasshead",
+            "death":
+            {
+                "actions":
+                {
+                    "spawn_slice_client":
+                    [
+                        {
+                            "hit_types": ["Shot", "AOE", "DespawnKill"],
+                            "name": "slices/ai/glasshead_lava_death_explode_visual.dynamicslice",
+                            "delay": 1.0,
+                            "despawn_tp": 1.2,
+                            "slice_lifetime": 2
+                        },
+                        {
+                            "hit_types": ["GravityStrike"],
+                            "name": "slices/ai/glasshead_lava_death_explode_visual.dynamicslice",
+                            "delay": 0.5,
+                            "despawn_tp": 0.5,
+                            "slice_lifetime": 2
+                        }
+                    ],
+                    "spawn_slice_server":
+                    [
+                        {
+                            "hit_types": ["Shot", "AOE", "DespawnKill"],
+                            "name": "slices/ai/glasshead_lava_death_explode.dynamicslice",
+                            "delay": 1.0,
+                            "despawn_tp": 1.2,
+                            "slice_lifetime": 2
+                        },
+                        {
+                            "hit_types": ["GravityStrike"],
+                            "name": "slices/ai/glasshead_lava_death_explode.dynamicslice",
+                            "delay": 0.5,
+                            "despawn_tp": 0.5,
+                            "slice_lifetime": 2
+                        }
+                    ],
+                    "dissolve":
+                    [
+                        {
+                            "hit_types": ["Shot", "AOE", "DespawnKill"],
+                            "delay": 0.0,
+                            "time": 5,
+                            "target_dissolve": 2.0
+                        },
+                        {
+                            "hit_types": ["GravityStrike"],
+                            "delay": 0.0,
+                            "time": 3,
+                            "target_dissolve": 3.0
+                        },
+                        {
+                            "hit_types": ["Melee"],
+                            "delay": 0.0,
+                            "time": 2,
+                            "target_dissolve": 2.0
+                        }
+                    ]
+                },
+                "lifetime": 5
+            }
+        },
+
+        {
+            "name": "glasshead_lava_grade2",
+            "parent": "glasshead_lava",
+            "grade": "grade2",
+            "display_name": "@glasshead_lava_grade2",
+            "tp_slice": "slices/ai/glasshead_skins/glasshead_lava_grade2_tp.dynamicslice",
+            "health": 135
+        },
+
+        {
+            "name": "glasshead_lava_grade3",
+            "parent": "glasshead_lava",
+            "grade": "grade3",
+            "display_name": "@glasshead_lava_grade3",
+            "tp_slice": "slices/ai/glasshead_skins/glasshead_lava_grade3_tp.dynamicslice",
+            "health": 145
+        },
+
+        {
+            "name": "glasshead_pvp_a",
+            "parent": "glasshead",
+            "tags": ["(2) Glasshead: PVP_A"],
+            "competitor": "A"
+        },
+        {
+            "name": "glasshead_pvp_b",
+            "parent": "glasshead",
+            "tags": ["(2) Glasshead: PVP_B"],
+            "competitor": "B"
+        },
+
+        {
+            "name": "glasshead_splinter_normal",
+            "parent": "glasshead",
+            "display_name": "@glasshead_ranged",
+            "tags": ["(2) Glasshead: Basic ranged"],
+            "slice": "slices/ai/glasshead_ranged.dynamicslice",
+            "tp_slice": "slices/ai/glasshead_splinter_normal_tp.dynamicslice",
+            "enemy_type": "regular_ranged",
+            "grade": "normal",
+            "health": 140,
+            "aim_from_bone": "weapon_bone",
+            "random_miss_chance": 0.15,
+            "behavior":
+            {
+                "behavior_tree": "BehaviorSelector",
+                "profile": "Ranged",
+                "params":
+                {
+                    "idle_query_name": "RangedNoCover",
+                    "battle_query_name": "BattleRangedNoCover",
+                    "front_of_target_angle": "120",
+                    
+                    "attack_state_time_min": "9",
+                    "attack_state_time_max": "10",
+                    "defense_state_time_min": "1",
+                    "defense_state_time_max": "1",
+                    
+                    "change_position_if_target_too_close": "false",
+                    "change_position_target_far_cooldown": "5",
+                    "change_position_target_close_cooldown": "7",
+                    "change_position_in_cover_cooldown_min": "1",
+                    "change_position_in_cover_cooldown_max": "1",
+                    "change_position_in_openspace_cooldown_min": "1",
+                    "change_position_in_openspace_cooldown_max": "1",
+
+                    "defense_area_weight": "3",
+                    "effective_distance_min": "6",
+                    "effective_distance_max": "30",
+                    "distance_to_self_mul": "-2",
+                    "distance_to_self_weight_min": "-30",
+                    "distance_to_self_weight_max": "-10",
+                    "distance_to_target_mul": "1.0",
+                    "distance_to_target_weight_min": "0",
+                    "distance_to_target_weight_max": "0",
+                    "max_attack_time_during_move": "0.0",
+                    "defense_to_attack_during_move_prob": "1.0",
+                    "disable_defense_if_target_in_cone_and_move_angle": "45",
+                    "close_to_my_holding_pos_radius": "0",
+                    "close_to_my_holding_pos_weight": "0",
+                    "ally_distance": "5",
+                    "ally_count_max": "1",
+                    "ally_points": "-5",
+                    "side_strafe_length_min": "1",
+                    "side_strafe_length_max": "2",
+                    "wait_after_strafe_min": "2",
+                    "wait_after_strafe_max": "4",
+                    
+                    "stop_auto_aim_distance": "3.5",
+                    "stop_auto_aim_timer": "0.29",
+                    "auto_aim_amount": "1.0",
+                    "projectile_min_speed": "1.0",
+                    "projectile_max_speed": "30.0",
+                    
+                    "melee_range": "2.3",
+                    "deploy_weapon_exit_if_turn_angle": "60",
+                    "deploy_weapon_animation_base_index": "0",
+                    "deploy_weapon_fire_attacks_count":"1",
+                    "deploy_weapon_shot_time":"0.55"
+                }
+            },
+            "perception":
+            {
+                "sight_range": 100.0,
+                "max_memory_time": 30.0,
+                "sound_stimulus_scale": 0.0,
+                "weight_inc_step": 50,
+                "weight_inc_time": 0.1,
+                "weight_dec_step": 1,
+                "weight_dec_time": 0.1
+            },
+            "microbehaviors":
+            [
+                {
+                    "name": "EvadingMoveUnderFire",
+                    "params":
+                    {
+                        "probability": "0.0",
+                        "source_delay_min": "1",
+                        "source_delay_max": "2",
+                        "global_freq_count": "8",
+                        "global_freq_time": "1.0",
+                        "global_delay_min": "0.1",
+                        "global_delay_max": "0.2",
+                        "anim_duration": "0.6",
+                        "move_impulse": "4",
+                        "impulse_start":"0",
+                        "impulse_end":"0.4"
+                    }
+                },
+                {
+                    "name": "EvadingMoveWhenTargeted",
+                    "params":
+                    {
+                        "probability":"0.0",
+                        "source_delay_min":"4",
+                        "source_delay_max":"6",
+                        "global_freq_count":"8",
+                        "global_freq_time":"1.0",
+                        "global_delay_min":"0.1",
+                        "global_delay_max":"0.15",
+                        "anim_duration": "0.6",
+                        "move_impulse": "3.5",
+                        "impulse_start": "0",
+                        "impulse_end": "0.4"
+                    }
+                }
+            ],
+            "target_selection":
+            {
+                "tag_distance":
+                {
+                    "Character":
+                    {
+                        "weights":
+                        [
+                            {
+                                "weight":5,
+                                "distance":30
+                            },
+                            {
+                                "weight":10,
+                                "distance":27
+                            },
+                            {
+                                "weight":15,
+                                "distance":24
+                            },
+                            {
+                                "weight":20,
+                                "distance":21
+                            },
+                            {
+                                "weight":25,
+                                "distance":18
+                            },
+                            {
+                                "weight":30,
+                                "distance":15
+                            },
+                            {
+                                "weight":35,
+                                "distance":12
+                            },
+                            {
+                                "weight":40,
+                                "distance":9
+                            },
+                            {
+                                "weight":45,
+                                "distance":6
+                            },
+                            {
+                                "weight":50,
+                                "distance":3
+                            }
+                        ]
+                    },
+                    "Player":
+                    {
+                        "visibility_cone_angle": 110,
+                        "weights":
+                        [
+                            {
+                                "weight":5,
+                                "distance":20
+                            },
+                            {
+                                "weight":10,
+                                "distance":18
+                            },
+                            {
+                                "weight":15,
+                                "distance":16
+                            },
+                            {
+                                "weight":20,
+                                "distance":14
+                            },
+                            {
+                                "weight":25,
+                                "distance":12
+                            },
+                            {
+                                "weight":30,
+                                "distance":10
+                            },
+                            {
+                                "weight":35,
+                                "distance":8
+                            },
+                            {
+                                "weight":40,
+                                "distance":6
+                            },
+                            {
+                                "weight":45,
+                                "distance":4
+                            },
+                            {
+                                "weight":50,
+                                "distance":2
+                            }
+                        ]
+                    },
+                    "Breakable":
+                    {
+                        "weights":
+                        [
+                            {
+                                "weight":-20,
+                                "distance":6
+                            }
+                        ]
+                    }
+                },
+                "tag_weights":
+                {
+                    "MeleePriority": 0,
+                    "InvisibleAI": -500,
+                    "Strafer": 0,
+                    "Drone": 0,
+                    "NPC": 0
+                },
+                "thresholds":
+                {
+                    "critical_range": 5,
+                    "damage_dealer_duration": 2.7,
+                    "attention_max_duration": 10, "attention_restore_cooldown": 5
+                },
+                "weights":
+                {
+                    "melee": false,
+                    "reachable": 10.0,
+                    "critical_range": 50,
+                    "damage_dealer": 0,
+                    "target_visible": 15,
+                    "target_sound": 10,
+                    "target_memory": 5,
+                    "attention_max_duration": 0
+                }
+            },
+            "equip":
+            [
+                {
+                    "item": "wpn06_ranged_glasshead_ai",
+                    "check_visible": true,
+                    "damage_multiplier": 0.38,
+                    "shooting_pattern": ["1; 0.1"],
+                    "script_shooting_pattern": true
+                }
+            ]
+        },
+        
+        {
+            "name": "glasshead_splinter_grade2",
+            "parent": "glasshead_splinter_normal",
+            "display_name": "@glasshead_ranged_grade2",
+            "grade": "grade2",
+            "health": 150,
+            "equip":
+            [
+                {
+                    "item": "wpn06_ranged_glasshead_ai",
+                    "check_visible": true,
+                    "damage_multiplier": 0.39,
+                    "shooting_pattern": ["1-2; 2.0"],
+                    "script_shooting_pattern": true
+                }
+            ]
+        },
+        {
+            "name": "glasshead_splinter_grade3",
+            "parent": "glasshead_splinter_normal",
+            "display_name": "@glasshead_ranged_grade3",
+            "grade": "grade3",
+            "health": 160,
+            "equip":
+            [
+                {
+                    "item": "wpn06_ranged_glasshead_ai",
+                    "check_visible": true,
+                    "damage_multiplier": 0.44,
+                    "shooting_pattern": ["1-2; 2.0"],
+                    "script_shooting_pattern": true
+                }
+            ]
+        },
+        {
+            "name": "glasshead_basic_ranged_normal",
+            "parent": "glasshead_splinter_normal",
+            "tags": ["Glasshead", "(2) Glasshead: Basic", "(2) Glasshead: Jump"],
+            "enemy_type": "regular_glasshead_mixed",
+            "grade": "normal_ranged"
+        },
+
+        {
+            "name": "glasshead_basic_ranged_grade2",
+            "parent": "glasshead_splinter_grade2",
+            "tags": ["Glasshead", "(2) Glasshead: Basic", "(2) Glasshead: Jump"],
+            "enemy_type": "regular_glasshead_mixed",
+            "grade": "grade2_ranged"
+        },
+
+        {
+            "name": "glasshead_basic_ranged_grade3",
+            "parent": "glasshead_splinter_grade3",
+            "tags": ["Glasshead", "(2) Glasshead: Basic", "(2) Glasshead: Jump"],
+            "enemy_type": "regular_glasshead_mixed",
+            "grade": "grade3_ranged"
+        },
+
+        {
+            "name": "glasshead_basic_ranged_grade4",
+            "parent": "glasshead_splinter_grade3",
+            "tags": ["Glasshead", "(2) Glasshead: Basic", "(2) Glasshead: Jump"],
+            "enemy_type": "regular_glasshead_mixed",
+            "grade": "grade4_ranged"
+        },
+        
+        {
+            "name": "adamant",
+            "add_tags":["GlassheadAI", "SpecialAI", "AdamantAI"],
+            "display_name": "@glasshead_adamant",
+            "tags": ["Glasshead", "(2) Glasshead: Adamant", "Adamant Glasshead"],
+            "slice": "slices/ai/adamant.dynamicslice",
+            "tp_slice": "slices/ai/adamant_tp.dynamicslice",
+            "competitor": "Glasshead",
+            "vo_profile": "Glasshead",
+            "enemy_type": "special_melee",
+            "grade": "normal",
+            "health": 2600,
+            "hud_marker": "generic_hp_marker_head",
+            "aabb_box":
+            {
+                "width": 1.5,
+                "length": 1.5,
+                "height": 2.4
+            },
+            "behavior":
+            {
+                "behavior_tree": "BehaviorSelector",
+                "profile": "Adamant",
+                "params":
+                {
+                    "attacks_rotate_to_target_max_time": "5.0",
+                    "spawn_wall_before_heal": "false",
+                    "claim_melee_group": "Adamant",
+                    "close_melee_range": "2.0",
+
+                    "heal_interrupts_current_behavior": "false",
+                    "heal_when_health_prc": "0.50",
+                    "heal_hp_per_second": "900",
+                    "heal_move_back_range": "0",
+                    "heal_cooldown": "22",
+                    "healing_timeout": "1.5",
+                    "healing_invul_duration": "0.2",
+
+                    "use_dash_before_healing": "false",
+                    "sprint_activation_range": "15",
+                    "before_sprint_delay": "0.05",
+
+                    "range_for_slam_attack_min": "0",
+                    "range_for_slam_attack_max": "5",
+                    "slam_attack_cooldown_min": "5.0",
+                    "slam_attack_cooldown_max": "7.0",
+                    "slam_attack_skip_chance": "0.25",
+                    "slam_attack_skip_cooldown": "2.0",
+                    "slam_attack_server_slice": "slices/ai/bosses/adamant/slam_attack_server.dynamicslice",
+                    "slam_attack_client_slice": "slices/ai/bosses/adamant/slam_attack_client.dynamicslice",
+
+                    "range_for_wave_attack_min": "3",
+                    "range_for_wave_attack_max": "12",
+                    "wave_attack_cooldown_min": "5.0",
+                    "wave_attack_cooldown_max": "8.0",
+                    "wave_attack_skip_chance": "0.35",
+                    "wave_attack_skip_cooldown": "2.0",
+                    "wave_attack_damage": "84.0",
+                    "wave_attack_damage_drop": "0.5",
+                    "wave_attack_server_slice": "slices/ai/bosses/adamant/adamant_wave_launcher.dynamicslice",
+                    "wave_attack_client_slice": "",
+
+                    "range_for_jump_attack": "7",
+                    "range_for_jump_attack_max": "10",
+                    "jump_cooldown_min": "6",
+                    "jump_cooldown_max": "8",
+                    "jump_attack_skip_chance": "0.0",
+                    "jump_attack_skip_cooldown": "2.0",
+
+                    "special_attacks_cooldown": "3.0",
+                    "first_jump_chance": "0.85",
+                    "close_up_range_to_approach": "2.0",
+
+                    "move_back_direction_randomization": "60",
+                    "walk_attack_if_jump_cooldown_prob": "1.0",
+                    "approach_and_melee_max_time": "5",
+
+                    "jump_cooldown_idle_state_time": "0.05",
+                    "before_jump_delay": "1.0",
+                    "jump_disable_gravity_duration": "0.1",
+                    "jump_target_pos_track_time": "0.45",
+                    "jump_target_point_distance_offset": "0.0",
+                    "jump_knockdown_max_hor_angle": "0.0",
+                    "jump_vertical_max_diff": "1",
+                    "jump_melee_range_min_1": "1.0",
+                    "jump_melee_index_1": "0",
+                    "jump_melee_range_max_1": "1.0",
+
+                    "can_dash_out_of_sprint_range": "2",
+                    "dash_in_anim_time": "0.73",
+                    "dash_out_anim_time": "1.10",
+                    "dash_in_anim_front": "1",
+                    "dash_out_anim_front": "11",
+                    "dash_in_anim_back": "2",
+                    "dash_out_anim_back": "12",
+                    "dash_in_anim_left": "3",
+                    "dash_out_anim_left": "13",
+                    "dash_in_anim_right": "4",
+                    "dash_out_anim_right": "14",
+
+                    "dash_fade_out_slice": "slices/ai/bosses/adamant/adamant_dash_fade_out.dynamicslice",
+                    "dash_hide_after_fade_out_delay": "0.3",
+                    "dash_move_time": "0.3",
+                    "dash_before_heal_move_time": "0.3",
+                    "dash_fade_in_slice": "slices/ai/bosses/adamant/adamant_dash_fade_in.dynamicslice",
+                    "dash_show_after_fade_in_delay": "0.0",
+                    "dash_cooldown_min": "6",
+                    "dash_cooldown_max": "16",
+                    "dash_step_min_range": "4",
+                    "dash_step_range": "14",
+                    "dash_delay_between_steps": "1.2",
+
+                    "dash_count_in_serie": "0"
+
+                }
+            },
+            "equip": [
+                {
+                    "item": "ml03_ai",
+                    "damage_multiplier": 0.8
+                },
+                {
+                    "item": "ml03_jump_ai",
+                    "damage_multiplier": 0.8
+                }
+            ],
+            "perception":
+            {
+                "sight_range": 50.0,
+                "sound_stimulus_scale": 2.0,
+                "weight_inc_step": 50,
+                "weight_inc_time": 0.3,
+                "weight_dec_step": 50,
+                "weight_dec_time": 0.7
+            },
+            "speed":
+            {
+                "sprint": 6.5,
+                "run": 3.5,
+                "strafe": 3.5,
+                "back": 2.9,
+                "crouch": 0.0,
+                "fire": 2.3
+            },
+            "target_selection":
+            {
+                "tag_distance":
+                {
+                    "Player":
+                    {
+                        "visibility_cone_angle": 0,
+                        "weights":
+                        [
+                            {
+                                "weight":30,
+                                "distance":10
+                            }
+                        ]
+                    },
+                    "Breakable":
+                    {
+                        "weights":
+                        [
+                            {
+                                "weight":20,
+                                "distance":5
+                            }
+                        ]
+                    }
+                },
+                "tag_weights":
+                {
+                    "Strafer": -25,
+                    "MeleePriority": 100,
+                    "InvisibleAI": -500,
+                    "Drone": -50,
+                    "NPC": -200
+                },
+                "weights":
+                {
+                    "melee": true,
+                    "damage_dealer": 5,
+                    "target_visible": 15,
+                    "target_sound": 10,
+                    "target_memory": 5
+                },
+                "thresholds":
+                {
+                    "critical_range": 6,
+                    "damage_dealer_duration": 2.7
+                }
+            },
+            "slow_down_effect":
+            {
+                "slow_down_speed": 2.6,
+                "damage_threshold": 230,
+                "time_threshold": 0.1,
+                "effect_time": 1.2,
+                "max_effect_time": 1.3,
+                "bullet_type": ["Rifle", "Shotgun", "Sniper"]
+            },
+            "hit_reactions":
+            {
+                "animation": "Glasshead",
+                "damage": 40,
+                "probability": 0.6
+            },
+            "navlinks":
+            [
+                {
+                    "name": "navlink_1",
+                    "params": { "probability": 1 }
+                },
+                {
+                    "name": "navlink_2",
+                    "params": { "probability": 1 }
+                },
+                {
+                    "name": "navlink_3",
+                    "params": { "probability": 0 }
+                },
+                {
+                    "name": "navlink_4",
+                    "params": { "probability": 1 }
+                }
+            ],
+            "dynamic_avoidance_radius":
+            {
+                "ranges":
+                [
+                    {
+                        "range": 7,
+                        "multiplier": 2
+                    },
+                    {
+                        "range": 12,
+                        "multiplier": 4
+                    }
+                ]
+            },
+            "wounds":
+            {
+                "impulse":
+                {
+                    "profile": "Glasshead",
+                    "value": 200.0,
+                    "ignore_impulse": false,
+                    "prob": 1.0,
+                    "cooldown_min": 0.0,
+                    "cooldown_max": 0.0
+                },
+                "aoe":
+                {
+                    "profile": "Glasshead",
+                    "value": 300.0,
+                    "time": 0.02,
+                    "prob": 1.0,
+                    "cooldown_min": 3.0,
+                    "cooldown_max": 5.0
+                },
+                "damage":
+                {
+                    "profile": "Glasshead",
+                    "value": 2200.0,
+                    "time": 0.02,
+                    "prob": 1.0,
+                    "cooldown_min": 3.0,
+                    "cooldown_max": 5.0
+                },
+                "cooldown_min": 0.0,
+                "cooldown_max": 0.0
+            },
+            "avoidance_radius_multiplier": 2,
+            "body_turn_speed": [{"angle":0, "speed":270}, {"angle":120, "speed":720}],
+            "leave_dead_body": true
+        },
+
+        {
+            "name": "adamant_grade2",
+            "display_name": "@glasshead_adamant_grade2",
+            "parent": "adamant",
+            "grade": "grade2",
+            "tp_slice": "slices/ai/adamant_skins/adamant_grade2_tp.dynamicslice",
+            "health": 3200,
+            "hud_marker": "generic_hp_marker_head",
+            "aabb_box":
+            {
+                "width": 1.5,
+                "length": 1.5,
+                "height": 2.5
+            },
+            "behavior":
+            {
+                "behavior_tree": "BehaviorSelector",
+                "profile": "Adamant",
+                "params":
+                {
+                    "spawn_wall_before_heal": "true"
+                }
+            },
+            "equip": [
+                {
+                    "item": "ml03_ai",
+                    "damage_multiplier": 1
+                },
+                {
+                    "item": "ml03_jump_ai",
+                    "damage_multiplier": 1
+                }
+            ],
+            "spawn_on_death":
+            {
+                "slice": "slices/ai/glasshead_on_death.dynamicslice",
+                "delay": 0.0
+            }
+        },
+
+        {
+            "name": "adamant_grade3",
+            "display_name": "@glasshead_adamant_grade3",
+            "parent": "adamant",
+            "grade": "grade3",
+            "tp_slice": "slices/ai/adamant_skins/adamant_grade3_tp.dynamicslice",
+            "health": 3200,
+            "hud_marker": "generic_hp_marker_head",
+            "aabb_box":
+            {
+                "width": 1.5,
+                "length": 1.5,
+                "height": 2.65
+            },
+            "behavior":
+            {
+                "behavior_tree": "BehaviorSelector",
+                "profile": "Adamant",
+                "params":
+                {
+                    "spawn_wall_before_heal": "true"
+                }
+            },
+            "microbehaviors":
+            [
+                { "name": "RageAnim" },
+                {
+                    "name": "EvadingMoveUnderFire",
+                    "params":
+                    {
+                        "probability": "0.8",
+                        "source_delay_min": "3",
+                        "source_delay_max": "5",
+                        "global_freq_count": "3",
+                        "global_freq_time": "1.0",
+                        "global_delay_min": "0.1",
+                        "global_delay_max": "0.25",
+                        "anim_duration": "0.63",
+                        "move_impulse": "5.0"
+                    }
+                }
+            ],
+            "equip": [
+                {
+                    "item": "ml03_ai",
+                    "damage_multiplier": 1.2
+                },
+                {
+                    "item": "ml03_jump_ai",
+                    "damage_multiplier": 1.2
+                }
+            ],
+            "spawn_on_death":
+            {
+                "slice": "slices/ai/glasshead_on_death.dynamicslice",
+                "delay": 0.0
+            }
+        },
+        
+        {
+            "name": "Shardskin",
+            "add_tags":["GlassheadAI", "SpecialAI", "ShardskinAI"],
+            "display_name": "@glasshead_shardskin",
+            "tags": ["(2)Glasshead: Range", "(2) Glasshead: Shardskin", "Shardskin Glasshead"],
+            "slice": "slices/ai/shardskin.dynamicslice",
+            "tp_slice": "slices/ai/shardskin_tp.dynamicslice",
+            "vo_profile": "Glasshead",
+            "competitor": "Glasshead",
+            "enemy_type": "special_ranged",
+            "hud_marker": "generic_hp_marker_head",
+            "health": 1100,
+            "aabb_box":
+            {
+                "width": 1.5,
+                "length": 1.5,
+                "height": 2.0
+            },
+            "behavior":
+            {
+                "behavior_tree": "BehaviorSelector",
+                "profile": "Shardskin",
+                "params":
+                {
+                    "side_dash_range_min": "2",
+                    "side_dash_range_max": "6",
+                    "dps_trigger_cooldown": "3",
+                    "dps_trigger_chance": "1.0",
+                    
+                    "heal_when_health_prc": "0",
+                    "heal_hp_per_second": "400",
+                    "heal_distance_from_target": "1",
+                    "heal_cooldown": "25",
+                    "healing_invul_duration": "0.0",
+                    "max_time_go_to_heal_range": "5",
+
+                    "range_for_approach_and_melee": "3",
+                    "close_melee_range": "3",
+                    "max_melee_approach_time": "0",
+
+                    "dash_cooldown_min": "0.1",
+                    "dash_cooldown_max": "0.2",
+
+                    "dash_in_anim_time": "0.3",
+                    "dash_out_anim_time": "0.3",
+                    "dash_in_anim_front": "1",
+                    "dash_out_anim_front": "11",
+                    "dash_in_anim_back": "2",
+                    "dash_out_anim_back": "12",
+                    "dash_in_anim_left": "3",
+                    "dash_out_anim_left": "13",
+                    "dash_in_anim_right": "4",
+                    "dash_out_anim_right": "14",
+
+                    "dash_fade_out_slice": "slices/ai/bosses/adamant/adamant_dash_fade_out.dynamicslice",
+                    "dash_hide_after_fade_out_delay": "0.0",
+                    "dash_move_time": "0.35",
+                    "dash_fade_in_slice": "slices/ai/bosses/adamant/adamant_dash_fade_in.dynamicslice",
+                    "dash_show_after_fade_in_delay": "0.1",
+
+                    "ranged_attack_rotate_to_target_time": "1.0",
+                    "ranged_attack_shots_before_dash_min": "5",
+                    "ranged_attack_shots_before_dash_max": "7",
+
+                    "ranged_attack_duration_min": "10",
+                    "ranged_attack_duration_max": "15",
+                    "ranged_attack_cooldown": "1.5",
+
+                    "dash_step_min_range": "3",
+                    "dash_step_range": "20",
+                    "dash_delay_between_steps": "0",
+                    "dash_count_in_serie": "5",
+
+                    "skip_melee_attack_prob": "0.25",
+
+                    "distance_to_increase_gap_min": "20",
+                    "distance_to_increase_gap_max": "30",
+                    "cooldown_after_increase_gap": "6",
+
+                    "wait_on_lost_target": "5",
+
+                    "ally_distance": "5",
+                    "ally_count_max": "1",
+                    "ally_points": "-5",
+
+                    "keep_distance_sqs_name": "ShardskinKeepDistance",
+                    "find_any_point_sqs_name": "ShardskinFindAnyPoint"
+                }
+            },
+            "equip":
+            [
+                {
+                    "item": "wpn01_shardskin_ai",
+                    "shooting_pattern": ["1; 1-3"],
+                    "restart_shooting_pattern_on_interrupt": true,
+                    "damage_multiplier": 0.66,
+                    "params":
+                    {
+                        "effective_distance_min": "12",
+                        "effective_distance_max": "30"
+                    }
+                }
+            ],
+            "perception":
+            {
+                "sight_range": 90.0,
+                "max_memory_time": 15.0,
+                "sound_stimulus_scale": 1.0
+            },
+            "speed":
+            {
+                "sprint": 5,
+                "run": 5,
+                "strafe": 2,
+                "back": 3,
+                "crouch": 1,
+                "fire": 0
+            },
+            "wounds":
+            {
+                "impulse":
+                {
+                    "profile": "Glasshead",
+                    "value": 200.0,
+                    "ignore_impulse": false,
+                    "prob": 1.0,
+                    "cooldown_min": 0.0,
+                    "cooldown_max": 0.0
+                },
+                "aoe":
+                {
+                    "profile": "Glasshead",
+                    "value": 300.0,
+                    "time": 0.02,
+                    "prob": 1.0,
+                    "cooldown_min": 3.0,
+                    "cooldown_max": 5.0
+                },
+                "damage":
+                {
+                    "profile": "Glasshead",
+                    "value": 400.0,
+                    "time": 0.02,
+                    "prob": 1.0,
+                    "cooldown_min": 3.0,
+                    "cooldown_max": 5.0
+                },
+                "cooldown_min": 0.0,
+                "cooldown_max": 0.0
+            },
+            "target_selection":
+            {
+                "tag_weights":
+                {
+                    "VIP": -100,
+                    "ShooterPriority": 100,
+                    "InvisibleAI": -500,
+                    "Breakable": -50,
+                    "NPC": -200
+                },
+                "weights":
+                {
+                    "damage_dealer": 20,
+                    "target_visible": 15,
+                    "target_sound": 10,
+                    "target_memory": 5,
+                    "attention_max_duration": 25
+                },
+                "thresholds":
+                {
+                    "critical_range": 15,
+                    "attention_max_duration": 1,
+                    "attention_restore_cooldown": 10
+                }
+            },
+            "navlinks":
+            [
+                {
+                    "name": "navlink_1",
+                    "params": { "probability": 1 }
+                },
+                {
+                    "name": "navlink_2",
+                    "params": { "probability": 1 }
+                },
+                {
+                    "name": "navlink_3",
+                    "params": { "probability": 1 }
+                },
+                {
+                    "name": "navlink_4",
+                    "params": { "probability": 1 }
+                }
+            ],
+            "can_be_blinded": true,
+            "body_turn_speed": [{"angle":0, "speed":720}],
+            "leave_dead_body": true
+        },
+        {
+            "name": "glasshead_turret",
+            "display_name": "@glasshead_turret",
+            "enemy_type": "special_ranged",
+            "add_tags":["GlassheadAI", "SpecialAI", "GlassheadTurretAI", "RamDashHitArticulated"],
+            "tags": ["(2)Glasshead: Range", "(2)Glasshead: Turret"],
+            "slice": "slices/ai/invasion/invader_turret.dynamicslice",
+            "tp_slice": "slices/ai/invasion/invader_turret_tp.dynamicslice",
+            "wounds":
+            {
+                "damage":
+                {
+                    "profile": "",
+                    "value": 50000,
+                    "time": 0.1,
+                    "prob": 0.0
+                }
+            },
+            "death":
+            {
+                "lifetime": 0.1
+            },
+            "vo_profile": "CrystallineTurret",
+            "competitor": "Glasshead",
+            "health": 2200,
+            "hud_marker": "generic_hp_marker",
+            "aabb_box":
+            {
+                "width": 0.9,
+                "length": 0.9,
+                "height": 4.0
+            },
+            "behavior":
+            {
+                "behavior_tree": "BehaviorSelector",
+                "profile": "BasicRange",
+                "params":
+                {
+                    "dash_fade_out_slice": "slices/ai/bosses/adamant/adamant_dash_fade_out.dynamicslice",
+                    "dash_hide_after_fade_out_delay": "0.0",
+                    "dash_move_time": "0.1",
+                    "dash_fade_in_slice": "slices/ai/bosses/adamant/adamant_dash_fade_in.dynamicslice",
+                    "dash_show_after_fade_in_delay": "0.1"
+                }
+            },
+            "equip":
+            [
+                {
+                    "item": "wpn01_invader_turret",
+                    "shooting_pattern": ["3-5; 0.1-0.2", "2-3; 0.1-0.3", "2-5; 0.25-0.35", "3-4; 1.1-2.2"],
+                    "check_visible": false,
+                    "damage_multiplier": 1.2,
+                    "params":
+                    {
+                        "low_ammo": "0"
+                    }
+                }
+            ],
+            "microbehaviors":
+            [
+                {
+                    "name": "SideDash",
+                    "params":
+                    {
+                        "damage": "50",
+                        "damage_time": "1",
+                        "prob": "0.1",
+                        "counter": "1",
+                        "reset_time": "10",
+                        "delay_min": "3",
+                        "delay_max": "7",
+                        "min_distance": "2.0",
+                        "max_distance": "4.0",
+                        "random_angle": "15"
+                    }
+                }
+            ],
+            "perception":
+            {
+                "sight_range": 80.0,
+                "max_memory_time": 1.0,
+                "sound_stimulus_scale": 0.0,
+                "weight_inc_step": 25,
+                "weight_inc_time": 0.5,
+                "weight_dec_step": 5,
+                "weight_dec_time": 1
+            },
+            "speed":
+            {
+                "run": 0,
+                "strafe": 0,
+                "back": 0,
+                "crouch": 0,
+                "fire": 0
+            },
+            "leave_dead_body": false,
+            "body_turn_limit": 360,
+            "eye_offset_z": 0.5
+        },
+        
+        {
+            "name": "glasshead_fairfly_turret",
+            "add_tags":["GlassheadAI", "SpecialAI", "FairflyTurretAI", "RamDashHitArticulated"],
+            "display_name": "@glasshead_nest",
+            "enemy_type": "special_ranged",
+            "tags": ["(2)Glasshead: Range", "(2)Glasshead: Fairfly Turret"],
+            "slice": "slices/ai/fairfly_turret.dynamicslice",
+            "tp_slice": "slices/ai/fairfly_turret_tp.dynamicslice",
+            "wounds":
+            {
+                "damage":
+                {
+                    "profile": "",
+                    "value": 50000,
+                    "time": 0.1,
+                    "prob": 0.0
+                }
+            },
+            "vo_profile": "FairflyTurret",
+            "competitor": "Glasshead",
+            "health": 1200,
+            "hud_marker": "generic_hp_marker",
+            "aabb_box":
+            {
+                "width": 1.5,
+                "length": 1.5,
+                "height": 4.0
+            },
+            "behavior":
+            {
+                "behavior_tree": "BehaviorSelector",
+                "profile": "BasicRange",
+                "params":
+                {
+                    "dash_fade_out_slice": "slices/ai/bosses/adamant/adamant_dash_fade_out.dynamicslice",
+                    "dash_hide_after_fade_out_delay": "0.0",
+                    "dash_move_time": "0.1",
+                    "dash_fade_in_slice": "slices/ai/bosses/adamant/adamant_dash_fade_in.dynamicslice",
+                    "dash_show_after_fade_in_delay": "0.1"
+                }
+            },
+            "perception":
+            {
+                "sight_range": 40.0,
+                "max_memory_time": 1.0,
+                "sound_stimulus_scale": 0.0,
+                "weight_inc_step": 25,
+                "weight_inc_time": 0.5,
+                "weight_dec_step": 5,
+                "weight_dec_time": 1
+            },
+            "equip":
+            [
+                {
+                    "item": "wpn01_fairfly_turret",
+                    "shooting_pattern": ["2-3; 4-6"],
+                    "check_visible": false,
+                    "damage_multiplier": 1.0
+                }
+            ],
+            "microbehaviors":
+            [
+                {
+                    "name": "SideDash",
+                    "params":
+                    {
+                        "damage": "10",
+                        "damage_time": "1",
+                        "prob": "1.0",
+                        "counter": "1",
+                        "reset_time": "2",
+                        "delay_min": "1",
+                        "delay_max": "1",
+                        "min_distance": "5.0",
+                        "max_distance": "8.0",
+                        "random_angle": "15"
+                    }
+                }
+            ],
+            "speed":
+            {
+                "run": 3,
+                "strafe": 3,
+                "back": 3,
+                "crouch": 3,
+                "fire": 0
+            },
+            "death":
+            {
+                "lifetime": 0.1
+            },
+            "leave_dead_body": false,
+            "body_turn_limit": 360,
+            "eye_offset_z": 1
+        },
+
+        {
+            "name": "chaser",
+            "add_tags":["GlassheadAI", "SpecialAI", "ChaserAI","NonconvertableAI"],
+            "display_name": "@glasshead_chaser",
+            "slice": "slices/ai/chaser.dynamicslice",
+            "tp_slice": "slices/ai/chaser_tp.dynamicslice",
+            "competitor": "Glasshead",
+            "tags": ["(2)Glasshead: Chaser"],
+            "enemy_type": "special_melee",
+            "hud_marker": "miniboss_hp_marker_head",
+            "vo_profile": "chaser",
+            "health": 400,
+            "aabb_box":
+            {
+                "width": 1.5,
+                "length": 1.5,
+                "height": 2.0
+            },
+            "body_turn_limit": 360,
+            "behavior":
+            {
+                "behavior_tree": "BehaviorSelector",
+                "profile": "Chaser",
+                "params":
+                {
+                    "distance_to_player_min": "16.0",
+                    "distance_to_player_max": "22.0",
+                    "update_path_rate": "2.0",
+                    "attack_cooldown_min": "5.0",
+                    "attack_cooldown_max": "8.0",
+                    "ghost_target_following_duration_min": "3.0",
+                    "ghost_target_following_duration_max": "3.0",
+                    "check_view_cone_duration": "10.0",
+                    "allowed_target_view_cone_angle": "25",
+                    "attack_approaching_max_time": "10.0",
+                    "close_to_attack_range": "7.0",
+                    "ignore_collision_before_attack_range": "3.0",
+                    "attack_in_range": "1.0",
+                    "attacking_duration": "10.0",
+                    "attacking_damage": "6.0",
+                    "attacking_damage_period": "0.5",
+                    "dps_threshold": "150.0",
+                    "dps_decay": "150.0",
+                    "dps_regen_start_delay": "0.0",
+                    "capture_target": "true",
+                    "camera_limits_hor": "5",
+                    "camera_limits_vert": "0",
+                    "camera_yaw": "0",
+                    "camera_pitch": "40"
+                }
+            },
+            "speed":
+            {
+                "sprint": 8,
+                "run": 8,
+                "walk": 8,
+                "strafe": 8,
+                "back": 8
+            },
+            "allow_strafing": false,
+            "navlinks_movement_type": "Fly"
+        },
+        
+        {
+            "name": "GlassheadBombDog",
+            "add_tags":["GlassheadAI", "SpecialAI", "BombDogAI"],
+            "tags": ["(2)Glasshead: Bomb Dog", "prototype_glasshead_bomb_dog"],
+            "display_name": "@glasshead_bomb_dog",
+            "slice": "slices/ai/glasshead_kamikadze_dog.dynamicslice",
+            "tp_slice": "slices/ai/glasshead_bomb_dog_tp.dynamicslice",
+            "vo_profile": "Glasshead",
+            "competitor": "Glasshead",
+            "enemy_type": "special_melee",
+            "health": 60,
+            "behavior":
+            {
+                "behavior_tree": "BehaviorSelector",
+                "profile": "BombDrone",
+                "params":
+                {
+                    "lifetime": 250.0
+                }
+            },
+            "equip": [
+                {
+                    "item": "ml08_ai",
+                    "params":
+                    {
+                        "effective_distance_min": "5",
+                        "effective_distance_max": "6"
+                    }
+                }
+            ],
+            "perception":
+            {
+                "sight_range": 50.0,
+                "max_memory_time": 5.0,
+                "sound_stimulus_scale": 10.0,                
+                "weight_inc_step": 50,
+                "weight_inc_time": 0.3,
+                "weight_dec_step": 50,
+                "weight_dec_time": 0.7
+            },
+            "speed":
+            {
+                "run": 8,
+                "strafe": 2.5,
+                "back": 2.5,
+                "crouch": 2,
+                "fire": 2
+            },
+            "target_selection":
+            {
+                "tag_distance":
+                {
+                    "Player":
+                    {
+                        "weights":
+                        [
+                            {
+                                "weight":50,
+                                "distance":11
+                            }
+                        ]
+                    },
+                    "Breakable":
+                    {
+                        "weights":
+                        [
+                            {
+                                "weight":20,
+                                "distance":6
+                            }
+                        ]
+                    }
+                },
+                "tag_weights":
+                {
+                    "VIP": -100,
+                    "InvisibleAI": -500,
+                    "KamikazePriority": 100
+                },
+                "thresholds":
+                {
+                    "critical_range": 6,
+                    "damage_dealer_duration": 0
+                },
+                "weights":
+                {
+                    "critical_range": 100,
+                    "damage_dealer": 20,
+                    "target_visible": 15,
+                    "target_sound": 10,
+                    "target_memory": 5
+                }
+            },
+            "avoidance_radius_multiplier": 1.5,
+            "body_turn_limit": 360,
+            "can_be_blinded": false
+        },
+        
+        {
+            "name":"glasshead_nest_supporter",
+            "add_tags":["GlassheadAI", "SpecialAI", "SupporterAI"],
+            "tags":["(2)Glasshead: Nest Supporter"],
+            "display_name": "@glasshead_nest_supporter",
+            "slice": "slices/ai/supporter_ai.dynamicslice",
+            "tp_slice": "slices/ai/supporter_ai_tp.dynamicslice",
+            "vo_profile": "GlassheadSupporter",
+            "competitor": "Glasshead",
+            "hud_marker": "miniboss_hp_marker_head",
+            "enemy_type": "miniboss",
+            "health": 2600,
+            "aabb_box":
+            {
+                "width": 1.5,
+                "length": 1.5,
+                "height": 2.7
+            },
+            "behavior":
+            {
+                "behavior_tree": "BehaviorSelector",
+                "profile": "ScriptControlled",
+                "params":
+                {
+                    "query_name":"RangedNoCover",
+                    "effective_distance_min": "15",
+                    "effective_distance_max": "50",
+                    
+                    "distance_to_target_mul": "0",
+                    "distance_to_target_weight_min": "0",
+                    "distance_to_target_weight_max": "0",
+                    "distance_to_self_mul": "-1",
+                    "distance_to_self_weight_min": "0",
+                    "distance_to_self_weight_max": "-40",
+                    
+                    "change_position_target_far_cooldown": "5", 
+                    "change_position_target_close_cooldown": "7",
+                    "close_to_my_holding_pos_radius": "5",
+                    "close_to_my_holding_pos_weight": "-10",
+
+                    
+                    "cancel_attack_radius": "6",
+                    "front_of_target_angle":"60",
+                    "secondary_front_of_target_angle": "180",
+                    "min_group_size":"2",
+                    "group_area_radius":"10",
+                    "attack_duration":"5",
+                    "shots_count_min":"2",
+                    "shots_count_max":"4",
+                    "shots_delay_min":"3",
+                    "shots_delay_max":"5",
+                    "attack_radius":"15",
+                    "attack_radius_offset":"4",
+                    "first_shot_delay":"0.1",
+                    "attack_slice_block_place_time":"15",
+                    "attack_slice_block_place_radius":"2",
+                    "attack_slice_name": "slices/ai/glasshead_supporter/spawn_nest_trap.dynamicslice",
+                    "move_out_slice_name": "slices/ai/glasshead_supporter/close_melee.dynamicslice",
+                    "target_offset":"5"
+                }
+            },
+            "perception":
+            {
+                "sight_range": 100.0,
+                "sound_stimulus_scale": 1.0,
+                "weight_inc_step": 50,
+                "weight_inc_time": 0.3,
+                "weight_dec_step": 50,
+                "weight_dec_time": 0.7
+            },
+            "wounds":
+            {
+                "impulse":
+                {
+                    "profile": "Supporter",
+                    "value": 200.0,
+                    "ignore_impulse": false,
+                    "prob": 1.0,
+                    "cooldown_min": 0.0,
+                    "cooldown_max": 0.0
+                },
+                "aoe":
+                {
+                    "profile": "Supporter",
+                    "value": 600.0,
+                    "time": 0.02,
+                    "prob": 1.0,
+                    "cooldown_min": 3.0,
+                    "cooldown_max": 5.0
+                },
+                "damage":
+                {
+                    "profile": "Supporter",
+                    "value": 1000.0,
+                    "time": 0.02,
+                    "prob": 1.0,
+                    "cooldown_min": 3.0,
+                    "cooldown_max": 5.0
+                },
+                "cooldown_min": 0.0,
+                "cooldown_max": 0.0
+            }
+        }
+    ],
+    "default_params":
+    {
+        "Melee":
+        {
+            "behavior_params":
+            {
+                "before_run_attack_duration": "5",
+                "before_run_attack_velocity": "5",
+                "before_run_attack_distance": "7",
+                "run_attack_velocity": "6",
+                "run_attack_velocity_duration": "0.75",
+                "run_attack_target_velocity_duration": "0.75",
+
+                "approach_range": "1",
+                "melee_range_in": "2",
+                "melee_range_out": "3",
+                "melee_vertical_range": "1.0",
+                "melee_combo_count_min": "3",
+                "melee_combo_count_max": "5",
+                "melee_combo_complete_count":"3",
+
+                "jump_back_prob": "1.0",
+
+                "jump_back_min_distance_from_target": "4",
+
+                "jump_back_animations_count": "2",
+
+                "jump_back_min_impulse_1": "6.0",
+                "jump_back_max_impulse_1": "12.0",
+                "jump_back_start_delay_1": "0.1",
+                "jump_back_duration_1": "0.4",
+                "jump_back_end_delay_1": "0.5",
+
+                "jump_back_min_impulse_2": "6.0",
+                "jump_back_max_impulse_2": "12.0",
+                "jump_back_start_delay_2": "0.25",
+                "jump_back_duration_2": "0.4",
+                "jump_back_end_delay_2": "0.55",
+                "rage_duration": "0.83",
+                "rage_prob": "0",
+                "rage_min_delay": "0",
+                "rage_max_delay": "0"
+            }
+        },
+        "GlassheadMelee":
+        {
+            "behavior_params":
+            {
+                "jump_back_prob": "1.0",
+
+                "jump_back_min_distance_from_target": "4",
+
+                "jump_back_animations_count": "2",
+
+                "jump_back_min_impulse_1": "6.0",
+                "jump_back_max_impulse_1": "12.0",
+                "jump_back_start_delay_1": "0.1",
+                "jump_back_duration_1": "0.4",
+                "jump_back_end_delay_1": "0.5",
+
+                "jump_back_min_impulse_2": "6.0",
+                "jump_back_max_impulse_2": "12.0",
+                "jump_back_start_delay_2": "0.25",
+                "jump_back_duration_2": "0.4",
+                "jump_back_end_delay_2": "0.55",
+                "rage_duration": "0.83",
+                "rage_prob": "0",
+                "rage_min_delay": "0",
+                "rage_max_delay": "0"
+            },
+            "equip_params":
+            {
+                "effective_distance_min": "2",
+                "effective_distance_max": "4",
+                "combo_min_hits": "2",
+                "combo_max_hits": "3",
+
+                "attack_distance": "7"
+            }
+        }
+    }
+}

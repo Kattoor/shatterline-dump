@@ -1,0 +1,36 @@
+{
+  "name": "daily_weapon_100",
+  "type": "daily",
+  "tags": [
+    "daily_weapon"
+  ],
+  "image": "weekly_temp_icon",
+  "rarity": "epic",
+  "display_name": { "localization_key": "@daily_weapon_100_name" },
+  "description": { "localization_key": "@daily_weapon_100_description" },
+  "conditions": [
+    {
+      "name": "daily_weapon_100",
+      "event_description": { "localization_key": "@daily_weapon_100_event_description" },
+      "event": { "event_id": "Kill", "actor_is_me": true, "target_player_preset_is_not": [], "actor_item_tag_is": ["KN"]},
+      "progress": 1
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 350
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 250
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 10
+    }
+  ]
+}

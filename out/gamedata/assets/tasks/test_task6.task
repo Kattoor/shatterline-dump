@@ -1,0 +1,42 @@
+{
+  "name": "test_task6",
+  "type": "special",
+  "active": true,
+  "image": "test_icon",
+  "rarity": "common",
+  "display_name": { 
+    "localizations": {
+      "en-us": "Test task 6 (en-us)",
+      "uk-ua": "Test task 6 (uk-ua)",
+      "ja-jp": "Test task 6 (ja-jp)"
+    }
+  },
+  "description": { 
+    "localizations": {
+      "en-us": "Test task 6 description (en-us)",
+      "uk-ua": "Test task 6 description (uk-ua)",
+      "ja-jp": "Test task 6 description (ja-jp)"
+    }
+  },
+  "conditions": [
+    {
+      "name": "test_task6",
+      "event_description": { 
+        "localizations": {
+          "en-us": "Test task 6 event description (en-us)",
+          "uk-ua": "Test task 6 event description (uk-ua)",
+          "ja-jp": "Test task 6 event description (ja-jp)"
+        }
+      },
+      "event": { "event_id": "Headshot", "actor_is_me": true },
+      "progress": 1
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 1000
+    }
+  ]
+}

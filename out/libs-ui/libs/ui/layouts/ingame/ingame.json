@@ -1,0 +1,15 @@
+{
+    "script": "scripts/ui/ingame.lua",
+    "view_path": "RootScreen.html",
+    "hide_cursor": true,
+    "send_stats": true,
+    "children":
+    [
+        {"name": "popup_group", "type": "Component", "file": "navigation/navigation_popup_group.json"},
+        {"name": "hud_navigation", "type": "Component", "file": "hud_navigation.json"},
+        {"name": "cut_scene", "type": "Component", "file": "cut_scene.json", "visible": false},
+        {"name": "hud_screens", "type": "Component", "file": "hud_screens.json"},
+        {"name": "hud_menus", "type": "Component", "file": "hud_menus.json"},
+        {"name": "ingame_chat", "type": "Component", "file": "ingame/ingame_chat.json"}
+    ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "first_win_horde_01",
+  "type": "daily",
+  "tags": [
+    "first_win_horde_01"
+  ],
+  "ui_tags": ["mode_specific", "cpl_expeditions"],
+  "image": "weekly_temp_icon",
+  "rarity": "common",
+  "display_name": { "localization_key": "@first_win_horde_01_name" },
+  "description": { "localization_key": "@first_win_horde_01_description" },
+  "conditions": [
+    {
+      "name": "first_win_horde_01",
+      "event_description": { "localization_key": "@first_win_horde_01_event_description" },
+      "event": { "event_id": "HordeStageComplete", "actor_is_me": true},
+      "progress": 1
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 5
+    }
+  ]
+}

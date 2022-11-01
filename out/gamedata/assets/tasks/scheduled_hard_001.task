@@ -1,0 +1,50 @@
+{
+  "name": "scheduled_hard_001",
+  "type": "scheduled",
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "epic",
+  "display_name": { "localization_key": "@scheduled_hard_001_name" },
+  "description": { "localization_key": "@scheduled_hard_001_description" },
+  "conditions": [
+    {
+      "name": "scheduled_hard_001_1",
+      "event_description": { "localization_key": "@scheduled_hard_001_1_event_description" },
+      "event": { "event_id": "Kill", "actor_is_me": true, "target_player_class_is": ["A", "M", "H", "S"]},
+      "progress": 15
+    },
+    {
+      "name": "scheduled_hard_001_2",
+      "event_description": { "localization_key": "@scheduled_hard_001_2_event_description" },
+      "event": { "event_id": "Headshot", "actor_is_me": true,  "target_player_preset_is_not": []},
+      "progress": 3
+    },
+    {
+      "name": "scheduled_hard_001_3",
+      "event_description": { "localization_key": "@scheduled_hard_001_3_event_description" },
+      "event": { "event_id": "Kill", "actor_is_me": true, "actor_item_tag_is": ["ULT", "ult_ik01"], "target_player_preset_is_not": []},
+      "progress": 5
+    }
+  ],
+  
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 3000
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 2000
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 25
+    }
+  ],
+  "reset_on_events": [
+    {"event_id": "SessionFinish"}
+   ]
+}

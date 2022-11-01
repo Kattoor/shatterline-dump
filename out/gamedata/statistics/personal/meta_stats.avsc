@@ -1,0 +1,35 @@
+{
+    "name": "meta_stats",
+    "doc": "Origin: game session. Emitter: dedicated server.",
+    "type": "record",
+    "fields": [
+        {
+            "name": "datetime",
+            "type": "string",
+            "default": "",
+            "doc": "format: YYYY-MM-DD hh:mm:ss"
+        },
+        {
+            "name": "profile_id",
+            "type": "long",
+            "default": 0,
+            "doc": "identifier of a player"
+        },
+        {
+            "name": "season_id",
+            "type": "long",
+            "default": 0,
+            "doc": "Identifier of Season"
+        },
+        {
+            "name": "stat_name",
+            "type": "string",
+            "doc": "identifier of the resource: task_completed, achievement_earned, soft_currency_earned, hard_currency_earned, profile_experience_earned, etc"
+        },
+        {
+            "name": "stat_value",
+            "type": "int",
+            "default": 0
+        }
+    ]
+}

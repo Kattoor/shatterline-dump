@@ -1,0 +1,79 @@
+{
+    "name": "hero_stats",
+    "doc": "Origin: game session. Emitter: dedicated server.",
+    "type": "record",
+    "fields": [
+        {
+            "name": "datetime",
+            "type": "string",
+            "default": "",
+            "doc": "format: YYYY-MM-DD hh:mm:ss"
+        },
+        {
+            "name": "profile_id",
+            "type": "long",
+            "default": 0,
+            "doc": "Identifier of a player"
+        },
+        {
+            "name": "season_id",
+            "type": "long",
+            "default": 0,
+            "doc": "Identifier of Season"
+        },
+        {
+            "name": "mission_name",
+            "type": "string",
+            "default": "",
+            "doc": "Mission name"
+        },
+        {
+            "name": "game_mode",
+            "type": "string",
+            "default": "",
+            "doc": "Game mode"
+        },
+        {
+            "name": "game_type",
+            "type": "string",
+            "default": "",
+            "doc": "Game type"
+        },
+        {
+            "name": "hero_name",
+            "type": "string",
+            "default": "",
+            "doc": "Hero name"
+        },
+        {
+            "name": "hero_healing",
+            "type": "int",
+            "default": 0,
+            "doc": "HP healed count"
+        },
+        {
+            "name": "hero_assists",
+            "type": "int",
+            "default": 0,
+            "doc": "Kill assist count"
+        },
+        {
+            "name": "hero_revives",
+            "type": "int",
+            "default": 0,
+            "doc": "revives count"
+        },
+        {
+            "name": "hero_deaths",
+            "type": "int",
+            "default": 0,
+            "doc": "death count"
+        },
+        {
+            "name": "hero_played_time",
+            "type": "int",
+            "default": 0,
+            "doc": "played time in seconds"
+        }
+    ]
+}

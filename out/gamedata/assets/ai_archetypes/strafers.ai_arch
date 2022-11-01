@@ -1,0 +1,1639 @@
+
+{
+    "ai_archetypes": [
+        {
+            "name": "StraferMainArchetype",
+            "slice": "slices/ai/strafer_gunman_normal.dynamicslice",
+            "tp_slice": "slices/ai/strafer_gunman_tp.dynamicslice",
+            "hud_marker": "trash_hp_marker_head",
+            "competitor": "Strafer",
+            "vo_profile": "Gunman",
+            "random_miss_chance": 0.15,
+            "body_turn_speed": [{"angle":0, "speed":360}],
+            "aim_turn_speed": [{"angle":0, "speed":540}],
+            "leave_dead_body": true,
+            "attacks_history_forget_time": 5.0,
+            "min_time_before_change_miss_angle": 0.1,
+            "max_time_before_change_miss_angle": 0.6,
+            "enemy_type": "regular_ranged",
+            "aim_from_bone": "weapon_bone",
+            "correct_weapon_ray": true,
+            "can_be_captured": true,
+            "aabb_box":
+            {
+                "width": 1.1,
+                "length": 1.1,
+                "height": 1.8
+            },
+            "behavior":
+            {
+                "behavior_tree": "BehaviorSelector",
+                "profile": "Ranged"
+            },
+            "perception":
+            {
+                "sight_range": 100.0,
+                "max_memory_time": 30.0,
+                "sound_stimulus_scale": 0.0,
+                "weight_inc_step": 2,
+                "weight_inc_time": 0.1,
+                "weight_dec_step": 50,
+                "weight_dec_time": 0.2
+            },
+            "speed":
+            {
+                "run": 6.8,
+                "strafe": 2.0,
+                "back": 2.3,
+                "crouch": 1,
+                "fire": 0.7,
+                "speed_change_duration": 1.0,
+                "rotation_max_speed": 4.0,
+                "non_strafe_max_angle": 5.0,
+                "strafe_restart_if_angle": 45.0
+            },
+            "target_selection":
+            {
+                "tag_distance":
+                {
+                    "Character":
+                    {
+                        "weights":
+                        [
+                            {
+                                "weight":5,
+                                "distance":30
+                            },
+                            {
+                                "weight":10,
+                                "distance":27
+                            },
+                            {
+                                "weight":15,
+                                "distance":24
+                            },
+                            {
+                                "weight":20,
+                                "distance":21
+                            },
+                            {
+                                "weight":25,
+                                "distance":18
+                            },
+                            {
+                                "weight":30,
+                                "distance":15
+                            },
+                            {
+                                "weight":35,
+                                "distance":12
+                            },
+                            {
+                                "weight":40,
+                                "distance":9
+                            },
+                            {
+                                "weight":45,
+                                "distance":6
+                            },
+                            {
+                                "weight":50,
+                                "distance":3
+                            }
+                        ]
+                    },
+                    "Player":
+                    {
+                        "visibility_cone_angle": 110,
+                        "weights":
+                        [
+                            {
+                                "weight":5,
+                                "distance":20
+                            },
+                            {
+                                "weight":10,
+                                "distance":18
+                            },
+                            {
+                                "weight":15,
+                                "distance":16
+                            },
+                            {
+                                "weight":20,
+                                "distance":14
+                            },
+                            {
+                                "weight":25,
+                                "distance":12
+                            },
+                            {
+                                "weight":30,
+                                "distance":10
+                            },
+                            {
+                                "weight":35,
+                                "distance":8
+                            },
+                            {
+                                "weight":40,
+                                "distance":6
+                            },
+                            {
+                                "weight":45,
+                                "distance":4
+                            },
+                            {
+                                "weight":50,
+                                "distance":2
+                            }
+                        ]
+                    }
+                },
+                "tag_weights":
+                {
+                    "VIP": -10,
+                    "InvisibleAI": -500,
+                    "ShooterPriority": 100,
+                    "Breakable": -10
+                },
+                "weights":
+                {
+                    "critical_range": 0,
+                    "damage_dealer": 10,
+                    "target_visible": 10,
+                    "target_sound": 0,
+                    "target_memory": 0
+                },
+                "thresholds":
+                {
+                    "critical_range": 15,
+                    "damage_dealer_duration": 5
+                }
+            },
+            "wounds":
+            {
+                "impulse":
+                {
+                    "profile": "Gunman",
+                    "value": 50.0,
+                    "ignore_impulse": false,
+                    "prob": 1.0,
+                    "cooldown_min": 0.0,
+                    "cooldown_max": 0.0
+                },
+                "damage":
+                {
+                    "profile": "Gunman",
+                    "value": 36.0,
+                    "time": 0.02,
+                    "prob": 1.0,
+                    "cooldown_min": 3.0,
+                    "cooldown_max": 5.0
+                },
+                "cooldown_min": 0.0,
+                "cooldown_max": 0.0
+            },
+            "slow_down_effect":
+            {
+                "slow_down_speed": 0.1,
+                "damage_threshold": 20,
+                "time_threshold": 0.1,
+                "effect_time": 0.3,
+                "max_effect_time": 1.0,
+                "bullet_type": ["Rifle", "Shotgun", "Sniper", "Pistol"]
+            },
+            "hit_reactions":
+            {
+                "animation": "Gunman",
+                "damage": 5,
+                "probability": 0.95
+            }
+        },
+
+        {
+            "name": "StraferAR",
+            "add_tags":["StraferAI", "RegularAI"],
+            "parent": "StraferMainArchetype",
+            "display_name": "@strafer_ar",
+            "tags": ["(1) Strafer: AR"],
+            "tp_slice": "slices/ai/strafer_gunman_02_tp.dynamicslice",
+            "grade": "normal",
+            "health": 140,
+            "behavior":
+            {
+                "params":
+                {
+                    "front_of_target_angle": "60",
+                    "cover_weight_mul": "10",
+                    "defense_area_weight": "4",
+                    "effective_distance_min": "5",
+                    "effective_distance_max": "30",
+                    "distance_to_target_mul": "1.0",
+                    "distance_to_target_weight_min": "1",
+                    "distance_to_target_weight_max": "22",
+                    "max_attack_time_during_move": "1.0",
+                    "defense_to_attack_during_move_prob": "1",
+                    "side_strafe_length_min": "1",
+                    "side_strafe_length_max": "3",
+                    "wait_after_strafe_min": "3",
+                    "ally_points": "5",
+                    "wait_after_strafe_max": "5"
+                }
+            },
+            "equip": [
+                {
+                    "item": "ar02_grade1_ai",
+                    "damage_multiplier": 1.15,
+                    "continue_shooting_time": 5.0,
+                    "max_shooting_range": 35,
+                    "shooting_pattern": ["2-5; 0.5-0.7", "2-5; 0.7-0.8", "2-5; 0.5-0.7", "2-3; 0.8"],
+                    "shooting_pattern_distances":
+                    [
+                        { "min_distance": 0, "max_distance": 7, "pattern": ["5-8; 0.4-0.6", "4-8; 0.4-0.8", "5-9; 0.6-1", "4-8; 0.2-0.7"] },
+                        { "min_distance": 7, "max_distance": 30, "pattern": ["2-6; 0.7-0.9", "3-6; 0.7-1", "2-4; 0.5-1.1", "2-5; 0.4-0.6"] },
+                        { "min_distance": 30, "max_distance": 40, "pattern": ["1-3; 0.5-0.7", "1-2; 0.6-0.7", "1-2; 0.6-0.7", "2-2; 0.8"] }
+                    ]
+                },
+                {
+                    "item": "gr_frag02_ai"
+                }
+            ],
+            "microbehaviors": [
+                {
+                    "name": "ThrowGrenade"
+                },
+                {
+                    "name": "EvadingMoveInCover"
+                },
+                {
+                    "name": "CloseToGrenadeReaction"
+                }
+            ]
+        },
+
+        {
+            "name": "StraferAR_grade2",
+            "parent": "StraferAR",
+            "display_name": "@strafer_ar_grade2",
+            "grade": "grade2",
+            "health": 140,
+            "behavior":
+            {
+                "params":
+                {
+                    "side_strafe_length_min": "2",
+                    "side_strafe_length_max": "4",
+                    "wait_after_strafe_min": "1",
+                    "wait_after_strafe_max": "3"
+                }
+            },
+            "equip": [
+                {
+                    "item": "ar02_grade2_ai",
+                    "damage_multiplier": 1.48,
+                    "max_shooting_range": 35,
+                    "shooting_pattern": ["2-5; 0.5-0.7", "2-5; 0.7-0.8", "2-5; 0.5-0.7", "2-3; 0.8"],
+                    "shooting_pattern_distances":
+                    [
+                        { "min_distance": 0, "max_distance": 7, "pattern": ["5-8; 0.4-0.6", "4-8; 0.4-0.8", "5-9; 0.6-1", "4-8; 0.2-0.7"] },
+                        { "min_distance": 7, "max_distance": 30, "pattern": ["2-6; 0.7-0.9", "3-6; 0.7-1", "2-4; 0.5-1.1", "2-5; 0.4-0.6"] },
+                        { "min_distance": 30, "max_distance": 40, "pattern": ["1-3; 0.5-0.7", "1-2; 0.6-0.7", "1-2; 0.6-0.7", "2-2; 0.8"] }
+                    ]
+                },
+                {
+                    "item": "gr_frag02_ai"
+                }
+            ],
+            "microbehaviors": [
+                {
+                    "name": "ThrowGrenade",
+                    "params":
+                    {
+                        "idle_time": "2.0"
+                    }
+                },
+                {
+                    "name": "EvadingMoveInCover"
+                },
+                {
+                    "name": "DeployCover"
+                },
+                {
+                    "name": "CloseToGrenadeReaction"
+                }
+            ]
+        },
+        {
+            "name": "StraferAR_grade2_firegrenade",
+            "parent": "StraferAR_grade2",
+            "equip": [
+                {
+                    "item": "ar02_grade2_ai",
+                    "damage_multiplier": 1.48,
+                    "max_shooting_range": 35,
+                    "shooting_pattern": ["2-5; 0.5-0.7", "2-5; 0.7-0.8", "2-5; 0.5-0.7", "2-3; 0.8"],
+                    "shooting_pattern_distances":
+                    [
+                        { "min_distance": 0, "max_distance": 7, "pattern": ["5-8; 0.4-0.6", "4-8; 0.4-0.8", "5-9; 0.6-1", "4-8; 0.2-0.7"] },
+                        { "min_distance": 7, "max_distance": 30, "pattern": ["2-6; 0.7-0.9", "3-6; 0.7-1", "2-4; 0.5-1.1", "2-5; 0.4-0.6"] },
+                        { "min_distance": 30, "max_distance": 40, "pattern": ["1-3; 0.5-0.7", "1-2; 0.6-0.7", "1-2; 0.6-0.7", "2-2; 0.8"] }
+                    ]
+                },
+                {
+                    "item": "spg05_ai"
+                }
+            ]
+        },
+        {
+            "name": "StraferAR_grade3",
+            "parent": "StraferAR",
+            "display_name": "@strafer_ar_grade3",
+            "grade": "grade3",
+            "health": 160,
+            "equip": [
+                {
+                    "item": "ar02_grade3_ai",
+                    "damage_multiplier": 1.7,
+                    "max_shooting_range": 35,
+                    "shooting_pattern": ["2-5; 0.5-0.7", "2-5; 0.7-0.8", "2-5; 0.5-0.7", "2-3; 0.8"],
+                    "shooting_pattern_distances":
+                    [
+                        { "min_distance": 0, "max_distance": 7, "pattern": ["8-10; 0.6-0.8", "7-10; 0.6-1.0", "8-10; 0.8-1.2", "7-10; 0.4-0.9"] },
+                        { "min_distance": 7, "max_distance": 30, "pattern": ["4-7; 1.0-1.3", "4-8; 1.0-1.5", "3-6; 0.9-1.6", "3-8; 0.6-0.8"] },
+                        { "min_distance": 30, "max_distance": 40, "pattern": ["1-3; 0.7-0.9", "2-3; 0.8-0.9", "1-3; 0.8-0.9", "2-3; 1.0"] }
+                    ]
+                },
+                {
+                    "item": "gr_frag02_ai"
+                }
+            ],
+            "microbehaviors": [
+                {
+                    "name": "ThrowGrenade",
+                    "params":
+                    {
+                        "idle_time": "0.1",
+                        "source_counter":"2",
+                        "source_reset_time":"12",
+                        "source_delay_min":"10",
+                        "source_delay_max":"15"
+                    }
+                },
+                {
+                    "name": "DeployCover"
+                },
+                {
+                    "name": "EvadingMoveInCover"
+                },
+                {
+                    "name": "CloseToGrenadeReaction"
+                }
+            ]
+        },
+        {
+            "name": "StraferSMG",
+            "add_tags":["StraferAI", "RegularAI"],
+            "parent": "StraferMainArchetype",
+            "tp_slice": "slices/ai/strafer_cqc_tp.dynamicslice",
+            "tags": ["(1) Strafer: SMG"],
+            "display_name": "@strafer_smg",
+            "grade": "normal",
+            "health": 140,
+            "vo_profile": "StraferSMG",
+            "behavior":
+            {
+                "params":
+                {
+                    "front_of_target_angle": "120",
+                    "target_too_close_range": "11",
+                    "cover_weight_mul": "2",
+                    "defense_area_weight": "2",
+                    "effective_distance_min": "5",
+                    "effective_distance_max": "20",
+                    "distance_to_target_mul": "-1.0",
+                    "distance_to_target_weight_min": "-20",
+                    "distance_to_target_weight_max": "-9",
+                    "max_attack_time_during_move": "2.0",
+                    "defense_to_attack_during_move_prob": "1",
+                    "disable_defense_if_target_in_cone_and_move_angle": "45",
+                    "side_strafe_length_min": "2",
+                    "side_strafe_length_max": "3",
+                    "wait_after_strafe_min": "2",
+                    "wait_after_strafe_max": "4"
+                }
+            },
+            "target_selection":
+            {
+                "thresholds":
+                {
+                    "critical_range": 11
+                }
+            },
+            "equip": [
+                {
+                    "item": "smg01_grade1_ai",
+                    "continue_shooting_time": 3.0,
+                    "damage_multiplier": 0.55,
+                    "shooting_pattern": ["2-5; 0.2-0.5", "3-6; 0.2-0.4", "2-4; 0.2-0.5", "1-6; 0.1-0.3"],
+                    "max_shooting_range": 22,
+                    "shooting_pattern_distances":
+                    [
+                        { "min_distance": 0, "max_distance": 9, "pattern": ["12-15; 0.3-0.5", "13-16; 0.3-0.6", "12-14; 0.3-0.5", "11-16; 0.2-0.4"] },
+                        { "min_distance": 9, "max_distance": 17, "pattern": ["8-12; 0.7-1.0", "8-12; 0.7-1.1", "8-12; 0.6-0.9", "8-12; 1.0-1.3"] },
+                        { "min_distance": 17, "max_distance": 22, "pattern": ["5-7; 0.4-0.5", "4-6; 0.3-0.5", "4-6; 0.4-0.5", "4-6; 0.3-0.4"] }
+                    ]
+                },
+                {
+                    "item": "flg01_ai"
+                }
+            ],
+            "microbehaviors": [
+                {
+                    "name": "ThrowGrenade",
+                    "params":
+                    {
+                        "idle_time": "0.3",
+                        "global_counter": "2",
+                        "global_reset_time": "30",
+                        "self_frequency_limit_name":"FlashGrenadeThrowSelf",
+                        "global_frequency_limit_name":"FlashGrenadeThrowGlobal"
+                    }
+                },
+                {
+                    "name": "EvadingMoveUnderFire",
+                    "params":
+                    {
+                        "probability": "0.5",
+                        "source_delay_min": "3",
+                        "source_delay_max": "4",
+                        "global_freq_count": "3",
+                        "global_freq_time": "1.0",
+                        "global_delay_min": "0.1",
+                        "global_delay_max": "0.25",
+                        "anim_duration": "1.07",
+                        "move_impulse": "5.0",
+                        "impulse_start":"0.2",
+                        "impulse_end":"0.75",
+                        "block_range":"6.0"
+                    }
+                },
+                {
+                    "name": "EvadingMoveWhenTargeted",
+                    "params":
+                    {
+                        "block_range":"6.0"
+                    }
+                },
+                {
+                    "name": "EvadingMoveInCover"
+                },
+                {
+                    "name": "CloseToGrenadeReaction"
+                }
+            ],
+            "wounds":
+            {
+                "damage":
+                {
+                    "value": 40.0
+                }
+            },
+            "speed":
+            {
+                "run": 7.0,
+                "back": 3.5,
+                "strafe": 2.5,
+                "fire": 0.9
+            }
+        },
+        
+        {
+            "name": "StraferSMG_grade2",
+            "display_name": "@strafer_smg_grade2",
+            "parent": "StraferSMG",
+            "grade": "grade2",
+            "health": 140,
+            "behavior":
+            {
+                "params":
+                {
+                    "side_strafe_length_min": "1",
+                    "side_strafe_length_max": "3",
+                    "cover_weight_mul": "0.1",
+                    "wait_after_strafe_min": "1",
+                    "wait_after_strafe_max": "3"
+                }
+            },
+            "equip": [
+                {
+                    "item": "smg01_grade2_ai",
+                    "continue_shooting_time": 3.0,
+                    "damage_multiplier": 0.65,
+                    "shooting_pattern": ["2-5; 0.2-0.5", "3-6; 0.2-0.4", "2-4; 0.2-0.5", "1-6; 0.1-0.3"],
+                    "max_shooting_range": 22,
+                    "shooting_pattern_distances":
+                    [
+                        { "min_distance": 0, "max_distance": 9, "pattern": ["12-15; 0.3-0.5", "13-16; 0.3-0.6", "12-14; 0.3-0.5", "11-16; 0.2-0.4"] },
+                        { "min_distance": 9, "max_distance": 17, "pattern": ["8-12; 0.7-1.0", "8-12; 0.7-1.1", "8-12; 0.6-0.9", "8-12; 1.0-1.3"] },
+                        { "min_distance": 17, "max_distance": 22, "pattern": ["5-7; 0.4-0.5", "4-6; 0.3-0.5", "4-6; 0.4-0.5", "4-6; 0.3-0.4"] }
+                    ]
+                },
+                {
+                    "item": "flg01_ai"
+                }
+            ],
+            "microbehaviors": [
+                {
+                    "name": "ThrowGrenade",
+                    "params":
+                    {
+                        "idle_time": "0.3",
+                        "global_counter": "2",
+                        "global_reset_time": "30",
+                        "self_frequency_limit_name":"FlashGrenadeThrowSelf",
+                        "global_frequency_limit_name":"FlashGrenadeThrowGlobal"
+                    }
+                },
+                {
+                    "name": "EvadingMoveUnderFire",
+                    "params":
+                    {
+                        "probability": "0.5",
+                        "source_delay_min": "3",
+                        "source_delay_max": "4",
+                        "global_freq_count": "3",
+                        "global_freq_time": "1.0",
+                        "global_delay_min": "0.1",
+                        "global_delay_max": "0.25",
+                        "anim_duration": "1.07",
+                        "move_impulse": "5.0",
+                        "impulse_start":"0.2",
+                        "impulse_end":"0.75",
+                        "block_range":"6.0"
+                    }
+                },
+                {
+                    "name": "EvadingMoveWhenTargeted",
+                    "params":
+                    {
+                        "block_range":"6.0"
+                    }
+                },
+                {
+                    "name": "EvadingMoveInCover"
+                },
+                {
+                    "name": "GoInvisible"
+                },
+                {
+                    "name": "SendScriptEventByAttackInProgress"
+                },
+                {
+                    "name": "CloseToGrenadeReaction"
+                }
+                
+            ]
+        },
+        {
+            "name": "StraferSMG_grade3",
+            "display_name": "@strafer_smg_grade3",
+            "parent": "StraferSMG",
+            "grade": "grade3",
+            "health": 160,
+            "equip": [
+                {
+                    "item": "smg01_grade3_ai",
+                    "continue_shooting_time": 3.0,
+                    "damage_multiplier": 0.74,
+                    "shooting_pattern": ["2-5; 0.2-0.5", "3-6; 0.2-0.4", "2-4; 0.2-0.5", "1-6; 0.1-0.3"],
+                    "max_shooting_range": 22,
+                    "shooting_pattern_distances":
+                    [
+                        { "min_distance": 0, "max_distance": 9, "pattern": ["12-15; 0.3-0.5", "13-16; 0.3-0.6", "12-14; 0.3-0.5", "11-16; 0.2-0.4"] },
+                        { "min_distance": 9, "max_distance": 17, "pattern": ["8-12; 0.7-1.0", "8-12; 0.7-1.1", "8-12; 0.6-0.9", "8-12; 1.0-1.3"] },
+                        { "min_distance": 17, "max_distance": 22, "pattern": ["5-7; 0.4-0.5", "4-6; 0.3-0.5", "4-6; 0.4-0.5", "4-6; 0.3-0.4"] }
+                    ]
+                },
+                {
+                    "item": "spg10_ai"
+                }
+            ],
+            "microbehaviors": [
+                {
+                    "name": "ThrowGrenade",
+                    "params":
+                    {
+                        "idle_time": "0.1",
+                        "global_counter": "2",
+                        "global_reset_time": "30",
+                        "self_frequency_limit_name":"FlashGrenadeThrowSelf",
+                        "global_frequency_limit_name":"FlashGrenadeThrowGlobal"
+                    }
+                },
+                {
+                    "name": "EvadingMoveUnderFire",
+                    "params":
+                    {
+                        "probability": "0.5",
+                        "source_delay_min": "3",
+                        "source_delay_max": "4",
+                        "global_freq_count": "3",
+                        "global_freq_time": "1.0",
+                        "global_delay_min": "0.1",
+                        "global_delay_max": "0.25",
+                        "anim_duration": "1.07",
+                        "move_impulse": "5.0",
+                        "impulse_start":"0.2",
+                        "impulse_end":"0.75",
+                        "block_range":"6.0"
+                    }
+                },
+                {
+                    "name": "EvadingMoveWhenTargeted",
+                    "params":
+                    {
+                        "block_range":"6.0"
+                    }
+                },
+                {
+                    "name": "EvadingMoveInCover"
+                },
+                {
+                    "name": "GoInvisible"
+                },
+                {
+                    "name": "SendScriptEventByAttackInProgress"
+                },
+                {
+                    "name": "CloseToGrenadeReaction"
+                }
+            ]
+        },
+
+        {
+            "name": "StraferSHG",
+            "add_tags":["StraferAI", "RegularAI"],
+            "tags": ["(1) Strafer: SHG"],
+            "display_name": "@strafer_shg",
+            "parent": "StraferMainArchetype",
+            "tp_slice": "slices/ai/strafer_shotgunner_ai_infantry_tp.dynamicslice",
+            "grade" : "normal",
+            "health": 300,
+            "behavior":
+            {
+                "params":
+                {
+                    "idle_query_name": "RangedNoCover",
+                    "battle_query_name": "BattleRangedNoCover",
+                    "target_too_close_range": "5",
+                    "front_of_target_angle": "120",
+                    "defense_area_weight": "2",
+                    "effective_distance_min": "1",
+                    "effective_distance_max": "10",
+                    "distance_to_target_mul": "1.0",
+                    "distance_to_target_weight_min": "1",
+                    "distance_to_target_weight_max": "7",
+                    "max_attack_time_during_move": "3.0",
+                    "defense_to_attack_during_move_prob": "1",
+                    "disable_defense_if_target_in_cone_and_move_angle": "90",
+                    "change_position_idle_during_move": "false",
+                    "side_strafe_length_min": "1",
+                    "side_strafe_length_max": "3",
+                    "wait_after_strafe_min": "1",
+                    "wait_after_strafe_max": "2",
+                    "change_position_in_openspace_cooldown_min": "3",
+                    "change_position_in_openspace_cooldown_max": "5",
+                    "ally_points": "3",
+                    "flashlight_spawn_probability": "0.3"
+                }
+            },
+            "target_selection":
+            {
+                "thresholds":
+                {
+                    "critical_range": 7
+                }
+            },
+            "equip": [
+                {
+                    "item": "shg01_grade1_ai",
+                    "damage_multiplier": 0.68,
+                    "shooting_pattern": ["1; 0.8-1.2"],
+                    "max_shooting_range": 12,
+                    "shooting_pattern_distances":
+                    [
+                        { "min_distance": 0, "max_distance": 5, "pattern": ["1; 0.6-0.8"] },
+                        { "min_distance": 5, "max_distance": 9, "pattern": ["1; 0.8-1.2"] },
+                        { "min_distance": 9, "max_distance": 12, "pattern": ["1; 1.3-1.7"] }
+                    ]
+                }
+            ],
+            "microbehaviors": [
+                {
+                    "name": "CloseToGrenadeReaction"
+                }
+            ],
+            "wounds":
+            {
+                "damage":
+                {
+                    "value": 50.0
+                }
+            },
+            "speed":
+            {
+                "run": 6.3,
+                "back": 2.5,
+                "strafe": 2.3,
+                "fire": 0.3
+            }
+        },
+
+        {
+            "name": "StraferSHG_grade2",
+            "parent": "StraferSHG",
+            "display_name": "@strafer_shg_grade2",
+            "grade": "grade2",
+            "health": 320,
+            "behavior":
+            {
+                "params":
+                {
+                    "flashlight_spawn_probability": "0.6"
+                }
+            },
+            "equip": [
+                {
+                    "item": "shg01_grade2_ai",
+                    "damage_multiplier": 0.8,
+                    "shooting_pattern": ["1; 0.8-1.2"],
+                    "max_shooting_range": 12,
+                    "shooting_pattern_distances":
+                    [
+                        { "min_distance": 0, "max_distance": 5, "pattern": ["1; 0.6-0.8"] },
+                        { "min_distance": 5, "max_distance": 9, "pattern": ["1; 0.8-1.2"] },
+                        { "min_distance": 9, "max_distance": 12, "pattern": ["1; 1.3-1.7"] }
+                    ]
+                }
+            ]
+        },
+
+        {
+            "name": "StraferSHG_grade3",
+            "parent": "StraferSHG",
+            "display_name": "@strafer_shg_grade3",
+            "grade": "grade3",
+            "health": 340,
+            "behavior":
+            {
+                "params":
+                {
+                    "flashlight_spawn_probability": "1.0"
+                }
+            },
+            "equip": [
+                {
+                    "item": "shg01_grade3_ai",
+                    "damage_multiplier": 0.98,
+                    "shooting_pattern": ["1; 0.8-1.2"],
+                    "max_shooting_range": 12,
+                    "shooting_pattern_distances":
+                    [
+                        { "min_distance": 0, "max_distance": 5, "pattern": ["1; 0.6-0.8"] },
+                        { "min_distance": 5, "max_distance": 9, "pattern": ["1; 0.8-1.2"] },
+                        { "min_distance": 9, "max_distance": 12, "pattern": ["1; 1.3-1.7"] }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "StraferSR",
+            "add_tags":["StraferAI", "SpecialAI"],
+            "parent": "StraferMainArchetype",
+            "display_name": "@strafer_sr",
+            "tags": ["(1) Strafer: SR"],
+            "tp_slice": "slices/ai/strafer_gunman_tp.dynamicslice",
+            "enemy_type": "special_ranged",
+            "grade": "normal",
+            "health": 130,
+            "ik_asset_data_file" : "assets/ik/overrides/sniper_ai_tp.ik",
+            "behavior":
+            {
+                "params":
+                {
+                    "idle_query_name": "Sniper",
+                    "battle_query_name": "BattleSniper",
+                    "cover_weight_mul": "5",
+                    "front_of_target_angle": "160",
+                    "defense_area_weight": "5",
+                    "effective_distance_min": "5",
+                    "effective_distance_max": "100",
+                    "attack_state_time_min": "7",
+                    "attack_state_time_max": "8",
+                    "distance_to_target_mul": "0",
+                    "distance_to_target_weight_min": "0",
+                    "distance_to_target_weight_max": "0",
+                    "distance_to_self_mul": "-1",
+                    "distance_to_self_weight_min": "0",
+                    "distance_to_self_weight_max": "-40",
+                    "max_attack_time_during_move": "0.0",
+                    "defense_to_attack_during_move_prob": "0.2",
+                    "ally_points": "-5",
+                    "side_strafe_length_min": "0",
+                    "side_strafe_length_max": "0",
+                    
+                    "secondary_weapon_item_tag": "PT",
+                    "secondary_weapon_switch_range_min": "0",
+                    "secondary_weapon_switch_range_max": "6",
+                    "secondary_weapon_switch_range_delta": "6"
+                }
+            },
+            "equip": [
+                {
+                    "item": "sr01_ai",
+                    "damage_multiplier": 0.96,
+                    "shooting_pattern": ["1; 4.2"],
+                    "continue_shooting_time": 0.1,
+                    "max_shooting_range": 150,
+                    "laser_sight":
+                    {
+                        "wandering_time": 2.6,
+                        "after_shot_time": 0.1
+                    }
+                },
+                {
+                    "item": "pt01_ai",
+                    "continue_shooting_time": 3.0,
+                    "damage_multiplier": 0.42,
+                    "shooting_pattern": ["1; 1.2-1.5"],
+                    "max_shooting_range": 22
+                },
+                {
+                    "item": "gr_bcn01_ai"
+                }
+            ],
+            "target_selection":
+            {
+                "tag_weights":
+                {
+                    "sniper": 10,
+                    "InvisibleAI": -500,
+                    "SniperPriority": 100
+                },
+                "thresholds":
+                {
+                    "critical_range": 20
+                }
+
+            },
+            "wounds":
+            {
+                "impulse":
+                {
+                    "profile": "Sniper"
+                },
+                "damage":
+                {
+                    "profile": "Sniper"
+                }
+            },
+            "speed":
+            {
+                "run": 6.2,
+                "strafe": 2.0,
+                "back": 4.0,
+                "fire": 0.0
+            },
+            "microbehaviors":
+            [
+                {
+                    "name": "EvadingMoveInCover"
+                }
+            ]
+        },
+        {
+            "name": "StraferSR_grade2",
+            "parent": "StraferSR",
+            "grade": "grade4",
+            "display_name": "@strafer_sr",
+            "equip": [
+                {
+                    "item": "sr01_ai",
+                    "damage_multiplier": 0.96,
+                    "shooting_pattern": ["1; 4.2"],
+                    "continue_shooting_time": 0.1,
+                    "max_shooting_range": 150,
+                    "laser_sight":
+                    {
+                        "wandering_time": 2.6,
+                        "after_shot_time": 0.1
+                    }
+                },
+                {
+                    "item": "gr_bcn01_ai"
+                }
+            ],
+            "microbehaviors":
+            [
+                {
+                    "name": "ThrowGrenade",
+                    "params":
+                    {
+                        "self_frequency_limit_name":"ArtilleryThrowSelf",
+                        "global_frequency_limit_name":"ArtilleryThrowGlobal",
+                        "global_counter":"1",
+                        "global_reset_time":"18",
+                        "global_delay_min":"1",
+                        "global_delay_max":"3",
+                        "source_counter":"1",
+                        "source_reset_time":"12",
+                        "source_delay_min":"5",
+                        "source_delay_max":"12",
+                        "idle_radius":"1.0",
+                        "idle_time":"3.0"
+                    }
+                },
+                {
+                    "name": "EvadingMoveInCover"
+                },
+                {
+                    "name": "CloseToGrenadeReaction"
+                }
+            ]
+        },
+
+        {
+            "name": "StraferRL",
+            "add_tags":["StraferAI", "SpecialAI"],
+            "tags": ["(1) Strafer: RL"],
+            "parent": "StraferSR",
+            "grade": "normal",
+            "display_name": "@strafer_rl",
+            "tp_slice": "slices/ai/strafer_rocket_tp.dynamicslice",
+            "equip": [
+                {
+                    "item": "rl01_strafer_ai",
+                    "shooting_pattern": ["1; 1.0-1.2"],
+                    "check_visible": true,
+                    "continue_shooting_time": 0.1,
+                    "laser_sight":
+                    {
+                        "wandering_time": 0.5,
+                        "after_shot_time": 0.1
+                    }
+                },
+                {
+                    "item": "pt01_ai",
+                    "continue_shooting_time": 3.0,
+                    "damage_multiplier": 0.42,
+                    "shooting_pattern": ["1; 1.2-1.5"],
+                    "max_shooting_range": 22
+                }
+            ]
+        },
+        {
+            "name": "StraferRL_grade2",
+            "parent": "StraferRL",
+            "tags": ["(1) Strafer: RL Beacon"],
+            "grade": "grade4",
+            "display_name": "@strafer_rl",
+            "equip": [
+                {
+                    "item": "rl01_strafer_ai",
+                    "shooting_pattern": ["1; 1.0-1.2"],
+                    "check_visible": true,
+                    "continue_shooting_time": 0.1,
+                    "laser_sight":
+                    {
+                        "wandering_time": 0.5,
+                        "after_shot_time": 0.1
+                    }
+                },
+                {
+                    "item": "gr_bcn01_ai"
+                }
+            ],
+            "microbehaviors":
+            [
+                {
+                    "name": "ThrowGrenade",
+                    "params":
+                    {
+                        "self_frequency_limit_name":"ArtilleryThrowSelf",
+                        "global_frequency_limit_name":"ArtilleryThrowGlobal",
+                        "global_counter":"1",
+                        "global_reset_time":"18",
+                        "global_delay_min":"1",
+                        "global_delay_max":"3",
+                        "source_counter":"1",
+                        "source_reset_time":"12",
+                        "source_delay_min":"5",
+                        "source_delay_max":"12",
+                        "idle_radius":"1.0",
+                        "idle_time":"3.0"
+                    }
+                },
+                {
+                    "name": "EvadingMoveInCover"
+                },
+                {
+                    "name": "CloseToGrenadeReaction"
+                }
+            ]
+        },
+        
+        {
+            "name": "StraferGL",
+            "add_tags":["StraferAI", "SpecialAI"],
+            "parent": "StraferAR",
+            "enemy_type": "special_ranged",
+            "display_name": "@strafer_gl",
+            "hud_marker": "generic_hp_marker_head",
+            "tags": ["(1) Strafer: GL"],
+            "slice": "slices/ai/strafer_gunman_gl.dynamicslice",
+            "tp_slice": "slices/ai/strafer_gl_tp.dynamicslice",
+            "body_turn_limit": 360,
+            "health": 500,
+            "behavior":
+            {
+                "params":
+                {
+                    "battle_query_name": "RangedNoCover",
+                    "front_of_target_angle": "120",
+                    "target_too_close_range": "15",
+                    "effective_distance_min": "10",
+                    "effective_distance_max": "30",
+                    
+                    "max_attack_time_during_move": "0.0",
+                    "defense_to_attack_during_move_prob": "0.1",
+                    "ally_points": "1",
+                    
+                    "change_position_target_far_cooldown": "5",
+                    "change_position_target_close_cooldown": "25",
+                    "non_visible_close_distance": "5",
+                    
+                    "secondary_weapon_item_tag": "SHG",
+                    "secondary_weapon_switch_range_min": "0",
+                    "secondary_weapon_switch_range_max": "6",
+                    "secondary_weapon_switch_range_delta": "6"
+                 }
+            },
+            "equip": [
+                {
+                    "item": "gl01_strafer_ai",
+                    "check_visible": false,
+                    "damage_multiplier": 1.0,
+                    "shooting_pattern": ["1-3; 1.8-3"],
+                    "shooting_pattern_distances":
+                    [
+                        { "min_distance": 0, "max_distance": 15, "pattern": ["1; 1.8-3"] },
+                        { "min_distance": 15, "max_distance": 50, "pattern": ["1-2; 1.8-3"] },
+                        { "min_distance": 50, "max_distance": 150, "pattern": ["1; 2.8-4"] }
+                    ],
+                    "min_shooting_range": 10,
+                    "max_shooting_range": 60,
+                    "shoot_ballistic_projectile": true,
+                    "ballistic_projectile_target_offset": 1
+                },
+                {
+                    "item": "shg01_grade1_ai",
+                    "damage_multiplier": 0.48,
+                    "shooting_pattern": ["1; 0.8-1.2"],
+                    "max_shooting_range": 12,
+                    "shooting_pattern_distances":
+                    [
+                        { "min_distance": 0, "max_distance": 5, "pattern": ["1; 0.6-0.8"] },
+                        { "min_distance": 5, "max_distance": 9, "pattern": ["1; 0.8-1.2"] },
+                        { "min_distance": 9, "max_distance": 12, "pattern": ["1; 1.3-1.7"] }
+                    ]
+                }
+            ],
+            "perception":
+            {
+                "max_memory_time": 25.0
+            },
+            "speed":
+            {
+                "fire": 0.0
+            }
+        },
+        
+        {
+            "name": "StraferFlamethrower",
+            "add_tags":["StraferAI", "SpecialAI", "FlamethrowerAI"],
+            "tags": ["(1) Strafer: Flame"],
+            "display_name": "@strafer_flamethrower",
+            "parent": "Minotaur",
+            "slice": "slices/ai/ai_strafer_flamethrower.dynamicslice",
+            "tp_slice": "slices/ai/ai_strafer_flamethrower_tp.dynamicslice",
+            "health": 1200,
+            "hud_marker": "generic_hp_marker_head",
+            "aabb_box":
+            {
+                "width": 1.5,
+                "length": 1.5,
+                "height": 2.3
+            },
+            "behavior":
+            {
+                "projectile_launcher":
+                {
+                    "min_targets": 10
+                },
+                "params":
+                {
+                    "flame_damage_amount": "3.5",
+                    "flame_damage_period": "0.1",
+                    "weakpoint_health": "1850.0",
+                    "roll_probability": "0",
+                    "strafe_step_min": "1.5",
+                    "strafe_step_max": "3.2",
+                    "strafe_step_delay_min": "1",
+                    "strafe_step_delay_max": "1",
+                    "delay_after_chase_lost_target": "0",
+                    "melee_range": "0",
+                    "waiting_for_lost_target": "0.1",
+                    "jump_on_wound_enable": "false"
+                }
+            },
+            "equip":
+            [
+                {
+                    "item": "wpn05_flamethrower_ai",
+                    "shooting_pattern": ["5-12; 0.4-0.9"],
+                    "check_visible": false,
+                    "max_shooting_range": 8,
+                    "params":
+                    {
+                        "effective_distance_min": "1",
+                        "effective_distance_max": "6"
+                    }
+                }
+            ],
+            "hit_reactions":
+            {
+                "probability": 0
+            },
+            "wounds":
+            {
+                "impulse":
+                {
+                    "profile": "Gunman",
+                    "value": 50.0,
+                    "ignore_impulse": false,
+                    "prob": 1.0,
+                    "cooldown_min": 0.0,
+                    "cooldown_max": 0.0
+                },
+                "damage":
+                {
+                    "profile": "Gunman",
+                    "value": 200,
+                    "time": 0.15,
+                    "prob": 0.0,
+                    "cooldown_min": 3.0,
+                    "cooldown_max": 5.0
+                }
+            },
+            "eye_offset_z": -0.6
+        },
+
+        {
+            "name": "Minotaur",
+            "add_tags":["StraferAI", "SpecialAI", "MinotaurAI"],
+            "competitor": "Strafer",
+            "leave_dead_body": true,
+            "display_name": "@strafer_minotaur",
+            "tags": ["(1) Strafer: Minotaur HMG", "(1) Strafer: Minotaur", "Minotaur", "(1) Strafer: Minotaur GRND"],
+            "slice": "slices/ai/minotaur/minotaur_02.dynamicslice",
+            "tp_slice": "slices/ai/minotaur/minotaur_02_tp.dynamicslice",
+            "enemy_type": "miniboss",
+            "health": 5000,
+            "hud_marker": "miniboss_hp_marker_head",
+            "aabb_box":
+            {
+                "width": 1.5,
+                "length": 1.5,
+                "height": 2.6
+            },
+            "random_miss_chance": 0.3,
+            "body_turn_speed": [{"angle":0, "speed":80}, {"angle":90, "speed":270}, {"angle":120, "speed":360}],
+            "aim_from_bone": "weapon_bone",
+            "behavior":
+            {
+                "behavior_tree": "BehaviorSelector",
+                "profile": "Minotaur",
+                "projectile_launcher":
+                {
+                    "bullets_per_shot": 3,
+                    "delay_for_bullet": 0.03,
+                    "bullet_spread": 4,
+                    "min_targets": 1,
+                    "min_distance": 15,
+                    "scan_range": 90,
+                    "group_radius": 10,
+                    "update_targets_delay": 2.0,
+                    "find_targets_sector_angle": 60.0,
+                    "prepare_delay": 1.7,
+                    "fire_delay": 0.9,
+                    "out_delay": 1.9,
+                    "cooldown_delay": 6.2,
+                    "launch_obstacle_check_angle": 45.0,
+                    "launch_obstacle_check_distance": 10.0,
+                    "target_obstacle_check_angle": 45.0,
+                    "target_obstacle_check_distance": 10.0
+                },
+                "params":
+                {
+                    "strafe_step_min": "1.5",
+                    "strafe_step_max": "3.2",
+                    "strafe_step_delay_min": "4",
+                    "strafe_step_delay_max": "8",
+                    "strafe_angle_max": "10",
+                    "gun_track_delay": "0.1",
+                    "gun_track_buffer": "3",
+                    "gun_track_vertical_deviation_time": "2.0",
+                    "gun_trace_min_distance": "5",
+                    "gun_trace_offset": "3",
+                    "gun_trace_duration": "0.6",
+                    "melee_range": "2.8",
+                    "melee_jump_probability": "0.7",
+                    "delay_after_chase_lost_target": "1.6",
+                    "waiting_for_lost_target": "2",
+                    "fire_in_open_space_crouch_prob": "0",
+                    "roll_probability": "1.0",
+                    "distance_to_cover_for_reload": "0",
+                    "leave_cover_target_distance": "0",
+                    "reload_in_crouch_prc": "0",
+                    "weakpoint_health": "400.0",
+                    "backpack_health": "3000.0",
+                    "jump_on_wound_enable": "true",
+                    "jump_on_wound_cooldown": "10.0"
+                }
+            },
+            "equip": [
+                {
+                    "item": "hmg03_ai",
+                    "damage_multiplier": 0.9,
+                    "shooting_pattern": ["10-30; 0.5-0.9"],
+                    "shooting_pattern_distances":
+                    [
+                        { "min_distance": 0, "max_distance": 7, "pattern": ["50-100; 0.3-0.5"] },
+                        { "min_distance": 7, "max_distance": 20, "pattern": ["35-70; 0.3-0.5"] },
+                        { "min_distance": 20, "max_distance": 35, "pattern": ["10-30; 0.5-0.9"] }
+                    ],
+                    "check_visible": false,
+                    "max_shooting_range": 50,
+                    "params":
+                    {
+                        "effective_distance_min": "15",
+                        "effective_distance_max": "30"
+                    }
+                }
+            ],
+            "perception":
+            {
+                "sight_range": 90.0,
+                "max_memory_time": 60.0,
+                "sound_stimulus_scale": 1.0
+            },
+            "speed":
+            {
+                "sprint": 5,
+                "run": 5,
+                "strafe": 2.6,
+                "back": 3.1,
+                "crouch": 3.1,
+                "fire": 2
+            },
+            "target_selection":
+            {
+                "tag_distance":
+                {
+                    "Character":
+                    {
+                        "visibility_cone_angle": 90,
+                        "weights":
+                        [
+                            {
+                                "weight":10,
+                                "distance":50
+                            }
+                        ]
+                    },
+                    "Player":
+                    {
+                        "visibility_cone_angle": 110,
+                        "weights":
+                        [
+                            {
+                                "weight":10,
+                                "distance":25
+                            },
+                            {
+                                "weight":15,
+                                "distance":15
+                            },
+                            {
+                                "weight":20,
+                                "distance":7
+                            }
+                        ]
+                    }
+                },
+                "tag_weights":
+                {
+                    "ShooterPriority": 100,
+                    "InvisibleAI": -500,
+                    "Breakable": -10
+                },
+                "thresholds":
+                {
+                    "critical_range": 10,
+                    "damage_dealer_duration": 6
+                },
+                "weights":
+                {
+                    "critical_range": 50,
+                    "damage_dealer": 20,
+                    "target_visible": 15,
+                    "target_sound": 10,
+                    "target_memory": 5
+                }
+            },
+            "wounds":
+            {
+                "impulse":
+                {
+                    "profile": "Minotaur",
+                    "value": 200.0,
+                    "ignore_impulse": true,
+                    "prob": 1.0,
+                    "cooldown_min": 0.0,
+                    "cooldown_max": 0.0
+                },
+                "aoe":
+                {
+                    "profile": "Minotaur",
+                    "value": 300.0,
+                    "time": 0.02,
+                    "prob": 1.0,
+                    "cooldown_min": 3.0,
+                    "cooldown_max": 5.0
+                },
+                "damage":
+                {
+                    "profile": "Minotaur",
+                    "value": 300,
+                    "time": 0.1,
+                    "prob": 0.5
+                }
+            },
+            "avoidance_radius_multiplier": 4.5
+        },
+
+        {
+            "name": "Minotaur_napalm",
+            "leave_dead_body": true,
+            "display_name": "@strafer_minotaur_napalm",
+            "parent": "Minotaur",
+            "tags": ["(1) Strafer: Minotaur Napalm", "(1) Strafer: Minotaur"],
+            "slice": "slices/ai/minotaur/minotaur_napalm_02.dynamicslice",
+            "tp_slice": "slices/ai/minotaur/minotaur_napalm_tp.dynamicslice",
+            "behavior":
+            {
+                "behavior_tree": "BehaviorSelector",
+                "profile": "Minotaur",
+                "projectile_launcher":
+                {
+                    "bullets_per_shot": 3,
+                    "delay_for_bullet": 0.01,
+                    "bullet_spread": 4,
+                    "min_targets": 1,
+                    "min_distance": 8,
+                    "scan_range": 20,
+                    "group_radius": 10,
+                    "update_targets_delay": 2.0,
+                    "find_targets_sector_angle": 90.0,
+                    "prepare_delay": 1.7,
+                    "fire_delay": 0.1,
+                    "out_delay": 1.9,
+                    "cooldown_delay": 6.2
+                },
+                "params":
+                {
+                    "gun_track_delay": "0.01",
+                    "gun_track_buffer": "4",
+                    "gun_trace_min_distance": "2",
+                    "gun_trace_offset": "1",
+                    "gun_trace_duration": "0.5"
+                }
+            },
+            "equip": [
+                {
+                    "item": "hmg05_ai",
+                    "damage_multiplier": 1.9,
+                    "shooting_pattern": ["3-5; 0.1-0.3"],
+                    "check_visible": false,
+                    "max_shooting_range": 20,
+                    "params":
+                    {
+                        "effective_distance_min": "2.8",
+                        "effective_distance_max": "15"
+                    }
+                }
+            ]
+        },
+
+        {
+            "name": "StraferBombDrone",
+            "add_tags":["StraferAI", "SpecialAI", "StraferDroneAI", "Drone"],
+            "display_name": "@strafer_bomb_drone",
+            "tags": ["(1) Strafer: Bomb Drone"],
+            "slice": "slices/ai/strafer_bomb_drone.dynamicslice",
+            "tp_slice": "slices/ai/strafer_bomb_drone_tp.dynamicslice",
+            "vo_profile": "",
+            "competitor": "Strafer",
+            "enemy_type": "special_melee",
+            "health": 60,
+            "behavior":
+            {
+                "behavior_tree": "BehaviorSelector",
+                "profile": "BombDrone",
+                "params":
+                {
+                    "lifetime": 250.0
+                }
+            },
+            "equip": [
+                {
+                    "item": "ml07_ai",
+                    "params":
+                    {
+                        "effective_distance_min": "2.7",
+                        "effective_distance_max": "3.5"
+                    }
+                }
+            ],
+            "perception":
+            {
+                "sight_range": 50.0,
+                "max_memory_time": 60.0,
+                "sound_stimulus_scale": 10.0
+            },
+            "speed":
+            {
+                "run": 8,
+                "strafe": 2.5,
+                "back": 2.5,
+                "crouch": 2,
+                "fire": 2
+            },
+            "target_selection":
+            {
+                "tag_weights":
+                {
+                    "VIP": -100,                   
+                    "InvisibleAI": -500,
+                    "KamikazePriority": 100,
+                    "Breakable": -10
+                },
+                "thresholds":
+                {
+                    "critical_range": 10,
+                    "damage_dealer_duration": 0
+                },
+                "weights":
+                {
+                    "critical_range": 50,
+                    "damage_dealer": 20,
+                    "target_visible": 15,
+                    "target_sound": 10,
+                    "target_memory": 5
+                }
+            },
+            "avoidance_radius_multiplier": 1.5,
+            "body_turn_limit": 360,
+            "can_be_blinded": false
+        }
+    ],
+
+    "default_params":
+    {
+        "Ranged":
+        {
+            "behavior_params":
+            {
+                "idle_query_name": "Ranged",
+                "battle_query_name": "BattleRanged",
+                "melee_range":"0",
+                "target_too_close_range": "12",
+                "front_of_target_angle": "60",
+                "secondary_front_of_target_angle": "120",
+                "out_of_front_of_target_penalty": "30",
+                "some_player_see_cover_penalty": "5",
+                "cover_weight_mul": "0",
+                "defense_area_weight": "0",
+                "effective_distance_min": "5",
+                "effective_distance_max": "50",
+                "effective_distance_around_self": "30",
+                "distance_to_self_mul": "-0.1",
+                "distance_to_self_weight_min": "0",
+                "distance_to_self_weight_max": "-10",
+                "distance_to_target_mul": "1.0",
+                "distance_to_target_weight_min": "1",
+                "distance_to_target_weight_max": "20",
+                "attack_state_time_min": "6",
+                "attack_state_time_max": "7",
+                "defense_state_time_min": "1",
+                "defense_state_time_max": "2",
+                "defense_to_attack_during_move_prob": "0.0",
+                "pop_from_cover_min_time": "4",
+                "target_lost_cooldown": "10",
+                "non_visible_close_distance": "5",
+                "close_to_my_holding_pos_radius": "0.5",
+                "close_to_my_holding_pos_weight": "10",
+                "max_attack_time_during_move": "1.0",
+                "disable_attack_during_move_if_target_lost": "3.0",
+                "change_position_idle_during_move": "true",
+                "change_position_if_out_of_shooting_range": "true",
+                "change_position_if_target_too_close": "true",
+                "change_position_target_far_cooldown": "5",
+                "change_position_target_close_cooldown": "7",
+                "change_position_in_cover_cooldown_min": "9",
+                "change_position_in_cover_cooldown_max": "9",
+                "change_position_in_openspace_cooldown_min": "6",
+                "change_position_in_openspace_cooldown_max": "6",
+                "leave_cover_if_target_close_distance": "8",
+                "disable_defense_if_target_in_cone_and_move_angle": "45",
+                "reload_in_cover_if_low_ammo_prc": "0.3",
+                "disable_defense_if_close_to_destination": "5",
+                "side_strafe_length_min": "2",
+                "side_strafe_length_max": "3",
+                "wait_after_strafe_min": "0.5",
+                "wait_after_strafe_max": "1",
+                "ally_points": "-1",
+                "ally_distance": "8",
+                "ally_count_max": "3",
+
+                "alldead_max_bodycheck_range_threshold": "50",
+                "alldead_move_start_min_delay": "3",
+                "alldead_move_start_max_delay": "6",
+                "alldead_leave_min_dist": "30",
+                "alldead_leave_max_dist": "50",
+                "alldead_group_dist": "7"
+            }
+
+        },
+        "Gunmen":
+        {
+            "behavior_params":
+            {
+                "hide_in_cover_min": "0.3",
+                "hide_in_cover_max": "1.5",
+                "hide_in_cover_if_underfire": "1",
+                "roll_probability": "0",
+                "unknown_fire_notify_range": "20",
+                "unknown_fire_search_cover_range": "30",
+                "unknown_fire_wait_in_cover_min": "5",
+                "unknown_fire_wait_in_cover_max": "10",
+                "alldead_max_bodycheck_range_threshold": "50",
+                "alldead_move_start_min_delay": "3",
+                "alldead_move_start_max_delay": "6",
+                "alldead_leave_min_dist": "30",
+                "alldead_leave_max_dist": "50",
+                "alldead_group_dist": "7",
+                "fire_in_open_space_crouch_prob": "0.5"
+            },
+            "equip_params":
+            {
+                "effective_distance_min": "10",
+                "effective_distance_max": "50",
+                "low_ammo": "0"
+            }
+        },
+        "Minotaur":
+        {
+            "behavior_params":
+            {
+                "unknown_fire_notify_range": "20",
+                "unknown_fire_search_cover_range": "50",
+                "unknown_fire_wait_in_cover_min": "5",
+                "unknown_fire_wait_in_cover_max": "10",
+                "alldead_max_bodycheck_range_threshold": "50",
+                "alldead_move_start_min_delay": "3",
+                "alldead_move_start_max_delay": "6",
+                "alldead_leave_min_dist": "30",
+                "alldead_leave_max_dist": "50",
+                "alldead_group_dist": "7"
+            },
+            "equip_params":
+            {
+                "effective_distance_min": "10",
+                "effective_distance_max": "50",
+                "low_ammo": "0"
+            }
+        }
+    }
+}

@@ -1,0 +1,2160 @@
+{
+    "setups":
+    {
+        "1":
+        {
+            "miss_duration": 10.0,
+            "miss_cooldown": 2.0,
+            "weapon_miss_behaviors":
+            {
+                "Melee":
+                {
+                    "miss_damage_multiplier": 0.2,
+                    "random_miss_chance": 0.4,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.25,
+                        "max": 0.75
+                    }
+                },
+                "MeleeAOE":
+                {
+                    "miss_damage_multiplier": 0.1,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.25,
+                        "max": 0.4
+                    },
+                    "result_wait_time": 10.0
+                },
+                "Automatic":
+                {
+                    "miss_damage_multiplier": 0.1,
+                    "miss_angle_hor_min": 1.5,
+                    "miss_angle_hor_max": 2.5,
+                    "miss_angle_ver_min": -1.5,
+                    "miss_angle_ver_max": -3.5,
+                    "random_miss_chance": 0.45,
+                    "random_miss_starting_chance": 1.0,
+                    "random_miss_starting_chance_hold_time":0.3,
+                    "random_miss_chance_decay_time": 2.5,
+                    "max_miss_attack_time": 1.0,
+                    "attacks_history_forget_time": 2.0,
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "Sprint": 0.2,
+                        "Idle": -0.05,
+                        "Walk": 0,
+                        "CrouchIdle": 0.4,
+                        "Crouch": 0.4,
+                        "Slide": 0.5,
+                        "DistanceToUseSlide": 3.0
+                    }
+                },
+                "Single":
+                {
+                    "miss_angle_hor_min": 3.0,
+                    "miss_angle_hor_max": 4.0,
+                    "miss_angle_ver_min": 0.0,
+                    "miss_angle_ver_max": 2.0,
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "Sprint": 0.2,
+                        "Idle": -0.05,
+                        "Walk": 0,
+                        "CrouchIdle": 0.4,
+                        "Crouch": 0.4,
+                        "Slide": 0.5,
+                        "DistanceToUseSlide": 3.0
+                    }
+                },
+                "Projectile":
+                {
+                    "miss_angle_hor_min": 4.0,
+                    "miss_angle_hor_max": 5.0,
+                    "miss_angle_ver_min": 0.0,
+                    "miss_angle_ver_max": -0.3,
+                    "miss_damage_multiplier": 0.2,
+                    "result_wait_time": 10.0
+                },
+                "Grenade":
+                {
+                    "miss_damage_multiplier": 0.2,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.5,
+                        "max": 1.5
+                    },
+                    "result_wait_time": 10.0
+                },
+                "Special":
+                {
+                    "miss_damage_multiplier": 0.1,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.25,
+                        "max": 0.75
+                    }
+                },
+                "DOT":
+                {
+                    "miss_damage_multiplier": 0.5,
+                    "time_for_miss_damage_calculation": 0.13
+                }
+            },
+            "safety_rules":
+            {
+                "resurrection_source":
+                {
+                    "forced_miss_duration": 7.0
+                },
+                "resurrection_target":
+                {
+                    "forced_miss_duration": 7.0
+                },
+                "general_spawn":
+                {
+                    "forced_miss_duration": 7.0
+                }
+            }
+        },
+        "2":
+        {
+            "miss_duration": 9.0,
+            "miss_cooldown": 2.0,
+            "weapon_miss_behaviors":
+            {
+                "Melee":
+                {
+                    "miss_damage_multiplier": 0.2,
+                    "random_miss_chance": 0.35,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.25,
+                        "max": 0.75
+                    }
+                },
+                "MeleeAOE":
+                {
+                    "miss_damage_multiplier": 0.1,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.25,
+                        "max": 0.4
+                    },
+                    "result_wait_time": 10.0
+                },
+                "Automatic":
+                {
+                    "miss_damage_multiplier": 0.15,
+                    "miss_angle_hor_min": 1.5,
+                    "miss_angle_hor_max": 2.5,
+                    "miss_angle_ver_min": -1.5,
+                    "miss_angle_ver_max": -3.5,
+                    "random_miss_chance": 0.45,
+                    "random_miss_starting_chance": 1.0,
+                    "random_miss_starting_chance_hold_time": 0.2,
+                    "random_miss_chance_decay_time": 2.3,
+                    "attacks_history_forget_time": 2.2,
+                    "max_miss_attack_time": 1.0,
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "Sprint": 0.2,
+                        "Idle": -0.05,
+                        "Walk": 0,
+                        "CrouchIdle": 0.4,
+                        "Crouch": 0.4,
+                        "Slide": 0.5,
+                        "DistanceToUseSlide": 3.0
+                    }
+                },
+                "Single":
+                {
+                    "miss_angle_hor_min": 3.0,
+                    "miss_angle_hor_max": 4.0,
+                    "miss_angle_ver_min": 0.0,
+                    "miss_angle_ver_max": 2.0,
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "Sprint": 0.2,
+                        "Idle": -0.05,
+                        "Walk": 0,
+                        "CrouchIdle": 0.4,
+                        "Crouch": 0.4,
+                        "Slide": 0.5,
+                        "DistanceToUseSlide": 3.0
+                    }
+                },
+                "Projectile":
+                {
+                    "miss_angle_hor_min": 4.0,
+                    "miss_angle_hor_max": 5.0,
+                    "miss_angle_ver_min": 0.0,
+                    "miss_angle_ver_max": -0.3,
+                    "miss_damage_multiplier": 0.3,
+                    "result_wait_time": 10.0,
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "Idle": -0.15
+                    }
+                },
+                "Grenade":
+                {
+                    "miss_damage_multiplier": 0.3,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.5,
+                        "max": 1.5
+                    },
+                    "result_wait_time": 10.0
+                },
+                "Special":
+                {
+                    "miss_damage_multiplier": 0.1,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.25,
+                        "max": 0.75
+                    }
+                },
+                "DOT":
+                {
+                    "miss_damage_multiplier": 0.5,
+                    "time_for_miss_damage_calculation": 0.13
+                }
+            },
+            "safety_rules":
+            {
+                "resurrection_source":
+                {
+                    "forced_miss_duration": 7.0
+                },
+                "resurrection_target":
+                {
+                    "forced_miss_duration": 7.0
+                },
+                "general_spawn":
+                {
+                    "forced_miss_duration": 7.0
+                }
+            }
+        },
+        "3":
+        {
+            "miss_duration": 8.0,
+            "miss_cooldown": 2.0,
+            "weapon_miss_behaviors":
+            {
+                "Melee":
+                {
+                    "miss_damage_multiplier": 0.25,
+                    "random_miss_chance": 0.30,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.25,
+                        "max": 0.75
+                    }
+                },
+                "MeleeAOE":
+                {
+                    "miss_damage_multiplier": 0.1,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.25,
+                        "max": 0.4
+                    },
+                    "result_wait_time": 10.0
+                },
+                "Automatic":
+                {
+                    "miss_damage_multiplier": 0.2,
+                    "miss_angle_hor_min": 1.5,
+                    "miss_angle_hor_max": 2.5,
+                    "miss_angle_ver_min": -1.5,
+                    "miss_angle_ver_max": -3.5,
+                    "random_miss_chance": 0.4,
+                    "max_miss_attack_time": 1.0,
+                    "random_miss_starting_chance": 1.0,
+                    "random_miss_starting_chance_hold_time": 0.2,
+                    "random_miss_chance_decay_time": 2.1,
+                    "attacks_history_forget_time": 2.4,
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "Sprint": 0.2,
+                        "Idle": -0.05,
+                        "Walk": 0,
+                        "CrouchIdle": 0.4,
+                        "Crouch": 0.4,
+                        "Slide": 0.5,
+                        "DistanceToUseSlide": 3.0
+                    }
+                },
+                "Single":
+                {
+                    "miss_angle_hor_min": 3.0,
+                    "miss_angle_hor_max": 4.0,
+                    "miss_angle_ver_min": 0.0,
+                    "miss_angle_ver_max": 2.0,
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "Sprint": 0.2,
+                        "Idle": -0.05,
+                        "Walk": 0,
+                        "CrouchIdle": 0.4,
+                        "Crouch": 0.4,
+                        "Slide": 0.5,
+                        "DistanceToUseSlide": 3.0
+                    }
+                },
+                "Projectile":
+                {
+                    "miss_angle_hor_min": 4.0,
+                    "miss_angle_hor_max": 5.0,
+                    "miss_angle_ver_min": 0.0,
+                    "miss_angle_ver_max": -0.3,
+                    "miss_damage_multiplier": 0.3,
+                    "result_wait_time": 10.0,
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "Idle": -0.15
+                    }
+                },
+                "Grenade":
+                {
+                    "miss_damage_multiplier": 0.3,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.5,
+                        "max": 1.5
+                    },
+                    "result_wait_time": 10.0
+                },
+                "Special":
+                {
+                    "miss_damage_multiplier": 0.1,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.25,
+                        "max": 0.75
+                    }
+                },
+                "DOT":
+                {
+                    "miss_damage_multiplier": 0.5,
+                    "time_for_miss_damage_calculation": 0.13
+                }
+            },
+            "safety_rules":
+            {
+                "resurrection_source":
+                {
+                    "forced_miss_duration": 6.0
+                },
+                "resurrection_target":
+                {
+                    "forced_miss_duration": 6.0
+                },
+                "general_spawn":
+                {
+                    "forced_miss_duration": 6.0
+                }
+            }
+        },
+        "4":
+        {
+            "miss_duration": 7.0,
+            "miss_cooldown": 2.0,
+            "weapon_miss_behaviors":
+            {
+                "Melee":
+                {
+                    "miss_damage_multiplier": 0.3,
+                    "random_miss_chance": 0.25,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.25,
+                        "max": 0.75
+                    }
+                },
+                "MeleeAOE":
+                {
+                    "miss_damage_multiplier": 0.1,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.15,
+                        "max": 0.3
+                    },
+                    "result_wait_time": 10.0
+                },
+                "Automatic":
+                {
+                    "miss_damage_multiplier": 0.25,
+                    "miss_angle_hor_min": 1.5,
+                    "miss_angle_hor_max": 2.5,
+                    "miss_angle_ver_min": -1.5,
+                    "miss_angle_ver_max": -3.5,
+                    "random_miss_chance": 0.35,
+                    "max_miss_attack_time": 1.0,
+                    "random_miss_starting_chance": 1.0,
+                    "random_miss_starting_chance_hold_time": 0.2,
+                    "random_miss_chance_decay_time": 1.9,
+                    "attacks_history_forget_time": 2.6,
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "Sprint": 0.2,
+                        "Idle": -0.05,
+                        "Walk": 0,
+                        "CrouchIdle": 0.4,
+                        "Crouch": 0.4,
+                        "Slide": 0.5,
+                        "DistanceToUseSlide": 3.0
+                    }
+                },
+                "Single":
+                {
+                    "miss_angle_hor_min": 3.0,
+                    "miss_angle_hor_max": 4.0,
+                    "miss_angle_ver_min": 0.0,
+                    "miss_angle_ver_max": 2.0,
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "Sprint": 0.2,
+                        "Idle": -0.05,
+                        "Walk": 0,
+                        "CrouchIdle": 0.4,
+                        "Crouch": 0.4,
+                        "Slide": 0.5,
+                        "DistanceToUseSlide": 3.0
+                    }
+                },
+                "Projectile":
+                {
+                    "miss_angle_hor_min": 4.0,
+                    "miss_angle_hor_max": 5.0,
+                    "miss_angle_ver_min": 0.0,
+                    "miss_angle_ver_max": -0.3,
+                    "miss_damage_multiplier": 0.3,
+                    "result_wait_time": 10.0,
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "Idle": -0.15
+                    }
+                },
+                "Grenade":
+                {
+                    "miss_damage_multiplier": 0.3,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.5,
+                        "max": 1.5
+                    },
+                    "result_wait_time": 10.0
+                },
+                "Special":
+                {
+                    "miss_damage_multiplier": 0.1,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.25,
+                        "max": 0.75
+                    }
+                },
+                "DOT":
+                {
+                    "miss_damage_multiplier": 0.5,
+                    "time_for_miss_damage_calculation": 0.13
+                }
+            },
+            "safety_rules":
+            {
+                "resurrection_source":
+                {
+                    "forced_miss_duration": 6.0
+                },
+                "resurrection_target":
+                {
+                    "forced_miss_duration": 6.0
+                },
+                "general_spawn":
+                {
+                    "forced_miss_duration": 6.0
+                }
+            }
+        },
+        "5":
+        {
+            "miss_duration": 6.0,
+            "miss_cooldown": 3.0,
+            "weapon_miss_behaviors":
+            {
+                "Melee":
+                {
+                    "miss_damage_multiplier": 0.3,
+                    "random_miss_chance": 0.2,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.25,
+                        "max": 0.75
+                    }
+                },
+                "MeleeAOE":
+                {
+                    "miss_damage_multiplier": 0.1,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.15,
+                        "max": 0.25
+                    },
+                    "result_wait_time": 10.0
+                },
+                "Automatic":
+                {
+                    "miss_damage_multiplier": 0.3,
+                    "miss_angle_hor_min": 1.5,
+                    "miss_angle_hor_max": 2.5,
+                    "miss_angle_ver_min": -1.5,
+                    "miss_angle_ver_max": -3.5,
+                    "random_miss_chance": 0.30,
+                    "max_miss_attack_time": 1.0,
+                    "random_miss_starting_chance": 1.0,
+                    "random_miss_starting_chance_hold_time": 0.2,
+                    "random_miss_chance_decay_time": 1.75,
+                    "attacks_history_forget_time": 2.8,
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "Sprint": 0.2,
+                        "Idle": -0.05,
+                        "Walk": 0,
+                        "CrouchIdle": 0.4,
+                        "Crouch": 0.4,
+                        "Slide": 0.5,
+                        "DistanceToUseSlide": 3.0
+                    }
+                },
+                "Single":
+                {
+                    "miss_angle_hor_min": 3.0,
+                    "miss_angle_hor_max": 4.0,
+                    "miss_angle_ver_min": 0.0,
+                    "miss_angle_ver_max": 2.0,
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "Sprint": 0.2,
+                        "Idle": -0.05,
+                        "Walk": 0,
+                        "CrouchIdle": 0.4,
+                        "Crouch": 0.4,
+                        "Slide": 0.5,
+                        "DistanceToUseSlide": 3.0
+                    }
+                },
+                "Projectile":
+                {
+                    "miss_angle_hor_min": 4.0,
+                    "miss_angle_hor_max": 4.5,
+                    "miss_angle_ver_min": 0.0,
+                    "miss_angle_ver_max": -0.3,
+                    "miss_damage_multiplier": 0.3,
+                    "result_wait_time": 10.0,
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "Idle": -0.15
+                    }
+                },
+                "Grenade":
+                {
+                    "miss_damage_multiplier": 0.3,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.5,
+                        "max": 1.5
+                    },
+                    "result_wait_time": 10.0
+                },
+                "Special":
+                {
+                    "miss_damage_multiplier": 0.1,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.25,
+                        "max": 0.75
+                    }
+                },
+                "DOT":
+                {
+                    "miss_damage_multiplier": 0.5,
+                    "time_for_miss_damage_calculation": 0.13
+                }
+            },
+            "safety_rules":
+            {
+                "resurrection_source":
+                {
+                    "forced_miss_duration": 5.0
+                },
+                "resurrection_target":
+                {
+                    "forced_miss_duration": 5.0
+                },
+                "general_spawn":
+                {
+                    "forced_miss_duration": 5.0
+                }
+            }
+        },
+        "6":
+        {
+            "miss_duration": 5.0,
+            "miss_cooldown": 3.0,
+            "weapon_miss_behaviors":
+            {
+                "Melee":
+                {
+                    "miss_damage_multiplier": 0.3,
+                    "random_miss_chance": 0.15,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.25,
+                        "max": 0.75
+                    }
+                },
+                "MeleeAOE":
+                {
+                    "miss_damage_multiplier": 0.1,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.15,
+                        "max": 0.25
+                    },
+                    "result_wait_time": 10.0
+                },
+                "Automatic":
+                {
+                    "miss_damage_multiplier": 0.35,
+                    "miss_angle_hor_min": 1.5,
+                    "miss_angle_hor_max": 2.5,
+                    "miss_angle_ver_min": -1.5,
+                    "miss_angle_ver_max": -3.5,
+                    "random_miss_chance": 0.25,
+                    "max_miss_attack_time": 1.0,
+                    "random_miss_starting_chance": 1.0,
+                    "random_miss_starting_chance_hold_time": 0.2,
+                    "random_miss_chance_decay_time": 1.35,
+                    "attacks_history_forget_time": 3.0,
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "Sprint": 0.2,
+                        "Idle": -0.05,
+                        "Walk": 0,
+                        "CrouchIdle": 0.4,
+                        "Crouch": 0.4,
+                        "Slide": 0.5,
+                        "DistanceToUseSlide": 3.0
+                    }
+                },
+                "Single":
+                {
+                    "miss_angle_hor_min": 3.0,
+                    "miss_angle_hor_max": 4.0,
+                    "miss_angle_ver_min": 0.0,
+                    "miss_angle_ver_max": 2.0,
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "Sprint": 0.2,
+                        "Idle": -0.05,
+                        "Walk": 0,
+                        "CrouchIdle": 0.4,
+                        "Crouch": 0.4,
+                        "Slide": 0.5,
+                        "DistanceToUseSlide": 3.0
+                    }
+                },
+                "Projectile":
+                {
+                    "miss_angle_hor_min": 4.0,
+                    "miss_angle_hor_max": 4.5,
+                    "miss_angle_ver_min": 0.0,
+                    "miss_angle_ver_max": -0.3,
+                    "miss_damage_multiplier": 0.3,
+                    "result_wait_time": 10.0,
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "Idle": -0.15
+                    }
+                },
+                "Grenade":
+                {
+                    "miss_damage_multiplier": 0.3,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.5,
+                        "max": 1.5
+                    },
+                    "result_wait_time": 10.0
+                },
+                "Special":
+                {
+                    "miss_damage_multiplier": 0.1,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.25,
+                        "max": 0.75
+                    }
+                },
+                "DOT":
+                {
+                    "miss_damage_multiplier": 0.5,
+                    "time_for_miss_damage_calculation": 0.13
+                }
+            },
+            "safety_rules":
+            {
+                "resurrection_source":
+                {
+                    "forced_miss_duration": 4.5
+                },
+                "resurrection_target":
+                {
+                    "forced_miss_duration": 4.5
+                },
+                "general_spawn":
+                {
+                    "forced_miss_duration": 4.5
+                }
+            }
+        },
+        "7":
+         {
+            "miss_duration": 4.0,
+            "miss_cooldown": 3.0,
+            "weapon_miss_behaviors":
+            {
+                "Melee":
+                {
+                    "miss_damage_multiplier": 0.4,
+                    "random_miss_chance": 0.1,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.25,
+                        "max": 0.75
+                    }
+                },
+                "MeleeAOE":
+                {
+                    "miss_damage_multiplier": 0.1,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.15,
+                        "max": 0.2
+                    },
+                    "result_wait_time": 10.0
+                },
+                "Automatic":
+                {
+                    "miss_damage_multiplier": 0.4,
+                    "miss_angle_hor_min": 1.5,
+                    "miss_angle_hor_max": 2.5,
+                    "miss_angle_ver_min": -1.5,
+                    "miss_angle_ver_max": -3.5,
+                    "random_miss_chance": 0.20,
+                    "max_miss_attack_time": 1.0,
+                    "random_miss_starting_chance": 1.0,
+                    "random_miss_starting_chance_hold_time": 0.2,
+                    "random_miss_chance_decay_time": 1.15,
+                    "attacks_history_forget_time": 3,
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "Sprint": 0.2,
+                        "Idle": -0.05,
+                        "Walk": 0,
+                        "CrouchIdle": 0.4,
+                        "Crouch": 0.4,
+                        "Slide": 0.5,
+                        "DistanceToUseSlide": 3.0
+                    }
+                },
+                "Single":
+                {
+                    "miss_angle_hor_min": 3.0,
+                    "miss_angle_hor_max": 4.0,
+                    "miss_angle_ver_min": 0.0,
+                    "miss_angle_ver_max": 2.0,
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "Sprint": 0.2,
+                        "Idle": -0.05,
+                        "Walk": 0,
+                        "CrouchIdle": 0.4,
+                        "Crouch": 0.4,
+                        "Slide": 0.5,
+                        "DistanceToUseSlide": 3.0
+                    }
+                },
+                "Projectile":
+                {
+                    "miss_angle_hor_min": 3.5,
+                    "miss_angle_hor_max": 4.0,
+                    "miss_angle_ver_min": 0.0,
+                    "miss_angle_ver_max": -0.3,
+                    "miss_damage_multiplier": 0.3,
+                    "result_wait_time": 10.0,
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "Idle": -0.15
+                    }
+                },
+                "Grenade":
+                {
+                    "miss_damage_multiplier": 0.3,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.5,
+                        "max": 1.5
+                    },
+                    "result_wait_time": 10.0
+                },
+                "Special":
+                {
+                    "miss_damage_multiplier": 0.1,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.25,
+                        "max": 0.75
+                    }
+                },
+                "DOT":
+                {
+                    "miss_damage_multiplier": 0.5,
+                    "time_for_miss_damage_calculation": 0.13
+                }
+            },
+            "safety_rules":
+            {
+                "resurrection_source":
+                {
+                    "forced_miss_duration": 4.5
+                },
+                "resurrection_target":
+                {
+                    "forced_miss_duration": 4.5
+                },
+                "general_spawn":
+                {
+                    "forced_miss_duration": 4.5
+                }
+            }
+        },
+        "8":
+        {
+            "miss_duration": 3.0,
+            "miss_cooldown": 3.0,
+            "weapon_miss_behaviors":
+            {
+                "Melee":
+                {
+                    "miss_damage_multiplier": 0.4,
+                    "random_miss_chance": 0.05,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.25,
+                        "max": 0.75
+                    }
+                },
+                "MeleeAOE":
+                {
+                    "miss_damage_multiplier": 0.1,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.1,
+                        "max": 0.2
+                    },
+                    "result_wait_time": 10.0
+                },
+                "Automatic":
+                {
+                    "miss_damage_multiplier": 0.45,
+                    "miss_angle_hor_min": 1.5,
+                    "miss_angle_hor_max": 2.5,
+                    "miss_angle_ver_min": -1.5,
+                    "miss_angle_ver_max": -3.5,
+                    "random_miss_chance": 0.15,
+                    "max_miss_attack_time": 1.0,
+                    "random_miss_starting_chance": 1.0,
+                    "random_miss_starting_chance_hold_time": 0.2,
+                    "random_miss_chance_decay_time": 1.05,
+                    "attacks_history_forget_time": 3,
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "Sprint": 0.2,
+                        "Idle": -0.05,
+                        "Walk": 0,
+                        "CrouchIdle": 0.4,
+                        "Crouch": 0.4,
+                        "Slide": 0.5,
+                        "DistanceToUseSlide": 3.0
+                    }
+                },
+                "Single":
+                {
+                    "miss_angle_hor_min": 3.0,
+                    "miss_angle_hor_max": 4.0,
+                    "miss_angle_ver_min": 0.0,
+                    "miss_angle_ver_max": 2.0,
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "Sprint": 0.2,
+                        "Idle": -0.05,
+                        "Walk": 0,
+                        "CrouchIdle": 0.4,
+                        "Crouch": 0.4,
+                        "Slide": 0.5,
+                        "DistanceToUseSlide": 3.0
+                    }
+                },
+                "Projectile":
+                {
+                    "miss_angle_hor_min": 3.5,
+                    "miss_angle_hor_max": 4.0,
+                    "miss_angle_ver_min": 0.0,
+                    "miss_angle_ver_max": -0.3,
+                    "miss_damage_multiplier": 0.3,
+                    "result_wait_time": 10.0,
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "Idle": -0.15
+                    }
+                },
+                "Grenade":
+                {
+                    "miss_damage_multiplier": 0.3,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.5,
+                        "max": 1.5
+                    },
+                    "result_wait_time": 10.0
+                },
+                "Special":
+                {
+                    "miss_damage_multiplier": 0.1,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.25,
+                        "max": 0.75
+                    }
+                },
+                "DOT":
+                {
+                    "miss_damage_multiplier": 0.5,
+                    "time_for_miss_damage_calculation": 0.13
+                }
+            },
+            "safety_rules":
+            {
+                "resurrection_source":
+                {
+                    "forced_miss_duration": 4.5
+                },
+                "resurrection_target":
+                {
+                    "forced_miss_duration": 4.5
+                },
+                "general_spawn":
+                {
+                    "forced_miss_duration": 4.5
+                }
+            }
+        },
+        "9":
+        {
+            "miss_duration": 2.0,
+            "miss_cooldown": 4.0,
+            "weapon_miss_behaviors":
+            {
+                "Melee":
+                {
+                    "miss_damage_multiplier": 0.4,
+                    "random_miss_chance": 0.0,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.25,
+                        "max": 0.75
+                    }
+                },
+                "MeleeAOE":
+                {
+                    "miss_damage_multiplier": 0.1,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.1,
+                        "max": 0.2
+                    },
+                    "result_wait_time": 10.0
+                },
+                "Automatic":
+                {
+                    "miss_damage_multiplier": 0.5,
+                    "miss_angle_hor_min": 1.5,
+                    "miss_angle_hor_max": 2.5,
+                    "miss_angle_ver_min": -1.5,
+                    "miss_angle_ver_max": -3.5,
+                    "random_miss_chance": 0.1,
+                    "max_miss_attack_time": 1.0,
+                    "random_miss_starting_chance": 1.0,
+                    "random_miss_starting_chance_hold_time": 0.2,
+                    "random_miss_chance_decay_time": 0.95,
+                    "attacks_history_forget_time": 3,
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "Sprint": 0.2,
+                        "Idle": -0.05,
+                        "Walk": 0,
+                        "CrouchIdle": 0.4,
+                        "Crouch": 0.4,
+                        "Slide": 0.5,
+                        "DistanceToUseSlide": 3.0
+                    }
+                },
+                "Single":
+                {
+                    "miss_angle_hor_min": 3.0,
+                    "miss_angle_hor_max": 4.0,
+                    "miss_angle_ver_min": 0.0,
+                    "miss_angle_ver_max": 2.0,
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "Sprint": 0.2,
+                        "Idle": -0.05,
+                        "Walk": 0,
+                        "CrouchIdle": 0.4,
+                        "Crouch": 0.4,
+                        "Slide": 0.5,
+                        "DistanceToUseSlide": 3.0
+                    }
+                },
+                "Projectile":
+                {
+                    "miss_angle_hor_min": 3.0,
+                    "miss_angle_hor_max": 3.5,
+                    "miss_angle_ver_min": 0.0,
+                    "miss_angle_ver_max": -0.3,
+                    "miss_damage_multiplier": 0.3,
+                    "result_wait_time": 10.0,
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "Idle": -0.15
+                    }
+                },
+                "Grenade":
+                {
+                    "miss_damage_multiplier": 0.3,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.5,
+                        "max": 1.5
+                    },
+                    "result_wait_time": 10.0
+                },
+                "Special":
+                {
+                    "miss_damage_multiplier": 0.1,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.25,
+                        "max": 0.75
+                    }
+                },
+                "DOT":
+                {
+                    "miss_damage_multiplier": 0.5,
+                    "time_for_miss_damage_calculation": 0.13
+                }
+            },
+            "safety_rules":
+            {
+                "resurrection_source":
+                {
+                    "forced_miss_duration": 4.5
+                },
+                "resurrection_target":
+                {
+                    "forced_miss_duration": 4.5
+                },
+                "general_spawn":
+                {
+                    "forced_miss_duration": 4.5
+                }
+            }
+        },
+        "10":
+        {
+            "miss_duration": 1.0,
+            "miss_cooldown": 4.0,
+            "weapon_miss_behaviors":
+            {
+                "Melee":
+                {
+                    "miss_damage_multiplier": 0.5,
+                    "random_miss_chance": 0.0,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.25,
+                        "max": 0.75
+                    }
+                },
+                "MeleeAOE":
+                {
+                    "miss_damage_multiplier": 0.1,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.1,
+                        "max": 0.15
+                    },
+                    "result_wait_time": 10.0
+                },
+                "Automatic":
+                {
+                    "miss_damage_multiplier": 0.5,
+                    "miss_angle_hor_min": 1.5,
+                    "miss_angle_hor_max": 2.5,
+                    "miss_angle_ver_min": -1.5,
+                    "miss_angle_ver_max": -3.5,
+                    "random_miss_chance": 0.05,
+                    "max_miss_attack_time": 1.0,
+                    "random_miss_starting_chance": 1.0,
+                    "random_miss_starting_chance_hold_time": 0.2,
+                    "random_miss_chance_decay_time": 0.95,
+                    "attacks_history_forget_time": 3,
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "Sprint": 0.2,
+                        "Idle": -0.05,
+                        "Walk": 0,
+                        "CrouchIdle": 0.4,
+                        "Crouch": 0.4,
+                        "Slide": 0.5,
+                        "DistanceToUseSlide": 3.0
+                    }
+                },
+                "Single":
+                {
+                    "miss_angle_hor_min": 3.0,
+                    "miss_angle_hor_max": 4.0,
+                    "miss_angle_ver_min": 0.0,
+                    "miss_angle_ver_max": 2.0,
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "Sprint": 0.2,
+                        "Idle": -0.05,
+                        "Walk": 0,
+                        "CrouchIdle": 0.4,
+                        "Crouch": 0.4,
+                        "Slide": 0.5,
+                        "DistanceToUseSlide": 3.0
+                    }
+                },
+                "Projectile":
+                {
+                    "miss_angle_hor_min": 3.0,
+                    "miss_angle_hor_max": 3.5,
+                    "miss_angle_ver_min": 0.0,
+                    "miss_angle_ver_max": -0.3,
+                    "miss_damage_multiplier": 0.3,
+                    "result_wait_time": 10.0,
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "Idle": -0.15
+                    }
+                },
+                "Grenade":
+                {
+                    "miss_damage_multiplier": 0.3,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.5,
+                        "max": 1.5
+                    },
+                    "result_wait_time": 10.0
+                },
+                "Special":
+                {
+                    "miss_damage_multiplier": 0.1,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.25,
+                        "max": 0.75
+                    }
+                },
+                "DOT":
+                {
+                    "miss_damage_multiplier": 0.5,
+                    "time_for_miss_damage_calculation": 0.13
+                }
+            },
+            "safety_rules":
+            {
+                "resurrection_source":
+                {
+                    "forced_miss_duration": 4.5
+                },
+                "resurrection_target":
+                {
+                    "forced_miss_duration": 4.5
+                },
+                "general_spawn":
+                {
+                    "forced_miss_duration": 4.5
+                }
+            }
+        },
+        "11":
+        {
+            "miss_duration": 1.0,
+            "miss_cooldown": 4.0,
+            "weapon_miss_behaviors":
+            {
+                "Melee":
+                {
+                    "miss_damage_multiplier": 0.5,
+                    "random_miss_chance": 0.0,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.25,
+                        "max": 0.75
+                    }
+                },
+                "MeleeAOE":
+                {
+                    "miss_damage_multiplier": 0.1,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.0,
+                        "max": 0.15
+                    },
+                    "result_wait_time": 10.0
+                },
+                "Automatic":
+                {
+                    "miss_damage_multiplier": 0.5,
+                    "miss_angle_hor_min": 1.5,
+                    "miss_angle_hor_max": 2.5,
+                    "miss_angle_ver_min": -1.5,
+                    "miss_angle_ver_max": -3.5,
+                    "random_miss_chance": 0,
+                    "max_miss_attack_time": 1.0,
+                    "random_miss_starting_chance": 1.0,
+                    "random_miss_starting_chance_hold_time": 0.2,
+                    "random_miss_chance_decay_time": 0.95,
+                    "attacks_history_forget_time": 3.0,
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "Sprint": 0.2,
+                        "Idle": -0.05,
+                        "Walk": 0,
+                        "CrouchIdle": 0.4,
+                        "Crouch": 0.4,
+                        "Slide": 0.5,
+                        "DistanceToUseSlide": 3.0
+                    }
+                },
+                "Single":
+                {
+                    "miss_angle_hor_min": 3.0,
+                    "miss_angle_hor_max": 4.0,
+                    "miss_angle_ver_min": 0.0,
+                    "miss_angle_ver_max": 2.0,
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "Sprint": 0.2,
+                        "Idle": -0.05,
+                        "Walk": 0,
+                        "CrouchIdle": 0.4,
+                        "Crouch": 0.4,
+                        "Slide": 0.5,
+                        "DistanceToUseSlide": 3.0
+                    }
+                },
+                "Projectile":
+                {
+                    "miss_angle_hor_min": 3.0,
+                    "miss_angle_hor_max": 3.5,
+                    "miss_angle_ver_min": 0.0,
+                    "miss_angle_ver_max": -0.3,
+                    "miss_damage_multiplier": 0.3,
+                    "result_wait_time": 10.0,
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "Idle": -0.15
+                    }
+                },
+                "Grenade":
+                {
+                    "miss_damage_multiplier": 0.3,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.5,
+                        "max": 1.5
+                    },
+                    "result_wait_time": 10.0
+                },
+                "Special":
+                {
+                    "miss_damage_multiplier": 0.1,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.25,
+                        "max": 0.75
+                    }
+                },
+                "DOT":
+                {
+                    "miss_damage_multiplier": 0.5,
+                    "time_for_miss_damage_calculation": 0.13
+                }
+            },
+            "safety_rules":
+            {
+                "resurrection_source":
+                {
+                    "forced_miss_duration": 4.5
+                },
+                "resurrection_target":
+                {
+                    "forced_miss_duration": 4.5
+                },
+                "general_spawn":
+                {
+                    "forced_miss_duration": 4.5
+                }
+            }
+        },
+        "12":
+        {
+            "miss_duration": 1.0,
+            "miss_cooldown": 4.0,
+            "weapon_miss_behaviors":
+            {
+                "Melee":
+                {
+                    "miss_damage_multiplier": 0.5,
+                    "random_miss_chance": 0.0,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.25,
+                        "max": 0.75
+                    }
+                },
+                "MeleeAOE":
+                {
+                    "miss_damage_multiplier": 0.1,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.0,
+                        "max": 0.15
+                    },
+                    "result_wait_time": 10.0
+                },
+                "Automatic":
+                {
+                    "miss_angle_hor_min": 1.5,
+                    "miss_angle_hor_max": 2.5,
+                    "miss_angle_ver_min": -1.5,
+                    "miss_angle_ver_max": -3.5,
+                    "random_miss_chance": 0,
+                    "max_miss_attack_time": 1.0,
+                    "random_miss_starting_chance": 1.0,
+                    "random_miss_starting_chance_hold_time": 0.2,
+                    "random_miss_chance_decay_time": 0.65,
+                    "attacks_history_forget_time": 4.0,
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "Sprint": 0.2,
+                        "Idle": -0.05,
+                        "Walk": 0,
+                        "CrouchIdle": 0.4,
+                        "Crouch": 0.4,
+                        "Slide": 0.5,
+                        "DistanceToUseSlide": 3.0
+                    }
+                },
+                "Single":
+                {
+                    "miss_angle_hor_min": 2.0,
+                    "miss_angle_hor_max": 3.0,
+                    "miss_angle_ver_min": 0.0,
+                    "miss_angle_ver_max": 2.0,
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "Sprint": 0.2,
+                        "Idle": -0.05,
+                        "Walk": 0,
+                        "CrouchIdle": 0.4,
+                        "Crouch": 0.4,
+                        "Slide": 0.5,
+                        "DistanceToUseSlide": 3.0
+                    }
+                },
+                "Projectile":
+                {
+                    "miss_angle_hor_min": 3.0,
+                    "miss_angle_hor_max": 3.5,
+                    "miss_angle_ver_min": 0.0,
+                    "miss_angle_ver_max": -0.3,
+                    "miss_damage_multiplier": 0.3,
+                    "result_wait_time": 10.0,
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "Idle": -0.15
+                    }
+                },
+                "Grenade":
+                {
+                    "miss_damage_multiplier": 0.3,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.5,
+                        "max": 1.5
+                    },
+                    "result_wait_time": 10.0
+                },
+                "Special":
+                {
+                    "miss_damage_multiplier": 0.1,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.25,
+                        "max": 0.75
+                    }
+                },
+                "DOT":
+                {
+                    "miss_damage_multiplier": 0.5,
+                    "time_for_miss_damage_calculation": 0.13
+                }
+            },
+            "safety_rules":
+            {
+                "resurrection_source":
+                {
+                    "forced_miss_duration": 4.5
+                },
+                "resurrection_target":
+                {
+                    "forced_miss_duration": 4.5
+                },
+                "general_spawn":
+                {
+                    "forced_miss_duration": 4.5
+                }
+            }
+        },
+        "test_easy":
+        {
+            "miss_duration": 3.0,
+            "miss_cooldown": 5.0,
+            "weapon_miss_behaviors":
+            {
+                "Melee":
+                {
+                    "miss_damage_multiplier": 0.1
+                },
+                "Automatic":
+                {
+                    "miss_angle_hor_min": 6.0,
+                    "miss_angle_hor_max": 6.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 3.0,
+                    "random_miss_chance": 0.0
+                },
+                "Single":
+                {
+                    "miss_angle_hor_min": 3.0,
+                    "miss_angle_hor_max": 3.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 3.0,
+                    "random_miss_chance": 0.0
+                },
+                "Projectile":
+                {
+                    "miss_angle_hor_min": 10.0,
+                    "miss_angle_hor_max": 3.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 10.0,
+                    "random_miss_chance": 0.0
+                },
+                "Grenade":
+                {
+                    "miss_damage_multiplier": 0.2,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 2.0,
+                        "max": 5.0
+                    },
+                    "result_wait_time": 10.0
+                }
+            }
+        },
+        "test_normal":
+        {
+            "miss_duration": 3.0,
+            "miss_cooldown": 5.0,
+            "weapon_miss_behaviors":
+            {
+                "Melee":
+                {
+                    "miss_damage_multiplier": 0.1
+                },
+                "Automatic":
+                {
+                    "miss_angle_hor_min": 15.0,
+                    "miss_angle_hor_max": 15.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 3.0,
+                    "random_miss_chance": 0.0
+                },
+                "Single":
+                {
+                    "miss_angle_hor_min": 3.0,
+                    "miss_angle_hor_max": 3.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 3.0,
+                    "random_miss_chance": 0.0
+                },
+                "Projectile":
+                {
+                    "miss_angle_hor_min": 10.0,
+                    "miss_angle_hor_max": 10.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 10.0,
+                    "random_miss_chance": 0.0
+                },
+                "Grenade":
+                {
+                    "miss_damage_multiplier": 0.2,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 2.0,
+                        "max": 5.0
+                    },
+                    "result_wait_time": 10.0
+                }
+            }
+        },
+        "test_hard":
+        {
+            "weapon_miss_behaviors":
+            {
+                "Melee":
+                {
+                    "miss_damage_multiplier": 0.1
+                },
+                "Automatic":
+                {
+                    "miss_angle_hor_min": 6.0,
+                    "miss_angle_hor_max": 6.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 3.0
+                },
+                "Single":
+                {
+                    "miss_angle_hor_min": 3.0,
+                    "miss_angle_hor_max": 3.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 3.0
+                },
+                "Projectile":
+                {
+                    "miss_angle_hor_min": 10.0,
+                    "miss_angle_hor_max": 10.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 10.0
+                },
+                "Grenade":
+                {
+                    "miss_damage_multiplier": 0.2,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 2.0,
+                        "max": 5.0
+                    },
+                    "result_wait_time": 10.0
+                }
+            }
+        },
+        "test_miss_chance_random":
+        {
+            "weapon_miss_behaviors":
+            {
+                "Melee":
+                {
+                    "miss_damage_multiplier": 0.8
+                },
+                "Automatic":
+                {
+                    "miss_angle_hor_min": 6.0,
+                    "miss_angle_hor_max": 6.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 10.0,
+                    "random_miss_chance": 1.0,
+                    "random_miss_starting_chance": 0.05,
+                    "random_miss_starting_chance_hold_time": 4,
+                    "random_miss_chance_decay_time": 2.0,
+                    "attacks_history_forget_time": 3.0
+                },
+                "Single":
+                {
+                    "miss_angle_hor_min": 3.0,
+                    "miss_angle_hor_max": 3.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 10.0
+                },
+                "Projectile":
+                {
+                    "miss_angle_hor_min": 10.0,
+                    "miss_angle_hor_max": 10.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 10.0
+                },
+                "Grenade":
+                {
+                    "miss_damage_multiplier": 0.8,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 2.0,
+                        "max": 5.0
+                    },
+                    "result_wait_time": 10.0
+                }
+            }
+        },
+        "test_miss_chance_increase":
+        {
+            "weapon_miss_behaviors":
+            {
+                "Melee":
+                {
+                    "miss_damage_multiplier": 0.8
+                },
+                "Automatic":
+                {
+                    "miss_angle_hor_min": 6.0,
+                    "miss_angle_hor_max": 6.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 10.0,
+                    "random_miss_chance": 1.0,
+                    "random_miss_starting_chance": 0.05,
+                    "random_miss_chance_decay_time": 5.0
+                },
+                "Single":
+                {
+                    "miss_angle_hor_min": 3.0,
+                    "miss_angle_hor_max": 3.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 10.0
+                },
+                "Projectile":
+                {
+                    "miss_angle_hor_min": 10.0,
+                    "miss_angle_hor_max": 10.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 10.0
+                },
+                "Grenade":
+                {
+                    "miss_damage_multiplier": 0.8,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 2.0,
+                        "max": 5.0
+                    },
+                    "result_wait_time": 10.0
+                }
+            }
+        },
+        "test_miss_chance_decrease":
+        {
+            "weapon_miss_behaviors":
+            {
+                "Melee":
+                {
+                    "miss_damage_multiplier": 0.8
+                },
+                "Automatic":
+                {
+                    "miss_angle_hor_min": 6.0,
+                    "miss_angle_hor_max": 6.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 10.0,
+                    "random_miss_chance": 0.05,
+                    "random_miss_starting_chance": 1.0,
+                    "random_miss_chance_decay_time": 5.0
+                },
+                "Single":
+                {
+                    "miss_angle_hor_min": 3.0,
+                    "miss_angle_hor_max": 3.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 10.0
+                },
+                "Projectile":
+                {
+                    "miss_angle_hor_min": 10.0,
+                    "miss_angle_hor_max": 10.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 10.0
+                },
+                "Grenade":
+                {
+                    "miss_damage_multiplier": 0.8,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 2.0,
+                        "max": 5.0
+                    },
+                    "result_wait_time": 10.0
+                }
+            }
+        },
+        "test_miss_chance_still":
+        {
+            "weapon_miss_behaviors":
+            {
+                "Melee":
+                {
+                    "miss_damage_multiplier": 0.8
+                },
+                "Automatic":
+                {
+                    "miss_angle_hor_min": 6.0,
+                    "miss_angle_hor_max": 6.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 10.0,
+                    "random_miss_chance": 0.5,
+                    "random_miss_starting_chance": 0.5,
+                    "random_miss_chance_decay_time": 1.0
+                },
+                "Single":
+                {
+                    "miss_angle_hor_min": 3.0,
+                    "miss_angle_hor_max": 3.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 10.0
+                },
+                "Projectile":
+                {
+                    "miss_angle_hor_min": 10.0,
+                    "miss_angle_hor_max": 10.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 10.0
+                },
+                "Grenade":
+                {
+                    "miss_damage_multiplier": 0.8,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 2.0,
+                        "max": 5.0
+                    },
+                    "result_wait_time": 10.0
+                }
+            }
+        },
+        "test_1":
+        {
+            "miss_duration": 10.0,
+            "miss_cooldown": 2.0,
+            "weapon_miss_behaviors":
+            {
+                "Melee":
+                {
+                    "miss_damage_multiplier": 0.2,
+                    "random_miss_chance": 0.4
+                },
+                "MeleeAOE":
+                {
+                    "miss_damage_multiplier": 0.1,
+                    "result_wait_time": 10.0
+                },
+                "Automatic":
+                {
+                    "miss_angle_hor_min": 2.0,
+                    "miss_angle_hor_max": 2.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 10.0,
+                    "miss_damage_multiplier": 0.2,
+                    "random_miss_chance": 0.55,
+                    "random_miss_starting_chance": 0.55,
+                    "random_miss_chance_decay_time": 0.1
+                },
+                "Single":
+                {
+                    "miss_angle_hor_min": 3.0,
+                    "miss_angle_hor_max": 3.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 10.0,
+                    "miss_damage_multiplier": 0.2
+                },
+                "Projectile":
+                {
+                    "miss_angle_hor_min": 4.0,
+                    "miss_angle_hor_max": 4.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 10.0
+                },
+                "Grenade":
+                {
+                    "miss_damage_multiplier": 0.2,
+                    "random_miss_chance": 0,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.5,
+                        "max": 1.5
+                    },
+                    "result_wait_time": 10.0
+                }
+            },
+            "safety_rules":
+            {
+                "resurrection_source":
+                {
+                    "forced_miss_duration": 10.0
+                },
+                "resurrection_target":
+                {
+                    "forced_miss_duration": 10.0
+                },
+                "general_spawn":
+                {
+                    "forced_miss_duration": 15.0
+                }
+            }
+        },
+        "test_2":
+        {
+            "miss_duration": 10.0,
+            "miss_cooldown": 2.0,
+            "weapon_miss_behaviors":
+            {
+                "Melee":
+                {
+                    "miss_damage_multiplier": 0.2,
+                    "random_miss_chance": 0.4,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.25,
+                        "max": 0.75
+                    }
+                },
+                "MeleeAOE":
+                {
+                    "miss_damage_multiplier": 0.1,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.25,
+                        "max": 0.5
+                    },
+                    "result_wait_time": 10.0
+                },
+                "Automatic":
+                {
+                    "miss_angle_hor_min": 2.0,
+                    "miss_angle_hor_max": 2.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 10.0,
+                    "random_miss_chance": 0.55,
+                    "random_miss_starting_chance": 0.55,
+                    "random_miss_chance_decay_time": 0.1
+                },
+                "Single":
+                {
+                    "miss_angle_hor_min": 3.0,
+                    "miss_angle_hor_max": 3.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 10.0
+                },
+                "Projectile":
+                {
+                    "miss_angle_hor_min": 5.0,
+                    "miss_angle_hor_max": 5.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 10.0,
+                    "miss_damage_multiplier": 0.1
+                },
+                "Grenade":
+                {
+                    "miss_damage_multiplier": 0.2,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.5,
+                        "max": 1.5
+                    },
+                    "result_wait_time": 10.0
+                },
+                "Special":
+                {
+                    "miss_damage_multiplier": 0.1,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.25,
+                        "max": 0.75
+                    }
+                },
+                "DOT":
+                {
+                    "miss_damage_multiplier": 0.5,
+                    "time_for_miss_damage_calculation": 0.13
+                }
+            },
+            "safety_rules":
+            {
+                "resurrection_source":
+                {
+                    "forced_miss_duration": 7.0
+                },
+                "resurrection_target":
+                {
+                    "forced_miss_duration": 7.0
+                },
+                "general_spawn":
+                {
+                    "forced_miss_duration": 7.0
+                }
+            }
+        },
+        "test_miss_chance_special":
+        {
+            "miss_duration": 5.0,
+            "miss_cooldown": 4.0,
+            "weapon_miss_behaviors":
+            {
+                "Melee":
+                {
+                    "miss_damage_multiplier": 0.2,
+                    "random_miss_chance": 0.4,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.25,
+                        "max": 0.75
+                    }
+                },
+                "MeleeAOE":
+                {
+                    "miss_damage_multiplier": 0.1,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.25,
+                        "max": 0.5
+                    },
+                    "result_wait_time": 10.0
+                },
+                "Automatic":
+                {
+                    "miss_angle_hor_min": 2.0,
+                    "miss_angle_hor_max": 2.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 10.0,
+                    "random_miss_chance": 0.55,
+                    "random_miss_starting_chance": 0.55,
+                    "random_miss_chance_decay_time": 0.1
+                },
+                "Single":
+                {
+                    "miss_angle_hor_min": 3.0,
+                    "miss_angle_hor_max": 3.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 10.0
+                },
+                "Projectile":
+                {
+                    "miss_angle_hor_min": 4.0,
+                    "miss_angle_hor_max": 4.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 10.0
+                },
+                "Grenade":
+                {
+                    "miss_damage_multiplier": 0.2,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 0.5,
+                        "max": 1.5
+                    },
+                    "result_wait_time": 10.0
+                },
+                "Special":
+                {
+                    "miss_damage_multiplier": 0.001,
+                    "random_miss_chance": 0,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 1.00,
+                        "max": 3.00
+                    }
+                },
+                "safety_rules":
+            {
+                "resurrection_source":
+                {
+                    "forced_miss_duration": 0
+                },
+                "resurrection_target":
+                {
+                    "forced_miss_duration": 0
+                },
+                "general_spawn":
+                {
+                    "forced_miss_duration": 0
+                }
+            }
+            }
+        },
+        "test_miss_chance_flamethrower_dot":
+        {
+            "miss_duration": 4.0,
+            "miss_cooldown": 2.0,
+            "weapon_miss_behaviors":
+            {
+                "DOT":
+                {
+                    "miss_damage_multiplier": 0.1,
+                    "time_for_miss_damage_calculation": 1
+                },
+                "Automatic":
+                {
+                    "miss_angle_hor_min": 0,
+                    "miss_angle_hor_max": 0,
+                    "miss_angle_ver_min": 0,
+                    "miss_angle_ver_max": 0,
+                    "random_miss_chance": 100,
+                    "random_miss_starting_chance": 100,
+                    "random_miss_chance_decay_time": 100
+                }
+            }
+        },
+        "test_miss_chance_player_stance":
+        {
+            "miss_duration": 4.0,
+            "miss_cooldown": 2.0,
+            "weapon_miss_behaviors":
+            {
+                "Automatic":
+                {
+                    "random_miss_chance_per_stance_modifiers":
+                    {
+                        "CrouchIdle": 0.1,
+                        "Idle": 0.2,
+                        "Sprint": 0.3,
+                        "Crouch": 0.4,
+                        "Slide": 0.5,
+                        "Walk": 0.6,
+                        "DistanceToUseSlide": 3.0
+                    }
+                }
+            }
+        },
+        "test_miss_attack_timer":
+        {
+            "miss_duration": 4.0,
+            "miss_cooldown": 2.0,
+            "weapon_miss_behaviors":
+            {
+                "Automatic":
+                {
+                    "max_miss_attack_time": 3.0
+                }
+            }
+        },
+        "test_token_management":
+        {
+            "miss_duration": 10.0,
+            "miss_cooldown": 5.0,
+            "weapon_miss_behaviors":
+            {
+                "Melee":
+                {
+                    "miss_damage_multiplier": 0.1
+                },
+                "Automatic":
+                {
+                    "miss_angle_hor_min": 15.0,
+                    "miss_angle_hor_max": 15.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 3.0,
+                    "random_miss_chance": 0.0
+                },
+                "Single":
+                {
+                    "miss_angle_hor_min": 3.0,
+                    "miss_angle_hor_max": 3.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 3.0,
+                    "random_miss_chance": 0.0
+                },
+                "Projectile":
+                {
+                    "miss_angle_hor_min": 10.0,
+                    "miss_angle_hor_max": 10.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 10.0,
+                    "random_miss_chance": 0.0
+                },
+                "Grenade":
+                {
+                    "miss_damage_multiplier": 0.2,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 2.0,
+                        "max": 5.0
+                    },
+                    "result_wait_time": 10.0
+                }
+            }
+        },
+        "test_hp_cap":
+        {
+            "miss_duration": 10.0,
+            "miss_cooldown": 5.0,
+            "weapon_miss_behaviors":
+            {
+                "Melee":
+                {
+                    "miss_damage_multiplier": 0.1
+                },
+                "Automatic":
+                {
+                    "miss_angle_hor_min": 15.0,
+                    "miss_angle_hor_max": 15.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 3.0,
+                    "random_miss_chance": 0.0
+                },
+                "Single":
+                {
+                    "miss_angle_hor_min": 3.0,
+                    "miss_angle_hor_max": 3.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 3.0,
+                    "random_miss_chance": 0.0
+                },
+                "Projectile":
+                {
+                    "miss_angle_hor_min": 10.0,
+                    "miss_angle_hor_max": 10.0,
+                    "miss_angle_ver_min": 2.0,
+                    "miss_angle_ver_max": 10.0,
+                    "random_miss_chance": 0.0
+                },
+                "Grenade":
+                {
+                    "miss_damage_multiplier": 0.2,
+                    "miss_distance_multipliers":
+                    {
+                        "min": 2.0,
+                        "max": 5.0
+                    },
+                    "result_wait_time": 10.0
+                }
+            }
+        }
+    }
+}

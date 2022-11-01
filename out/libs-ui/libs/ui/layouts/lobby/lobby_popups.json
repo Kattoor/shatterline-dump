@@ -1,0 +1,25 @@
+{
+    "script": "scripts/ui/lobby/lobby_popups.lua",
+    "view_path": "LobbyPopups.html",
+    "children":
+    [
+        {"name": "mode_info_pvp", "type": "Component", "file": "lobby/play/mode_info_pvp.json", "visible": false},
+        {"name": "mode_info_pve", "type": "Component", "file": "lobby/play/mode_info_pve.json", "visible": false},
+        {"name": "play_popup", "type": "Component", "file": "lobby/play_popup.json", "visible": false},
+        {"name": "hero_container", "type": "Component", "file": "lobby/hero_container.json", "visible": false},
+        {"name": "weapon_customization", "type": "Component", "file": "lobby/weapon_customization/weapon_customization.json", "visible": false},
+        {"name": "weapon_preview", "type": "Component", "file": "lobby/weapon_preview.json", "visible": false},
+        {"name": "shop_product_preview", "type": "Component", "file": "lobby/shop_product_preview.json", "visible": false},
+        {"name": "purchase_season_pass", "type": "Component", "file": "lobby/season_hub/purchase_season_pass.json", "visible": false},
+        {"name": "purchase_season_pass_celebration", "type": "Component", "file": "lobby/season_hub/purchase_season_pass_celebration.json", "visible": false},
+        {"name": "buy_season_levels", "type": "Component", "file": "lobby/season_hub/buy_season_levels.json", "visible": false},
+        {"name": "season_level_up", "type": "Component", "file": "lobby/season_hub/level_up_season_pass_celebration.json", "visible": false},
+        {"name": "rewards_unlock", "type": "Component", "file": "rewards_unlock/rewards_unlock.json", "visible": false},
+        {"name": "options", "type":  "Component", "file": "options/options_main.json"},
+        {"name": "video1", "type":  "Component", "file": "popup/full_screen_video/video1.json", "visible": false},
+        {"name": "video2", "type":  "Component", "file": "popup/full_screen_video/video2.json", "visible": false},
+        {"name": "video3", "type":  "Component", "file": "popup/full_screen_video/video3.json", "visible": false},
+        {"name": "custom_game", "type": "Component", "file": "lobby/custom_game/custom_game.json", "visible": false},
+        {"name": "edit_nameplate", "type": "Component", "file": "lobby/edit_nameplate/edit_nameplate.json", "visible": false}
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "configurations": 
+    {
+        "default": 
+        {
+            "0":
+            {
+                "events": [],
+                "batch_size": 200,
+                "batch_time": 15000
+            },
+            "1":
+            {
+                "events": ["game_started", "game_ended", "player_joined_game", "player_left_game", "task_progress_started", "task_status_changed", "markup_triggered", "server_disbanded", "user_reported", "player_rewarded"],
+                "enabled_probability": 1.0
+            },
+            "2":
+            {
+                "events": ["session_stats", "hero_stats", "weapon_stats"],
+                "enabled_probability": 1.0,
+                "batch_size": 8,
+                "batch_time": 1000
+            }
+        }, 
+        "tdm_dynamic_spawn_near_players": 
+        {
+            "3":
+            {
+                "events": ["entity_spawned", "weapon_switched", "entity_shot", "entity_hit"],
+                "enabled_probability": 0.1
+            }
+        }, 
+        "conq": 
+        {
+            "3": 
+            {
+                "events": ["entity_spawned"],
+                "enabled_probability": 0.2
+            }
+        },
+        "esc": 
+        {
+            "3": 
+            {
+                "events": ["entity_spawned"],
+                "enabled_probability": 0.1
+            }
+        },
+        "ptb": 
+        {
+            "3": 
+            {
+                "events": ["entity_spawned"],
+                "enabled_probability": 0.2
+            },
+            "4":
+            {
+                "events": ["round_completed", "bomb_planted", "bomb_defused"],
+                "enabled_probability": 1.0
+            }
+        }    
+    }
+}

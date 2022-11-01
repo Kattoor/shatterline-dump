@@ -1,0 +1,50 @@
+{
+  "name": "scheduled_hard_007",
+  "type": "scheduled",
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "legendary",
+  "display_name": { "localization_key": "@scheduled_hard_007_name" },
+  "description": { "localization_key": "@scheduled_hard_007_description" },
+  "conditions": [
+    {
+      "name": "scheduled_hard_007_1",
+      "event_description": { "localization_key": "@scheduled_hard_007_1_event_description" },
+      "event": { "event_id": "Kill", "actor_is_me": true, "actor_item_tag_is": ["AR", "SR", "SHG", "SMG"]},
+      "progress": 1
+    },
+    {
+      "name": "scheduled_hard_007_2",
+      "event_description": { "localization_key": "@scheduled_hard_007_2_event_description" },
+      "event": { "event_id": "Kill", "actor_is_me": true, "actor_item_tag_is": ["PT"]},
+      "progress": 1
+    },
+    {
+      "name": "scheduled_hard_007_3",
+      "event_description": { "localization_key": "@scheduled_hard_007_3_event_description" },
+      "event": { "event_id": "Kill", "actor_is_me": true, "actor_item_tag_is": ["KN"]},
+      "progress": 1
+    }
+  ],
+  
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 5000
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 3000
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 35
+    }
+  ],
+  "reset_on_events": [
+    {"event_id": "Death"}
+   ]
+}

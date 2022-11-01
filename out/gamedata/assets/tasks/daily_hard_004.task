@@ -1,0 +1,36 @@
+{
+  "name": "daily_hard_004",
+  "type": "daily",
+  "tags": [
+    "daily_hard"
+  ],
+  "image": "weekly_temp_icon",
+  "rarity": "epic",
+  "display_name": { "localization_key": "@daily_hard_004_name" },
+  "description": { "localization_key": "@daily_hard_004_description" },
+  "conditions": [
+    {
+      "name": "daily_hard_004",
+      "event_description": { "localization_key": "@daily_hard_004_event_description" },
+      "event": { "event_id": "Kill", "actor_is_me": true, "actor_item_tag_is": ["movable"], "target_player_class_is_not": []},
+      "progress": 1
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 350
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 250
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 10
+    }
+  ]
+}

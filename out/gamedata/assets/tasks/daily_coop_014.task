@@ -1,0 +1,31 @@
+{
+  "name": "daily_coop_014",
+  "type": "daily",
+  "tags": [
+    "daily_coop"
+  ],
+  "image": "weekly_temp_icon",
+  "rarity": "common",
+  "display_name": { "localization_key": "@daily_coop_014_name" },
+  "description": { "localization_key": "@daily_coop_014_description" },
+  "conditions": [
+    {
+      "name": "daily_coop_014",
+      "event_description": { "localization_key": "@daily_coop_014_event_description" },
+      "event": { "event_id": "HordeAbilityAcquired", "actor_is_me": true},
+      "progress": 2
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 200
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 175
+    }
+  ]
+}

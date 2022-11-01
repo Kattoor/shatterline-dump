@@ -1,0 +1,31 @@
+{
+  "name": "daily_main_013",
+  "type": "daily",
+  "tags": [
+    "daily_main"
+  ],
+  "image": "weekly_temp_icon",
+  "rarity": "uncommon",
+  "display_name": { "localization_key": "@daily_main_013_name" },
+  "description": { "localization_key": "@daily_main_013_description" },
+  "conditions": [
+    {
+      "name": "daily_main_013",
+      "event_description": { "localization_key": "@daily_main_013_event_description" },
+      "event": { "event_id": "PlayerMissionResult", "actor_is_me": true, "actor_status_is": ["objective_completed", "horde_objective_completed", "horde_envoy_defeated"], "game_type_is": ["pve"] },
+      "progress": 1
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 200
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 250
+    }
+  ]
+}

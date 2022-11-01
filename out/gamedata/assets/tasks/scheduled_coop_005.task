@@ -1,0 +1,41 @@
+{
+  "name": "scheduled_coop_005",
+  "type": "scheduled",
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "uncommon",
+  "display_name": { "localization_key": "@scheduled_coop_005_name" },
+  "description": { "localization_key": "@scheduled_coop_005_description" },
+  "conditions": [
+    {
+      "name": "scheduled_coop_005_1",
+      "event_description": { "localization_key": "@scheduled_coop_005_1_event_description" },
+      "event": { "event_id": "PlayerMissionResult", "actor_is_me": true, "actor_status_is": ["objective_completed", "horde_objective_completed", "horde_envoy_defeated"] },
+      "progress": 2
+    },
+    {
+      "name": "scheduled_coop_005_2",
+      "event_description": { "localization_key": "@scheduled_coop_005_2_event_description" },
+      "event": { "event_id": "Kill", "actor_is_me": true, "game_type_is": ["pve"]},
+      "progress": 200
+    }
+  ],
+  
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 2500
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 1500
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 20
+    }
+  ]
+}

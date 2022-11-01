@@ -1,0 +1,47 @@
+{
+  "name": "scheduled_operatives_022",
+  "type": "scheduled",
+  "active": true,
+  "image": "weekly_temp_icon",
+  "rarity": "epic",
+  "display_name": { "localization_key": "@scheduled_operatives_022_name" },
+  "description": { "localization_key": "@scheduled_operatives_022_description" },
+  "conditions": [
+    {
+      "name": "scheduled_operatives_022_1",
+      "event_description": { "localization_key": "@scheduled_operatives_022_1_event_description" },
+      "event": { "event_id": "DoubleKill", "actor_item_tag_is": ["ULT", "ult_ik01"], "actor_player_preset_is":["a_mongoose"], "actor_is_me": true, "target_player_preset_is_not": []},
+      "progress": 1
+    },
+    {
+      "name": "scheduled_operatives_022_2",
+      "event_description": { "localization_key": "@scheduled_operatives_022_2_event_description" },
+      "event": { "event_id": "DoubleKill", "actor_item_tag_is": ["ULT", "ult_ik01"], "actor_player_preset_is":["a_orbit"], "actor_is_me": true, "target_player_preset_is_not": []},
+      "progress": 1
+    },
+    {
+      "name": "scheduled_operatives_022_3",
+      "event_description": { "localization_key": "@scheduled_operatives_022_3_event_description" },
+      "event": { "event_id": "DoubleKill", "actor_is_me": true, "actor_item_tag_is": ["ULT", "ult_ik01"], "actor_player_preset_is":["h_ram"], "target_player_preset_is_not": []},
+      "progress": 1
+    }
+  ],
+  
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 4000
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 2500
+    },
+    {
+      "reward_type": "currency",
+      "name": "blueprint",
+      "amount": 30
+    }
+  ]
+}

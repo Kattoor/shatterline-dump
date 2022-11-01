@@ -1,0 +1,23 @@
+{
+    "script": "scripts/ui/gacha_box/gacha_box.lua",
+    "view_path": "GachaBox.html",
+    "defined_actions": ["hide_gamepad_cursor"],
+    "hide_cursor": true,
+    "children":
+    [
+        {"name": "rewards", "type": "Panel", "view_path": "rewards"},
+
+        {"name": "rewards_list", "type": "RewardItemsGrid", "view_path": "rewards.rewardsList"},
+        {"name": "rewards_list_container", "type": "Component", "view_path": "rewards.rewardsList.container.contentContainer"},
+
+        {"name": "button", "type": "Button", "view_path": "rewards.buttons.buttonProceed", "text": "@proceed"},
+        {"name": "button_hint", "type": "ActionLabel", "view_path": "rewards.buttons.buttonProceed.wrapper.key", "gamepad_only": true},
+        
+        {"name": "video", "type": "LiveViewPlayer", "view_path": "liveView", "video_path": "videos/celebration/gacha_box_full.bk2", "visible": false},
+        {"name": "looped_video", "type": "LiveViewPlayer", "view_path": "liveViewLooped", "video_path": "videos/celebration/gacha_box_loop.bk2", "loop": true, "visible": false },
+
+        {"name": "reward_info", "type": "Control", "view_path": "rewards.rewardInfo", "visible": false},
+        {"name": "reward_type", "type": "Label", "view_path": "rewards.rewardInfo.type"},
+        {"name": "reward_title", "type": "Label", "view_path": "rewards.rewardInfo.title"}
+    ]
+}

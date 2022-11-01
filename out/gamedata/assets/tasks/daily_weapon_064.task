@@ -1,0 +1,31 @@
+{
+  "name": "daily_weapon_064",
+  "type": "daily",
+  "tags": [
+    "daily_weapon"
+  ],
+  "image": "weekly_temp_icon",
+  "rarity": "uncommon",
+  "display_name": { "localization_key": "@daily_weapon_064_name" },
+  "description": { "localization_key": "@daily_weapon_064_description" },
+  "conditions": [
+    {
+      "name": "daily_weapon_064",
+      "event_description": { "localization_key": "@daily_weapon_064_event_description" },
+      "event": { "event_id": "AdsKill", "actor_is_me": true, "actor_item_tag_is": ["PT"], "game_type_is": ["pvp"]},
+      "progress": 3
+    }
+  ],
+  "rewards": [
+    {
+      "reward_type": "season_score",
+      "name": "",
+      "amount": 250
+    },
+    {
+      "reward_type": "currency",
+      "name": "soft",
+      "amount": 200
+    }
+  ]
+}
